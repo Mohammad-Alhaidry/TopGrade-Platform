@@ -1,0 +1,4808 @@
+{
+  "schemaVersion": 1,
+  "course": {
+    "id": "calculus-1",
+    "titleAr": "تفاضل وتكامل 1",
+    "titleEn": "Calculus 1"
+  },
+  "topic": {
+    "id": "midterm",
+    "number": 4,
+    "title": "Chapters 1 and 2"
+  },
+  "questions": [
+    {
+      "id": "ch1-mcq-001",
+      "type": "mcq",
+      "prompt": "Let \\(A=\\{x\\in\\mathbb{R} : (x+8)^2=9^2\\}\\). In which form can we also write the set \\(A\\)?",
+      "options": [
+        "\\(A=\\{1\\}\\)",
+        "\\(A=\\{\\emptyset\\}\\)",
+        "\\(A=\\{-17\\}\\)",
+        "\\(A=\\{1,-17\\}\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\((x+8)^2=81 \\iff x+8=9\\) or \\(x+8=-9\\), so \\(x=1\\) or \\(x=-17\\). Keeping only one root forgets a case.",
+      "source": {
+        "page": 59
+      }
+    },
+    {
+      "id": "ch1-mcq-002",
+      "type": "mcq",
+      "prompt": "Let \\(A=\\{1,2\\}\\), \\(B=\\{\\{1\\},\\{2\\}\\}\\) and \\(C=\\{\\{1\\},\\{1,2\\}\\}\\). Which statement is correct?",
+      "options": [
+        "\\(A=B\\)",
+        "\\(A\\in C\\)",
+        "\\(A\\subset B\\)",
+        "\\(A\\subset C\\)"
+      ],
+      "answer": "B",
+      "explanation": "The set \\(\\{1,2\\}=A\\) is one of the elements of \\(C\\), so \\(A\\in C\\). The elements of \\(B\\) and \\(C\\) are sets, not the numbers 1 and 2, so \\(A\\) is not a subset of \\(B\\) or of \\(C\\).",
+      "source": {
+        "page": 59
+      }
+    },
+    {
+      "id": "ch1-mcq-003",
+      "type": "mcq",
+      "prompt": "Let \\(B=\\{1,2,3\\}\\). Which set is a proper subset of \\(B\\)?",
+      "options": [
+        "\\(\\{1,3\\}\\)",
+        "\\(\\{1,2,3\\}\\)",
+        "\\(\\{1,4\\}\\)",
+        "\\(\\{\\{1\\}\\}\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\(A\\subset B\\) means \\(A\\subseteq B\\) and \\(A\\ne B\\). \\(\\{1,2,3\\}=B\\), \\(4\\notin B\\), and \\(\\{1\\}\\) is not an element of \\(B\\).",
+      "source": {
+        "page": 4
+      }
+    },
+    {
+      "id": "ch1-mcq-004",
+      "type": "mcq",
+      "prompt": "Let \\(A=[1,3]\\) and \\(B=[2,4]\\). What is the intersection of \\(A\\) and \\(B\\)?",
+      "options": [
+        "\\(A\\cap B=\\emptyset\\)",
+        "\\(A\\cap B=[1,4]\\)",
+        "\\(A\\cap B=[2,3]\\)",
+        "\\(A\\cap B=A\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(A\\cap B\\) contains the numbers that are in both intervals: \\(2\\le x\\le 3\\).",
+      "source": {
+        "page": 59
+      }
+    },
+    {
+      "id": "ch1-mcq-005",
+      "type": "mcq",
+      "prompt": "Let \\(A=[-1,3]\\) and \\(B=[0,4]\\). Which statement is correct?",
+      "options": [
+        "\\(A\\cup B=\\emptyset\\)",
+        "\\(A\\cup B=[0,3]\\)",
+        "\\(A\\cup B=[-1,4]\\)",
+        "\\(A\\cup B=[-1,0]\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(A\\cup B\\) contains the numbers in \\(A\\) or in \\(B\\); the intervals overlap, so the union runs from \\(-1\\) to \\(4\\). \\([0,3]\\) is the intersection.",
+      "source": {
+        "page": 59
+      }
+    },
+    {
+      "id": "ch1-mcq-006",
+      "type": "mcq",
+      "prompt": "Which of the following numbers is irrational?",
+      "options": [
+        "\\(\\sqrt{9}\\)",
+        "\\(0.25\\)",
+        "\\(-\\frac{7}{3}\\)",
+        "\\(\\sqrt{2}\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(\\sqrt{9}=3\\), \\(0.25=\\frac{1}{4}\\) and \\(-\\frac{7}{3}\\) are ratios of integers; \\(\\sqrt{2}\\) cannot be written as such a ratio.",
+      "source": {
+        "page": 5
+      }
+    },
+    {
+      "id": "ch1-mcq-007",
+      "type": "mcq",
+      "prompt": "Which set is the set of rational numbers \\(\\mathbb{Q}\\)?",
+      "options": [
+        "\\(\\left\\{\\frac{m}{n} : m\\in\\mathbb{Z},\\ n\\in\\mathbb{Z}\\setminus\\{0\\}\\right\\}\\)",
+        "\\(\\left\\{\\frac{m}{n} : m\\in\\mathbb{Z},\\ n\\in\\mathbb{Z}\\right\\}\\)",
+        "\\(\\left\\{\\frac{m}{n} : m\\in\\mathbb{N},\\ n\\in\\mathbb{N}\\right\\}\\)",
+        "\\(\\mathbb{R}\\setminus\\mathbb{Z}\\)"
+      ],
+      "answer": "A",
+      "explanation": "A rational number is a ratio of two integers with a nonzero denominator. With \\(m,n\\in\\mathbb{N}\\) we would lose \\(0\\) and the negative rationals.",
+      "source": {
+        "page": 5
+      }
+    },
+    {
+      "id": "ch1-mcq-008",
+      "type": "mcq",
+      "prompt": "Compare \\(\\frac{101}{102}\\) and \\(\\frac{100}{101}\\) by studying the sign of their difference.",
+      "options": [
+        "\\(\\frac{101}{102}-\\frac{100}{101}=-\\frac{1}{10302}<0\\), so \\(\\frac{101}{102}<\\frac{100}{101}\\)",
+        "\\(\\frac{101}{102}-\\frac{100}{101}=\\frac{1}{10302}>0\\), so \\(\\frac{101}{102}>\\frac{100}{101}\\)",
+        "\\(\\frac{101}{102}-\\frac{100}{101}=0\\), so the two numbers are equal",
+        "\\(\\frac{101}{102}-\\frac{100}{101}=\\frac{1}{10302}>0\\), so \\(\\frac{101}{102}<\\frac{100}{101}\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(\\frac{101\\cdot101-100\\cdot102}{102\\cdot101}=\\frac{10201-10200}{10302}=\\frac{1}{10302}>0\\), and \\(a-b>0 \\iff a>b\\).",
+      "source": {
+        "page": 6
+      }
+    },
+    {
+      "id": "ch1-mcq-009",
+      "type": "mcq",
+      "prompt": "Let \\(x\\le y\\) and \\(a<0\\). Which statement is always true?",
+      "options": [
+        "\\(ax\\le ay\\)",
+        "\\(ax\\ge ay\\)",
+        "\\(\\frac{x}{a}\\le\\frac{y}{a}\\)",
+        "\\(x+a\\ge y+a\\)"
+      ],
+      "answer": "B",
+      "explanation": "Multiplying (or dividing) an inequality by a negative number reverses its direction; adding \\(a\\) keeps the direction: \\(x+a\\le y+a\\).",
+      "source": {
+        "page": 7
+      }
+    },
+    {
+      "id": "ch1-mcq-010",
+      "type": "mcq",
+      "prompt": "Since \\(-5\\le -2\\) and both numbers are negative, which inequality follows?",
+      "options": [
+        "\\(-\\frac{1}{5}\\le -\\frac{1}{2}\\)",
+        "\\((-5)^2\\le (-2)^2\\)",
+        "\\(5\\le 2\\)",
+        "\\(-\\frac{1}{5}\\ge -\\frac{1}{2}\\)"
+      ],
+      "answer": "D",
+      "explanation": "For \\(x\\le y\\) with \\(xy>0\\) (same sign), taking reciprocals reverses the direction: \\(\\frac1x\\ge\\frac1y\\). Squaring is not order-preserving for negative numbers.",
+      "source": {
+        "page": 8
+      }
+    },
+    {
+      "id": "ch1-mcq-011",
+      "type": "mcq",
+      "prompt": "Which factorization of \\(x^3-8\\) is correct?",
+      "options": [
+        "\\((x-2)(x^2-2x+4)\\)",
+        "\\((x+2)(x^2-2x+4)\\)",
+        "\\((x-2)(x^2+2x+4)\\)",
+        "\\((x-2)^3\\)"
+      ],
+      "answer": "C",
+      "explanation": "Use \\(a^3-b^3=(a-b)(a^2+ab+b^2)\\) with \\(a=x\\), \\(b=2\\).",
+      "source": {
+        "page": 7
+      }
+    },
+    {
+      "id": "ch1-mcq-012",
+      "type": "mcq",
+      "prompt": "Let \\(x,y\\in\\mathbb{R}\\) such that \\(x\\le 2y\\). Which statement is true?",
+      "options": [
+        "\\(2x\\le x+2y\\)",
+        "\\(x^2\\le 2xy\\)",
+        "\\(y\\le\\frac{x^2}{2}\\)",
+        "\\(-x\\le -2y\\)"
+      ],
+      "answer": "A",
+      "explanation": "Adding \\(x\\) to both sides gives \\(2x\\le x+2y\\). Multiplying by \\(-1\\) reverses the direction: \\(-2y\\le -x\\), not \\(-x\\le-2y\\). Multiplying by \\(x\\) is not allowed without knowing its sign.",
+      "source": {
+        "page": 60
+      }
+    },
+    {
+      "id": "ch1-mcq-013",
+      "type": "mcq",
+      "prompt": "Which set is equal to \\(\\{x\\in\\mathbb{R} : x^2\\le 1\\}\\)?",
+      "options": [
+        "\\((-\\infty,1]\\)",
+        "\\([-1,1]\\)",
+        "\\([0,1]\\)",
+        "\\((-1,1)\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(x^2\\le 1 \\iff (x-1)(x+1)\\le 0 \\iff -1\\le x\\le 1\\). The endpoints are included because the inequality is not strict.",
+      "source": {
+        "page": 10
+      }
+    },
+    {
+      "id": "ch1-mcq-014",
+      "type": "mcq",
+      "prompt": "Write \\((-6,-1)\\cap[-3,4)\\) as an interval.",
+      "options": [
+        "\\([-3,-1)\\)",
+        "\\((-3,-1]\\)",
+        "\\((-6,4)\\)",
+        "\\([-3,-1]\\)"
+      ],
+      "answer": "A",
+      "explanation": "Common part: from \\(-3\\) (included, it belongs to \\([-3,4)\\)) to \\(-1\\) (excluded, it is not in \\((-6,-1)\\)).",
+      "source": {
+        "page": 69
+      }
+    },
+    {
+      "id": "ch1-mcq-015",
+      "type": "mcq",
+      "prompt": "Assume \\(a<b\\). Which statement is true?",
+      "options": [
+        "\\([3,7]\\cup[8,10]=[3,10]\\)",
+        "\\([-3,5]\\cap[2,7]=[-3,7]\\)",
+        "\\([a,b)\\cup(a,b]=(a,b)\\)",
+        "\\([a,b)\\cap(a,b]=(a,b)\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\([a,b)\\) and \\((a,b]\\) share exactly \\(a<x<b\\). Note \\([3,7]\\cup[8,10]\\) misses \\((7,8)\\), \\([-3,5]\\cap[2,7]=[2,5]\\), and \\([a,b)\\cup(a,b]=[a,b]\\).",
+      "source": {
+        "page": 61
+      }
+    },
+    {
+      "id": "ch1-mcq-016",
+      "type": "mcq",
+      "prompt": "If \\(x\\le 3\\), then \\(|-2x+6|\\) equals",
+      "options": [
+        "\\(2x-6\\)",
+        "\\(-2x-6\\)",
+        "\\(-2x+6\\)",
+        "\\(2x+6\\)"
+      ],
+      "answer": "C",
+      "explanation": "For \\(x\\le 3\\), \\(-2x+6\\ge 0\\), so \\(|-2x+6|=-2x+6\\). (For \\(x\\ge 3\\) it equals \\(2x-6\\).)",
+      "source": {
+        "page": 12
+      }
+    },
+    {
+      "id": "ch1-mcq-017",
+      "type": "mcq",
+      "prompt": "Solve \\(|x-2|\\le 5\\).",
+      "options": [
+        "\\([-7,3]\\)",
+        "\\((-3,7)\\)",
+        "\\([-3,7]\\)",
+        "\\((-\\infty,7]\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(|x-c|\\le r \\iff x\\in[c-r,c+r]\\). Here \\(c=2\\), \\(r=5\\): \\(x\\in[-3,7]\\).",
+      "source": {
+        "page": 11
+      }
+    },
+    {
+      "id": "ch1-mcq-018",
+      "type": "mcq",
+      "prompt": "For \\(x\\in\\mathbb{R}\\), define \\(f(x)=x-|x|\\). Which statement is true?",
+      "options": [
+        "\\(\\forall x\\in\\mathbb{R},\\ f(x)\\ge 0\\)",
+        "\\(\\forall x\\in\\mathbb{R},\\ f(x)\\le 0\\)",
+        "\\(\\forall x<0,\\ f(x)=0\\)",
+        "\\(\\forall x<0,\\ f(x)=-2x\\)"
+      ],
+      "answer": "B",
+      "explanation": "If \\(x\\ge 0\\), \\(f(x)=x-x=0\\); if \\(x<0\\), \\(f(x)=x-(-x)=2x<0\\). So \\(f(x)\\le 0\\) for all \\(x\\).",
+      "source": {
+        "page": 61
+      }
+    },
+    {
+      "id": "ch1-mcq-019",
+      "type": "mcq",
+      "prompt": "Which statement is FALSE for \\(x\\in\\mathbb{R}\\)?",
+      "options": [
+        "\\(|x|>1\\iff x\\ge 1\\)",
+        "\\(x\\ne 0\\iff |x|>0\\)",
+        "\\(\\sqrt{x^2}=|x|\\)",
+        "\\(x+|x|=0\\iff x\\le 0\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\(|x|>1\\) means \\(x>1\\) or \\(x<-1\\); it is not equivalent to \\(x\\ge 1\\) (e.g. \\(x=1\\) or \\(x=-2\\)).",
+      "source": {
+        "page": 61
+      }
+    },
+    {
+      "id": "ch1-mcq-020",
+      "type": "mcq",
+      "prompt": "Which inequality holds for all \\(x,y\\in\\mathbb{R}\\)?",
+      "options": [
+        "\\(|x-y|\\le |x|-|y|\\)",
+        "\\(|x+y|\\ge |x|+|y|\\)",
+        "\\(|x+y|=|x|+|y|\\)",
+        "\\(|x-y|\\le |x|+|y|\\)"
+      ],
+      "answer": "D",
+      "explanation": "By the triangle inequality, \\(|x-y|=|x+(-y)|\\le|x|+|-y|=|x|+|y|\\). The others fail, e.g. for \\(x=1\\), \\(y=-1\\).",
+      "source": {
+        "page": 61
+      }
+    },
+    {
+      "id": "ch1-mcq-021",
+      "type": "mcq",
+      "prompt": "Which statement is true?",
+      "options": [
+        "\\(x\\in(5,7)\\iff |x-1|<6\\)",
+        "\\(x\\in[0.999,1.001]\\iff |x+1|<0.001\\)",
+        "\\(x\\in[0.999,1.001]\\iff |x+1|\\le 0.001\\)",
+        "\\(x\\in(5,7)\\Rightarrow |x-6|<1\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\((5,7)\\) is centered at 6 with radius 1, so \\(x\\in(5,7)\\iff|x-6|<1\\). \\(|x-1|<6\\) gives \\((-5,7)\\); \\([0.999,1.001]\\) corresponds to \\(|x-1|\\le 0.001\\).",
+      "source": {
+        "page": 61
+      }
+    },
+    {
+      "id": "ch1-mcq-022",
+      "type": "mcq",
+      "prompt": "Let \\(\\varepsilon>0\\). Which statement is FALSE?",
+      "options": [
+        "\\(x\\in[x_0,x_0+\\varepsilon]\\Rightarrow |x-x_0|\\le\\varepsilon\\)",
+        "\\(|x-y|=1\\Rightarrow (y=x+1 \\text{ or } y=x-1)\\)",
+        "\\(|x-x_0|\\le\\varepsilon\\Rightarrow x\\in[x_0,x_0+\\varepsilon]\\)",
+        "\\(A\\ge 0 \\text{ and } |x|>A\\Rightarrow (x>A \\text{ or } x<-A)\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(|x-x_0|\\le\\varepsilon\\) means \\(x\\in[x_0-\\varepsilon,x_0+\\varepsilon]\\), which also contains points to the left of \\(x_0\\), so it does not force \\(x\\in[x_0,x_0+\\varepsilon]\\).",
+      "source": {
+        "page": 61
+      }
+    },
+    {
+      "id": "ch1-mcq-023",
+      "type": "mcq",
+      "prompt": "To within which precision is \\(3.14\\) an approximate value of \\(\\pi\\)?",
+      "options": [
+        "\\(10^{-3}\\)",
+        "\\(10^{-2}\\)",
+        "\\(10^{-4}\\)",
+        "\\(10^{-5}\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(|\\pi-3.14|\\approx 0.00159\\le 0.01=10^{-2}\\), but \\(0.00159>10^{-3}\\).",
+      "source": {
+        "page": 12
+      }
+    },
+    {
+      "id": "ch1-mcq-024",
+      "type": "mcq",
+      "prompt": "Solve the equation \\(2x+3=5x-4\\).",
+      "options": [
+        "\\(S=\\left\\{\\frac{7}{3}\\right\\}\\)",
+        "\\(S=\\left\\{-\\frac{7}{3}\\right\\}\\)",
+        "\\(S=\\left\\{\\frac{1}{3}\\right\\}\\)",
+        "\\(S=\\left\\{-\\frac{1}{3}\\right\\}\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\(2x-5x=-4-3 \\iff -3x=-7 \\iff x=\\frac{7}{3}\\).",
+      "source": {
+        "page": 13
+      }
+    },
+    {
+      "id": "ch1-mcq-025",
+      "type": "mcq",
+      "prompt": "Solve the equation \\(-2x+3=-2x-5\\).",
+      "options": [
+        "\\(S=\\mathbb{R}\\)",
+        "\\(S=\\{0\\}\\)",
+        "\\(S=\\emptyset\\)",
+        "\\(S=\\{-8\\}\\)"
+      ],
+      "answer": "C",
+      "explanation": "The \\(x\\)-terms cancel and we get \\(0=-8\\), which is impossible, so there is no solution.",
+      "source": {
+        "page": 13
+      }
+    },
+    {
+      "id": "ch1-mcq-026",
+      "type": "mcq",
+      "prompt": "Solve the equation \\(|-2x+4|=12\\).",
+      "options": [
+        "\\(S=\\{8\\}\\)",
+        "\\(S=\\{-8,4\\}\\)",
+        "\\(S=\\emptyset\\)",
+        "\\(S=\\{-4,8\\}\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(-2x+4=-12\\) or \\(-2x+4=12\\), so \\(x=8\\) or \\(x=-4\\). Keeping only one case loses a solution.",
+      "source": {
+        "page": 14
+      }
+    },
+    {
+      "id": "ch1-mcq-027",
+      "type": "mcq",
+      "prompt": "Solve the equation \\(|-2x+4|=|x-1|\\).",
+      "options": [
+        "\\(S=\\left\\{\\frac{5}{3},3\\right\\}\\)",
+        "\\(S=\\{3\\}\\)",
+        "\\(S=\\left\\{-\\frac{5}{3},3\\right\\}\\)",
+        "\\(S=\\{1,2\\}\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\(-2x+4=-(x-1)\\) gives \\(x=3\\); \\(-2x+4=x-1\\) gives \\(x=\\frac53\\).",
+      "source": {
+        "page": 15
+      }
+    },
+    {
+      "id": "ch1-mcq-028",
+      "type": "mcq",
+      "prompt": "Solve the equation \\(|-2x-3|=-5\\).",
+      "options": [
+        "\\(S=\\{-4,1\\}\\)",
+        "\\(S=\\emptyset\\)",
+        "\\(S=\\{1\\}\\)",
+        "\\(S=\\{4,-1\\}\\)"
+      ],
+      "answer": "B",
+      "explanation": "An absolute value is always \\(\\ge 0\\), so it can never equal \\(-5\\). Splitting into cases without checking gives the wrong set \\(\\{-4,1\\}\\).",
+      "source": {
+        "page": 15
+      }
+    },
+    {
+      "id": "ch1-mcq-029",
+      "type": "mcq",
+      "prompt": "Solve the equation \\(5x^2-x+1=4x^2+4x-5\\).",
+      "options": [
+        "\\(S=\\{-3,-2\\}\\)",
+        "\\(S=\\{2,3\\}\\)",
+        "\\(S=\\{-1,6\\}\\)",
+        "\\(S=\\emptyset\\)"
+      ],
+      "answer": "B",
+      "explanation": "It is equivalent to \\(x^2-5x+6=0\\); \\(\\Delta=25-24=1\\), so \\(x=\\frac{5\\pm1}{2}\\), i.e. \\(2\\) and \\(3\\).",
+      "source": {
+        "page": 16
+      }
+    },
+    {
+      "id": "ch1-mcq-030",
+      "type": "mcq",
+      "prompt": "Solve the equation \\(9x^2-12x+4=0\\).",
+      "options": [
+        "\\(S=\\left\\{-\\frac{2}{3}\\right\\}\\)",
+        "\\(S=\\left\\{-\\frac{2}{3},\\frac{2}{3}\\right\\}\\)",
+        "\\(S=\\left\\{\\frac{2}{3}\\right\\}\\)",
+        "\\(S=\\emptyset\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(\\Delta=(-12)^2-4\\cdot9\\cdot4=0\\), so there is one double solution \\(x=-\\frac{b}{2a}=\\frac{12}{18}=\\frac23\\).",
+      "source": {
+        "page": 17
+      }
+    },
+    {
+      "id": "ch1-mcq-031",
+      "type": "mcq",
+      "prompt": "Solve the equation \\(x(3x+10)=77\\).",
+      "options": [
+        "\\(S=\\left\\{-7,\\frac{11}{3}\\right\\}\\)",
+        "\\(S=\\left\\{7,-\\frac{11}{3}\\right\\}\\)",
+        "\\(S=\\left\\{-11,\\frac{7}{3}\\right\\}\\)",
+        "\\(S=\\emptyset\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\(3x^2+10x-77=0 \\iff (3x-11)(x+7)=0\\), so \\(x=\\frac{11}{3}\\) or \\(x=-7\\).",
+      "source": {
+        "page": 69
+      }
+    },
+    {
+      "id": "ch1-mcq-032",
+      "type": "mcq",
+      "prompt": "Solve, using the quadratic formula, \\(3x^2-2\\sqrt{2}\\,x-1=0\\).",
+      "options": [
+        "\\(S=\\left\\{\\frac{-\\sqrt2-\\sqrt5}{3},\\frac{-\\sqrt2+\\sqrt5}{3}\\right\\}\\)",
+        "\\(S=\\left\\{\\frac{\\sqrt2-\\sqrt5}{6},\\frac{\\sqrt2+\\sqrt5}{6}\\right\\}\\)",
+        "\\(S=\\emptyset\\)",
+        "\\(S=\\left\\{\\frac{\\sqrt2-\\sqrt5}{3},\\frac{\\sqrt2+\\sqrt5}{3}\\right\\}\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(\\Delta=(-2\\sqrt2)^2-4\\cdot3\\cdot(-1)=20\\), \\(\\sqrt\\Delta=2\\sqrt5\\), so \\(x=\\frac{2\\sqrt2\\pm2\\sqrt5}{6}=\\frac{\\sqrt2\\pm\\sqrt5}{3}\\).",
+      "source": {
+        "page": 70
+      }
+    },
+    {
+      "id": "ch1-mcq-033",
+      "type": "mcq",
+      "prompt": "If \\(a\\ne 0\\) and \\(\\Delta=b^2-4ac=0\\), the equation \\(ax^2+bx+c=0\\) has",
+      "options": [
+        "the unique solution \\(x=\\frac{b}{2a}\\)",
+        "no real solution",
+        "two distinct solutions \\(x=\\frac{-b\\pm\\sqrt{\\Delta}}{2a}\\)",
+        "the unique solution \\(x=-\\frac{b}{2a}\\)"
+      ],
+      "answer": "D",
+      "explanation": "When \\(\\Delta=0\\), \\(ax^2+bx+c=a\\left(x+\\frac{b}{2a}\\right)^2\\), which vanishes only at \\(x=-\\frac{b}{2a}\\).",
+      "source": {
+        "page": 15
+      }
+    },
+    {
+      "id": "ch1-mcq-034",
+      "type": "mcq",
+      "prompt": "Solve the inequality \\(-2x+1>7\\).",
+      "options": [
+        "\\((-3,+\\infty)\\)",
+        "\\((-\\infty,-3)\\)",
+        "\\((-\\infty,-3]\\)",
+        "\\((-\\infty,-4)\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(-2x>6\\); dividing by \\(-2\\) reverses the inequality: \\(x<-3\\). The inequality is strict, so \\(-3\\) is excluded.",
+      "source": {
+        "page": 18
+      }
+    },
+    {
+      "id": "ch1-mcq-035",
+      "type": "mcq",
+      "prompt": "Solve the inequality \\(10\\le -4x+6<26\\).",
+      "options": [
+        "\\([-1,5)\\)",
+        "\\([-5,-1)\\)",
+        "\\((-5,-1]\\)",
+        "\\((-\\infty,-1]\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(4\\le -4x<20\\); dividing by \\(-4\\) reverses both signs: \\(-1\\ge x>-5\\), i.e. \\(x\\in(-5,-1]\\).",
+      "source": {
+        "page": 18
+      }
+    },
+    {
+      "id": "ch1-mcq-036",
+      "type": "mcq",
+      "prompt": "Solve the inequality \\(|-2x+1|\\le 7\\).",
+      "options": [
+        "\\([-3,4]\\)",
+        "\\([-4,3]\\)",
+        "\\((-3,4)\\)",
+        "\\((-\\infty,-3]\\cup[4,+\\infty)\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\(-7\\le -2x+1\\le 7 \\iff -8\\le -2x\\le 6 \\iff 4\\ge x\\ge -3\\).",
+      "source": {
+        "page": 19
+      }
+    },
+    {
+      "id": "ch1-mcq-037",
+      "type": "mcq",
+      "prompt": "Solve the inequality \\(|5x+1|>11\\).",
+      "options": [
+        "\\(\\left(-\\infty,-\\frac{12}{5}\\right)\\cup(2,+\\infty)\\)",
+        "\\(\\left(-\\frac{12}{5},2\\right)\\)",
+        "\\(\\left(-\\infty,-\\frac{12}{5}\\right]\\cup[2,+\\infty)\\)",
+        "\\((-\\infty,-2)\\cup\\left(\\frac{12}{5},+\\infty\\right)\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\(5x+1<-11\\) or \\(5x+1>11\\), i.e. \\(x<-\\frac{12}{5}\\) or \\(x>2\\). Strict inequality: endpoints excluded.",
+      "source": {
+        "page": 20
+      }
+    },
+    {
+      "id": "ch1-mcq-038",
+      "type": "mcq",
+      "prompt": "Solve the inequality \\(|3x-7|>-1\\).",
+      "options": [
+        "\\(\\emptyset\\)",
+        "\\((2,+\\infty)\\)",
+        "\\(\\mathbb{R}\\)",
+        "\\((-\\infty,2)\\cup\\left(\\frac{8}{3},+\\infty\\right)\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(|3x-7|\\ge 0>-1\\) for every real \\(x\\), so every \\(x\\in\\mathbb{R}\\) is a solution.",
+      "source": {
+        "page": 20
+      }
+    },
+    {
+      "id": "ch1-mcq-039",
+      "type": "mcq",
+      "prompt": "Solve the inequality \\(|2x-3|<x-1\\).",
+      "options": [
+        "\\((1,2)\\)",
+        "\\(\\left(\\frac{4}{3},2\\right)\\)",
+        "\\(\\left(\\frac{4}{3},+\\infty\\right)\\)",
+        "\\(\\emptyset\\)"
+      ],
+      "answer": "B",
+      "explanation": "We need \\(x>1\\) and \\(-(x-1)<2x-3<x-1\\): \\(2x-3<x-1\\) gives \\(x<2\\), \\(2x-3>-x+1\\) gives \\(x>\\frac43\\).",
+      "source": {
+        "page": 71
+      }
+    },
+    {
+      "id": "ch1-mcq-040",
+      "type": "mcq",
+      "prompt": "Solve the inequality \\(5\\le|-2x+3|<11\\).",
+      "options": [
+        "\\([-1,4)\\)",
+        "\\((-4,-1)\\cup(4,7)\\)",
+        "\\((-4,-1]\\cup[4,7]\\)",
+        "\\((-4,-1]\\cup[4,7)\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(5\\le -2x+3<11\\) gives \\(-4<x\\le -1\\); \\(5\\le -(-2x+3)<11\\) gives \\(4\\le x<7\\).",
+      "source": {
+        "page": 71
+      }
+    },
+    {
+      "id": "ch1-mcq-041",
+      "type": "mcq",
+      "prompt": "Solve the inequality \\(\\frac{|-2x+3|}{|-3x+7|}>1\\).",
+      "options": [
+        "\\((2,4)\\)",
+        "\\(\\left(2,\\frac{7}{3}\\right)\\cup\\left(\\frac{7}{3},4\\right)\\)",
+        "\\((-\\infty,2)\\cup(4,+\\infty)\\)",
+        "\\(\\left(2,\\frac{7}{3}\\right)\\)"
+      ],
+      "answer": "B",
+      "explanation": "For \\(x\\ne\\frac73\\): \\((2x-3)^2>(3x-7)^2 \\iff x^2-6x+8<0 \\iff 2<x<4\\). Remove \\(\\frac73\\), where the denominator vanishes.",
+      "source": {
+        "page": 72
+      }
+    },
+    {
+      "id": "ch1-mcq-042",
+      "type": "mcq",
+      "prompt": "Using the sign table of \\(ax+b\\), what is the sign of \\(-2x+6\\) for \\(x>3\\)?",
+      "options": [
+        "positive",
+        "zero",
+        "negative",
+        "it depends on x"
+      ],
+      "answer": "C",
+      "explanation": "The root is \\(x=-\\frac{b}{a}=3\\); to the right of the root, \\(ax+b\\) has the sign of \\(a=-2\\).",
+      "source": {
+        "page": 21
+      }
+    },
+    {
+      "id": "ch1-mcq-043",
+      "type": "mcq",
+      "prompt": "Solve the inequality \\(5x^2-x+1<4x^2+4x-5\\).",
+      "options": [
+        "\\((2,3)\\)",
+        "\\((-\\infty,2)\\cup(3,+\\infty)\\)",
+        "\\([2,3]\\)",
+        "\\(\\emptyset\\)"
+      ],
+      "answer": "A",
+      "explanation": "It is \\(x^2-5x+6<0\\); roots \\(2\\) and \\(3\\), and the trinomial has the sign of \\(-a\\) (negative) between the roots.",
+      "source": {
+        "page": 22
+      }
+    },
+    {
+      "id": "ch1-mcq-044",
+      "type": "mcq",
+      "prompt": "Solve the inequality \\(9x^2-12x+4>0\\).",
+      "options": [
+        "\\(\\mathbb{R}\\)",
+        "\\(\\emptyset\\)",
+        "\\(\\left\\{\\frac{2}{3}\\right\\}\\)",
+        "\\(\\mathbb{R}\\setminus\\left\\{\\frac{2}{3}\\right\\}\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(\\Delta=0\\): \\(9x^2-12x+4=9\\left(x-\\frac23\\right)^2\\), positive everywhere except at \\(x=\\frac23\\) where it is \\(0\\).",
+      "source": {
+        "page": 23
+      }
+    },
+    {
+      "id": "ch1-mcq-045",
+      "type": "mcq",
+      "prompt": "Solve the inequality \\(|5x+3|\\ge|3x+1|\\).",
+      "options": [
+        "\\(\\left[-1,-\\frac{1}{2}\\right]\\)",
+        "\\((-\\infty,-1)\\cup\\left(-\\frac{1}{2},+\\infty\\right)\\)",
+        "\\(\\left[-\\frac{1}{2},+\\infty\\right)\\)",
+        "\\((-\\infty,-1]\\cup\\left[-\\frac{1}{2},+\\infty\\right)\\)"
+      ],
+      "answer": "D",
+      "explanation": "Squaring both (non-negative) sides: \\(16x^2+24x+8\\ge 0 \\iff 2x^2+3x+1\\ge 0\\), roots \\(-1\\) and \\(-\\frac12\\); positive outside the roots.",
+      "source": {
+        "page": 23
+      }
+    },
+    {
+      "id": "ch1-mcq-046",
+      "type": "mcq",
+      "prompt": "Solve the inequality \\(x^3+3x^2-10x>0\\).",
+      "options": [
+        "\\((-\\infty,-5)\\cup(0,2)\\)",
+        "\\((-5,0)\\cup(2,+\\infty)\\)",
+        "\\((-5,2)\\)",
+        "\\((2,+\\infty)\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(x^3+3x^2-10x=x(x-2)(x+5)\\). The sign table gives \\(-,+,-,+\\) on the intervals cut by \\(-5,0,2\\).",
+      "source": {
+        "page": 24
+      }
+    },
+    {
+      "id": "ch1-mcq-047",
+      "type": "mcq",
+      "prompt": "Solve the inequality \\(\\frac{2x-1}{x+1}\\le\\frac{x}{x-1}\\).",
+      "options": [
+        "\\(\\left(-1,2-\\sqrt{3}\\right]\\cup\\left(1,2+\\sqrt{3}\\right]\\)",
+        "\\(\\left[-1,2-\\sqrt{3}\\right]\\cup\\left[1,2+\\sqrt{3}\\right]\\)",
+        "\\(\\left[2-\\sqrt{3},2+\\sqrt{3}\\right]\\)",
+        "\\((-\\infty,-1)\\cup\\left[2-\\sqrt{3},1\\right)\\cup\\left[2+\\sqrt{3},+\\infty\\right)\\)"
+      ],
+      "answer": "A",
+      "explanation": "It is \\(\\frac{x^2-4x+1}{(x+1)(x-1)}\\le 0\\). Roots of the numerator: \\(2\\pm\\sqrt3\\); \\(-1\\) and \\(1\\) are forbidden values, so they are always excluded.",
+      "source": {
+        "page": 25
+      }
+    },
+    {
+      "id": "ch1-mcq-048",
+      "type": "mcq",
+      "prompt": "Writing \\(x^2-10x+5\\le 29\\) in the form \\(|x-5|^2\\le 7^2\\), the solution set is",
+      "options": [
+        "\\([-12,2]\\)",
+        "\\((-\\infty,-2]\\cup[12,+\\infty)\\)",
+        "\\([-2,12]\\)",
+        "\\([-7,7]\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(x^2-10x+5=(x-5)^2-20\\), so \\((x-5)^2\\le 49 \\iff |x-5|\\le 7 \\iff -2\\le x\\le 12\\).",
+      "source": {
+        "page": 25
+      }
+    },
+    {
+      "id": "ch1-mcq-049",
+      "type": "mcq",
+      "prompt": "Solve the inequality \\(\\frac{5}{3x-2}<\\frac{x}{2x+3}\\).",
+      "options": [
+        "\\(\\left(-\\infty,-\\frac{3}{2}\\right)\\cup\\left[-1,\\frac{2}{3}\\right)\\cup[5,+\\infty)\\)",
+        "\\(\\left(-\\frac{3}{2},-1\\right)\\cup\\left(\\frac{2}{3},5\\right)\\)",
+        "\\(\\left(-\\infty,-\\frac{3}{2}\\right)\\cup\\left(-1,\\frac{2}{3}\\right)\\cup(5,+\\infty)\\)",
+        "\\((-1,5)\\)"
+      ],
+      "answer": "C",
+      "explanation": "It is \\(\\frac{3(x+1)(x-5)}{(2x+3)(3x-2)}>0\\). The sign table (critical values \\(-\\frac32,-1,\\frac23,5\\)) gives \\(+\\) on the three intervals; the inequality is strict, so \\(-1\\) and \\(5\\) are excluded.",
+      "source": {
+        "page": 72
+      }
+    },
+    {
+      "id": "ch1-mcq-050",
+      "type": "mcq",
+      "prompt": "Solve the inequality \\(-2<\\frac{x+1}{x-3}\\).",
+      "options": [
+        "\\(\\left(\\frac{5}{3},3\\right)\\)",
+        "\\(\\left(\\frac{5}{3},+\\infty\\right)\\)",
+        "\\((-\\infty,3)\\cup(3,+\\infty)\\)",
+        "\\(\\left(-\\infty,\\frac{5}{3}\\right)\\cup(3,+\\infty)\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(\\frac{x+1}{x-3}+2=\\frac{3x-5}{x-3}>0\\): positive outside \\(\\frac53\\) and \\(3\\). Multiplying by \\(x-3\\) as if it were positive gives the wrong answer \\(x>\\frac53\\).",
+      "source": {
+        "page": 24
+      }
+    },
+    {
+      "id": "ch1-mcq-051",
+      "type": "mcq",
+      "prompt": "Which rule does NOT define a function \\(f:\\mathbb{R}\\to\\mathbb{R}\\)?",
+      "options": [
+        "\\(f(x)=\\begin{cases}2x+5 & \\text{if } x<2\\\\ 3x+7 & \\text{if } x\\ge 2\\end{cases}\\)",
+        "\\(f(x)=\\begin{cases}2x+5 & \\text{if } x\\le 2\\\\ 3x+7 & \\text{if } x\\ge 2\\end{cases}\\)",
+        "\\(f(x)=|x|\\)",
+        "\\(f(x)=\\sqrt[3]{x}\\)"
+      ],
+      "answer": "B",
+      "explanation": "A function assigns exactly one value to each \\(x\\). In the first rule \\(x=2\\) gets two values, \\(9\\) and \\(13\\).",
+      "source": {
+        "page": 31
+      }
+    },
+    {
+      "id": "ch1-mcq-052",
+      "type": "mcq",
+      "prompt": "Which equation does NOT define \\(y\\) as a function of \\(x\\)?",
+      "options": [
+        "\\(x+y^2=9\\)",
+        "\\(x^2+2y=4\\)",
+        "\\(x=y^3\\)",
+        "\\(y-3x=1\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\(x+y^2=9\\) gives \\(y=\\pm\\sqrt{9-x}\\): two values of \\(y\\) for \\(x<9\\). The others give \\(y=\\frac{4-x^2}{2}\\), \\(y=\\sqrt[3]{x}\\), \\(y=3x+1\\).",
+      "source": {
+        "page": 31
+      }
+    },
+    {
+      "id": "ch1-mcq-053",
+      "type": "mcq",
+      "prompt": "Find the range of \\(f(x)=\\frac{x+3}{x-2}\\).",
+      "options": [
+        "\\(\\mathcal{R}_f=\\mathbb{R}\\setminus\\{2\\}\\)",
+        "\\(\\mathcal{R}_f=\\mathbb{R}\\)",
+        "\\(\\mathcal{R}_f=\\mathbb{R}\\setminus\\{-3\\}\\)",
+        "\\(\\mathcal{R}_f=\\mathbb{R}\\setminus\\{1\\}\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(y=\\frac{x+3}{x-2} \\iff x(y-1)=2y+3\\); this has a solution \\(x=\\frac{2y+3}{y-1}\\ne 2\\) exactly when \\(y\\ne 1\\). (\\(\\mathbb{R}\\setminus\\{2\\}\\) is the domain.)",
+      "source": {
+        "page": 34
+      }
+    },
+    {
+      "id": "ch1-mcq-054",
+      "type": "mcq",
+      "prompt": "Consider the function \\(f:\\mathbb{R}\\to\\mathbb{R}\\) defined by \\(f(x)=x^2+1\\). Which is the correct answer?",
+      "options": [
+        "\\(f(\\mathbb{R})=\\mathbb{R}\\)",
+        "\\(f(\\mathbb{R})=[1,+\\infty)\\)",
+        "\\(f(\\mathbb{R})=(1,+\\infty)\\)",
+        "\\(f(\\mathbb{R})=[0,+\\infty)\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(f(x)\\ge 1\\) for all \\(x\\), and every \\(y\\ge 1\\) has the preimage \\(x=\\pm\\sqrt{y-1}\\); \\(y=1\\) is reached at \\(x=0\\).",
+      "source": {
+        "page": 59
+      }
+    },
+    {
+      "id": "ch1-mcq-055",
+      "type": "mcq",
+      "prompt": "Notation: \\(E(x)\\) denotes the floor of the real number \\(x\\). Which statement is true?",
+      "options": [
+        "\\(E(-3.33)=-4\\)",
+        "\\(E(7.9)=8\\)",
+        "\\(E\\left(\\frac{5}{3}\\right)=5\\)",
+        "\\(E(x)=0\\Rightarrow x=0\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\(E(x)\\) is the greatest integer \\(\\le x\\): \\(E(-3.33)=-4\\), \\(E(7.9)=7\\), \\(E\\left(\\frac53\\right)=1\\), and \\(E(x)=0\\) for every \\(x\\in[0,1)\\).",
+      "source": {
+        "page": 61
+      }
+    },
+    {
+      "id": "ch1-mcq-056",
+      "type": "mcq",
+      "prompt": "Find the domain of \\(f(x)=\\frac{1}{\\sqrt{x^4-5x^2+4}}\\).",
+      "options": [
+        "\\((-\\infty,-2]\\cup[-1,1]\\cup[2,+\\infty)\\)",
+        "\\((-2,-1)\\cup(1,2)\\)",
+        "\\((-\\infty,-2)\\cup(-1,1)\\cup(2,+\\infty)\\)",
+        "\\(\\mathbb{R}\\setminus\\{-2,-1,1,2\\}\\)"
+      ],
+      "answer": "C",
+      "explanation": "We need \\(x^4-5x^2+4=(x^2-1)(x^2-4)>0\\) (strictly, since it is under a root in the denominator): \\(x^2<1\\) or \\(x^2>4\\).",
+      "source": {
+        "page": 76
+      }
+    },
+    {
+      "id": "ch1-mcq-057",
+      "type": "mcq",
+      "prompt": "Let \\(f:[-3,-1]\\cup[2,+\\infty)\\to\\mathbb{R}\\), \\(f(x)=3x-5\\). Find the range of \\(f\\).",
+      "options": [
+        "\\(\\mathbb{R}\\)",
+        "\\([-14,-8]\\cup[1,+\\infty)\\)",
+        "\\([-14,+\\infty)\\)",
+        "\\((-\\infty,-8]\\cup[1,+\\infty)\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(-3\\le x\\le -1 \\Rightarrow -14\\le 3x-5\\le -8\\), and \\(x\\ge 2\\Rightarrow 3x-5\\ge 1\\). Every such \\(y\\) has the preimage \\(x=\\frac{y+5}{3}\\) in the domain.",
+      "source": {
+        "page": 77
+      }
+    },
+    {
+      "id": "ch1-mcq-058",
+      "type": "mcq",
+      "prompt": "Find the range of \\(f(x)=\\frac{1}{x^2-1}\\).",
+      "options": [
+        "\\(\\mathbb{R}\\setminus\\{0\\}\\)",
+        "\\((-\\infty,-1)\\cup(0,+\\infty)\\)",
+        "\\((-\\infty,-1]\\cup(0,+\\infty)\\)",
+        "\\((0,+\\infty)\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(x^2=\\frac{y+1}{y}\\) needs \\(y\\ne0\\) and \\(\\frac{y+1}{y}\\ge 0\\): \\(y\\le -1\\) or \\(y>0\\). \\(y=-1\\) is reached at \\(x=0\\).",
+      "source": {
+        "page": 79
+      }
+    },
+    {
+      "id": "ch1-mcq-059",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\begin{cases}x+2 & \\text{if } x<0\\\\ 1-x & \\text{if } x\\ge 0\\end{cases}\\). Evaluate \\(f(-3)\\), \\(f(0)\\) and \\(f(2)\\).",
+      "options": [
+        "\\(f(-3)=-1,\\ f(0)=2,\\ f(2)=-1\\)",
+        "\\(f(-3)=4,\\ f(0)=1,\\ f(2)=-1\\)",
+        "\\(f(-3)=-1,\\ f(0)=1,\\ f(2)=4\\)",
+        "\\(f(-3)=-1,\\ f(0)=1,\\ f(2)=-1\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(-3<0\\): \\(f(-3)=-3+2=-1\\); \\(0\\ge 0\\): \\(f(0)=1-0=1\\); \\(f(2)=1-2=-1\\).",
+      "source": {
+        "page": 31
+      }
+    },
+    {
+      "id": "ch1-mcq-060",
+      "type": "mcq",
+      "prompt": "The equation \\(x^2+y^2-16=0\\) determines implicitly the function \\(f(x)=\\sqrt{16-x^2}\\). The graph of \\(f\\) is",
+      "options": [
+        "the upper half of the circle of radius 4 centered at the origin",
+        "the lower half of the circle of radius 4 centered at the origin",
+        "the whole circle of radius 4 centered at the origin",
+        "the upper half of the circle of radius 16 centered at the origin"
+      ],
+      "answer": "A",
+      "explanation": "\\(f(x)\\ge 0\\), so its graph is the part of the circle \\(x^2+y^2=16\\) (radius \\(\\sqrt{16}=4\\)) with \\(y\\ge 0\\).",
+      "source": {
+        "page": 32
+      }
+    },
+    {
+      "id": "ch1-mcq-061",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\frac{x^2+3x+2}{x^2-2x-1}\\). What is its domain \\(\\mathcal{D}_f\\)?",
+      "options": [
+        "\\((1-\\sqrt2,1+\\sqrt2)\\)",
+        "\\(\\mathbb{R}\\setminus\\{-1,-2\\}\\)",
+        "\\(\\mathbb{R}\\)",
+        "\\(\\mathbb{R}\\setminus\\{1-\\sqrt2,1+\\sqrt2\\}\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(f\\) is defined when \\(x^2-2x-1\\ne 0\\), i.e. \\(x\\ne 1\\pm\\sqrt2\\). The roots of the numerator do not matter.",
+      "source": {
+        "page": 62
+      }
+    },
+    {
+      "id": "ch1-mcq-062",
+      "type": "mcq",
+      "prompt": "Let \\(g(x)=\\sqrt{x^2-1}\\). What is its domain \\(\\mathcal{D}_g\\)?",
+      "options": [
+        "\\([-1,1]\\)",
+        "\\(\\mathbb{R}\\setminus(-1,1)\\)",
+        "\\(\\mathbb{R}\\setminus[-1,1]\\)",
+        "\\([1,+\\infty)\\)"
+      ],
+      "answer": "B",
+      "explanation": "We need \\(x^2-1\\ge 0\\), i.e. \\(x\\le -1\\) or \\(x\\ge 1\\); \\(\\pm1\\) are included.",
+      "source": {
+        "page": 62
+      }
+    },
+    {
+      "id": "ch1-mcq-063",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\sqrt{\\frac{1-x}{2-x}}\\). What is its domain \\(\\mathcal{D}_f\\)?",
+      "options": [
+        "\\(\\mathbb{R}\\setminus(1,2]\\)",
+        "\\(\\mathbb{R}\\setminus(1,2)\\)",
+        "\\([1,2)\\)",
+        "\\((-\\infty,1]\\)"
+      ],
+      "answer": "A",
+      "explanation": "We need \\(x\\ne 2\\) and \\(\\frac{1-x}{2-x}\\ge 0\\): \\(x\\le 1\\) or \\(x>2\\). Note \\(x=2\\) is excluded (zero denominator).",
+      "source": {
+        "page": 62
+      }
+    },
+    {
+      "id": "ch1-mcq-064",
+      "type": "mcq",
+      "prompt": "Let \\(g(x)=\\frac{\\sqrt{1-x}}{\\sqrt{2-x}}\\). What is its domain \\(\\mathcal{D}_g\\)?",
+      "options": [
+        "\\((-\\infty,2)\\)",
+        "\\((-\\infty,1)\\)",
+        "\\((-\\infty,1]\\)",
+        "\\([1,2)\\)"
+      ],
+      "answer": "C",
+      "explanation": "Each root needs its own condition: \\(1-x\\ge 0\\) and \\(2-x>0\\), so \\(x\\le 1\\). Unlike \\(\\sqrt{\\frac{1-x}{2-x}}\\), \\(x>2\\) is not allowed.",
+      "source": {
+        "page": 62
+      }
+    },
+    {
+      "id": "ch1-mcq-065",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\sqrt{4-x^2}\\) and \\(g(x)=\\frac{x}{x-1}\\). Find \\(\\mathcal{D}_{\\frac{f}{g}}\\).",
+      "options": [
+        "\\([-2,1)\\cup(1,2]\\)",
+        "\\([-2,2]\\)",
+        "\\([-2,0)\\cup(0,1)\\cup(1,2]\\)",
+        "\\((-2,0)\\cup(0,1)\\cup(1,2)\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(\\mathcal{D}_f\\cap\\mathcal{D}_g=[-2,1)\\cup(1,2]\\), and we also remove the zeros of \\(g\\): \\(g(x)=0\\iff x=0\\).",
+      "source": {
+        "page": 35
+      }
+    },
+    {
+      "id": "ch1-mcq-066",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\sqrt{x^2-1}\\) and \\(g(x)=3x+5\\). Find \\(\\mathcal{D}_{f\\circ g}\\).",
+      "options": [
+        "\\((-\\infty,-1]\\cup[1,+\\infty)\\)",
+        "\\(\\left[-2,-\\frac{4}{3}\\right]\\)",
+        "\\((-\\infty,-2]\\cup\\left(-\\frac{4}{3},+\\infty\\right)\\)",
+        "\\((-\\infty,-2]\\cup\\left[-\\frac{4}{3},+\\infty\\right)\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(x\\in\\mathcal{D}_{f\\circ g}\\iff 3x+5\\in(-\\infty,-1]\\cup[1,+\\infty)\\iff x\\le -2\\) or \\(x\\ge-\\frac43\\). At \\(x=-\\frac43\\), \\(g(x)=1\\in\\mathcal{D}_f\\), so \\(-\\frac43\\) is included.",
+      "source": {
+        "page": 36
+      }
+    },
+    {
+      "id": "ch1-mcq-067",
+      "type": "mcq",
+      "prompt": "Write \\(y=\\sqrt[5]{x^2+3x}\\) as a composite \\((g\\circ f)(x)\\).",
+      "options": [
+        "\\(g(x)=\\sqrt[5]{x},\\ f(x)=x^2+3x\\)",
+        "\\(g(x)=x^2+3x,\\ f(x)=\\sqrt[5]{x}\\)",
+        "\\(g(x)=\\sqrt[5]{x}+3x,\\ f(x)=x^2\\)",
+        "\\(g(x)=\\sqrt[5]{x^2},\\ f(x)=3x\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\((g\\circ f)(x)=g(f(x))\\): first compute \\(f(x)=x^2+3x\\), then apply \\(g(x)=\\sqrt[5]{x}\\).",
+      "source": {
+        "page": 37
+      }
+    },
+    {
+      "id": "ch1-mcq-068",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\frac{x}{x^2-9}\\) and \\(g(x)=\\frac{1}{x}\\). Find \\(f\\circ g\\) and its domain.",
+      "options": [
+        "\\((f\\circ g)(x)=\\frac{x}{1-9x^2},\\ x\\in\\mathbb{R}\\setminus\\left\\{-\\frac{1}{3},\\frac{1}{3}\\right\\}\\)",
+        "\\((f\\circ g)(x)=\\frac{x}{1-9x^2},\\ x\\in\\mathbb{R}\\setminus\\left\\{-\\frac{1}{3},0,\\frac{1}{3}\\right\\}\\)",
+        "\\((f\\circ g)(x)=\\frac{x^2-9}{x},\\ x\\in\\mathbb{R}\\setminus\\{-3,0,3\\}\\)",
+        "\\((f\\circ g)(x)=\\frac{x}{1-9x^2},\\ x\\in\\mathbb{R}\\setminus\\{-3,0,3\\}\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(x\\in\\mathcal{D}_g=\\mathbb{R}\\setminus\\{0\\}\\) and \\(\\frac1x\\ne\\pm3\\). Then \\(f\\left(\\frac1x\\right)=\\frac{1/x}{1/x^2-9}=\\frac{x}{1-9x^2}\\). \\(0\\) stays excluded even though the simplified formula is defined there.",
+      "source": {
+        "page": 81
+      }
+    },
+    {
+      "id": "ch1-mcq-069",
+      "type": "mcq",
+      "prompt": "The function \\(f:(-9,-5]\\cup[5,8)\\to\\mathbb{R}\\), \\(f(x)=\\sqrt{x^2-16}\\), is",
+      "options": [
+        "even",
+        "neither even nor odd",
+        "odd",
+        "both even and odd"
+      ],
+      "answer": "B",
+      "explanation": "The domain is not symmetric about the origin: \\(-8\\in\\mathcal{D}_f\\) but \\(8\\notin\\mathcal{D}_f\\). (On \\((-9,-4]\\cup[4,9)\\) it would be even.)",
+      "source": {
+        "page": 39
+      }
+    },
+    {
+      "id": "ch1-mcq-070",
+      "type": "mcq",
+      "prompt": "Determine the parity of \\(f(x)=\\sin\\left(\\sqrt{x^5-x^3}\\right)\\).",
+      "options": [
+        "odd",
+        "even",
+        "neither even nor odd",
+        "both even and odd"
+      ],
+      "answer": "C",
+      "explanation": "\\(\\mathcal{D}_f=[-1,0]\\cup[1,+\\infty)\\) is not symmetric (e.g. \\(2\\in\\mathcal{D}_f\\), \\(-2\\notin\\mathcal{D}_f\\)), so \\(f\\) is neither even nor odd.",
+      "source": {
+        "page": 82
+      }
+    },
+    {
+      "id": "ch1-mcq-071",
+      "type": "mcq",
+      "prompt": "Which of the following functions is even?",
+      "options": [
+        "\\(f(x)=\\frac{x}{x^2+1}\\)",
+        "\\(f(x)=\\frac{x}{x+1}\\)",
+        "\\(f(x)=1+3x^3-x^5\\)",
+        "\\(f(x)=1+3x^2-x^4\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(1+3(-x)^2-(-x)^4=1+3x^2-x^4\\). \\(\\frac{x}{x^2+1}\\) is odd; \\(\\frac{x}{x+1}\\) has a non-symmetric domain; \\(1+3x^3-x^5\\) is neither.",
+      "source": {
+        "page": 38
+      }
+    },
+    {
+      "id": "ch1-mcq-072",
+      "type": "mcq",
+      "prompt": "Which of the following functions is odd?",
+      "options": [
+        "\\(f(x)=x^2\\sin(x)\\)",
+        "\\(f(x)=\\sin(x)+\\cos(x)\\)",
+        "\\(f(x)=|x|\\cos(x)\\)",
+        "\\(f(x)=\\cos(\\sin(x))\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\(x^2\\) is even and \\(\\sin\\) is odd, so their product is odd. \\(|x|\\cos x\\) and \\(\\cos(\\sin x)\\) are even; \\(\\sin x+\\cos x\\) is neither.",
+      "source": {
+        "page": 50
+      }
+    },
+    {
+      "id": "ch1-mcq-073",
+      "type": "mcq",
+      "prompt": "If \\(f\\) and \\(g\\) are both odd functions, then \\(f\\cdot g\\) is",
+      "options": [
+        "an odd function",
+        "neither even nor odd",
+        "always the zero function",
+        "an even function"
+      ],
+      "answer": "D",
+      "explanation": "\\((fg)(-x)=f(-x)g(-x)=(-f(x))(-g(x))=f(x)g(x)\\).",
+      "source": {
+        "page": 40
+      }
+    },
+    {
+      "id": "ch1-mcq-074",
+      "type": "mcq",
+      "prompt": "The fundamental period of \\(f(x)=x-E(x)\\) is",
+      "options": [
+        "\\(2\\pi\\)",
+        "\\(1\\)",
+        "\\(\\frac{1}{2}\\)",
+        "it has no fundamental period"
+      ],
+      "answer": "B",
+      "explanation": "\\(E(x+1)=E(x)+1\\) gives \\(f(x+1)=f(x)\\), and no \\(0<t<1\\) is a period (Example 1.23).",
+      "source": {
+        "page": 42
+      }
+    },
+    {
+      "id": "ch1-mcq-075",
+      "type": "mcq",
+      "prompt": "The smallest positive period of \\(g(x)=\\cos^2(5x)\\) is",
+      "options": [
+        "\\(\\frac{2\\pi}{5}\\)",
+        "\\(\\frac{\\pi}{10}\\)",
+        "\\(\\frac{\\pi}{5}\\)",
+        "\\(2\\pi\\)"
+      ],
+      "answer": "C",
+      "explanation": "Squaring removes the sign: \\(\\cos^2(5x+\\pi)=(-\\cos 5x)^2=\\cos^2(5x)\\), so \\(5t=k\\pi\\) and \\(T=\\frac{\\pi}{5}\\).",
+      "source": {
+        "page": 54
+      }
+    },
+    {
+      "id": "ch1-mcq-076",
+      "type": "mcq",
+      "prompt": "The fundamental period of \\(f(x)=\\cos\\left(\\frac{5x}{3}\\right)+\\tan\\left(\\frac{7x}{2}\\right)\\) is",
+      "options": [
+        "\\(6\\pi\\)",
+        "\\(\\frac{6\\pi}{5}\\)",
+        "\\(\\frac{2\\pi}{7}\\)",
+        "\\(2\\pi\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\(T\\) must be a multiple of both \\(\\frac{6\\pi}{5}\\) and \\(\\frac{2\\pi}{7}\\): \\(T=5\\cdot\\frac{6\\pi}{5}=21\\cdot\\frac{2\\pi}{7}=6\\pi\\) is the smallest.",
+      "source": {
+        "page": 83
+      }
+    },
+    {
+      "id": "ch1-mcq-077",
+      "type": "mcq",
+      "prompt": "Which function is NOT one-to-one on its domain?",
+      "options": [
+        "\\(f(x)=3x-5\\)",
+        "\\(g(x)=\\frac{x^2-1}{x^2+1}\\)",
+        "\\(h(x)=\\sqrt{x-1}\\)",
+        "\\(k(x)=\\sqrt[3]{x}\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(g\\) is even, so \\(g(2)=g(-2)\\) with \\(2\\ne-2\\). The other three satisfy \\(f(x_1)=f(x_2)\\Rightarrow x_1=x_2\\).",
+      "source": {
+        "page": 43
+      }
+    },
+    {
+      "id": "ch1-mcq-078",
+      "type": "mcq",
+      "prompt": "Find the inverse of \\(g(x)=\\frac{x+3}{x-2}\\).",
+      "options": [
+        "\\(g^{-1}(x)=\\frac{x-2}{x+3}\\)",
+        "\\(g^{-1}(x)=\\frac{2x-3}{x-1}\\)",
+        "\\(g^{-1}(x)=\\frac{2x+3}{x-1}\\)",
+        "\\(g^{-1}(x)=\\frac{3-2x}{x-1}\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(\\frac{x+3}{x-2}=y \\iff x(y-1)=2y+3 \\iff x=\\frac{2y+3}{y-1}\\), with \\(\\mathcal{D}_{g^{-1}}=\\mathcal{R}_g=\\mathbb{R}\\setminus\\{1\\}\\).",
+      "source": {
+        "page": 45
+      }
+    },
+    {
+      "id": "ch1-mcq-079",
+      "type": "mcq",
+      "prompt": "Which function is one-to-one?",
+      "options": [
+        "\\(f(x)=x^2-2x\\)",
+        "\\(f(x)=x^4+5\\)",
+        "\\(f(x)=|x|\\)",
+        "\\(f(x)=x^3+8\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(x_1^3+8=x_2^3+8\\Rightarrow x_1=x_2\\). For the others: \\(f(0)=f(2)\\) for \\(x^2-2x\\), and \\(x^4+5\\), \\(|x|\\) are even.",
+      "source": {
+        "page": 43
+      }
+    },
+    {
+      "id": "ch1-mcq-080",
+      "type": "mcq",
+      "prompt": "Let \\(f:\\mathbb{R}\\setminus\\{-5\\}\\to\\mathbb{R}\\), \\(f(x)=\\frac{-3x+7}{x+5}\\). Which is correct?",
+      "options": [
+        "\\(f\\) is injective but not surjective",
+        "\\(f\\) is surjective but not injective",
+        "\\(f\\) is bijective",
+        "\\(f\\) is neither injective nor surjective"
+      ],
+      "answer": "A",
+      "explanation": "\\(f(x)=y\\iff x(y+3)=7-5y\\): for \\(y\\ne-3\\) exactly one solution, for \\(y=-3\\) none. So at most one solution always, but not at least one.",
+      "source": {
+        "page": 85
+      }
+    },
+    {
+      "id": "ch1-mcq-081",
+      "type": "mcq",
+      "prompt": "Let \\(f:\\mathbb{R}\\to[1,+\\infty)\\), \\(f(x)=x^2-4x+5\\). Which is correct?",
+      "options": [
+        "\\(f\\) is injective but not surjective",
+        "\\(f\\) is surjective but not injective",
+        "\\(f\\) is bijective",
+        "\\(f\\) is neither injective nor surjective"
+      ],
+      "answer": "B",
+      "explanation": "\\(x^2-4x+5-y=0\\) has \\(\\Delta=4(y-1)\\ge 0\\) for every \\(y\\ge 1\\) (onto), but two solutions when \\(y>1\\) (not one-to-one).",
+      "source": {
+        "page": 85
+      }
+    },
+    {
+      "id": "ch1-mcq-082",
+      "type": "mcq",
+      "prompt": "Consider the function \\(f:\\mathbb{N}\\to\\mathbb{N}\\) defined by \\(f(n)=n+1\\). Which is the correct answer?",
+      "options": [
+        "\\(f\\) is surjective and not injective",
+        "\\(f\\) is bijective",
+        "\\(f\\) is injective and not surjective",
+        "\\(f\\) is neither injective nor surjective"
+      ],
+      "answer": "C",
+      "explanation": "\\(n_1+1=n_2+1\\Rightarrow n_1=n_2\\) (injective), but \\(f(n)=1\\) has no solution in \\(\\mathbb{N}=\\{1,2,\\dots\\}\\) (not surjective).",
+      "source": {
+        "page": 59
+      }
+    },
+    {
+      "id": "ch1-mcq-083",
+      "type": "mcq",
+      "prompt": "Consider \\(f:\\mathbb{R}\\setminus\\{2\\}\\to\\mathbb{R}\\setminus\\{1\\}\\), \\(f(x)=\\frac{x+1}{x-2}\\). Which is the correct answer?",
+      "options": [
+        "\\(f\\) is bijective and \\(f^{-1}(x)=\\frac{2x+1}{x-1}\\)",
+        "\\(f\\) is not bijective",
+        "\\(f\\) is bijective and \\(f^{-1}(x)=\\frac{x-2}{x+1}\\)",
+        "\\(f\\) is bijective and \\(f^{-1}(x)=\\frac{x-1}{x+2}\\)"
+      ],
+      "answer": "A",
+      "explanation": "Every \\(y\\ne1\\) has the unique preimage \\(x=\\frac{2y+1}{y-1}\\ne 2\\), so \\(f\\) is bijective with \\(f^{-1}(y)=\\frac{2y+1}{y-1}\\).",
+      "source": {
+        "page": 59
+      }
+    },
+    {
+      "id": "ch1-mcq-084",
+      "type": "mcq",
+      "prompt": "Let \\(f:[-1,1]\\to[-1,1]\\), \\(f(x)=\\frac{2x}{1+x^2}\\). Which statement is correct?",
+      "options": [
+        "\\(f\\) is injective but not surjective",
+        "\\(f\\) is surjective but not injective",
+        "\\(f\\) is neither injective nor surjective",
+        "\\(f\\) is bijective and \\(f^{-1}(x)=\\frac{x}{1+\\sqrt{1-x^2}}\\)"
+      ],
+      "answer": "D",
+      "explanation": "For \\(y\\in[-1,1]\\), \\(yx^2-2x+y=0\\) has exactly one solution in \\([-1,1]\\): \\(x=\\frac{y}{1+\\sqrt{1-y^2}}\\) (and \\(x=0\\) for \\(y=0\\)).",
+      "source": {
+        "page": 60
+      }
+    },
+    {
+      "id": "ch1-mcq-085",
+      "type": "mcq",
+      "prompt": "The graphs of a one-to-one function \\(f\\) and of its inverse \\(f^{-1}\\) are symmetric about",
+      "options": [
+        "the \\(y\\)-axis",
+        "the line \\(y=x\\)",
+        "the origin",
+        "the \\(x\\)-axis"
+      ],
+      "answer": "B",
+      "explanation": "\\((a,b)\\) is on the graph of \\(f\\) exactly when \\((b,a)\\) is on the graph of \\(f^{-1}\\).",
+      "source": {
+        "page": 45
+      }
+    },
+    {
+      "id": "ch1-mcq-086",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\sqrt[3]{1-x^3}\\). Which statement is FALSE?",
+      "options": [
+        "\\(f\\) is defined on \\(\\mathbb{R}\\)",
+        "\\(f\\) is a bijection from \\(\\mathbb{R}\\) to \\(\\mathbb{R}\\)",
+        "\\(f\\) is increasing on \\(\\mathbb{R}\\)",
+        "The inverse of \\(f\\) is \\(f\\) itself"
+      ],
+      "answer": "C",
+      "explanation": "\\(x\\mapsto 1-x^3\\) is decreasing and \\(\\sqrt[3]{\\cdot}\\) is increasing, so \\(f\\) is decreasing. Solving \\(y=\\sqrt[3]{1-x^3}\\) gives \\(x=\\sqrt[3]{1-y^3}\\), so \\(f^{-1}=f\\).",
+      "source": {
+        "page": 63
+      }
+    },
+    {
+      "id": "ch1-mcq-087",
+      "type": "mcq",
+      "prompt": "Which point lies on the trigonometric (unit) circle?",
+      "options": [
+        "\\(\\left(\\frac{1}{2},\\frac{\\sqrt3}{2}\\right)\\)",
+        "\\(\\left(\\frac{1}{2},\\frac{1}{2}\\right)\\)",
+        "\\((1,1)\\)",
+        "\\(\\left(\\frac{\\sqrt2}{2},\\frac{1}{2}\\right)\\)"
+      ],
+      "answer": "A",
+      "explanation": "A point \\((x,y)\\) is on the unit circle iff \\(x^2+y^2=1\\): \\(\\frac14+\\frac34=1\\). The others give \\(\\frac12\\), \\(2\\) and \\(\\frac34\\).",
+      "source": {
+        "page": 48
+      }
+    },
+    {
+      "id": "ch1-mcq-088",
+      "type": "mcq",
+      "prompt": "The domain of \\(\\tan(x)\\) is",
+      "options": [
+        "\\(\\mathbb{R}\\setminus\\{k\\pi : k\\in\\mathbb{Z}\\}\\)",
+        "\\(\\mathbb{R}\\)",
+        "\\(\\mathbb{R}\\setminus\\left\\{\\frac{\\pi}{2}+2k\\pi : k\\in\\mathbb{Z}\\right\\}\\)",
+        "\\(\\mathbb{R}\\setminus\\left\\{\\frac{\\pi}{2}+k\\pi : k\\in\\mathbb{Z}\\right\\}\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(\\tan x=\\frac{\\sin x}{\\cos x}\\) needs \\(\\cos x\\ne 0\\), i.e. \\(x\\ne\\frac{\\pi}{2}+k\\pi\\). \\(\\mathbb{R}\\setminus\\{k\\pi\\}\\) is the domain of \\(\\cot\\).",
+      "source": {
+        "page": 51
+      }
+    },
+    {
+      "id": "ch1-mcq-089",
+      "type": "mcq",
+      "prompt": "Which identity is correct?",
+      "options": [
+        "\\(1+\\tan^2(x)=\\csc^2(x)\\)",
+        "\\(1+\\cot^2(x)=\\sec^2(x)\\)",
+        "\\(\\tan^2(x)-1=\\sec^2(x)\\)",
+        "\\(1+\\tan^2(x)=\\sec^2(x)\\)"
+      ],
+      "answer": "D",
+      "explanation": "Divide \\(\\cos^2x+\\sin^2x=1\\) by \\(\\cos^2x\\). (Dividing by \\(\\sin^2x\\) gives \\(1+\\cot^2x=\\csc^2x\\).)",
+      "source": {
+        "page": 52
+      }
+    },
+    {
+      "id": "ch1-mcq-090",
+      "type": "mcq",
+      "prompt": "For every \\(x\\in\\mathbb{R}\\), \\(\\cos(\\pi-x)\\) equals",
+      "options": [
+        "\\(-\\cos(x)\\)",
+        "\\(\\cos(x)\\)",
+        "\\(\\sin(x)\\)",
+        "\\(-\\sin(x)\\)"
+      ],
+      "answer": "A",
+      "explanation": "Symmetry identity: \\(\\cos(\\pi-x)=\\cos(\\pi+x)=-\\cos(x)\\).",
+      "source": {
+        "page": 51
+      }
+    },
+    {
+      "id": "ch1-mcq-091",
+      "type": "mcq",
+      "prompt": "For all \\(x,y\\in\\mathbb{R}\\), \\(\\cos(x+y)\\) equals",
+      "options": [
+        "\\(\\cos x\\cos y+\\sin x\\sin y\\)",
+        "\\(\\cos x\\cos y-\\sin x\\sin y\\)",
+        "\\(\\sin x\\cos y+\\sin y\\cos x\\)",
+        "\\(\\cos x+\\cos y\\)"
+      ],
+      "answer": "B",
+      "explanation": "Addition formula: \\(\\cos(x\\pm y)=\\cos x\\cos y\\mp\\sin x\\sin y\\). \\(\\sin x\\cos y+\\sin y\\cos x\\) is \\(\\sin(x+y)\\).",
+      "source": {
+        "page": 51
+      }
+    },
+    {
+      "id": "ch1-mcq-092",
+      "type": "mcq",
+      "prompt": "A function \\(f\\) is decreasing on \\(\\mathcal{D}_f\\) if for all \\(x_1,x_2\\in\\mathcal{D}_f\\):",
+      "options": [
+        "\\(x_1<x_2\\Rightarrow f(x_1)<f(x_2)\\)",
+        "\\(x_1<x_2\\Rightarrow f(x_1)\\le f(x_2)\\)",
+        "\\(x_1<x_2\\Rightarrow f(x_1)>f(x_2)\\)",
+        "\\(x_1<x_2\\Rightarrow f(x_1)=f(x_2)\\)"
+      ],
+      "answer": "C",
+      "explanation": "Definition 1.4.14: decreasing means a larger input always gives a strictly smaller output.",
+      "source": {
+        "page": 54
+      }
+    },
+    {
+      "id": "ch1-mcq-093",
+      "type": "mcq",
+      "prompt": "Discuss the monotonicity of \\(f(x)=x^2+4x-21\\).",
+      "options": [
+        "decreasing on \\((-\\infty,-2]\\), increasing on \\([-2,+\\infty)\\)",
+        "increasing on \\((-\\infty,-2]\\), decreasing on \\([-2,+\\infty)\\)",
+        "decreasing on \\((-\\infty,2]\\), increasing on \\([2,+\\infty)\\)",
+        "increasing on \\(\\mathbb{R}\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\(f(x_2)-f(x_1)=(x_2-x_1)(x_2+x_1+4)\\), which is positive when \\(x_1,x_2\\ge-2\\) and negative when \\(x_1,x_2\\le-2\\).",
+      "source": {
+        "page": 55
+      }
+    },
+    {
+      "id": "ch1-mcq-094",
+      "type": "mcq",
+      "prompt": "On which interval is \\(f(x)=x^3+6x^2-63x+3\\) decreasing?",
+      "options": [
+        "\\([-3,7]\\)",
+        "\\((-\\infty,-7]\\)",
+        "\\([3,+\\infty)\\)",
+        "\\([-7,3]\\)"
+      ],
+      "answer": "D",
+      "explanation": "Exercise 1.6: \\(f(x_2)-f(x_1)=(x_2-x_1)(x_2^2+x_1x_2+x_1^2+6x_1+6x_2-63)\\); comparing the second factor with \\(3(x+7)(x-3)\\) shows that \\(f\\) increases on \\((-\\infty,-7]\\) and \\([3,+\\infty)\\) and decreases on \\([-7,3]\\).",
+      "source": {
+        "page": 84
+      }
+    },
+    {
+      "id": "ch1-mcq-095",
+      "type": "mcq",
+      "prompt": "On which intervals is \\(f(x)=2x^4-4x^2\\) increasing?",
+      "options": [
+        "on \\((-\\infty,-1]\\) and on \\([0,1]\\)",
+        "on \\([-1,0]\\) and on \\([1,+\\infty)\\)",
+        "on \\([0,+\\infty)\\)",
+        "on \\([-1,1]\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(f(x_2)-f(x_1)=2(x_2-x_1)(x_2+x_1)(x_2^2+x_1^2-2)\\). The book finds: increasing on \\([-1,0]\\) and \\([1,+\\infty)\\), decreasing on \\((-\\infty,-1]\\) and \\([0,1]\\).",
+      "source": {
+        "page": 56
+      }
+    },
+    {
+      "id": "ch1-mcq-096",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\arcsin(2x)\\), \\(g(x)=\\arccos(x^2-1)\\) and \\(h(x)=\\arctan(\\sqrt{x})\\), with domains \\(\\mathcal{D}_f,\\mathcal{D}_g,\\mathcal{D}_h\\). Which statement is true?",
+      "options": [
+        "\\(\\mathcal{D}_f=[-1,1]\\)",
+        "\\(\\mathcal{D}_g=[-1,1]\\)",
+        "\\(\\mathcal{D}_h=[0,+\\infty)\\)",
+        "\\(\\mathcal{D}_g=[0,\\sqrt2]\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(\\arctan\\) is defined on \\(\\mathbb{R}\\), so only \\(\\sqrt x\\) matters: \\(x\\ge0\\). Also \\(\\mathcal{D}_f=\\left[-\\frac12,\\frac12\\right]\\) and \\(-1\\le x^2-1\\le 1\\) gives \\(\\mathcal{D}_g=[-\\sqrt2,\\sqrt2]\\).",
+      "source": {
+        "page": 62
+      }
+    },
+    {
+      "id": "ch1-mcq-097",
+      "type": "mcq",
+      "prompt": "Let \\(A=\\arcsin\\left(\\sin\\frac{15\\pi}{7}\\right)\\). Then",
+      "options": [
+        "\\(A=\\frac{15\\pi}{7}\\)",
+        "\\(A=-\\frac{\\pi}{7}\\)",
+        "\\(A=\\frac{8\\pi}{7}\\)",
+        "\\(A=\\frac{\\pi}{7}\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(\\frac{15\\pi}{7}=\\frac{\\pi}{7}+2\\pi\\) and \\(\\frac{\\pi}{7}\\in\\left[-\\frac\\pi2,\\frac\\pi2\\right]\\), the range of \\(\\arcsin\\).",
+      "source": {
+        "page": 62
+      }
+    },
+    {
+      "id": "ch1-mcq-098",
+      "type": "mcq",
+      "prompt": "Let \\(B=\\arccos\\left(\\cos\\frac{21\\pi}{11}\\right)\\). Then",
+      "options": [
+        "\\(B=-\\frac{\\pi}{11}\\)",
+        "\\(B=\\frac{\\pi}{11}\\)",
+        "\\(B=\\frac{21\\pi}{11}\\)",
+        "\\(B=\\frac{10\\pi}{11}\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(\\cos\\frac{21\\pi}{11}=\\cos\\left(2\\pi-\\frac{\\pi}{11}\\right)=\\cos\\frac{\\pi}{11}\\), and \\(\\frac{\\pi}{11}\\in[0,\\pi]\\), the range of \\(\\arccos\\). \\(-\\frac{\\pi}{11}\\) is not in \\([0,\\pi]\\).",
+      "source": {
+        "page": 62
+      }
+    },
+    {
+      "id": "ch1-mcq-099",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\arcsin(\\cos x)\\) and \\(g(x)=\\arccos(\\sin x)\\). Which statement is true?",
+      "options": [
+        "\\(f\\) is periodic with period \\(\\pi\\)",
+        "\\(g\\) is an odd function",
+        "\\(f\\) is an even function",
+        "\\(f\\) is an odd function"
+      ],
+      "answer": "C",
+      "explanation": "\\(\\cos\\) is even, so \\(f(-x)=f(x)\\). \\(f(x+\\pi)=\\arcsin(-\\cos x)=-f(x)\\), so \\(\\pi\\) is not a period; \\(g(-x)=\\pi-g(x)\\), so \\(g\\) is not odd. (\\(g\\) is periodic with period \\(2\\pi\\).)",
+      "source": {
+        "page": 63
+      }
+    },
+    {
+      "id": "ch1-mcq-100",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\arcsin x+\\arccos x\\). Which statement is FALSE?",
+      "options": [
+        "\\(f(x)=x\\) for all \\(x\\in[-1,1]\\)",
+        "The domain of \\(f\\) is \\([-1,1]\\)",
+        "\\(\\forall x\\in[-1,1],\\ f(x)=\\frac{\\pi}{2}\\)",
+        "\\(f\\) is a constant function"
+      ],
+      "answer": "A",
+      "explanation": "\\(\\arcsin x+\\arccos x=\\frac{\\pi}{2}\\) for every \\(x\\in[-1,1]\\), so \\(f\\) is constant, not equal to \\(x\\).",
+      "source": {
+        "page": 63
+      }
+    },
+    {
+      "id": "ch1-mcq-101",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\arctan x+\\arctan\\frac{1}{x}\\). Which statement is true?",
+      "options": [
+        "\\(f\\) is a constant function on \\(\\mathbb{R}\\setminus\\{0\\}\\)",
+        "For \\(x>0\\), \\(f(x)=\\frac{\\pi}{2}\\)",
+        "\\(f(x)=\\frac{\\pi}{2}\\) for all \\(x\\in\\mathbb{R}\\setminus\\{0\\}\\)",
+        "The domain of \\(f\\) is \\(\\mathbb{R}\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(\\mathcal{D}_f=\\mathbb{R}\\setminus\\{0\\}\\). \\(f(x)=\\frac\\pi2\\) for \\(x>0\\), but \\(f\\) is odd, so \\(f(x)=-\\frac\\pi2\\) for \\(x<0\\): not constant.",
+      "source": {
+        "page": 64
+      }
+    },
+    {
+      "id": "ch1-mcq-102",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=x+\\sqrt{1-x^2}\\). Which statement is true?",
+      "options": [
+        "The domain of \\(f\\) is \\([0,1]\\)",
+        "\\(f\\) is increasing on \\([-1,1]\\)",
+        "\\(f\\) establishes a bijection from \\(\\left[-1,\\frac{1}{\\sqrt2}\\right]\\) to \\([-1,\\sqrt2]\\)",
+        "\\(f\\) establishes a bijection from \\([0,1]\\) to \\([1,\\sqrt2]\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(\\mathcal{D}_f=[-1,1]\\); \\(f\\) increases from \\(f(-1)=-1\\) to \\(f\\left(\\frac{1}{\\sqrt2}\\right)=\\sqrt2\\), then decreases to \\(f(1)=1\\). Since \\(f(0)=f(1)=1\\), \\(f\\) is not injective on \\([0,1]\\).",
+      "source": {
+        "page": 64
+      }
+    },
+    {
+      "id": "ch1-mcq-103",
+      "type": "mcq",
+      "prompt": "Let \\(S\\) be the solution set of the equation \\(\\cos 2x=\\sin x\\). Then",
+      "options": [
+        "\\(S=\\left\\{\\frac{\\pi}{6}+2k\\pi : k\\in\\mathbb{Z}\\right\\}\\)",
+        "\\(S=\\left\\{-\\frac{\\pi}{2}+2k\\pi : k\\in\\mathbb{Z}\\right\\}\\)",
+        "\\(S=\\left\\{\\frac{\\pi}{6}+\\frac{k\\pi}{3} : k\\in\\mathbb{Z}\\right\\}\\)",
+        "\\(S=\\left\\{\\frac{\\pi}{6}+\\frac{2k\\pi}{3} : k\\in\\mathbb{Z}\\right\\}\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(\\cos 2x=\\cos\\left(\\frac\\pi2-x\\right)\\): \\(2x=\\frac\\pi2-x+2k\\pi\\) gives \\(x=\\frac\\pi6+\\frac{2k\\pi}{3}\\); \\(2x=-\\frac\\pi2+x+2k\\pi\\) gives \\(x=-\\frac\\pi2+2k\\pi\\), already contained in the first family.",
+      "source": {
+        "page": 64
+      }
+    },
+    {
+      "id": "ch1-mcq-104",
+      "type": "mcq",
+      "prompt": "Let \\(f\\) be defined by \\(\\arcsin f(x)+\\arcsin x=\\frac{\\pi}{2}\\), with domain \\(\\mathcal{D}_f\\). Which statement is true?",
+      "options": [
+        "\\(\\mathcal{D}_f=[0,1]\\) and \\(f(x)=\\sqrt{1-x^2}\\)",
+        "\\(\\mathcal{D}_f=[-1,1]\\) and \\(f(x)=\\sqrt{1-x^2}\\)",
+        "\\(\\mathcal{D}_f=[0,1]\\) and \\(f(x)=x\\)",
+        "\\(\\mathcal{D}_f=[-1,0]\\) and \\(f(x)=\\sqrt{1-x^2}\\)"
+      ],
+      "answer": "A",
+      "explanation": "For \\(x<0\\), \\(\\arcsin x<0\\) would force \\(\\arcsin f(x)>\\frac\\pi2\\), impossible. For \\(x\\in[0,1]\\): \\(f(x)=\\sin\\left(\\frac\\pi2-\\arcsin x\\right)=\\cos(\\arcsin x)=\\sqrt{1-x^2}\\).",
+      "source": {
+        "page": 65
+      }
+    },
+    {
+      "id": "ch1-mcq-105",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\arcsin\\left(\\frac{2x}{1+x^2}\\right)\\) with domain \\(\\mathcal{D}_f\\). Which statement is FALSE?",
+      "options": [
+        "\\(\\mathcal{D}_f=[-1,1]\\)",
+        "\\(\\mathcal{D}_f=\\mathbb{R}\\)",
+        "On \\([-1,1]\\), \\(f(x)=2\\arctan x\\)",
+        "On \\([1,+\\infty)\\), \\(f(x)=\\pi-2\\arctan x\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\(-1\\le\\frac{2x}{1+x^2}\\le1\\iff (x+1)^2\\ge0\\) and \\((x-1)^2\\ge0\\), true for every real \\(x\\), so \\(\\mathcal{D}_f=\\mathbb{R}\\).",
+      "source": {
+        "page": 65
+      }
+    },
+    {
+      "id": "ch1-mcq-106",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\arccos\\left(\\frac{1-x^2}{1+x^2}\\right)\\). For all \\(x\\in\\mathbb{R}\\), \\(f(x)\\) equals",
+      "options": [
+        "\\(2\\arctan(x)\\)",
+        "\\(\\pi-2\\arctan(x)\\)",
+        "\\(2\\arctan(|x|)\\)",
+        "\\(\\arctan(x^2)\\)"
+      ],
+      "answer": "C",
+      "explanation": "With \\(\\tan y=x\\), \\(f(x)=\\arccos(\\cos 2y)\\). For \\(x\\ge0\\) this is \\(2\\arctan x\\); for \\(x\\le 0\\) it is \\(-2\\arctan x\\); together \\(2\\arctan|x|\\).",
+      "source": {
+        "page": 66
+      }
+    },
+    {
+      "id": "ch1-mcq-107",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\arcsin(\\sin x)+\\arccos(\\cos x)\\). For \\(x\\in\\left[-\\frac{\\pi}{2},0\\right]\\), \\(f(x)\\) equals",
+      "options": [
+        "\\(2x\\)",
+        "\\(0\\)",
+        "\\(-2x\\)",
+        "\\(\\pi\\)"
+      ],
+      "answer": "B",
+      "explanation": "For \\(x\\in\\left[-\\frac\\pi2,0\\right]\\): \\(\\arcsin(\\sin x)=x\\) and \\(\\arccos(\\cos x)=\\arccos(\\cos(-x))=-x\\), so \\(f(x)=0\\).",
+      "source": {
+        "page": 67
+      }
+    },
+    {
+      "id": "ch1-tf-001",
+      "type": "tf",
+      "prompt": "In this course, \\(0\\in\\mathbb{N}\\).",
+      "answer": false,
+      "explanation": "The book defines \\(\\mathbb{N}=\\{1,2,3,\\dots\\}\\) (positive integers), so \\(0\\notin\\mathbb{N}\\); but \\(0\\in\\mathbb{Z}\\).",
+      "source": {
+        "page": 4
+      }
+    },
+    {
+      "id": "ch1-tf-002",
+      "type": "tf",
+      "prompt": "Inequalities of the same direction can be subtracted term by term: if \\(a\\le b\\) and \\(c\\le d\\), then \\(a-c\\le b-d\\).",
+      "answer": false,
+      "explanation": "Only addition is allowed. Example from the book: \\(2<5\\) and \\(1<4\\), but \\(2-1<5-4\\) gives \\(1<1\\), which is false.",
+      "source": {
+        "page": 6
+      }
+    },
+    {
+      "id": "ch1-tf-003",
+      "type": "tf",
+      "prompt": "For all real numbers \\(x\\le y\\), we have \\(x^2\\le y^2\\).",
+      "answer": false,
+      "explanation": "Squaring preserves order only for \\(0\\le x\\le y\\). Counterexample: \\(-5<-3\\) but \\((-5)^2>(-3)^2\\).",
+      "source": {
+        "page": 7
+      }
+    },
+    {
+      "id": "ch1-tf-004",
+      "type": "tf",
+      "prompt": "If \\(x\\le y\\) and \\(xy<0\\) (opposite signs), then \\(\\frac{1}{x}\\le\\frac{1}{y}\\).",
+      "answer": true,
+      "explanation": "Then \\(x<0<y\\), so \\(\\frac1x<0<\\frac1y\\). Example: \\(-2\\le 3\\) gives \\(-\\frac12\\le\\frac13\\).",
+      "source": {
+        "page": 7
+      }
+    },
+    {
+      "id": "ch1-tf-005",
+      "type": "tf",
+      "prompt": "The symbols \\(+\\infty\\) and \\(-\\infty\\) are real numbers, so writing \\([2,+\\infty]\\) is correct.",
+      "answer": false,
+      "explanation": "\\(\\pm\\infty\\) are notations, not real numbers; the bracket next to an infinity symbol is always open: \\([2,+\\infty)\\).",
+      "source": {
+        "page": 9
+      }
+    },
+    {
+      "id": "ch1-tf-006",
+      "type": "tf",
+      "prompt": "Let \\(f(x)=x-|x|\\). Then \\(f(x)=0\\) for every \\(x>0\\).",
+      "answer": true,
+      "explanation": "For \\(x>0\\), \\(|x|=x\\), so \\(f(x)=x-x=0\\).",
+      "source": {
+        "page": 61
+      }
+    },
+    {
+      "id": "ch1-tf-007",
+      "type": "tf",
+      "prompt": "\\(|x|\\le|x-y|+|y|\\) for all \\(x,y\\in\\mathbb{R}\\).",
+      "answer": true,
+      "explanation": "Write \\(x=(x-y)+y\\) and apply the triangle inequality.",
+      "source": {
+        "page": 61
+      }
+    },
+    {
+      "id": "ch1-tf-008",
+      "type": "tf",
+      "prompt": "\\(|x+y|=|x|+|y|\\) if and only if \\(x\\) and \\(y\\) have the same sign (both non-negative or both non-positive).",
+      "answer": true,
+      "explanation": "This is the equality case of the triangle inequality stated in the book.",
+      "source": {
+        "page": 12
+      }
+    },
+    {
+      "id": "ch1-tf-009",
+      "type": "tf",
+      "prompt": "\\(1.414\\) is an approximate value of \\(\\sqrt{2}\\) to within \\(10^{-3}\\).",
+      "answer": true,
+      "explanation": "\\(|\\sqrt2-1.414|\\approx 0.000214\\le 10^{-3}\\).",
+      "source": {
+        "page": 12
+      }
+    },
+    {
+      "id": "ch1-tf-010",
+      "type": "tf",
+      "prompt": "The equation \\(x^2-x+1=0\\) has no real solution.",
+      "answer": true,
+      "explanation": "\\(\\Delta=(-1)^2-4\\cdot1\\cdot1=-3<0\\), so \\(S=\\emptyset\\).",
+      "source": {
+        "page": 16
+      }
+    },
+    {
+      "id": "ch1-tf-011",
+      "type": "tf",
+      "prompt": "The inequality \\(|-4x+6|<-5\\) has no solution.",
+      "answer": true,
+      "explanation": "\\(|-4x+6|\\ge 0>-5\\) for all \\(x\\), so \\(|-4x+6|<-5\\) is never true: \\(S=\\emptyset\\).",
+      "source": {
+        "page": 20
+      }
+    },
+    {
+      "id": "ch1-tf-012",
+      "type": "tf",
+      "prompt": "If \\(a\\ne0\\) and \\(\\Delta=b^2-4ac<0\\), then \\(ax^2+bx+c\\) has the sign of \\(a\\) for every \\(x\\in\\mathbb{R}\\).",
+      "answer": true,
+      "explanation": "With no real root, the trinomial never changes sign: \\(\\mathrm{Sign}(ax^2+bx+c)=\\mathrm{Sign}(a)\\) for all \\(x\\).",
+      "source": {
+        "page": 21
+      }
+    },
+    {
+      "id": "ch1-tf-013",
+      "type": "tf",
+      "prompt": "The graph of a function \\(f\\) intersects a vertical line \\(x=a\\) in exactly one point if \\(a\\in\\mathcal{D}_f\\), and does not intersect it if \\(a\\notin\\mathcal{D}_f\\).",
+      "answer": true,
+      "explanation": "Each \\(x\\) in the domain has exactly one image \\(f(x)\\), so the vertical line meets the graph only at \\((a,f(a))\\).",
+      "source": {
+        "page": 32
+      }
+    },
+    {
+      "id": "ch1-tf-014",
+      "type": "tf",
+      "prompt": "For two functions \\(f\\) and \\(g\\), \\(\\mathcal{D}_{g\\circ f}=\\{x\\in\\mathcal{D}_f : f(x)\\in\\mathcal{D}_g\\}\\).",
+      "answer": true,
+      "explanation": "This is the definition of the domain of the composition \\(g\\circ f\\) given in the book.",
+      "source": {
+        "page": 36
+      }
+    },
+    {
+      "id": "ch1-tf-015",
+      "type": "tf",
+      "prompt": "The sum of an even function and an odd function is always an even function.",
+      "answer": false,
+      "explanation": "It is neither even nor odd, unless one of the functions vanishes on its domain (e.g. \\(x^2+x\\)).",
+      "source": {
+        "page": 40
+      }
+    },
+    {
+      "id": "ch1-tf-016",
+      "type": "tf",
+      "prompt": "A function that is both even and odd must be identically zero on its domain.",
+      "answer": true,
+      "explanation": "\\(f(x)=f(-x)=-f(x)\\) gives \\(2f(x)=0\\).",
+      "source": {
+        "page": 40
+      }
+    },
+    {
+      "id": "ch1-tf-017",
+      "type": "tf",
+      "prompt": "The constant function is periodic and its fundamental period is \\(1\\).",
+      "answer": false,
+      "explanation": "Every positive real number is a period of a constant function, so there is no smallest one: it has no fundamental period.",
+      "source": {
+        "page": 42
+      }
+    },
+    {
+      "id": "ch1-tf-018",
+      "type": "tf",
+      "prompt": "The function \\(e(x)=-2x^2+5\\) defined on \\([-3,-1]\\cup[4,+\\infty)\\) is not one-to-one.",
+      "answer": false,
+      "explanation": "\\(e(x_1)=e(x_2)\\Rightarrow |x_1|=|x_2|\\); \\(x_1=-x_2\\) is impossible because the domain contains no pair \\(x,-x\\). So \\(e\\) is one-to-one.",
+      "source": {
+        "page": 44
+      }
+    },
+    {
+      "id": "ch1-tf-019",
+      "type": "tf",
+      "prompt": "\\(\\tan(x)\\) is periodic with fundamental period \\(2\\pi\\).",
+      "answer": false,
+      "explanation": "The fundamental period of \\(\\tan\\) is \\(\\pi\\) (\\(\\tan(x+t)=\\tan x\\) for all \\(x\\) iff \\(t=k\\pi\\)).",
+      "source": {
+        "page": 51
+      }
+    },
+    {
+      "id": "ch1-tf-020",
+      "type": "tf",
+      "prompt": "Every increasing function is one-to-one.",
+      "answer": true,
+      "explanation": "If \\(x_1\\ne x_2\\), say \\(x_1<x_2\\), then \\(f(x_1)<f(x_2)\\), so \\(f(x_1)\\ne f(x_2)\\).",
+      "source": {
+        "page": 56
+      }
+    },
+    {
+      "id": "ch1-tf-021",
+      "type": "tf",
+      "prompt": "The composition of an increasing function and a decreasing function is a decreasing function.",
+      "answer": true,
+      "explanation": "If \\(x_1<x_2\\), the decreasing function reverses the order and the increasing one keeps it, so the composite reverses it.",
+      "source": {
+        "page": 56
+      }
+    },
+    {
+      "id": "ch1-tf-022",
+      "type": "tf",
+      "prompt": "\\(\\arctan\\left(\\tan\\frac{17\\pi}{13}\\right)=\\frac{4\\pi}{13}\\).",
+      "answer": true,
+      "explanation": "\\(\\tan\\) has period \\(\\pi\\): \\(\\frac{17\\pi}{13}-\\pi=\\frac{4\\pi}{13}\\in\\left(-\\frac\\pi2,\\frac\\pi2\\right)\\).",
+      "source": {
+        "page": 62
+      }
+    },
+    {
+      "id": "ch1-match-001",
+      "type": "matching",
+      "title": "Match each statement with the word used for the sign of x.",
+      "pairs": [
+        {
+          "left": "\\(x>0\\)",
+          "right": "x is positive"
+        },
+        {
+          "left": "\\(x<0\\)",
+          "right": "x is negative"
+        },
+        {
+          "left": "\\(x\\ge 0\\)",
+          "right": "x is non-negative"
+        },
+        {
+          "left": "\\(x\\le 0\\)",
+          "right": "x is non-positive"
+        }
+      ],
+      "source": {
+        "page": 5
+      }
+    },
+    {
+      "id": "ch1-match-002",
+      "type": "matching",
+      "title": "Match each notation with the number set it denotes.",
+      "pairs": [
+        {
+          "left": "\\(\\mathbb{N}\\)",
+          "right": "natural numbers (positive integers)"
+        },
+        {
+          "left": "\\(\\mathbb{Z}\\)",
+          "right": "integers"
+        },
+        {
+          "left": "\\(\\mathbb{Q}\\)",
+          "right": "rational numbers"
+        },
+        {
+          "left": "\\(\\mathbb{R}\\setminus\\mathbb{Q}\\)",
+          "right": "irrational numbers"
+        },
+        {
+          "left": "\\(\\mathbb{R}\\)",
+          "right": "real numbers"
+        }
+      ],
+      "source": {
+        "page": 5
+      }
+    },
+    {
+      "id": "ch1-match-003",
+      "type": "matching",
+      "title": "Match each interval with its description (a < b).",
+      "pairs": [
+        {
+          "left": "\\((a,b)\\)",
+          "right": "all x with a < x < b"
+        },
+        {
+          "left": "\\([a,b]\\)",
+          "right": "all x with a ≤ x ≤ b"
+        },
+        {
+          "left": "\\([a,b)\\)",
+          "right": "all x with a ≤ x < b"
+        },
+        {
+          "left": "\\((a,b]\\)",
+          "right": "all x with a < x ≤ b"
+        },
+        {
+          "left": "\\((-\\infty,b]\\)",
+          "right": "all x with x ≤ b"
+        }
+      ],
+      "source": {
+        "page": 9
+      }
+    },
+    {
+      "id": "ch1-match-004",
+      "type": "matching",
+      "title": "Match each property of the absolute value with its name.",
+      "pairs": [
+        {
+          "left": "\\(|x+y|\\le |x|+|y|\\)",
+          "right": "triangle inequality"
+        },
+        {
+          "left": "\\(|x-y|\\ge \\big||x|-|y|\\big|\\)",
+          "right": "reverse triangle inequality"
+        },
+        {
+          "left": "\\(|xy|=|x|\\,|y|\\)",
+          "right": "multiplicative property"
+        },
+        {
+          "left": "\\(|x|=|-x|\\)",
+          "right": "symmetry"
+        },
+        {
+          "left": "\\(|x|=0\\iff x=0\\)",
+          "right": "|x| is zero only at 0"
+        }
+      ],
+      "source": {
+        "page": 11
+      }
+    },
+    {
+      "id": "ch1-match-005",
+      "type": "matching",
+      "title": "Let a > 0. Match each set with the same set in interval notation.",
+      "pairs": [
+        {
+          "left": "\\(\\{x\\in\\mathbb{R} : |x|\\le a\\}\\)",
+          "right": "[-a, a]"
+        },
+        {
+          "left": "\\(\\{x\\in\\mathbb{R} : |x|<a\\}\\)",
+          "right": "(-a, a)"
+        },
+        {
+          "left": "\\(\\{x\\in\\mathbb{R} : |x|\\ge a\\}\\)",
+          "right": "(-∞, -a] ∪ [a, +∞)"
+        },
+        {
+          "left": "\\(\\{x\\in\\mathbb{R} : |x|>a\\}\\)",
+          "right": "(-∞, -a) ∪ (a, +∞)"
+        }
+      ],
+      "source": {
+        "page": 11
+      }
+    },
+    {
+      "id": "ch1-match-006",
+      "type": "matching",
+      "title": "Match each case of the discriminant of ax² + bx + c = 0 (a ≠ 0) with its number of real solutions.",
+      "pairs": [
+        {
+          "left": "\\(\\Delta<0\\)",
+          "right": "no real solution"
+        },
+        {
+          "left": "\\(\\Delta=0\\)",
+          "right": "one (double) solution"
+        },
+        {
+          "left": "\\(\\Delta>0\\)",
+          "right": "two distinct real solutions"
+        }
+      ],
+      "source": {
+        "page": 16
+      }
+    },
+    {
+      "id": "ch1-match-007",
+      "type": "matching",
+      "title": "Match each function with its type.",
+      "pairs": [
+        {
+          "left": "\\(f(x)=b,\\ b\\in\\mathbb{R}\\)",
+          "right": "constant function"
+        },
+        {
+          "left": "\\(f(x)=x\\)",
+          "right": "identity function"
+        },
+        {
+          "left": "\\(f(x)=a_0+a_1x+\\dots+a_nx^n\\)",
+          "right": "polynomial function"
+        },
+        {
+          "left": "\\(R(x)=\\frac{P(x)}{Q(x)}\\)",
+          "right": "rational function"
+        },
+        {
+          "left": "\\(E(x)\\)",
+          "right": "floor (greatest integer) function"
+        }
+      ],
+      "source": {
+        "page": 29
+      }
+    },
+    {
+      "id": "ch1-match-008",
+      "type": "matching",
+      "title": "Match each object with its symmetry.",
+      "pairs": [
+        {
+          "left": "graph of an even function",
+          "right": "symmetric with respect to the y-axis"
+        },
+        {
+          "left": "graph of an odd function",
+          "right": "symmetric with respect to the origin"
+        },
+        {
+          "left": "graphs of \\(f\\) and \\(f^{-1}\\)",
+          "right": "symmetric about the line y = x"
+        }
+      ],
+      "source": {
+        "page": 40
+      }
+    },
+    {
+      "id": "ch1-match-009",
+      "type": "matching",
+      "title": "Match each combination of functions with its parity.",
+      "pairs": [
+        {
+          "left": "product of two odd functions",
+          "right": "even"
+        },
+        {
+          "left": "product of an even and an odd function",
+          "right": "odd"
+        },
+        {
+          "left": "sum of an even and an odd function (neither is zero)",
+          "right": "neither even nor odd"
+        }
+      ],
+      "source": {
+        "page": 40
+      }
+    },
+    {
+      "id": "ch1-match-010",
+      "type": "matching",
+      "title": "Let f : A → B. Match each property with the condition on the equation f(x) = y, for every y in B.",
+      "pairs": [
+        {
+          "left": "f is one-to-one (injective)",
+          "right": "at most one solution x in A"
+        },
+        {
+          "left": "f is onto (surjective)",
+          "right": "at least one solution x in A"
+        },
+        {
+          "left": "f is bijective",
+          "right": "exactly one solution x in A"
+        }
+      ],
+      "source": {
+        "page": 46
+      }
+    },
+    {
+      "id": "ch1-match-011",
+      "type": "matching",
+      "title": "Match each trigonometric function with the restricted domain on which it is bijective.",
+      "pairs": [
+        {
+          "left": "\\(\\cos(x)\\)",
+          "right": "[0, π] onto [-1, 1]"
+        },
+        {
+          "left": "\\(\\sin(x)\\)",
+          "right": "[-π/2, π/2] onto [-1, 1]"
+        },
+        {
+          "left": "\\(\\tan(x)\\)",
+          "right": "(-π/2, π/2) onto ℝ"
+        },
+        {
+          "left": "\\(\\cot(x)\\)",
+          "right": "(0, π) onto ℝ"
+        }
+      ],
+      "source": {
+        "page": 50
+      }
+    },
+    {
+      "id": "ch1-match-012",
+      "type": "matching",
+      "title": "Match each condition, for all x₁ < x₂ in the domain, with the name of the function.",
+      "pairs": [
+        {
+          "left": "\\(f(x_1)<f(x_2)\\)",
+          "right": "increasing"
+        },
+        {
+          "left": "\\(f(x_1)>f(x_2)\\)",
+          "right": "decreasing"
+        },
+        {
+          "left": "\\(f(x_1)\\le f(x_2)\\)",
+          "right": "non-decreasing"
+        },
+        {
+          "left": "\\(f(x_1)\\ge f(x_2)\\)",
+          "right": "non-increasing"
+        }
+      ],
+      "source": {
+        "page": 54
+      }
+    },
+    {
+      "id": "ch2-mcq-001",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 1} \\frac{x^2-4}{x^2+2}\\) is",
+      "options": [
+        "\\(1\\)",
+        "\\(-1\\)",
+        "\\(-\\frac{1}{2}\\)",
+        "\\(0\\)"
+      ],
+      "answer": "B",
+      "explanation": "The denominator is not zero at 1, so substitute: \\(\\frac{1-4}{1+2}=-1\\).",
+      "source": {
+        "page": 135
+      }
+    },
+    {
+      "id": "ch2-mcq-002",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to -1} \\frac{4-x^2}{x|x+1|}\\) is",
+      "options": [
+        "\\(1\\)",
+        "\\(0\\)",
+        "\\(-1\\)",
+        "\\(-\\infty\\)"
+      ],
+      "answer": "D",
+      "explanation": "The numerator tends to 3, while \\(x|x+1|\\to 0^-\\) (because \\(x\\approx -1<0\\) and \\(|x+1|>0\\)). So the limit is \\(\\frac{3}{0^-}=-\\infty\\).",
+      "source": {
+        "page": 135
+      }
+    },
+    {
+      "id": "ch2-mcq-003",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 3} \\frac{x-3}{2x-6}\\) is",
+      "options": [
+        "\\(0\\)",
+        "\\(1\\)",
+        "\\(\\frac{1}{2}\\)",
+        "\\(\\infty\\)"
+      ],
+      "answer": "C",
+      "explanation": "For \\(x\\ne 3\\), \\(\\frac{x-3}{2(x-3)}=\\frac{1}{2}\\).",
+      "source": {
+        "page": 135
+      }
+    },
+    {
+      "id": "ch2-mcq-004",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 0} \\frac{x}{x}\\) is",
+      "options": [
+        "\\(1\\)",
+        "\\(0\\)",
+        "\\(\\infty\\)",
+        "nonexistent"
+      ],
+      "answer": "A",
+      "explanation": "For \\(x\\ne 0\\), \\(\\frac{x}{x}=1\\); the limit only uses values of \\(x\\) near 0, not at 0.",
+      "source": {
+        "page": 135
+      }
+    },
+    {
+      "id": "ch2-mcq-005",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 4} \\frac{x^2+8}{x^2-8}\\) is",
+      "options": [
+        "\\(4\\)",
+        "\\(0\\)",
+        "\\(1\\)",
+        "\\(3\\)"
+      ],
+      "answer": "D",
+      "explanation": "Substitution: \\(\\frac{16+8}{16-8}=\\frac{24}{8}=3\\).",
+      "source": {
+        "page": 135
+      }
+    },
+    {
+      "id": "ch2-mcq-006",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to -2} \\frac{x^2-8}{4x^2-x-2}\\) is",
+      "options": [
+        "\\(-2\\)",
+        "\\(-\\frac{1}{4}\\)",
+        "\\(2\\)",
+        "nonexistent"
+      ],
+      "answer": "B",
+      "explanation": "Substitution: \\(\\frac{4-8}{16+2-2}=\\frac{-4}{16}=-\\frac{1}{4}\\).",
+      "source": {
+        "page": 135
+      }
+    },
+    {
+      "id": "ch2-mcq-007",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to \\infty} \\frac{5x^3+27}{20x^2+10x+9}\\) is",
+      "options": [
+        "\\(\\infty\\)",
+        "\\(\\frac{1}{4}\\)",
+        "\\(5\\)",
+        "\\(0\\)"
+      ],
+      "answer": "A",
+      "explanation": "The degree of the numerator (3) is greater than the degree of the denominator (2): the limit equals \\(\\lim \\frac{5x^3}{20x^2}=\\lim\\frac{x}{4}=\\infty\\).",
+      "source": {
+        "page": 135
+      }
+    },
+    {
+      "id": "ch2-mcq-008",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to \\infty} \\frac{3x^2+27}{x^3-27}\\) is",
+      "options": [
+        "\\(3\\)",
+        "\\(\\infty\\)",
+        "\\(1\\)",
+        "\\(0\\)"
+      ],
+      "answer": "D",
+      "explanation": "The degree of the denominator is greater, so the limit is \\(\\lim\\frac{3x^2}{x^3}=\\lim\\frac{3}{x}=0\\).",
+      "source": {
+        "page": 135
+      }
+    },
+    {
+      "id": "ch2-mcq-009",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to \\frac{2}{3}^-} (3x-2)\\) is",
+      "options": [
+        "\\(-1\\)",
+        "\\(1\\)",
+        "\\(0\\)",
+        "None of the above"
+      ],
+      "answer": "C",
+      "explanation": "A polynomial: substitute \\(x=\\frac{2}{3}\\) to get \\(3\\cdot\\frac{2}{3}-2=0\\).",
+      "source": {
+        "page": 135
+      }
+    },
+    {
+      "id": "ch2-mcq-010",
+      "type": "mcq",
+      "prompt": "If \\(\\lfloor x\\rfloor\\) is the greatest integer not greater than \\(x\\), then \\(\\lim_{x\\to \\frac{1}{2}} \\lfloor x\\rfloor\\) is",
+      "options": [
+        "\\(\\frac{1}{2}\\)",
+        "\\(1\\)",
+        "nonexistent",
+        "\\(0\\)"
+      ],
+      "answer": "D",
+      "explanation": "For \\(0\\le x<1\\), \\(\\lfloor x\\rfloor=0\\), so near \\(\\frac{1}{2}\\) the function is constant 0.",
+      "source": {
+        "page": 135
+      }
+    },
+    {
+      "id": "ch2-mcq-011",
+      "type": "mcq",
+      "prompt": "If \\(\\lfloor x\\rfloor\\) is the greatest integer not greater than \\(x\\), then \\(\\lim_{x\\to 1} \\lfloor x\\rfloor\\) is",
+      "options": [
+        "\\(0\\)",
+        "\\(1\\)",
+        "\\(2\\)",
+        "None of the above"
+      ],
+      "answer": "D",
+      "explanation": "\\(\\lim_{x\\to 1^-}\\lfloor x\\rfloor=0\\) but \\(\\lim_{x\\to 1^+}\\lfloor x\\rfloor=1\\); the one-sided limits differ, so the limit does not exist.",
+      "source": {
+        "page": 135
+      }
+    },
+    {
+      "id": "ch2-mcq-012",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 0} \\frac{\\tan(-2x)}{x}\\) is",
+      "options": [
+        "\\(0\\)",
+        "\\(-2\\)",
+        "\\(1\\)",
+        "\\(2\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(\\frac{\\tan(-2x)}{x}=-2\\cdot\\frac{\\tan(-2x)}{-2x}\\to -2\\cdot 1=-2\\).",
+      "source": {
+        "page": 135
+      }
+    },
+    {
+      "id": "ch2-mcq-013",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 0} \\frac{\\cos 2x}{|x|}\\) is",
+      "options": [
+        "\\(1\\)",
+        "\\(\\infty\\)",
+        "\\(\\frac{1}{2}\\)",
+        "\\(2\\)"
+      ],
+      "answer": "B",
+      "explanation": "The numerator tends to \\(\\cos 0=1\\) and \\(|x|\\to 0^+\\), so the quotient tends to \\(+\\infty\\).",
+      "source": {
+        "page": 136
+      }
+    },
+    {
+      "id": "ch2-mcq-014",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to \\infty} \\sin x\\) is",
+      "options": [
+        "nonexistent",
+        "infinity",
+        "zero",
+        "\\(1\\) or \\(-1\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\(\\sin x\\) keeps oscillating between \\(-1\\) and \\(1\\); a non-constant periodic function has no limit at \\(\\pm\\infty\\).",
+      "source": {
+        "page": 136
+      }
+    },
+    {
+      "id": "ch2-mcq-015",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 0} \\frac{\\sin 3x}{\\sin 4x}\\) is",
+      "options": [
+        "\\(1\\)",
+        "\\(\\frac{4}{3}\\)",
+        "\\(\\frac{3}{4}\\)",
+        "nonexistent"
+      ],
+      "answer": "C",
+      "explanation": "Write \\(\\frac{\\sin 3x}{\\sin 4x}=\\frac{3}{4}\\cdot\\frac{\\sin 3x}{3x}\\cdot\\frac{4x}{\\sin 4x}\\to\\frac{3}{4}\\).",
+      "source": {
+        "page": 136
+      }
+    },
+    {
+      "id": "ch2-mcq-016",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to \\infty} \\frac{1-\\cos(1/x)}{\\frac{2x}{x^3+1}}\\) is",
+      "options": [
+        "\\(\\frac{1}{2}\\)",
+        "\\(1\\)",
+        "\\(\\infty\\)",
+        "\\(\\frac{1}{4}\\)"
+      ],
+      "answer": "D",
+      "explanation": "With \\(y=\\frac{1}{x}\\to 0\\): the expression equals \\(\\frac{1-\\cos y}{y^2}\\cdot\\frac{x^3+1}{2x^3}\\to\\frac{1}{2}\\cdot\\frac{1}{2}=\\frac{1}{4}\\).",
+      "source": {
+        "page": 136
+      }
+    },
+    {
+      "id": "ch2-mcq-017",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 0} \\frac{\\sin(x+\\pi)}{x^2+3x}\\) is",
+      "options": [
+        "\\(1\\)",
+        "\\(-\\frac{1}{3}\\)",
+        "\\(\\frac{1}{3}\\)",
+        "\\(\\pi\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(\\sin(x+\\pi)=-\\sin x\\), so the expression is \\(-\\frac{\\sin x}{x}\\cdot\\frac{1}{x+3}\\to -\\frac{1}{3}\\).",
+      "source": {
+        "page": 136
+      }
+    },
+    {
+      "id": "ch2-mcq-018",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 0} \\sin\\left(\\frac{1}{x}\\right)\\) is",
+      "options": [
+        "\\(\\infty\\)",
+        "\\(1\\)",
+        "nonexistent",
+        "\\(-1\\)"
+      ],
+      "answer": "C",
+      "explanation": "As \\(x\\to 0\\), \\(\\frac{1}{x}\\to\\pm\\infty\\) and the sine keeps oscillating between \\(-1\\) and \\(1\\), so there is no limit.",
+      "source": {
+        "page": 136
+      }
+    },
+    {
+      "id": "ch2-mcq-019",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 0} \\frac{\\tan \\pi x}{x}\\) is",
+      "options": [
+        "\\(\\frac{1}{\\pi}\\)",
+        "\\(0\\)",
+        "\\(1\\)",
+        "\\(\\pi\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(\\frac{\\tan\\pi x}{x}=\\pi\\cdot\\frac{\\tan \\pi x}{\\pi x}\\to\\pi\\).",
+      "source": {
+        "page": 136
+      }
+    },
+    {
+      "id": "ch2-mcq-020",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to \\infty} x^2\\sin\\left(\\frac{1}{x}\\right)\\) is",
+      "options": [
+        "\\(1\\)",
+        "\\(0\\)",
+        "\\(\\infty\\)",
+        "None of the above"
+      ],
+      "answer": "C",
+      "explanation": "\\(x^2\\sin\\frac{1}{x}=x\\cdot\\frac{\\sin(1/x)}{1/x}\\); the second factor tends to 1 and \\(x\\to\\infty\\).",
+      "source": {
+        "page": 136
+      }
+    },
+    {
+      "id": "ch2-mcq-021",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 0} x\\csc x\\) is",
+      "options": [
+        "\\(-\\infty\\)",
+        "\\(-1\\)",
+        "\\(0\\)",
+        "\\(1\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(x\\csc x=\\frac{x}{\\sin x}\\to 1\\) by the sine limit identity.",
+      "source": {
+        "page": 136
+      }
+    },
+    {
+      "id": "ch2-mcq-022",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 0} \\frac{-(3-x)^2+1}{(2-x)(2+x)}\\) is",
+      "options": [
+        "\\(-4\\)",
+        "\\(-2\\)",
+        "\\(1\\)",
+        "nonexistent"
+      ],
+      "answer": "B",
+      "explanation": "Substitution: \\(\\frac{-9+1}{2\\cdot 2}=\\frac{-8}{4}=-2\\).",
+      "source": {
+        "page": 136
+      }
+    },
+    {
+      "id": "ch2-mcq-023",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 0} \\frac{|x|}{x}\\) is",
+      "options": [
+        "\\(0\\)",
+        "nonexistent",
+        "\\(1\\)",
+        "None of the above"
+      ],
+      "answer": "B",
+      "explanation": "The left-hand limit is \\(-1\\) and the right-hand limit is \\(1\\); they differ, so the limit does not exist.",
+      "source": {
+        "page": 136
+      }
+    },
+    {
+      "id": "ch2-mcq-024",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 0} x^2\\sin\\frac{1}{x}\\) is",
+      "options": [
+        "\\(\\infty\\)",
+        "nonexistent",
+        "\\(1\\)",
+        "\\(0\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(-x^2\\le x^2\\sin\\frac{1}{x}\\le x^2\\) and both bounds tend to 0, so by the Sandwich theorem the limit is 0.",
+      "source": {
+        "page": 136
+      }
+    },
+    {
+      "id": "ch2-mcq-025",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to \\pi} \\frac{\\sin(\\pi-x)}{\\pi-x}\\) is",
+      "options": [
+        "\\(1\\)",
+        "\\(0\\)",
+        "nonexistent",
+        "None of the above"
+      ],
+      "answer": "A",
+      "explanation": "Put \\(y=\\pi-x\\to 0\\): \\(\\frac{\\sin y}{y}\\to 1\\).",
+      "source": {
+        "page": 137
+      }
+    },
+    {
+      "id": "ch2-mcq-026",
+      "type": "mcq",
+      "prompt": "If \\(\\lfloor x\\rfloor\\) is the greatest integer not greater than \\(x\\), then \\(\\lim_{x\\to 1^-}\\lfloor x+1\\rfloor\\) is",
+      "options": [
+        "\\(-1\\)",
+        "\\(0\\)",
+        "\\(1\\)",
+        "\\(2\\)"
+      ],
+      "answer": "C",
+      "explanation": "For \\(0\\le x<1\\) we have \\(1\\le x+1<2\\), so \\(\\lfloor x+1\\rfloor=1\\).",
+      "source": {
+        "page": 137
+      }
+    },
+    {
+      "id": "ch2-mcq-027",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\begin{cases} x^2-1, & x\\ne 1\\\\ 4, & x=1\\end{cases}\\). Consider the statements I. \\(\\lim_{x\\to 1}f(x)\\) exists; II. \\(f(1)\\) exists; III. \\(f\\) is continuous at \\(x=1\\). Which statements are true?",
+      "options": [
+        "only I",
+        "only II",
+        "I and II",
+        "all of them"
+      ],
+      "answer": "C",
+      "explanation": "\\(\\lim_{x\\to 1}f(x)=0\\) and \\(f(1)=4\\) both exist, but \\(0\\ne 4\\), so \\(f\\) is not continuous at 1.",
+      "source": {
+        "page": 137
+      }
+    },
+    {
+      "id": "ch2-mcq-028",
+      "type": "mcq",
+      "prompt": "If \\(f(x)=\\begin{cases} \\frac{x^2-x}{2x}, & x\\ne 0\\\\ k, & x=0\\end{cases}\\) is continuous at \\(x=0\\), then \\(k\\) is",
+      "options": [
+        "\\(-1\\)",
+        "\\(-\\frac{1}{2}\\)",
+        "\\(0\\)",
+        "\\(\\frac{1}{2}\\)"
+      ],
+      "answer": "B",
+      "explanation": "For \\(x\\ne 0\\), \\(\\frac{x(x-1)}{2x}=\\frac{x-1}{2}\\to-\\frac{1}{2}\\); continuity requires \\(k=-\\frac{1}{2}\\).",
+      "source": {
+        "page": 137
+      }
+    },
+    {
+      "id": "ch2-mcq-029",
+      "type": "mcq",
+      "prompt": "Suppose \\(f(x)=\\frac{3x(x-1)}{x^2-3x+2}\\) for \\(x\\ne 1,2\\), \\(f(1)=-3\\) and \\(f(2)=4\\). Then \\(f\\) is continuous",
+      "options": [
+        "except at \\(x=1\\)",
+        "except at \\(x=2\\)",
+        "except at \\(x=1\\) or \\(x=2\\)",
+        "at each real number"
+      ],
+      "answer": "B",
+      "explanation": "For \\(x\\ne 1,2\\), \\(f(x)=\\frac{3x}{x-2}\\). At 1 the limit is \\(\\frac{3}{-1}=-3=f(1)\\); at 2 the limit is infinite, so \\(f\\) is discontinuous only at 2.",
+      "source": {
+        "page": 137
+      }
+    },
+    {
+      "id": "ch2-mcq-030",
+      "type": "mcq",
+      "prompt": "Find the limit \\(\\lim_{x\\to -1}\\left(\\frac{1}{x+1}-\\frac{x^2-2x}{x^3+1}\\right)\\).",
+      "options": [
+        "\\(\\infty\\)",
+        "\\(0\\)",
+        "\\(\\frac{1}{3}\\)",
+        "None of the above"
+      ],
+      "answer": "C",
+      "explanation": "Common denominator: \\(\\frac{x^2-x+1-x^2+2x}{x^3+1}=\\frac{x+1}{(x+1)(x^2-x+1)}=\\frac{1}{x^2-x+1}\\to\\frac{1}{3}\\).",
+      "source": {
+        "page": 137
+      }
+    },
+    {
+      "id": "ch2-mcq-031",
+      "type": "mcq",
+      "prompt": "Find the limit \\(\\lim_{x\\to 1}\\left(\\frac{1}{1-x}-\\frac{x^4+x^3+3x}{1-x^5}\\right)\\).",
+      "options": [
+        "\\(-\\infty\\)",
+        "\\(+\\infty\\)",
+        "\\(0\\)",
+        "None of the above"
+      ],
+      "answer": "C",
+      "explanation": "Since \\(1-x^5=(1-x)(1+x+x^2+x^3+x^4)\\), the difference is \\(\\frac{1-2x+x^2}{1-x^5}=\\frac{1-x}{1+x+x^2+x^3+x^4}\\to 0\\).",
+      "source": {
+        "page": 137
+      }
+    },
+    {
+      "id": "ch2-mcq-032",
+      "type": "mcq",
+      "prompt": "Compute \\(\\lim_{x\\to 3}\\frac{x^2-7x+12}{x-3}\\).",
+      "options": [
+        "\\(0\\)",
+        "\\(1\\)",
+        "\\(-1\\)",
+        "\\(-7\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(x^2-7x+12=(x-3)(x-4)\\), so the limit is \\(\\lim_{x\\to 3}(x-4)=-1\\).",
+      "source": {
+        "page": 138
+      }
+    },
+    {
+      "id": "ch2-mcq-033",
+      "type": "mcq",
+      "prompt": "Compute \\(\\lim_{x\\to +\\infty}\\left(\\sqrt{x^2+4x}-x\\right)\\).",
+      "options": [
+        "\\(+\\infty\\)",
+        "\\(-\\infty\\)",
+        "\\(2\\)",
+        "\\(-2\\)"
+      ],
+      "answer": "C",
+      "explanation": "Multiply by the conjugate: \\(\\frac{4x}{\\sqrt{x^2+4x}+x}=\\frac{4}{\\sqrt{1+4/x}+1}\\to 2\\).",
+      "source": {
+        "page": 138
+      }
+    },
+    {
+      "id": "ch2-mcq-034",
+      "type": "mcq",
+      "prompt": "Compute \\(\\lim_{x\\to -\\infty}\\left(\\sqrt{x^2+4x}+x\\right)\\).",
+      "options": [
+        "\\(+\\infty\\)",
+        "\\(-\\infty\\)",
+        "\\(-2\\)",
+        "\\(2\\)"
+      ],
+      "answer": "C",
+      "explanation": "Conjugate: \\(\\frac{4x}{\\sqrt{x^2+4x}-x}\\). For \\(x<0\\), \\(\\sqrt{x^2+4x}=|x|\\sqrt{1+4/x}=-x\\sqrt{1+4/x}\\), so the quotient tends to \\(\\frac{4x}{-2x}=-2\\).",
+      "source": {
+        "page": 138
+      }
+    },
+    {
+      "id": "ch2-mcq-035",
+      "type": "mcq",
+      "prompt": "The limit \\(\\lim_{h\\to 0}\\frac{\\sin(x+h)-\\sin x}{h}\\) is",
+      "options": [
+        "\\(1\\)",
+        "\\(0\\)",
+        "\\(\\cos x\\)",
+        "None of the above"
+      ],
+      "answer": "C",
+      "explanation": "\\(\\sin(x+h)-\\sin x=\\sin x(\\cos h-1)+\\cos x\\sin h\\); since \\(\\frac{\\cos h-1}{h}\\to 0\\) and \\(\\frac{\\sin h}{h}\\to 1\\), the limit is \\(\\cos x\\).",
+      "source": {
+        "page": 138
+      }
+    },
+    {
+      "id": "ch2-mcq-036",
+      "type": "mcq",
+      "prompt": "Find the limit \\(\\lim_{x\\to -2}\\frac{x^4+2x^3}{x^3+6x^2+12x+8}\\).",
+      "options": [
+        "\\(+\\infty\\)",
+        "\\(-\\infty\\)",
+        "\\(0\\)",
+        "None of the above"
+      ],
+      "answer": "B",
+      "explanation": "\\(\\frac{x^3(x+2)}{(x+2)^3}=\\frac{x^3}{(x+2)^2}\\to\\frac{-8}{0^+}=-\\infty\\).",
+      "source": {
+        "page": 138
+      }
+    },
+    {
+      "id": "ch2-mcq-037",
+      "type": "mcq",
+      "prompt": "Find the limit \\(\\lim_{x\\to +\\infty}\\frac{3x^2-\\sin(4x-5)}{x^2+1}\\).",
+      "options": [
+        "\\(3\\)",
+        "\\(4\\)",
+        "\\(0\\)",
+        "\\(+\\infty\\)"
+      ],
+      "answer": "A",
+      "explanation": "Since \\(-1\\le\\sin(4x-5)\\le 1\\): \\(\\frac{3x^2-1}{x^2+1}\\le f(x)\\le\\frac{3x^2+1}{x^2+1}\\); both bounds tend to 3, so by the Sandwich theorem the limit is 3.",
+      "source": {
+        "page": 138
+      }
+    },
+    {
+      "id": "ch2-mcq-038",
+      "type": "mcq",
+      "prompt": "By evaluating \\(f(x)=\\frac{x-1}{x^2-1}\\) at values of \\(x\\) close to 1 (0.99, 0.999, 1.001, 1.01, ...), one guesses that \\(\\lim_{x\\to 1}f(x)\\) equals",
+      "options": [
+        "\\(0\\)",
+        "\\(\\frac{1}{2}\\)",
+        "\\(1\\)",
+        "it does not exist, because \\(f(1)\\) is not defined"
+      ],
+      "answer": "B",
+      "explanation": "The values approach 0.5 from both sides. Indeed \\(f(x)=\\frac{1}{x+1}\\) for \\(x\\ne 1\\); the value at 1 does not matter for the limit.",
+      "source": {
+        "page": 139
+      }
+    },
+    {
+      "id": "ch2-mcq-039",
+      "type": "mcq",
+      "prompt": "Which line is a horizontal asymptote of the graph of \\(f(x)=\\frac{2x+1}{x-3}\\) at \\(+\\infty\\)?",
+      "options": [
+        "\\(y=2\\)",
+        "\\(x=3\\)",
+        "\\(y=-\\frac{1}{3}\\)",
+        "\\(y=0\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\(\\lim_{x\\to+\\infty}f(x)=\\frac{2}{1}=2\\) (equal degrees: ratio of leading coefficients), so \\(y=2\\) is a horizontal asymptote. \\(x=3\\) is a vertical asymptote.",
+      "source": {
+        "page": 99
+      }
+    },
+    {
+      "id": "ch2-mcq-040",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\frac{1}{x}+\\frac{1}{2}x+1\\) on \\(\\mathbb{R}^*\\). Which line is an oblique asymptote of the graph of \\(f\\) at \\(+\\infty\\)?",
+      "options": [
+        "\\(y=\\frac{1}{2}x\\)",
+        "\\(y=1\\)",
+        "\\(x=0\\)",
+        "\\(y=\\frac{1}{2}x+1\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(f(x)-\\left(\\frac{1}{2}x+1\\right)=\\frac{1}{x}\\to 0\\), so \\(y=\\frac{1}{2}x+1\\) is an oblique asymptote.",
+      "source": {
+        "page": 100
+      }
+    },
+    {
+      "id": "ch2-mcq-041",
+      "type": "mcq",
+      "prompt": "Let \\(Q(x)=\\frac{x^2+2x-3}{x+1}\\). Given that \\(\\lim_{x\\to\\pm\\infty}\\frac{Q(x)}{x}=1\\), which line is an oblique asymptote of the graph of \\(Q\\)?",
+      "options": [
+        "\\(y=x+1\\)",
+        "\\(y=x\\)",
+        "\\(y=x-3\\)",
+        "\\(x=-1\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\(Q(x)-x=\\frac{x-3}{x+1}\\to 1\\), hence \\(Q(x)-(x+1)\\to 0\\) and \\(y=x+1\\) is the asymptote.",
+      "source": {
+        "page": 163
+      }
+    },
+    {
+      "id": "ch2-mcq-042",
+      "type": "mcq",
+      "prompt": "For \\(Q(x)=\\frac{x^2+2x-3}{x+1}\\), the difference \\(Q(x)-(x+1)\\) equals",
+      "options": [
+        "\\(\\frac{4}{x+1}\\)",
+        "\\(-\\frac{4}{x+1}\\)",
+        "\\(\\frac{x-3}{x+1}\\)",
+        "\\(-\\frac{2}{x+1}\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(x^2+2x-3-(x+1)^2=x^2+2x-3-x^2-2x-1=-4\\), so the difference is \\(-\\frac{4}{x+1}\\): the graph is below the asymptote for \\(x>-1\\) and above it for \\(x<-1\\).",
+      "source": {
+        "page": 163
+      }
+    },
+    {
+      "id": "ch2-mcq-043",
+      "type": "mcq",
+      "prompt": "The vertical asymptote(s) of the graph of \\(f(x)=\\frac{x-1}{x^2-1}\\):",
+      "options": [
+        "\\(x=-1\\) only",
+        "\\(x=1\\) only",
+        "\\(x=1\\) and \\(x=-1\\)",
+        "\\(y=0\\) only"
+      ],
+      "answer": "A",
+      "explanation": "For \\(x\\ne\\pm 1\\), \\(f(x)=\\frac{1}{x+1}\\). At \\(x=1\\) the limit is \\(\\frac{1}{2}\\) (finite), while at \\(x=-1\\) the function tends to \\(\\pm\\infty\\).",
+      "source": {
+        "page": 101
+      }
+    },
+    {
+      "id": "ch2-mcq-044",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to -1^+}\\frac{x}{(x+1)(x-2)}\\) is",
+      "options": [
+        "\\(-\\infty\\)",
+        "\\(+\\infty\\)",
+        "\\(\\frac{1}{3}\\)",
+        "\\(0\\)"
+      ],
+      "answer": "B",
+      "explanation": "The numerator tends to \\(-1\\); for \\(-1<x<2\\), \\((x+1)(x-2)<0\\), so the denominator tends to \\(0^-\\). Thus the limit is \\(\\frac{-1}{0^-}=+\\infty\\).",
+      "source": {
+        "page": 142
+      }
+    },
+    {
+      "id": "ch2-mcq-045",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to -3^-}\\frac{-2}{x+3}\\) is",
+      "options": [
+        "\\(-\\infty\\)",
+        "\\(0\\)",
+        "\\(-2\\)",
+        "\\(+\\infty\\)"
+      ],
+      "answer": "D",
+      "explanation": "For \\(x<-3\\), \\(x+3\\to 0^-\\), so \\(\\frac{-2}{0^-}=+\\infty\\).",
+      "source": {
+        "page": 141
+      }
+    },
+    {
+      "id": "ch2-mcq-046",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 1^-}\\frac{3x^2+1}{\\sqrt{1-x}}\\) is",
+      "options": [
+        "\\(+\\infty\\)",
+        "\\(4\\)",
+        "\\(-\\infty\\)",
+        "it does not exist, because the function is not defined for \\(x>1\\)"
+      ],
+      "answer": "A",
+      "explanation": "The numerator tends to 4 and \\(\\sqrt{1-x}\\to 0^+\\) as \\(x\\to 1^-\\), so the quotient tends to \\(+\\infty\\). Only values \\(x<1\\) are needed for a left-hand limit.",
+      "source": {
+        "page": 148
+      }
+    },
+    {
+      "id": "ch2-mcq-047",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=ax+\\frac{2}{x-b}\\). Find \\(a\\) and \\(b\\) given that \\(\\lim_{x\\to 3^+}f(x)=+\\infty\\) and \\(\\lim_{x\\to 5}f(x)=11\\).",
+      "options": [
+        "\\(a=3,\\ b=2\\)",
+        "\\(a=2,\\ b=3\\)",
+        "\\(a=\\frac{11}{5},\\ b=3\\)",
+        "\\(a=2,\\ b=-3\\)"
+      ],
+      "answer": "B",
+      "explanation": "An infinite limit at \\(3^+\\) needs \\(x-b\\to 0^+\\), so \\(b=3\\). Then \\(f(5)=5a+\\frac{2}{2}=11\\) gives \\(a=2\\).",
+      "source": {
+        "page": 143
+      }
+    },
+    {
+      "id": "ch2-mcq-048",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to -\\infty}\\sqrt[3]{x}\\) is",
+      "options": [
+        "\\(+\\infty\\)",
+        "\\(0\\)",
+        "\\(-\\infty\\)",
+        "not defined"
+      ],
+      "answer": "C",
+      "explanation": "For an odd root, \\(\\sqrt[3]{x}\\) is defined for \\(x<0\\) and \\(\\sqrt[3]{x}<B\\) whenever \\(x<B^3\\); so the limit is \\(-\\infty\\).",
+      "source": {
+        "page": 115
+      }
+    },
+    {
+      "id": "ch2-mcq-049",
+      "type": "mcq",
+      "prompt": "Given \\(\\lim_{x\\to 2}f(x)=4\\) and \\(\\lim_{x\\to 2}g(x)=-2\\), find \\(\\lim_{x\\to 2}\\left[f(x)+5g(x)\\right]\\).",
+      "options": [
+        "\\(14\\)",
+        "\\(2\\)",
+        "\\(-10\\)",
+        "\\(-6\\)"
+      ],
+      "answer": "D",
+      "explanation": "By the sum and scalar multiple rules: \\(4+5(-2)=-6\\).",
+      "source": {
+        "page": 158
+      }
+    },
+    {
+      "id": "ch2-mcq-050",
+      "type": "mcq",
+      "prompt": "If \\(\\lim_{x\\to c}f(x)=8\\), then \\(\\lim_{x\\to c}\\left[f(x)\\right]^{\\frac{2}{3}}\\) equals",
+      "options": [
+        "\\(4\\)",
+        "\\(\\frac{16}{3}\\)",
+        "\\(2\\)",
+        "\\(64\\)"
+      ],
+      "answer": "A",
+      "explanation": "By Corollary 2.1.2, the limit is \\(8^{\\frac{2}{3}}=\\left(\\sqrt[3]{8}\\right)^2=4\\).",
+      "source": {
+        "page": 105
+      }
+    },
+    {
+      "id": "ch2-mcq-051",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 1}\\frac{\\sin(x-1)}{x^2+x-2}\\) is",
+      "options": [
+        "\\(1\\)",
+        "\\(\\frac{1}{3}\\)",
+        "\\(0\\)",
+        "\\(\\frac{1}{2}\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(x^2+x-2=(x-1)(x+2)\\), so the expression is \\(\\frac{\\sin(x-1)}{x-1}\\cdot\\frac{1}{x+2}\\to 1\\cdot\\frac{1}{3}\\) (limit of a composite function).",
+      "source": {
+        "page": 160
+      }
+    },
+    {
+      "id": "ch2-mcq-052",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to -\\infty}\\cos\\left(\\frac{1}{x}\\right)\\) is",
+      "options": [
+        "\\(1\\)",
+        "\\(0\\)",
+        "does not exist",
+        "\\(-1\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\(u=\\frac{1}{x}\\to 0\\) and \\(\\lim_{u\\to 0}\\cos u=1\\), so by composition the limit is 1.",
+      "source": {
+        "page": 143
+      }
+    },
+    {
+      "id": "ch2-mcq-053",
+      "type": "mcq",
+      "prompt": "If \\(4x-9\\le f(x)\\le x^2-4x+7\\) for \\(x\\ge 0\\), then \\(\\lim_{x\\to 4}f(x)\\) is",
+      "options": [
+        "\\(4\\)",
+        "\\(16\\)",
+        "cannot be determined",
+        "\\(7\\)"
+      ],
+      "answer": "D",
+      "explanation": "Both bounds tend to 7 at \\(x=4\\) (\\(16-9=7\\) and \\(16-16+7=7\\)), so by the Sandwich theorem the limit is 7.",
+      "source": {
+        "page": 159
+      }
+    },
+    {
+      "id": "ch2-mcq-054",
+      "type": "mcq",
+      "prompt": "For \\(x>0\\) one has \\(1<\\frac{\\sqrt{1+x^2}}{x}<1+\\frac{1}{x}\\). Hence \\(\\lim_{x\\to+\\infty}\\frac{\\sqrt{1+x^2}}{x}\\) is",
+      "options": [
+        "\\(0\\)",
+        "\\(1\\)",
+        "\\(+\\infty\\)",
+        "\\(2\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(1+\\frac{1}{x}\\to 1\\), so by the Sandwich theorem the limit is 1.",
+      "source": {
+        "page": 165
+      }
+    },
+    {
+      "id": "ch2-mcq-055",
+      "type": "mcq",
+      "prompt": "If \\(\\lim_{x\\to 1}\\frac{f(x)-8}{x-1}=10\\), then \\(\\lim_{x\\to 1}f(x)\\) is",
+      "options": [
+        "\\(10\\)",
+        "\\(18\\)",
+        "\\(8\\)",
+        "\\(0\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(f(x)-8=\\frac{f(x)-8}{x-1}\\cdot(x-1)\\to 10\\cdot 0=0\\), so \\(f(x)\\to 8\\).",
+      "source": {
+        "page": 159
+      }
+    },
+    {
+      "id": "ch2-mcq-056",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to -2}\\left(-3x^3+4\\right)\\) is",
+      "options": [
+        "\\(28\\)",
+        "\\(-20\\)",
+        "\\(-8\\)",
+        "\\(4\\)"
+      ],
+      "answer": "A",
+      "explanation": "Substitution: \\(-3(-2)^3+4=-3(-8)+4=28\\).",
+      "source": {
+        "page": 108
+      }
+    },
+    {
+      "id": "ch2-mcq-057",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to -\\infty}\\left(-3x^7-5x^4+11\\right)\\) is",
+      "options": [
+        "\\(+\\infty\\)",
+        "\\(-\\infty\\)",
+        "\\(-3\\)",
+        "\\(0\\)"
+      ],
+      "answer": "A",
+      "explanation": "At \\(\\pm\\infty\\) a polynomial behaves like its leading term: \\(-3x^7\\to -3\\cdot(-\\infty)=+\\infty\\) (odd power).",
+      "source": {
+        "page": 109
+      }
+    },
+    {
+      "id": "ch2-mcq-058",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 2}\\frac{x^3+1}{x}\\) is",
+      "options": [
+        "\\(\\frac{17}{2}\\)",
+        "\\(9\\)",
+        "\\(4\\)",
+        "\\(\\frac{9}{2}\\)"
+      ],
+      "answer": "D",
+      "explanation": "The denominator is not zero at 2: \\(\\frac{8+1}{2}=\\frac{9}{2}\\).",
+      "source": {
+        "page": 146
+      }
+    },
+    {
+      "id": "ch2-mcq-059",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to -3}\\frac{-3x^4+x-30}{x(x+3)^2}\\) is",
+      "options": [
+        "\\(-\\infty\\)",
+        "\\(+\\infty\\)",
+        "\\(0\\)",
+        "does not exist, since the one-sided limits differ"
+      ],
+      "answer": "B",
+      "explanation": "The numerator tends to \\(-276\\); \\(x(x+3)^2\\to 0^-\\) on both sides (since \\(x<0\\) and \\((x+3)^2>0\\)). So the limit is \\(\\frac{-276}{0^-}=+\\infty\\).",
+      "source": {
+        "page": 110
+      }
+    },
+    {
+      "id": "ch2-mcq-060",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 2^+}\\frac{3x^2-x-1}{x^2-5x+6}\\) is",
+      "options": [
+        "\\(+\\infty\\)",
+        "\\(9\\)",
+        "\\(-\\infty\\)",
+        "\\(0\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(P(2)=9\\) and \\(x^2-5x+6=(x-2)(x-3)\\to 0^-\\) as \\(x\\to 2^+\\), so the limit is \\(\\frac{9}{0^-}=-\\infty\\).",
+      "source": {
+        "page": 110
+      }
+    },
+    {
+      "id": "ch2-mcq-061",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 2}\\frac{3x^2-x-10}{x^2-5x+6}\\) is",
+      "options": [
+        "\\(-11\\)",
+        "\\(11\\)",
+        "\\(-\\frac{5}{3}\\)",
+        "\\(0\\)"
+      ],
+      "answer": "A",
+      "explanation": "Factor: \\(\\frac{(x-2)(3x+5)}{(x-2)(x-3)}=\\frac{3x+5}{x-3}\\to\\frac{11}{-1}=-11\\).",
+      "source": {
+        "page": 111
+      }
+    },
+    {
+      "id": "ch2-mcq-062",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 1^-}\\frac{x^2+3x-4}{2x^3-3x^2+1}\\) is",
+      "options": [
+        "\\(\\frac{5}{3}\\)",
+        "\\(-\\infty\\)",
+        "\\(+\\infty\\)",
+        "\\(0\\)"
+      ],
+      "answer": "B",
+      "explanation": "For \\(x\\ne 1\\) the quotient is \\(\\frac{x+4}{2x^2-x-1}=\\frac{x+4}{(x-1)(2x+1)}\\); as \\(x\\to 1^-\\) the denominator tends to \\(0^-\\), giving \\(\\frac{5}{0^-}=-\\infty\\).",
+      "source": {
+        "page": 112
+      }
+    },
+    {
+      "id": "ch2-mcq-063",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 25}\\frac{5-\\sqrt{x}}{x-25}\\) is",
+      "options": [
+        "\\(-\\frac{1}{10}\\)",
+        "\\(\\frac{1}{10}\\)",
+        "\\(-\\frac{1}{5}\\)",
+        "\\(0\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\(x-25=(\\sqrt{x}-5)(\\sqrt{x}+5)\\), so the quotient is \\(-\\frac{1}{\\sqrt{x}+5}\\to-\\frac{1}{10}\\).",
+      "source": {
+        "page": 112
+      }
+    },
+    {
+      "id": "ch2-mcq-064",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to \\pm\\infty}\\frac{3x^2-x-10}{-7x^2-5x+6}\\) is",
+      "options": [
+        "\\(\\frac{3}{7}\\)",
+        "\\(-\\frac{5}{3}\\)",
+        "\\(0\\)",
+        "\\(-\\frac{3}{7}\\)"
+      ],
+      "answer": "D",
+      "explanation": "Equal degrees: the limit is the ratio of the leading coefficients, \\(\\frac{3}{-7}\\).",
+      "source": {
+        "page": 113
+      }
+    },
+    {
+      "id": "ch2-mcq-065",
+      "type": "mcq",
+      "prompt": "Is there a number \\(a\\) such that \\(\\lim_{x\\to -2}\\frac{3x^2+ax+a+3}{x^2+x-2}\\) exists? If so, find \\(a\\) and the limit.",
+      "options": [
+        "\\(a=15\\) and the limit is \\(-1\\)",
+        "\\(a=15\\) and the limit is \\(1\\)",
+        "\\(a=-15\\) and the limit is \\(-1\\)",
+        "no such \\(a\\) exists"
+      ],
+      "answer": "A",
+      "explanation": "The denominator vanishes at \\(-2\\), so the numerator must too: \\(12-2a+a+3=0\\Rightarrow a=15\\). Then \\(\\frac{3(x+2)(x+3)}{(x+2)(x-1)}\\to\\frac{3}{-3}=-1\\).",
+      "source": {
+        "page": 159
+      }
+    },
+    {
+      "id": "ch2-mcq-066",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 5}\\frac{\\sqrt{x-1}-2}{x^2-25}\\) is",
+      "options": [
+        "\\(\\frac{1}{10}\\)",
+        "\\(\\frac{1}{40}\\)",
+        "\\(\\frac{1}{4}\\)",
+        "\\(0\\)"
+      ],
+      "answer": "B",
+      "explanation": "Multiply by the conjugate: \\(\\frac{x-5}{(x-5)(x+5)(\\sqrt{x-1}+2)}=\\frac{1}{(x+5)(\\sqrt{x-1}+2)}\\to\\frac{1}{10\\cdot 4}\\).",
+      "source": {
+        "page": 115
+      }
+    },
+    {
+      "id": "ch2-mcq-067",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to -\\infty}\\frac{\\sqrt{9x^2+2}}{4x+3}\\) is",
+      "options": [
+        "\\(\\frac{3}{4}\\)",
+        "\\(-\\frac{9}{4}\\)",
+        "\\(-\\frac{3}{4}\\)",
+        "\\(\\frac{9}{4}\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(\\sqrt{9x^2+2}=|x|\\sqrt{9+\\frac{2}{x^2}}\\) and \\(|x|=-x\\) for \\(x<0\\), so the quotient tends to \\(\\frac{-3}{4}\\).",
+      "source": {
+        "page": 115
+      }
+    },
+    {
+      "id": "ch2-mcq-068",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to +\\infty}\\left(\\sqrt{x^2-2x+3}-\\sqrt{x^2+x}\\right)\\) is",
+      "options": [
+        "\\(\\frac{3}{2}\\)",
+        "\\(0\\)",
+        "\\(-\\frac{1}{2}\\)",
+        "\\(-\\frac{3}{2}\\)"
+      ],
+      "answer": "D",
+      "explanation": "Conjugate: \\(\\frac{-3x+3}{\\sqrt{x^2-2x+3}+\\sqrt{x^2+x}}\\); for \\(x>0\\) divide by \\(x\\): \\(\\frac{-3}{1+1}=-\\frac{3}{2}\\).",
+      "source": {
+        "page": 116
+      }
+    },
+    {
+      "id": "ch2-mcq-069",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 8}\\frac{\\sqrt[3]{x^2}-4}{\\sqrt{2x}-4}\\) is",
+      "options": [
+        "\\(\\frac{4}{3}\\)",
+        "\\(\\frac{3}{4}\\)",
+        "\\(\\frac{2}{3}\\)",
+        "\\(1\\)"
+      ],
+      "answer": "A",
+      "explanation": "Write it as \\(\\frac{1}{\\sqrt{2}}\\cdot\\frac{x^{2/3}-8^{2/3}}{x^{1/2}-8^{1/2}}\\) and use \\(\\lim\\frac{x^n-a^n}{x^m-a^m}=\\frac{n}{m}a^{n-m}\\): \\(\\frac{1}{\\sqrt{2}}\\cdot\\frac{4}{3}\\cdot 8^{1/6}=\\frac{4}{3}\\).",
+      "source": {
+        "page": 116
+      }
+    },
+    {
+      "id": "ch2-mcq-070",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 3}\\left(\\frac{1}{x-3}-\\frac{4}{x^2-2x-3}\\right)\\) is",
+      "options": [
+        "\\(\\frac{1}{5}\\)",
+        "\\(\\frac{1}{4}\\)",
+        "\\(0\\)",
+        "does not exist"
+      ],
+      "answer": "B",
+      "explanation": "Since \\(x^2-2x-3=(x-3)(x+1)\\): \\(\\frac{x+1-4}{(x-3)(x+1)}=\\frac{1}{x+1}\\to\\frac{1}{4}\\).",
+      "source": {
+        "page": 117
+      }
+    },
+    {
+      "id": "ch2-mcq-071",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 0^-}\\left(\\frac{1}{x}-\\frac{1}{|x|}\\right)\\) is",
+      "options": [
+        "\\(0\\)",
+        "\\(+\\infty\\)",
+        "\\(-\\infty\\)",
+        "\\(-2\\)"
+      ],
+      "answer": "C",
+      "explanation": "For \\(x<0\\), \\(|x|=-x\\), so the expression is \\(\\frac{2}{x}\\to-\\infty\\).",
+      "source": {
+        "page": 160
+      }
+    },
+    {
+      "id": "ch2-mcq-072",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to -\\frac{\\pi}{2}}\\frac{1+\\sin x}{\\cos^2 x}\\) is",
+      "options": [
+        "\\(\\frac{1}{2}\\)",
+        "\\(+\\infty\\)",
+        "\\(0\\)",
+        "\\(2\\)"
+      ],
+      "answer": "A",
+      "explanation": "Near \\(-\\frac{\\pi}{2}\\), \\(\\sin x=-\\sqrt{1-\\cos^2x}\\); multiplying by the conjugate gives \\(\\frac{1}{1+\\sqrt{1-\\cos^2 x}}\\to\\frac{1}{2}\\).",
+      "source": {
+        "page": 120
+      }
+    },
+    {
+      "id": "ch2-mcq-073",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 0}\\frac{\\sin 3x}{\\tan 5x}\\) is",
+      "options": [
+        "\\(\\frac{5}{3}\\)",
+        "\\(1\\)",
+        "\\(0\\)",
+        "\\(\\frac{3}{5}\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(\\frac{3}{5}\\cdot\\frac{\\sin 3x}{3x}\\cdot\\frac{5x}{\\tan 5x}\\to\\frac{3}{5}\\cdot 1\\cdot 1\\).",
+      "source": {
+        "page": 121
+      }
+    },
+    {
+      "id": "ch2-mcq-074",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to \\frac{\\pi}{2}^-}\\frac{4\\tan x}{1+\\sec x}\\) is",
+      "options": [
+        "\\(4\\)",
+        "\\(+\\infty\\)",
+        "\\(0\\)",
+        "\\(2\\)"
+      ],
+      "answer": "A",
+      "explanation": "Multiply numerator and denominator by \\(\\cos x\\): \\(\\frac{4\\sin x}{\\cos x+1}\\to\\frac{4}{1}=4\\).",
+      "source": {
+        "page": 121
+      }
+    },
+    {
+      "id": "ch2-mcq-075",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to \\frac{\\pi}{2}^+}\\tan x\\) is",
+      "options": [
+        "\\(+\\infty\\)",
+        "\\(-\\infty\\)",
+        "\\(0\\)",
+        "\\(1\\)"
+      ],
+      "answer": "B",
+      "explanation": "For \\(a=\\frac{\\pi}{2}+k\\pi\\), \\(\\lim_{x\\to a^\\pm}\\tan x=\\mp\\infty\\): just right of \\(\\frac{\\pi}{2}\\), \\(\\sin x\\approx 1\\) and \\(\\cos x\\to 0^-\\).",
+      "source": {
+        "page": 120
+      }
+    },
+    {
+      "id": "ch2-mcq-076",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 0}\\frac{x+\\sin x+\\sin 2x}{x(x^2-1)}\\) is",
+      "options": [
+        "\\(-4\\)",
+        "\\(4\\)",
+        "\\(-3\\)",
+        "\\(0\\)"
+      ],
+      "answer": "A",
+      "explanation": "Divide by \\(x\\): \\(\\frac{1+\\frac{\\sin x}{x}+2\\frac{\\sin 2x}{2x}}{x^2-1}\\to\\frac{1+1+2}{-1}=-4\\).",
+      "source": {
+        "page": 149
+      }
+    },
+    {
+      "id": "ch2-mcq-077",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 0}\\frac{\\sin x-\\tan x}{3x^3}\\) is",
+      "options": [
+        "\\(\\frac{1}{6}\\)",
+        "\\(-\\frac{1}{6}\\)",
+        "\\(-\\frac{1}{3}\\)",
+        "\\(0\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(\\sin x-\\tan x=-\\frac{\\sin x(1-\\cos x)}{\\cos x}\\), and \\(\\frac{\\sin x}{x}\\to 1\\), \\(\\frac{1-\\cos x}{x^2}\\to\\frac{1}{2}\\), so the limit is \\(-\\frac{1}{3}\\cdot\\frac{1}{2}=-\\frac{1}{6}\\).",
+      "source": {
+        "page": 150
+      }
+    },
+    {
+      "id": "ch2-mcq-078",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\frac{\\sqrt[4]{-x}}{2x+5}\\). Then \\(\\lim_{x\\to -16}f(x)\\) equals",
+      "options": [
+        "\\(\\frac{2}{27}\\)",
+        "\\(-\\frac{4}{27}\\)",
+        "\\(-\\frac{2}{27}\\)",
+        "\\(f\\) is not defined at \\(-16\\)"
+      ],
+      "answer": "C",
+      "explanation": "Substitution: \\(\\frac{\\sqrt[4]{16}}{2(-16)+5}=\\frac{2}{-27}\\); this equals \\(f(-16)\\), so \\(f\\) is continuous at \\(-16\\).",
+      "source": {
+        "page": 122
+      }
+    },
+    {
+      "id": "ch2-mcq-079",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=2x+5+\\sqrt{(x-2)(x-3)}\\) for \\(x\\in(-\\infty,2)\\cup(3,+\\infty)\\) and \\(f(2)=f(3)=11\\). Which statement is true?",
+      "options": [
+        "\\(f\\) is continuous from the left at 2",
+        "\\(f\\) is continuous from the right at 3, but not from the left at 2",
+        "\\(f\\) is continuous at 2",
+        "\\(f\\) is not continuous from the right at 3"
+      ],
+      "answer": "B",
+      "explanation": "\\(\\lim_{x\\to 2^-}f(x)=9\\ne f(2)=11\\), while \\(\\lim_{x\\to 3^+}f(x)=11=f(3)\\).",
+      "source": {
+        "page": 123
+      }
+    },
+    {
+      "id": "ch2-mcq-080",
+      "type": "mcq",
+      "prompt": "Find \\(k\\) such that \\(f(x)=\\begin{cases}2kx-5, & x>2\\\\ 3+2x, & x\\le 2\\end{cases}\\) is continuous at 2.",
+      "options": [
+        "\\(6\\)",
+        "\\(\\frac{1}{2}\\)",
+        "\\(2\\)",
+        "\\(3\\)"
+      ],
+      "answer": "D",
+      "explanation": "Left limit and \\(f(2)\\): \\(3+4=7\\). Right limit: \\(4k-5\\). So \\(4k-5=7\\), \\(k=3\\).",
+      "source": {
+        "page": 123
+      }
+    },
+    {
+      "id": "ch2-mcq-081",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=(x-2)^2\\) if \\(x<5\\), \\(f(5)=a\\), and \\(f(x)=(2x-b)^2\\) if \\(x>5\\). For which values is \\(f\\) continuous on \\(\\mathbb{R}\\)?",
+      "options": [
+        "\\(a=9\\) and \\(b=7\\) only",
+        "\\(a=9\\) and (\\(b=7\\) or \\(b=13\\))",
+        "\\(a=9\\) and \\(b=13\\) only",
+        "\\(a=3\\) and \\(b=7\\)"
+      ],
+      "answer": "B",
+      "explanation": "Need \\(9=a=(10-b)^2\\), so \\(a=9\\) and \\(10-b=\\pm 3\\), i.e. \\(b=7\\) or \\(b=13\\).",
+      "source": {
+        "page": 155
+      }
+    },
+    {
+      "id": "ch2-mcq-082",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=(ax)^2\\) for \\(x\\le 1\\) and \\(f(x)=a\\sin\\left(\\frac{\\pi}{2}x\\right)\\) for \\(x>1\\), where \\(a\\in\\mathbb{R}\\). For which values of \\(a\\) is \\(f\\) continuous on \\(\\mathbb{R}\\)?",
+      "options": [
+        "\\(a=1\\) only",
+        "\\(a=0\\) only",
+        "\\(a=0\\) or \\(a=1\\)",
+        "every real \\(a\\)"
+      ],
+      "answer": "C",
+      "explanation": "Left limit at 1: \\(a^2\\); right limit: \\(a\\sin\\frac{\\pi}{2}=a\\). Continuity requires \\(a^2=a\\), i.e. \\(a=0\\) or \\(a=1\\).",
+      "source": {
+        "page": 156
+      }
+    },
+    {
+      "id": "ch2-mcq-083",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\sqrt{x+2}\\) if \\(x\\ge -2\\) and \\(f(x)=\\frac{2x^2-|x^3|}{x+2}\\) if \\(x<-2\\). Then \\(\\lim_{x\\to -2^-}f(x)\\) is",
+      "options": [
+        "\\(0\\)",
+        "\\(-4\\)",
+        "\\(+\\infty\\)",
+        "\\(4\\)"
+      ],
+      "answer": "D",
+      "explanation": "For \\(x<-2\\), \\(|x^3|=-x^3\\), so \\(f(x)=\\frac{x^2(2+x)}{x+2}=x^2\\to 4\\). Since \\(f(-2)=0\\ne 4\\), \\(f\\) is not continuous at \\(-2\\).",
+      "source": {
+        "page": 152
+      }
+    },
+    {
+      "id": "ch2-mcq-084",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=x^2+1\\) if \\(x\\le 1\\), \\(f(x)=3-x\\) if \\(1<x\\le 4\\), \\(f(x)=\\sqrt{x}\\) if \\(x>4\\). Which statement is correct?",
+      "options": [
+        "\\(f\\) is discontinuous only at 4, where it is continuous from the left",
+        "\\(f\\) is discontinuous only at 4, where it is continuous from the right",
+        "\\(f\\) is discontinuous at 1 and at 4",
+        "\\(f\\) is discontinuous only at 1"
+      ],
+      "answer": "A",
+      "explanation": "At 1: both one-sided limits equal 2 = \\(f(1)\\). At 4: left limit \\(-1=f(4)\\), right limit \\(\\sqrt{4}=2\\).",
+      "source": {
+        "page": 161
+      }
+    },
+    {
+      "id": "ch2-mcq-085",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\frac{2x^2-5x-3}{x-3}\\) for \\(x\\ne 3\\) and \\(f(3)=6\\). At \\(x=3\\), \\(f\\) is",
+      "options": [
+        "continuous",
+        "discontinuous, with a removable discontinuity",
+        "discontinuous, with a jump discontinuity",
+        "discontinuous, with an infinite discontinuity"
+      ],
+      "answer": "B",
+      "explanation": "\\(2x^2-5x-3=(x-3)(2x+1)\\), so \\(\\lim_{x\\to 3}f(x)=7\\) exists but \\(7\\ne f(3)=6\\): the discontinuity is removable.",
+      "source": {
+        "page": 160
+      }
+    },
+    {
+      "id": "ch2-mcq-086",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\frac{3\\sin(x-2)}{x-2}\\) for \\(x\\ne 2\\) and \\(f(2)=1\\). Which value of \\(f(2)\\) would remove the discontinuity at 2?",
+      "options": [
+        "\\(1\\)",
+        "\\(0\\)",
+        "\\(3\\)",
+        "no value works"
+      ],
+      "answer": "C",
+      "explanation": "\\(\\lim_{x\\to 2}\\frac{3\\sin(x-2)}{x-2}=3\\cdot 1=3\\), so redefining \\(f(2)=3\\) makes \\(f\\) continuous at 2.",
+      "source": {
+        "page": 124
+      }
+    },
+    {
+      "id": "ch2-mcq-087",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\frac{x^2-4}{x^3-5x^2+6x}\\) for \\(x\\ne 2\\) and \\(f(2)=-2\\). The points of discontinuity of \\(f\\) are",
+      "options": [
+        "\\(0\\) and \\(3\\) only",
+        "\\(0\\), \\(2\\) and \\(3\\)",
+        "\\(2\\) only",
+        "\\(3\\) only"
+      ],
+      "answer": "A",
+      "explanation": "The denominator \\(x(x-2)(x-3)\\) vanishes at 0, 2, 3. At 2: \\(\\frac{x+2}{x(x-3)}\\to\\frac{4}{-2}=-2=f(2)\\), so \\(f\\) is continuous there; 0 and 3 are not in the domain.",
+      "source": {
+        "page": 128
+      }
+    },
+    {
+      "id": "ch2-mcq-088",
+      "type": "mcq",
+      "prompt": "The function \\(f(x)=\\sqrt{x^2+5x-5}\\) is continuous on",
+      "options": [
+        "\\(\\left[\\frac{-5-3\\sqrt{5}}{2},\\frac{-5+3\\sqrt{5}}{2}\\right]\\)",
+        "\\(\\left(-\\infty,\\frac{-5-3\\sqrt{5}}{2}\\right)\\cup\\left(\\frac{-5+3\\sqrt{5}}{2},+\\infty\\right)\\)",
+        "\\(\\mathbb{R}\\)",
+        "\\(\\left(-\\infty,\\frac{-5-3\\sqrt{5}}{2}\\right]\\cup\\left[\\frac{-5+3\\sqrt{5}}{2},+\\infty\\right)\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(f\\) is defined (and continuous, as a composition) where \\(x^2+5x-5\\ge 0\\), i.e. outside the roots \\(\\frac{-5\\pm 3\\sqrt{5}}{2}\\), endpoints included.",
+      "source": {
+        "page": 153
+      }
+    },
+    {
+      "id": "ch2-mcq-089",
+      "type": "mcq",
+      "prompt": "The domain of continuity of \\(h(x)=\\frac{1}{\\sqrt{x^2-5x+6}}\\) is",
+      "options": [
+        "\\((-\\infty,2]\\cup[3,+\\infty)\\)",
+        "\\((-\\infty,2)\\cup(3,+\\infty)\\)",
+        "\\((2,3)\\)",
+        "\\(\\mathbb{R}\\setminus\\{2,3\\}\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(\\frac{1}{\\sqrt{u}}\\) is continuous for \\(u>0\\), so we need \\(x^2-5x+6=(x-2)(x-3)>0\\): \\(x<2\\) or \\(x>3\\). The endpoints are excluded (division by zero).",
+      "source": {
+        "page": 129
+      }
+    },
+    {
+      "id": "ch2-mcq-090",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=-x^3+x^2-2x+5\\). In which interval does the Intermediate Value Theorem guarantee a zero of \\(f\\)?",
+      "options": [
+        "\\([0,1]\\)",
+        "\\([-1,0]\\)",
+        "\\([1,2]\\)",
+        "\\([2,3]\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(f\\) is a polynomial, so continuous; \\(f(1)=3>0\\) and \\(f(2)=-3<0\\), so 0 lies between \\(f(1)\\) and \\(f(2)\\). On the other intervals \\(f\\) does not change sign at the endpoints.",
+      "source": {
+        "page": 130
+      }
+    },
+    {
+      "id": "ch2-mcq-091",
+      "type": "mcq",
+      "prompt": "Suppose \\(f\\) is continuous on \\([1,5]\\) and the only solutions of \\(f(x)=6\\) are \\(x=1\\) and \\(x=4\\). If \\(f(2)=8\\), then",
+      "options": [
+        "\\(f(3)<6\\)",
+        "\\(f(3)=6\\)",
+        "nothing can be said about \\(f(3)\\)",
+        "\\(f(3)>6\\)"
+      ],
+      "answer": "D",
+      "explanation": "If \\(f(3)<6\\), then since \\(f(2)=8>6\\), the IVT would give a solution of \\(f(x)=6\\) between 2 and 3, a contradiction. And \\(f(3)\\ne 6\\). So \\(f(3)>6\\).",
+      "source": {
+        "page": 162
+      }
+    },
+    {
+      "id": "ch2-mcq-092",
+      "type": "mcq",
+      "prompt": "The sign of \\(f(x)=\\frac{x^2-4x+1}{(x+1)(x-1)}\\) on the interval \\(\\left(1,\\,2+\\sqrt{3}\\right)\\) is",
+      "options": [
+        "positive",
+        "negative",
+        "zero",
+        "positive then negative"
+      ],
+      "answer": "B",
+      "explanation": "\\(f\\) is continuous and non-zero on this interval, so it keeps one sign (Example 2.32); at \\(x=2\\): \\(\\frac{-3}{3}=-1<0\\).",
+      "source": {
+        "page": 131
+      }
+    },
+    {
+      "id": "ch2-mcq-093",
+      "type": "mcq",
+      "prompt": "The range of \\(f(x)=\\sqrt{25-x^2}-3\\) is",
+      "options": [
+        "\\([-5,5]\\)",
+        "\\([0,5]\\)",
+        "\\([-3,2]\\)",
+        "\\([-3,5]\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(f\\) is increasing on \\([-5,0]\\) and decreasing on \\([0,5]\\), with \\(f(\\pm 5)=-3\\) and \\(f(0)=2\\); so the range is \\([-3,2]\\).",
+      "source": {
+        "page": 132
+      }
+    },
+    {
+      "id": "ch2-mcq-094",
+      "type": "mcq",
+      "prompt": "The range of \\(f(x)=\\frac{x+3}{x-2}\\) is",
+      "options": [
+        "\\((-\\infty,1)\\cup(1,+\\infty)\\)",
+        "\\((-\\infty,2)\\cup(2,+\\infty)\\)",
+        "\\((-\\infty,-3)\\cup(-3,+\\infty)\\)",
+        "\\(\\mathbb{R}\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\(f\\) is decreasing on \\((-\\infty,2)\\) and on \\((2,+\\infty)\\): \\(f((-\\infty,2))=(-\\infty,1)\\) and \\(f((2,+\\infty))=(1,+\\infty)\\), since \\(\\lim_{x\\to\\pm\\infty}f(x)=1\\).",
+      "source": {
+        "page": 132
+      }
+    },
+    {
+      "id": "ch2-mcq-095",
+      "type": "mcq",
+      "prompt": "To prove that a function \\(f\\) has no limit at a point \\(a\\), an effective approach is to show that",
+      "options": [
+        "\\(f(a)\\) is not defined",
+        "the left-hand and right-hand limits at \\(a\\) are not equal",
+        "\\(f\\) is not a polynomial",
+        "\\(f(a)=0\\)"
+      ],
+      "answer": "B",
+      "explanation": "If \\(\\lim_{x\\to a^-}f(x)\\ne\\lim_{x\\to a^+}f(x)\\), the limit at \\(a\\) cannot exist. The value \\(f(a)\\) plays no role in the limit.",
+      "source": {
+        "page": 134
+      }
+    },
+    {
+      "id": "ch2-tf-001",
+      "type": "tf",
+      "prompt": "A function that tends to \\(+\\infty\\) as \\(x\\to+\\infty\\) is necessarily increasing.",
+      "answer": false,
+      "explanation": "The book's remark: such a function need not be increasing. For example \\(x+2\\sin x\\ge x-2\\) tends to \\(+\\infty\\) but oscillates.",
+      "source": {
+        "page": 98
+      }
+    },
+    {
+      "id": "ch2-tf-002",
+      "type": "tf",
+      "prompt": "If a function \\(f\\) is strictly increasing and positive on \\([0,+\\infty)\\), then \\(\\lim_{x\\to+\\infty}f(x)=+\\infty\\).",
+      "answer": false,
+      "explanation": "Counterexample: \\(f(x)=2-\\frac{1}{x+1}\\) is strictly increasing and positive, yet \\(\\lim_{x\\to+\\infty}f(x)=2\\).",
+      "source": {
+        "page": 140
+      }
+    },
+    {
+      "id": "ch2-tf-003",
+      "type": "tf",
+      "prompt": "If a function \\(f\\) has limit 0 at \\(+\\infty\\), then, provided \\(x\\) is sufficiently large, all values \\(f(x)\\) have the same sign.",
+      "answer": false,
+      "explanation": "\\(f(x)=\\frac{\\cos x}{x}\\) tends to 0 (by squeezing) but its graph oscillates around 0.",
+      "source": {
+        "page": 140
+      }
+    },
+    {
+      "id": "ch2-tf-004",
+      "type": "tf",
+      "prompt": "If a function \\(f\\) has limit \\(-1\\) at \\(+\\infty\\), then, provided \\(x\\) is sufficiently large, all values \\(f(x)\\) have the same sign.",
+      "answer": true,
+      "explanation": "For \\(x\\) large enough, \\(-1.5\\le f(x)\\le-0.5\\), so all values are negative.",
+      "source": {
+        "page": 140
+      }
+    },
+    {
+      "id": "ch2-tf-005",
+      "type": "tf",
+      "prompt": "A function can have two different limits at the same point.",
+      "answer": false,
+      "explanation": "Theorem 2.1.1 (Uniqueness): if a function admits a limit at a point (finite or infinite), this limit is unique.",
+      "source": {
+        "page": 104
+      }
+    },
+    {
+      "id": "ch2-tf-006",
+      "type": "tf",
+      "prompt": "\\(\\lim_{x\\to a}f(x)=l\\) exactly when \\(\\lim_{x\\to a^-}f(x)\\) and \\(\\lim_{x\\to a^+}f(x)\\) both exist and are equal to \\(l\\).",
+      "answer": true,
+      "explanation": "The limit exists when the function approaches the same value from both directions.",
+      "source": {
+        "page": 102
+      }
+    },
+    {
+      "id": "ch2-tf-007",
+      "type": "tf",
+      "prompt": "\\(1^{\\infty}\\) is a determinate form whose value is always 1.",
+      "answer": false,
+      "explanation": "\\(1^{\\infty}\\) is listed among the indeterminate forms, together with \\(\\infty-\\infty\\), \\(0\\times\\infty\\), \\(\\frac{\\infty}{\\infty}\\), \\(\\frac{0}{0}\\), \\(\\infty^0\\), \\(0^0\\).",
+      "source": {
+        "page": 104
+      }
+    },
+    {
+      "id": "ch2-tf-008",
+      "type": "tf",
+      "prompt": "Any non-constant periodic function fails to have a limit as \\(x\\to\\pm\\infty\\).",
+      "answer": true,
+      "explanation": "Stated in the book; for example \\(\\sin x\\), \\(\\cos x\\), \\(\\tan x\\), \\(\\cot x\\) have no limit at \\(\\pm\\infty\\).",
+      "source": {
+        "page": 120
+      }
+    },
+    {
+      "id": "ch2-tf-009",
+      "type": "tf",
+      "prompt": "\\(\\lim_{x\\to+\\infty}\\frac{\\sin x}{x}=1\\).",
+      "answer": false,
+      "explanation": "The identity \\(\\frac{\\sin x}{x}\\to 1\\) holds as \\(x\\to 0\\). As \\(x\\to+\\infty\\), \\(-\\frac{1}{x}\\le\\frac{\\sin x}{x}\\le\\frac{1}{x}\\), so the limit is 0 by the Sandwich theorem.",
+      "source": {
+        "page": 106
+      }
+    },
+    {
+      "id": "ch2-tf-010",
+      "type": "tf",
+      "prompt": "The equation \\(\\frac{x^2+x-6}{x-2}=x+3\\) holds for every real number \\(x\\).",
+      "answer": false,
+      "explanation": "The left side is not defined at \\(x=2\\). They agree only for \\(x\\ne 2\\), which is enough to give \\(\\lim_{x\\to 2}\\frac{x^2+x-6}{x-2}=\\lim_{x\\to 2}(x+3)=5\\).",
+      "source": {
+        "page": 159
+      }
+    },
+    {
+      "id": "ch2-tf-011",
+      "type": "tf",
+      "prompt": "If \\(\\lim_{x\\to a}\\left[f(x)+g(x)\\right]\\) exists, then \\(\\lim_{x\\to a}f(x)\\) and \\(\\lim_{x\\to a}g(x)\\) both exist.",
+      "answer": false,
+      "explanation": "Take \\(f(x)=\\frac{1}{x}\\), \\(g(x)=-\\frac{1}{x}\\) at \\(a=0\\): \\(f+g=0\\) has limit 0, but neither \\(f\\) nor \\(g\\) has a limit at 0.",
+      "source": {
+        "page": 159
+      }
+    },
+    {
+      "id": "ch2-tf-012",
+      "type": "tf",
+      "prompt": "If \\(f(x)\\le g(x)\\) near \\(c\\) and \\(\\lim_{x\\to c}f(x)=+\\infty\\), then \\(\\lim_{x\\to c}g(x)=+\\infty\\).",
+      "answer": true,
+      "explanation": "This is the variant of the Sandwich theorem for infinite limits.",
+      "source": {
+        "page": 107
+      }
+    },
+    {
+      "id": "ch2-tf-013",
+      "type": "tf",
+      "prompt": "If \\((c-\\delta,c+\\delta)\\subseteq\\mathcal{D}_f\\), then \\(f\\) is continuous at \\(c\\) if and only if \\(f\\) is continuous from the right and from the left at \\(c\\).",
+      "answer": true,
+      "explanation": "Proposition 2.2.1: at an interior point of the domain, continuity is equivalent to continuity from both sides.",
+      "source": {
+        "page": 123
+      }
+    },
+    {
+      "id": "ch2-tf-014",
+      "type": "tf",
+      "prompt": "A jump discontinuity at \\(c\\) can be removed by redefining the value \\(f(c)\\).",
+      "answer": false,
+      "explanation": "At a jump, \\(\\lim_{x\\to c^-}f(x)\\ne\\lim_{x\\to c^+}f(x)\\), so no single value \\(f(c)\\) works; one would have to change the expression of \\(f\\) on one side.",
+      "source": {
+        "page": 125
+      }
+    },
+    {
+      "id": "ch2-tf-015",
+      "type": "tf",
+      "prompt": "If \\(f\\) and \\(g\\) are continuous at \\(c\\), then \\(\\frac{f}{g}\\) is continuous at \\(c\\).",
+      "answer": false,
+      "explanation": "Theorem 2.2.1 needs the extra condition \\(g(c)\\ne 0\\); for example \\(\\frac{1}{x}\\) is not continuous at 0.",
+      "source": {
+        "page": 128
+      }
+    },
+    {
+      "id": "ch2-tf-016",
+      "type": "tf",
+      "prompt": "If \\(f\\) is continuous on \\([a,b]\\) and \\(f(a)\\) and \\(f(b)\\) have opposite signs, then \\(f(c)=0\\) for at least one \\(c\\in[a,b]\\).",
+      "answer": true,
+      "explanation": "0 lies between \\(f(a)\\) and \\(f(b)\\), so the Intermediate Value Theorem gives such a \\(c\\).",
+      "source": {
+        "page": 129
+      }
+    },
+    {
+      "id": "ch2-tf-017",
+      "type": "tf",
+      "prompt": "The image of an interval by a continuous function is an interval.",
+      "answer": true,
+      "explanation": "Corollary 2.2.1, a consequence of the Intermediate Value Theorem.",
+      "source": {
+        "page": 131
+      }
+    },
+    {
+      "id": "ch2-tf-018",
+      "type": "tf",
+      "prompt": "Let \\(f(0)=0\\) and \\(f(x)=\\frac{x+\\sqrt{x^2}}{x}\\) for \\(x\\ne 0\\). Then \\(f\\) is continuous at 0.",
+      "answer": false,
+      "explanation": "Since \\(\\sqrt{x^2}=|x|\\): for \\(x<0\\), \\(f(x)=0\\); for \\(x>0\\), \\(f(x)=2\\). The right-hand limit 2 differs from the left-hand limit 0, so \\(f\\) is discontinuous at 0.",
+      "source": {
+        "page": 152
+      }
+    },
+    {
+      "id": "ch2-tf-019",
+      "type": "tf",
+      "prompt": "A continuous function has the same sign between two consecutive roots.",
+      "answer": true,
+      "explanation": "Between consecutive roots \\(f\\ne 0\\); if it changed sign, the IVT would give another root in between (Example 2.32).",
+      "source": {
+        "page": 130
+      }
+    },
+    {
+      "id": "ch2-match-001",
+      "type": "matching",
+      "title": "Match each expression with its value (determinate or indeterminate form)",
+      "pairs": [
+        {
+          "left": "\\(\\frac{5}{+\\infty}\\)",
+          "right": "0"
+        },
+        {
+          "left": "\\((-\\infty)\\times(-\\infty)\\)",
+          "right": "+∞"
+        },
+        {
+          "left": "\\(\\frac{+\\infty}{0^-}\\)",
+          "right": "−∞"
+        },
+        {
+          "left": "\\(\\frac{\\infty}{\\infty}\\)",
+          "right": "indeterminate form"
+        }
+      ],
+      "source": {
+        "page": 103
+      }
+    },
+    {
+      "id": "ch2-match-002",
+      "type": "matching",
+      "title": "Match each limit of a reference function with its value",
+      "pairs": [
+        {
+          "left": "\\(\\lim_{x\\to-\\infty}x^4\\)",
+          "right": "+∞"
+        },
+        {
+          "left": "\\(\\lim_{x\\to-\\infty}x^3\\)",
+          "right": "−∞"
+        },
+        {
+          "left": "\\(\\lim_{x\\to+\\infty}\\frac{1}{\\sqrt{x}}\\)",
+          "right": "0"
+        },
+        {
+          "left": "\\(\\lim_{x\\to+\\infty}\\cos x\\)",
+          "right": "does not exist"
+        },
+        {
+          "left": "\\(\\lim_{x\\to-\\infty}\\sqrt{x}\\)",
+          "right": "not defined (outside the domain)"
+        }
+      ],
+      "source": {
+        "page": 100
+      }
+    },
+    {
+      "id": "ch2-match-003",
+      "type": "matching",
+      "title": "For \\(f(x)=\\frac{1}{x-2}\\), match each limit with its value",
+      "pairs": [
+        {
+          "left": "\\(\\lim_{x\\to 2^+}f(x)\\)",
+          "right": "+∞"
+        },
+        {
+          "left": "\\(\\lim_{x\\to 2^-}f(x)\\)",
+          "right": "−∞"
+        },
+        {
+          "left": "\\(\\lim_{x\\to +\\infty}f(x)\\)",
+          "right": "0"
+        },
+        {
+          "left": "\\(\\lim_{x\\to 3}f(x)\\)",
+          "right": "1"
+        }
+      ],
+      "source": {
+        "page": 141
+      }
+    },
+    {
+      "id": "ch2-match-004",
+      "type": "matching",
+      "title": "Let \\(P\\) and \\(Q\\) be polynomials. Match each case with \\(\\lim_{x\\to\\pm\\infty}\\frac{P(x)}{Q(x)}\\)",
+      "pairs": [
+        {
+          "left": "\\(\\deg P=\\deg Q\\)",
+          "right": "the ratio of the leading coefficients"
+        },
+        {
+          "left": "\\(\\deg P<\\deg Q\\)",
+          "right": "0"
+        },
+        {
+          "left": "\\(\\deg P>\\deg Q\\)",
+          "right": "+∞ or −∞"
+        }
+      ],
+      "source": {
+        "page": 113
+      }
+    },
+    {
+      "id": "ch2-match-005",
+      "type": "matching",
+      "title": "Match each function with the type of its discontinuity at the given point",
+      "pairs": [
+        {
+          "left": "\\(\\frac{3\\sin(x-2)}{x-2}\\) at \\(x=2\\)",
+          "right": "removable"
+        },
+        {
+          "left": "\\(\\frac{|x|}{x}\\) at \\(x=0\\)",
+          "right": "jump"
+        },
+        {
+          "left": "\\(\\frac{1}{(x-2)^{2/3}}\\) at \\(x=2\\)",
+          "right": "infinite"
+        },
+        {
+          "left": "\\(\\sqrt{x^2-4}\\) at \\(x=1\\)",
+          "right": "other (f is not defined near the point)"
+        }
+      ],
+      "source": {
+        "page": 124
+      }
+    },
+    {
+      "id": "ch2-match-006",
+      "type": "matching",
+      "title": "Match each statement with its meaning",
+      "pairs": [
+        {
+          "left": "\\(\\lim_{x\\to a^-}f(x)=L\\)",
+          "right": "left-hand limit of f at a is L"
+        },
+        {
+          "left": "\\(\\lim_{x\\to a^+}f(x)=L\\)",
+          "right": "right-hand limit of f at a is L"
+        },
+        {
+          "left": "\\(\\lim_{x\\to+\\infty}f(x)=l\\)",
+          "right": "y = l is a horizontal asymptote"
+        },
+        {
+          "left": "\\(\\lim_{x\\to a}f(x)=+\\infty\\)",
+          "right": "x = a is a vertical asymptote"
+        },
+        {
+          "left": "\\(\\lim_{x\\to+\\infty}\\left[f(x)-(ax+b)\\right]=0\\)",
+          "right": "y = ax + b is an oblique asymptote"
+        }
+      ],
+      "source": {
+        "page": 100
+      }
+    },
+    {
+      "id": "ch2-match-007",
+      "type": "matching",
+      "title": "Match each condition with the kind of continuity it defines",
+      "pairs": [
+        {
+          "left": "\\(\\lim_{x\\to c}f(x)=f(c)\\)",
+          "right": "continuous at c"
+        },
+        {
+          "left": "\\(\\lim_{x\\to c^+}f(x)=f(c)\\)",
+          "right": "continuous from the right at c"
+        },
+        {
+          "left": "\\(\\lim_{x\\to c^-}f(x)=f(c)\\)",
+          "right": "continuous from the left at c"
+        },
+        {
+          "left": "\\(f\\) continuous on \\((a,b)\\), from the right at \\(a\\) and from the left at \\(b\\)",
+          "right": "continuous on the closed interval [a, b]"
+        }
+      ],
+      "source": {
+        "page": 127
+      }
+    },
+    {
+      "id": "ch2-match-008",
+      "type": "matching",
+      "title": "Match each trigonometric limit with its value",
+      "pairs": [
+        {
+          "left": "\\(\\lim_{x\\to 0}\\frac{\\sin x}{x}\\)",
+          "right": "1"
+        },
+        {
+          "left": "\\(\\lim_{x\\to 0}\\frac{1-\\cos x}{x^2}\\)",
+          "right": "1/2"
+        },
+        {
+          "left": "\\(\\lim_{x\\to 0}\\sin x\\)",
+          "right": "0"
+        },
+        {
+          "left": "\\(\\lim_{x\\to+\\infty}\\cos x\\)",
+          "right": "does not exist"
+        },
+        {
+          "left": "\\(\\lim_{x\\to\\frac{\\pi}{2}^-}\\tan x\\)",
+          "right": "+∞"
+        }
+      ],
+      "source": {
+        "page": 120
+      }
+    },
+    {
+      "id": "ch2-match-009",
+      "type": "matching",
+      "title": "Match each statement with the name of the result",
+      "pairs": [
+        {
+          "left": "If \\(f\\le g\\le h\\) near \\(c\\) and \\(\\lim_{x\\to c}f(x)=\\lim_{x\\to c}h(x)=b\\), then \\(\\lim_{x\\to c}g(x)=b\\)",
+          "right": "Sandwich theorem"
+        },
+        {
+          "left": "If \\(\\lim_{x\\to c}f(x)=b\\) and \\(g\\) is continuous at \\(b\\), then \\(\\lim_{x\\to c}g(f(x))=g(b)\\)",
+          "right": "Composition rule"
+        },
+        {
+          "left": "If \\(f\\) is continuous on \\([a,b]\\) and \\(w\\) is between \\(f(a)\\) and \\(f(b)\\), then \\(f(c)=w\\) for some \\(c\\in[a,b]\\)",
+          "right": "Intermediate Value Theorem"
+        },
+        {
+          "left": "If a function admits a limit at a point, then this limit is unique",
+          "right": "Uniqueness theorem"
+        }
+      ],
+      "source": {
+        "page": 129
+      }
+    },
+    {
+      "id": "ch2-match-010",
+      "type": "matching",
+      "title": "Using \\(\\lim_{x\\to a}\\frac{x^n-a^n}{x-a}=na^{n-1}\\) and \\(\\lim_{x\\to a}\\frac{x^n-a^n}{x^m-a^m}=\\frac{n}{m}a^{n-m}\\), match each limit with its value",
+      "pairs": [
+        {
+          "left": "\\(\\lim_{x\\to 2}\\frac{x^5-32}{x-2}\\)",
+          "right": "80"
+        },
+        {
+          "left": "\\(\\lim_{x\\to -3}\\frac{x^3+27}{x+3}\\)",
+          "right": "27"
+        },
+        {
+          "left": "\\(\\lim_{x\\to 3}\\frac{3x^4-243}{x^3-27}\\)",
+          "right": "12"
+        },
+        {
+          "left": "\\(\\lim_{x\\to 1}\\frac{x^6-1}{x^4-1}\\)",
+          "right": "3/2"
+        }
+      ],
+      "source": {
+        "page": 112
+      }
+    },
+    {
+      "id": "ch2-match-011",
+      "type": "matching",
+      "title": "Match each function with its domain of continuity (\\(E(x)\\) is the integer part of \\(x\\))",
+      "pairs": [
+        {
+          "left": "\\(3x^2+x-1\\)",
+          "right": "all real numbers"
+        },
+        {
+          "left": "\\(\\frac{2x+1}{2x-1}\\)",
+          "right": "all real numbers except 1/2"
+        },
+        {
+          "left": "\\(x-E(x)\\)",
+          "right": "all real numbers except the integers"
+        },
+        {
+          "left": "\\(\\sqrt{x}+\\sqrt{1-x}\\)",
+          "right": "the closed interval [0, 1]"
+        }
+      ],
+      "source": {
+        "page": 153
+      }
+    },
+    {
+      "id": "ch2-match-012",
+      "type": "matching",
+      "title": "Match each limit with the technique that resolves it",
+      "pairs": [
+        {
+          "left": "\\(\\lim_{x\\to 9}\\frac{x-9}{\\sqrt{x}-3}\\)",
+          "right": "multiply by the conjugate"
+        },
+        {
+          "left": "\\(\\lim_{x\\to 2}\\frac{x^2-4}{x-2}\\)",
+          "right": "factor and simplify"
+        },
+        {
+          "left": "\\(\\lim_{x\\to 1}\\left(\\frac{1}{x-1}-\\frac{2}{x^2-1}\\right)\\)",
+          "right": "reduce to a common denominator"
+        },
+        {
+          "left": "\\(\\lim_{x\\to 0}\\frac{\\sin 3x}{x}\\)",
+          "right": "use the sine limit identity"
+        },
+        {
+          "left": "\\(\\lim_{x\\to 0}x^2\\sin\\frac{1}{x}\\)",
+          "right": "squeeze between two functions"
+        }
+      ],
+      "source": {
+        "page": 115
+      }
+    },
+    {
+      "id": "past-01",
+      "type": "mcq",
+      "prompt": "The number \\(\\sqrt{5}\\) belongs to the set of ...",
+      "options": [
+        "natural numbers",
+        "integers",
+        "rational numbers",
+        "irrational numbers"
+      ],
+      "answer": "D",
+      "explanation": "Midterm 2024, question 1. \\(\\sqrt{5}\\) cannot be written as a fraction of integers, so it is irrational."
+    },
+    {
+      "id": "past-02",
+      "type": "mcq",
+      "prompt": "Which of the following intervals represents the set \\(\\{x \\mid -1<x\\le 3\\}\\)?",
+      "options": [
+        "\\((-1,3)\\)",
+        "\\([-1,3)\\)",
+        "\\((-1,3]\\)",
+        "\\([-1,3]\\)"
+      ],
+      "answer": "C",
+      "explanation": "Midterm 2024, question 2. \\(-1\\) is excluded (open) and \\(3\\) is included (closed)."
+    },
+    {
+      "id": "past-03",
+      "type": "mcq",
+      "prompt": "The solution set of the inequality \\(3x-1\\le 2x+3\\) is ...",
+      "options": [
+        "\\((-\\infty,4)\\)",
+        "\\((-\\infty,4]\\)",
+        "\\(\\left(-\\infty,\\frac{2}{3}\\right]\\)",
+        "\\(\\left(-\\infty,\\frac{2}{3}\\right)\\)"
+      ],
+      "answer": "B",
+      "explanation": "Midterm 2024, question 3. \\(3x-2x\\le 3+1\\Rightarrow x\\le 4\\)."
+    },
+    {
+      "id": "past-04",
+      "type": "mcq",
+      "prompt": "The solution set of the inequality \\(|2x+1|<1\\) is ...",
+      "options": [
+        "\\((-1,0)\\)",
+        "\\([-1,0]\\)",
+        "\\((-\\infty,-1)\\cup(0,\\infty)\\)",
+        "\\((-\\infty,-1]\\cup[0,\\infty)\\)"
+      ],
+      "answer": "A",
+      "explanation": "Midterm 2024, question 4. \\(-1<2x+1<1\\Rightarrow -2<2x<0\\Rightarrow -1<x<0\\)."
+    },
+    {
+      "id": "past-05",
+      "type": "mcq",
+      "prompt": "The solution set of the inequality \\(x^2+x-2<0\\) is ...",
+      "options": [
+        "\\((-2,1)\\)",
+        "\\([-2,1]\\)",
+        "\\((-\\infty,-2)\\cup(1,\\infty)\\)",
+        "\\((-\\infty,-2]\\cup[1,\\infty)\\)"
+      ],
+      "answer": "A",
+      "explanation": "Midterm 2024, question 5. \\(x^2+x-2=(x+2)(x-1)\\) is negative between its roots \\(-2\\) and \\(1\\)."
+    },
+    {
+      "id": "past-06",
+      "type": "mcq",
+      "prompt": "If \\(f(x)=\\frac{\\sqrt{x+1}}{x^2}\\), then \\(f(3)=\\) ...",
+      "options": [
+        "\\(0\\)",
+        "\\(\\frac{2}{9}\\)",
+        "\\(-\\frac{2}{9}\\)",
+        "undefined"
+      ],
+      "answer": "B",
+      "explanation": "Midterm 2024, question 6. \\(f(3)=\\frac{\\sqrt{4}}{9}=\\frac{2}{9}\\)."
+    },
+    {
+      "id": "past-07",
+      "type": "mcq",
+      "prompt": "Which of the following is NOT a polynomial?",
+      "options": [
+        "\\(f(x)=x-\\sqrt{5}\\)",
+        "\\(g(x)=x+\\frac{1}{2}\\)",
+        "\\(h(x)=\\frac{1}{x}+3x-1\\)",
+        "\\(I(x)=x^2-2x+3\\)"
+      ],
+      "answer": "C",
+      "explanation": "Midterm 2024, question 7. \\(\\frac{1}{x}=x^{-1}\\) has a negative power, so \\(h\\) is not a polynomial; the constants \\(\\sqrt5\\) and \\(\\frac12\\) are allowed."
+    },
+    {
+      "id": "past-08",
+      "type": "mcq",
+      "prompt": "The function \\(f(x)=\\sqrt[5]{3x+4}\\) is a ...",
+      "options": [
+        "rational function",
+        "polynomial",
+        "radical function",
+        "piecewise function"
+      ],
+      "answer": "C",
+      "explanation": "Midterm 2024, question 8. It is a root of an expression in \\(x\\): a radical function."
+    },
+    {
+      "id": "past-09",
+      "type": "mcq",
+      "prompt": "The domain of the function \\(f(x)=-2x^3+4x^2+x-1\\) is ...",
+      "options": [
+        "\\(\\mathbb{R}\\)",
+        "\\(\\mathbb{R}-\\{0\\}\\)",
+        "\\((-\\infty,0)\\)",
+        "\\((0,\\infty)\\)"
+      ],
+      "answer": "A",
+      "explanation": "Midterm 2024, question 9. A polynomial is defined for every real number."
+    },
+    {
+      "id": "past-10",
+      "type": "mcq",
+      "prompt": "Consider the functions \\(f(x)=4x+1\\) and \\(g(x)=x^2-1\\). Then the domain of \\(\\frac{f}{g}\\) is ...",
+      "options": [
+        "\\(\\mathbb{R}\\)",
+        "\\(\\mathbb{R}-\\{-1,1\\}\\)",
+        "\\([-1,1]\\)",
+        "\\((-1,1)\\)"
+      ],
+      "answer": "B",
+      "explanation": "Midterm 2024, question 10. \\(\\frac{f}{g}\\) needs \\(g(x)=x^2-1\\ne 0\\), so \\(x\\ne\\pm1\\)."
+    },
+    {
+      "id": "past-11",
+      "type": "mcq",
+      "prompt": "The domain of the function \\(f(x)=\\sqrt{2x-4}\\) is ...",
+      "options": [
+        "\\(\\mathbb{R}\\)",
+        "\\(\\mathbb{R}-\\{2\\}\\)",
+        "\\((2,\\infty)\\)",
+        "\\([2,\\infty)\\)"
+      ],
+      "answer": "D",
+      "explanation": "Midterm 2024, question 11. \\(2x-4\\ge 0\\Rightarrow x\\ge 2\\)."
+    },
+    {
+      "id": "past-12",
+      "type": "mcq",
+      "prompt": "The range of the function shown in the graph is ...",
+      "options": [
+        "\\(\\mathbb{R}\\)",
+        "\\(\\mathbb{R}-\\{-5,5\\}\\)",
+        "\\([-5,5]\\)",
+        "\\([0,5]\\)"
+      ],
+      "answer": "D",
+      "explanation": "Midterm 2024, question 12. The graph goes from height 5 down to 0 at the origin and back up to 5: the \\(y\\)-values fill \\([0,5]\\).",
+      "image": {
+        "src": "calculus-1/img/midterm-2024-q12.svg",
+        "alt": "V-shaped graph: line segments from (-5, 5) down to (0, 0) and up to (5, 5)."
+      }
+    },
+    {
+      "id": "past-13",
+      "type": "mcq",
+      "prompt": "Are the functions \\(f(x)=\\frac{x^2-9}{x-3}\\) and \\(g(x)=x+3\\) the same?",
+      "options": [
+        "Yes, they are.",
+        "No, because \\(D_f\\ne D_g\\).",
+        "No, because \\(f(x)\\ne g(x)\\) for some \\(x\\).",
+        "None of the above"
+      ],
+      "answer": "B",
+      "explanation": "Midterm 2024, question 13. \\(D_f=\\mathbb{R}-\\{3\\}\\) but \\(D_g=\\mathbb{R}\\); equal functions need the same domain."
+    },
+    {
+      "id": "past-14",
+      "type": "mcq",
+      "prompt": "The \\(x\\)-intercepts of the graph of the function \\(y=x^2-4\\) are ...",
+      "options": [
+        "\\(x=-2,\\ 2\\)",
+        "\\(x=-4,\\ 4\\)",
+        "\\(x=0,\\ 4\\)",
+        "\\(x=0,\\ 2\\)"
+      ],
+      "answer": "A",
+      "explanation": "Midterm 2024, question 14. \\(x^2-4=0\\Rightarrow x=\\pm2\\)."
+    },
+    {
+      "id": "past-15",
+      "type": "mcq",
+      "prompt": "The \\(y\\)-intercept of the graph of the function \\(y=x^2-4\\) is ...",
+      "options": [
+        "\\(y=-4\\)",
+        "\\(y=4\\)",
+        "\\(y=-2\\)",
+        "\\(y=2\\)"
+      ],
+      "answer": "A",
+      "explanation": "Midterm 2024, question 15. At \\(x=0\\), \\(y=-4\\)."
+    },
+    {
+      "id": "past-16",
+      "type": "mcq",
+      "prompt": "A function \\(f\\) is even if its graph is symmetric with respect to ...",
+      "options": [
+        "\\(x\\)-axis",
+        "\\(y\\)-axis",
+        "the origin",
+        "the line \\(y=x\\)"
+      ],
+      "answer": "B",
+      "explanation": "Midterm 2024, question 16. Even: \\(f(-x)=f(x)\\), so the graph is symmetric about the \\(y\\)-axis."
+    },
+    {
+      "id": "past-17",
+      "type": "mcq",
+      "prompt": "The function \\(f(x)=\\frac{x-2x^3}{x^2+1}\\) is ...",
+      "options": [
+        "even",
+        "odd",
+        "neither even nor odd",
+        "both even and odd"
+      ],
+      "answer": "B",
+      "explanation": "Midterm 2024, question 17. \\(f(-x)=\\frac{-x+2x^3}{x^2+1}=-f(x)\\)."
+    },
+    {
+      "id": "past-18",
+      "type": "mcq",
+      "prompt": "If \\(f(x)=\\frac{1}{x+1}\\) and \\(g(x)=\\sqrt{x+3}\\), then \\((f\\circ g)(x)=\\) ...",
+      "options": [
+        "\\(\\frac{1}{\\sqrt{x+3}+1}\\)",
+        "\\(\\sqrt{\\frac{3x+4}{x+1}}\\)",
+        "\\(\\frac{\\sqrt{x+3}}{x+1}\\)",
+        "\\(\\frac{x+1}{\\sqrt{x+3}}\\)"
+      ],
+      "answer": "A",
+      "explanation": "Midterm 2024, question 18. \\((f\\circ g)(x)=f(\\sqrt{x+3})=\\frac{1}{\\sqrt{x+3}+1}\\)."
+    },
+    {
+      "id": "past-19",
+      "type": "mcq",
+      "prompt": "If \\(f(x)=\\frac{1}{x+1}\\) and \\(g(x)=\\sqrt{x+3}\\), then the domain of \\(f\\circ g\\) is ...",
+      "options": [
+        "\\([-1,\\infty)\\)",
+        "\\((-1,\\infty)\\)",
+        "\\([-3,\\infty)\\)",
+        "\\((-3,\\infty)\\)"
+      ],
+      "answer": "C",
+      "explanation": "Midterm 2024, question 19. Need \\(x+3\\ge0\\); and \\(\\sqrt{x+3}+1\\ge1\\) is never 0. So \\(x\\ge -3\\)."
+    },
+    {
+      "id": "past-20",
+      "type": "mcq",
+      "prompt": "The relation \\(f(x)=5x-3\\) is ...",
+      "options": [
+        "not a function",
+        "a one-to-one function",
+        "a function that is not one-to-one",
+        "none of the above"
+      ],
+      "answer": "B",
+      "explanation": "Midterm 2024, question 20. \\(5x_1-3=5x_2-3\\Rightarrow x_1=x_2\\)."
+    },
+    {
+      "id": "past-21",
+      "type": "mcq",
+      "prompt": "The relation \\(f(x)=x^2-1\\) is ...",
+      "options": [
+        "not a function",
+        "a one-to-one function",
+        "a function that is not one-to-one",
+        "none of the above"
+      ],
+      "answer": "C",
+      "explanation": "Midterm 2024, question 21. It is a function, but \\(f(-1)=f(1)=0\\), so it is not one-to-one."
+    },
+    {
+      "id": "past-22",
+      "type": "mcq",
+      "prompt": "Find \\(f^{-1}\\) for the function \\(f(x)=\\frac{1}{x+1}\\).",
+      "options": [
+        "\\(f^{-1}(x)=\\frac{1-x}{x}\\)",
+        "\\(f^{-1}(x)=x\\)",
+        "\\(f^{-1}(x)=x+1\\)",
+        "\\(f^{-1}(x)=\\frac{x}{1-x}\\)"
+      ],
+      "answer": "A",
+      "explanation": "Midterm 2024, question 22. \\(y=\\frac{1}{x+1}\\Rightarrow x+1=\\frac1y\\Rightarrow x=\\frac{1-y}{y}\\)."
+    },
+    {
+      "id": "past-23",
+      "type": "mcq",
+      "prompt": "Find the range of \\(f(x)=\\frac{1}{x+1}\\). [Hint: use the inverse function \\(f^{-1}(x)=\\frac{1-x}{x}\\).]",
+      "options": [
+        "\\(\\mathbb{R}\\)",
+        "\\(\\mathbb{R}-\\{0\\}\\)",
+        "\\((-\\infty,0)\\)",
+        "\\((0,\\infty)\\)"
+      ],
+      "answer": "B",
+      "explanation": "Midterm 2024, question 23. The range of \\(f\\) is the domain of \\(f^{-1}(x)=\\frac{1-x}{x}\\), which is \\(x\\ne0\\)."
+    },
+    {
+      "id": "past-24",
+      "type": "mcq",
+      "prompt": "For the right triangle shown in the figure, find \\(\\csc\\theta\\).",
+      "options": [
+        "\\(\\frac{5}{4}\\)",
+        "\\(\\frac{4}{3}\\)",
+        "\\(\\frac{3}{4}\\)",
+        "\\(\\frac{5}{3}\\)"
+      ],
+      "answer": "D",
+      "explanation": "Midterm 2024, question 24. The hypotenuse is \\(\\sqrt{3^2+4^2}=5\\) and the side opposite \\(\\theta\\) is 3, so \\(\\csc\\theta=\\frac{\\text{hyp}}{\\text{opp}}=\\frac{5}{3}\\).",
+      "image": {
+        "src": "calculus-1/img/midterm-2024-q24.svg",
+        "alt": "Right triangle with vertical leg 3 and horizontal leg 4; the angle theta is at the end of the leg of length 4, opposite the leg of length 3."
+      }
+    },
+    {
+      "id": "past-25",
+      "type": "mcq",
+      "prompt": "If \\(\\tan\\theta=\\frac{1}{\\sqrt3}\\), then \\(\\cot\\theta=\\) ...",
+      "options": [
+        "\\(\\frac{1}{\\sqrt3}\\)",
+        "\\(\\frac{-1}{\\sqrt3}\\)",
+        "\\(\\sqrt3\\)",
+        "\\(-\\sqrt3\\)"
+      ],
+      "answer": "C",
+      "explanation": "Midterm 2024, question 25. \\(\\cot\\theta=\\frac{1}{\\tan\\theta}=\\sqrt3\\)."
+    },
+    {
+      "id": "past-26",
+      "type": "mcq",
+      "prompt": "Find the reference angle \\(\\theta'\\) for the angle \\(\\theta=220^\\circ\\).",
+      "options": [
+        "\\(30^\\circ\\)",
+        "\\(40^\\circ\\)",
+        "\\(50^\\circ\\)",
+        "\\(60^\\circ\\)"
+      ],
+      "answer": "B",
+      "explanation": "Midterm 2024, question 26. \\(220^\\circ\\) is in the third quadrant: \\(\\theta'=220^\\circ-180^\\circ=40^\\circ\\)."
+    },
+    {
+      "id": "past-27",
+      "type": "mcq",
+      "prompt": "The exact value of \\(\\cos\\frac{3\\pi}{2}\\) is ...",
+      "options": [
+        "\\(0\\)",
+        "\\(-1\\)",
+        "\\(1\\)",
+        "\\(\\sqrt2\\)"
+      ],
+      "answer": "A",
+      "explanation": "Midterm 2024, question 27. \\(\\cos\\frac{3\\pi}{2}=0\\)."
+    },
+    {
+      "id": "past-28",
+      "type": "mcq",
+      "prompt": "The sine function, \\(\\sin\\), is periodic, and it has period ...",
+      "options": [
+        "\\(\\pi\\)",
+        "\\(2\\pi\\)",
+        "\\(3\\pi\\)",
+        "\\(4\\pi\\)"
+      ],
+      "answer": "B",
+      "explanation": "Midterm 2024, question 28. \\(\\sin(x+2\\pi)=\\sin x\\), and \\(2\\pi\\) is the smallest such positive number."
+    },
+    {
+      "id": "past-29",
+      "type": "mcq",
+      "prompt": "The range of the cosine function, \\(\\cos\\), is ...",
+      "options": [
+        "\\([0,\\pi]\\)",
+        "\\([-\\pi,\\pi]\\)",
+        "\\([-1,1]\\)",
+        "\\((-1,1)\\)"
+      ],
+      "answer": "C",
+      "explanation": "Midterm 2024, question 29. \\(-1\\le\\cos x\\le 1\\), and both values are reached."
+    },
+    {
+      "id": "past-30",
+      "type": "mcq",
+      "prompt": "If \\(\\theta=\\sin^{-1}\\left(\\frac12\\right)\\), then \\(\\cos\\theta=\\) ...",
+      "options": [
+        "\\(\\frac{\\sqrt3}{2}\\)",
+        "\\(\\frac{\\sqrt2}{2}\\)",
+        "\\(\\frac12\\)",
+        "\\(0\\)"
+      ],
+      "answer": "A",
+      "explanation": "Midterm 2024, question 30. \\(\\theta=\\frac{\\pi}{6}\\), so \\(\\cos\\theta=\\frac{\\sqrt3}{2}\\)."
+    },
+    {
+      "id": "past-31",
+      "type": "mcq",
+      "prompt": "Let \\(g(x)=\\frac{x-4}{\\sqrt{x}-2}\\). Then:",
+      "options": [
+        "\\(\\lim_{x\\to4}g(x)=+\\infty\\)",
+        "\\(\\lim_{x\\to4}g(x)=1\\)",
+        "\\(\\lim_{x\\to4}g(x)=0\\)",
+        "\\(\\lim_{x\\to4}g(x)=4\\)"
+      ],
+      "answer": "D",
+      "explanation": "Final 2024, question 1. \\(x-4=(\\sqrt x-2)(\\sqrt x+2)\\), so \\(g(x)=\\sqrt x+2\\to4\\)."
+    },
+    {
+      "id": "past-32",
+      "type": "mcq",
+      "prompt": "The value of \\(\\lim_{x\\to0}\\frac{\\sin(x)}{x^3}\\) is:",
+      "options": [
+        "\\(+\\infty\\)",
+        "\\(1\\)",
+        "\\(-\\frac12\\)",
+        "\\(\\frac12\\)"
+      ],
+      "answer": "A",
+      "explanation": "Final 2024, question 2. \\(\\frac{\\sin x}{x^3}=\\frac{\\sin x}{x}\\cdot\\frac{1}{x^2}\\) and \\(\\frac{\\sin x}{x}\\to1\\), \\(\\frac{1}{x^2}\\to+\\infty\\)."
+    },
+    {
+      "id": "past-33",
+      "type": "mcq",
+      "prompt": "Let \\(\\lim_{x\\to-\\infty}\\frac{\\cos(5x-3)}{-x^2+x}\\). Its value is:",
+      "options": [
+        "\\(+\\infty\\)",
+        "\\(-3\\)",
+        "\\(3\\)",
+        "\\(0\\)"
+      ],
+      "answer": "D",
+      "explanation": "Final 2024, question 3. \\(|\\cos(5x-3)|\\le1\\) while \\(|-x^2+x|\\to\\infty\\); by the Sandwich theorem the limit is 0."
+    },
+    {
+      "id": "past-34",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\frac{\\sqrt{9x^2-5}}{4x+3}\\). Then:",
+      "options": [
+        "\\(\\lim_{x\\to-\\infty}f(x)=-\\frac34\\)",
+        "\\(\\lim_{x\\to-\\infty}f(x)=\\frac34\\)",
+        "\\(\\lim_{x\\to-\\infty}f(x)=-\\infty\\)",
+        "\\(\\lim_{x\\to-\\infty}f(x)=+\\infty\\)"
+      ],
+      "answer": "A",
+      "explanation": "Final 2024, question 4. For \\(x<0\\), \\(\\sqrt{9x^2-5}=|x|\\sqrt{9-\\frac{5}{x^2}}=-x\\sqrt{9-\\frac{5}{x^2}}\\), so \\(f(x)\\to\\frac{-3}{4}\\)."
+    },
+    {
+      "id": "past-35",
+      "type": "mcq",
+      "prompt": "The limit of \\(\\frac{x-1}{x^3-1}\\) when \\(x\\) tends to 1 is:",
+      "options": [
+        "\\(-\\frac13\\)",
+        "\\(\\frac13\\)",
+        "\\(0\\)",
+        "Doesn't exist"
+      ],
+      "answer": "B",
+      "explanation": "Final 2024, question 5. \\(x^3-1=(x-1)(x^2+x+1)\\), so the limit is \\(\\frac{1}{1+1+1}=\\frac13\\)."
+    },
+    {
+      "id": "past-36",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\frac{-2x+1}{x^2+2x-3}\\). Which of the following assertions is true?",
+      "options": [
+        "\\(\\lim_{x\\to-3^+}f(x)=+\\infty\\)",
+        "\\(\\lim_{x\\to-3^+}f(x)=-\\infty\\)",
+        "\\(\\lim_{x\\to-3^+}f(x)=0\\)",
+        "No one of the previous choices"
+      ],
+      "answer": "B",
+      "explanation": "Final 2024, question 6. \\(x^2+2x-3=(x+3)(x-1)\\). As \\(x\\to-3^+\\): numerator \\(\\to7\\), \\(x+3\\to0^+\\), \\(x-1\\to-4\\), so the denominator \\(\\to0^-\\) and \\(f\\to-\\infty\\)."
+    },
+    {
+      "id": "past-37",
+      "type": "mcq",
+      "prompt": "The type of the discontinuity of \\(f(x)=\\frac{\\sin\\left(x-\\frac{\\pi}{2}\\right)}{x-\\frac{\\pi}{2}}\\) at \\(\\frac{\\pi}{2}\\) is:",
+      "options": [
+        "Removable",
+        "Infinite discontinuity",
+        "Jump discontinuity",
+        "Other type"
+      ],
+      "answer": "A",
+      "explanation": "Final 2024, question 7. \\(f\\) is undefined at \\(\\frac\\pi2\\) but \\(\\lim_{x\\to\\pi/2}f(x)=1\\) exists, so the discontinuity is removable."
+    },
+    {
+      "id": "past-38",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\begin{cases}\\frac{x^2-x-12}{3x^2+6}, & x\\ne0\\\\ A, & x=0\\end{cases}\\) be a continuous function. Then \\(A\\) is:",
+      "options": [
+        "\\(A=1\\)",
+        "\\(A=0\\)",
+        "\\(A=-2\\)",
+        "\\(A=2\\)"
+      ],
+      "answer": "C",
+      "explanation": "Final 2024, question 8. Continuity at 0: \\(A=\\lim_{x\\to0}\\frac{x^2-x-12}{3x^2+6}=\\frac{-12}{6}=-2\\)."
+    },
+    {
+      "id": "past-39",
+      "type": "mcq",
+      "prompt": "Which one fails to satisfy the conditions required for the Intermediate Value Theorem on \\(\\left[-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right]\\)?",
+      "options": [
+        "\\(f(x)=x^2\\)",
+        "\\(f(x)=\\frac{1}{x^2+1}\\)",
+        "\\(f(x)=\\sin(x)\\)",
+        "\\(f(x)=\\tan(x)\\)"
+      ],
+      "answer": "D",
+      "explanation": "Final 2024, question 15. The theorem needs \\(f\\) continuous on the closed interval; \\(\\tan\\) is not even defined at \\(\\pm\\frac{\\pi}{2}\\)."
+    }
+  ]
+}

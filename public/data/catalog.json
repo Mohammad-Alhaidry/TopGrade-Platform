@@ -81,6 +81,63 @@
           }
         }
       ]
+    },
+    {
+      "id": "calculus-1",
+      "titleEn": "Calculus 1",
+      "titleAr": "تفاضل وتكامل 1",
+      "math": true,
+      "topics": [
+        {
+          "id": "chapter-1",
+          "number": 1,
+          "title": "Foundations of Calculus",
+          "label": {
+            "en": "Chapter 1",
+            "ar": "الفصل الأول"
+          },
+          "bank": "calculus-1/chapter-1.json"
+        },
+        {
+          "id": "chapter-2",
+          "number": 2,
+          "title": "Limits and Continuity",
+          "label": {
+            "en": "Chapter 2",
+            "ar": "الفصل الثاني"
+          },
+          "bank": "calculus-1/chapter-2.json"
+        },
+        {
+          "id": "past-exams",
+          "number": 3,
+          "title": "Midterm 2024 and Final 2024 (chapters 1 and 2)",
+          "label": {
+            "en": "Past exams",
+            "ar": "اختبارات سابقة"
+          },
+          "bank": "calculus-1/past-exams.json"
+        },
+        {
+          "id": "midterm",
+          "number": 4,
+          "title": "Chapters 1 and 2",
+          "label": {
+            "en": "Practice midterm",
+            "ar": "اختبار نصفي تجريبي"
+          },
+          "bank": "calculus-1/midterm.json",
+          "mix": [
+            "chapter-1",
+            "chapter-2",
+            "past-exams"
+          ],
+          "defaults": {
+            "mode": "exam",
+            "count": 40
+          }
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-7 -7 14 8.4" width="420" height="252" font-family="serif">
+  <title>Graph of a V-shaped function: line segments from (-5, 5) down to (0, 0) and up to (5, 5)</title>
+  <rect x="-7" y="-7" width="14" height="8.4" fill="#fff"/>
+  <g stroke="#111" stroke-width="0.05" fill="none">
+    <line x1="-6.4" y1="0" x2="6.4" y2="0"/><line x1="0" y1="0.9" x2="0" y2="-6.4"/>
+    <path d="M6.4 0 l-0.3 -0.15 v0.3 z M0 -6.4 l-0.15 0.3 h0.3 z" fill="#111"/>
+    <g stroke-width="0.04"><path d="M-5 -0.12v0.24M-4 -0.12v0.24M-3 -0.12v0.24M-2 -0.12v0.24M-1 -0.12v0.24M1 -0.12v0.24M2 -0.12v0.24M3 -0.12v0.24M4 -0.12v0.24M5 -0.12v0.24M-0.12 -1h0.24M-0.12 -2h0.24M-0.12 -3h0.24M-0.12 -4h0.24M-0.12 -5h0.24"/></g>
+    <polyline points="-5,-5 0,0 5,-5" stroke-width="0.09"/>
+  </g>
+  <g font-size="0.42" fill="#111" text-anchor="middle">
+    <text x="-5" y="0.6">-5</text><text x="-4" y="0.6">-4</text><text x="-3" y="0.6">-3</text><text x="-2" y="0.6">-2</text><text x="-1" y="0.6">-1</text>
+    <text x="1" y="0.6">1</text><text x="2" y="0.6">2</text><text x="3" y="0.6">3</text><text x="4" y="0.6">4</text><text x="5" y="0.6">5</text>
+    <text x="-0.35" y="-0.85">1</text><text x="-0.35" y="-1.85">2</text><text x="-0.35" y="-2.85">3</text><text x="-0.35" y="-3.85">4</text><text x="-0.35" y="-4.85">5</text>
+    <text x="6.5" y="0.65" font-style="italic" font-size="0.55">x</text><text x="0.45" y="-6.3" font-style="italic" font-size="0.55">y</text>
+  </g>
+</svg>

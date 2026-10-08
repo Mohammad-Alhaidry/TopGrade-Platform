@@ -15,6 +15,7 @@ import { topicKey, topicLabel } from './catalog.js';
 import { paths } from './routes.js';
 import { navigate } from './router.js';
 import { t, lang, localName } from './i18n.js';
+import { rich } from './math.js';
 import { track } from './analytics.js';
 
 const STORAGE_KEY = 'topgrade.run.v1';
@@ -331,10 +332,13 @@ function showQuestion(focus) {
   mount(view, { focus, onKey });
 }
 
+/** The figure a question needs (a graph, a triangle), drawn on white so it reads in the dark theme too. */
+const figure = (q) => (q.image ? h('img', { class: 'qfig', src: `data/${q.image.src}`, alt: q.image.alt, loading: 'lazy' }) : null);
+
 /** Prompt text with "____" shown as a gap; `fill` puts the chosen word into it. */
 function promptContent(text, fill = null) {
   return text.split(/(_{3,})/).map((part) => {
-    if (!/^_{3,}$/.test(part)) return part;
+    if (!/^_{3,}$/.test(part)) return rich(part);
     if (!fill?.word) return h('span', { class: 'gap', 'aria-label': t('q.blank') });
     return h('span', { class: `gap gap--filled${fill.state ? ` is-${fill.state}` : ''}` }, fill.word);
   });
@@ -351,7 +355,7 @@ function optionButton({ key: k, text, selected, right, wrong, dim, disabled, dat
     ...(content ? cText() : {}),
   },
   k ? h('span', { class: 'option__key' }, k) : null,
-  h('span', { class: 'option__text' }, text),
+  h('span', { class: 'option__text' }, rich(text)),
   right || wrong ? h('span', { class: 'option__mark' }, icon(...(right ? ICONS.check : ICONS.cross))) : null);
 }
 
@@ -421,7 +425,7 @@ function matchingAnswer(item, response, revealed, onChange) {
   return h('ul', cText({ class: 'pairs' }),
     q.pairs.map((pair, i) =>
       h('li', { class: `card pair${revealed ? (marks[i] ? ' is-right' : ' is-wrong') : ''}` },
-        h('span', { class: 'pair__left', id: `pair-${i}` }, pair.left),
+        h('span', { class: 'pair__left', id: `pair-${i}` }, rich(pair.left)),
         h('div', { class: 'pair__pick' },
           h('select', {
             // Follows the chosen item's own direction, so "Choose…" reads right in either interface language.
@@ -443,7 +447,7 @@ function matchingAnswer(item, response, revealed, onChange) {
 
 function notes(q) {
   return [
-    q.explanation ? h('p', cText({ class: 'note' }), q.explanation) : null,
+    q.explanation ? h('p', cText({ class: 'note' }), rich(q.explanation)) : null,
     q.source?.page !== undefined ? h('p', { class: 'note note--source' }, t('pageN', { p: q.source.page })) : null,
   ];
 }
@@ -456,7 +460,7 @@ function verdictBar(q, response, last) {
     detail = h('p', { class: 'verdict__detail' }, t('v.matched', { r: right, n: q.pairs.length }));
   } else if (!ok) {
     detail = h('p', { class: 'verdict__detail' }, t('answerLabel'), ' ',
-      h('strong', q.type === 'tf' ? {} : cText(), q.type === 'tf' ? t(q.answer ? 'true' : 'false') : correctAnswerText(q)));
+      h('strong', q.type === 'tf' ? {} : cText(), q.type === 'tf' ? t(q.answer ? 'true' : 'false') : rich(correctAnswerText(q))));
   }
   return h('footer', { class: `bar bar--verdict ${ok ? 'is-right' : 'is-wrong'}` },
     h('div', { class: 'verdict', role: 'status' },
@@ -582,7 +586,8 @@ function questionView() {
         h('p', { class: 'qcard__hint' }, h('span', { class: 'qcard__type' }, typeLabel(q.type)), h('span', {}, t(`hint.${q.type}`))),
         h('p', cText({ class: 'qcard__prompt' }),
           q.type === 'matching' ? q.title
-            : promptContent(q.prompt, q.type === 'fib' ? { word: response, state: revealed ? (isCorrect(q, response) ? 'right' : 'wrong') : null } : null))),
+            : promptContent(q.prompt, q.type === 'fib' ? { word: response, state: revealed ? (isCorrect(q, response) ? 'right' : 'wrong') : null } : null)),
+        figure(q)),
       answers,
     ],
     foot: footer,
@@ -747,7 +752,7 @@ function openReview(focusNumber) {
 function reviewEntry({ item, response, correct, answered }, n) {
   const q = item.question;
   const status = correct ? 'is-right' : answered ? 'is-wrong' : 'is-skip';
-  const shown = (text) => (q.type === 'tf' ? h('dd', {}, text === 'True' ? t('true') : t('false')) : h('dd', cText(), text));
+  const shown = (text) => (q.type === 'tf' ? h('dd', {}, text === 'True' ? t('true') : t('false')) : h('dd', cText(), rich(text)));
   const body =
     q.type === 'matching'
       ? h('ul', cText({ class: 'rpairs' }),
@@ -755,7 +760,7 @@ function reviewEntry({ item, response, correct, answered }, n) {
             const ok = matchingResults(q, response)[i];
             const chosen = Array.isArray(response) && response[i];
             return h('li', { class: ok ? 'is-right' : 'is-wrong' },
-              h('span', { class: 'rpairs__left' }, p.left),
+              h('span', { class: 'rpairs__left' }, rich(p.left)),
               h('span', { class: 'rpairs__right' },
                 ok ? p.right : [chosen ? h('s', {}, chosen) : h('em', { lang: document.documentElement.lang }, t('rev.none')), ' ', h('strong', {}, p.right)]));
           }))
@@ -769,6 +774,7 @@ function reviewEntry({ item, response, correct, answered }, n) {
       h('span', {}, typeLabel(q.type)),
       h('span', { class: 'rcard__state' }, answered ? icon(...(correct ? ICONS.check : ICONS.cross)) : null, t(correct ? 'st.correct' : answered ? 'st.wrong' : 'st.skipped'))),
     h('p', cText({ class: 'rcard__prompt' }), q.type === 'matching' ? q.title : promptContent(q.prompt)),
+    figure(q),
     body,
     notes(q));
 }

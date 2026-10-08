@@ -17,6 +17,7 @@ import { track, describeSession } from './analytics.js';
 import { lang } from './i18n.js';
 import { currentPlatform } from './install.js';
 import { pageTitle } from './meta.js';
+import { loadMath } from './math.js';
 
 // Screens where switching to a newly downloaded version (a reload) loses nothing.
 const SAFE_TO_UPDATE = new Set(['home', 'courses', 'course', 'review', 'privacy', 'notfound']);
@@ -24,10 +25,24 @@ const SAFE_TO_UPDATE = new Set(['home', 'courses', 'course', 'review', 'privacy'
 const DATA_URL = new URL('data/', document.baseURI).href;
 const ctx = { catalog: null, dataUrl: DATA_URL, token: 0 };
 
+/** A link to a course or topic this device's saved course list doesn't have yet (a course added since the app was
+ *  last updated): ask the server for the current list before saying "not found", and fetch the new version. */
+async function catalogKnows(route) {
+  const known = () => (route.name === 'course' ? findCourse(ctx.catalog, route.params.course) : findTopic(ctx.catalog, route.params.course, route.params.topic));
+  if (!['course', 'topic'].includes(route.name) || known()) return;
+  try {
+    ctx.catalog = await loadCatalog(new URL(`catalog.json?fresh=${Date.now()}`, DATA_URL).href);
+    navigator.serviceWorker?.getRegistration().then((reg) => reg?.update()).catch(() => {});
+  } catch {
+    /* offline: keep the saved list */
+  }
+}
+
 async function render(route) {
   const token = ++ctx.token;
   try {
     ctx.catalog ??= await loadCatalog(new URL('catalog.json', DATA_URL).href);
+    await catalogKnows(route);
     if (token !== ctx.token) return;
     const { name, params } = route;
     if (name === 'moved') return navigate(params.to, { replace: true });
@@ -41,7 +56,7 @@ async function render(route) {
     if (name === 'topic') {
       const found = findTopic(ctx.catalog, params.course, params.topic);
       if (found) {
-        const bank = await loadTopicBank(DATA_URL, found.topic);
+        const [bank] = await Promise.all([loadTopicBank(DATA_URL, found.topic), found.course.math ? loadMath() : null]);
         if (token === ctx.token) openTopic({ ...found, bank });
         return;
       }

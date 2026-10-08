@@ -13,7 +13,8 @@
 //   { id, type: 'fib',      prompt, answers: [string, ...], choices?: [string, ...] }
 //        any listed answer is accepted; choices are optional distractor words (otherwise drawn from other blanks)
 //   { id, type: 'matching', title, pairs: [{ left, right } x2..] }
-//   explanation: string, source: { page: number | string }
+//   explanation: string, source: { page: number | string },
+//   image: { src: 'course/img/name.svg', alt } (a figure the question needs; src is relative to data/)
 
 export const SCHEMA_VERSION = 1;
 export const TYPES = ['mcq', 'tf', 'fib', 'matching'];
@@ -59,6 +60,9 @@ function questionErrors(q) {
   }
 
   if (q.explanation !== undefined && !isText(q.explanation)) errs.push('explanation must be text');
+  if (q.image !== undefined && !(/^[a-z0-9-]+\/img\/[a-z0-9-]+\.(svg|png|webp|jpg)$/.test(q.image?.src ?? '') && isText(q.image?.alt))) {
+    errs.push('image needs src like "course/img/name.svg" and alt text');
+  }
   if (q.source !== undefined && !(typeof q.source?.page === 'number' || isText(q.source?.page))) {
     errs.push('source.page must be a number or text');
   }

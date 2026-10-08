@@ -1,0 +1,530 @@
+{
+  "schemaVersion": 1,
+  "course": {
+    "id": "calculus-1",
+    "titleAr": "تفاضل وتكامل 1",
+    "titleEn": "Calculus 1"
+  },
+  "topic": {
+    "id": "past-exams",
+    "number": 3,
+    "title": "Midterm 2024 and Final 2024 (chapters 1 and 2)"
+  },
+  "questions": [
+    {
+      "id": "past-01",
+      "type": "mcq",
+      "prompt": "The number \\(\\sqrt{5}\\) belongs to the set of ...",
+      "options": [
+        "natural numbers",
+        "integers",
+        "rational numbers",
+        "irrational numbers"
+      ],
+      "answer": "D",
+      "explanation": "Midterm 2024, question 1. \\(\\sqrt{5}\\) cannot be written as a fraction of integers, so it is irrational."
+    },
+    {
+      "id": "past-02",
+      "type": "mcq",
+      "prompt": "Which of the following intervals represents the set \\(\\{x \\mid -1<x\\le 3\\}\\)?",
+      "options": [
+        "\\((-1,3)\\)",
+        "\\([-1,3)\\)",
+        "\\((-1,3]\\)",
+        "\\([-1,3]\\)"
+      ],
+      "answer": "C",
+      "explanation": "Midterm 2024, question 2. \\(-1\\) is excluded (open) and \\(3\\) is included (closed)."
+    },
+    {
+      "id": "past-03",
+      "type": "mcq",
+      "prompt": "The solution set of the inequality \\(3x-1\\le 2x+3\\) is ...",
+      "options": [
+        "\\((-\\infty,4)\\)",
+        "\\((-\\infty,4]\\)",
+        "\\(\\left(-\\infty,\\frac{2}{3}\\right]\\)",
+        "\\(\\left(-\\infty,\\frac{2}{3}\\right)\\)"
+      ],
+      "answer": "B",
+      "explanation": "Midterm 2024, question 3. \\(3x-2x\\le 3+1\\Rightarrow x\\le 4\\)."
+    },
+    {
+      "id": "past-04",
+      "type": "mcq",
+      "prompt": "The solution set of the inequality \\(|2x+1|<1\\) is ...",
+      "options": [
+        "\\((-1,0)\\)",
+        "\\([-1,0]\\)",
+        "\\((-\\infty,-1)\\cup(0,\\infty)\\)",
+        "\\((-\\infty,-1]\\cup[0,\\infty)\\)"
+      ],
+      "answer": "A",
+      "explanation": "Midterm 2024, question 4. \\(-1<2x+1<1\\Rightarrow -2<2x<0\\Rightarrow -1<x<0\\)."
+    },
+    {
+      "id": "past-05",
+      "type": "mcq",
+      "prompt": "The solution set of the inequality \\(x^2+x-2<0\\) is ...",
+      "options": [
+        "\\((-2,1)\\)",
+        "\\([-2,1]\\)",
+        "\\((-\\infty,-2)\\cup(1,\\infty)\\)",
+        "\\((-\\infty,-2]\\cup[1,\\infty)\\)"
+      ],
+      "answer": "A",
+      "explanation": "Midterm 2024, question 5. \\(x^2+x-2=(x+2)(x-1)\\) is negative between its roots \\(-2\\) and \\(1\\)."
+    },
+    {
+      "id": "past-06",
+      "type": "mcq",
+      "prompt": "If \\(f(x)=\\frac{\\sqrt{x+1}}{x^2}\\), then \\(f(3)=\\) ...",
+      "options": [
+        "\\(0\\)",
+        "\\(\\frac{2}{9}\\)",
+        "\\(-\\frac{2}{9}\\)",
+        "undefined"
+      ],
+      "answer": "B",
+      "explanation": "Midterm 2024, question 6. \\(f(3)=\\frac{\\sqrt{4}}{9}=\\frac{2}{9}\\)."
+    },
+    {
+      "id": "past-07",
+      "type": "mcq",
+      "prompt": "Which of the following is NOT a polynomial?",
+      "options": [
+        "\\(f(x)=x-\\sqrt{5}\\)",
+        "\\(g(x)=x+\\frac{1}{2}\\)",
+        "\\(h(x)=\\frac{1}{x}+3x-1\\)",
+        "\\(I(x)=x^2-2x+3\\)"
+      ],
+      "answer": "C",
+      "explanation": "Midterm 2024, question 7. \\(\\frac{1}{x}=x^{-1}\\) has a negative power, so \\(h\\) is not a polynomial; the constants \\(\\sqrt5\\) and \\(\\frac12\\) are allowed."
+    },
+    {
+      "id": "past-08",
+      "type": "mcq",
+      "prompt": "The function \\(f(x)=\\sqrt[5]{3x+4}\\) is a ...",
+      "options": [
+        "rational function",
+        "polynomial",
+        "radical function",
+        "piecewise function"
+      ],
+      "answer": "C",
+      "explanation": "Midterm 2024, question 8. It is a root of an expression in \\(x\\): a radical function."
+    },
+    {
+      "id": "past-09",
+      "type": "mcq",
+      "prompt": "The domain of the function \\(f(x)=-2x^3+4x^2+x-1\\) is ...",
+      "options": [
+        "\\(\\mathbb{R}\\)",
+        "\\(\\mathbb{R}-\\{0\\}\\)",
+        "\\((-\\infty,0)\\)",
+        "\\((0,\\infty)\\)"
+      ],
+      "answer": "A",
+      "explanation": "Midterm 2024, question 9. A polynomial is defined for every real number."
+    },
+    {
+      "id": "past-10",
+      "type": "mcq",
+      "prompt": "Consider the functions \\(f(x)=4x+1\\) and \\(g(x)=x^2-1\\). Then the domain of \\(\\frac{f}{g}\\) is ...",
+      "options": [
+        "\\(\\mathbb{R}\\)",
+        "\\(\\mathbb{R}-\\{-1,1\\}\\)",
+        "\\([-1,1]\\)",
+        "\\((-1,1)\\)"
+      ],
+      "answer": "B",
+      "explanation": "Midterm 2024, question 10. \\(\\frac{f}{g}\\) needs \\(g(x)=x^2-1\\ne 0\\), so \\(x\\ne\\pm1\\)."
+    },
+    {
+      "id": "past-11",
+      "type": "mcq",
+      "prompt": "The domain of the function \\(f(x)=\\sqrt{2x-4}\\) is ...",
+      "options": [
+        "\\(\\mathbb{R}\\)",
+        "\\(\\mathbb{R}-\\{2\\}\\)",
+        "\\((2,\\infty)\\)",
+        "\\([2,\\infty)\\)"
+      ],
+      "answer": "D",
+      "explanation": "Midterm 2024, question 11. \\(2x-4\\ge 0\\Rightarrow x\\ge 2\\)."
+    },
+    {
+      "id": "past-12",
+      "type": "mcq",
+      "prompt": "The range of the function shown in the graph is ...",
+      "options": [
+        "\\(\\mathbb{R}\\)",
+        "\\(\\mathbb{R}-\\{-5,5\\}\\)",
+        "\\([-5,5]\\)",
+        "\\([0,5]\\)"
+      ],
+      "answer": "D",
+      "explanation": "Midterm 2024, question 12. The graph goes from height 5 down to 0 at the origin and back up to 5: the \\(y\\)-values fill \\([0,5]\\).",
+      "image": {
+        "src": "calculus-1/img/midterm-2024-q12.svg",
+        "alt": "V-shaped graph: line segments from (-5, 5) down to (0, 0) and up to (5, 5)."
+      }
+    },
+    {
+      "id": "past-13",
+      "type": "mcq",
+      "prompt": "Are the functions \\(f(x)=\\frac{x^2-9}{x-3}\\) and \\(g(x)=x+3\\) the same?",
+      "options": [
+        "Yes, they are.",
+        "No, because \\(D_f\\ne D_g\\).",
+        "No, because \\(f(x)\\ne g(x)\\) for some \\(x\\).",
+        "None of the above"
+      ],
+      "answer": "B",
+      "explanation": "Midterm 2024, question 13. \\(D_f=\\mathbb{R}-\\{3\\}\\) but \\(D_g=\\mathbb{R}\\); equal functions need the same domain."
+    },
+    {
+      "id": "past-14",
+      "type": "mcq",
+      "prompt": "The \\(x\\)-intercepts of the graph of the function \\(y=x^2-4\\) are ...",
+      "options": [
+        "\\(x=-2,\\ 2\\)",
+        "\\(x=-4,\\ 4\\)",
+        "\\(x=0,\\ 4\\)",
+        "\\(x=0,\\ 2\\)"
+      ],
+      "answer": "A",
+      "explanation": "Midterm 2024, question 14. \\(x^2-4=0\\Rightarrow x=\\pm2\\)."
+    },
+    {
+      "id": "past-15",
+      "type": "mcq",
+      "prompt": "The \\(y\\)-intercept of the graph of the function \\(y=x^2-4\\) is ...",
+      "options": [
+        "\\(y=-4\\)",
+        "\\(y=4\\)",
+        "\\(y=-2\\)",
+        "\\(y=2\\)"
+      ],
+      "answer": "A",
+      "explanation": "Midterm 2024, question 15. At \\(x=0\\), \\(y=-4\\)."
+    },
+    {
+      "id": "past-16",
+      "type": "mcq",
+      "prompt": "A function \\(f\\) is even if its graph is symmetric with respect to ...",
+      "options": [
+        "\\(x\\)-axis",
+        "\\(y\\)-axis",
+        "the origin",
+        "the line \\(y=x\\)"
+      ],
+      "answer": "B",
+      "explanation": "Midterm 2024, question 16. Even: \\(f(-x)=f(x)\\), so the graph is symmetric about the \\(y\\)-axis."
+    },
+    {
+      "id": "past-17",
+      "type": "mcq",
+      "prompt": "The function \\(f(x)=\\frac{x-2x^3}{x^2+1}\\) is ...",
+      "options": [
+        "even",
+        "odd",
+        "neither even nor odd",
+        "both even and odd"
+      ],
+      "answer": "B",
+      "explanation": "Midterm 2024, question 17. \\(f(-x)=\\frac{-x+2x^3}{x^2+1}=-f(x)\\)."
+    },
+    {
+      "id": "past-18",
+      "type": "mcq",
+      "prompt": "If \\(f(x)=\\frac{1}{x+1}\\) and \\(g(x)=\\sqrt{x+3}\\), then \\((f\\circ g)(x)=\\) ...",
+      "options": [
+        "\\(\\frac{1}{\\sqrt{x+3}+1}\\)",
+        "\\(\\sqrt{\\frac{3x+4}{x+1}}\\)",
+        "\\(\\frac{\\sqrt{x+3}}{x+1}\\)",
+        "\\(\\frac{x+1}{\\sqrt{x+3}}\\)"
+      ],
+      "answer": "A",
+      "explanation": "Midterm 2024, question 18. \\((f\\circ g)(x)=f(\\sqrt{x+3})=\\frac{1}{\\sqrt{x+3}+1}\\)."
+    },
+    {
+      "id": "past-19",
+      "type": "mcq",
+      "prompt": "If \\(f(x)=\\frac{1}{x+1}\\) and \\(g(x)=\\sqrt{x+3}\\), then the domain of \\(f\\circ g\\) is ...",
+      "options": [
+        "\\([-1,\\infty)\\)",
+        "\\((-1,\\infty)\\)",
+        "\\([-3,\\infty)\\)",
+        "\\((-3,\\infty)\\)"
+      ],
+      "answer": "C",
+      "explanation": "Midterm 2024, question 19. Need \\(x+3\\ge0\\); and \\(\\sqrt{x+3}+1\\ge1\\) is never 0. So \\(x\\ge -3\\)."
+    },
+    {
+      "id": "past-20",
+      "type": "mcq",
+      "prompt": "The relation \\(f(x)=5x-3\\) is ...",
+      "options": [
+        "not a function",
+        "a one-to-one function",
+        "a function that is not one-to-one",
+        "none of the above"
+      ],
+      "answer": "B",
+      "explanation": "Midterm 2024, question 20. \\(5x_1-3=5x_2-3\\Rightarrow x_1=x_2\\)."
+    },
+    {
+      "id": "past-21",
+      "type": "mcq",
+      "prompt": "The relation \\(f(x)=x^2-1\\) is ...",
+      "options": [
+        "not a function",
+        "a one-to-one function",
+        "a function that is not one-to-one",
+        "none of the above"
+      ],
+      "answer": "C",
+      "explanation": "Midterm 2024, question 21. It is a function, but \\(f(-1)=f(1)=0\\), so it is not one-to-one."
+    },
+    {
+      "id": "past-22",
+      "type": "mcq",
+      "prompt": "Find \\(f^{-1}\\) for the function \\(f(x)=\\frac{1}{x+1}\\).",
+      "options": [
+        "\\(f^{-1}(x)=\\frac{1-x}{x}\\)",
+        "\\(f^{-1}(x)=x\\)",
+        "\\(f^{-1}(x)=x+1\\)",
+        "\\(f^{-1}(x)=\\frac{x}{1-x}\\)"
+      ],
+      "answer": "A",
+      "explanation": "Midterm 2024, question 22. \\(y=\\frac{1}{x+1}\\Rightarrow x+1=\\frac1y\\Rightarrow x=\\frac{1-y}{y}\\)."
+    },
+    {
+      "id": "past-23",
+      "type": "mcq",
+      "prompt": "Find the range of \\(f(x)=\\frac{1}{x+1}\\). [Hint: use the inverse function \\(f^{-1}(x)=\\frac{1-x}{x}\\).]",
+      "options": [
+        "\\(\\mathbb{R}\\)",
+        "\\(\\mathbb{R}-\\{0\\}\\)",
+        "\\((-\\infty,0)\\)",
+        "\\((0,\\infty)\\)"
+      ],
+      "answer": "B",
+      "explanation": "Midterm 2024, question 23. The range of \\(f\\) is the domain of \\(f^{-1}(x)=\\frac{1-x}{x}\\), which is \\(x\\ne0\\)."
+    },
+    {
+      "id": "past-24",
+      "type": "mcq",
+      "prompt": "For the right triangle shown in the figure, find \\(\\csc\\theta\\).",
+      "options": [
+        "\\(\\frac{5}{4}\\)",
+        "\\(\\frac{4}{3}\\)",
+        "\\(\\frac{3}{4}\\)",
+        "\\(\\frac{5}{3}\\)"
+      ],
+      "answer": "D",
+      "explanation": "Midterm 2024, question 24. The hypotenuse is \\(\\sqrt{3^2+4^2}=5\\) and the side opposite \\(\\theta\\) is 3, so \\(\\csc\\theta=\\frac{\\text{hyp}}{\\text{opp}}=\\frac{5}{3}\\).",
+      "image": {
+        "src": "calculus-1/img/midterm-2024-q24.svg",
+        "alt": "Right triangle with vertical leg 3 and horizontal leg 4; the angle theta is at the end of the leg of length 4, opposite the leg of length 3."
+      }
+    },
+    {
+      "id": "past-25",
+      "type": "mcq",
+      "prompt": "If \\(\\tan\\theta=\\frac{1}{\\sqrt3}\\), then \\(\\cot\\theta=\\) ...",
+      "options": [
+        "\\(\\frac{1}{\\sqrt3}\\)",
+        "\\(\\frac{-1}{\\sqrt3}\\)",
+        "\\(\\sqrt3\\)",
+        "\\(-\\sqrt3\\)"
+      ],
+      "answer": "C",
+      "explanation": "Midterm 2024, question 25. \\(\\cot\\theta=\\frac{1}{\\tan\\theta}=\\sqrt3\\)."
+    },
+    {
+      "id": "past-26",
+      "type": "mcq",
+      "prompt": "Find the reference angle \\(\\theta'\\) for the angle \\(\\theta=220^\\circ\\).",
+      "options": [
+        "\\(30^\\circ\\)",
+        "\\(40^\\circ\\)",
+        "\\(50^\\circ\\)",
+        "\\(60^\\circ\\)"
+      ],
+      "answer": "B",
+      "explanation": "Midterm 2024, question 26. \\(220^\\circ\\) is in the third quadrant: \\(\\theta'=220^\\circ-180^\\circ=40^\\circ\\)."
+    },
+    {
+      "id": "past-27",
+      "type": "mcq",
+      "prompt": "The exact value of \\(\\cos\\frac{3\\pi}{2}\\) is ...",
+      "options": [
+        "\\(0\\)",
+        "\\(-1\\)",
+        "\\(1\\)",
+        "\\(\\sqrt2\\)"
+      ],
+      "answer": "A",
+      "explanation": "Midterm 2024, question 27. \\(\\cos\\frac{3\\pi}{2}=0\\)."
+    },
+    {
+      "id": "past-28",
+      "type": "mcq",
+      "prompt": "The sine function, \\(\\sin\\), is periodic, and it has period ...",
+      "options": [
+        "\\(\\pi\\)",
+        "\\(2\\pi\\)",
+        "\\(3\\pi\\)",
+        "\\(4\\pi\\)"
+      ],
+      "answer": "B",
+      "explanation": "Midterm 2024, question 28. \\(\\sin(x+2\\pi)=\\sin x\\), and \\(2\\pi\\) is the smallest such positive number."
+    },
+    {
+      "id": "past-29",
+      "type": "mcq",
+      "prompt": "The range of the cosine function, \\(\\cos\\), is ...",
+      "options": [
+        "\\([0,\\pi]\\)",
+        "\\([-\\pi,\\pi]\\)",
+        "\\([-1,1]\\)",
+        "\\((-1,1)\\)"
+      ],
+      "answer": "C",
+      "explanation": "Midterm 2024, question 29. \\(-1\\le\\cos x\\le 1\\), and both values are reached."
+    },
+    {
+      "id": "past-30",
+      "type": "mcq",
+      "prompt": "If \\(\\theta=\\sin^{-1}\\left(\\frac12\\right)\\), then \\(\\cos\\theta=\\) ...",
+      "options": [
+        "\\(\\frac{\\sqrt3}{2}\\)",
+        "\\(\\frac{\\sqrt2}{2}\\)",
+        "\\(\\frac12\\)",
+        "\\(0\\)"
+      ],
+      "answer": "A",
+      "explanation": "Midterm 2024, question 30. \\(\\theta=\\frac{\\pi}{6}\\), so \\(\\cos\\theta=\\frac{\\sqrt3}{2}\\)."
+    },
+    {
+      "id": "past-31",
+      "type": "mcq",
+      "prompt": "Let \\(g(x)=\\frac{x-4}{\\sqrt{x}-2}\\). Then:",
+      "options": [
+        "\\(\\lim_{x\\to4}g(x)=+\\infty\\)",
+        "\\(\\lim_{x\\to4}g(x)=1\\)",
+        "\\(\\lim_{x\\to4}g(x)=0\\)",
+        "\\(\\lim_{x\\to4}g(x)=4\\)"
+      ],
+      "answer": "D",
+      "explanation": "Final 2024, question 1. \\(x-4=(\\sqrt x-2)(\\sqrt x+2)\\), so \\(g(x)=\\sqrt x+2\\to4\\)."
+    },
+    {
+      "id": "past-32",
+      "type": "mcq",
+      "prompt": "The value of \\(\\lim_{x\\to0}\\frac{\\sin(x)}{x^3}\\) is:",
+      "options": [
+        "\\(+\\infty\\)",
+        "\\(1\\)",
+        "\\(-\\frac12\\)",
+        "\\(\\frac12\\)"
+      ],
+      "answer": "A",
+      "explanation": "Final 2024, question 2. \\(\\frac{\\sin x}{x^3}=\\frac{\\sin x}{x}\\cdot\\frac{1}{x^2}\\) and \\(\\frac{\\sin x}{x}\\to1\\), \\(\\frac{1}{x^2}\\to+\\infty\\)."
+    },
+    {
+      "id": "past-33",
+      "type": "mcq",
+      "prompt": "Let \\(\\lim_{x\\to-\\infty}\\frac{\\cos(5x-3)}{-x^2+x}\\). Its value is:",
+      "options": [
+        "\\(+\\infty\\)",
+        "\\(-3\\)",
+        "\\(3\\)",
+        "\\(0\\)"
+      ],
+      "answer": "D",
+      "explanation": "Final 2024, question 3. \\(|\\cos(5x-3)|\\le1\\) while \\(|-x^2+x|\\to\\infty\\); by the Sandwich theorem the limit is 0."
+    },
+    {
+      "id": "past-34",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\frac{\\sqrt{9x^2-5}}{4x+3}\\). Then:",
+      "options": [
+        "\\(\\lim_{x\\to-\\infty}f(x)=-\\frac34\\)",
+        "\\(\\lim_{x\\to-\\infty}f(x)=\\frac34\\)",
+        "\\(\\lim_{x\\to-\\infty}f(x)=-\\infty\\)",
+        "\\(\\lim_{x\\to-\\infty}f(x)=+\\infty\\)"
+      ],
+      "answer": "A",
+      "explanation": "Final 2024, question 4. For \\(x<0\\), \\(\\sqrt{9x^2-5}=|x|\\sqrt{9-\\frac{5}{x^2}}=-x\\sqrt{9-\\frac{5}{x^2}}\\), so \\(f(x)\\to\\frac{-3}{4}\\)."
+    },
+    {
+      "id": "past-35",
+      "type": "mcq",
+      "prompt": "The limit of \\(\\frac{x-1}{x^3-1}\\) when \\(x\\) tends to 1 is:",
+      "options": [
+        "\\(-\\frac13\\)",
+        "\\(\\frac13\\)",
+        "\\(0\\)",
+        "Doesn't exist"
+      ],
+      "answer": "B",
+      "explanation": "Final 2024, question 5. \\(x^3-1=(x-1)(x^2+x+1)\\), so the limit is \\(\\frac{1}{1+1+1}=\\frac13\\)."
+    },
+    {
+      "id": "past-36",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\frac{-2x+1}{x^2+2x-3}\\). Which of the following assertions is true?",
+      "options": [
+        "\\(\\lim_{x\\to-3^+}f(x)=+\\infty\\)",
+        "\\(\\lim_{x\\to-3^+}f(x)=-\\infty\\)",
+        "\\(\\lim_{x\\to-3^+}f(x)=0\\)",
+        "No one of the previous choices"
+      ],
+      "answer": "B",
+      "explanation": "Final 2024, question 6. \\(x^2+2x-3=(x+3)(x-1)\\). As \\(x\\to-3^+\\): numerator \\(\\to7\\), \\(x+3\\to0^+\\), \\(x-1\\to-4\\), so the denominator \\(\\to0^-\\) and \\(f\\to-\\infty\\)."
+    },
+    {
+      "id": "past-37",
+      "type": "mcq",
+      "prompt": "The type of the discontinuity of \\(f(x)=\\frac{\\sin\\left(x-\\frac{\\pi}{2}\\right)}{x-\\frac{\\pi}{2}}\\) at \\(\\frac{\\pi}{2}\\) is:",
+      "options": [
+        "Removable",
+        "Infinite discontinuity",
+        "Jump discontinuity",
+        "Other type"
+      ],
+      "answer": "A",
+      "explanation": "Final 2024, question 7. \\(f\\) is undefined at \\(\\frac\\pi2\\) but \\(\\lim_{x\\to\\pi/2}f(x)=1\\) exists, so the discontinuity is removable."
+    },
+    {
+      "id": "past-38",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\begin{cases}\\frac{x^2-x-12}{3x^2+6}, & x\\ne0\\\\ A, & x=0\\end{cases}\\) be a continuous function. Then \\(A\\) is:",
+      "options": [
+        "\\(A=1\\)",
+        "\\(A=0\\)",
+        "\\(A=-2\\)",
+        "\\(A=2\\)"
+      ],
+      "answer": "C",
+      "explanation": "Final 2024, question 8. Continuity at 0: \\(A=\\lim_{x\\to0}\\frac{x^2-x-12}{3x^2+6}=\\frac{-12}{6}=-2\\)."
+    },
+    {
+      "id": "past-39",
+      "type": "mcq",
+      "prompt": "Which one fails to satisfy the conditions required for the Intermediate Value Theorem on \\(\\left[-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right]\\)?",
+      "options": [
+        "\\(f(x)=x^2\\)",
+        "\\(f(x)=\\frac{1}{x^2+1}\\)",
+        "\\(f(x)=\\sin(x)\\)",
+        "\\(f(x)=\\tan(x)\\)"
+      ],
+      "answer": "D",
+      "explanation": "Final 2024, question 15. The theorem needs \\(f\\) continuous on the closed interval; \\(\\tan\\) is not even defined at \\(\\pm\\frac{\\pi}{2}\\)."
+    }
+  ]
+}

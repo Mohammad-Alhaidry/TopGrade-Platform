@@ -84,3 +84,13 @@ test('the WhatsApp number is in no published file; «راسلنا» goes through
   listeners.fetch({ request: { method: 'GET', mode: 'navigate', url: 'https://app.example/whatsapp' }, respondWith: () => { used = true; } });
   assert.equal(used, false, 'the installed app must let /whatsapp reach the server');
 });
+
+test('the worker lets ?fresh requests reach the server (a link to a newly added course)', async () => {
+  const { runInNewContext } = await import('node:vm');
+  const listeners = {};
+  const self = { registration: { scope: 'https://app.example/' }, addEventListener: (type, fn) => { listeners[type] = fn; } };
+  runInNewContext(sw, { self, caches: { open: async () => ({ match: async () => 'cached' }) }, fetch: async () => 'network', URL, Set, Promise });
+  const answered = (url) => { let used = false; listeners.fetch({ request: { method: 'GET', mode: 'cors', url }, respondWith: () => { used = true; } }); return used; };
+  assert.equal(answered('https://app.example/data/catalog.json'), true, 'normally from the offline copy');
+  assert.equal(answered('https://app.example/data/catalog.json?fresh=1'), false, 'fresh goes to the server');
+});
