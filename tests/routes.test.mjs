@@ -13,7 +13,7 @@ test('matchRoute maps clean URLs to screens', () => {
 });
 
 test('matchRoute rejects unknown or malformed paths', () => {
-  for (const p of ['nope', 'courses/a/b/c', 'courses/Bad%20Id', 'review/x', 'quiz.html', 'courses/../etc']) {
+  for (const p of ['nope', 'courses/a/b/c', 'courses/Bad%20Id', 'review/x', 'courses/../etc']) {
     assert.equal(matchRoute(p).name, 'notfound', p);
   }
 });
@@ -22,4 +22,9 @@ test('paths round-trip through matchRoute', () => {
   assert.equal(matchRoute(paths.topic('c', 't')).name, 'topic');
   assert.equal(matchRoute(paths.course('c')).name, 'course');
   assert.equal(matchRoute(paths.home()).name, 'home');
+});
+
+test('moved addresses map to their new place (installed apps never reach the nginx redirect)', () => {
+  assert.deepEqual(matchRoute('quiz.html'), { name: 'moved', params: { to: 'courses/problem-solving/topic-1' } });
+  assert.equal(matchRoute(matchRoute('/quiz.html').params.to).name, 'topic');
 });

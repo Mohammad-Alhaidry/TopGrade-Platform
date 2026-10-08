@@ -1,7 +1,7 @@
 // App entry: loads the course catalog, routes URLs to screens, and registers the service worker
 // that makes TopGrade installable, instant to open and usable offline.
 
-import { startRouter, currentRoute, setNavigationGuard } from './router.js';
+import { startRouter, currentRoute, setNavigationGuard, navigate } from './router.js';
 import { loadCatalog, findCourse, findTopic, loadTopicBank } from './catalog.js';
 import { openTopic, handlePop, allowNavigation, rerender } from './quiz.js';
 import { showHome } from './views/home.js';
@@ -26,6 +26,7 @@ async function render(route) {
     ctx.catalog ??= await loadCatalog(new URL('catalog.json', DATA_URL).href);
     if (token !== ctx.token) return;
     const { name, params } = route;
+    if (name === 'moved') return navigate(params.to, { replace: true });
     if (SAFE_TO_UPDATE.has(name) && applyUpdateIfReady()) return; // reloads into the new version
     if (name === 'home') return await showHome(ctx);
     if (name === 'courses') return await showCourses(ctx);

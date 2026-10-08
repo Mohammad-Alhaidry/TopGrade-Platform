@@ -8,8 +8,14 @@
 
 const SEGMENT = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
+// Old addresses that moved. nginx redirects them too, but an installed app answers from its own cache
+// without asking the server, so the app must know them as well.
+const MOVED = { 'quiz.html': 'courses/problem-solving/topic-1' };
+
 export function matchRoute(path) {
-  const parts = path.replace(/^\/+|\/+$/g, '').split('/').filter(Boolean);
+  const clean = path.replace(/^\/+|\/+$/g, '');
+  if (MOVED[clean]) return { name: 'moved', params: { to: MOVED[clean] } };
+  const parts = clean.split('/').filter(Boolean);
   if (parts.length === 0 || (parts.length === 1 && parts[0] === 'index.html')) return { name: 'home', params: {} };
   if (!parts.every((p) => SEGMENT.test(p))) return { name: 'notfound', params: {} };
   const [first, course, topic, ...rest] = parts;
