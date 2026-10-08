@@ -53,7 +53,9 @@ export function initHeader(container) {
   const themeBtn = h('button', { type: 'button', class: 'hdr__btn', onclick: () => { toggleTheme(); paintHeader(); track('theme_changed', { to: theme() }); } });
   const langBtn = h('button', { type: 'button', class: 'hdr__btn hdr__btn--lang', onclick: () => setLang(lang() === 'ar' ? 'en' : 'ar') });
   const brand = h('a', { class: 'hdr__brand', href: href(paths.home()) },
-    h('img', { src: 'assets/img/logo-mark.png', width: '160', height: '160', alt: 'Smart Pro' }));
+    // The same logo in two finishes: black for the light theme, silver for the dark one. CSS shows the match.
+    h('img', { class: 'logo--light', src: 'assets/img/logo-mark.png', width: '160', height: '160', alt: 'Smart Pro' }),
+    h('img', { class: 'logo--dark', src: 'assets/img/logo-mark-dark.png', width: '160', height: '160', alt: 'Smart Pro' }));
   headerParts = { themeBtn, langBtn, brand };
   container.replaceChildren(h('div', { class: 'hdr__side' }, themeBtn), brand, h('div', { class: 'hdr__side hdr__side--end' }, langBtn));
   paintHeader();
