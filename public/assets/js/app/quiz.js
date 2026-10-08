@@ -216,12 +216,14 @@ function setupView() {
     : null;
 
   const view = screen({
+    className: 'screen--setup',
     bar: pagebar({
       start: backLink(paths.course(course.id), t('backTo', { name: name.main })),
       title: t('topicN', { n: topic.number }),
       sub: h('span', enText(), topic.title),
     }),
     body: [
+      h('div', { class: 'col col--side' },
       h('section', { class: 'card course-head' },
         h('p', { class: 'course-head__en', lang: name.mainLang }, name.main),
         name.sub ? h('p', { class: 'course-head__ar', lang: name.subLang, dir: name.subLang === 'ar' ? 'rtl' : 'ltr' }, name.sub) : null,
@@ -231,7 +233,7 @@ function setupView() {
               stats.best !== null ? h('span', {}, t('bestPct', { p: stats.best })) : null)
           : null),
       resumeCard,
-      mistakesCard,
+      mistakesCard),
       h('form', {
         id: 'setup-form',
         class: 'card setup',
@@ -550,6 +552,7 @@ function questionView() {
 
   const modeLabel = run.kind === 'mistakes' ? t('mode.mistakes') : t(exam ? 'mode.exam' : 'mode.practice');
   const view = screen({
+    className: 'screen--quiz',
     bar: pagebar({
       start: iconButton(icon(...ICONS.close), t('quiz.leave'), () => confirmLeave()),
       title: h('span', { class: 'qcount' }, t('q.question'), ' ', h('strong', {}, String(index + 1)), ' ', t('q.of', { n: total })),
@@ -662,6 +665,7 @@ function resultsView(run) {
   const title = t(run.kind === 'mistakes' ? 'res.mistakes' : session.mode === 'exam' ? 'res.exam' : 'res.practice');
 
   return screen({
+    className: 'screen--results',
     bar: pagebar({
       title: t('topicN', { n: state.ctx.topic.number }),
       sub: h('span', enText(), state.ctx.topic.title),
@@ -761,6 +765,7 @@ function showReview(focusNumber) {
       h('span', {}, label));
 
   const view = screen({
+    className: 'screen--review',
     bar: pagebar({
       start: iconButton(backIcon(), t('rev.back'), () => history.back()),
       title: t('review.title'),
