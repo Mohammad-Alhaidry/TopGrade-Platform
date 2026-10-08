@@ -9,7 +9,7 @@ import { showCourses } from './views/courses.js';
 import { showCourse } from './views/course.js';
 import { showReview } from './views/review.js';
 import { showPrivacy, showNotFound, showLoadError } from './views/pages.js';
-import { registerServiceWorker, applyUpdateIfReady } from './update.js';
+import { registerServiceWorker, applyUpdateIfReady, onUpdateReady } from './update.js';
 import { initHeader, repaintHeader } from './shell.js';
 import { applyLang, onLangChange } from './i18n.js';
 import { initTheme } from './theme.js';
@@ -64,4 +64,8 @@ if (history.state?.screen) history.replaceState(null, '');
 setNavigationGuard(allowNavigation);
 startRouter(render, handlePop);
 
+// An update that finishes downloading while the student is on a safe screen is applied straight away.
+onUpdateReady(() => {
+  if (SAFE_TO_UPDATE.has(currentRoute().name)) applyUpdateIfReady();
+});
 registerServiceWorker();

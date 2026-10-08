@@ -5,12 +5,19 @@
 
 let waitingWorker = null;
 let swapping = false;
+let onReady = () => {};
+
+/** cb runs when a downloaded update is ready, so it can be applied right away on a safe screen. */
+export const onUpdateReady = (cb) => { onReady = cb; };
 
 function track(worker) {
   if (!worker) return;
   const note = () => {
     // "installed" with an existing controller = an update is ready (not the very first install).
-    if (worker.state === 'installed' && navigator.serviceWorker.controller) waitingWorker = worker;
+    if (worker.state === 'installed' && navigator.serviceWorker.controller && waitingWorker !== worker) {
+      waitingWorker = worker;
+      onReady();
+    }
   };
   note();
   worker.addEventListener('statechange', note);
