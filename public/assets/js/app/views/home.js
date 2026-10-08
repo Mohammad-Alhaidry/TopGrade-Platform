@@ -1,5 +1,6 @@
 // Home, laid out like the TopGrade dashboard: gradient welcome card with two figures and two actions,
-// continue where they left off, progress KPIs, what needs attention, their courses, and WhatsApp help.
+// a WhatsApp request for questions in another course, continue where they left off, progress KPIs,
+// what needs attention and their courses.
 
 import { h, icon, ICONS, WHATSAPP_SVG, staticSvg } from '../../quiz/dom.js';
 import { createSession } from '../../quiz/session.js';
@@ -161,6 +162,7 @@ export async function showHome(ctx) {
     body: [
       h('div', { class: 'col col--main' },
         hero(progress, totals, summaries),
+        helpCard(),
         continueCard(summaries),
         installSlot,
         h('h2', { class: 'section-label' }, t('home.progress')),
@@ -171,7 +173,6 @@ export async function showHome(ctx) {
           h('h2', {}, t('home.yourCourses')),
           h('a', { href: href(paths.courses()) }, t('home.seeAll'))),
         summaries.slice(0, 3).map(courseCard),
-        helpCard(),
         h('p', { class: 'fineprint' },
           h('a', { href: href(paths.privacy()) }, t('home.privacy')),
           h('span', { 'aria-hidden': 'true' }, ' · '),
