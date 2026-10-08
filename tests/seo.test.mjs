@@ -53,3 +53,10 @@ test('pages carry no inline script or style, so the Content-Security-Policy can 
     }
   }
 });
+
+test('link previews show one line: no og:description, but search engines keep their description', () => {
+  for (const [name, html] of Object.entries(files).filter(([f]) => f.endsWith('.html'))) {
+    assert.doesNotMatch(html, /og:description/, name);
+    assert.match(html, /<meta name="description" content="[^"]+">/, name);
+  }
+});

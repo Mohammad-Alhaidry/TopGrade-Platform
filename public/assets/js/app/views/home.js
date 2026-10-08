@@ -15,9 +15,14 @@ import { t, lang } from '../i18n.js';
 import { courseSummaries, courseCard } from './courses.js';
 
 const QUICK_COUNT = 10;
-// «راسلنا» opens WhatsApp through the server (nginx: /whatsapp), so the number appears in no page or file
-// that a scanner or crawler can read (owner's requirement). Relative, so it also works under /preview/.
+// «راسلنا»: the number appears nowhere in plain form (owner's requirement: no scanner may read it). The link
+// points to the server route /whatsapp (nginx keeps the number there; it also serves people without JavaScript).
+// The moment a person touches the button, the real wa.me link is put on it, so the phone opens the WhatsApp app
+// directly: iPhone and Android only do that for a link to wa.me itself, not after a redirect from our server.
 const WHATSAPP_URL = 'whatsapp';
+const WHATSAPP_CODE = 'NzM3NTMwOTQ1NjY5'; // the number, reversed, base64
+const whatsappLink = () => `https://wa.me/${[...atob(WHATSAPP_CODE)].reverse().join('')}`;
+const armWhatsapp = (e) => { e.currentTarget.href = whatsappLink(); };
 
 const today = () => new Intl.DateTimeFormat(lang() === 'ar' ? 'ar-SA-u-ca-gregory-nu-latn' : 'en-GB', { weekday: 'long', day: 'numeric', month: 'long' }).format(new Date());
 
@@ -136,7 +141,7 @@ let stopInstallUpdates = () => {};
 
 function helpCard() {
   // Filled WhatsApp green so it is the first thing a student notices under the welcome card.
-  return h('a', { class: 'help', href: WHATSAPP_URL, target: '_blank', rel: 'nofollow noopener noreferrer' },
+  return h('a', { class: 'help', href: WHATSAPP_URL, target: '_blank', rel: 'nofollow noopener noreferrer', onpointerdown: armWhatsapp, onfocus: armWhatsapp },
     h('span', { class: 'help__icon' }, staticSvg(WHATSAPP_SVG)),
     h('span', { class: 'help__copy' },
       h('span', { class: 'help__title' }, t('home.help')),

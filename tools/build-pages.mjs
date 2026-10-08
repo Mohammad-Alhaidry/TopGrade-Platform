@@ -150,7 +150,8 @@ function render(template, page, ctx) {
   html = swap(html, /<title>[^<]*<\/title>/, `<title>${esc(title)}</title>`);
   html = swap(html, /<meta name="description" content="[^"]*">/, `<meta name="description" content="${esc(description)}">`);
   html = swap(html, /<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${esc(title)}">`);
-  html = swap(html, /<meta property="og:description" content="[^"]*">/, `<meta property="og:description" content="${esc(description)}">`);
+  // No og:description: link previews (WhatsApp...) show one line, the title. The description is for search
+  // engines, and nginx hides it from link-preview bots, which would otherwise fall back to it.
   html = swap(html, /<meta property="og:image" content="[^"]*">/, `<meta property="og:image" content="${esc(url('assets/icons/og-image.png'))}">`);
   html = swap(html, /<!-- BEGIN PAGE META -->[\s\S]*?<!-- END PAGE META -->/, `<!-- BEGIN PAGE META -->\n${meta}\n<!-- END PAGE META -->`);
   html = swap(html, /<!-- BEGIN PAGE CONTENT -->[\s\S]*?<!-- END PAGE CONTENT -->/,
