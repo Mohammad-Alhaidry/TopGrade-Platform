@@ -21,6 +21,24 @@ const S = {
   'tab.badge': { en: '{n} to review', ar: '{n} للمراجعة' },
   'back': { en: 'Back', ar: 'رجوع' },
 
+  // Page titles and descriptions (browser tab, search results, link previews)
+  'brand': { en: 'Smart Pro', ar: 'سمارت برو' },
+  'meta.home': { en: 'Smart Pro | Practice questions for your university courses', ar: 'سمارت برو | أسئلة تدريبية لمقرراتك الجامعية' },
+  'meta.homeDesc': {
+    en: 'Practice questions for your university courses: multiple choice, true or false, fill in the blank and matching, with instant feedback and an exam mode. No account needed.',
+    ar: 'أسئلة تدريبية لمقرراتك الجامعية: اختيار من متعدد، وصح أو خطأ، وأكمل الفراغ، وتوصيل، مع تصحيح فوري ووضع اختبار. بدون تسجيل حساب.',
+  },
+  'meta.coursesDesc': { en: 'Every Smart Pro course with its topics and practice questions.', ar: 'كل مقررات سمارت برو مع مواضيعها وأسئلتها التدريبية.' },
+  'meta.courseDesc': {
+    en: 'Practice questions for {course}: {questions} in {topics}, with instant feedback and an exam mode.',
+    ar: 'أسئلة تدريبية لمقرر {course}: {questions} في {topics}، مع تصحيح فوري ووضع اختبار.',
+  },
+  'meta.topicDesc': { en: 'Practise {topic} from {course}: {questions} ({types}).', ar: 'تدرّب على {topic} من مقرر {course}: {questions} ({types}).' },
+  'meta.privacyDesc': {
+    en: 'How Smart Pro handles your data: no account, your progress stays on your device, and usage statistics are anonymous.',
+    ar: 'كيف يتعامل سمارت برو مع بياناتك: بدون حساب، وتقدّمك يبقى على جهازك، وإحصائيات الاستخدام مجهولة الهوية.',
+  },
+
   // Counts
   'n.questions': {
     en: { one: '{n} question', other: '{n} questions' },

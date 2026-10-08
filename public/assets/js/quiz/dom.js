@@ -8,6 +8,8 @@ export function h(tag, attrs = {}, ...children) {
     else if (key === 'class') el.className = value;
     else if (key === 'dataset') Object.assign(el.dataset, value);
     else if (key === 'value') el.value = value;
+    // Through CSSOM, not a style attribute, so the Content-Security-Policy can forbid inline styles.
+    else if (key === 'style') el.style.cssText = value;
     else el.setAttribute(key, value === true ? '' : value);
   }
   for (const child of children.flat(Infinity)) {

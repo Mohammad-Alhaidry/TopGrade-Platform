@@ -16,6 +16,7 @@ import { initTheme, theme } from './theme.js';
 import { track, describeSession } from './analytics.js';
 import { lang } from './i18n.js';
 import { currentPlatform } from './install.js';
+import { pageTitle } from './meta.js';
 
 // Screens where switching to a newly downloaded version (a reload) loses nothing.
 const SAFE_TO_UPDATE = new Set(['home', 'courses', 'course', 'review', 'privacy', 'notfound']);
@@ -30,6 +31,7 @@ async function render(route) {
     if (token !== ctx.token) return;
     const { name, params } = route;
     if (name === 'moved') return navigate(params.to, { replace: true });
+    document.title = pageTitle(route, ctx.catalog, lang());
     if (SAFE_TO_UPDATE.has(name) && applyUpdateIfReady()) return; // reloads into the new version
     if (name === 'home') return await showHome(ctx);
     if (name === 'courses') return await showCourses(ctx);
@@ -60,6 +62,7 @@ initHeader(document.getElementById('hdr'));
 onLangChange(() => {
   track('language_changed', { to: lang() });
   repaintHeader();
+  if (ctx.catalog) document.title = pageTitle(currentRoute(), ctx.catalog, lang());
   if (!rerender()) render(currentRoute());
 });
 
