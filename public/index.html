@@ -4,16 +4,16 @@
 <meta charset="utf-8">
 <base href="/">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>TopGrade</title>
+<title>Smart Pro</title>
 <meta name="description" content="Practice questions for your university courses: multiple choice, true or false, fill in the blank and matching.">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="TopGrade">
+<meta name="apple-mobile-web-app-title" content="Smart Pro">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="TopGrade">
-<meta property="og:title" content="TopGrade">
+<meta property="og:site_name" content="Smart Pro">
+<meta property="og:title" content="Smart Pro">
 <meta property="og:description" content="أسئلة تدريبية لمقرراتك الجامعية. Practice questions for your university courses.">
 <meta property="og:image" content="https://app.topgradeedu.com/assets/icons/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -40,11 +40,12 @@
 </script>
 <style>
 /* Shown until the app's first screen replaces it (also matches the install splash colour). */
-.splash{position:fixed;inset:0;display:grid;place-content:center;justify-items:center;gap:12px;background:#F4F6FA}
+.splash{position:fixed;inset:0;display:grid;place-content:center;justify-items:center;gap:12px;background:#F3F6F5}
 .splash img{width:150px;height:auto}
 /* The installed app already gets the system launch screen with the logo; don't show it a second time. */
-[data-theme=dark] .splash{background:#081226}
-[data-theme=dark] .splash img{background:#fff;border-radius:28px;padding:14px 18px}
+[data-theme=dark] .splash{background:#070B0A}
+.splash__dark,[data-theme=dark] .splash__light{display:none}
+[data-theme=dark] .splash__dark{display:block}
 .installed .splash img{display:none}
 @media (display-mode: standalone),(display-mode: fullscreen){.splash img{display:none}}
 </style>
@@ -83,11 +84,12 @@
 <div class="frame">
 <header id="hdr" class="hdr"></header>
 <div id="app" class="app">
-<div class="splash" role="status" aria-label="Opening TopGrade">
-<img src="assets/img/logo-full.png" width="320" height="284" alt="TopGrade">
+<div class="splash" role="status" aria-label="Opening Smart Pro">
+<img class="splash__light" src="assets/img/logo-full.png" width="360" height="295" alt="Smart Pro">
+<img class="splash__dark" src="assets/img/logo-full-dark.png" width="360" height="320" alt="Smart Pro">
 </div>
 </div>
 </div>
-<noscript><p class="boot">TopGrade needs JavaScript. Turn it on in your browser settings, then reload the page.</p></noscript>
+<noscript><p class="boot">Smart Pro needs JavaScript. Turn it on in your browser settings, then reload the page.</p></noscript>
 </body>
 </html>

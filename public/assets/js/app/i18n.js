@@ -9,7 +9,7 @@ export const DEFAULT_LANG = 'ar';
 
 const S = {
   // Shell
-  'hdr.home': { en: 'TopGrade home', ar: 'الرئيسية' },
+  'hdr.home': { en: 'Smart Pro home', ar: 'الرئيسية' },
   'hdr.lang': { en: 'العربية', ar: 'English' },
   'hdr.langShort': { en: 'ع', ar: 'EN' },
   'hdr.dark': { en: 'Switch to dark mode', ar: 'الوضع الليلي' },
@@ -45,7 +45,7 @@ const S = {
 
   // Home
   'home.student': { en: 'Student', ar: 'طالب' },
-  'home.welcome': { en: 'Welcome to TopGrade', ar: 'أهلًا بك في TopGrade' },
+  'home.welcome': { en: 'Welcome to Smart Pro', ar: 'أهلًا بك في سمارت برو' },
   'home.welcomeBack': { en: 'Welcome back', ar: 'أهلًا بعودتك' },
   'home.streak': { en: 'Study streak', ar: 'أيام متتالية' },
   'home.answered': { en: 'Questions answered', ar: 'أسئلة محلولة' },
@@ -81,8 +81,8 @@ const S = {
   'topicTitle': { en: 'Topic {n}: {title}', ar: 'الموضوع {n}: {title}' },
 
   // Install
-  'inst.titleIos': { en: 'Get the TopGrade app', ar: 'حمّل تطبيق TopGrade' },
-  'inst.title': { en: 'Install TopGrade', ar: 'ثبّت تطبيق TopGrade' },
+  'inst.titleIos': { en: 'Get the Smart Pro app', ar: 'حمّل تطبيق سمارت برو' },
+  'inst.title': { en: 'Install Smart Pro', ar: 'ثبّت تطبيق سمارت برو' },
   'inst.text': { en: 'Opens full screen and works offline', ar: 'يفتح بملء الشاشة ويعمل دون إنترنت' },
   'inst.tap': { en: 'Tap', ar: 'اضغط' },
   'inst.shareBar': { en: 'Share in the browser bar', ar: 'مشاركة في شريط المتصفح' },

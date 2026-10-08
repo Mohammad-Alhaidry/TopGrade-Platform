@@ -1,4 +1,4 @@
-// Home, laid out like the TopGrade dashboard: gradient welcome card with two figures and two actions,
+// Home: gradient welcome card with two figures and two actions,
 // a WhatsApp request for questions in another course, continue where they left off, progress KPIs,
 // what needs attention and their courses.
 

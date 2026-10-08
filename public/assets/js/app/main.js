@@ -1,5 +1,5 @@
 // App entry: loads the course catalog, routes URLs to screens, and registers the service worker
-// that makes TopGrade installable, instant to open and usable offline.
+// that makes Smart Pro installable, instant to open and usable offline.
 
 import { startRouter, currentRoute, setNavigationGuard, navigate } from './router.js';
 import { loadCatalog, findCourse, findTopic, loadTopicBank } from './catalog.js';

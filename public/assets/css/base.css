@@ -1,11 +1,11 @@
-/* Shared by every TopGrade page: fonts, design tokens and element defaults.
-   Colours match the TopGrade dashboard (topgradeedu.com) so both products share one identity. */
+/* Shared by every Smart Pro page: fonts, design tokens and element defaults.
+   Colours come from the Smart Pro logo: near-black and its deep teal (tools/brand/). */
 /* One family for everything: Cairo (variable, every weight in one file per script; Arabic + Latin subsets,
    so digits and punctuation in Arabic text come from the same font, not a system fallback). */
 @font-face{font-family:'Cairo';font-style:normal;font-weight:200 1000;font-display:swap;src:url(../fonts/cairo-arabic.woff2) format('woff2');unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC}
 @font-face{font-family:'Cairo';font-style:normal;font-weight:200 1000;font-display:swap;src:url(../fonts/cairo-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 
-:root{color-scheme:light;--navy:#0A1F44;--navy-deep:#071428;--primary:#0F2D5C;--primary-mid:#183E7A;--accent:#183E7A;--bright:#1D4ED8;--sky:#0EA5E9;--paper:#fff;--cool:#F8FAFC;--surface:#EAF1FB;--border:#E1E8F0;--text:#0F172A;--muted:#475569;--green:#059669;--red:#DC2626;--arabic:'Cairo',Tahoma,Arial,sans-serif;--english:'Cairo','Segoe UI',Arial,sans-serif}
+:root{color-scheme:light;--navy:#0E1312;--navy-deep:#070B0A;--primary:#05564A;--primary-mid:#076A5B;--accent:#066B5D;--bright:#0B8574;--sky:#0EA5E9;--paper:#fff;--cool:#F7FAF9;--surface:#E5F2EF;--border:#DFE7E5;--text:#111816;--muted:#4A5653;--green:#059669;--red:#DC2626;--arabic:'Cairo',Tahoma,Arial,sans-serif;--english:'Cairo','Segoe UI',Arial,sans-serif}
 *{box-sizing:border-box}
 html{background:#fff;-webkit-text-size-adjust:100%;text-size-adjust:100%}
 body{margin:0;color:var(--text);font-family:var(--english);-webkit-font-smoothing:antialiased;border-top:3px solid var(--primary)}
