@@ -1,0 +1,290 @@
+// Interface language (English / Arabic). Question content stays in its own language (English).
+// t('key', { n, ... }) looks up a string; values may be plural objects keyed by Intl.PluralRules
+// categories (Arabic uses zero/one/two/few/many/other). {name} placeholders are filled from vars.
+
+export const LANGS = ['en', 'ar'];
+const STORAGE_KEY = 'topgrade.lang';
+
+const S = {
+  // Shell
+  'hdr.home': { en: 'TopGrade home', ar: 'الرئيسية' },
+  'hdr.lang': { en: 'العربية', ar: 'English' },
+  'hdr.langShort': { en: 'ع', ar: 'EN' },
+  'hdr.dark': { en: 'Switch to dark mode', ar: 'الوضع الليلي' },
+  'hdr.light': { en: 'Switch to light mode', ar: 'الوضع النهاري' },
+  'nav.main': { en: 'Main', ar: 'التنقل' },
+  'tab.home': { en: 'Home', ar: 'الرئيسية' },
+  'tab.courses': { en: 'Courses', ar: 'المقررات' },
+  'tab.review': { en: 'Review', ar: 'المراجعة' },
+  'tab.badge': { en: '{n} to review', ar: '{n} للمراجعة' },
+  'back': { en: 'Back', ar: 'رجوع' },
+  'tagline': { en: 'Student services platform', ar: 'منصة خدمات طلابية' },
+
+  // Counts
+  'n.questions': {
+    en: { one: '{n} question', other: '{n} questions' },
+    ar: { zero: 'لا أسئلة', one: 'سؤال واحد', two: 'سؤالان', few: '{n} أسئلة', many: '{n} سؤالًا', other: '{n} سؤال' },
+  },
+  'n.topics': {
+    en: { one: '{n} topic', other: '{n} topics' },
+    ar: { zero: 'لا مواضيع', one: 'موضوع واحد', two: 'موضوعان', few: '{n} مواضيع', many: '{n} موضوعًا', other: '{n} موضوع' },
+  },
+  'n.courses': {
+    en: { one: '{n} course', other: '{n} courses' },
+    ar: { zero: 'لا مقررات', one: 'مقرر واحد', two: 'مقرران', few: '{n} مقررات', many: '{n} مقررًا', other: '{n} مقرر' },
+  },
+  'n.days': {
+    en: { one: '{n} day', other: '{n} days' },
+    ar: { zero: '0 أيام', one: 'يوم واحد', two: 'يومان', few: '{n} أيام', many: '{n} يومًا', other: '{n} يوم' },
+  },
+  'n.minutes': {
+    en: { one: '{n} minute', other: '{n} minutes' },
+    ar: { one: 'دقيقة واحدة', two: 'دقيقتان', few: '{n} دقائق', many: '{n} دقيقة', other: '{n} دقيقة' },
+  },
+
+  // Home
+  'home.student': { en: 'Student', ar: 'طالب' },
+  'home.welcome': { en: 'Welcome to TopGrade', ar: 'أهلًا بك في TopGrade' },
+  'home.welcomeBack': { en: 'Welcome back', ar: 'أهلًا بعودتك' },
+  'home.streak': { en: 'Study streak', ar: 'أيام متتالية' },
+  'home.answered': { en: 'Questions answered', ar: 'أسئلة محلولة' },
+  'home.practiceQuestions': { en: 'Practice questions', ar: 'سؤال للتدريب' },
+  'home.coursesCount': { en: { one: 'Course', other: 'Courses' }, ar: { one: 'مقرر', two: 'مقرران', other: 'مقررات' } },
+  'home.coursesBtn': { en: 'Courses', ar: 'المقررات' },
+  'home.quick': { en: 'Quick quiz', ar: 'اختبار سريع' },
+  'home.progress': { en: 'Your progress', ar: 'تقدّمك' },
+  'kpi.accuracy': { en: 'Accuracy', ar: 'الدقة' },
+  'kpi.mastered': { en: 'Mastered', ar: 'الإتقان' },
+  'kpi.best': { en: 'Best score', ar: 'أفضل درجة' },
+  'kpi.review': { en: 'To review', ar: 'للمراجعة' },
+  'home.attention': { en: 'Needs your attention', ar: 'يحتاج انتباهك' },
+  'home.wrongCount': {
+    en: { one: '{n} question you got wrong', other: '{n} questions you got wrong' },
+    ar: { one: 'سؤال واحد أخطأت فيه', two: 'سؤالان أخطأت فيهما', few: '{n} أسئلة أخطأت فيها', many: '{n} سؤالًا أخطأت فيه', other: '{n} سؤال أخطأت فيه' },
+  },
+  'practise': { en: 'Practise', ar: 'تدرّب' },
+  'home.yourCourses': { en: 'Your courses', ar: 'مقرراتك' },
+  'home.seeAll': { en: 'See all', ar: 'عرض الكل' },
+  'home.help': { en: 'Need help with a course?', ar: 'تحتاج مساعدة في مقرر؟' },
+  'home.helpSub': { en: 'Message TopGrade on WhatsApp', ar: 'تواصل مع TopGrade عبر واتساب' },
+  'home.privacy': { en: 'Privacy policy', ar: 'سياسة الخصوصية' },
+  'home.saved': { en: 'Progress is saved on this device', ar: 'تقدّمك محفوظ على هذا الجهاز' },
+  'cont.exam': { en: 'Resume your exam', ar: 'أكمل اختبارك' },
+  'cont.practice': { en: 'Resume your practice', ar: 'أكمل تدريبك' },
+  'cont.mistakes': { en: 'Resume your mistake review', ar: 'أكمل مراجعة أخطائك' },
+  'cont.study': { en: 'Continue studying', ar: 'تابع المذاكرة' },
+  'qOfN': { en: 'Question {i} of {n}', ar: 'السؤال {i} من {n}' },
+  'masteredPct': { en: '{p}% mastered', ar: 'أتقنت {p}%' },
+  'topicN': { en: 'Topic {n}', ar: 'الموضوع {n}' },
+  'topicTitle': { en: 'Topic {n}: {title}', ar: 'الموضوع {n}: {title}' },
+
+  // Install
+  'inst.titleIos': { en: 'Get the TopGrade app', ar: 'حمّل تطبيق TopGrade' },
+  'inst.title': { en: 'Install TopGrade', ar: 'ثبّت تطبيق TopGrade' },
+  'inst.text': { en: 'Add it to your home screen. It opens full screen and works offline.', ar: 'أضفه إلى الشاشة الرئيسية، يفتح بملء الشاشة ويعمل دون إنترنت.' },
+  'inst.tap': { en: 'Tap', ar: 'اضغط' },
+  'inst.shareBar': { en: 'Share in the browser bar', ar: 'مشاركة في شريط المتصفح' },
+  'inst.share': { en: 'Share', ar: 'مشاركة' },
+  'inst.choose': { en: 'Choose', ar: 'اختر' },
+  'inst.addHome': { en: 'Add to Home Screen', ar: 'إضافة إلى الشاشة الرئيسية' },
+  'inst.btn': { en: 'Install app', ar: 'ثبّت التطبيق' },
+  'inst.notNow': { en: 'Not now', ar: 'ليس الآن' },
+
+  // Courses / course
+  'courses.title': { en: 'Courses', ar: 'المقررات' },
+  'progressOf': { en: '{name} progress', ar: 'التقدّم في {name}' },
+  'course.back': { en: 'Back to courses', ar: 'العودة للمقررات' },
+  'course.topics': { en: 'Topics', ar: 'المواضيع' },
+  'course.questions': { en: 'Questions', ar: 'الأسئلة' },
+  'course.mastered': { en: 'Mastered', ar: 'الإتقان' },
+  'bestPct': { en: 'Best {p}%', ar: 'الأفضل {p}%' },
+  'n.mistakes': {
+    en: { one: '{n} mistake', other: '{n} mistakes' },
+    ar: { one: 'خطأ واحد', two: 'خطآن', few: '{n} أخطاء', many: '{n} خطأً', other: '{n} خطأ' },
+  },
+
+  // Review tab
+  'review.title': { en: 'Review', ar: 'المراجعة' },
+  'review.lead': { en: 'Questions you got wrong stay here until you answer them right twice in a row.', ar: 'تبقى هنا الأسئلة التي أخطأت فيها حتى تجيب عنها إجابة صحيحة مرتين متتاليتين.' },
+  'review.empty': { en: 'No mistakes to review', ar: 'لا توجد أخطاء للمراجعة' },
+  'review.emptyText': { en: 'Questions you get wrong will appear here, so you can practise them until they stick.', ar: 'ستظهر هنا الأسئلة التي تخطئ فيها، لتتدرّب عليها حتى تتقنها.' },
+  'browseCourses': { en: 'Browse courses', ar: 'تصفّح المقررات' },
+
+  // Quiz setup
+  'setup.mode': { en: 'Mode', ar: 'النمط' },
+  'mode.practice': { en: 'Practice', ar: 'تدريب' },
+  'mode.practiceText': { en: 'Instant feedback', ar: 'تصحيح فوري' },
+  'mode.exam': { en: 'Exam', ar: 'اختبار' },
+  'mode.examText': { en: 'Score at the end', ar: 'النتيجة في النهاية' },
+  'mode.mistakes': { en: 'Mistakes', ar: 'الأخطاء' },
+  'setup.types': { en: 'Question types', ar: 'أنواع الأسئلة' },
+  'setup.count': { en: 'Number of questions', ar: 'عدد الأسئلة' },
+  'setup.all': { en: 'All {n}', ar: 'الكل {n}' },
+  'setup.start': {
+    en: { one: 'Start {n} question', other: 'Start {n} questions' },
+    ar: { one: 'ابدأ سؤالًا واحدًا', two: 'ابدأ سؤالين', few: 'ابدأ {n} أسئلة', many: 'ابدأ {n} سؤالًا', other: 'ابدأ {n} سؤال' },
+  },
+  'setup.chooseType': { en: 'Choose a question type', ar: 'اختر نوع أسئلة' },
+  'type.mcq': { en: 'MCQ', ar: 'اختيار من متعدد' },
+  'type.tf': { en: 'True / False', ar: 'صح أو خطأ' },
+  'type.fib': { en: 'Fill in the Blank', ar: 'أكمل الفراغ' },
+  'type.matching': { en: 'Matching', ar: 'توصيل' },
+  'hint.mcq': { en: 'Choose one answer', ar: 'اختر إجابة واحدة' },
+  'hint.tf': { en: 'True or false?', ar: 'صح أم خطأ؟' },
+  'hint.fib': { en: 'Choose the missing word', ar: 'اختر الكلمة الناقصة' },
+  'hint.matching': { en: 'Match each item with its description', ar: 'صِل كل عنصر بوصفه' },
+  'resume.label': { en: 'Unfinished quiz', ar: 'اختبار لم يكتمل' },
+  'resume.exam': { en: 'Unfinished exam', ar: 'اختبار لم يكتمل' },
+  'resume.practice': { en: 'Unfinished practice', ar: 'تدريب لم يكتمل' },
+  'resume.mistakes': { en: 'Unfinished mistake review', ar: 'مراجعة أخطاء لم تكتمل' },
+  'resume.text': { en: 'Question {i} of {n}, {a} answered', ar: 'السؤال {i} من {n}، أجبت عن {a}' },
+  'resume.discard': { en: 'Discard', ar: 'تجاهل' },
+  'resume.resume': { en: 'Resume', ar: 'أكمل' },
+  'mist.title': {
+    en: { one: '{n} mistake to review', other: '{n} mistakes to review' },
+    ar: { one: 'خطأ واحد للمراجعة', two: 'خطآن للمراجعة', few: '{n} أخطاء للمراجعة', many: '{n} خطأً للمراجعة', other: '{n} خطأ للمراجعة' },
+  },
+  'mist.text': { en: 'Right twice in a row clears one', ar: 'يُزال الخطأ بعد إجابتين صحيحتين متتاليتين' },
+  'backTo': { en: 'Back to {name}', ar: 'العودة إلى {name}' },
+
+  // Quiz run
+  'quiz.leave': { en: 'Leave quiz', ar: 'الخروج من الاختبار' },
+  'leave.title': { en: 'Leave this quiz?', ar: 'هل تريد الخروج من الاختبار؟' },
+  'leave.text': { en: 'Your progress is saved on this device. You can resume it from the topic page.', ar: 'تقدّمك محفوظ على هذا الجهاز، ويمكنك المتابعة من صفحة الموضوع.' },
+  'leave.stay': { en: 'Keep going', ar: 'أكمل' },
+  'leave.go': { en: 'Leave', ar: 'خروج' },
+  'q.question': { en: 'Question', ar: 'السؤال' },
+  'q.of': { en: 'of {n}', ar: 'من {n}' },
+  'q.map': { en: 'Question map, {a} of {n} answered', ar: 'خريطة الأسئلة، أجبت عن {a} من {n}' },
+  'q.soFar': { en: '{n} correct so far', ar: '{n} صحيحة حتى الآن' },
+  'q.options': { en: 'Answer options', ar: 'خيارات الإجابة' },
+  'q.tfGroup': { en: 'True or false', ar: 'صح أو خطأ' },
+  'q.words': { en: 'Word choices', ar: 'الكلمات' },
+  'true': { en: 'True', ar: 'صح' },
+  'false': { en: 'False', ar: 'خطأ' },
+  'q.check': { en: 'Check', ar: 'تحقّق' },
+  'q.next': { en: 'Next', ar: 'التالي' },
+  'q.reviewSubmit': { en: 'Review and submit', ar: 'مراجعة وتسليم' },
+  'q.prev': { en: 'Previous question', ar: 'السؤال السابق' },
+  'q.blank': { en: 'blank', ar: 'فراغ' },
+  'match.choose': { en: 'Choose…', ar: 'اختر…' },
+  'answerLabel': { en: 'Answer:', ar: 'الإجابة:' },
+  'v.correct': { en: 'Correct', ar: 'إجابة صحيحة' },
+  'v.wrong': { en: 'Not quite', ar: 'إجابة غير صحيحة' },
+  'v.matched': { en: '{r} of {n} matched. Corrections are shown above.', ar: '{r} من {n} صحيحة. التصحيح موضّح بالأعلى.' },
+  'continue': { en: 'Continue', ar: 'متابعة' },
+  'seeResults': { en: 'See results', ar: 'عرض النتيجة' },
+  'map.title': { en: 'Questions', ar: 'الأسئلة' },
+  'map.answered': { en: '{n} answered', ar: 'أجبت عن {n}' },
+  'map.unanswered': { en: '{n} not answered', ar: '{n} بلا إجابة' },
+  'map.cell': { en: 'Question {i}, {state}', ar: 'السؤال {i}، {state}' },
+  'state.answered': { en: 'answered', ar: 'تمت الإجابة' },
+  'state.unanswered': { en: 'not answered', ar: 'بلا إجابة' },
+  'submit': { en: 'Submit exam', ar: 'تسليم الاختبار' },
+  'close': { en: 'Close', ar: 'إغلاق' },
+  'submit.title': {
+    en: { one: 'Submit with {n} unanswered question?', other: 'Submit with {n} unanswered questions?' },
+    ar: { one: 'هل تريد التسليم مع وجود سؤال بلا إجابة؟', two: 'هل تريد التسليم مع وجود سؤالين بلا إجابة؟', few: 'هل تريد التسليم مع وجود {n} أسئلة بلا إجابة؟', many: 'هل تريد التسليم مع وجود {n} سؤالًا بلا إجابة؟', other: 'هل تريد التسليم مع وجود {n} سؤال بلا إجابة؟' },
+  },
+  'submit.text': { en: 'Unanswered questions count as wrong.', ar: 'تُحتسب الأسئلة التي بلا إجابة خاطئة.' },
+  'submit.stay': { en: 'Keep answering', ar: 'أكمل الإجابة' },
+  'submit.go': { en: 'Submit', ar: 'تسليم' },
+  'pageN': { en: 'Page {p}', ar: 'صفحة {p}' },
+
+  // Results
+  'res.mistakes': { en: 'Mistake review', ar: 'مراجعة الأخطاء' },
+  'res.exam': { en: 'Exam result', ar: 'نتيجة الاختبار' },
+  'res.practice': { en: 'Practice result', ar: 'نتيجة التدريب' },
+  'res.line': { en: '{c} of {n} correct', ar: '{c} من {n} إجابات صحيحة' },
+  'res.underMinute': { en: 'Under a minute', ar: 'أقل من دقيقة' },
+  'res.hours': { en: '{h} h {m} min', ar: '{h} س {m} د' },
+  'res.best': { en: 'New best, up from {p}%', ar: 'رقم قياسي جديد، كان {p}%' },
+  'st.correct': { en: 'Correct', ar: 'صحيحة' },
+  'st.wrong': { en: 'Wrong', ar: 'خاطئة' },
+  'st.skipped': { en: 'Skipped', ar: 'متروكة' },
+  'res.answers': { en: 'Answers', ar: 'الإجابات' },
+  'res.cell': { en: 'Question {i}, {state}. Show in review', ar: 'السؤال {i}، {state}. اعرضه في المراجعة' },
+  'state.correct': { en: 'correct', ar: 'صحيحة' },
+  'state.wrong': { en: 'wrong', ar: 'خاطئة' },
+  'state.skipped': { en: 'skipped', ar: 'متروكة' },
+  'res.byType': { en: 'By question type', ar: 'حسب نوع السؤال' },
+  'res.reviewBtn': { en: 'Review answers', ar: 'مراجعة الإجابات' },
+  'res.retry': { en: 'Retry missed', ar: 'أعد الأخطاء' },
+  'done': { en: 'Done', ar: 'تم' },
+  'rev.back': { en: 'Back to results', ar: 'العودة للنتيجة' },
+  'rev.missed': { en: 'Missed {n}', ar: 'الأخطاء {n}' },
+  'rev.all': { en: 'All {n}', ar: 'الكل {n}' },
+  'rev.show': { en: 'Show', ar: 'عرض' },
+  'rev.yours': { en: 'Your answer', ar: 'إجابتك' },
+  'rev.correct': { en: 'Correct answer', ar: 'الإجابة الصحيحة' },
+  'rev.none': { en: 'No answer', ar: 'بلا إجابة' },
+
+  // Pages
+  'nf.title': { en: 'Page not found', ar: 'الصفحة غير موجودة' },
+  'nf.text': { en: 'This link doesn’t match any course or topic. It may have moved.', ar: 'هذا الرابط لا يطابق أي مقرر أو موضوع، وربما تغيّر مكانه.' },
+  'err.title': { en: 'Courses didn’t load', ar: 'تعذّر تحميل المقررات' },
+  'err.text': { en: 'Check your internet connection, then try again.', ar: 'تحقّق من اتصالك بالإنترنت ثم أعد المحاولة.' },
+  'err.retry': { en: 'Try again', ar: 'أعد المحاولة' },
+  'priv.back': { en: 'Back to home', ar: 'العودة للرئيسية' },
+};
+
+function initialLang() {
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (LANGS.includes(saved)) return saved;
+  } catch {
+    /* storage unavailable */
+  }
+  return 'en';
+}
+
+let current = typeof localStorage === 'undefined' ? 'en' : initialLang();
+const listeners = new Set();
+
+export const lang = () => current;
+export const isRTL = () => current === 'ar';
+
+/** Looks up a string. Unknown keys return the key itself so a missing string is visible, not blank. */
+export function t(key, vars = {}, language = current) {
+  const entry = S[key]?.[language] ?? S[key]?.en;
+  if (entry === undefined) return key;
+  let text = entry;
+  if (typeof entry === 'object') {
+    const cat = new Intl.PluralRules(language).select(vars.n ?? 0);
+    text = entry[cat] ?? entry.other;
+  }
+  return text.replace(/\{(\w+)\}/g, (m, k) => (vars[k] !== undefined ? String(vars[k]) : m));
+}
+
+/** Course/topic names: Arabic first in the Arabic interface when the catalog has an Arabic name. */
+export function localName(item) {
+  const en = item.titleEn ?? item.title;
+  const ar = item.titleAr;
+  return current === 'ar' && ar ? { main: ar, sub: en, mainLang: 'ar', subLang: 'en' } : { main: en, sub: ar ?? null, mainLang: 'en', subLang: 'ar' };
+}
+
+export function applyLang() {
+  const root = document.documentElement;
+  root.lang = current;
+  root.dir = current === 'ar' ? 'rtl' : 'ltr';
+}
+
+export function setLang(next) {
+  if (!LANGS.includes(next) || next === current) return;
+  current = next;
+  try {
+    localStorage.setItem(STORAGE_KEY, next);
+  } catch {
+    /* storage unavailable: the choice lasts until the page closes */
+  }
+  applyLang();
+  listeners.forEach((fn) => fn(next));
+}
+
+export function onLangChange(fn) {
+  listeners.add(fn);
+  return () => listeners.delete(fn);
+}
+
+/** For tests: every key, so both languages can be checked for completeness. */
+export const STRINGS = S;
