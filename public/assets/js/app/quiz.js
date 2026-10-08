@@ -332,6 +332,9 @@ function showQuestion(focus) {
   mount(view, { focus, onKey });
 }
 
+/** The figure a question needs (a graph, a triangle), drawn on white so it reads in the dark theme too. */
+const figure = (q) => (q.image ? h('img', { class: 'qfig', src: `data/${q.image.src}`, alt: q.image.alt, loading: 'lazy' }) : null);
+
 /** Prompt text with "____" shown as a gap; `fill` puts the chosen word into it. */
 function promptContent(text, fill = null) {
   return text.split(/(_{3,})/).map((part) => {
@@ -583,7 +586,8 @@ function questionView() {
         h('p', { class: 'qcard__hint' }, h('span', { class: 'qcard__type' }, typeLabel(q.type)), h('span', {}, t(`hint.${q.type}`))),
         h('p', cText({ class: 'qcard__prompt' }),
           q.type === 'matching' ? q.title
-            : promptContent(q.prompt, q.type === 'fib' ? { word: response, state: revealed ? (isCorrect(q, response) ? 'right' : 'wrong') : null } : null))),
+            : promptContent(q.prompt, q.type === 'fib' ? { word: response, state: revealed ? (isCorrect(q, response) ? 'right' : 'wrong') : null } : null)),
+        figure(q)),
       answers,
     ],
     foot: footer,
@@ -770,6 +774,7 @@ function reviewEntry({ item, response, correct, answered }, n) {
       h('span', {}, typeLabel(q.type)),
       h('span', { class: 'rcard__state' }, answered ? icon(...(correct ? ICONS.check : ICONS.cross)) : null, t(correct ? 'st.correct' : answered ? 'st.wrong' : 'st.skipped'))),
     h('p', cText({ class: 'rcard__prompt' }), q.type === 'matching' ? q.title : promptContent(q.prompt)),
+    figure(q),
     body,
     notes(q));
 }

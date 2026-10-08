@@ -621,3 +621,6 @@ body{background:var(--canvas);color:var(--text)}
   .option.is-selected,.tile:has(input:checked),.seg>input:checked+span,.qmap__cell.is-current{outline:2px solid Highlight}
   .btn{border:1px solid ButtonText}
 }
+
+/* A question's figure (graph, triangle): fits the card, white background in both themes. */
+.qfig{display:block;width:auto;max-width:100%;height:auto;max-height:170px;margin:10px auto 0;border:1px solid var(--line);border-radius:var(--r-sm);background:#fff}

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 190" width="320" height="190" font-family="serif">
+  <title>Right triangle: vertical leg 3, horizontal leg 4, right angle between them; the angle θ is at the far end of the leg of length 4</title>
+  <rect width="320" height="190" fill="#fff"/>
+  <g stroke="#111" stroke-width="2.4" fill="none">
+    <polygon points="50,20 50,160 280,160"/>
+    <polyline points="50,140 70,140 70,160" stroke-width="1.6"/>
+    <path d="M247 160 A33 33 0 0 0 251 143" stroke-width="1.6"/>
+  </g>
+  <g fill="#111" font-size="20">
+    <text x="28" y="96">3</text><text x="158" y="184">4</text><text x="226" y="155" font-style="italic" font-size="18">θ</text>
+  </g>
+</svg>

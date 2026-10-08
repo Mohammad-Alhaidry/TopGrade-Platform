@@ -109,8 +109,18 @@
           "bank": "calculus-1/chapter-2.json"
         },
         {
-          "id": "midterm",
+          "id": "past-exams",
           "number": 3,
+          "title": "Midterm 2024 and Final 2024 (chapters 1 and 2)",
+          "label": {
+            "en": "Past exams",
+            "ar": "اختبارات سابقة"
+          },
+          "bank": "calculus-1/past-exams.json"
+        },
+        {
+          "id": "midterm",
+          "number": 4,
           "title": "Chapters 1 and 2",
           "label": {
             "en": "Practice midterm",
@@ -119,7 +129,8 @@
           "bank": "calculus-1/midterm.json",
           "mix": [
             "chapter-1",
-            "chapter-2"
+            "chapter-2",
+            "past-exams"
           ],
           "defaults": {
             "mode": "exam",

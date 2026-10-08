@@ -132,3 +132,12 @@ test('math courses: every \\( ... \\) renders in Temml, and matching answers (dr
     }
   }
 });
+
+test('every question figure exists', () => {
+  for (const course of catalog.courses) {
+    for (const topic of course.topics) {
+      const bank = JSON.parse(readFileSync(new URL(topic.bank, dataDir)));
+      for (const q of bank.questions.filter((x) => x.image)) assert.ok(existsSync(new URL(q.image.src, dataDir)), `${topic.bank} ${q.id}: ${q.image.src} missing`);
+    }
+  }
+});
