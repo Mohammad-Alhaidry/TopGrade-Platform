@@ -2,15 +2,29 @@
 //
 // data/catalog.json:
 //   { schemaVersion: 1,
-//     courses: [{ id, titleEn, titleAr, topics: [{ id, number, title, bank: 'course/topic.json' }] }] }
+//     courses: [{ id, titleEn, titleAr, lang?, topics: [{ id, number, title, bank: 'course/topic.json',
+//                                                     label?, mix?, defaults? }] }] }
+//   lang:     language of the course content (questions, topic titles): 'en' (default) or 'ar' (right to left).
+//   label:    { en, ar } shown instead of "Topic N", e.g. { en: 'Chapter 1', ar: 'الفصل الأول' }.
+//   mix:      ids of other topics in the course; tools/build-mixed.mjs writes this topic's bank from theirs
+//             (a practice midterm across chapters).
+//   defaults: { mode: 'practice' | 'exam', count: 10 | 20 | 40 | null } preselected on the topic's setup screen.
 //
 // Adding a course or topic = adding its bank file and an entry here; no code changes.
 
 import { loadBank } from '../quiz/bank.js';
+import { t } from './i18n.js';
 
 export const CATALOG_VERSION = 1;
 const SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const isText = (v) => typeof v === 'string' && v.trim() !== '';
+export const SETUP_COUNTS = [10, 20, 40, null];
+
+/** Language of a course's content: questions and topic titles. */
+export const contentLang = (course) => (course?.lang === 'ar' ? 'ar' : 'en');
+
+/** "Topic 2", or the topic's own label such as "الفصل الأول" or "Homework". */
+export const topicLabel = (topic, language) => topic.label?.[language] ?? t('topicN', { n: topic.number }, language);
 
 /** Returns a list of problems; empty means the catalog is valid. */
 export function validateCatalog(catalog) {
@@ -25,6 +39,7 @@ export function validateCatalog(catalog) {
     courseIds.add(c?.id);
     if (!isText(c?.titleEn)) errs.push(`${label}: missing titleEn`);
     if (c?.titleAr !== undefined && !isText(c.titleAr)) errs.push(`${label}: titleAr must be text`);
+    if (c?.lang !== undefined && !['en', 'ar'].includes(c.lang)) errs.push(`${label}: lang must be "en" or "ar"`);
     if (!Array.isArray(c?.topics) || c.topics.length === 0) {
       errs.push(`${label}: topics must be a non-empty list`);
       return;
@@ -38,6 +53,14 @@ export function validateCatalog(catalog) {
       if (!Number.isInteger(t?.number) || t.number < 1) errs.push(`${tl}: number must be a positive integer`);
       if (!isText(t?.title)) errs.push(`${tl}: missing title`);
       if (!isText(t?.bank) || !/^[a-z0-9-]+\/[a-z0-9-]+\.json$/.test(t.bank)) errs.push(`${tl}: bank must look like "course/topic.json"`);
+      if (t?.label !== undefined && !(isText(t.label?.en) && isText(t.label?.ar))) errs.push(`${tl}: label needs en and ar`);
+      if (t?.defaults !== undefined && (!['practice', 'exam', undefined].includes(t.defaults?.mode) || !SETUP_COUNTS.includes(t.defaults?.count ?? 20))) {
+        errs.push(`${tl}: defaults need mode practice|exam and count 10|20|40|null`);
+      }
+      if (t?.mix !== undefined) {
+        const others = c.topics.filter((o) => o !== t && !o.mix).map((o) => o.id);
+        if (!Array.isArray(t.mix) || t.mix.length === 0 || !t.mix.every((id) => others.includes(id))) errs.push(`${tl}: mix must list other (non-mixed) topic ids of the course`);
+      }
     });
   });
   return errs;

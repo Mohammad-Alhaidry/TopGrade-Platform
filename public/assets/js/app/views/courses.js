@@ -17,8 +17,10 @@ export async function courseSummaries(ctx) {
       const stats = topicStats(progress, topicKey(course, topic), bank.questions.map((q) => q.id));
       return { topic, bank, stats };
     }));
-    const totalQuestions = topics.reduce((n, x) => n + x.stats.total, 0);
-    const mastered = topics.reduce((n, x) => n + x.stats.mastered, 0);
+    // A practice midterm reuses the chapters' questions, so it does not count twice in the course totals.
+    const own = topics.filter((x) => !x.topic.mix);
+    const totalQuestions = own.reduce((n, x) => n + x.stats.total, 0);
+    const mastered = own.reduce((n, x) => n + x.stats.mastered, 0);
     return {
       course,
       topics,
@@ -30,8 +32,9 @@ export async function courseSummaries(ctx) {
   }));
 }
 
-/** Monogram from the English title, e.g. "Problem Solving & Programming" -> "PS". */
-const monogram = (title) => title.split(/[^A-Za-z]+/).filter(Boolean).slice(0, 2).map((w) => w[0].toUpperCase()).join('');
+/** Monogram from the English title's main words, e.g. "Problem Solving & Programming" -> "PS",
+ *  "Principles of Accounting 1" -> "PA". */
+const monogram = (title) => title.split(/[^A-Za-z]+/).filter((w) => /^[A-Z]/.test(w)).slice(0, 2).map((w) => w[0]).join('');
 
 export function courseCard({ course, topics, totalQuestions, percent }) {
   const name = localName(course);

@@ -3,6 +3,7 @@
 // Each screen below it can add a page bar (back/close, title, page actions) and a footer.
 
 import { h, icon, ICONS } from '../quiz/dom.js';
+import { contentLang } from './catalog.js';
 import { href } from './router.js';
 import { paths } from './routes.js';
 import { t, lang, setLang, isRTL } from './i18n.js';
@@ -115,3 +116,5 @@ export function meter(fraction, label) {
 
 /** English content (questions, answers) inside an Arabic interface keeps its own direction and font. */
 export const enText = (attrs = {}) => ({ ...attrs, lang: 'en', dir: 'ltr' });
+/** Course content (questions, topic titles) in the course's own language and direction. */
+export const contentText = (course, attrs = {}) => (contentLang(course) === 'ar' ? { ...attrs, lang: 'ar', dir: 'rtl' } : enText(attrs));

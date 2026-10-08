@@ -14,6 +14,7 @@ import { dirname, join, relative, sep } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { SITE, SECURITY_TXT_EXPIRES } from './site.mjs';
 import { pageTitle, pageDescription, courseName } from '../public/assets/js/app/meta.js';
+import { contentLang, topicLabel } from '../public/assets/js/app/catalog.js';
 import { t } from '../public/assets/js/app/i18n.js';
 import { PRIVACY } from '../public/assets/js/app/privacy-text.js';
 
@@ -39,6 +40,7 @@ const breadcrumb = (items) => ({
   '@type': 'BreadcrumbList',
   itemListElement: items.map(([name, path], i) => ({ '@type': 'ListItem', position: i + 1, name, item: url(path) })),
 });
+const topicTitle = (course, topic) => (contentLang(course) === 'ar' ? esc(topic.title) : `<span lang="en" dir="ltr">${esc(topic.title)}</span>`);
 const crumbs = (items) => h('nav', { 'aria-label': 'breadcrumb' }, items.map(([name, path], i) => (i < items.length - 1 ? `<a href="${path || './'}">${esc(name)}</a> / ` : esc(name))).join(''));
 
 // Tiny HTML helper: attributes are escaped, children are already-safe HTML strings.
@@ -53,7 +55,7 @@ function pages({ catalog, banks }) {
   const coursesCrumb = [ar('tab.courses'), 'courses'];
   const count = (topic) => banks.get(topic.bank).questions.length;
   const courseLine = (course) => {
-    const total = course.topics.reduce((n, topic) => n + count(topic), 0);
+    const total = course.topics.filter((topic) => !topic.mix).reduce((n, topic) => n + count(topic), 0);
     return h('li', {}, `<a href="courses/${course.id}">${esc(courseName(course, LANG))} (${esc(course.titleEn)})</a>: `,
       esc(`${ar('n.questions', { n: total })} في ${ar('n.topics', { n: course.topics.length })}`));
   };
@@ -84,9 +86,9 @@ function pages({ catalog, banks }) {
       path: coursePath, route,
       body: [crumbs([home, coursesCrumb, courseCrumb]), h('h1', {}, esc(courseName(course, LANG))), h('p', { lang: 'en', dir: 'ltr' }, esc(course.titleEn)),
         h('p', {}, esc(description)), h('h2', {}, 'المواضيع'),
-        h('ol', {}, course.topics.map((topic) => h('li', {}, `<a href="${coursePath}/${topic.id}">${esc(ar('topicN', { n: topic.number }))}: <span lang="en" dir="ltr">${esc(topic.title)}</span></a> (${esc(ar('n.questions', { n: count(topic) }))})`)))],
+        h('ol', {}, course.topics.map((topic) => h('li', {}, `<a href="${coursePath}/${topic.id}">${esc(topicLabel(topic, LANG))}: ${topicTitle(course, topic)}</a> (${esc(ar('n.questions', { n: count(topic) }))})`)))],
       data: [breadcrumb([home, coursesCrumb, courseCrumb]),
-        { '@type': 'Course', name: course.titleEn, alternateName: course.titleAr, description, url: url(coursePath), inLanguage: 'en', educationalLevel: 'University', provider: brand,
+        { '@type': 'Course', name: course.titleEn, alternateName: course.titleAr, description, url: url(coursePath), inLanguage: contentLang(course), educationalLevel: 'University', provider: brand,
           hasPart: course.topics.map((topic) => ({ '@type': 'Quiz', name: topic.title, url: url(`${coursePath}/${topic.id}`) })) }],
     });
 
@@ -95,15 +97,15 @@ function pages({ catalog, banks }) {
       const topicRoute = { name: 'topic', params: { course: course.id, topic: topic.id } };
       const desc = pageDescription(topicRoute, catalog, LANG, banks);
       const qs = banks.get(topic.bank).questions;
-      const topicCrumb = [ar('topicN', { n: topic.number }), path];
+      const topicCrumb = [topicLabel(topic, LANG), path];
       out.push({
         path, route: topicRoute,
-        body: [crumbs([home, coursesCrumb, courseCrumb, topicCrumb]), h('h1', {}, `${esc(ar('topicN', { n: topic.number }))}: <span lang="en" dir="ltr">${esc(topic.title)}</span>`),
+        body: [crumbs([home, coursesCrumb, courseCrumb, topicCrumb]), h('h1', {}, `${esc(topicLabel(topic, LANG))}: ${topicTitle(course, topic)}`),
           h('p', {}, `<a href="${coursePath}">${esc(courseName(course, LANG))}</a>`), h('p', {}, esc(desc)),
           h('h2', {}, 'أنواع الأسئلة'),
           h('ul', {}, TYPES.filter((type) => qs.some((q) => q.type === type)).map((type) => h('li', {}, esc(`${ar(`type.${type}`)}: ${ar('n.questions', { n: qs.filter((q) => q.type === type).length })}`))))],
         data: [breadcrumb([home, coursesCrumb, courseCrumb, topicCrumb]),
-          { '@type': 'Quiz', name: topic.title, description: desc, url: url(path), inLanguage: 'en', educationalLevel: 'University', provider: brand,
+          { '@type': 'Quiz', name: topic.title, description: desc, url: url(path), inLanguage: contentLang(course), educationalLevel: 'University', provider: brand,
             isPartOf: { '@type': 'Course', name: course.titleEn, url: url(coursePath) } }],
       });
     }

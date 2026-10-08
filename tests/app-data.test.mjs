@@ -92,3 +92,24 @@ test('recording does not mutate the previous progress object', () => {
   recordAnswers(before, T, [{ id: 'a', correct: true }], day(1));
   assert.deepEqual(before, emptyProgress());
 });
+
+test('mixed topics (the practice midterm) are up to date with their source topics (run `npm run build`)', async () => {
+  const { isCurrent } = await import('../tools/build-mixed.mjs');
+  assert.ok(isCurrent());
+});
+
+test('validateCatalog checks content language, labels, setup defaults and mixed topics', () => {
+  const topic = (id, extra = {}) => ({ id, number: 1, title: 'T', bank: `c/${id}.json`, ...extra });
+  const ok = { schemaVersion: 1, courses: [{ id: 'c', titleEn: 'C', lang: 'ar', topics: [
+    topic('a', { label: { en: 'Chapter 1', ar: 'الفصل الأول' } }),
+    topic('b'),
+    topic('m', { mix: ['a', 'b'], defaults: { mode: 'exam', count: 40 } }),
+  ] }] };
+  assert.deepEqual(validateCatalog(ok), []);
+  const bad = { schemaVersion: 1, courses: [{ id: 'c', titleEn: 'C', lang: 'fr', topics: [
+    topic('a', { label: { en: 'Chapter 1' } }),
+    topic('m', { mix: ['a', 'nope'], defaults: { mode: 'quiz', count: 7 } }),
+  ] }] };
+  const errs = validateCatalog(bad).join('\n');
+  for (const re of [/lang must be/, /label needs en and ar/, /mix must list/, /defaults need/]) assert.match(errs, re);
+});

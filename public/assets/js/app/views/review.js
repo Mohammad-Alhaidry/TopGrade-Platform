@@ -2,11 +2,12 @@
 
 import { h, icon, ICONS } from '../../quiz/dom.js';
 import { createSession } from '../../quiz/session.js';
-import { pagebar, screen, tabbar, mount, enText } from '../shell.js';
+import { pagebar, screen, tabbar, mount, contentText } from '../shell.js';
+import { topicLabel } from '../catalog.js';
 import { href, navigate } from '../router.js';
 import { paths } from '../routes.js';
 import { queueRun, newRun } from '../quiz.js';
-import { t, localName } from '../i18n.js';
+import { t, lang, localName } from '../i18n.js';
 import { courseSummaries } from './courses.js';
 
 export async function showReview(ctx) {
@@ -29,7 +30,7 @@ export async function showReview(ctx) {
           h('section', { class: 'card review-topic' },
             h('span', { class: 'review-topic__count' }, String(x.stats.mistakes.length)),
             h('span', { class: 'review-topic__copy' },
-              h('span', { class: 'review-topic__title' }, t('topicN', { n: x.topic.number }), ': ', h('span', enText(), x.topic.title)),
+              h('span', { class: 'review-topic__title' }, topicLabel(x.topic, lang()), ': ', h('span', contentText(x.course), x.topic.title)),
               h('span', { class: 'review-topic__course', lang: localName(x.course).mainLang }, localName(x.course).main)),
             h('button', { type: 'button', class: 'btn btn--primary btn--sm', onclick: () => practise(x) }, t('practise'))))),
       ]

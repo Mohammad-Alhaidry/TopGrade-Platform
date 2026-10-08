@@ -1,7 +1,7 @@
 // A topic's quiz: setup -> questions -> results -> review, all on the topic's URL.
 // Practice mode checks each answer before moving on; exam mode reveals everything at the end.
 // Answers feed the device's study progress; an unfinished run is saved so it can be resumed.
-// Interface text follows the chosen language; question content stays English and left-to-right.
+// Interface text follows the chosen language; question content stays in the course's language and direction.
 
 import { TYPES, letterOf } from '../quiz/bank.js';
 import { isAnswered, isCorrect, matchingResults, correctAnswerText, responseText } from '../quiz/grading.js';
@@ -9,15 +9,17 @@ import { createSession, summarize } from '../quiz/session.js';
 import { serializeRun, deserializeRun, savedBankKey } from '../quiz/store.js';
 import { confirmDialog, openSheet } from '../quiz/dialog.js';
 import { h, icon, ICONS, TYPE_ICONS, staticSvg } from '../quiz/dom.js';
-import { pagebar, iconButton, backLink, backIcon, screen, mount, enText } from './shell.js';
+import { pagebar, iconButton, backLink, backIcon, screen, mount, contentText } from './shell.js';
 import { readProgress, writeProgress, recordAnswers, recordRun, topicStats } from './progress.js';
-import { topicKey } from './catalog.js';
+import { topicKey, topicLabel } from './catalog.js';
 import { paths } from './routes.js';
 import { navigate } from './router.js';
-import { t, localName } from './i18n.js';
+import { t, lang, localName } from './i18n.js';
 import { track } from './analytics.js';
 
 const STORAGE_KEY = 'topgrade.run.v1';
+// Question content in the open course's language and direction (Arabic courses read right to left).
+const cText = (attrs) => contentText(state.ctx?.course, attrs);
 const COUNT_CHOICES = [10, 20, 40];
 const typeLabel = (type) => t(`type.${type}`);
 
@@ -133,7 +135,10 @@ export function openTopic(ctx) {
 }
 
 function showTopic(ctx) {
-  if (state.ctx?.bank !== ctx.bank) state.setup = { mode: 'practice', types: [...TYPES], count: 20 };
+  if (state.ctx?.bank !== ctx.bank) {
+    const d = ctx.topic.defaults ?? {};
+    state.setup = { mode: d.mode ?? 'practice', types: [...TYPES], count: d.count === undefined ? 20 : d.count };
+  }
   state.ctx = ctx;
   state.run = null;
   state.screen = 'setup';
@@ -220,8 +225,8 @@ function setupView() {
     className: 'screen--setup',
     bar: pagebar({
       start: backLink(paths.course(course.id), t('backTo', { name: name.main })),
-      title: t('topicN', { n: topic.number }),
-      sub: h('span', enText(), topic.title),
+      title: topicLabel(topic, lang()),
+      sub: h('span', cText(), topic.title),
     }),
     body: [
       h('div', { class: 'col col--side' },
@@ -247,7 +252,7 @@ function setupView() {
         h('fieldset', { class: 'setup__group' }, h('legend', {}, t('setup.mode')), h('div', { class: 'tiles' },
           modeTile('practice', t('mode.practice'), t('mode.practiceText'), ICONS.practice),
           modeTile('exam', t('mode.exam'), t('mode.examText'), ICONS.exam))),
-        h('fieldset', { class: 'setup__group' }, h('legend', {}, t('setup.types')), h('div', { class: 'tiles' }, TYPES.map(typeTile))),
+        h('fieldset', { class: 'setup__group' }, h('legend', {}, t('setup.types')), h('div', { class: 'tiles' }, TYPES.filter((type) => counts[type] > 0).map(typeTile))),
         h('fieldset', { class: 'setup__group' }, h('legend', {}, t('setup.count')), h('div', { class: 'segs' },
           COUNT_CHOICES.map((n) => countOption(n, String(n))),
           countOption(null, allLabel)))),
@@ -343,7 +348,7 @@ function optionButton({ key: k, text, selected, right, wrong, dim, disabled, dat
     disabled,
     dataset: data,
     onclick,
-    ...(content ? enText() : {}),
+    ...(content ? cText() : {}),
   },
   k ? h('span', { class: 'option__key' }, k) : null,
   h('span', { class: 'option__text' }, text),
@@ -413,12 +418,14 @@ function matchingAnswer(item, response, revealed, onChange) {
   const q = item.question;
   const current = Array.isArray(response) ? [...response] : q.pairs.map(() => '');
   const marks = revealed ? matchingResults(q, current) : [];
-  return h('ul', enText({ class: 'pairs' }),
+  return h('ul', cText({ class: 'pairs' }),
     q.pairs.map((pair, i) =>
       h('li', { class: `card pair${revealed ? (marks[i] ? ' is-right' : ' is-wrong') : ''}` },
         h('span', { class: 'pair__left', id: `pair-${i}` }, pair.left),
         h('div', { class: 'pair__pick' },
           h('select', {
+            // Follows the chosen item's own direction, so "Choose…" reads right in either interface language.
+            dir: 'auto',
             disabled: revealed,
             'aria-labelledby': `pair-${i}`,
             onchange: (e) => {
@@ -436,7 +443,7 @@ function matchingAnswer(item, response, revealed, onChange) {
 
 function notes(q) {
   return [
-    q.explanation ? h('p', enText({ class: 'note' }), q.explanation) : null,
+    q.explanation ? h('p', cText({ class: 'note' }), q.explanation) : null,
     q.source?.page !== undefined ? h('p', { class: 'note note--source' }, t('pageN', { p: q.source.page })) : null,
   ];
 }
@@ -449,7 +456,7 @@ function verdictBar(q, response, last) {
     detail = h('p', { class: 'verdict__detail' }, t('v.matched', { r: right, n: q.pairs.length }));
   } else if (!ok) {
     detail = h('p', { class: 'verdict__detail' }, t('answerLabel'), ' ',
-      h('strong', q.type === 'tf' ? {} : enText(), q.type === 'tf' ? t(q.answer ? 'true' : 'false') : correctAnswerText(q)));
+      h('strong', q.type === 'tf' ? {} : cText(), q.type === 'tf' ? t(q.answer ? 'true' : 'false') : correctAnswerText(q)));
   }
   return h('footer', { class: `bar bar--verdict ${ok ? 'is-right' : 'is-wrong'}` },
     h('div', { class: 'verdict', role: 'status' },
@@ -573,7 +580,7 @@ function questionView() {
     body: [
       h('section', { class: 'card qcard' },
         h('p', { class: 'qcard__hint' }, h('span', { class: 'qcard__type' }, typeLabel(q.type)), h('span', {}, t(`hint.${q.type}`))),
-        h('p', enText({ class: 'qcard__prompt' }),
+        h('p', cText({ class: 'qcard__prompt' }),
           q.type === 'matching' ? q.title
             : promptContent(q.prompt, q.type === 'fib' ? { word: response, state: revealed ? (isCorrect(q, response) ? 'right' : 'wrong') : null } : null))),
       answers,
@@ -682,8 +689,8 @@ function resultsView(run) {
   return screen({
     className: 'screen--results',
     bar: pagebar({
-      title: t('topicN', { n: state.ctx.topic.number }),
-      sub: h('span', enText(), state.ctx.topic.title),
+      title: topicLabel(state.ctx.topic, lang()),
+      sub: h('span', cText(), state.ctx.topic.title),
       end: h('button', { type: 'button', class: 'pillbtn', onclick: leaveRun }, t('done')),
     }),
     body: [
@@ -740,10 +747,10 @@ function openReview(focusNumber) {
 function reviewEntry({ item, response, correct, answered }, n) {
   const q = item.question;
   const status = correct ? 'is-right' : answered ? 'is-wrong' : 'is-skip';
-  const shown = (text) => (q.type === 'tf' ? h('dd', {}, text === 'True' ? t('true') : t('false')) : h('dd', enText(), text));
+  const shown = (text) => (q.type === 'tf' ? h('dd', {}, text === 'True' ? t('true') : t('false')) : h('dd', cText(), text));
   const body =
     q.type === 'matching'
-      ? h('ul', enText({ class: 'rpairs' }),
+      ? h('ul', cText({ class: 'rpairs' }),
           q.pairs.map((p, i) => {
             const ok = matchingResults(q, response)[i];
             const chosen = Array.isArray(response) && response[i];
@@ -761,7 +768,7 @@ function reviewEntry({ item, response, correct, answered }, n) {
       h('span', { class: 'rcard__num' }, String(n)),
       h('span', {}, typeLabel(q.type)),
       h('span', { class: 'rcard__state' }, answered ? icon(...(correct ? ICONS.check : ICONS.cross)) : null, t(correct ? 'st.correct' : answered ? 'st.wrong' : 'st.skipped'))),
-    h('p', enText({ class: 'rcard__prompt' }), q.type === 'matching' ? q.title : promptContent(q.prompt)),
+    h('p', cText({ class: 'rcard__prompt' }), q.type === 'matching' ? q.title : promptContent(q.prompt)),
     body,
     notes(q));
 }
