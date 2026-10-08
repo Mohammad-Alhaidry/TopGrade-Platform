@@ -1,0 +1,4 @@
+/* STIX Two Math (SIL OFL 1.1, see STIXTwoMath-OFL.txt; file from @fontsource/stix-two-math 5.3.0). Phones ship no
+   math font, and without one MathML cannot stretch braces, brackets and radicals (e.g. piecewise functions). */
+@font-face{font-family:'STIX Two Math Web';src:url('STIXTwoMath.woff2') format('woff2');font-display:swap}
+math{font-family:'STIX Two Math Web','STIX Two Math','Cambria Math',math}

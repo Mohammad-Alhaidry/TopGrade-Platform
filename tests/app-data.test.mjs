@@ -113,3 +113,22 @@ test('validateCatalog checks content language, labels, setup defaults and mixed 
   const errs = validateCatalog(bad).join('\n');
   for (const re of [/lang must be/, /label needs en and ar/, /mix must list/, /defaults need/]) assert.match(errs, re);
 });
+
+test('math courses: every \\( ... \\) renders in Temml, and matching answers (dropdowns) stay plain text', async () => {
+  const { runInNewContext } = await import('node:vm');
+  const ctx = {};
+  runInNewContext(`${readFileSync(new URL('../public/assets/vendor/temml/temml.min.js', import.meta.url), 'utf8')};globalThis.temml=temml;`, ctx);
+  for (const course of catalog.courses.filter((c) => c.math)) {
+    for (const topic of course.topics) {
+      const bank = JSON.parse(readFileSync(new URL(topic.bank, dataDir)));
+      for (const q of bank.questions) {
+        const texts = [q.prompt, q.title, q.explanation, ...(q.options ?? []), ...(q.pairs ?? []).map((p) => p.left)].filter(Boolean);
+        for (const text of texts) {
+          assert.equal((text.match(/\\\(/g) ?? []).length, (text.match(/\\\)/g) ?? []).length, `${topic.bank} ${q.id}: unbalanced \\( \\)`);
+          for (const m of text.matchAll(/\\\((.+?)\\\)/gs)) assert.doesNotThrow(() => ctx.temml.renderToString(m[1], { throwOnError: true }), `${topic.bank} ${q.id}: ${m[1]}`);
+        }
+        for (const p of q.pairs ?? []) assert.doesNotMatch(p.right, /\\\(/, `${topic.bank} ${q.id}: matching right side must be plain`);
+      }
+    }
+  }
+});

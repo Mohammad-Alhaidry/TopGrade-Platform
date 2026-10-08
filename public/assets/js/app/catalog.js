@@ -5,6 +5,7 @@
 //     courses: [{ id, titleEn, titleAr, lang?, topics: [{ id, number, title, bank: 'course/topic.json',
 //                                                     label?, mix?, defaults? }] }] }
 //   lang:     language of the course content (questions, topic titles): 'en' (default) or 'ar' (right to left).
+//   math:     true when questions contain TeX math between \( and \) (drawn by app/math.js).
 //   label:    { en, ar } shown instead of "Topic N", e.g. { en: 'Chapter 1', ar: 'الفصل الأول' }.
 //   mix:      ids of other topics in the course; tools/build-mixed.mjs writes this topic's bank from theirs
 //             (a practice midterm across chapters).
@@ -40,6 +41,7 @@ export function validateCatalog(catalog) {
     if (!isText(c?.titleEn)) errs.push(`${label}: missing titleEn`);
     if (c?.titleAr !== undefined && !isText(c.titleAr)) errs.push(`${label}: titleAr must be text`);
     if (c?.lang !== undefined && !['en', 'ar'].includes(c.lang)) errs.push(`${label}: lang must be "en" or "ar"`);
+    if (c?.math !== undefined && typeof c.math !== 'boolean') errs.push(`${label}: math must be true or false`);
     if (!Array.isArray(c?.topics) || c.topics.length === 0) {
       errs.push(`${label}: topics must be a non-empty list`);
       return;

@@ -17,6 +17,7 @@ import { track, describeSession } from './analytics.js';
 import { lang } from './i18n.js';
 import { currentPlatform } from './install.js';
 import { pageTitle } from './meta.js';
+import { loadMath } from './math.js';
 
 // Screens where switching to a newly downloaded version (a reload) loses nothing.
 const SAFE_TO_UPDATE = new Set(['home', 'courses', 'course', 'review', 'privacy', 'notfound']);
@@ -41,7 +42,7 @@ async function render(route) {
     if (name === 'topic') {
       const found = findTopic(ctx.catalog, params.course, params.topic);
       if (found) {
-        const bank = await loadTopicBank(DATA_URL, found.topic);
+        const [bank] = await Promise.all([loadTopicBank(DATA_URL, found.topic), found.course.math ? loadMath() : null]);
         if (token === ctx.token) openTopic({ ...found, bank });
         return;
       }
