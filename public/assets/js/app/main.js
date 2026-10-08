@@ -25,10 +25,24 @@ const SAFE_TO_UPDATE = new Set(['home', 'courses', 'course', 'review', 'privacy'
 const DATA_URL = new URL('data/', document.baseURI).href;
 const ctx = { catalog: null, dataUrl: DATA_URL, token: 0 };
 
+/** A link to a course or topic this device's saved course list doesn't have yet (a course added since the app was
+ *  last updated): ask the server for the current list before saying "not found", and fetch the new version. */
+async function catalogKnows(route) {
+  const known = () => (route.name === 'course' ? findCourse(ctx.catalog, route.params.course) : findTopic(ctx.catalog, route.params.course, route.params.topic));
+  if (!['course', 'topic'].includes(route.name) || known()) return;
+  try {
+    ctx.catalog = await loadCatalog(new URL(`catalog.json?fresh=${Date.now()}`, DATA_URL).href);
+    navigator.serviceWorker?.getRegistration().then((reg) => reg?.update()).catch(() => {});
+  } catch {
+    /* offline: keep the saved list */
+  }
+}
+
 async function render(route) {
   const token = ++ctx.token;
   try {
     ctx.catalog ??= await loadCatalog(new URL('catalog.json', DATA_URL).href);
+    await catalogKnows(route);
     if (token !== ctx.token) return;
     const { name, params } = route;
     if (name === 'moved') return navigate(params.to, { replace: true });
