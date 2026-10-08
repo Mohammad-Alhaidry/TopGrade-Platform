@@ -25,13 +25,13 @@ export async function showReview(ctx) {
   const body = items.length
     ? [
         h('p', { class: 'lead' }, t('review.lead')),
-        items.map((x) =>
+        h('div', { class: 'card-grid' }, items.map((x) =>
           h('section', { class: 'card review-topic' },
             h('span', { class: 'review-topic__count' }, String(x.stats.mistakes.length)),
             h('span', { class: 'review-topic__copy' },
               h('span', { class: 'review-topic__title' }, t('topicN', { n: x.topic.number }), ': ', h('span', enText(), x.topic.title)),
               h('span', { class: 'review-topic__course', lang: localName(x.course).mainLang }, localName(x.course).main)),
-            h('button', { type: 'button', class: 'btn btn--primary btn--sm', onclick: () => practise(x) }, t('practise')))),
+            h('button', { type: 'button', class: 'btn btn--primary btn--sm', onclick: () => practise(x) }, t('practise'))))),
       ]
     : h('section', { class: 'card empty' },
         h('span', { class: 'empty__icon' }, icon(...ICONS.target)),

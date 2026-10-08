@@ -11,7 +11,8 @@
   --info:#0284C7;--info-bg:#F0F9FF;--brand-ink:var(--primary);--right-solid:#047857;
   --hero:linear-gradient(140deg,#0B1F3A 0%,#123F70 58%,#0E7490 100%);
   /* Corner radii, one rule: overlays (hero, dialogs, sheets) 20, cards 16, controls 12, small chips/keys/cells 8, pills 999. */
-  --r-lg:20px;--r-card:16px;--r-ctl:12px;--r-sm:8px;--pad:14px;--col:520px;
+  --r-lg:20px;--r-card:16px;--r-ctl:12px;--r-sm:8px;--pad:14px;
+  --content:100%; /* readable width of a screen's content; grows on tablets and desktops */
   --shadow-sm:0 1px 3px rgba(15,23,42,.06),0 2px 6px rgba(15,23,42,.04);
   --shadow-card:0 1px 3px rgba(15,23,42,.07),0 4px 16px rgba(15,23,42,.05);
   --shadow-hover:0 4px 16px rgba(15,23,42,.10),0 12px 32px rgba(15,23,42,.07);
@@ -29,10 +30,13 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--accent);outline
 .boot{margin:0;padding:96px 20px;text-align:center;font:500 15px/1.6 var(--ui);color:var(--muted)}
 
 /* ---------- App shell ---------- */
-.frame{display:flex;flex-direction:column;width:min(100%,var(--col));height:100vh;height:100dvh;margin-inline:auto;background:var(--canvas)}
+.frame{display:flex;flex-direction:column;width:100%;height:100vh;height:100dvh;background:var(--canvas)}
+/* Content is centred at --content width inside full-width bars, so every size uses the screen well. */
+.col{display:flex;flex-direction:column;gap:10px;min-width:0}
+.card-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:10px}
 .app{flex:1;min-height:0}
 .screen{display:flex;flex-direction:column;height:100%;background:var(--canvas)}
-.body{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;display:flex;flex-direction:column;gap:10px;padding:12px var(--pad) 14px}
+.body{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;display:flex;flex-direction:column;gap:10px;padding:12px max(var(--pad),calc((100% - var(--content)) / 2)) 14px}
 .body>*{flex:none}
 .card{min-width:0;background:var(--card);border:1px solid var(--line);border-radius:var(--r-card);box-shadow:var(--shadow-card)}
 .card__title{margin:0 0 10px;font:700 14px/1.3 var(--ui);color:var(--ink)}
@@ -55,7 +59,7 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--accent);outline
 @media(hover:hover){.iconbtn:hover,.pillbtn:not(.pillbtn--score):hover{background:var(--tint);border-color:var(--line-strong)}}
 
 /* Bottom action bar */
-.bar{flex:none;display:grid;gap:10px;padding:10px var(--pad) max(10px,env(safe-area-inset-bottom));background:var(--card);border-top:1px solid var(--line)}
+.bar{flex:none;display:grid;gap:10px;padding:10px max(var(--pad),calc((100% - var(--content)) / 2)) max(10px,env(safe-area-inset-bottom));background:var(--card);border-top:1px solid var(--line)}
 .bar--split{grid-template-columns:auto 1fr}
 .bar--even{grid-template-columns:1fr 1fr}
 .bar--even .btn{padding:0 12px}
@@ -249,7 +253,7 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--accent);outline
 
 /* ---------- Review ---------- */
 .pagebar{flex:none;background:var(--card);border-bottom:1px solid var(--line)}
-.pagebar__row{display:flex;align-items:center;gap:10px;min-height:52px;padding:4px var(--pad)}
+.pagebar__row{display:flex;align-items:center;gap:10px;min-height:52px;padding:4px max(var(--pad),calc((100% - var(--content)) / 2))}
 .pagebar__start,.pagebar__end{flex:none;display:flex;align-items:center}
 .pagebar__title{flex:1;min-width:0}
 .pagebar__title h1{margin:0;font:800 16px/1.25 var(--ui);color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -293,7 +297,7 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--accent);outline
 .dialog__title{margin:0;font:800 18px/1.3 var(--ui);color:var(--ink)}
 .dialog__text{margin:0;font:400 14.5px/1.5 var(--ui);color:var(--muted)}
 .dialog__actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
-.dialog--sheet{width:min(var(--col),100%);max-width:100%;max-height:82dvh;margin:auto auto 0;border-radius:var(--r-lg) var(--r-lg) 0 0;border-bottom:0;overflow:auto}
+.dialog--sheet{width:min(560px,100%);max-width:100%;max-height:82dvh;margin:auto auto 0;border-radius:var(--r-lg) var(--r-lg) 0 0;border-bottom:0;overflow:auto}
 .dialog--sheet[open]{animation:rise 200ms ease-out}
 .dialog--sheet .dialog__panel{gap:12px;padding:8px var(--pad) max(14px,env(safe-area-inset-bottom))}
 .dialog--sheet .dialog__panel::before{content:'';justify-self:center;width:38px;height:4px;border-radius:999px;background:var(--line-strong)}
@@ -465,7 +469,7 @@ a.card:active,button.card:active{transform:scale(.99)}
 .prose a{display:inline-block;padding-block:10px;color:var(--brand-ink);font-weight:600}
 
 /* ---------- Direction, language and theme ---------- */
-:root{--ui:var(--english);--start:left;--desk:#E9EEF5}
+:root{--ui:var(--english);--start:left}
 [dir=rtl]{--ui:var(--arabic);--start:right}
 [lang=en]{--ui:var(--english)}
 body{font-family:var(--ui)}
@@ -478,7 +482,7 @@ body{font-family:var(--ui)}
   color-scheme:dark;
   --ink:#EEF3FB;--text:#E2E8F0;--muted:#A5B4CB;--faint:#94A3B8;
   --primary:#3567CC;--primary-mid:#5B8DEF;--accent:#8DB4FF;--bright:#7AA7FF;--brand-ink:#8DB4FF;
-  --canvas:#081226;--card:#0E1A30;--soft:#11203A;--tint:#16294B;--line:#1E2D4A;--line-strong:#2C3F63;--line-blue:#2A436F;--desk:#050C1A;
+  --canvas:#081226;--card:#0E1A30;--soft:#11203A;--tint:#16294B;--line:#1E2D4A;--line-strong:#2C3F63;--line-blue:#2A436F;
   --right:#059669;--right-bg:#0E2C24;--right-line:#1F6B4F;--right-ink:#6EE7B7;
   --wrong:#DC2626;--wrong-bg:#361519;--wrong-line:#7F2A2E;--wrong-ink:#FCA5A5;
   --warn:#F59E0B;--warn-bg:#2E220C;--warn-line:#6B4A15;--warn-ink:#FCD34D;
@@ -497,11 +501,73 @@ body{background:var(--canvas);color:var(--text)}
 [data-theme=dark] .pair select{color-scheme:dark}
 [data-theme=dark] .dialog::backdrop{background:rgba(0,0,0,.65)}
 
-/* ---------- Larger screens: the app sits in a framed column ---------- */
-@media(min-width:560px){
-  body{background:var(--desk)}
-  .frame{border-inline:1px solid var(--line);box-shadow:0 0 60px -20px #0F172A33}
+/* ---------- Tablets and iPad portrait (700px+) ---------- */
+@media(min-width:700px){
+  :root{--content:720px;--pad:20px}
+  .hdr{height:64px;padding-inline:max(16px,calc((100% - var(--content)) / 2))}
+  .tabbar{padding-inline:max(16px,calc((100% - 560px) / 2))}
+  .body{gap:12px;padding-top:18px}
+  .col{gap:12px}
+  .hero{padding:24px 24px 22px}
+  .hero__title{font-size:28px}
+  .kpis{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .setup__group:nth-child(2) .tiles{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .qcard{padding:18px 20px 20px}
+  .qcard__prompt{font-size:21px}
+  .option{min-height:56px;padding:12px 16px}
+  .option__text{font-size:16px}
+  .score{padding:20px 22px}
+  /* Action bars: buttons size to their label instead of spanning a wide screen. */
+  .bar > .btn--block{justify-self:end;width:auto;min-width:240px}
+  .bar--split{grid-template-columns:auto auto;justify-content:space-between}
+  .bar--split > .btn--block{min-width:200px}
+  .bar--even{grid-template-columns:repeat(2,auto);justify-content:end}
+  .bar--verdict{grid-template-columns:minmax(0,1fr) auto;align-items:center;column-gap:20px}
+  .bar--verdict .btn--verdict{min-width:200px}
+  /* The question map opens as a centred dialog rather than a bottom sheet. */
+  .dialog--sheet{margin:auto;border-radius:var(--r-lg);border-bottom:1px solid var(--line)}
+  .dialog--sheet .dialog__panel::before{display:none}
+  .dialog--sheet .dialog__panel{padding-top:18px}
 }
+
+/* ---------- iPad landscape, laptops, desktops (1024px+) ---------- */
+@media(min-width:1024px){
+  :root{--content:1120px;--pad:28px}
+  .hdr{padding-inline:max(20px,calc((100% - var(--content) - 120px) / 2))}
+  /* Side navigation rail replaces the bottom tab bar. */
+  .screen:has(> .tabbar){display:grid;grid-template-columns:104px minmax(0,1fr);grid-template-rows:auto minmax(0,1fr);grid-template-areas:"nav bar" "nav body"}
+  .screen:has(> .tabbar) > .pagebar{grid-area:bar}
+  .screen:has(> .tabbar) > .body{grid-area:body}
+  .tabbar{grid-area:nav;display:flex;flex-direction:column;align-items:stretch;gap:6px;padding:18px 12px;border-top:0;border-inline-end:1px solid var(--line)}
+  .tab{padding:10px 0}
+  .body{padding-top:24px;padding-bottom:28px}
+  .hero__title{font-size:30px}
+  .card-grid{grid-template-columns:repeat(auto-fill,minmax(340px,1fr))}
+  /* Multi-column screens keep rows at content height instead of stretching to fill the screen. */
+  .screen--home .body,.screen--setup .body,.screen--quiz .body,.screen--results .body{align-content:start}
+  /* Home: progress on one side, courses and help on the other. */
+  .screen--home .body{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);align-items:start;gap:20px}
+  .screen--home .col--side .card-grid,.screen--home .col--side{grid-template-columns:minmax(0,1fr)}
+  /* Topic setup: course summary beside the quiz options. */
+  .screen--setup{--content:1040px}
+  .screen--setup .body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);align-items:start;gap:20px}
+  .screen--setup .setup__group:nth-child(2) .tiles{grid-template-columns:repeat(2,minmax(0,1fr))}
+  /* Question: prompt beside the answers. */
+  .screen--quiz{--content:1080px}
+  .screen--quiz .body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start;gap:24px}
+  .screen--quiz .qcard{position:sticky;top:0}
+  .qcard__prompt{font-size:23px}
+  /* Results: score and counts beside the answer map. */
+  .screen--results{--content:1040px}
+  .screen--results .body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-areas:"score answers" "stats answers" "types answers";align-items:start;gap:16px}
+  .screen--results .score{grid-area:score}
+  .screen--results .stats{grid-area:stats}
+  .screen--results .answers{grid-area:answers}
+  .screen--results .types{grid-area:types}
+  .screen--review .review{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}
+}
+
 @media(max-width:359px){
   :root{--pad:11px}
   .tile{gap:8px;padding:8px}

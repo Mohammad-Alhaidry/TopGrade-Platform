@@ -41,7 +41,7 @@ export async function showCourse(ctx, courseId) {
           h('div', {}, h('dt', {}, t('course.questions')), h('dd', {}, totalQuestions)),
           h('div', {}, h('dt', {}, t('course.mastered')), h('dd', { dir: 'ltr' }, `${percent}%`)))),
       h('div', { class: 'section-head' }, h('h2', {}, t('course.topics'))),
-      topics.map((x) => topicCard(course, x)),
+      h('div', { class: 'card-grid' }, topics.map((x) => topicCard(course, x))),
     ],
     foot: tabbar('courses', { badge: mistakes }),
   }));

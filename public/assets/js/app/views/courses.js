@@ -52,7 +52,7 @@ export async function showCourses(ctx) {
   const mistakes = summaries.reduce((n, c) => n + c.mistakes, 0);
   mount(screen({
     bar: pagebar({ title: t('courses.title'), end: h('span', { class: 'pagebar__meta' }, t('n.courses', { n: summaries.length })) }),
-    body: summaries.map(courseCard),
+    body: h('div', { class: 'card-grid' }, summaries.map(courseCard)),
     foot: tabbar('courses', { badge: mistakes }),
   }));
 }
