@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /preview/
 
-Sitemap: https://app.topgradeedu.com/sitemap.xml
+Sitemap: https://smartpro-edu.com/sitemap.xml
