@@ -18,7 +18,6 @@ const S = {
   'tab.review': { en: 'Review', ar: 'المراجعة' },
   'tab.badge': { en: '{n} to review', ar: '{n} للمراجعة' },
   'back': { en: 'Back', ar: 'رجوع' },
-  'tagline': { en: 'Student services platform', ar: 'منصة خدمات طلابية' },
 
   // Counts
   'n.questions': {
