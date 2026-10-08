@@ -41,11 +41,9 @@
 <style>
 /* Shown until the app's first screen replaces it (also matches the install splash colour). */
 .splash{position:fixed;inset:0;display:grid;place-content:center;justify-items:center;gap:12px;background:#F3F6F5}
-.splash img{width:150px;height:auto}
+.splash img{width:190px;height:auto;padding:22px 24px;border-radius:28px;background:#0B0F0E}
 /* The installed app already gets the system launch screen with the logo; don't show it a second time. */
 [data-theme=dark] .splash{background:#070B0A}
-.splash__dark,[data-theme=dark] .splash__light{display:none}
-[data-theme=dark] .splash__dark{display:block}
 .installed .splash img{display:none}
 @media (display-mode: standalone),(display-mode: fullscreen){.splash img{display:none}}
 </style>
@@ -85,8 +83,7 @@
 <header id="hdr" class="hdr"></header>
 <div id="app" class="app">
 <div class="splash" role="status" aria-label="Opening Smart Pro">
-<img class="splash__light" src="assets/img/logo-full.png" width="360" height="295" alt="Smart Pro">
-<img class="splash__dark" src="assets/img/logo-full-dark.png" width="360" height="320" alt="Smart Pro">
+<img src="assets/img/logo-full.png" width="360" height="302" alt="Smart Pro">
 </div>
 </div>
 </div>
