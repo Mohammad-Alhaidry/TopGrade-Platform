@@ -55,6 +55,10 @@ const CACHE = `topgrade-${VERSION}`;
 const SCOPE = self.registration.scope;
 const SHELL = new URL('index.html', SCOPE).href;
 const PRECACHED = new Set(FILES.map((f) => new URL(f, SCOPE).href));
+// Previews are published under <scope>/preview/ with their own page and worker (or, when none is published,
+// the server redirects that address to the live app). Never answer those addresses with this app's page:
+// it would not know the /preview/ path and show "page not found".
+const PREVIEW = new URL('preview/', SCOPE).href;
 
 self.addEventListener('install', (event) => {
   event.waitUntil((async () => {
@@ -87,6 +91,7 @@ self.addEventListener('fetch', (event) => {
   if (request.method !== 'GET' || !request.url.startsWith(SCOPE)) return;
   // Every app URL (/, /courses/..., /review) is the same page.
   if (request.mode === 'navigate') {
+    if (request.url.startsWith(PREVIEW)) return;
     event.respondWith(fromCache(SHELL));
     return;
   }
