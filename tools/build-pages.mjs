@@ -166,7 +166,7 @@ export function generated() {
   files['sitemap.xml'] = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
     ...list.filter((p) => !p.noindex).map((p) => `  <url><loc>${esc(url(p.path))}</loc></url>`), '</urlset>', ''].join('\n');
   // /review is not blocked here: crawlers must be able to read its noindex tag.
-  files['robots.txt'] = ['User-agent: *', 'Allow: /', 'Disallow: /preview/', '', `Sitemap: ${url('sitemap.xml')}`, ''].join('\n');
+  files['robots.txt'] = ['User-agent: *', 'Allow: /', 'Disallow: /preview/', 'Disallow: /whatsapp', '', `Sitemap: ${url('sitemap.xml')}`, ''].join('\n');
   // Contact: the home page, where the «راسلنا» button is (the number itself stays only on that button).
   files['.well-known/security.txt'] = [`Contact: ${url('')}`, `Expires: ${SECURITY_TXT_EXPIRES}`, 'Preferred-Languages: ar, en',
     `Canonical: ${url('.well-known/security.txt')}`, ''].join('\n');
