@@ -42,5 +42,7 @@ test('first visit opens in Arabic, and the page head agrees before the app loads
   assert.equal(DEFAULT_LANG, 'ar');
   const html = readFileSync(new URL('../public/index.html', import.meta.url), 'utf8');
   assert.match(html, /<html lang="ar" dir="rtl">/);
-  assert.match(html, /getItem\('topgrade\.lang'\) === 'en'\) \{ d\.lang = 'en'; d\.dir = 'ltr'; \}/);
+  const boot = readFileSync(new URL('../public/assets/js/boot.js', import.meta.url), 'utf8');
+  assert.match(html, /<script src="assets\/js\/boot\.js"><\/script>/);
+  assert.match(boot, /getItem\('topgrade\.lang'\) === 'en'\) \{ d\.lang = 'en'; d\.dir = 'ltr'; \}/);
 });

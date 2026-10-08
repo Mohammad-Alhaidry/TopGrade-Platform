@@ -12,3 +12,21 @@ body{margin:0;color:var(--text);font-family:var(--english);-webkit-font-smoothin
 button,a{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
 button{font:inherit}
 button:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+
+/* Launch screen, shown until the app's first screen replaces it (also matches the install splash colour). */
+.splash{position:fixed;inset:0;display:grid;place-content:center;justify-items:center;gap:12px;background:#F3F6F5}
+.splash img{width:150px;height:auto}
+/* The installed app already gets the system launch screen with the logo; don't show it a second time. */
+[data-theme=dark] .splash{background:#070B0A}
+.splash__dark,[data-theme=dark] .splash__light{display:none}
+[data-theme=dark] .splash__dark{display:block}
+.installed .splash img{display:none}
+@media (display-mode: standalone),(display-mode: fullscreen){.splash img{display:none}}
+/* Each page's readable copy for search engines and link previews (tools/build-pages.mjs). It sits under the
+   launch screen and the app replaces it on start; without JavaScript it is the page. */
+.page-copy{max-width:720px;margin:0 auto;padding:24px 16px 40px;font:500 16px/1.7 var(--arabic);color:var(--text)}
+.page-copy h1{margin:0 0 8px;font-size:26px;line-height:1.3}
+.page-copy h2{margin:24px 0 8px;font-size:19px}
+.page-copy a{color:var(--primary)}
+.page-copy ul{padding-inline-start:20px}
+.page-copy nav{margin-bottom:16px;font-size:14px}

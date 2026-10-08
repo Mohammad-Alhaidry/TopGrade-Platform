@@ -16,8 +16,10 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 const PUBLIC = fileURLToPath(new URL('../public/', import.meta.url));
 const SW = join(PUBLIC, 'sw.js');
 const INDEX = join(PUBLIC, 'index.html');
-// Not needed offline: the worker itself and the link-preview image.
-const SKIP = new Set(['sw.js', 'assets/icons/og-image.png']);
+// Not needed offline: the worker itself, the link-preview image, and the files for search engines
+// (each page's readable copy under pages/, robots.txt, sitemap.xml; tools/build-pages.mjs writes them).
+const SKIP = new Set(['sw.js', 'assets/icons/og-image.png', 'robots.txt', 'sitemap.xml']);
+const SKIP_DIRS = ['pages/'];
 
 function walk(dir) {
   return readdirSync(dir).flatMap((name) => {
@@ -28,7 +30,7 @@ function walk(dir) {
 }
 
 export function generated() {
-  const files = walk(PUBLIC).filter((f) => !SKIP.has(f)).sort();
+  const files = walk(PUBLIC).filter((f) => !SKIP.has(f) && !SKIP_DIRS.some((d) => f.startsWith(d))).sort();
   const hash = createHash('sha256');
   for (const f of files) hash.update(f).update('\0').update(readFileSync(join(PUBLIC, f)));
   const version = hash.digest('hex').slice(0, 12);

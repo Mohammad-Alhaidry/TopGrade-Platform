@@ -9,7 +9,7 @@ import { t, lang, setLang, isRTL } from './i18n.js';
 import { theme, toggleTheme } from './theme.js';
 import { track } from './analytics.js';
 
-export const WHATSAPP_URL = 'https://wa.me/966549035737';
+export { WHATSAPP_URL } from './site.js';
 
 const root = document.getElementById('app');
 let keyHandler = null;
