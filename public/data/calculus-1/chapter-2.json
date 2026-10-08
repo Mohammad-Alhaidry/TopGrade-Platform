@@ -1,0 +1,2049 @@
+{
+  "schemaVersion": 1,
+  "course": {
+    "id": "calculus-1",
+    "titleAr": "تفاضل وتكامل 1",
+    "titleEn": "Calculus 1"
+  },
+  "topic": {
+    "id": "chapter-2",
+    "number": 2,
+    "title": "Limits and Continuity"
+  },
+  "questions": [
+    {
+      "id": "ch2-mcq-001",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 1} \\frac{x^2-4}{x^2+2}\\) is",
+      "options": [
+        "\\(1\\)",
+        "\\(-1\\)",
+        "\\(-\\frac{1}{2}\\)",
+        "\\(0\\)"
+      ],
+      "answer": "B",
+      "explanation": "The denominator is not zero at 1, so substitute: \\(\\frac{1-4}{1+2}=-1\\).",
+      "source": {
+        "page": 135
+      }
+    },
+    {
+      "id": "ch2-mcq-002",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to -1} \\frac{4-x^2}{x|x+1|}\\) is",
+      "options": [
+        "\\(1\\)",
+        "\\(0\\)",
+        "\\(-1\\)",
+        "\\(-\\infty\\)"
+      ],
+      "answer": "D",
+      "explanation": "The numerator tends to 3, while \\(x|x+1|\\to 0^-\\) (because \\(x\\approx -1<0\\) and \\(|x+1|>0\\)). So the limit is \\(\\frac{3}{0^-}=-\\infty\\).",
+      "source": {
+        "page": 135
+      }
+    },
+    {
+      "id": "ch2-mcq-003",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 3} \\frac{x-3}{2x-6}\\) is",
+      "options": [
+        "\\(0\\)",
+        "\\(1\\)",
+        "\\(\\frac{1}{2}\\)",
+        "\\(\\infty\\)"
+      ],
+      "answer": "C",
+      "explanation": "For \\(x\\ne 3\\), \\(\\frac{x-3}{2(x-3)}=\\frac{1}{2}\\).",
+      "source": {
+        "page": 135
+      }
+    },
+    {
+      "id": "ch2-mcq-004",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 0} \\frac{x}{x}\\) is",
+      "options": [
+        "\\(1\\)",
+        "\\(0\\)",
+        "\\(\\infty\\)",
+        "nonexistent"
+      ],
+      "answer": "A",
+      "explanation": "For \\(x\\ne 0\\), \\(\\frac{x}{x}=1\\); the limit only uses values of \\(x\\) near 0, not at 0.",
+      "source": {
+        "page": 135
+      }
+    },
+    {
+      "id": "ch2-mcq-005",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 4} \\frac{x^2+8}{x^2-8}\\) is",
+      "options": [
+        "\\(4\\)",
+        "\\(0\\)",
+        "\\(1\\)",
+        "\\(3\\)"
+      ],
+      "answer": "D",
+      "explanation": "Substitution: \\(\\frac{16+8}{16-8}=\\frac{24}{8}=3\\).",
+      "source": {
+        "page": 135
+      }
+    },
+    {
+      "id": "ch2-mcq-006",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to -2} \\frac{x^2-8}{4x^2-x-2}\\) is",
+      "options": [
+        "\\(-2\\)",
+        "\\(-\\frac{1}{4}\\)",
+        "\\(2\\)",
+        "nonexistent"
+      ],
+      "answer": "B",
+      "explanation": "Substitution: \\(\\frac{4-8}{16+2-2}=\\frac{-4}{16}=-\\frac{1}{4}\\).",
+      "source": {
+        "page": 135
+      }
+    },
+    {
+      "id": "ch2-mcq-007",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to \\infty} \\frac{5x^3+27}{20x^2+10x+9}\\) is",
+      "options": [
+        "\\(\\infty\\)",
+        "\\(\\frac{1}{4}\\)",
+        "\\(5\\)",
+        "\\(0\\)"
+      ],
+      "answer": "A",
+      "explanation": "The degree of the numerator (3) is greater than the degree of the denominator (2): the limit equals \\(\\lim \\frac{5x^3}{20x^2}=\\lim\\frac{x}{4}=\\infty\\).",
+      "source": {
+        "page": 135
+      }
+    },
+    {
+      "id": "ch2-mcq-008",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to \\infty} \\frac{3x^2+27}{x^3-27}\\) is",
+      "options": [
+        "\\(3\\)",
+        "\\(\\infty\\)",
+        "\\(1\\)",
+        "\\(0\\)"
+      ],
+      "answer": "D",
+      "explanation": "The degree of the denominator is greater, so the limit is \\(\\lim\\frac{3x^2}{x^3}=\\lim\\frac{3}{x}=0\\).",
+      "source": {
+        "page": 135
+      }
+    },
+    {
+      "id": "ch2-mcq-009",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to \\frac{2}{3}^-} (3x-2)\\) is",
+      "options": [
+        "\\(-1\\)",
+        "\\(1\\)",
+        "\\(0\\)",
+        "None of the above"
+      ],
+      "answer": "C",
+      "explanation": "A polynomial: substitute \\(x=\\frac{2}{3}\\) to get \\(3\\cdot\\frac{2}{3}-2=0\\).",
+      "source": {
+        "page": 135
+      }
+    },
+    {
+      "id": "ch2-mcq-010",
+      "type": "mcq",
+      "prompt": "If \\(\\lfloor x\\rfloor\\) is the greatest integer not greater than \\(x\\), then \\(\\lim_{x\\to \\frac{1}{2}} \\lfloor x\\rfloor\\) is",
+      "options": [
+        "\\(\\frac{1}{2}\\)",
+        "\\(1\\)",
+        "nonexistent",
+        "\\(0\\)"
+      ],
+      "answer": "D",
+      "explanation": "For \\(0\\le x<1\\), \\(\\lfloor x\\rfloor=0\\), so near \\(\\frac{1}{2}\\) the function is constant 0.",
+      "source": {
+        "page": 135
+      }
+    },
+    {
+      "id": "ch2-mcq-011",
+      "type": "mcq",
+      "prompt": "If \\(\\lfloor x\\rfloor\\) is the greatest integer not greater than \\(x\\), then \\(\\lim_{x\\to 1} \\lfloor x\\rfloor\\) is",
+      "options": [
+        "\\(0\\)",
+        "\\(1\\)",
+        "\\(2\\)",
+        "None of the above"
+      ],
+      "answer": "D",
+      "explanation": "\\(\\lim_{x\\to 1^-}\\lfloor x\\rfloor=0\\) but \\(\\lim_{x\\to 1^+}\\lfloor x\\rfloor=1\\); the one-sided limits differ, so the limit does not exist.",
+      "source": {
+        "page": 135
+      }
+    },
+    {
+      "id": "ch2-mcq-012",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 0} \\frac{\\tan(-2x)}{x}\\) is",
+      "options": [
+        "\\(0\\)",
+        "\\(-2\\)",
+        "\\(1\\)",
+        "\\(2\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(\\frac{\\tan(-2x)}{x}=-2\\cdot\\frac{\\tan(-2x)}{-2x}\\to -2\\cdot 1=-2\\).",
+      "source": {
+        "page": 135
+      }
+    },
+    {
+      "id": "ch2-mcq-013",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 0} \\frac{\\cos 2x}{|x|}\\) is",
+      "options": [
+        "\\(1\\)",
+        "\\(\\infty\\)",
+        "\\(\\frac{1}{2}\\)",
+        "\\(2\\)"
+      ],
+      "answer": "B",
+      "explanation": "The numerator tends to \\(\\cos 0=1\\) and \\(|x|\\to 0^+\\), so the quotient tends to \\(+\\infty\\).",
+      "source": {
+        "page": 136
+      }
+    },
+    {
+      "id": "ch2-mcq-014",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to \\infty} \\sin x\\) is",
+      "options": [
+        "nonexistent",
+        "infinity",
+        "zero",
+        "\\(1\\) or \\(-1\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\(\\sin x\\) keeps oscillating between \\(-1\\) and \\(1\\); a non-constant periodic function has no limit at \\(\\pm\\infty\\).",
+      "source": {
+        "page": 136
+      }
+    },
+    {
+      "id": "ch2-mcq-015",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 0} \\frac{\\sin 3x}{\\sin 4x}\\) is",
+      "options": [
+        "\\(1\\)",
+        "\\(\\frac{4}{3}\\)",
+        "\\(\\frac{3}{4}\\)",
+        "nonexistent"
+      ],
+      "answer": "C",
+      "explanation": "Write \\(\\frac{\\sin 3x}{\\sin 4x}=\\frac{3}{4}\\cdot\\frac{\\sin 3x}{3x}\\cdot\\frac{4x}{\\sin 4x}\\to\\frac{3}{4}\\).",
+      "source": {
+        "page": 136
+      }
+    },
+    {
+      "id": "ch2-mcq-016",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to \\infty} \\frac{1-\\cos(1/x)}{\\frac{2x}{x^3+1}}\\) is",
+      "options": [
+        "\\(\\frac{1}{2}\\)",
+        "\\(1\\)",
+        "\\(\\infty\\)",
+        "\\(\\frac{1}{4}\\)"
+      ],
+      "answer": "D",
+      "explanation": "With \\(y=\\frac{1}{x}\\to 0\\): the expression equals \\(\\frac{1-\\cos y}{y^2}\\cdot\\frac{x^3+1}{2x^3}\\to\\frac{1}{2}\\cdot\\frac{1}{2}=\\frac{1}{4}\\).",
+      "source": {
+        "page": 136
+      }
+    },
+    {
+      "id": "ch2-mcq-017",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 0} \\frac{\\sin(x+\\pi)}{x^2+3x}\\) is",
+      "options": [
+        "\\(1\\)",
+        "\\(-\\frac{1}{3}\\)",
+        "\\(\\frac{1}{3}\\)",
+        "\\(\\pi\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(\\sin(x+\\pi)=-\\sin x\\), so the expression is \\(-\\frac{\\sin x}{x}\\cdot\\frac{1}{x+3}\\to -\\frac{1}{3}\\).",
+      "source": {
+        "page": 136
+      }
+    },
+    {
+      "id": "ch2-mcq-018",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 0} \\sin\\left(\\frac{1}{x}\\right)\\) is",
+      "options": [
+        "\\(\\infty\\)",
+        "\\(1\\)",
+        "nonexistent",
+        "\\(-1\\)"
+      ],
+      "answer": "C",
+      "explanation": "As \\(x\\to 0\\), \\(\\frac{1}{x}\\to\\pm\\infty\\) and the sine keeps oscillating between \\(-1\\) and \\(1\\), so there is no limit.",
+      "source": {
+        "page": 136
+      }
+    },
+    {
+      "id": "ch2-mcq-019",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 0} \\frac{\\tan \\pi x}{x}\\) is",
+      "options": [
+        "\\(\\frac{1}{\\pi}\\)",
+        "\\(0\\)",
+        "\\(1\\)",
+        "\\(\\pi\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(\\frac{\\tan\\pi x}{x}=\\pi\\cdot\\frac{\\tan \\pi x}{\\pi x}\\to\\pi\\).",
+      "source": {
+        "page": 136
+      }
+    },
+    {
+      "id": "ch2-mcq-020",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to \\infty} x^2\\sin\\left(\\frac{1}{x}\\right)\\) is",
+      "options": [
+        "\\(1\\)",
+        "\\(0\\)",
+        "\\(\\infty\\)",
+        "None of the above"
+      ],
+      "answer": "C",
+      "explanation": "\\(x^2\\sin\\frac{1}{x}=x\\cdot\\frac{\\sin(1/x)}{1/x}\\); the second factor tends to 1 and \\(x\\to\\infty\\).",
+      "source": {
+        "page": 136
+      }
+    },
+    {
+      "id": "ch2-mcq-021",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 0} x\\csc x\\) is",
+      "options": [
+        "\\(-\\infty\\)",
+        "\\(-1\\)",
+        "\\(0\\)",
+        "\\(1\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(x\\csc x=\\frac{x}{\\sin x}\\to 1\\) by the sine limit identity.",
+      "source": {
+        "page": 136
+      }
+    },
+    {
+      "id": "ch2-mcq-022",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 0} \\frac{-(3-x)^2+1}{(2-x)(2+x)}\\) is",
+      "options": [
+        "\\(-4\\)",
+        "\\(-2\\)",
+        "\\(1\\)",
+        "nonexistent"
+      ],
+      "answer": "B",
+      "explanation": "Substitution: \\(\\frac{-9+1}{2\\cdot 2}=\\frac{-8}{4}=-2\\).",
+      "source": {
+        "page": 136
+      }
+    },
+    {
+      "id": "ch2-mcq-023",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 0} \\frac{|x|}{x}\\) is",
+      "options": [
+        "\\(0\\)",
+        "nonexistent",
+        "\\(1\\)",
+        "None of the above"
+      ],
+      "answer": "B",
+      "explanation": "The left-hand limit is \\(-1\\) and the right-hand limit is \\(1\\); they differ, so the limit does not exist.",
+      "source": {
+        "page": 136
+      }
+    },
+    {
+      "id": "ch2-mcq-024",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 0} x^2\\sin\\frac{1}{x}\\) is",
+      "options": [
+        "\\(\\infty\\)",
+        "nonexistent",
+        "\\(1\\)",
+        "\\(0\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(-x^2\\le x^2\\sin\\frac{1}{x}\\le x^2\\) and both bounds tend to 0, so by the Sandwich theorem the limit is 0.",
+      "source": {
+        "page": 136
+      }
+    },
+    {
+      "id": "ch2-mcq-025",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to \\pi} \\frac{\\sin(\\pi-x)}{\\pi-x}\\) is",
+      "options": [
+        "\\(1\\)",
+        "\\(0\\)",
+        "nonexistent",
+        "None of the above"
+      ],
+      "answer": "A",
+      "explanation": "Put \\(y=\\pi-x\\to 0\\): \\(\\frac{\\sin y}{y}\\to 1\\).",
+      "source": {
+        "page": 137
+      }
+    },
+    {
+      "id": "ch2-mcq-026",
+      "type": "mcq",
+      "prompt": "If \\(\\lfloor x\\rfloor\\) is the greatest integer not greater than \\(x\\), then \\(\\lim_{x\\to 1^-}\\lfloor x+1\\rfloor\\) is",
+      "options": [
+        "\\(-1\\)",
+        "\\(0\\)",
+        "\\(1\\)",
+        "\\(2\\)"
+      ],
+      "answer": "C",
+      "explanation": "For \\(0\\le x<1\\) we have \\(1\\le x+1<2\\), so \\(\\lfloor x+1\\rfloor=1\\).",
+      "source": {
+        "page": 137
+      }
+    },
+    {
+      "id": "ch2-mcq-027",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\begin{cases} x^2-1, & x\\ne 1\\\\ 4, & x=1\\end{cases}\\). Consider the statements I. \\(\\lim_{x\\to 1}f(x)\\) exists; II. \\(f(1)\\) exists; III. \\(f\\) is continuous at \\(x=1\\). Which statements are true?",
+      "options": [
+        "only I",
+        "only II",
+        "I and II",
+        "all of them"
+      ],
+      "answer": "C",
+      "explanation": "\\(\\lim_{x\\to 1}f(x)=0\\) and \\(f(1)=4\\) both exist, but \\(0\\ne 4\\), so \\(f\\) is not continuous at 1.",
+      "source": {
+        "page": 137
+      }
+    },
+    {
+      "id": "ch2-mcq-028",
+      "type": "mcq",
+      "prompt": "If \\(f(x)=\\begin{cases} \\frac{x^2-x}{2x}, & x\\ne 0\\\\ k, & x=0\\end{cases}\\) is continuous at \\(x=0\\), then \\(k\\) is",
+      "options": [
+        "\\(-1\\)",
+        "\\(-\\frac{1}{2}\\)",
+        "\\(0\\)",
+        "\\(\\frac{1}{2}\\)"
+      ],
+      "answer": "B",
+      "explanation": "For \\(x\\ne 0\\), \\(\\frac{x(x-1)}{2x}=\\frac{x-1}{2}\\to-\\frac{1}{2}\\); continuity requires \\(k=-\\frac{1}{2}\\).",
+      "source": {
+        "page": 137
+      }
+    },
+    {
+      "id": "ch2-mcq-029",
+      "type": "mcq",
+      "prompt": "Suppose \\(f(x)=\\frac{3x(x-1)}{x^2-3x+2}\\) for \\(x\\ne 1,2\\), \\(f(1)=-3\\) and \\(f(2)=4\\). Then \\(f\\) is continuous",
+      "options": [
+        "except at \\(x=1\\)",
+        "except at \\(x=2\\)",
+        "except at \\(x=1\\) or \\(x=2\\)",
+        "at each real number"
+      ],
+      "answer": "B",
+      "explanation": "For \\(x\\ne 1,2\\), \\(f(x)=\\frac{3x}{x-2}\\). At 1 the limit is \\(\\frac{3}{-1}=-3=f(1)\\); at 2 the limit is infinite, so \\(f\\) is discontinuous only at 2.",
+      "source": {
+        "page": 137
+      }
+    },
+    {
+      "id": "ch2-mcq-030",
+      "type": "mcq",
+      "prompt": "Find the limit \\(\\lim_{x\\to -1}\\left(\\frac{1}{x+1}-\\frac{x^2-2x}{x^3+1}\\right)\\).",
+      "options": [
+        "\\(\\infty\\)",
+        "\\(0\\)",
+        "\\(\\frac{1}{3}\\)",
+        "None of the above"
+      ],
+      "answer": "C",
+      "explanation": "Common denominator: \\(\\frac{x^2-x+1-x^2+2x}{x^3+1}=\\frac{x+1}{(x+1)(x^2-x+1)}=\\frac{1}{x^2-x+1}\\to\\frac{1}{3}\\).",
+      "source": {
+        "page": 137
+      }
+    },
+    {
+      "id": "ch2-mcq-031",
+      "type": "mcq",
+      "prompt": "Find the limit \\(\\lim_{x\\to 1}\\left(\\frac{1}{1-x}-\\frac{x^4+x^3+3x}{1-x^5}\\right)\\).",
+      "options": [
+        "\\(-\\infty\\)",
+        "\\(+\\infty\\)",
+        "\\(0\\)",
+        "None of the above"
+      ],
+      "answer": "C",
+      "explanation": "Since \\(1-x^5=(1-x)(1+x+x^2+x^3+x^4)\\), the difference is \\(\\frac{1-2x+x^2}{1-x^5}=\\frac{1-x}{1+x+x^2+x^3+x^4}\\to 0\\).",
+      "source": {
+        "page": 137
+      }
+    },
+    {
+      "id": "ch2-mcq-032",
+      "type": "mcq",
+      "prompt": "Compute \\(\\lim_{x\\to 3}\\frac{x^2-7x+12}{x-3}\\).",
+      "options": [
+        "\\(0\\)",
+        "\\(1\\)",
+        "\\(-1\\)",
+        "\\(-7\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(x^2-7x+12=(x-3)(x-4)\\), so the limit is \\(\\lim_{x\\to 3}(x-4)=-1\\).",
+      "source": {
+        "page": 138
+      }
+    },
+    {
+      "id": "ch2-mcq-033",
+      "type": "mcq",
+      "prompt": "Compute \\(\\lim_{x\\to +\\infty}\\left(\\sqrt{x^2+4x}-x\\right)\\).",
+      "options": [
+        "\\(+\\infty\\)",
+        "\\(-\\infty\\)",
+        "\\(2\\)",
+        "\\(-2\\)"
+      ],
+      "answer": "C",
+      "explanation": "Multiply by the conjugate: \\(\\frac{4x}{\\sqrt{x^2+4x}+x}=\\frac{4}{\\sqrt{1+4/x}+1}\\to 2\\).",
+      "source": {
+        "page": 138
+      }
+    },
+    {
+      "id": "ch2-mcq-034",
+      "type": "mcq",
+      "prompt": "Compute \\(\\lim_{x\\to -\\infty}\\left(\\sqrt{x^2+4x}+x\\right)\\).",
+      "options": [
+        "\\(+\\infty\\)",
+        "\\(-\\infty\\)",
+        "\\(-2\\)",
+        "\\(2\\)"
+      ],
+      "answer": "C",
+      "explanation": "Conjugate: \\(\\frac{4x}{\\sqrt{x^2+4x}-x}\\). For \\(x<0\\), \\(\\sqrt{x^2+4x}=|x|\\sqrt{1+4/x}=-x\\sqrt{1+4/x}\\), so the quotient tends to \\(\\frac{4x}{-2x}=-2\\).",
+      "source": {
+        "page": 138
+      }
+    },
+    {
+      "id": "ch2-mcq-035",
+      "type": "mcq",
+      "prompt": "The limit \\(\\lim_{h\\to 0}\\frac{\\sin(x+h)-\\sin x}{h}\\) is",
+      "options": [
+        "\\(1\\)",
+        "\\(0\\)",
+        "\\(\\cos x\\)",
+        "None of the above"
+      ],
+      "answer": "C",
+      "explanation": "\\(\\sin(x+h)-\\sin x=\\sin x(\\cos h-1)+\\cos x\\sin h\\); since \\(\\frac{\\cos h-1}{h}\\to 0\\) and \\(\\frac{\\sin h}{h}\\to 1\\), the limit is \\(\\cos x\\).",
+      "source": {
+        "page": 138
+      }
+    },
+    {
+      "id": "ch2-mcq-036",
+      "type": "mcq",
+      "prompt": "Find the limit \\(\\lim_{x\\to -2}\\frac{x^4+2x^3}{x^3+6x^2+12x+8}\\).",
+      "options": [
+        "\\(+\\infty\\)",
+        "\\(-\\infty\\)",
+        "\\(0\\)",
+        "None of the above"
+      ],
+      "answer": "B",
+      "explanation": "\\(\\frac{x^3(x+2)}{(x+2)^3}=\\frac{x^3}{(x+2)^2}\\to\\frac{-8}{0^+}=-\\infty\\).",
+      "source": {
+        "page": 138
+      }
+    },
+    {
+      "id": "ch2-mcq-037",
+      "type": "mcq",
+      "prompt": "Find the limit \\(\\lim_{x\\to +\\infty}\\frac{3x^2-\\sin(4x-5)}{x^2+1}\\).",
+      "options": [
+        "\\(3\\)",
+        "\\(4\\)",
+        "\\(0\\)",
+        "\\(+\\infty\\)"
+      ],
+      "answer": "A",
+      "explanation": "Since \\(-1\\le\\sin(4x-5)\\le 1\\): \\(\\frac{3x^2-1}{x^2+1}\\le f(x)\\le\\frac{3x^2+1}{x^2+1}\\); both bounds tend to 3, so by the Sandwich theorem the limit is 3.",
+      "source": {
+        "page": 138
+      }
+    },
+    {
+      "id": "ch2-mcq-038",
+      "type": "mcq",
+      "prompt": "By evaluating \\(f(x)=\\frac{x-1}{x^2-1}\\) at values of \\(x\\) close to 1 (0.99, 0.999, 1.001, 1.01, ...), one guesses that \\(\\lim_{x\\to 1}f(x)\\) equals",
+      "options": [
+        "\\(0\\)",
+        "\\(\\frac{1}{2}\\)",
+        "\\(1\\)",
+        "it does not exist, because \\(f(1)\\) is not defined"
+      ],
+      "answer": "B",
+      "explanation": "The values approach 0.5 from both sides. Indeed \\(f(x)=\\frac{1}{x+1}\\) for \\(x\\ne 1\\); the value at 1 does not matter for the limit.",
+      "source": {
+        "page": 139
+      }
+    },
+    {
+      "id": "ch2-mcq-039",
+      "type": "mcq",
+      "prompt": "Which line is a horizontal asymptote of the graph of \\(f(x)=\\frac{2x+1}{x-3}\\) at \\(+\\infty\\)?",
+      "options": [
+        "\\(y=2\\)",
+        "\\(x=3\\)",
+        "\\(y=-\\frac{1}{3}\\)",
+        "\\(y=0\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\(\\lim_{x\\to+\\infty}f(x)=\\frac{2}{1}=2\\) (equal degrees: ratio of leading coefficients), so \\(y=2\\) is a horizontal asymptote. \\(x=3\\) is a vertical asymptote.",
+      "source": {
+        "page": 99
+      }
+    },
+    {
+      "id": "ch2-mcq-040",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\frac{1}{x}+\\frac{1}{2}x+1\\) on \\(\\mathbb{R}^*\\). Which line is an oblique asymptote of the graph of \\(f\\) at \\(+\\infty\\)?",
+      "options": [
+        "\\(y=\\frac{1}{2}x\\)",
+        "\\(y=1\\)",
+        "\\(x=0\\)",
+        "\\(y=\\frac{1}{2}x+1\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(f(x)-\\left(\\frac{1}{2}x+1\\right)=\\frac{1}{x}\\to 0\\), so \\(y=\\frac{1}{2}x+1\\) is an oblique asymptote.",
+      "source": {
+        "page": 100
+      }
+    },
+    {
+      "id": "ch2-mcq-041",
+      "type": "mcq",
+      "prompt": "Let \\(Q(x)=\\frac{x^2+2x-3}{x+1}\\). Given that \\(\\lim_{x\\to\\pm\\infty}\\frac{Q(x)}{x}=1\\), which line is an oblique asymptote of the graph of \\(Q\\)?",
+      "options": [
+        "\\(y=x+1\\)",
+        "\\(y=x\\)",
+        "\\(y=x-3\\)",
+        "\\(x=-1\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\(Q(x)-x=\\frac{x-3}{x+1}\\to 1\\), hence \\(Q(x)-(x+1)\\to 0\\) and \\(y=x+1\\) is the asymptote.",
+      "source": {
+        "page": 163
+      }
+    },
+    {
+      "id": "ch2-mcq-042",
+      "type": "mcq",
+      "prompt": "For \\(Q(x)=\\frac{x^2+2x-3}{x+1}\\), the difference \\(Q(x)-(x+1)\\) equals",
+      "options": [
+        "\\(\\frac{4}{x+1}\\)",
+        "\\(-\\frac{4}{x+1}\\)",
+        "\\(\\frac{x-3}{x+1}\\)",
+        "\\(-\\frac{2}{x+1}\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(x^2+2x-3-(x+1)^2=x^2+2x-3-x^2-2x-1=-4\\), so the difference is \\(-\\frac{4}{x+1}\\): the graph is below the asymptote for \\(x>-1\\) and above it for \\(x<-1\\).",
+      "source": {
+        "page": 163
+      }
+    },
+    {
+      "id": "ch2-mcq-043",
+      "type": "mcq",
+      "prompt": "The vertical asymptote(s) of the graph of \\(f(x)=\\frac{x-1}{x^2-1}\\):",
+      "options": [
+        "\\(x=-1\\) only",
+        "\\(x=1\\) only",
+        "\\(x=1\\) and \\(x=-1\\)",
+        "\\(y=0\\) only"
+      ],
+      "answer": "A",
+      "explanation": "For \\(x\\ne\\pm 1\\), \\(f(x)=\\frac{1}{x+1}\\). At \\(x=1\\) the limit is \\(\\frac{1}{2}\\) (finite), while at \\(x=-1\\) the function tends to \\(\\pm\\infty\\).",
+      "source": {
+        "page": 101
+      }
+    },
+    {
+      "id": "ch2-mcq-044",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to -1^+}\\frac{x}{(x+1)(x-2)}\\) is",
+      "options": [
+        "\\(-\\infty\\)",
+        "\\(+\\infty\\)",
+        "\\(\\frac{1}{3}\\)",
+        "\\(0\\)"
+      ],
+      "answer": "B",
+      "explanation": "The numerator tends to \\(-1\\); for \\(-1<x<2\\), \\((x+1)(x-2)<0\\), so the denominator tends to \\(0^-\\). Thus the limit is \\(\\frac{-1}{0^-}=+\\infty\\).",
+      "source": {
+        "page": 142
+      }
+    },
+    {
+      "id": "ch2-mcq-045",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to -3^-}\\frac{-2}{x+3}\\) is",
+      "options": [
+        "\\(-\\infty\\)",
+        "\\(0\\)",
+        "\\(-2\\)",
+        "\\(+\\infty\\)"
+      ],
+      "answer": "D",
+      "explanation": "For \\(x<-3\\), \\(x+3\\to 0^-\\), so \\(\\frac{-2}{0^-}=+\\infty\\).",
+      "source": {
+        "page": 141
+      }
+    },
+    {
+      "id": "ch2-mcq-046",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 1^-}\\frac{3x^2+1}{\\sqrt{1-x}}\\) is",
+      "options": [
+        "\\(+\\infty\\)",
+        "\\(4\\)",
+        "\\(-\\infty\\)",
+        "it does not exist, because the function is not defined for \\(x>1\\)"
+      ],
+      "answer": "A",
+      "explanation": "The numerator tends to 4 and \\(\\sqrt{1-x}\\to 0^+\\) as \\(x\\to 1^-\\), so the quotient tends to \\(+\\infty\\). Only values \\(x<1\\) are needed for a left-hand limit.",
+      "source": {
+        "page": 148
+      }
+    },
+    {
+      "id": "ch2-mcq-047",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=ax+\\frac{2}{x-b}\\). Find \\(a\\) and \\(b\\) given that \\(\\lim_{x\\to 3^+}f(x)=+\\infty\\) and \\(\\lim_{x\\to 5}f(x)=11\\).",
+      "options": [
+        "\\(a=3,\\ b=2\\)",
+        "\\(a=2,\\ b=3\\)",
+        "\\(a=\\frac{11}{5},\\ b=3\\)",
+        "\\(a=2,\\ b=-3\\)"
+      ],
+      "answer": "B",
+      "explanation": "An infinite limit at \\(3^+\\) needs \\(x-b\\to 0^+\\), so \\(b=3\\). Then \\(f(5)=5a+\\frac{2}{2}=11\\) gives \\(a=2\\).",
+      "source": {
+        "page": 143
+      }
+    },
+    {
+      "id": "ch2-mcq-048",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to -\\infty}\\sqrt[3]{x}\\) is",
+      "options": [
+        "\\(+\\infty\\)",
+        "\\(0\\)",
+        "\\(-\\infty\\)",
+        "not defined"
+      ],
+      "answer": "C",
+      "explanation": "For an odd root, \\(\\sqrt[3]{x}\\) is defined for \\(x<0\\) and \\(\\sqrt[3]{x}<B\\) whenever \\(x<B^3\\); so the limit is \\(-\\infty\\).",
+      "source": {
+        "page": 115
+      }
+    },
+    {
+      "id": "ch2-mcq-049",
+      "type": "mcq",
+      "prompt": "Given \\(\\lim_{x\\to 2}f(x)=4\\) and \\(\\lim_{x\\to 2}g(x)=-2\\), find \\(\\lim_{x\\to 2}\\left[f(x)+5g(x)\\right]\\).",
+      "options": [
+        "\\(14\\)",
+        "\\(2\\)",
+        "\\(-10\\)",
+        "\\(-6\\)"
+      ],
+      "answer": "D",
+      "explanation": "By the sum and scalar multiple rules: \\(4+5(-2)=-6\\).",
+      "source": {
+        "page": 158
+      }
+    },
+    {
+      "id": "ch2-mcq-050",
+      "type": "mcq",
+      "prompt": "If \\(\\lim_{x\\to c}f(x)=8\\), then \\(\\lim_{x\\to c}\\left[f(x)\\right]^{\\frac{2}{3}}\\) equals",
+      "options": [
+        "\\(4\\)",
+        "\\(\\frac{16}{3}\\)",
+        "\\(2\\)",
+        "\\(64\\)"
+      ],
+      "answer": "A",
+      "explanation": "By Corollary 2.1.2, the limit is \\(8^{\\frac{2}{3}}=\\left(\\sqrt[3]{8}\\right)^2=4\\).",
+      "source": {
+        "page": 105
+      }
+    },
+    {
+      "id": "ch2-mcq-051",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 1}\\frac{\\sin(x-1)}{x^2+x-2}\\) is",
+      "options": [
+        "\\(1\\)",
+        "\\(\\frac{1}{3}\\)",
+        "\\(0\\)",
+        "\\(\\frac{1}{2}\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(x^2+x-2=(x-1)(x+2)\\), so the expression is \\(\\frac{\\sin(x-1)}{x-1}\\cdot\\frac{1}{x+2}\\to 1\\cdot\\frac{1}{3}\\) (limit of a composite function).",
+      "source": {
+        "page": 160
+      }
+    },
+    {
+      "id": "ch2-mcq-052",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to -\\infty}\\cos\\left(\\frac{1}{x}\\right)\\) is",
+      "options": [
+        "\\(1\\)",
+        "\\(0\\)",
+        "does not exist",
+        "\\(-1\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\(u=\\frac{1}{x}\\to 0\\) and \\(\\lim_{u\\to 0}\\cos u=1\\), so by composition the limit is 1.",
+      "source": {
+        "page": 143
+      }
+    },
+    {
+      "id": "ch2-mcq-053",
+      "type": "mcq",
+      "prompt": "If \\(4x-9\\le f(x)\\le x^2-4x+7\\) for \\(x\\ge 0\\), then \\(\\lim_{x\\to 4}f(x)\\) is",
+      "options": [
+        "\\(4\\)",
+        "\\(16\\)",
+        "cannot be determined",
+        "\\(7\\)"
+      ],
+      "answer": "D",
+      "explanation": "Both bounds tend to 7 at \\(x=4\\) (\\(16-9=7\\) and \\(16-16+7=7\\)), so by the Sandwich theorem the limit is 7.",
+      "source": {
+        "page": 159
+      }
+    },
+    {
+      "id": "ch2-mcq-054",
+      "type": "mcq",
+      "prompt": "For \\(x>0\\) one has \\(1<\\frac{\\sqrt{1+x^2}}{x}<1+\\frac{1}{x}\\). Hence \\(\\lim_{x\\to+\\infty}\\frac{\\sqrt{1+x^2}}{x}\\) is",
+      "options": [
+        "\\(0\\)",
+        "\\(1\\)",
+        "\\(+\\infty\\)",
+        "\\(2\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(1+\\frac{1}{x}\\to 1\\), so by the Sandwich theorem the limit is 1.",
+      "source": {
+        "page": 165
+      }
+    },
+    {
+      "id": "ch2-mcq-055",
+      "type": "mcq",
+      "prompt": "If \\(\\lim_{x\\to 1}\\frac{f(x)-8}{x-1}=10\\), then \\(\\lim_{x\\to 1}f(x)\\) is",
+      "options": [
+        "\\(10\\)",
+        "\\(18\\)",
+        "\\(8\\)",
+        "\\(0\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(f(x)-8=\\frac{f(x)-8}{x-1}\\cdot(x-1)\\to 10\\cdot 0=0\\), so \\(f(x)\\to 8\\).",
+      "source": {
+        "page": 159
+      }
+    },
+    {
+      "id": "ch2-mcq-056",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to -2}\\left(-3x^3+4\\right)\\) is",
+      "options": [
+        "\\(28\\)",
+        "\\(-20\\)",
+        "\\(-8\\)",
+        "\\(4\\)"
+      ],
+      "answer": "A",
+      "explanation": "Substitution: \\(-3(-2)^3+4=-3(-8)+4=28\\).",
+      "source": {
+        "page": 108
+      }
+    },
+    {
+      "id": "ch2-mcq-057",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to -\\infty}\\left(-3x^7-5x^4+11\\right)\\) is",
+      "options": [
+        "\\(+\\infty\\)",
+        "\\(-\\infty\\)",
+        "\\(-3\\)",
+        "\\(0\\)"
+      ],
+      "answer": "A",
+      "explanation": "At \\(\\pm\\infty\\) a polynomial behaves like its leading term: \\(-3x^7\\to -3\\cdot(-\\infty)=+\\infty\\) (odd power).",
+      "source": {
+        "page": 109
+      }
+    },
+    {
+      "id": "ch2-mcq-058",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 2}\\frac{x^3+1}{x}\\) is",
+      "options": [
+        "\\(\\frac{17}{2}\\)",
+        "\\(9\\)",
+        "\\(4\\)",
+        "\\(\\frac{9}{2}\\)"
+      ],
+      "answer": "D",
+      "explanation": "The denominator is not zero at 2: \\(\\frac{8+1}{2}=\\frac{9}{2}\\).",
+      "source": {
+        "page": 146
+      }
+    },
+    {
+      "id": "ch2-mcq-059",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to -3}\\frac{-3x^4+x-30}{x(x+3)^2}\\) is",
+      "options": [
+        "\\(-\\infty\\)",
+        "\\(+\\infty\\)",
+        "\\(0\\)",
+        "does not exist, since the one-sided limits differ"
+      ],
+      "answer": "B",
+      "explanation": "The numerator tends to \\(-276\\); \\(x(x+3)^2\\to 0^-\\) on both sides (since \\(x<0\\) and \\((x+3)^2>0\\)). So the limit is \\(\\frac{-276}{0^-}=+\\infty\\).",
+      "source": {
+        "page": 110
+      }
+    },
+    {
+      "id": "ch2-mcq-060",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 2^+}\\frac{3x^2-x-1}{x^2-5x+6}\\) is",
+      "options": [
+        "\\(+\\infty\\)",
+        "\\(9\\)",
+        "\\(-\\infty\\)",
+        "\\(0\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(P(2)=9\\) and \\(x^2-5x+6=(x-2)(x-3)\\to 0^-\\) as \\(x\\to 2^+\\), so the limit is \\(\\frac{9}{0^-}=-\\infty\\).",
+      "source": {
+        "page": 110
+      }
+    },
+    {
+      "id": "ch2-mcq-061",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 2}\\frac{3x^2-x-10}{x^2-5x+6}\\) is",
+      "options": [
+        "\\(-11\\)",
+        "\\(11\\)",
+        "\\(-\\frac{5}{3}\\)",
+        "\\(0\\)"
+      ],
+      "answer": "A",
+      "explanation": "Factor: \\(\\frac{(x-2)(3x+5)}{(x-2)(x-3)}=\\frac{3x+5}{x-3}\\to\\frac{11}{-1}=-11\\).",
+      "source": {
+        "page": 111
+      }
+    },
+    {
+      "id": "ch2-mcq-062",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 1^-}\\frac{x^2+3x-4}{2x^3-3x^2+1}\\) is",
+      "options": [
+        "\\(\\frac{5}{3}\\)",
+        "\\(-\\infty\\)",
+        "\\(+\\infty\\)",
+        "\\(0\\)"
+      ],
+      "answer": "B",
+      "explanation": "For \\(x\\ne 1\\) the quotient is \\(\\frac{x+4}{2x^2-x-1}=\\frac{x+4}{(x-1)(2x+1)}\\); as \\(x\\to 1^-\\) the denominator tends to \\(0^-\\), giving \\(\\frac{5}{0^-}=-\\infty\\).",
+      "source": {
+        "page": 112
+      }
+    },
+    {
+      "id": "ch2-mcq-063",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 25}\\frac{5-\\sqrt{x}}{x-25}\\) is",
+      "options": [
+        "\\(-\\frac{1}{10}\\)",
+        "\\(\\frac{1}{10}\\)",
+        "\\(-\\frac{1}{5}\\)",
+        "\\(0\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\(x-25=(\\sqrt{x}-5)(\\sqrt{x}+5)\\), so the quotient is \\(-\\frac{1}{\\sqrt{x}+5}\\to-\\frac{1}{10}\\).",
+      "source": {
+        "page": 112
+      }
+    },
+    {
+      "id": "ch2-mcq-064",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to \\pm\\infty}\\frac{3x^2-x-10}{-7x^2-5x+6}\\) is",
+      "options": [
+        "\\(\\frac{3}{7}\\)",
+        "\\(-\\frac{5}{3}\\)",
+        "\\(0\\)",
+        "\\(-\\frac{3}{7}\\)"
+      ],
+      "answer": "D",
+      "explanation": "Equal degrees: the limit is the ratio of the leading coefficients, \\(\\frac{3}{-7}\\).",
+      "source": {
+        "page": 113
+      }
+    },
+    {
+      "id": "ch2-mcq-065",
+      "type": "mcq",
+      "prompt": "Is there a number \\(a\\) such that \\(\\lim_{x\\to -2}\\frac{3x^2+ax+a+3}{x^2+x-2}\\) exists? If so, find \\(a\\) and the limit.",
+      "options": [
+        "\\(a=15\\) and the limit is \\(-1\\)",
+        "\\(a=15\\) and the limit is \\(1\\)",
+        "\\(a=-15\\) and the limit is \\(-1\\)",
+        "no such \\(a\\) exists"
+      ],
+      "answer": "A",
+      "explanation": "The denominator vanishes at \\(-2\\), so the numerator must too: \\(12-2a+a+3=0\\Rightarrow a=15\\). Then \\(\\frac{3(x+2)(x+3)}{(x+2)(x-1)}\\to\\frac{3}{-3}=-1\\).",
+      "source": {
+        "page": 159
+      }
+    },
+    {
+      "id": "ch2-mcq-066",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 5}\\frac{\\sqrt{x-1}-2}{x^2-25}\\) is",
+      "options": [
+        "\\(\\frac{1}{10}\\)",
+        "\\(\\frac{1}{40}\\)",
+        "\\(\\frac{1}{4}\\)",
+        "\\(0\\)"
+      ],
+      "answer": "B",
+      "explanation": "Multiply by the conjugate: \\(\\frac{x-5}{(x-5)(x+5)(\\sqrt{x-1}+2)}=\\frac{1}{(x+5)(\\sqrt{x-1}+2)}\\to\\frac{1}{10\\cdot 4}\\).",
+      "source": {
+        "page": 115
+      }
+    },
+    {
+      "id": "ch2-mcq-067",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to -\\infty}\\frac{\\sqrt{9x^2+2}}{4x+3}\\) is",
+      "options": [
+        "\\(\\frac{3}{4}\\)",
+        "\\(-\\frac{9}{4}\\)",
+        "\\(-\\frac{3}{4}\\)",
+        "\\(\\frac{9}{4}\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(\\sqrt{9x^2+2}=|x|\\sqrt{9+\\frac{2}{x^2}}\\) and \\(|x|=-x\\) for \\(x<0\\), so the quotient tends to \\(\\frac{-3}{4}\\).",
+      "source": {
+        "page": 115
+      }
+    },
+    {
+      "id": "ch2-mcq-068",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to +\\infty}\\left(\\sqrt{x^2-2x+3}-\\sqrt{x^2+x}\\right)\\) is",
+      "options": [
+        "\\(\\frac{3}{2}\\)",
+        "\\(0\\)",
+        "\\(-\\frac{1}{2}\\)",
+        "\\(-\\frac{3}{2}\\)"
+      ],
+      "answer": "D",
+      "explanation": "Conjugate: \\(\\frac{-3x+3}{\\sqrt{x^2-2x+3}+\\sqrt{x^2+x}}\\); for \\(x>0\\) divide by \\(x\\): \\(\\frac{-3}{1+1}=-\\frac{3}{2}\\).",
+      "source": {
+        "page": 116
+      }
+    },
+    {
+      "id": "ch2-mcq-069",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 8}\\frac{\\sqrt[3]{x^2}-4}{\\sqrt{2x}-4}\\) is",
+      "options": [
+        "\\(\\frac{4}{3}\\)",
+        "\\(\\frac{3}{4}\\)",
+        "\\(\\frac{2}{3}\\)",
+        "\\(1\\)"
+      ],
+      "answer": "A",
+      "explanation": "Write it as \\(\\frac{1}{\\sqrt{2}}\\cdot\\frac{x^{2/3}-8^{2/3}}{x^{1/2}-8^{1/2}}\\) and use \\(\\lim\\frac{x^n-a^n}{x^m-a^m}=\\frac{n}{m}a^{n-m}\\): \\(\\frac{1}{\\sqrt{2}}\\cdot\\frac{4}{3}\\cdot 8^{1/6}=\\frac{4}{3}\\).",
+      "source": {
+        "page": 116
+      }
+    },
+    {
+      "id": "ch2-mcq-070",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 3}\\left(\\frac{1}{x-3}-\\frac{4}{x^2-2x-3}\\right)\\) is",
+      "options": [
+        "\\(\\frac{1}{5}\\)",
+        "\\(\\frac{1}{4}\\)",
+        "\\(0\\)",
+        "does not exist"
+      ],
+      "answer": "B",
+      "explanation": "Since \\(x^2-2x-3=(x-3)(x+1)\\): \\(\\frac{x+1-4}{(x-3)(x+1)}=\\frac{1}{x+1}\\to\\frac{1}{4}\\).",
+      "source": {
+        "page": 117
+      }
+    },
+    {
+      "id": "ch2-mcq-071",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 0^-}\\left(\\frac{1}{x}-\\frac{1}{|x|}\\right)\\) is",
+      "options": [
+        "\\(0\\)",
+        "\\(+\\infty\\)",
+        "\\(-\\infty\\)",
+        "\\(-2\\)"
+      ],
+      "answer": "C",
+      "explanation": "For \\(x<0\\), \\(|x|=-x\\), so the expression is \\(\\frac{2}{x}\\to-\\infty\\).",
+      "source": {
+        "page": 160
+      }
+    },
+    {
+      "id": "ch2-mcq-072",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to -\\frac{\\pi}{2}}\\frac{1+\\sin x}{\\cos^2 x}\\) is",
+      "options": [
+        "\\(\\frac{1}{2}\\)",
+        "\\(+\\infty\\)",
+        "\\(0\\)",
+        "\\(2\\)"
+      ],
+      "answer": "A",
+      "explanation": "Near \\(-\\frac{\\pi}{2}\\), \\(\\sin x=-\\sqrt{1-\\cos^2x}\\); multiplying by the conjugate gives \\(\\frac{1}{1+\\sqrt{1-\\cos^2 x}}\\to\\frac{1}{2}\\).",
+      "source": {
+        "page": 120
+      }
+    },
+    {
+      "id": "ch2-mcq-073",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 0}\\frac{\\sin 3x}{\\tan 5x}\\) is",
+      "options": [
+        "\\(\\frac{5}{3}\\)",
+        "\\(1\\)",
+        "\\(0\\)",
+        "\\(\\frac{3}{5}\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(\\frac{3}{5}\\cdot\\frac{\\sin 3x}{3x}\\cdot\\frac{5x}{\\tan 5x}\\to\\frac{3}{5}\\cdot 1\\cdot 1\\).",
+      "source": {
+        "page": 121
+      }
+    },
+    {
+      "id": "ch2-mcq-074",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to \\frac{\\pi}{2}^-}\\frac{4\\tan x}{1+\\sec x}\\) is",
+      "options": [
+        "\\(4\\)",
+        "\\(+\\infty\\)",
+        "\\(0\\)",
+        "\\(2\\)"
+      ],
+      "answer": "A",
+      "explanation": "Multiply numerator and denominator by \\(\\cos x\\): \\(\\frac{4\\sin x}{\\cos x+1}\\to\\frac{4}{1}=4\\).",
+      "source": {
+        "page": 121
+      }
+    },
+    {
+      "id": "ch2-mcq-075",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to \\frac{\\pi}{2}^+}\\tan x\\) is",
+      "options": [
+        "\\(+\\infty\\)",
+        "\\(-\\infty\\)",
+        "\\(0\\)",
+        "\\(1\\)"
+      ],
+      "answer": "B",
+      "explanation": "For \\(a=\\frac{\\pi}{2}+k\\pi\\), \\(\\lim_{x\\to a^\\pm}\\tan x=\\mp\\infty\\): just right of \\(\\frac{\\pi}{2}\\), \\(\\sin x\\approx 1\\) and \\(\\cos x\\to 0^-\\).",
+      "source": {
+        "page": 120
+      }
+    },
+    {
+      "id": "ch2-mcq-076",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 0}\\frac{x+\\sin x+\\sin 2x}{x(x^2-1)}\\) is",
+      "options": [
+        "\\(-4\\)",
+        "\\(4\\)",
+        "\\(-3\\)",
+        "\\(0\\)"
+      ],
+      "answer": "A",
+      "explanation": "Divide by \\(x\\): \\(\\frac{1+\\frac{\\sin x}{x}+2\\frac{\\sin 2x}{2x}}{x^2-1}\\to\\frac{1+1+2}{-1}=-4\\).",
+      "source": {
+        "page": 149
+      }
+    },
+    {
+      "id": "ch2-mcq-077",
+      "type": "mcq",
+      "prompt": "\\(\\lim_{x\\to 0}\\frac{\\sin x-\\tan x}{3x^3}\\) is",
+      "options": [
+        "\\(\\frac{1}{6}\\)",
+        "\\(-\\frac{1}{6}\\)",
+        "\\(-\\frac{1}{3}\\)",
+        "\\(0\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(\\sin x-\\tan x=-\\frac{\\sin x(1-\\cos x)}{\\cos x}\\), and \\(\\frac{\\sin x}{x}\\to 1\\), \\(\\frac{1-\\cos x}{x^2}\\to\\frac{1}{2}\\), so the limit is \\(-\\frac{1}{3}\\cdot\\frac{1}{2}=-\\frac{1}{6}\\).",
+      "source": {
+        "page": 150
+      }
+    },
+    {
+      "id": "ch2-mcq-078",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\frac{\\sqrt[4]{-x}}{2x+5}\\). Then \\(\\lim_{x\\to -16}f(x)\\) equals",
+      "options": [
+        "\\(\\frac{2}{27}\\)",
+        "\\(-\\frac{4}{27}\\)",
+        "\\(-\\frac{2}{27}\\)",
+        "\\(f\\) is not defined at \\(-16\\)"
+      ],
+      "answer": "C",
+      "explanation": "Substitution: \\(\\frac{\\sqrt[4]{16}}{2(-16)+5}=\\frac{2}{-27}\\); this equals \\(f(-16)\\), so \\(f\\) is continuous at \\(-16\\).",
+      "source": {
+        "page": 122
+      }
+    },
+    {
+      "id": "ch2-mcq-079",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=2x+5+\\sqrt{(x-2)(x-3)}\\) for \\(x\\in(-\\infty,2)\\cup(3,+\\infty)\\) and \\(f(2)=f(3)=11\\). Which statement is true?",
+      "options": [
+        "\\(f\\) is continuous from the left at 2",
+        "\\(f\\) is continuous from the right at 3, but not from the left at 2",
+        "\\(f\\) is continuous at 2",
+        "\\(f\\) is not continuous from the right at 3"
+      ],
+      "answer": "B",
+      "explanation": "\\(\\lim_{x\\to 2^-}f(x)=9\\ne f(2)=11\\), while \\(\\lim_{x\\to 3^+}f(x)=11=f(3)\\).",
+      "source": {
+        "page": 123
+      }
+    },
+    {
+      "id": "ch2-mcq-080",
+      "type": "mcq",
+      "prompt": "Find \\(k\\) such that \\(f(x)=\\begin{cases}2kx-5, & x>2\\\\ 3+2x, & x\\le 2\\end{cases}\\) is continuous at 2.",
+      "options": [
+        "\\(6\\)",
+        "\\(\\frac{1}{2}\\)",
+        "\\(2\\)",
+        "\\(3\\)"
+      ],
+      "answer": "D",
+      "explanation": "Left limit and \\(f(2)\\): \\(3+4=7\\). Right limit: \\(4k-5\\). So \\(4k-5=7\\), \\(k=3\\).",
+      "source": {
+        "page": 123
+      }
+    },
+    {
+      "id": "ch2-mcq-081",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=(x-2)^2\\) if \\(x<5\\), \\(f(5)=a\\), and \\(f(x)=(2x-b)^2\\) if \\(x>5\\). For which values is \\(f\\) continuous on \\(\\mathbb{R}\\)?",
+      "options": [
+        "\\(a=9\\) and \\(b=7\\) only",
+        "\\(a=9\\) and (\\(b=7\\) or \\(b=13\\))",
+        "\\(a=9\\) and \\(b=13\\) only",
+        "\\(a=3\\) and \\(b=7\\)"
+      ],
+      "answer": "B",
+      "explanation": "Need \\(9=a=(10-b)^2\\), so \\(a=9\\) and \\(10-b=\\pm 3\\), i.e. \\(b=7\\) or \\(b=13\\).",
+      "source": {
+        "page": 155
+      }
+    },
+    {
+      "id": "ch2-mcq-082",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=(ax)^2\\) for \\(x\\le 1\\) and \\(f(x)=a\\sin\\left(\\frac{\\pi}{2}x\\right)\\) for \\(x>1\\), where \\(a\\in\\mathbb{R}\\). For which values of \\(a\\) is \\(f\\) continuous on \\(\\mathbb{R}\\)?",
+      "options": [
+        "\\(a=1\\) only",
+        "\\(a=0\\) only",
+        "\\(a=0\\) or \\(a=1\\)",
+        "every real \\(a\\)"
+      ],
+      "answer": "C",
+      "explanation": "Left limit at 1: \\(a^2\\); right limit: \\(a\\sin\\frac{\\pi}{2}=a\\). Continuity requires \\(a^2=a\\), i.e. \\(a=0\\) or \\(a=1\\).",
+      "source": {
+        "page": 156
+      }
+    },
+    {
+      "id": "ch2-mcq-083",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\sqrt{x+2}\\) if \\(x\\ge -2\\) and \\(f(x)=\\frac{2x^2-|x^3|}{x+2}\\) if \\(x<-2\\). Then \\(\\lim_{x\\to -2^-}f(x)\\) is",
+      "options": [
+        "\\(0\\)",
+        "\\(-4\\)",
+        "\\(+\\infty\\)",
+        "\\(4\\)"
+      ],
+      "answer": "D",
+      "explanation": "For \\(x<-2\\), \\(|x^3|=-x^3\\), so \\(f(x)=\\frac{x^2(2+x)}{x+2}=x^2\\to 4\\). Since \\(f(-2)=0\\ne 4\\), \\(f\\) is not continuous at \\(-2\\).",
+      "source": {
+        "page": 152
+      }
+    },
+    {
+      "id": "ch2-mcq-084",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=x^2+1\\) if \\(x\\le 1\\), \\(f(x)=3-x\\) if \\(1<x\\le 4\\), \\(f(x)=\\sqrt{x}\\) if \\(x>4\\). Which statement is correct?",
+      "options": [
+        "\\(f\\) is discontinuous only at 4, where it is continuous from the left",
+        "\\(f\\) is discontinuous only at 4, where it is continuous from the right",
+        "\\(f\\) is discontinuous at 1 and at 4",
+        "\\(f\\) is discontinuous only at 1"
+      ],
+      "answer": "A",
+      "explanation": "At 1: both one-sided limits equal 2 = \\(f(1)\\). At 4: left limit \\(-1=f(4)\\), right limit \\(\\sqrt{4}=2\\).",
+      "source": {
+        "page": 161
+      }
+    },
+    {
+      "id": "ch2-mcq-085",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\frac{2x^2-5x-3}{x-3}\\) for \\(x\\ne 3\\) and \\(f(3)=6\\). At \\(x=3\\), \\(f\\) is",
+      "options": [
+        "continuous",
+        "discontinuous, with a removable discontinuity",
+        "discontinuous, with a jump discontinuity",
+        "discontinuous, with an infinite discontinuity"
+      ],
+      "answer": "B",
+      "explanation": "\\(2x^2-5x-3=(x-3)(2x+1)\\), so \\(\\lim_{x\\to 3}f(x)=7\\) exists but \\(7\\ne f(3)=6\\): the discontinuity is removable.",
+      "source": {
+        "page": 160
+      }
+    },
+    {
+      "id": "ch2-mcq-086",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\frac{3\\sin(x-2)}{x-2}\\) for \\(x\\ne 2\\) and \\(f(2)=1\\). Which value of \\(f(2)\\) would remove the discontinuity at 2?",
+      "options": [
+        "\\(1\\)",
+        "\\(0\\)",
+        "\\(3\\)",
+        "no value works"
+      ],
+      "answer": "C",
+      "explanation": "\\(\\lim_{x\\to 2}\\frac{3\\sin(x-2)}{x-2}=3\\cdot 1=3\\), so redefining \\(f(2)=3\\) makes \\(f\\) continuous at 2.",
+      "source": {
+        "page": 124
+      }
+    },
+    {
+      "id": "ch2-mcq-087",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\frac{x^2-4}{x^3-5x^2+6x}\\) for \\(x\\ne 2\\) and \\(f(2)=-2\\). The points of discontinuity of \\(f\\) are",
+      "options": [
+        "\\(0\\) and \\(3\\) only",
+        "\\(0\\), \\(2\\) and \\(3\\)",
+        "\\(2\\) only",
+        "\\(3\\) only"
+      ],
+      "answer": "A",
+      "explanation": "The denominator \\(x(x-2)(x-3)\\) vanishes at 0, 2, 3. At 2: \\(\\frac{x+2}{x(x-3)}\\to\\frac{4}{-2}=-2=f(2)\\), so \\(f\\) is continuous there; 0 and 3 are not in the domain.",
+      "source": {
+        "page": 128
+      }
+    },
+    {
+      "id": "ch2-mcq-088",
+      "type": "mcq",
+      "prompt": "The function \\(f(x)=\\sqrt{x^2+5x-5}\\) is continuous on",
+      "options": [
+        "\\(\\left[\\frac{-5-3\\sqrt{5}}{2},\\frac{-5+3\\sqrt{5}}{2}\\right]\\)",
+        "\\(\\left(-\\infty,\\frac{-5-3\\sqrt{5}}{2}\\right)\\cup\\left(\\frac{-5+3\\sqrt{5}}{2},+\\infty\\right)\\)",
+        "\\(\\mathbb{R}\\)",
+        "\\(\\left(-\\infty,\\frac{-5-3\\sqrt{5}}{2}\\right]\\cup\\left[\\frac{-5+3\\sqrt{5}}{2},+\\infty\\right)\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(f\\) is defined (and continuous, as a composition) where \\(x^2+5x-5\\ge 0\\), i.e. outside the roots \\(\\frac{-5\\pm 3\\sqrt{5}}{2}\\), endpoints included.",
+      "source": {
+        "page": 153
+      }
+    },
+    {
+      "id": "ch2-mcq-089",
+      "type": "mcq",
+      "prompt": "The domain of continuity of \\(h(x)=\\frac{1}{\\sqrt{x^2-5x+6}}\\) is",
+      "options": [
+        "\\((-\\infty,2]\\cup[3,+\\infty)\\)",
+        "\\((-\\infty,2)\\cup(3,+\\infty)\\)",
+        "\\((2,3)\\)",
+        "\\(\\mathbb{R}\\setminus\\{2,3\\}\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(\\frac{1}{\\sqrt{u}}\\) is continuous for \\(u>0\\), so we need \\(x^2-5x+6=(x-2)(x-3)>0\\): \\(x<2\\) or \\(x>3\\). The endpoints are excluded (division by zero).",
+      "source": {
+        "page": 129
+      }
+    },
+    {
+      "id": "ch2-mcq-090",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=-x^3+x^2-2x+5\\). In which interval does the Intermediate Value Theorem guarantee a zero of \\(f\\)?",
+      "options": [
+        "\\([0,1]\\)",
+        "\\([-1,0]\\)",
+        "\\([1,2]\\)",
+        "\\([2,3]\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(f\\) is a polynomial, so continuous; \\(f(1)=3>0\\) and \\(f(2)=-3<0\\), so 0 lies between \\(f(1)\\) and \\(f(2)\\). On the other intervals \\(f\\) does not change sign at the endpoints.",
+      "source": {
+        "page": 130
+      }
+    },
+    {
+      "id": "ch2-mcq-091",
+      "type": "mcq",
+      "prompt": "Suppose \\(f\\) is continuous on \\([1,5]\\) and the only solutions of \\(f(x)=6\\) are \\(x=1\\) and \\(x=4\\). If \\(f(2)=8\\), then",
+      "options": [
+        "\\(f(3)<6\\)",
+        "\\(f(3)=6\\)",
+        "nothing can be said about \\(f(3)\\)",
+        "\\(f(3)>6\\)"
+      ],
+      "answer": "D",
+      "explanation": "If \\(f(3)<6\\), then since \\(f(2)=8>6\\), the IVT would give a solution of \\(f(x)=6\\) between 2 and 3, a contradiction. And \\(f(3)\\ne 6\\). So \\(f(3)>6\\).",
+      "source": {
+        "page": 162
+      }
+    },
+    {
+      "id": "ch2-mcq-092",
+      "type": "mcq",
+      "prompt": "The sign of \\(f(x)=\\frac{x^2-4x+1}{(x+1)(x-1)}\\) on the interval \\(\\left(1,\\,2+\\sqrt{3}\\right)\\) is",
+      "options": [
+        "positive",
+        "negative",
+        "zero",
+        "positive then negative"
+      ],
+      "answer": "B",
+      "explanation": "\\(f\\) is continuous and non-zero on this interval, so it keeps one sign (Example 2.32); at \\(x=2\\): \\(\\frac{-3}{3}=-1<0\\).",
+      "source": {
+        "page": 131
+      }
+    },
+    {
+      "id": "ch2-mcq-093",
+      "type": "mcq",
+      "prompt": "The range of \\(f(x)=\\sqrt{25-x^2}-3\\) is",
+      "options": [
+        "\\([-5,5]\\)",
+        "\\([0,5]\\)",
+        "\\([-3,2]\\)",
+        "\\([-3,5]\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(f\\) is increasing on \\([-5,0]\\) and decreasing on \\([0,5]\\), with \\(f(\\pm 5)=-3\\) and \\(f(0)=2\\); so the range is \\([-3,2]\\).",
+      "source": {
+        "page": 132
+      }
+    },
+    {
+      "id": "ch2-mcq-094",
+      "type": "mcq",
+      "prompt": "The range of \\(f(x)=\\frac{x+3}{x-2}\\) is",
+      "options": [
+        "\\((-\\infty,1)\\cup(1,+\\infty)\\)",
+        "\\((-\\infty,2)\\cup(2,+\\infty)\\)",
+        "\\((-\\infty,-3)\\cup(-3,+\\infty)\\)",
+        "\\(\\mathbb{R}\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\(f\\) is decreasing on \\((-\\infty,2)\\) and on \\((2,+\\infty)\\): \\(f((-\\infty,2))=(-\\infty,1)\\) and \\(f((2,+\\infty))=(1,+\\infty)\\), since \\(\\lim_{x\\to\\pm\\infty}f(x)=1\\).",
+      "source": {
+        "page": 132
+      }
+    },
+    {
+      "id": "ch2-mcq-095",
+      "type": "mcq",
+      "prompt": "To prove that a function \\(f\\) has no limit at a point \\(a\\), an effective approach is to show that",
+      "options": [
+        "\\(f(a)\\) is not defined",
+        "the left-hand and right-hand limits at \\(a\\) are not equal",
+        "\\(f\\) is not a polynomial",
+        "\\(f(a)=0\\)"
+      ],
+      "answer": "B",
+      "explanation": "If \\(\\lim_{x\\to a^-}f(x)\\ne\\lim_{x\\to a^+}f(x)\\), the limit at \\(a\\) cannot exist. The value \\(f(a)\\) plays no role in the limit.",
+      "source": {
+        "page": 134
+      }
+    },
+    {
+      "id": "ch2-tf-001",
+      "type": "tf",
+      "prompt": "A function that tends to \\(+\\infty\\) as \\(x\\to+\\infty\\) is necessarily increasing.",
+      "answer": false,
+      "explanation": "The book's remark: such a function need not be increasing. For example \\(x+2\\sin x\\ge x-2\\) tends to \\(+\\infty\\) but oscillates.",
+      "source": {
+        "page": 98
+      }
+    },
+    {
+      "id": "ch2-tf-002",
+      "type": "tf",
+      "prompt": "If a function \\(f\\) is strictly increasing and positive on \\([0,+\\infty)\\), then \\(\\lim_{x\\to+\\infty}f(x)=+\\infty\\).",
+      "answer": false,
+      "explanation": "Counterexample: \\(f(x)=2-\\frac{1}{x+1}\\) is strictly increasing and positive, yet \\(\\lim_{x\\to+\\infty}f(x)=2\\).",
+      "source": {
+        "page": 140
+      }
+    },
+    {
+      "id": "ch2-tf-003",
+      "type": "tf",
+      "prompt": "If a function \\(f\\) has limit 0 at \\(+\\infty\\), then, provided \\(x\\) is sufficiently large, all values \\(f(x)\\) have the same sign.",
+      "answer": false,
+      "explanation": "\\(f(x)=\\frac{\\cos x}{x}\\) tends to 0 (by squeezing) but its graph oscillates around 0.",
+      "source": {
+        "page": 140
+      }
+    },
+    {
+      "id": "ch2-tf-004",
+      "type": "tf",
+      "prompt": "If a function \\(f\\) has limit \\(-1\\) at \\(+\\infty\\), then, provided \\(x\\) is sufficiently large, all values \\(f(x)\\) have the same sign.",
+      "answer": true,
+      "explanation": "For \\(x\\) large enough, \\(-1.5\\le f(x)\\le-0.5\\), so all values are negative.",
+      "source": {
+        "page": 140
+      }
+    },
+    {
+      "id": "ch2-tf-005",
+      "type": "tf",
+      "prompt": "A function can have two different limits at the same point.",
+      "answer": false,
+      "explanation": "Theorem 2.1.1 (Uniqueness): if a function admits a limit at a point (finite or infinite), this limit is unique.",
+      "source": {
+        "page": 104
+      }
+    },
+    {
+      "id": "ch2-tf-006",
+      "type": "tf",
+      "prompt": "\\(\\lim_{x\\to a}f(x)=l\\) exactly when \\(\\lim_{x\\to a^-}f(x)\\) and \\(\\lim_{x\\to a^+}f(x)\\) both exist and are equal to \\(l\\).",
+      "answer": true,
+      "explanation": "The limit exists when the function approaches the same value from both directions.",
+      "source": {
+        "page": 102
+      }
+    },
+    {
+      "id": "ch2-tf-007",
+      "type": "tf",
+      "prompt": "\\(1^{\\infty}\\) is a determinate form whose value is always 1.",
+      "answer": false,
+      "explanation": "\\(1^{\\infty}\\) is listed among the indeterminate forms, together with \\(\\infty-\\infty\\), \\(0\\times\\infty\\), \\(\\frac{\\infty}{\\infty}\\), \\(\\frac{0}{0}\\), \\(\\infty^0\\), \\(0^0\\).",
+      "source": {
+        "page": 104
+      }
+    },
+    {
+      "id": "ch2-tf-008",
+      "type": "tf",
+      "prompt": "Any non-constant periodic function fails to have a limit as \\(x\\to\\pm\\infty\\).",
+      "answer": true,
+      "explanation": "Stated in the book; for example \\(\\sin x\\), \\(\\cos x\\), \\(\\tan x\\), \\(\\cot x\\) have no limit at \\(\\pm\\infty\\).",
+      "source": {
+        "page": 120
+      }
+    },
+    {
+      "id": "ch2-tf-009",
+      "type": "tf",
+      "prompt": "\\(\\lim_{x\\to+\\infty}\\frac{\\sin x}{x}=1\\).",
+      "answer": false,
+      "explanation": "The identity \\(\\frac{\\sin x}{x}\\to 1\\) holds as \\(x\\to 0\\). As \\(x\\to+\\infty\\), \\(-\\frac{1}{x}\\le\\frac{\\sin x}{x}\\le\\frac{1}{x}\\), so the limit is 0 by the Sandwich theorem.",
+      "source": {
+        "page": 106
+      }
+    },
+    {
+      "id": "ch2-tf-010",
+      "type": "tf",
+      "prompt": "The equation \\(\\frac{x^2+x-6}{x-2}=x+3\\) holds for every real number \\(x\\).",
+      "answer": false,
+      "explanation": "The left side is not defined at \\(x=2\\). They agree only for \\(x\\ne 2\\), which is enough to give \\(\\lim_{x\\to 2}\\frac{x^2+x-6}{x-2}=\\lim_{x\\to 2}(x+3)=5\\).",
+      "source": {
+        "page": 159
+      }
+    },
+    {
+      "id": "ch2-tf-011",
+      "type": "tf",
+      "prompt": "If \\(\\lim_{x\\to a}\\left[f(x)+g(x)\\right]\\) exists, then \\(\\lim_{x\\to a}f(x)\\) and \\(\\lim_{x\\to a}g(x)\\) both exist.",
+      "answer": false,
+      "explanation": "Take \\(f(x)=\\frac{1}{x}\\), \\(g(x)=-\\frac{1}{x}\\) at \\(a=0\\): \\(f+g=0\\) has limit 0, but neither \\(f\\) nor \\(g\\) has a limit at 0.",
+      "source": {
+        "page": 159
+      }
+    },
+    {
+      "id": "ch2-tf-012",
+      "type": "tf",
+      "prompt": "If \\(f(x)\\le g(x)\\) near \\(c\\) and \\(\\lim_{x\\to c}f(x)=+\\infty\\), then \\(\\lim_{x\\to c}g(x)=+\\infty\\).",
+      "answer": true,
+      "explanation": "This is the variant of the Sandwich theorem for infinite limits.",
+      "source": {
+        "page": 107
+      }
+    },
+    {
+      "id": "ch2-tf-013",
+      "type": "tf",
+      "prompt": "If \\((c-\\delta,c+\\delta)\\subseteq\\mathcal{D}_f\\), then \\(f\\) is continuous at \\(c\\) if and only if \\(f\\) is continuous from the right and from the left at \\(c\\).",
+      "answer": true,
+      "explanation": "Proposition 2.2.1: at an interior point of the domain, continuity is equivalent to continuity from both sides.",
+      "source": {
+        "page": 123
+      }
+    },
+    {
+      "id": "ch2-tf-014",
+      "type": "tf",
+      "prompt": "A jump discontinuity at \\(c\\) can be removed by redefining the value \\(f(c)\\).",
+      "answer": false,
+      "explanation": "At a jump, \\(\\lim_{x\\to c^-}f(x)\\ne\\lim_{x\\to c^+}f(x)\\), so no single value \\(f(c)\\) works; one would have to change the expression of \\(f\\) on one side.",
+      "source": {
+        "page": 125
+      }
+    },
+    {
+      "id": "ch2-tf-015",
+      "type": "tf",
+      "prompt": "If \\(f\\) and \\(g\\) are continuous at \\(c\\), then \\(\\frac{f}{g}\\) is continuous at \\(c\\).",
+      "answer": false,
+      "explanation": "Theorem 2.2.1 needs the extra condition \\(g(c)\\ne 0\\); for example \\(\\frac{1}{x}\\) is not continuous at 0.",
+      "source": {
+        "page": 128
+      }
+    },
+    {
+      "id": "ch2-tf-016",
+      "type": "tf",
+      "prompt": "If \\(f\\) is continuous on \\([a,b]\\) and \\(f(a)\\) and \\(f(b)\\) have opposite signs, then \\(f(c)=0\\) for at least one \\(c\\in[a,b]\\).",
+      "answer": true,
+      "explanation": "0 lies between \\(f(a)\\) and \\(f(b)\\), so the Intermediate Value Theorem gives such a \\(c\\).",
+      "source": {
+        "page": 129
+      }
+    },
+    {
+      "id": "ch2-tf-017",
+      "type": "tf",
+      "prompt": "The image of an interval by a continuous function is an interval.",
+      "answer": true,
+      "explanation": "Corollary 2.2.1, a consequence of the Intermediate Value Theorem.",
+      "source": {
+        "page": 131
+      }
+    },
+    {
+      "id": "ch2-tf-018",
+      "type": "tf",
+      "prompt": "Let \\(f(0)=0\\) and \\(f(x)=\\frac{x+\\sqrt{x^2}}{x}\\) for \\(x\\ne 0\\). Then \\(f\\) is continuous at 0.",
+      "answer": false,
+      "explanation": "Since \\(\\sqrt{x^2}=|x|\\): for \\(x<0\\), \\(f(x)=0\\); for \\(x>0\\), \\(f(x)=2\\). The right-hand limit 2 differs from the left-hand limit 0, so \\(f\\) is discontinuous at 0.",
+      "source": {
+        "page": 152
+      }
+    },
+    {
+      "id": "ch2-tf-019",
+      "type": "tf",
+      "prompt": "A continuous function has the same sign between two consecutive roots.",
+      "answer": true,
+      "explanation": "Between consecutive roots \\(f\\ne 0\\); if it changed sign, the IVT would give another root in between (Example 2.32).",
+      "source": {
+        "page": 130
+      }
+    },
+    {
+      "id": "ch2-match-001",
+      "type": "matching",
+      "title": "Match each expression with its value (determinate or indeterminate form)",
+      "pairs": [
+        {
+          "left": "\\(\\frac{5}{+\\infty}\\)",
+          "right": "0"
+        },
+        {
+          "left": "\\((-\\infty)\\times(-\\infty)\\)",
+          "right": "+∞"
+        },
+        {
+          "left": "\\(\\frac{+\\infty}{0^-}\\)",
+          "right": "−∞"
+        },
+        {
+          "left": "\\(\\frac{\\infty}{\\infty}\\)",
+          "right": "indeterminate form"
+        }
+      ],
+      "source": {
+        "page": 103
+      }
+    },
+    {
+      "id": "ch2-match-002",
+      "type": "matching",
+      "title": "Match each limit of a reference function with its value",
+      "pairs": [
+        {
+          "left": "\\(\\lim_{x\\to-\\infty}x^4\\)",
+          "right": "+∞"
+        },
+        {
+          "left": "\\(\\lim_{x\\to-\\infty}x^3\\)",
+          "right": "−∞"
+        },
+        {
+          "left": "\\(\\lim_{x\\to+\\infty}\\frac{1}{\\sqrt{x}}\\)",
+          "right": "0"
+        },
+        {
+          "left": "\\(\\lim_{x\\to+\\infty}\\cos x\\)",
+          "right": "does not exist"
+        },
+        {
+          "left": "\\(\\lim_{x\\to-\\infty}\\sqrt{x}\\)",
+          "right": "not defined (outside the domain)"
+        }
+      ],
+      "source": {
+        "page": 100
+      }
+    },
+    {
+      "id": "ch2-match-003",
+      "type": "matching",
+      "title": "For \\(f(x)=\\frac{1}{x-2}\\), match each limit with its value",
+      "pairs": [
+        {
+          "left": "\\(\\lim_{x\\to 2^+}f(x)\\)",
+          "right": "+∞"
+        },
+        {
+          "left": "\\(\\lim_{x\\to 2^-}f(x)\\)",
+          "right": "−∞"
+        },
+        {
+          "left": "\\(\\lim_{x\\to +\\infty}f(x)\\)",
+          "right": "0"
+        },
+        {
+          "left": "\\(\\lim_{x\\to 3}f(x)\\)",
+          "right": "1"
+        }
+      ],
+      "source": {
+        "page": 141
+      }
+    },
+    {
+      "id": "ch2-match-004",
+      "type": "matching",
+      "title": "Let \\(P\\) and \\(Q\\) be polynomials. Match each case with \\(\\lim_{x\\to\\pm\\infty}\\frac{P(x)}{Q(x)}\\)",
+      "pairs": [
+        {
+          "left": "\\(\\deg P=\\deg Q\\)",
+          "right": "the ratio of the leading coefficients"
+        },
+        {
+          "left": "\\(\\deg P<\\deg Q\\)",
+          "right": "0"
+        },
+        {
+          "left": "\\(\\deg P>\\deg Q\\)",
+          "right": "+∞ or −∞"
+        }
+      ],
+      "source": {
+        "page": 113
+      }
+    },
+    {
+      "id": "ch2-match-005",
+      "type": "matching",
+      "title": "Match each function with the type of its discontinuity at the given point",
+      "pairs": [
+        {
+          "left": "\\(\\frac{3\\sin(x-2)}{x-2}\\) at \\(x=2\\)",
+          "right": "removable"
+        },
+        {
+          "left": "\\(\\frac{|x|}{x}\\) at \\(x=0\\)",
+          "right": "jump"
+        },
+        {
+          "left": "\\(\\frac{1}{(x-2)^{2/3}}\\) at \\(x=2\\)",
+          "right": "infinite"
+        },
+        {
+          "left": "\\(\\sqrt{x^2-4}\\) at \\(x=1\\)",
+          "right": "other (f is not defined near the point)"
+        }
+      ],
+      "source": {
+        "page": 124
+      }
+    },
+    {
+      "id": "ch2-match-006",
+      "type": "matching",
+      "title": "Match each statement with its meaning",
+      "pairs": [
+        {
+          "left": "\\(\\lim_{x\\to a^-}f(x)=L\\)",
+          "right": "left-hand limit of f at a is L"
+        },
+        {
+          "left": "\\(\\lim_{x\\to a^+}f(x)=L\\)",
+          "right": "right-hand limit of f at a is L"
+        },
+        {
+          "left": "\\(\\lim_{x\\to+\\infty}f(x)=l\\)",
+          "right": "y = l is a horizontal asymptote"
+        },
+        {
+          "left": "\\(\\lim_{x\\to a}f(x)=+\\infty\\)",
+          "right": "x = a is a vertical asymptote"
+        },
+        {
+          "left": "\\(\\lim_{x\\to+\\infty}\\left[f(x)-(ax+b)\\right]=0\\)",
+          "right": "y = ax + b is an oblique asymptote"
+        }
+      ],
+      "source": {
+        "page": 100
+      }
+    },
+    {
+      "id": "ch2-match-007",
+      "type": "matching",
+      "title": "Match each condition with the kind of continuity it defines",
+      "pairs": [
+        {
+          "left": "\\(\\lim_{x\\to c}f(x)=f(c)\\)",
+          "right": "continuous at c"
+        },
+        {
+          "left": "\\(\\lim_{x\\to c^+}f(x)=f(c)\\)",
+          "right": "continuous from the right at c"
+        },
+        {
+          "left": "\\(\\lim_{x\\to c^-}f(x)=f(c)\\)",
+          "right": "continuous from the left at c"
+        },
+        {
+          "left": "\\(f\\) continuous on \\((a,b)\\), from the right at \\(a\\) and from the left at \\(b\\)",
+          "right": "continuous on the closed interval [a, b]"
+        }
+      ],
+      "source": {
+        "page": 127
+      }
+    },
+    {
+      "id": "ch2-match-008",
+      "type": "matching",
+      "title": "Match each trigonometric limit with its value",
+      "pairs": [
+        {
+          "left": "\\(\\lim_{x\\to 0}\\frac{\\sin x}{x}\\)",
+          "right": "1"
+        },
+        {
+          "left": "\\(\\lim_{x\\to 0}\\frac{1-\\cos x}{x^2}\\)",
+          "right": "1/2"
+        },
+        {
+          "left": "\\(\\lim_{x\\to 0}\\sin x\\)",
+          "right": "0"
+        },
+        {
+          "left": "\\(\\lim_{x\\to+\\infty}\\cos x\\)",
+          "right": "does not exist"
+        },
+        {
+          "left": "\\(\\lim_{x\\to\\frac{\\pi}{2}^-}\\tan x\\)",
+          "right": "+∞"
+        }
+      ],
+      "source": {
+        "page": 120
+      }
+    },
+    {
+      "id": "ch2-match-009",
+      "type": "matching",
+      "title": "Match each statement with the name of the result",
+      "pairs": [
+        {
+          "left": "If \\(f\\le g\\le h\\) near \\(c\\) and \\(\\lim_{x\\to c}f(x)=\\lim_{x\\to c}h(x)=b\\), then \\(\\lim_{x\\to c}g(x)=b\\)",
+          "right": "Sandwich theorem"
+        },
+        {
+          "left": "If \\(\\lim_{x\\to c}f(x)=b\\) and \\(g\\) is continuous at \\(b\\), then \\(\\lim_{x\\to c}g(f(x))=g(b)\\)",
+          "right": "Composition rule"
+        },
+        {
+          "left": "If \\(f\\) is continuous on \\([a,b]\\) and \\(w\\) is between \\(f(a)\\) and \\(f(b)\\), then \\(f(c)=w\\) for some \\(c\\in[a,b]\\)",
+          "right": "Intermediate Value Theorem"
+        },
+        {
+          "left": "If a function admits a limit at a point, then this limit is unique",
+          "right": "Uniqueness theorem"
+        }
+      ],
+      "source": {
+        "page": 129
+      }
+    },
+    {
+      "id": "ch2-match-010",
+      "type": "matching",
+      "title": "Using \\(\\lim_{x\\to a}\\frac{x^n-a^n}{x-a}=na^{n-1}\\) and \\(\\lim_{x\\to a}\\frac{x^n-a^n}{x^m-a^m}=\\frac{n}{m}a^{n-m}\\), match each limit with its value",
+      "pairs": [
+        {
+          "left": "\\(\\lim_{x\\to 2}\\frac{x^5-32}{x-2}\\)",
+          "right": "80"
+        },
+        {
+          "left": "\\(\\lim_{x\\to -3}\\frac{x^3+27}{x+3}\\)",
+          "right": "27"
+        },
+        {
+          "left": "\\(\\lim_{x\\to 3}\\frac{3x^4-243}{x^3-27}\\)",
+          "right": "12"
+        },
+        {
+          "left": "\\(\\lim_{x\\to 1}\\frac{x^6-1}{x^4-1}\\)",
+          "right": "3/2"
+        }
+      ],
+      "source": {
+        "page": 112
+      }
+    },
+    {
+      "id": "ch2-match-011",
+      "type": "matching",
+      "title": "Match each function with its domain of continuity (\\(E(x)\\) is the integer part of \\(x\\))",
+      "pairs": [
+        {
+          "left": "\\(3x^2+x-1\\)",
+          "right": "all real numbers"
+        },
+        {
+          "left": "\\(\\frac{2x+1}{2x-1}\\)",
+          "right": "all real numbers except 1/2"
+        },
+        {
+          "left": "\\(x-E(x)\\)",
+          "right": "all real numbers except the integers"
+        },
+        {
+          "left": "\\(\\sqrt{x}+\\sqrt{1-x}\\)",
+          "right": "the closed interval [0, 1]"
+        }
+      ],
+      "source": {
+        "page": 153
+      }
+    },
+    {
+      "id": "ch2-match-012",
+      "type": "matching",
+      "title": "Match each limit with the technique that resolves it",
+      "pairs": [
+        {
+          "left": "\\(\\lim_{x\\to 9}\\frac{x-9}{\\sqrt{x}-3}\\)",
+          "right": "multiply by the conjugate"
+        },
+        {
+          "left": "\\(\\lim_{x\\to 2}\\frac{x^2-4}{x-2}\\)",
+          "right": "factor and simplify"
+        },
+        {
+          "left": "\\(\\lim_{x\\to 1}\\left(\\frac{1}{x-1}-\\frac{2}{x^2-1}\\right)\\)",
+          "right": "reduce to a common denominator"
+        },
+        {
+          "left": "\\(\\lim_{x\\to 0}\\frac{\\sin 3x}{x}\\)",
+          "right": "use the sine limit identity"
+        },
+        {
+          "left": "\\(\\lim_{x\\to 0}x^2\\sin\\frac{1}{x}\\)",
+          "right": "squeeze between two functions"
+        }
+      ],
+      "source": {
+        "page": 115
+      }
+    }
+  ]
+}

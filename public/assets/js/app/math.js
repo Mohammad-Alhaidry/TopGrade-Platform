@@ -35,7 +35,8 @@ export function rich(text) {
     const span = document.createElement('span');
     span.className = 'math';
     try {
-      temml.render(m[1], span, { throwOnError: true });
+      // Display style, as the book prints it: full-size fractions, limits written under "lim" (readable on a phone).
+      temml.render(`\\displaystyle ${m[1]}`, span, { throwOnError: true });
     } catch {
       span.textContent = m[1];
     }
