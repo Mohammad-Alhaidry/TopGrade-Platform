@@ -4,7 +4,7 @@
 
 import { h, icon, ICONS, WHATSAPP_SVG, staticSvg } from '../../quiz/dom.js';
 import { createSession } from '../../quiz/session.js';
-import { screen, tabbar, mount, forwardIcon, enText, WHATSAPP_URL } from '../shell.js';
+import { screen, tabbar, mount, forwardIcon, enText } from '../shell.js';
 import { href, navigate } from '../router.js';
 import { paths } from '../routes.js';
 import { readProgress, overall, streak } from '../progress.js';
@@ -15,6 +15,8 @@ import { t, lang } from '../i18n.js';
 import { courseSummaries, courseCard } from './courses.js';
 
 const QUICK_COUNT = 10;
+// The only place the WhatsApp number appears (owner's choice): the «راسلنا» button below.
+const WHATSAPP_URL = 'https://wa.me/966549035737';
 
 const today = () => new Intl.DateTimeFormat(lang() === 'ar' ? 'ar-SA-u-ca-gregory-nu-latn' : 'en-GB', { weekday: 'long', day: 'numeric', month: 'long' }).format(new Date());
 

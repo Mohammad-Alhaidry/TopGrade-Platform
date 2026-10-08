@@ -1,4 +1,4 @@
-Contact: https://wa.me/966549035737
+Contact: https://smartpro-edu.com/
 Expires: 2027-09-30T00:00:00.000Z
 Preferred-Languages: ar, en
 Canonical: https://smartpro-edu.com/.well-known/security.txt
