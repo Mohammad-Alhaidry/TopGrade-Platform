@@ -138,7 +138,8 @@ function helpCard() {
     h('span', { class: 'help__copy' },
       h('span', { class: 'help__title' }, t('home.help')),
       h('span', { class: 'help__sub' }, t('home.helpSub'))),
-    h('span', { class: 'help__btn' }, t('home.helpBtn')));
+    h('span', { class: 'help__btn' }, h('span', {}, t('home.helpBtn')), forwardIcon()),
+    h('span', { class: 'help__mark' }, staticSvg(WHATSAPP_SVG)));
 }
 
 export async function showHome(ctx) {
