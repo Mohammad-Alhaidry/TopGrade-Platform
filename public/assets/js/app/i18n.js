@@ -4,6 +4,8 @@
 
 export const LANGS = ['en', 'ar'];
 const STORAGE_KEY = 'topgrade.lang';
+// First visit (no saved choice): Arabic. The head script in index.html sets lang/dir to match before first paint.
+export const DEFAULT_LANG = 'ar';
 
 const S = {
   // Shell
@@ -235,10 +237,10 @@ function initialLang() {
   } catch {
     /* storage unavailable */
   }
-  return 'en';
+  return DEFAULT_LANG;
 }
 
-let current = typeof localStorage === 'undefined' ? 'en' : initialLang();
+let current = typeof localStorage === 'undefined' ? DEFAULT_LANG : initialLang();
 const listeners = new Set();
 
 export const lang = () => current;

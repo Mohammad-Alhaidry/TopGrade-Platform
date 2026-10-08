@@ -1,6 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { STRINGS, t, LANGS } from '../public/assets/js/app/i18n.js';
+import { readFileSync } from 'node:fs';
+import { STRINGS, t, LANGS, DEFAULT_LANG } from '../public/assets/js/app/i18n.js';
 
 test('every interface string exists in English and Arabic, with an "other" form for plurals', () => {
   for (const [key, entry] of Object.entries(STRINGS)) {
@@ -35,4 +36,11 @@ test('placeholders are filled and unknown keys are visible', () => {
   assert.equal(t('qOfN', { i: 3, n: 10 }, 'en'), 'Question 3 of 10');
   assert.equal(t('qOfN', { i: 3, n: 10 }, 'ar'), 'السؤال 3 من 10');
   assert.equal(t('no.such.key'), 'no.such.key');
+});
+
+test('first visit opens in Arabic, and the page head agrees before the app loads', () => {
+  assert.equal(DEFAULT_LANG, 'ar');
+  const html = readFileSync(new URL('../public/index.html', import.meta.url), 'utf8');
+  assert.match(html, /<html lang="ar" dir="rtl">/);
+  assert.match(html, /getItem\('topgrade\.lang'\) === 'en'\) \{ d\.lang = 'en'; d\.dir = 'ltr'; \}/);
 });
