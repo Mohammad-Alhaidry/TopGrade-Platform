@@ -81,13 +81,13 @@ const S = {
   // Install
   'inst.titleIos': { en: 'Get the TopGrade app', ar: 'حمّل تطبيق TopGrade' },
   'inst.title': { en: 'Install TopGrade', ar: 'ثبّت تطبيق TopGrade' },
-  'inst.text': { en: 'Add it to your home screen. It opens full screen and works offline.', ar: 'أضفه إلى الشاشة الرئيسية، يفتح بملء الشاشة ويعمل دون إنترنت.' },
+  'inst.text': { en: 'Opens full screen and works offline', ar: 'يفتح بملء الشاشة ويعمل دون إنترنت' },
   'inst.tap': { en: 'Tap', ar: 'اضغط' },
   'inst.shareBar': { en: 'Share in the browser bar', ar: 'مشاركة في شريط المتصفح' },
   'inst.share': { en: 'Share', ar: 'مشاركة' },
   'inst.choose': { en: 'Choose', ar: 'اختر' },
   'inst.addHome': { en: 'Add to Home Screen', ar: 'إضافة إلى الشاشة الرئيسية' },
-  'inst.btn': { en: 'Install app', ar: 'ثبّت التطبيق' },
+  'inst.btn': { en: 'Install', ar: 'تثبيت' },
   'inst.notNow': { en: 'Not now', ar: 'ليس الآن' },
 
   // Courses / course

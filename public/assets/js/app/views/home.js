@@ -118,14 +118,14 @@ function installCard() {
     : h('ol', { class: 'install__steps' },
         h('li', {}, t('inst.tap'), ' ', h('span', { class: 'install__key', 'aria-label': t('inst.share') }, icon(...ICONS.share)), ' ', t('inst.shareBar')),
         h('li', {}, t('inst.choose'), ' ', h('strong', {}, t('inst.addHome')), ' ', h('span', { class: 'install__key', 'aria-hidden': 'true' }, icon(...ICONS.addSquare))));
-  return h('section', { class: 'card install', 'aria-labelledby': 'install-title' },
+  // Android/desktop: one compact row with the Install button beside the text. iPhone needs room for the steps.
+  const row = offer === 'prompt';
+  return h('section', { class: `card install${row ? ' install--row' : ''}`, 'aria-labelledby': 'install-title' },
     h('img', { class: 'install__icon', src: 'assets/icons/icon-192.png', width: '192', height: '192', alt: '' }),
     h('div', { class: 'install__copy' },
-      h('h2', { class: 'install__title', id: 'install-title' }, t(offer === 'ios' ? 'inst.titleIos' : 'inst.title')),
-      body,
-      offer === 'prompt'
-        ? h('button', { type: 'button', class: 'btn btn--primary btn--sm install__btn', onclick: promptInstall }, icon(...ICONS.download), h('span', {}, t('inst.btn')))
-        : null),
+      h('h2', { class: 'install__title', id: 'install-title' }, t(row ? 'inst.title' : 'inst.titleIos')),
+      body),
+    row ? h('button', { type: 'button', class: 'btn btn--primary btn--sm install__btn', onclick: promptInstall }, icon(...ICONS.download), h('span', {}, t('inst.btn'))) : null,
     close);
 }
 
