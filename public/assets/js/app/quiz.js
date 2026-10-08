@@ -15,6 +15,7 @@ import { topicKey } from './catalog.js';
 import { paths } from './routes.js';
 import { navigate } from './router.js';
 import { t, localName } from './i18n.js';
+import { track } from './analytics.js';
 
 const STORAGE_KEY = 'topgrade.run.v1';
 const COUNT_CHOICES = [10, 20, 40];
@@ -261,6 +262,9 @@ function setupView() {
 
 function beginRun(run) {
   run.prevBest = topicStats(readProgress(), key(), []).best;
+  if (!run.checked.some(Boolean) && run.session.responses.every((r) => r === undefined)) {
+    track('quiz_start', { topic: key(), mode: run.session.mode, kind: run.kind, questions: run.session.items.length });
+  }
   state.run = run;
   writeSaved(run);
   enterQuizHistory();
@@ -301,7 +305,9 @@ function check() {
   if (!isAnswered(q, response)) return;
   run.checked[run.index] = true;
   writeSaved(run);
-  saveProgress((p) => recordAnswers(p, key(), [{ id: q.id, correct: isCorrect(q, response) }]));
+  const ok = isCorrect(q, response);
+  saveProgress((p) => recordAnswers(p, key(), [{ id: q.id, correct: ok }]));
+  track(ok ? 'answer_right' : 'answer_wrong', { topic: key(), question: q.id, type: q.type, mode: 'practice' });
   showQuestion('[data-continue]');
 }
 
@@ -617,6 +623,15 @@ function finishRun() {
       next = recordAnswers(next, key(), answers, run.finishedAt);
     }
     return recordRun(next, key(), { percent: s.percent, counts: run.kind === 'topic' }, run.finishedAt);
+  });
+  if (run.session.mode === 'exam') {
+    for (const r of s.results.filter((x) => x.answered)) {
+      track(r.correct ? 'answer_right' : 'answer_wrong', { topic: key(), question: r.item.question.id, type: r.item.question.type, mode: 'exam' });
+    }
+  }
+  track('quiz_finish', {
+    topic: key(), mode: run.session.mode, kind: run.kind, questions: s.total, score: s.percent,
+    minutes: Math.max(1, Math.round((run.finishedAt - run.startedAt) / 60000)),
   });
   showResults();
 }

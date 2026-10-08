@@ -12,7 +12,10 @@ import { showPrivacy, showNotFound, showLoadError } from './views/pages.js';
 import { registerServiceWorker, applyUpdateIfReady, onUpdateReady } from './update.js';
 import { initHeader, repaintHeader } from './shell.js';
 import { applyLang, onLangChange } from './i18n.js';
-import { initTheme } from './theme.js';
+import { initTheme, theme } from './theme.js';
+import { track, describeSession } from './analytics.js';
+import { lang } from './i18n.js';
+import { currentPlatform } from './install.js';
 
 // Screens where switching to a newly downloaded version (a reload) loses nothing.
 const SAFE_TO_UPDATE = new Set(['home', 'courses', 'course', 'review', 'privacy', 'notfound']);
@@ -55,6 +58,7 @@ initHeader(document.getElementById('hdr'));
 
 // Switching language redraws the current screen in place (a quiz keeps its answers and position).
 onLangChange(() => {
+  track('language_changed', { to: lang() });
   repaintHeader();
   if (!rerender()) render(currentRoute());
 });
@@ -69,3 +73,6 @@ onUpdateReady(() => {
   if (SAFE_TO_UPDATE.has(currentRoute().name)) applyUpdateIfReady();
 });
 registerServiceWorker();
+
+describeSession({ language: lang(), theme: theme(), app: currentPlatform().installed ? 'installed' : 'browser' });
+addEventListener('appinstalled', () => track('app_installed'));
