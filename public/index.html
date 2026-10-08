@@ -37,18 +37,15 @@
   if (/[?&]source=app\b/.test(location.search) || navigator.standalone || matchMedia('(display-mode: standalone)').matches) d.classList.add('installed');
 })();
 </script>
-<script src="assets/js/viewport.js"></script>
 <style>
 /* Shown until the app's first screen replaces it (also matches the install splash colour). */
 .splash{position:fixed;inset:0;display:grid;place-content:center;justify-items:center;gap:12px;background:#F4F6FA}
 .splash img{width:150px;height:auto}
-.splash p{margin:0;font:600 14px/1.5 'IBM Plex Sans Arabic',Tahoma,sans-serif;color:#475569}
 /* The installed app already gets the system launch screen with the logo; don't show it a second time. */
 [data-theme=dark] .splash{background:#081226}
 [data-theme=dark] .splash img{background:#fff;border-radius:28px;padding:14px 18px}
-[data-theme=dark] .splash p{color:#A5B4CB}
-.installed .splash img,.installed .splash p{display:none}
-@media (display-mode: standalone),(display-mode: fullscreen){.splash img,.splash p{display:none}}
+.installed .splash img{display:none}
+@media (display-mode: standalone),(display-mode: fullscreen){.splash img{display:none}}
 </style>
 <!-- BEGIN MODULEPRELOAD -->
 <link rel="modulepreload" href="assets/js/app/catalog.js">
@@ -84,7 +81,6 @@
 <div id="app" class="app">
 <div class="splash" role="status" aria-label="Opening TopGrade">
 <img src="assets/img/logo-full.png" width="320" height="284" alt="TopGrade">
-<p lang="ar" dir="rtl">منصة خدمات طلابية</p>
 </div>
 </div>
 </div>

@@ -39,8 +39,7 @@ const BLOCK = /\/\/ BEGIN GENERATED[\s\S]*?\/\/ END GENERATED/;
 const PRELOAD = /<!-- BEGIN MODULEPRELOAD -->[\s\S]*?<!-- END MODULEPRELOAD -->/;
 
 export function preloadBlock() {
-  // viewport.js is a classic script, not a module.
-  const modules = walk(PUBLIC).filter((f) => f.startsWith('assets/js/') && f.endsWith('.js') && f !== 'assets/js/viewport.js').sort();
+  const modules = walk(PUBLIC).filter((f) => f.startsWith('assets/js/') && f.endsWith('.js')).sort();
   return ['<!-- BEGIN MODULEPRELOAD -->', ...modules.map((f) => `<link rel="modulepreload" href="${f}">`), '<!-- END MODULEPRELOAD -->'].join('\n');
 }
 

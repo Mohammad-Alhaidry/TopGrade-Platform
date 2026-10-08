@@ -41,7 +41,6 @@ function hero(progress, totals, summaries) {
       h('span', { class: 'hero__chip' }, t('home.student')),
       h('time', { class: 'hero__date' }, today())),
     h('h1', { class: 'hero__title', id: 'hero-title', tabindex: '-1', 'data-autofocus': true }, t(returning ? 'home.welcomeBack' : 'home.welcome')),
-    lang() === 'en' ? h('p', { class: 'hero__ar', lang: 'ar', dir: 'rtl' }, t('tagline', {}, 'ar')) : h('p', { class: 'hero__ar' }, t('tagline')),
     h('div', { class: 'hero__stats' },
       returning
         ? [heroStat(t('n.days', { n: days }), t('home.streak')), heroStat(String(all.answered), t('home.answered'))]
