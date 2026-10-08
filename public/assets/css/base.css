@@ -30,3 +30,5 @@ button:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-off
 .page-copy a{color:var(--primary)}
 .page-copy ul{padding-inline-start:20px}
 .page-copy nav{margin-bottom:16px;font-size:14px}
+/* The «راسلنا» fallback page (whatsapp.html). */
+.wa-go{min-height:48px;padding:0 22px;border:0;border-radius:12px;background:#15803D;color:#fff;font:700 16px/1 var(--arabic);cursor:pointer}

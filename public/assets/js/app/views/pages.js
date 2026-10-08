@@ -1,7 +1,7 @@
 // Static pages: privacy policy (required for the Play Store listing), not found, load error.
 
 import { h, icon, ICONS } from '../../quiz/dom.js';
-import { pagebar, screen, mount, backLink, WHATSAPP_URL } from '../shell.js';
+import { pagebar, screen, mount, backLink } from '../shell.js';
 import { href } from '../router.js';
 import { paths } from '../routes.js';
 import { t, lang } from '../i18n.js';
@@ -18,7 +18,7 @@ export function showPrivacy() {
       p.sections.map(section),
       h('section', { class: 'prose__section' },
         h('h2', {}, cTitle),
-        h('p', {}, cText, h('a', { href: WHATSAPP_URL, target: '_blank', rel: 'noopener noreferrer' }, cLink), cEnd))),
+        h('p', {}, cText, h('a', { href: href(paths.home()) }, cLink), cEnd))),
   }));
 }
 

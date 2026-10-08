@@ -4,7 +4,7 @@
 
 import { h, icon, ICONS, WHATSAPP_SVG, staticSvg } from '../../quiz/dom.js';
 import { createSession } from '../../quiz/session.js';
-import { screen, tabbar, mount, forwardIcon, enText, WHATSAPP_URL } from '../shell.js';
+import { screen, tabbar, mount, forwardIcon, enText } from '../shell.js';
 import { href, navigate } from '../router.js';
 import { paths } from '../routes.js';
 import { readProgress, overall, streak } from '../progress.js';
@@ -15,6 +15,9 @@ import { t, lang } from '../i18n.js';
 import { courseSummaries, courseCard } from './courses.js';
 
 const QUICK_COUNT = 10;
+// «راسلنا» opens WhatsApp through the server (nginx: /whatsapp), so the number appears in no page or file
+// that a scanner or crawler can read (owner's requirement). Relative, so it also works under /preview/.
+const WHATSAPP_URL = 'whatsapp';
 
 const today = () => new Intl.DateTimeFormat(lang() === 'ar' ? 'ar-SA-u-ca-gregory-nu-latn' : 'en-GB', { weekday: 'long', day: 'numeric', month: 'long' }).format(new Date());
 
@@ -133,7 +136,7 @@ let stopInstallUpdates = () => {};
 
 function helpCard() {
   // Filled WhatsApp green so it is the first thing a student notices under the welcome card.
-  return h('a', { class: 'help', href: WHATSAPP_URL, target: '_blank', rel: 'noopener noreferrer' },
+  return h('a', { class: 'help', href: WHATSAPP_URL, target: '_blank', rel: 'nofollow noopener noreferrer' },
     h('span', { class: 'help__icon' }, staticSvg(WHATSAPP_SVG)),
     h('span', { class: 'help__copy' },
       h('span', { class: 'help__title' }, t('home.help')),

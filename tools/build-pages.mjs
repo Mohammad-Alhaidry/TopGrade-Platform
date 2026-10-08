@@ -16,7 +16,6 @@ import { SITE, SECURITY_TXT_EXPIRES } from './site.mjs';
 import { pageTitle, pageDescription, courseName } from '../public/assets/js/app/meta.js';
 import { t } from '../public/assets/js/app/i18n.js';
 import { PRIVACY } from '../public/assets/js/app/privacy-text.js';
-import { WHATSAPP_URL } from '../public/assets/js/app/site.js';
 
 const PUBLIC = fileURLToPath(new URL('../public/', import.meta.url));
 const LANG = 'ar'; // the app's default language, and what a first-time visitor (or a crawler) sees
@@ -66,7 +65,7 @@ function pages({ catalog, banks }) {
       h('h2', {}, esc(ar('tab.courses'))), h('ul', {}, catalog.courses.map(courseLine)),
       h('p', {}, `<a href="privacy">${esc(PRIVACY.ar.title)}</a>`)],
     data: [{ '@type': 'WebSite', name: 'Smart Pro', alternateName: 'سمارت برو', url: url(''), inLanguage: ['ar', 'en'] },
-      { ...brand, logo: url('assets/icons/icon-512.png'), contactPoint: { '@type': 'ContactPoint', contactType: 'customer support', url: WHATSAPP_URL, availableLanguage: ['Arabic', 'English'] } }],
+      { ...brand, logo: url('assets/icons/icon-512.png') }],
   });
 
   out.push({
@@ -115,7 +114,7 @@ function pages({ catalog, banks }) {
     path: 'privacy', route: { name: 'privacy', params: {} },
     body: [crumbs([home, [p.title, 'privacy']]), h('h1', {}, esc(p.title)), h('p', {}, esc(p.updated)),
       p.sections.map(([title, text]) => h('h2', {}, esc(title)) + h('p', {}, esc(text))),
-      h('h2', {}, esc(p.contact[0])), h('p', {}, esc(p.contact[1]), `<a href="${esc(WHATSAPP_URL)}" rel="noopener noreferrer">${esc(p.contact[2])}</a>`, esc(p.contact[3]))],
+      h('h2', {}, esc(p.contact[0])), h('p', {}, esc(p.contact[1]), `<a href="./">${esc(p.contact[2])}</a>`, esc(p.contact[3]))],
     data: [breadcrumb([home, [p.title, 'privacy']])],
   });
 
@@ -167,8 +166,9 @@ export function generated() {
   files['sitemap.xml'] = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
     ...list.filter((p) => !p.noindex).map((p) => `  <url><loc>${esc(url(p.path))}</loc></url>`), '</urlset>', ''].join('\n');
   // /review is not blocked here: crawlers must be able to read its noindex tag.
-  files['robots.txt'] = ['User-agent: *', 'Allow: /', 'Disallow: /preview/', '', `Sitemap: ${url('sitemap.xml')}`, ''].join('\n');
-  files['.well-known/security.txt'] = [`Contact: ${WHATSAPP_URL}`, `Expires: ${SECURITY_TXT_EXPIRES}`, 'Preferred-Languages: ar, en',
+  files['robots.txt'] = ['User-agent: *', 'Allow: /', 'Disallow: /preview/', 'Disallow: /whatsapp', '', `Sitemap: ${url('sitemap.xml')}`, ''].join('\n');
+  // Contact: the home page, where the «راسلنا» button is (the number itself stays only on that button).
+  files['.well-known/security.txt'] = [`Contact: ${url('')}`, `Expires: ${SECURITY_TXT_EXPIRES}`, 'Preferred-Languages: ar, en',
     `Canonical: ${url('.well-known/security.txt')}`, ''].join('\n');
   return files;
 }

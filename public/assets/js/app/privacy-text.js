@@ -14,7 +14,7 @@ export const PRIVACY = {
       ['Children', 'Smart Pro is intended for university students and is not directed at children under 13.'],
       ['Changes', 'If this policy changes, the updated version will be posted on this page with a new date.'],
     ],
-    contact: ['Contact', 'Questions about this policy: ', 'message Smart Pro on WhatsApp', '.'],
+    contact: ['Contact', 'Questions about this policy: use the Message us button on the ', 'home page', '.'],
   },
   ar: {
     title: 'سياسة الخصوصية',
@@ -28,6 +28,6 @@ export const PRIVACY = {
       ['الأطفال', 'سمارت برو موجّه لطلاب الجامعات، وليس موجّهًا للأطفال دون 13 سنة.'],
       ['التغييرات', 'إذا تغيّرت هذه السياسة، ننشر النسخة المحدّثة في هذه الصفحة مع تاريخ جديد.'],
     ],
-    contact: ['التواصل', 'لأي سؤال عن هذه السياسة: ', 'راسل سمارت برو عبر واتساب', '.'],
+    contact: ['التواصل', 'لأي سؤال عن هذه السياسة: استخدم زر «راسلنا» في ', 'الصفحة الرئيسية', '.'],
   },
 };
