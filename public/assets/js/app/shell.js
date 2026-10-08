@@ -7,6 +7,7 @@ import { href } from './router.js';
 import { paths } from './routes.js';
 import { t, lang, setLang, isRTL } from './i18n.js';
 import { theme, toggleTheme } from './theme.js';
+import { track } from './analytics.js';
 
 export const WHATSAPP_URL = 'https://wa.me/message/QSPQR7JSSNKUJ1?src=qr';
 
@@ -49,7 +50,7 @@ function paintHeader() {
 
 /** Builds the header once. Call repaintHeader() after a language or theme change. */
 export function initHeader(container) {
-  const themeBtn = h('button', { type: 'button', class: 'hdr__btn', onclick: () => { toggleTheme(); paintHeader(); } });
+  const themeBtn = h('button', { type: 'button', class: 'hdr__btn', onclick: () => { toggleTheme(); paintHeader(); track('theme_changed', { to: theme() }); } });
   const langBtn = h('button', { type: 'button', class: 'hdr__btn hdr__btn--lang', onclick: () => setLang(lang() === 'ar' ? 'en' : 'ar') });
   const brand = h('a', { class: 'hdr__brand', href: href(paths.home()) },
     h('img', { src: 'assets/img/logo-mark.png', width: '128', height: '128', alt: 'TopGrade' }));
