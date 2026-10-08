@@ -252,7 +252,7 @@ function setupView() {
         h('fieldset', { class: 'setup__group' }, h('legend', {}, t('setup.mode')), h('div', { class: 'tiles' },
           modeTile('practice', t('mode.practice'), t('mode.practiceText'), ICONS.practice),
           modeTile('exam', t('mode.exam'), t('mode.examText'), ICONS.exam))),
-        h('fieldset', { class: 'setup__group' }, h('legend', {}, t('setup.types')), h('div', { class: 'tiles' }, TYPES.map(typeTile))),
+        h('fieldset', { class: 'setup__group' }, h('legend', {}, t('setup.types')), h('div', { class: 'tiles' }, TYPES.filter((type) => counts[type] > 0).map(typeTile))),
         h('fieldset', { class: 'setup__group' }, h('legend', {}, t('setup.count')), h('div', { class: 'segs' },
           COUNT_CHOICES.map((n) => countOption(n, String(n))),
           countOption(null, allLabel)))),
@@ -424,6 +424,8 @@ function matchingAnswer(item, response, revealed, onChange) {
         h('span', { class: 'pair__left', id: `pair-${i}` }, pair.left),
         h('div', { class: 'pair__pick' },
           h('select', {
+            // Follows the chosen item's own direction, so "Choose…" reads right in either interface language.
+            dir: 'auto',
             disabled: revealed,
             'aria-labelledby': `pair-${i}`,
             onchange: (e) => {

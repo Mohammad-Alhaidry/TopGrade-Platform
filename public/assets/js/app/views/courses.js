@@ -32,8 +32,9 @@ export async function courseSummaries(ctx) {
   }));
 }
 
-/** Monogram from the English title, e.g. "Problem Solving & Programming" -> "PS". */
-const monogram = (title) => title.split(/[^A-Za-z]+/).filter(Boolean).slice(0, 2).map((w) => w[0].toUpperCase()).join('');
+/** Monogram from the English title's main words, e.g. "Problem Solving & Programming" -> "PS",
+ *  "Principles of Accounting 1" -> "PA". */
+const monogram = (title) => title.split(/[^A-Za-z]+/).filter((w) => /^[A-Z]/.test(w)).slice(0, 2).map((w) => w[0]).join('');
 
 export function courseCard({ course, topics, totalQuestions, percent }) {
   const name = localName(course);

@@ -13,6 +13,74 @@
           "bank": "problem-solving/topic-1.json"
         }
       ]
+    },
+    {
+      "id": "principles-of-accounting-1",
+      "titleEn": "Principles of Accounting 1",
+      "titleAr": "مبادئ المحاسبة 1",
+      "lang": "ar",
+      "topics": [
+        {
+          "id": "chapter-1",
+          "number": 1,
+          "title": "المحاسبة في الأعمال",
+          "label": {
+            "en": "Chapter 1",
+            "ar": "الفصل الأول"
+          },
+          "bank": "principles-of-accounting-1/chapter-1.json"
+        },
+        {
+          "id": "chapter-2",
+          "number": 2,
+          "title": "تحليل وتسجيل العمليات المالية",
+          "label": {
+            "en": "Chapter 2",
+            "ar": "الفصل الثاني"
+          },
+          "bank": "principles-of-accounting-1/chapter-2.json"
+        },
+        {
+          "id": "chapter-3",
+          "number": 3,
+          "title": "القوائم المالية",
+          "label": {
+            "en": "Chapter 3",
+            "ar": "الفصل الثالث"
+          },
+          "bank": "principles-of-accounting-1/chapter-3.json"
+        },
+        {
+          "id": "homework",
+          "number": 4,
+          "title": "واجبات مقرر مبادئ المحاسبة 1",
+          "label": {
+            "en": "Homework",
+            "ar": "الواجبات"
+          },
+          "bank": "principles-of-accounting-1/homework.json"
+        },
+        {
+          "id": "midterm",
+          "number": 5,
+          "title": "اختبار نصفي تجريبي: الفصول من 1 إلى 3",
+          "label": {
+            "en": "Practice midterm",
+            "ar": "اختبار تجريبي"
+          },
+          "bank": "principles-of-accounting-1/midterm.json",
+          "mix": [
+            "chapter-1",
+            "chapter-2",
+            "chapter-3",
+            "homework"
+          ],
+          "defaults": {
+            "mode": "exam",
+            "count": 40
+          }
+        }
+      ]
     }
   ]
 }
