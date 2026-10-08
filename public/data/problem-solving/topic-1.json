@@ -1,0 +1,1214 @@
+{
+  "schemaVersion": 1,
+  "course": {
+    "id": "problem-solving",
+    "titleAr": "حل المشاكل والبرمجة",
+    "titleEn": "Problem Solving & Programming"
+  },
+  "topic": {
+    "id": "topic-1",
+    "number": 1,
+    "title": "Introduction to Computer Science"
+  },
+  "questions": [
+    {
+      "id": "mcq-01",
+      "type": "mcq",
+      "prompt": "Computer science is the study of:",
+      "options": [
+        "Computers only",
+        "Algorithms",
+        "Programming languages only",
+        "Computer applications only"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mcq-02",
+      "type": "mcq",
+      "prompt": "Which of the following is NOT listed as an aspect of algorithms studied in computer science?",
+      "options": [
+        "Formal and mathematical properties",
+        "Hardware realizations",
+        "Linguistic realizations",
+        "Marketing strategies"
+      ],
+      "answer": "D"
+    },
+    {
+      "id": "mcq-03",
+      "type": "mcq",
+      "prompt": "The informal definition of an algorithm is:",
+      "options": [
+        "A random set of instructions",
+        "An ordered sequence of instructions guaranteed to solve a specific problem",
+        "A computer program written in any language",
+        "A collection of hardware components"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mcq-04",
+      "type": "mcq",
+      "prompt": "Which type of operation carries out a single well-defined task?",
+      "options": [
+        "Sequential operation",
+        "Conditional operation",
+        "Iterative operation",
+        "Random operation"
+      ],
+      "answer": "A"
+    },
+    {
+      "id": "mcq-05",
+      "type": "mcq",
+      "prompt": "Which type of operation asks a question and selects the next operation based on the answer?",
+      "options": [
+        "Sequential",
+        "Conditional",
+        "Iterative",
+        "Primitive"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mcq-06",
+      "type": "mcq",
+      "prompt": "Which type of operation causes a previous block of instructions to be repeated?",
+      "options": [
+        "Sequential",
+        "Conditional",
+        "Iterative",
+        "Arithmetic"
+      ],
+      "answer": "C"
+    },
+    {
+      "id": "mcq-07",
+      "type": "mcq",
+      "prompt": "Why are formal algorithms important in computer science?",
+      "options": [
+        "They make computers physically smaller",
+        "They allow the solution of a problem to be automated",
+        "They eliminate all unsolved problems",
+        "They replace computer hardware"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mcq-08",
+      "type": "mcq",
+      "prompt": "A computing agent may be:",
+      "options": [
+        "A machine only",
+        "A robot only",
+        "A person only",
+        "A machine, robot, person, or thing carrying out the algorithm"
+      ],
+      "answer": "D"
+    },
+    {
+      "id": "mcq-09",
+      "type": "mcq",
+      "prompt": "According to the formal definition, an algorithm must:",
+      "options": [
+        "Always be executed by a computer",
+        "Be written in a programming language",
+        "Halt in a finite amount of time",
+        "Contain at least five operations"
+      ],
+      "answer": "C"
+    },
+    {
+      "id": "mcq-10",
+      "type": "mcq",
+      "prompt": "A well-ordered collection means:",
+      "options": [
+        "Operations are written alphabetically",
+        "The next operation is always known after completing the current operation",
+        "Every operation must be mathematical",
+        "The algorithm contains no conditions"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mcq-11",
+      "type": "mcq",
+      "prompt": "Which of the following is an ambiguous instruction?",
+      "options": [
+        "Add 5 to 10",
+        "Print the answer",
+        "Go back and do it again",
+        "Stop the process"
+      ],
+      "answer": "C"
+    },
+    {
+      "id": "mcq-12",
+      "type": "mcq",
+      "prompt": "An operation is effectively computable when it is:",
+      "options": [
+        "Understandable only",
+        "Doable by the computing agent",
+        "Written mathematically",
+        "Performed electronically"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mcq-13",
+      "type": "mcq",
+      "prompt": "Which of the following can be an observable result of an algorithm?",
+      "options": [
+        "A numerical answer",
+        "A new object",
+        "A change in the environment",
+        "All of the above"
+      ],
+      "answer": "D"
+    },
+    {
+      "id": "mcq-14",
+      "type": "mcq",
+      "prompt": "An unambiguous operation that can be understood without further definition is called a:",
+      "options": [
+        "Processor",
+        "Primitive",
+        "Loop",
+        "Program"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mcq-15",
+      "type": "mcq",
+      "prompt": "An infinite loop:",
+      "options": [
+        "Stops automatically",
+        "Runs forever",
+        "Always gives a correct result",
+        "Is required in every algorithm"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mcq-16",
+      "type": "mcq",
+      "prompt": "The nineteenth-century Industrial Revolution mainly automated repetitive:",
+      "options": [
+        "Mental tasks",
+        "Physical tasks",
+        "Programming tasks",
+        "Mathematical proofs"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mcq-17",
+      "type": "mcq",
+      "prompt": "The computer revolution mainly mechanized and automated repetitive:",
+      "options": [
+        "Physical tasks",
+        "Mental tasks",
+        "Manufacturing only",
+        "Mechanical tasks only"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mcq-18",
+      "type": "mcq",
+      "prompt": "Who invented logarithms as a way to simplify difficult mathematical computations?",
+      "options": [
+        "Blaise Pascal",
+        "Charles Babbage",
+        "John Napier",
+        "Herman Hollerith"
+      ],
+      "answer": "C"
+    },
+    {
+      "id": "mcq-19",
+      "type": "mcq",
+      "prompt": "According to the chapter, John Napier invented logarithms in:",
+      "options": [
+        "1614",
+        "1622",
+        "1642",
+        "1673"
+      ],
+      "answer": "A"
+    },
+    {
+      "id": "mcq-20",
+      "type": "mcq",
+      "prompt": "The first slide rule appeared around:",
+      "options": [
+        "1614",
+        "1622",
+        "1642",
+        "1801"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mcq-21",
+      "type": "mcq",
+      "prompt": "Who designed and built the Pascaline?",
+      "options": [
+        "Gottfried Leibnitz",
+        "Blaise Pascal",
+        "John Napier",
+        "Joseph Jacquard"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mcq-22",
+      "type": "mcq",
+      "prompt": "The Pascaline was built in:",
+      "options": [
+        "1614",
+        "1622",
+        "1642",
+        "1673"
+      ],
+      "answer": "C"
+    },
+    {
+      "id": "mcq-23",
+      "type": "mcq",
+      "prompt": "Leibnitz's Wheel was constructed by:",
+      "options": [
+        "Gottfried Leibnitz",
+        "Charles Babbage",
+        "Herman Hollerith",
+        "John Von Neumann"
+      ],
+      "answer": "A"
+    },
+    {
+      "id": "mcq-24",
+      "type": "mcq",
+      "prompt": "Seventeenth-century calculating devices:",
+      "options": [
+        "Had memory and were programmable",
+        "Could represent numbers and perform arithmetic",
+        "Were electronic computers",
+        "Used processors"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mcq-25",
+      "type": "mcq",
+      "prompt": "A major limitation of seventeenth-century devices was that they:",
+      "options": [
+        "Could not represent numbers",
+        "Could not perform arithmetic",
+        "Had no memory and were not programmable",
+        "Were too small"
+      ],
+      "answer": "C"
+    },
+    {
+      "id": "mcq-26",
+      "type": "mcq",
+      "prompt": "Joseph Jacquard's automated loom used:",
+      "options": [
+        "Vacuum tubes",
+        "Punched cards",
+        "Magnetic cores",
+        "Integrated circuits"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mcq-27",
+      "type": "mcq",
+      "prompt": "Jacquard's automated loom was designed in:",
+      "options": [
+        "1801",
+        "1823",
+        "1880",
+        "1924"
+      ],
+      "answer": "A"
+    },
+    {
+      "id": "mcq-28",
+      "type": "mcq",
+      "prompt": "Herman Hollerith's machines were designed to:",
+      "options": [
+        "Control industrial robots",
+        "Read, tally, and sort punched-card data",
+        "Solve polynomial equations",
+        "Run graphical interfaces"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mcq-29",
+      "type": "mcq",
+      "prompt": "Hollerith's card-processing machines were used by the:",
+      "options": [
+        "British Enigma project",
+        "U.S. Census Bureau",
+        "University of Pennsylvania",
+        "Software industry"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mcq-30",
+      "type": "mcq",
+      "prompt": "The company founded by Herman Hollerith eventually became:",
+      "options": [
+        "Apple",
+        "Microsoft",
+        "IBM",
+        "Intel"
+      ],
+      "answer": "C"
+    },
+    {
+      "id": "mcq-31",
+      "type": "mcq",
+      "prompt": "The Difference Engine was associated with:",
+      "options": [
+        "Charles Babbage",
+        "John Von Neumann",
+        "Alan Turing",
+        "Blaise Pascal"
+      ],
+      "answer": "A"
+    },
+    {
+      "id": "mcq-32",
+      "type": "mcq",
+      "prompt": "The Difference Engine was designed and built in:",
+      "options": [
+        "1801",
+        "1823",
+        "1880",
+        "1944"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mcq-33",
+      "type": "mcq",
+      "prompt": "According to the chapter, the Difference Engine could perform:",
+      "options": [
+        "Addition only",
+        "Addition and subtraction only",
+        "Addition, subtraction, multiplication, and division",
+        "Logical operations only"
+      ],
+      "answer": "C"
+    },
+    {
+      "id": "mcq-34",
+      "type": "mcq",
+      "prompt": "The Difference Engine could solve:",
+      "options": [
+        "Only simple addition problems",
+        "Polynomial equations and other complex mathematical problems",
+        "Networking problems",
+        "Multimedia problems"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mcq-35",
+      "type": "mcq",
+      "prompt": "Which statement about the Analytical Engine is correct?",
+      "options": [
+        "It was fully built",
+        "It was electronic",
+        "It was designed but never built",
+        "It was not programmable"
+      ],
+      "answer": "C"
+    },
+    {
+      "id": "mcq-36",
+      "type": "mcq",
+      "prompt": "In Babbage's Analytical Engine, the Mill corresponds to the modern:",
+      "options": [
+        "Memory",
+        "Arithmetic/logic unit",
+        "Input/output unit",
+        "Network"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mcq-37",
+      "type": "mcq",
+      "prompt": "In Babbage's Analytical Engine, the Store corresponds to:",
+      "options": [
+        "Processor",
+        "Memory",
+        "Input",
+        "Output"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mcq-38",
+      "type": "mcq",
+      "prompt": "In Babbage's Analytical Engine, the Operator corresponds to:",
+      "options": [
+        "Processor",
+        "Memory",
+        "Arithmetic/logic unit",
+        "Input/output"
+      ],
+      "answer": "A"
+    },
+    {
+      "id": "mcq-39",
+      "type": "mcq",
+      "prompt": "Nineteenth-century computing devices were primarily:",
+      "options": [
+        "Electrical",
+        "Mechanical",
+        "Digital",
+        "Wireless"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mcq-40",
+      "type": "mcq",
+      "prompt": "Which computer used a mixture of relays, magnets, and gears?",
+      "options": [
+        "ENIAC",
+        "EDVAC",
+        "Mark I",
+        "UNIVAC I"
+      ],
+      "answer": "C"
+    },
+    {
+      "id": "mcq-41",
+      "type": "mcq",
+      "prompt": "Mark I was developed in:",
+      "options": [
+        "1943",
+        "1944",
+        "1946",
+        "1949"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mcq-42",
+      "type": "mcq",
+      "prompt": "According to the chapter, Colossus was built for the:",
+      "options": [
+        "U.S. Census Bureau",
+        "British Enigma project",
+        "IBM project",
+        "EDVAC project"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mcq-43",
+      "type": "mcq",
+      "prompt": "Which machine is identified in the chapter as the first publicly known fully electronic computer?",
+      "options": [
+        "Mark I",
+        "Colossus",
+        "ENIAC",
+        "EDVAC"
+      ],
+      "answer": "C"
+    },
+    {
+      "id": "mcq-44",
+      "type": "mcq",
+      "prompt": "ENIAC was introduced in:",
+      "options": [
+        "1943",
+        "1944",
+        "1946",
+        "1949"
+      ],
+      "answer": "C"
+    },
+    {
+      "id": "mcq-45",
+      "type": "mcq",
+      "prompt": "John Von Neumann proposed the:",
+      "options": [
+        "Punched-card machine",
+        "Stored-program computer model",
+        "Vacuum tube",
+        "Integrated circuit"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mcq-46",
+      "type": "mcq",
+      "prompt": "One of the first stored-program computers mentioned in the chapter was:",
+      "options": [
+        "Pascaline",
+        "EDVAC",
+        "Mark I",
+        "Difference Engine"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mcq-47",
+      "type": "mcq",
+      "prompt": "EDVAC was built in:",
+      "options": [
+        "1944",
+        "1946",
+        "1949",
+        "1957"
+      ],
+      "answer": "C"
+    },
+    {
+      "id": "mcq-48",
+      "type": "mcq",
+      "prompt": "According to the chapter, the first commercially sold computer was:",
+      "options": [
+        "ENIAC",
+        "Mark I",
+        "UNIVAC I",
+        "Colossus"
+      ],
+      "answer": "C"
+    },
+    {
+      "id": "mcq-49",
+      "type": "mcq",
+      "prompt": "The first generation of computing used:",
+      "options": [
+        "Transistors",
+        "Integrated circuits",
+        "Vacuum tubes",
+        "Processors"
+      ],
+      "answer": "C"
+    },
+    {
+      "id": "mcq-50",
+      "type": "mcq",
+      "prompt": "The first generation covered approximately:",
+      "options": [
+        "1940–1950",
+        "1950–1957",
+        "1957–1965",
+        "1965–1975"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mcq-51",
+      "type": "mcq",
+      "prompt": "Which technology replaced vacuum tubes in the second generation?",
+      "options": [
+        "Integrated circuits",
+        "Transistors and magnetic cores",
+        "Processors",
+        "Punched cards"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mcq-52",
+      "type": "mcq",
+      "prompt": "FORTRAN and COBOL are associated in the chapter with the:",
+      "options": [
+        "First generation",
+        "Second generation",
+        "Third generation",
+        "Fourth generation"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mcq-53",
+      "type": "mcq",
+      "prompt": "The third generation is described as the era of the:",
+      "options": [
+        "Vacuum tube",
+        "Transistor",
+        "Integrated circuit",
+        "Punched card"
+      ],
+      "answer": "C"
+    },
+    {
+      "id": "mcq-54",
+      "type": "mcq",
+      "prompt": "The first minicomputers appeared during the:",
+      "options": [
+        "First generation",
+        "Second generation",
+        "Third generation",
+        "Fifth generation"
+      ],
+      "answer": "C"
+    },
+    {
+      "id": "mcq-55",
+      "type": "mcq",
+      "prompt": "The fourth generation is described as the era of the:",
+      "options": [
+        "Processor",
+        "Vacuum tube",
+        "Mechanical calculator",
+        "Punched card"
+      ],
+      "answer": "A"
+    },
+    {
+      "id": "mcq-56",
+      "type": "mcq",
+      "prompt": "Which development is associated with the fourth generation?",
+      "options": [
+        "First slide rule",
+        "First microcomputer",
+        "Pascaline",
+        "Leibnitz's Wheel"
+      ],
+      "answer": "B"
+    },
+    {
+      "id": "mcq-57",
+      "type": "mcq",
+      "prompt": "Electronic mail, graphical user interfaces, and embedded systems are associated with the:",
+      "options": [
+        "First generation",
+        "Second generation",
+        "Third generation",
+        "Fourth generation"
+      ],
+      "answer": "D"
+    },
+    {
+      "id": "mcq-58",
+      "type": "mcq",
+      "prompt": "The fifth generation begins in the chapter at approximately:",
+      "options": [
+        "1965",
+        "1975",
+        "1985",
+        "1995"
+      ],
+      "answer": "C"
+    },
+    {
+      "id": "mcq-59",
+      "type": "mcq",
+      "prompt": "Which feature is mentioned as part of the fifth generation?",
+      "options": [
+        "Wireless communications",
+        "Massive cloud storage",
+        "Virtual reality",
+        "All of the above"
+      ],
+      "answer": "D"
+    },
+    {
+      "id": "mcq-60",
+      "type": "mcq",
+      "prompt": "Fifth-generation processors are described as capable of:",
+      "options": [
+        "Hundreds of calculations per second",
+        "Thousands of calculations per second",
+        "Millions of calculations per second",
+        "Quadrillions of computations per second"
+      ],
+      "answer": "D"
+    },
+    {
+      "id": "tf-01",
+      "type": "tf",
+      "prompt": "Computer science is simply the study of computers.",
+      "answer": false
+    },
+    {
+      "id": "tf-02",
+      "type": "tf",
+      "prompt": "Computer science includes the study of algorithms and their applications.",
+      "answer": true
+    },
+    {
+      "id": "tf-03",
+      "type": "tf",
+      "prompt": "A sequential operation carries out a single well-defined task.",
+      "answer": true
+    },
+    {
+      "id": "tf-04",
+      "type": "tf",
+      "prompt": "A conditional operation repeats a previous block of instructions.",
+      "answer": false
+    },
+    {
+      "id": "tf-05",
+      "type": "tf",
+      "prompt": "An iterative operation may cause instructions to be repeated.",
+      "answer": true
+    },
+    {
+      "id": "tf-06",
+      "type": "tf",
+      "prompt": "If an algorithm can solve a problem, its solution may be automated.",
+      "answer": true
+    },
+    {
+      "id": "tf-07",
+      "type": "tf",
+      "prompt": "A computing agent must always be a computer.",
+      "answer": false
+    },
+    {
+      "id": "tf-08",
+      "type": "tf",
+      "prompt": "An algorithm may run forever and still satisfy the formal definition.",
+      "answer": false
+    },
+    {
+      "id": "tf-09",
+      "type": "tf",
+      "prompt": "An algorithm must produce an observable result.",
+      "answer": true
+    },
+    {
+      "id": "tf-10",
+      "type": "tf",
+      "prompt": "“Start over” is an example of a potentially ambiguous instruction.",
+      "answer": true
+    },
+    {
+      "id": "tf-11",
+      "type": "tf",
+      "prompt": "An operation only needs to be understandable; it does not need to be doable.",
+      "answer": false
+    },
+    {
+      "id": "tf-12",
+      "type": "tf",
+      "prompt": "An infinite loop runs forever.",
+      "answer": true
+    },
+    {
+      "id": "tf-13",
+      "type": "tf",
+      "prompt": "The Industrial Revolution mainly automated repetitive mental tasks.",
+      "answer": false
+    },
+    {
+      "id": "tf-14",
+      "type": "tf",
+      "prompt": "The computer revolution automated repetitive mental tasks.",
+      "answer": true
+    },
+    {
+      "id": "tf-15",
+      "type": "tf",
+      "prompt": "John Napier invented logarithms in 1614.",
+      "answer": true
+    },
+    {
+      "id": "tf-16",
+      "type": "tf",
+      "prompt": "The Pascaline was designed by Gottfried Leibnitz.",
+      "answer": false
+    },
+    {
+      "id": "tf-17",
+      "type": "tf",
+      "prompt": "Seventeenth-century calculating devices had memory.",
+      "answer": false
+    },
+    {
+      "id": "tf-18",
+      "type": "tf",
+      "prompt": "Seventeenth-century calculating devices were programmable.",
+      "answer": false
+    },
+    {
+      "id": "tf-19",
+      "type": "tf",
+      "prompt": "Joseph Jacquard's loom used punched cards.",
+      "answer": true
+    },
+    {
+      "id": "tf-20",
+      "type": "tf",
+      "prompt": "Herman Hollerith's company eventually became IBM.",
+      "answer": true
+    },
+    {
+      "id": "tf-21",
+      "type": "tf",
+      "prompt": "The Analytical Engine was completely built during Babbage's lifetime.",
+      "answer": false
+    },
+    {
+      "id": "tf-22",
+      "type": "tf",
+      "prompt": "Nineteenth-century devices were mechanical rather than electrical.",
+      "answer": true
+    },
+    {
+      "id": "tf-23",
+      "type": "tf",
+      "prompt": "Mark I was an electromechanical computer.",
+      "answer": true
+    },
+    {
+      "id": "tf-24",
+      "type": "tf",
+      "prompt": "ENIAC is described in the chapter as the first publicly known fully electronic computer.",
+      "answer": true
+    },
+    {
+      "id": "tf-25",
+      "type": "tf",
+      "prompt": "John Von Neumann proposed the stored-program computer model.",
+      "answer": true
+    },
+    {
+      "id": "tf-26",
+      "type": "tf",
+      "prompt": "EDVAC was built in 1949.",
+      "answer": true
+    },
+    {
+      "id": "tf-27",
+      "type": "tf",
+      "prompt": "The first generation used transistors.",
+      "answer": false
+    },
+    {
+      "id": "tf-28",
+      "type": "tf",
+      "prompt": "The second generation used transistors and magnetic cores.",
+      "answer": true
+    },
+    {
+      "id": "tf-29",
+      "type": "tf",
+      "prompt": "The third generation is associated with the integrated circuit.",
+      "answer": true
+    },
+    {
+      "id": "tf-30",
+      "type": "tf",
+      "prompt": "The fourth generation included the development of widespread computer networks.",
+      "answer": true
+    },
+    {
+      "id": "fib-01",
+      "type": "fib",
+      "prompt": "Computer science is the study of ________.",
+      "answers": [
+        "algorithms"
+      ]
+    },
+    {
+      "id": "fib-02",
+      "type": "fib",
+      "prompt": "An algorithm is an ordered sequence of ________.",
+      "answers": [
+        "instructions"
+      ]
+    },
+    {
+      "id": "fib-03",
+      "type": "fib",
+      "prompt": "________ operations carry out a single well-defined task.",
+      "answers": [
+        "Sequential"
+      ]
+    },
+    {
+      "id": "fib-04",
+      "type": "fib",
+      "prompt": "________ operations select the next operation based on the answer to a question.",
+      "answers": [
+        "Conditional"
+      ]
+    },
+    {
+      "id": "fib-05",
+      "type": "fib",
+      "prompt": "________ operations repeat a previous block of instructions.",
+      "answers": [
+        "Iterative"
+      ]
+    },
+    {
+      "id": "fib-06",
+      "type": "fib",
+      "prompt": "A machine, robot, person, or thing carrying out an algorithm is called a computing ________.",
+      "answers": [
+        "agent"
+      ]
+    },
+    {
+      "id": "fib-07",
+      "type": "fib",
+      "prompt": "An algorithm must halt in a ________ amount of time.",
+      "answers": [
+        "finite"
+      ]
+    },
+    {
+      "id": "fib-08",
+      "type": "fib",
+      "prompt": "An unambiguous operation requiring no further definition is called a ________.",
+      "answers": [
+        "primitive"
+      ]
+    },
+    {
+      "id": "fib-09",
+      "type": "fib",
+      "prompt": "A loop that runs forever is called an ________ loop.",
+      "answers": [
+        "infinite"
+      ]
+    },
+    {
+      "id": "fib-10",
+      "type": "fib",
+      "prompt": "John Napier invented ________ in 1614.",
+      "answers": [
+        "logarithms"
+      ]
+    },
+    {
+      "id": "fib-11",
+      "type": "fib",
+      "prompt": "Blaise Pascal's mechanical calculator was called the ________.",
+      "answers": [
+        "Pascaline"
+      ]
+    },
+    {
+      "id": "fib-12",
+      "type": "fib",
+      "prompt": "Joseph Jacquard's loom used ________ cards.",
+      "answers": [
+        "punched"
+      ]
+    },
+    {
+      "id": "fib-13",
+      "type": "fib",
+      "prompt": "Charles Babbage designed the Difference ________.",
+      "answers": [
+        "Engine"
+      ]
+    },
+    {
+      "id": "fib-14",
+      "type": "fib",
+      "prompt": "In the Analytical Engine, the ________ represented memory.",
+      "answers": [
+        "Store"
+      ]
+    },
+    {
+      "id": "fib-15",
+      "type": "fib",
+      "prompt": "In the Analytical Engine, the ________ represented the arithmetic/logic unit.",
+      "answers": [
+        "Mill"
+      ]
+    },
+    {
+      "id": "fib-16",
+      "type": "fib",
+      "prompt": "The first publicly known fully electronic computer mentioned in the chapter is ________.",
+      "answers": [
+        "ENIAC"
+      ]
+    },
+    {
+      "id": "fib-17",
+      "type": "fib",
+      "prompt": "John Von Neumann proposed the ________ program computer.",
+      "answers": [
+        "stored"
+      ]
+    },
+    {
+      "id": "fib-18",
+      "type": "fib",
+      "prompt": "One of the first stored-program computers was called ________.",
+      "answers": [
+        "EDVAC"
+      ]
+    },
+    {
+      "id": "fib-19",
+      "type": "fib",
+      "prompt": "The first generation used ________ tubes.",
+      "answers": [
+        "vacuum"
+      ]
+    },
+    {
+      "id": "fib-20",
+      "type": "fib",
+      "prompt": "The second generation used ________ instead of vacuum tubes.",
+      "answers": [
+        "transistors"
+      ]
+    },
+    {
+      "id": "fib-21",
+      "type": "fib",
+      "prompt": "The third generation is associated with the integrated ________.",
+      "answers": [
+        "circuit"
+      ]
+    },
+    {
+      "id": "fib-22",
+      "type": "fib",
+      "prompt": "The fourth generation is described as the era of the ________.",
+      "answers": [
+        "processor"
+      ]
+    },
+    {
+      "id": "fib-23",
+      "type": "fib",
+      "prompt": "The fifth generation includes massive cloud ________ devices.",
+      "answers": [
+        "storage"
+      ]
+    },
+    {
+      "id": "match-01",
+      "type": "matching",
+      "title": "Algorithm Operations",
+      "pairs": [
+        {
+          "left": "Sequential operation",
+          "right": "Carries out one well-defined task"
+        },
+        {
+          "left": "Conditional operation",
+          "right": "Selects the next operation based on an answer"
+        },
+        {
+          "left": "Iterative operation",
+          "right": "Repeats a previous block"
+        },
+        {
+          "left": "Primitive",
+          "right": "Needs no further definition"
+        }
+      ]
+    },
+    {
+      "id": "match-02",
+      "type": "matching",
+      "title": "Historical Figures",
+      "pairs": [
+        {
+          "left": "John Napier",
+          "right": "Logarithms"
+        },
+        {
+          "left": "Blaise Pascal",
+          "right": "Pascaline"
+        },
+        {
+          "left": "Joseph Jacquard",
+          "right": "Automated loom using punched cards"
+        },
+        {
+          "left": "Herman Hollerith",
+          "right": "Census card-processing machines"
+        }
+      ]
+    },
+    {
+      "id": "match-03",
+      "type": "matching",
+      "title": "Babbage's Analytical Engine",
+      "pairs": [
+        {
+          "left": "Mill",
+          "right": "Arithmetic/logic unit"
+        },
+        {
+          "left": "Store",
+          "right": "Memory"
+        },
+        {
+          "left": "Operator",
+          "right": "Processor"
+        },
+        {
+          "left": "Output Unit",
+          "right": "Input/Output"
+        }
+      ]
+    },
+    {
+      "id": "match-04",
+      "type": "matching",
+      "title": "Early Computers",
+      "pairs": [
+        {
+          "left": "Mark I",
+          "right": "Electromechanical computer"
+        },
+        {
+          "left": "Colossus",
+          "right": "British Enigma project"
+        },
+        {
+          "left": "ENIAC",
+          "right": "First publicly known fully electronic computer"
+        },
+        {
+          "left": "UNIVAC I",
+          "right": "First commercially sold computer"
+        }
+      ]
+    },
+    {
+      "id": "match-05",
+      "type": "matching",
+      "title": "Generations",
+      "pairs": [
+        {
+          "left": "First generation",
+          "right": "Vacuum tubes"
+        },
+        {
+          "left": "Second generation",
+          "right": "Transistors and magnetic cores"
+        },
+        {
+          "left": "Third generation",
+          "right": "Integrated circuits"
+        },
+        {
+          "left": "Fourth generation",
+          "right": "Processor and microcomputer"
+        }
+      ]
+    }
+  ]
+}

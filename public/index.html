@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<base href="/">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>TopGrade</title>
+<meta name="description" content="Practice questions for your university courses: multiple choice, true or false, fill in the blank and matching.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="TopGrade">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TopGrade">
+<meta property="og:title" content="TopGrade">
+<meta property="og:description" content="Practice questions for your university courses. منصة خدمات طلابية">
+<meta property="og:image" content="https://app.topgradeedu.com/assets/icons/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="assets/icons/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/ibm-plex-sans-arabic-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/ibm-plex-sans-arabic-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+<script>
+// Runs before first paint: saved theme and language, and whether we were opened as the installed app
+// (start_url carries ?source=app), so the page never shows its own logo on top of the system launch screen.
+(function () {
+  var d = document.documentElement;
+  try {
+    if (localStorage.getItem('topgrade.lang') === 'ar') { d.lang = 'ar'; d.dir = 'rtl'; }
+    var theme = localStorage.getItem('topgrade.theme');
+    d.dataset.theme = theme === 'dark' || theme === 'light' ? theme : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  } catch (e) { d.dataset.theme = 'light'; }
+  if (/[?&]source=app\b/.test(location.search) || navigator.standalone || matchMedia('(display-mode: standalone)').matches) d.classList.add('installed');
+})();
+</script>
+<script src="assets/js/viewport.js"></script>
+<style>
+/* Shown until the app's first screen replaces it (also matches the install splash colour). */
+.splash{position:fixed;inset:0;display:grid;place-content:center;justify-items:center;gap:12px;background:#F4F6FA}
+.splash img{width:150px;height:auto}
+.splash p{margin:0;font:600 14px/1.5 'IBM Plex Sans Arabic',Tahoma,sans-serif;color:#475569}
+/* The installed app already gets the system launch screen with the logo; don't show it a second time. */
+[data-theme=dark] .splash{background:#081226}
+[data-theme=dark] .splash img{background:#fff;border-radius:28px;padding:14px 18px}
+[data-theme=dark] .splash p{color:#A5B4CB}
+.installed .splash img,.installed .splash p{display:none}
+@media (display-mode: standalone),(display-mode: fullscreen){.splash img,.splash p{display:none}}
+</style>
+<!-- BEGIN MODULEPRELOAD -->
+<link rel="modulepreload" href="assets/js/app/catalog.js">
+<link rel="modulepreload" href="assets/js/app/i18n.js">
+<link rel="modulepreload" href="assets/js/app/install.js">
+<link rel="modulepreload" href="assets/js/app/main.js">
+<link rel="modulepreload" href="assets/js/app/progress.js">
+<link rel="modulepreload" href="assets/js/app/quiz.js">
+<link rel="modulepreload" href="assets/js/app/router.js">
+<link rel="modulepreload" href="assets/js/app/routes.js">
+<link rel="modulepreload" href="assets/js/app/shell.js">
+<link rel="modulepreload" href="assets/js/app/theme.js">
+<link rel="modulepreload" href="assets/js/app/update.js">
+<link rel="modulepreload" href="assets/js/app/views/course.js">
+<link rel="modulepreload" href="assets/js/app/views/courses.js">
+<link rel="modulepreload" href="assets/js/app/views/home.js">
+<link rel="modulepreload" href="assets/js/app/views/pages.js">
+<link rel="modulepreload" href="assets/js/app/views/review.js">
+<link rel="modulepreload" href="assets/js/quiz/bank.js">
+<link rel="modulepreload" href="assets/js/quiz/dialog.js">
+<link rel="modulepreload" href="assets/js/quiz/dom.js">
+<link rel="modulepreload" href="assets/js/quiz/grading.js">
+<link rel="modulepreload" href="assets/js/quiz/session.js">
+<link rel="modulepreload" href="assets/js/quiz/store.js">
+<!-- END MODULEPRELOAD -->
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/app.css">
+<script type="module" src="assets/js/app/main.js"></script>
+</head>
+<body>
+<div class="frame">
+<header id="hdr" class="hdr"></header>
+<div id="app" class="app">
+<div class="splash" role="status" aria-label="Opening TopGrade">
+<img src="assets/img/logo-full.png" width="320" height="284" alt="TopGrade">
+<p lang="ar" dir="rtl">منصة خدمات طلابية</p>
+</div>
+</div>
+</div>
+<noscript><p class="boot">TopGrade needs JavaScript. Turn it on in your browser settings, then reload the page.</p></noscript>
+</body>
+</html>

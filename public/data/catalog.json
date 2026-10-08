@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "courses": [
+    {
+      "id": "problem-solving",
+      "titleEn": "Problem Solving & Programming",
+      "titleAr": "حل المشاكل والبرمجة",
+      "topics": [
+        {
+          "id": "topic-1",
+          "number": 1,
+          "title": "Introduction to Computer Science",
+          "bank": "problem-solving/topic-1.json"
+        }
+      ]
+    }
+  ]
+}
