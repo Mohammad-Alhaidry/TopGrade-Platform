@@ -32,6 +32,8 @@ button:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-off
 .page-copy nav{margin-bottom:16px;font-size:14px}
 /* The «راسلنا» fallback page (whatsapp.html). */
 .wa-go{min-height:48px;padding:0 22px;border:0;border-radius:12px;background:#15803D;color:#fff;font:700 16px/1 var(--arabic);cursor:pointer}
-/* Math drawn by Temml (app/math.js): inline with the text, a long expression scrolls instead of overflowing. */
-.math{display:inline-block;max-width:100%;overflow-x:auto;vertical-align:middle;direction:ltr}
+/* Math drawn by Temml (app/math.js), inline with the text. No overflow scrolling: tall glyphs (powers, fractions)
+   made every formula scrollable and Android drew a scroll bar beside each one. Every formula fits a 360px phone
+   (checked over all questions before publishing). */
+.math{display:inline-block;max-width:100%;vertical-align:middle;direction:ltr}
 .math math{font-size:1.08em}
