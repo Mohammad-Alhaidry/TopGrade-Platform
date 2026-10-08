@@ -132,12 +132,13 @@ function installCard() {
 let stopInstallUpdates = () => {};
 
 function helpCard() {
-  return h('a', { class: 'card help', href: WHATSAPP_URL, target: '_blank', rel: 'noopener noreferrer' },
+  // Filled WhatsApp green so it is the first thing a student notices under the welcome card.
+  return h('a', { class: 'help', href: WHATSAPP_URL, target: '_blank', rel: 'noopener noreferrer' },
     h('span', { class: 'help__icon' }, staticSvg(WHATSAPP_SVG)),
     h('span', { class: 'help__copy' },
       h('span', { class: 'help__title' }, t('home.help')),
-      h('span', { class: 'help__ar' }, t('home.helpSub'))),
-    h('span', { class: 'help__go' }, forwardIcon()));
+      h('span', { class: 'help__sub' }, t('home.helpSub'))),
+    h('span', { class: 'help__btn' }, t('home.helpBtn')));
 }
 
 export async function showHome(ctx) {
