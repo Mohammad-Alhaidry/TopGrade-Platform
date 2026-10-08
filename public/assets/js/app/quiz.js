@@ -189,9 +189,9 @@ function setupView() {
           refresh();
         },
       }),
-      h('span', { class: 'tile__icon tile__icon--art' }, staticSvg(TYPE_ICONS[type])),
-      h('span', { class: 'tile__copy' }, h('span', { class: 'tile__title' }, typeLabel(type)), h('span', { class: 'tile__text' }, t('n.questions', { n: counts[type] }))),
-      h('span', { class: 'tile__tick' }, icon(...ICONS.check)));
+      // The tick sits as a badge on the icon's corner, leaving the whole row for the label (one line, compact).
+      h('span', { class: 'tile__icon tile__icon--art' }, staticSvg(TYPE_ICONS[type]), h('span', { class: 'tile__tick' }, icon(...ICONS.check))),
+      h('span', { class: 'tile__copy' }, h('span', { class: 'tile__title' }, typeLabel(type)), h('span', { class: 'tile__text' }, t('n.questions', { n: counts[type] }))));
 
   const countOption = (value, label) =>
     h('label', { class: 'seg' },

@@ -120,11 +120,14 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--accent);outline
 .tile__copy{display:grid;gap:1px;min-width:0}
 .tile__title{font:700 13.5px/1.25 var(--ui);color:var(--ink)}
 .tile__text{font:500 11.5px/1.3 var(--ui);color:var(--muted)}
-.tile__tick{flex:none;align-self:flex-start;margin-inline-start:auto;display:grid;place-items:center;width:16px;height:16px;border-radius:50%;border:1.5px solid var(--line-strong);color:transparent;background:var(--card)}
+.tile__icon:has(.tile__tick){position:relative}
+.tile__tick{position:absolute;top:-6px;inset-inline-start:-6px;display:grid;place-items:center;width:16px;height:16px;border-radius:50%;border:1.5px solid var(--line-strong);color:transparent;background:var(--card);box-shadow:0 0 0 2px var(--card)}
+/* Small phones: a little less padding so «اختيار من متعدد» still fits on one line. */
+@media(max-width:399px){.tile{gap:7px;padding-inline:8px}.tile__title{font-size:13px}}
 .tile__tick svg{width:10px;height:10px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .tile:has(input:checked){border-color:var(--brand-ink);background:var(--tint);box-shadow:inset 0 0 0 1px var(--primary)}
 .tile:has(input:checked) .tile__icon{background:var(--primary);color:#fff}
-.tile:has(input:checked) .tile__tick{border-color:var(--brand-ink);background:var(--primary);color:#fff}
+.tile:has(input:checked) .tile__tick{border-color:var(--card);background:var(--primary);color:#fff}
 .tile:has(input:focus-visible){outline:3px solid var(--accent);outline-offset:2px}
 @media(hover:hover){.tile:not(:has(input:checked)):hover{border-color:var(--line-strong);background:var(--soft)}}
 
