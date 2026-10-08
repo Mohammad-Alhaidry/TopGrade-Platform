@@ -51,3 +51,20 @@ test('service worker serves the app from cache and waits for a safe moment to up
   assert.match(sw, /SKIP_WAITING/);
   assert.doesNotMatch(sw, /networkFirst/);
 });
+
+test('the live worker answers app addresses itself but leaves /preview/ to the server', async () => {
+  const { runInNewContext } = await import('node:vm');
+  const listeners = {};
+  const self = { registration: { scope: 'https://app.example/' }, addEventListener: (type, fn) => { listeners[type] = fn; } };
+  const caches = { open: async () => ({ match: async () => 'cached page' }) };
+  runInNewContext(sw, { self, caches, fetch: async () => 'network', URL, Set, Promise });
+  const answered = (url) => {
+    let used = false;
+    listeners.fetch({ request: { method: 'GET', mode: 'navigate', url }, respondWith: () => { used = true; } });
+    return used;
+  };
+  assert.equal(answered('https://app.example/'), true);
+  assert.equal(answered('https://app.example/courses/problem-solving/topic-1'), true);
+  assert.equal(answered('https://app.example/preview/'), false);
+  assert.equal(answered('https://app.example/preview/courses'), false);
+});
