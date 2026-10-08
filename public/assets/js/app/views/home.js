@@ -4,11 +4,11 @@
 
 import { h, icon, ICONS, WHATSAPP_SVG, staticSvg } from '../../quiz/dom.js';
 import { createSession } from '../../quiz/session.js';
-import { screen, tabbar, mount, forwardIcon, enText } from '../shell.js';
+import { screen, tabbar, mount, forwardIcon, contentText } from '../shell.js';
 import { href, navigate } from '../router.js';
 import { paths } from '../routes.js';
 import { readProgress, overall, streak } from '../progress.js';
-import { topicKey } from '../catalog.js';
+import { topicKey, topicLabel } from '../catalog.js';
 import { savedRunTopic, readSavedRun, queueRun, newRun } from '../quiz.js';
 import { installOffer, promptInstall, dismissInstall, onInstallChange } from '../install.js';
 import { t, lang } from '../i18n.js';
@@ -104,7 +104,7 @@ function continueCard(summaries) {
         h('span', { class: 'continue__icon' }, icon(...(run ? ICONS.exam : ICONS.book))),
         h('span', { class: 'continue__copy' },
           h('span', { class: 'continue__title' }, title),
-          h('span', { class: 'continue__text' }, t('topicN', { n: x.topic.number }), ': ', h('span', enText(), x.topic.title)),
+          h('span', { class: 'continue__text' }, topicLabel(x.topic, lang()), ': ', h('span', contentText(course), x.topic.title)),
           h('span', { class: 'continue__meta' }, detail)),
         h('span', { class: 'continue__go' }, forwardIcon()));
     }

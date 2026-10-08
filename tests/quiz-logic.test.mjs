@@ -178,3 +178,9 @@ test('createSession gives every fill-in-the-blank question word choices containi
     assert.equal(it.wordChoices.filter((w) => isCorrect(it.question, w)).length, 1, `${it.question.id} has exactly one right word`);
   }
 });
+
+test('«جميع ما سبق» stays the last option, like "All of the above"', async () => {
+  const { optionOrder } = await import('../public/assets/js/quiz/session.js');
+  const q = { type: 'mcq', options: ['جميع ما سبق', 'الأصول', 'الالتزامات', 'حقوق الملكية'], answer: 'A' };
+  for (let i = 0; i < 20; i++) assert.equal(optionOrder(q).at(-1), 0);
+});

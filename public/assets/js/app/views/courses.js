@@ -17,8 +17,10 @@ export async function courseSummaries(ctx) {
       const stats = topicStats(progress, topicKey(course, topic), bank.questions.map((q) => q.id));
       return { topic, bank, stats };
     }));
-    const totalQuestions = topics.reduce((n, x) => n + x.stats.total, 0);
-    const mastered = topics.reduce((n, x) => n + x.stats.mastered, 0);
+    // A practice midterm reuses the chapters' questions, so it does not count twice in the course totals.
+    const own = topics.filter((x) => !x.topic.mix);
+    const totalQuestions = own.reduce((n, x) => n + x.stats.total, 0);
+    const mastered = own.reduce((n, x) => n + x.stats.mastered, 0);
     return {
       course,
       topics,

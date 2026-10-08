@@ -3,7 +3,7 @@
 // so both always say the same thing.
 
 import { t } from './i18n.js';
-import { findCourse, findTopic } from './catalog.js';
+import { findCourse, findTopic, topicLabel } from './catalog.js';
 import { PRIVACY } from './privacy-text.js';
 
 const TYPES = ['mcq', 'tf', 'fib', 'matching'];
@@ -27,7 +27,7 @@ export function pageTitle(route, catalog, language) {
     const found = catalog && findTopic(catalog, params.course, params.topic);
     if (found) {
       const { course, topic } = found;
-      return withBrand(language, `${t('topicN', { n: topic.number }, language)}: ${topic.title}`, courseName(course, language));
+      return withBrand(language, `${topicLabel(topic, language)}: ${topic.title}`, courseName(course, language));
     }
   }
   return withBrand(language, t('nf.title', {}, language));
@@ -42,7 +42,7 @@ export function pageDescription(route, catalog, language, banks = new Map()) {
   if (name === 'course') {
     const course = findCourse(catalog, params.course);
     if (course) {
-      const questions = course.topics.reduce((n, topic) => n + count(topic), 0);
+      const questions = course.topics.filter((topic) => !topic.mix).reduce((n, topic) => n + count(topic), 0);
       return t('meta.courseDesc', {
         course: courseName(course, language),
         questions: t('n.questions', { n: questions }, language),

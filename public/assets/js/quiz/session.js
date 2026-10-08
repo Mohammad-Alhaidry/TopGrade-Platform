@@ -5,8 +5,8 @@ import { isAnswered, isCorrect, normalizeAnswer } from './grading.js';
 
 export const MODES = ['practice', 'exam'];
 
-// Options like "All of the above" only make sense in last position, so they never move.
-const PINNED_OPTION = /^(all|none|both|neither) of the (above|options)$/i;
+// Options like "All of the above" / «جميع ما سبق» only make sense in last position, so they never move.
+const PINNED_OPTION = /^((all|none|both|neither) of the (above|options)|(جميع|كل) ما سبق( ذكره)?|لا شيء مما سبق)$/i;
 
 export function shuffle(items, rng = Math.random) {
   const out = [...items];

@@ -1,23 +1,24 @@
 // One course: its title card and the list of topics with the student's progress in each.
 
 import { h } from '../../quiz/dom.js';
-import { pagebar, screen, tabbar, mount, meter, backLink, forwardIcon, enText } from '../shell.js';
+import { pagebar, screen, tabbar, mount, meter, backLink, forwardIcon, contentText } from '../shell.js';
+import { topicLabel } from '../catalog.js';
 import { href } from '../router.js';
 import { paths } from '../routes.js';
-import { t, localName } from '../i18n.js';
+import { t, lang, localName } from '../i18n.js';
 import { courseSummaries } from './courses.js';
 
 function topicCard(course, { topic, stats }) {
   return h('a', { class: 'card topic-card', href: href(paths.topic(course.id, topic.id)) },
     h('span', { class: 'topic-card__num', 'aria-hidden': 'true' }, String(topic.number)),
     h('span', { class: 'topic-card__copy' },
-      h('span', { class: 'topic-card__label' }, t('topicN', { n: topic.number })),
-      h('span', enText({ class: 'topic-card__title' }), topic.title),
+      h('span', { class: 'topic-card__label' }, topicLabel(topic, lang())),
+      h('span', contentText(course, { class: 'topic-card__title' }), topic.title),
       h('span', { class: 'topic-card__meta' },
         h('span', {}, t('n.questions', { n: stats.total })),
         stats.best !== null ? h('span', { class: 'topic-card__best' }, t('bestPct', { p: stats.best })) : null,
         stats.mistakes.length ? h('span', { class: 'topic-card__miss' }, t('n.mistakes', { n: stats.mistakes.length })) : null),
-      h('span', { class: 'topic-card__progress' }, meter(stats.percent / 100, t('progressOf', { name: t('topicN', { n: topic.number }) })), h('span', { dir: 'ltr' }, `${stats.percent}%`))),
+      h('span', { class: 'topic-card__progress' }, meter(stats.percent / 100, t('progressOf', { name: topicLabel(topic, lang()) })), h('span', { dir: 'ltr' }, `${stats.percent}%`))),
     h('span', { class: 'topic-card__go' }, forwardIcon()));
 }
 
