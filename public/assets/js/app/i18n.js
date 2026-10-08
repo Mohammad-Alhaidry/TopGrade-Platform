@@ -4,10 +4,12 @@
 
 export const LANGS = ['en', 'ar'];
 const STORAGE_KEY = 'topgrade.lang';
+// First visit (no saved choice): Arabic. The head script in index.html sets lang/dir to match before first paint.
+export const DEFAULT_LANG = 'ar';
 
 const S = {
   // Shell
-  'hdr.home': { en: 'TopGrade home', ar: 'الرئيسية' },
+  'hdr.home': { en: 'Smart Pro home', ar: 'الرئيسية' },
   'hdr.lang': { en: 'العربية', ar: 'English' },
   'hdr.langShort': { en: 'ع', ar: 'EN' },
   'hdr.dark': { en: 'Switch to dark mode', ar: 'الوضع الليلي' },
@@ -43,7 +45,7 @@ const S = {
 
   // Home
   'home.student': { en: 'Student', ar: 'طالب' },
-  'home.welcome': { en: 'Welcome to TopGrade', ar: 'أهلًا بك في TopGrade' },
+  'home.welcome': { en: 'Welcome to Smart Pro', ar: 'أهلًا بك في سمارت برو' },
   'home.welcomeBack': { en: 'Welcome back', ar: 'أهلًا بعودتك' },
   'home.streak': { en: 'Study streak', ar: 'أيام متتالية' },
   'home.answered': { en: 'Questions answered', ar: 'أسئلة محلولة' },
@@ -64,8 +66,9 @@ const S = {
   'practise': { en: 'Practise', ar: 'تدرّب' },
   'home.yourCourses': { en: 'Your courses', ar: 'مقرراتك' },
   'home.seeAll': { en: 'See all', ar: 'عرض الكل' },
-  'home.help': { en: 'Need help with a course?', ar: 'تحتاج مساعدة في مقرر؟' },
-  'home.helpSub': { en: 'Message TopGrade on WhatsApp', ar: 'تواصل مع TopGrade عبر واتساب' },
+  'home.help': { en: 'Want questions for your course?', ar: 'تبي أسئلة لمقررك؟' },
+  'home.helpSub': { en: 'Send us the course name', ar: 'أرسل لنا اسم المقرر وبنسويها لك' },
+  'home.helpBtn': { en: 'Message us', ar: 'راسلنا' },
   'home.privacy': { en: 'Privacy policy', ar: 'سياسة الخصوصية' },
   'home.saved': { en: 'Progress is saved on this device', ar: 'تقدّمك محفوظ على هذا الجهاز' },
   'cont.exam': { en: 'Resume your exam', ar: 'أكمل اختبارك' },
@@ -78,15 +81,15 @@ const S = {
   'topicTitle': { en: 'Topic {n}: {title}', ar: 'الموضوع {n}: {title}' },
 
   // Install
-  'inst.titleIos': { en: 'Get the TopGrade app', ar: 'حمّل تطبيق TopGrade' },
-  'inst.title': { en: 'Install TopGrade', ar: 'ثبّت تطبيق TopGrade' },
-  'inst.text': { en: 'Add it to your home screen. It opens full screen and works offline.', ar: 'أضفه إلى الشاشة الرئيسية، يفتح بملء الشاشة ويعمل دون إنترنت.' },
+  'inst.titleIos': { en: 'Get the Smart Pro app', ar: 'حمّل تطبيق سمارت برو' },
+  'inst.title': { en: 'Install Smart Pro', ar: 'ثبّت تطبيق سمارت برو' },
+  'inst.text': { en: 'Opens full screen and works offline', ar: 'يفتح بملء الشاشة ويعمل دون إنترنت' },
   'inst.tap': { en: 'Tap', ar: 'اضغط' },
   'inst.shareBar': { en: 'Share in the browser bar', ar: 'مشاركة في شريط المتصفح' },
   'inst.share': { en: 'Share', ar: 'مشاركة' },
   'inst.choose': { en: 'Choose', ar: 'اختر' },
   'inst.addHome': { en: 'Add to Home Screen', ar: 'إضافة إلى الشاشة الرئيسية' },
-  'inst.btn': { en: 'Install app', ar: 'ثبّت التطبيق' },
+  'inst.btn': { en: 'Install', ar: 'تثبيت' },
   'inst.notNow': { en: 'Not now', ar: 'ليس الآن' },
 
   // Courses / course
@@ -234,10 +237,10 @@ function initialLang() {
   } catch {
     /* storage unavailable */
   }
-  return 'en';
+  return DEFAULT_LANG;
 }
 
-let current = typeof localStorage === 'undefined' ? 'en' : initialLang();
+let current = typeof localStorage === 'undefined' ? DEFAULT_LANG : initialLang();
 const listeners = new Set();
 
 export const lang = () => current;

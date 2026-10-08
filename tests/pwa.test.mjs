@@ -12,7 +12,7 @@ test('index.html preload list and sw.js offline list are up to date (run `npm ru
 });
 
 test('the offline list covers the app shell, code, styles, fonts and every question bank', () => {
-  for (const f of ['index.html', 'manifest.webmanifest', 'assets/js/app/main.js', 'assets/css/app.css', 'data/catalog.json', 'assets/fonts/ibm-plex-sans-arabic-latin-400.woff2']) {
+  for (const f of ['index.html', 'manifest.webmanifest', 'assets/js/app/main.js', 'assets/css/app.css', 'data/catalog.json', 'assets/fonts/cairo-latin.woff2', 'assets/fonts/cairo-arabic.woff2']) {
     assert.ok(files.includes(f), `${f} missing from offline list`);
   }
   const catalog = JSON.parse(readFileSync(new URL('data/catalog.json', pub)));

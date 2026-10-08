@@ -1,5 +1,6 @@
-// Home, laid out like the TopGrade dashboard: gradient welcome card with two figures and two actions,
-// continue where they left off, progress KPIs, what needs attention, their courses, and WhatsApp help.
+// Home: gradient welcome card with two figures and two actions,
+// a WhatsApp request for questions in another course, continue where they left off, progress KPIs,
+// what needs attention and their courses.
 
 import { h, icon, ICONS, WHATSAPP_SVG, staticSvg } from '../../quiz/dom.js';
 import { createSession } from '../../quiz/session.js';
@@ -117,26 +118,28 @@ function installCard() {
     : h('ol', { class: 'install__steps' },
         h('li', {}, t('inst.tap'), ' ', h('span', { class: 'install__key', 'aria-label': t('inst.share') }, icon(...ICONS.share)), ' ', t('inst.shareBar')),
         h('li', {}, t('inst.choose'), ' ', h('strong', {}, t('inst.addHome')), ' ', h('span', { class: 'install__key', 'aria-hidden': 'true' }, icon(...ICONS.addSquare))));
-  return h('section', { class: 'card install', 'aria-labelledby': 'install-title' },
+  // Android/desktop: one compact row with the Install button beside the text. iPhone needs room for the steps.
+  const row = offer === 'prompt';
+  return h('section', { class: `card install${row ? ' install--row' : ''}`, 'aria-labelledby': 'install-title' },
     h('img', { class: 'install__icon', src: 'assets/icons/icon-192.png', width: '192', height: '192', alt: '' }),
     h('div', { class: 'install__copy' },
-      h('h2', { class: 'install__title', id: 'install-title' }, t(offer === 'ios' ? 'inst.titleIos' : 'inst.title')),
-      body,
-      offer === 'prompt'
-        ? h('button', { type: 'button', class: 'btn btn--primary btn--sm install__btn', onclick: promptInstall }, icon(...ICONS.download), h('span', {}, t('inst.btn')))
-        : null),
+      h('h2', { class: 'install__title', id: 'install-title' }, t(row ? 'inst.title' : 'inst.titleIos')),
+      body),
+    row ? h('button', { type: 'button', class: 'btn btn--primary btn--sm install__btn', onclick: promptInstall }, icon(...ICONS.download), h('span', {}, t('inst.btn'))) : null,
     close);
 }
 
 let stopInstallUpdates = () => {};
 
 function helpCard() {
-  return h('a', { class: 'card help', href: WHATSAPP_URL, target: '_blank', rel: 'noopener noreferrer' },
+  // Filled WhatsApp green so it is the first thing a student notices under the welcome card.
+  return h('a', { class: 'help', href: WHATSAPP_URL, target: '_blank', rel: 'noopener noreferrer' },
     h('span', { class: 'help__icon' }, staticSvg(WHATSAPP_SVG)),
     h('span', { class: 'help__copy' },
       h('span', { class: 'help__title' }, t('home.help')),
-      h('span', { class: 'help__ar' }, t('home.helpSub'))),
-    h('span', { class: 'help__go' }, forwardIcon()));
+      h('span', { class: 'help__sub' }, t('home.helpSub'))),
+    h('span', { class: 'help__btn' }, h('span', {}, t('home.helpBtn')), forwardIcon()),
+    h('span', { class: 'help__mark' }, staticSvg(WHATSAPP_SVG)));
 }
 
 export async function showHome(ctx) {
@@ -161,6 +164,7 @@ export async function showHome(ctx) {
     body: [
       h('div', { class: 'col col--main' },
         hero(progress, totals, summaries),
+        helpCard(),
         continueCard(summaries),
         installSlot,
         h('h2', { class: 'section-label' }, t('home.progress')),
@@ -171,7 +175,6 @@ export async function showHome(ctx) {
           h('h2', {}, t('home.yourCourses')),
           h('a', { href: href(paths.courses()) }, t('home.seeAll'))),
         summaries.slice(0, 3).map(courseCard),
-        helpCard(),
         h('p', { class: 'fineprint' },
           h('a', { href: href(paths.privacy()) }, t('home.privacy')),
           h('span', { 'aria-hidden': 'true' }, ' · '),
