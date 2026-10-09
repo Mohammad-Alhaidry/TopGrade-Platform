@@ -138,6 +138,97 @@
           }
         }
       ]
+    },
+    {
+      "id": "business-math",
+      "titleEn": "Business Mathematics",
+      "titleAr": "رياضيات الأعمال",
+      "lang": "ar",
+      "math": true,
+      "topics": [
+        {
+          "id": "unit-1",
+          "number": 1,
+          "title": "الدوال وتطبيقاتها",
+          "label": {
+            "en": "Unit 1",
+            "ar": "الوحدة الأولى"
+          },
+          "bank": "business-math/unit-1.json"
+        },
+        {
+          "id": "unit-2",
+          "number": 2,
+          "title": "المعادلات وتطبيقاتها",
+          "label": {
+            "en": "Unit 2",
+            "ar": "الوحدة الثانية"
+          },
+          "bank": "business-math/unit-2.json"
+        },
+        {
+          "id": "unit-3",
+          "number": 3,
+          "title": "المصفوفات",
+          "label": {
+            "en": "Unit 3",
+            "ar": "الوحدة الثالثة"
+          },
+          "bank": "business-math/unit-3.json"
+        },
+        {
+          "id": "unit-4",
+          "number": 4,
+          "title": "المحددات وتطبيقاتها",
+          "label": {
+            "en": "Unit 4",
+            "ar": "الوحدة الرابعة"
+          },
+          "bank": "business-math/unit-4.json"
+        },
+        {
+          "id": "homework",
+          "number": 5,
+          "title": "واجبات المقرر (الوحدات 1–4)",
+          "label": {
+            "en": "Homework",
+            "ar": "الواجبات"
+          },
+          "bank": "business-math/homework.json"
+        },
+        {
+          "id": "past-exams",
+          "number": 6,
+          "title": "ميدات وكويزات سابقة",
+          "label": {
+            "en": "Past exams",
+            "ar": "اختبارات سابقة"
+          },
+          "bank": "business-math/past-exams.json"
+        },
+        {
+          "id": "midterm",
+          "number": 7,
+          "title": "الوحدات من 1 إلى 4",
+          "label": {
+            "en": "Practice midterm",
+            "ar": "اختبار نصفي تجريبي"
+          },
+          "bank": "business-math/midterm.json",
+          "mix": [
+            "unit-1",
+            "unit-2",
+            "unit-3",
+            "unit-4",
+            "homework",
+            "past-exams"
+          ],
+          "defaults": {
+            "mode": "exam",
+            "count": 40
+          }
+        }
+      ]
     }
   ]
 }
