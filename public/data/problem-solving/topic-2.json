@@ -1,0 +1,2227 @@
+{
+  "schemaVersion": 1,
+  "course": {
+    "id": "problem-solving",
+    "titleAr": "حل المشاكل والبرمجة",
+    "titleEn": "Problem Solving & Programming"
+  },
+  "topic": {
+    "id": "topic-2",
+    "number": 2,
+    "title": "Computers Organization"
+  },
+  "questions": [
+    {
+      "id": "t2a-mcq-001",
+      "type": "mcq",
+      "prompt": "A computer is an electronic device that:",
+      "options": [
+        "Only displays text and graphics",
+        "Stores and processes data",
+        "Only sends data to another device or user",
+        "Only stores data permanently"
+      ],
+      "answer": "B",
+      "explanation": "The slides define a computer as \"an electronic device that stores and processes data.\"",
+      "source": {
+        "page": 2,
+        "part": 1
+      }
+    },
+    {
+      "id": "t2a-mcq-002",
+      "type": "mcq",
+      "prompt": "In general, hardware comprises:",
+      "options": [
+        "The invisible instructions that control the computer",
+        "Only the programs stored in memory",
+        "Only the data processed by the CPU",
+        "The visible, physical elements of the computer"
+      ],
+      "answer": "D",
+      "explanation": "Hardware comprises the visible, physical elements of the computer; software is the invisible instructions.",
+      "source": {
+        "page": 2,
+        "part": 1
+      }
+    },
+    {
+      "id": "t2a-mcq-003",
+      "type": "mcq",
+      "prompt": "Software provides:",
+      "options": [
+        "The invisible instructions that control the hardware and make it perform specific tasks",
+        "The visible, physical elements of the computer",
+        "The roads that carry data and power between components",
+        "The circuit case that connects all parts of the computer"
+      ],
+      "answer": "A",
+      "explanation": "Software provides the invisible instructions that control the hardware and make it perform specific tasks.",
+      "source": {
+        "page": 2,
+        "part": 1
+      }
+    },
+    {
+      "id": "t2a-mcq-005",
+      "type": "mcq",
+      "prompt": "Network interface cards (NICs) and modems are examples of:",
+      "options": [
+        "Communication devices",
+        "Input devices",
+        "Storage devices",
+        "Output devices"
+      ],
+      "answer": "A",
+      "explanation": "The slides list communication devices \"such as modems and network interface cards.\"",
+      "source": {
+        "page": 2,
+        "part": 1
+      }
+    },
+    {
+      "id": "t2a-match-001",
+      "type": "matching",
+      "title": "Match each group of computer components with its examples",
+      "pairs": [
+        {
+          "left": "Storage devices",
+          "right": "Disks and CDs"
+        },
+        {
+          "left": "Input devices",
+          "right": "Mouse and keyboard"
+        },
+        {
+          "left": "Output devices",
+          "right": "Monitors and printers"
+        },
+        {
+          "left": "Communication devices",
+          "right": "Modems and network interface cards"
+        }
+      ],
+      "source": {
+        "page": 2,
+        "part": 1
+      }
+    },
+    {
+      "id": "t2a-mcq-006",
+      "type": "mcq",
+      "prompt": "A computer's components are interconnected by a subsystem called:",
+      "options": [
+        "A motherboard",
+        "A network interface card",
+        "A memory unit",
+        "A bus"
+      ],
+      "answer": "D",
+      "explanation": "The slides state that a computer's components are interconnected by a subsystem called a bus.",
+      "source": {
+        "page": 3,
+        "part": 1
+      }
+    },
+    {
+      "id": "t2a-match-002",
+      "type": "matching",
+      "title": "Match each term with its description",
+      "pairs": [
+        {
+          "left": "CPU",
+          "right": "The brain of the computer; retrieves and executes instructions"
+        },
+        {
+          "left": "Memory",
+          "right": "Stores data and program instructions for the CPU to execute"
+        },
+        {
+          "left": "Bus",
+          "right": "Subsystem that interconnects the computer components"
+        },
+        {
+          "left": "Motherboard",
+          "right": "Circuit case that connects all parts of the computer together"
+        }
+      ],
+      "source": {
+        "page": 3,
+        "part": 1
+      }
+    },
+    {
+      "id": "t2a-mcq-010",
+      "type": "mcq",
+      "prompt": "The central processing unit (CPU) is described as:",
+      "options": [
+        "The brain of a computer",
+        "The system of roads among the components",
+        "The circuit case that connects all the parts",
+        "The permanent store of programs and data"
+      ],
+      "answer": "A",
+      "explanation": "The slides call the CPU \"the brain of a computer.\"",
+      "source": {
+        "page": 5,
+        "part": 1
+      }
+    },
+    {
+      "id": "t2a-mcq-011",
+      "type": "mcq",
+      "prompt": "The CPU retrieves instructions from _____ and executes them.",
+      "options": [
+        "Storage devices",
+        "Input devices",
+        "Memory",
+        "Communication devices"
+      ],
+      "answer": "C",
+      "explanation": "The CPU retrieves instructions from memory and executes them.",
+      "source": {
+        "page": 5,
+        "part": 1
+      }
+    },
+    {
+      "id": "t2a-mcq-012",
+      "type": "mcq",
+      "prompt": "The CPU speed is measured in:",
+      "options": [
+        "Megabytes (MB)",
+        "Megahertz (MHz)",
+        "Bits",
+        "Dot pitch"
+      ],
+      "answer": "B",
+      "explanation": "The slides state that the CPU speed is measured in megahertz (MHz).",
+      "source": {
+        "page": 5,
+        "part": 1
+      }
+    },
+    {
+      "id": "t2a-mcq-013",
+      "type": "mcq",
+      "prompt": "1 megahertz equals:",
+      "options": [
+        "1 thousand pulses per second",
+        "1 billion pulses per second",
+        "1 million pulses per second",
+        "1 million bytes per second"
+      ],
+      "answer": "C",
+      "explanation": "1 megahertz equals 1 million pulses per second.",
+      "source": {
+        "page": 5,
+        "part": 1
+      }
+    },
+    {
+      "id": "t2a-mcq-014",
+      "type": "mcq",
+      "prompt": "Memory is used to:",
+      "options": [
+        "Store data and program instructions for the CPU to execute",
+        "Store programs and data permanently, even when the power is off",
+        "Send data from the computer to another device or user",
+        "Connect all of the parts of the computer together"
+      ],
+      "answer": "A",
+      "explanation": "Memory is to store data and program instructions for the CPU to execute.",
+      "source": {
+        "page": 7,
+        "part": 1
+      }
+    },
+    {
+      "id": "t2a-mcq-015",
+      "type": "mcq",
+      "prompt": "A memory unit is:",
+      "options": [
+        "An unordered collection of bits",
+        "A set of tracks on a disk",
+        "A system of roads among the components",
+        "An ordered sequence of bytes"
+      ],
+      "answer": "D",
+      "explanation": "The slides define a memory unit as an ordered sequence of bytes, each holding eight bits.",
+      "source": {
+        "page": 7,
+        "part": 1
+      }
+    },
+    {
+      "id": "t2a-mcq-016",
+      "type": "mcq",
+      "prompt": "Each byte in memory holds:",
+      "options": [
+        "4 bits",
+        "2 bits",
+        "8 bits",
+        "16 bits"
+      ],
+      "answer": "C",
+      "explanation": "A memory unit is an ordered sequence of bytes, each holding eight bits (a bit = 0 or 1).",
+      "source": {
+        "page": 7,
+        "part": 1
+      }
+    },
+    {
+      "id": "t2a-mcq-017",
+      "type": "mcq",
+      "prompt": "What happens to the current content of a memory byte when new information is placed in it?",
+      "options": [
+        "It is moved to a storage device",
+        "It is moved to the next byte",
+        "It is kept together with the new information",
+        "It is lost"
+      ],
+      "answer": "D",
+      "explanation": "The current content of a memory byte is lost whenever new information is placed in it.",
+      "source": {
+        "page": 7,
+        "part": 1
+      }
+    },
+    {
+      "id": "t2a-tf-011",
+      "type": "tf",
+      "prompt": "A program and its data must be brought to memory before they can be executed.",
+      "answer": true,
+      "explanation": "The slide says a program and its data must be brought to memory before they can be executed; storage devices only keep them permanently.",
+      "source": {
+        "page": 7,
+        "part": 1
+      }
+    },
+    {
+      "id": "t2a-mcq-018",
+      "type": "mcq",
+      "prompt": "Memory is volatile because:",
+      "options": [
+        "The content of a byte is lost when new information is placed in it",
+        "Information is lost when the power is off",
+        "It permanently stores programs and data",
+        "It sends data from the computer to the user"
+      ],
+      "answer": "B",
+      "explanation": "The slides say memory is volatile because information is lost when the power is off.",
+      "source": {
+        "page": 9,
+        "part": 1
+      }
+    },
+    {
+      "id": "t2a-mcq-019",
+      "type": "mcq",
+      "prompt": "Where are programs and data permanently stored?",
+      "options": [
+        "In memory",
+        "In the CPU",
+        "On storage devices",
+        "On the bus"
+      ],
+      "answer": "C",
+      "explanation": "Programs and data are permanently stored on storage devices.",
+      "source": {
+        "page": 9,
+        "part": 1
+      }
+    },
+    {
+      "id": "t2a-tf-006",
+      "type": "tf",
+      "prompt": "Programs and data are permanently stored in memory and are moved to storage devices when the computer uses them.",
+      "answer": false,
+      "explanation": "It is the opposite: they are permanently stored on storage devices and moved to memory when used.",
+      "source": {
+        "page": 9,
+        "part": 1
+      }
+    },
+    {
+      "id": "t2a-mcq-021",
+      "type": "mcq",
+      "prompt": "Which statement correctly compares memory and storage devices?",
+      "options": [
+        "Storage devices are volatile, while memory stores programs and data permanently",
+        "Memory is volatile, while storage devices store programs and data permanently",
+        "Both memory and storage devices lose information when the power is off",
+        "Both memory and storage devices store programs and data permanently"
+      ],
+      "answer": "B",
+      "explanation": "Memory loses information when the power is off (volatile); storage devices store programs and data permanently.",
+      "source": {
+        "page": 9,
+        "part": 1
+      }
+    },
+    {
+      "id": "t2a-mcq-022",
+      "type": "mcq",
+      "prompt": "Which of the following is NOT one of the three main types of storage devices?",
+      "options": [
+        "Disk drives",
+        "CD drives",
+        "Tape drives",
+        "Memory"
+      ],
+      "answer": "D",
+      "explanation": "The three main types of storage devices are disk drives, CD drives, and tape drives.",
+      "source": {
+        "page": 9,
+        "part": 1
+      }
+    },
+    {
+      "id": "t2a-match-003",
+      "type": "matching",
+      "title": "Match each type of storage device with its examples",
+      "pairs": [
+        {
+          "left": "Disk drives",
+          "right": "Hard disks and floppy disks"
+        },
+        {
+          "left": "CD drives",
+          "right": "CD-R and CD-RW"
+        },
+        {
+          "left": "Tape drives",
+          "right": "Magnetic tape"
+        }
+      ],
+      "source": {
+        "page": 9,
+        "part": 1
+      }
+    },
+    {
+      "id": "t2a-mcq-023",
+      "type": "mcq",
+      "prompt": "Which of the following is a storage device?",
+      "options": [
+        "Hard disk",
+        "Memory",
+        "Printer",
+        "Mouse"
+      ],
+      "answer": "A",
+      "explanation": "Hard disks are disk drives, one of the three main types of storage devices. Memory is separate from storage devices and is volatile.",
+      "source": {
+        "page": 9,
+        "part": 1
+      }
+    },
+    {
+      "id": "t2a-mcq-024",
+      "type": "mcq",
+      "prompt": "An output device is any device used to:",
+      "options": [
+        "Send data to a computer",
+        "Store programs and data permanently",
+        "Send data from a computer to another device or user",
+        "Interconnect the computer components"
+      ],
+      "answer": "C",
+      "explanation": "An output device is any device used to send data from a computer to another device or user.",
+      "source": {
+        "page": 11,
+        "part": 1
+      }
+    },
+    {
+      "id": "t2a-tf-008",
+      "type": "tf",
+      "prompt": "An output device is any device used to send data to a computer.",
+      "answer": false,
+      "explanation": "That describes an input device. An output device sends data from a computer to another device or user.",
+      "source": {
+        "page": 11,
+        "part": 1
+      }
+    },
+    {
+      "id": "t2a-mcq-026",
+      "type": "mcq",
+      "prompt": "Which two factors determine the quality of the display?",
+      "options": [
+        "The megahertz and bytes",
+        "The resolution and CPU speed",
+        "The dot pitch and bus speed",
+        "The resolution and dot pitch"
+      ],
+      "answer": "D",
+      "explanation": "The resolution and dot pitch determine the quality of the display.",
+      "source": {
+        "page": 11,
+        "part": 1
+      }
+    },
+    {
+      "id": "t2a-mcq-027",
+      "type": "mcq",
+      "prompt": "Which of the following is an output device?",
+      "options": [
+        "Scanner",
+        "Printer",
+        "Microphone",
+        "Mouse"
+      ],
+      "answer": "B",
+      "explanation": "Output devices send data from a computer to another device or user, such as monitors and printers.",
+      "source": {
+        "page": 11,
+        "part": 1
+      }
+    },
+    {
+      "id": "t2a-mcq-034",
+      "type": "mcq",
+      "prompt": "Which of the following is NOT an output device?",
+      "options": [
+        "Monitor",
+        "Printer",
+        "Speakers",
+        "Keyboard"
+      ],
+      "answer": "D",
+      "explanation": "An output device sends data from a computer to another device or user (monitors, printers, speakers). A keyboard is an input device.",
+      "source": {
+        "page": 11,
+        "part": 1
+      }
+    },
+    {
+      "id": "t2a-mcq-028",
+      "type": "mcq",
+      "prompt": "An input device is any hardware device that:",
+      "options": [
+        "Sends data from a computer to another device or user",
+        "Stores programs and data permanently",
+        "Sends data to a computer",
+        "Executes instructions from memory"
+      ],
+      "answer": "C",
+      "explanation": "An input device is any hardware device that sends data to a computer.",
+      "source": {
+        "page": 13,
+        "part": 1
+      }
+    },
+    {
+      "id": "t2a-mcq-029",
+      "type": "mcq",
+      "prompt": "Input and output devices let the user:",
+      "options": [
+        "Store programs permanently",
+        "Execute instructions",
+        "Increase the CPU speed",
+        "Communicate with the computer"
+      ],
+      "answer": "D",
+      "explanation": "The slides state that input and output devices let the user communicate with the computer.",
+      "source": {
+        "page": 13,
+        "part": 1
+      }
+    },
+    {
+      "id": "t2a-mcq-030",
+      "type": "mcq",
+      "prompt": "The most common input devices are:",
+      "options": [
+        "Keyboards and mice",
+        "Monitors and printers",
+        "Modems and network interface cards",
+        "Disks and CDs"
+      ],
+      "answer": "A",
+      "explanation": "The most common input devices are keyboards and mice.",
+      "source": {
+        "page": 13,
+        "part": 1
+      }
+    },
+    {
+      "id": "t2a-tf-010",
+      "type": "tf",
+      "prompt": "A printer is an input device because it sends data to a computer.",
+      "answer": false,
+      "explanation": "A printer is an output device; input devices such as keyboards and mice send data to a computer.",
+      "source": {
+        "page": 13,
+        "part": 1
+      }
+    },
+    {
+      "id": "t2a-mcq-033",
+      "type": "mcq",
+      "prompt": "Which of the following is NOT an input device?",
+      "options": [
+        "Keyboard",
+        "Monitor",
+        "Mouse",
+        "Scanner"
+      ],
+      "answer": "B",
+      "explanation": "An input device sends data to a computer (keyboards, mice, scanners). A monitor is an output device: it displays information.",
+      "source": {
+        "page": 13,
+        "part": 1
+      }
+    },
+    {
+      "id": "t2a-mcq-031",
+      "type": "mcq",
+      "prompt": "Which of the following is an input device?",
+      "options": [
+        "Projector",
+        "Speakers",
+        "Scanner",
+        "Printer"
+      ],
+      "answer": "C",
+      "explanation": "An input device sends data to a computer; the scanner is shown among the input devices. Projectors, speakers, and printers are output devices.",
+      "source": {
+        "page": 14,
+        "part": 1
+      }
+    },
+    {
+      "id": "t2a-mcq-032",
+      "type": "mcq",
+      "prompt": "A microphone is classified as:",
+      "options": [
+        "An output device",
+        "An input device",
+        "A storage device",
+        "A communication device"
+      ],
+      "answer": "B",
+      "explanation": "The microphone appears on the Input Devices slide because it sends data to the computer.",
+      "source": {
+        "page": 14,
+        "part": 1
+      }
+    },
+    {
+      "id": "t2a-match-004",
+      "type": "matching",
+      "title": "Match each device with its group, as shown in the slides",
+      "pairs": [
+        {
+          "left": "Microphone",
+          "right": "Input device"
+        },
+        {
+          "left": "Headphones",
+          "right": "Output device"
+        },
+        {
+          "left": "USB flash drive",
+          "right": "Storage device"
+        },
+        {
+          "left": "Network interface card",
+          "right": "Communication device"
+        }
+      ],
+      "source": {
+        "page": 14,
+        "part": 1
+      }
+    },
+    {
+      "id": "t2b-mcq-002",
+      "type": "mcq",
+      "prompt": "The Von Neumann architecture is the foundation for:",
+      "options": [
+        "Only experimental supercomputers",
+        "Nearly all modern computers",
+        "Only computers that use parallel processing",
+        "Only quantum computers"
+      ],
+      "answer": "B",
+      "explanation": "The slides state that the Von Neumann architecture is the foundation for nearly all modern computers.",
+      "source": {
+        "page": 5,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-003",
+      "type": "mcq",
+      "prompt": "Which of the following is NOT one of the four major subsystems of the Von Neumann architecture?",
+      "options": [
+        "Memory",
+        "Input/output",
+        "Cache memory",
+        "Control unit"
+      ],
+      "answer": "C",
+      "explanation": "The four major subsystems are memory, input/output, the ALU, and the control unit. Cache is not one of the four.",
+      "source": {
+        "page": 5,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-004",
+      "type": "mcq",
+      "prompt": "Which two components are commonly combined to form the CPU:",
+      "options": [
+        "Memory and Input/Output",
+        "ALU and Memory",
+        "Control Unit and Input/Output",
+        "ALU and Control Unit"
+      ],
+      "answer": "D",
+      "explanation": "The ALU and control unit are often bundled inside the central processing unit (CPU).",
+      "source": {
+        "page": 5,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-059",
+      "type": "mcq",
+      "prompt": "The ALU and the _____ are often bundled inside the central processing unit (CPU).",
+      "options": [
+        "Memory",
+        "Control unit",
+        "Input/output",
+        "Mass data storage"
+      ],
+      "answer": "B",
+      "explanation": "The slide says the ALU and control unit are often bundled inside the central processing unit (CPU); memory and I/O are separate subsystems.",
+      "source": {
+        "page": 5,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-005",
+      "type": "mcq",
+      "prompt": "Which device would you find in the I/O group of a computer system?",
+      "options": [
+        "Keyboard",
+        "Arithmetic/logic unit (ALU)",
+        "Cache memory",
+        "Program counter (PC)"
+      ],
+      "answer": "A",
+      "explanation": "Input/output is one of the four subsystems; a keyboard is an input device. The ALU and PC are in the CPU, and cache is memory.",
+      "source": {
+        "page": 13,
+        "part": 1
+      }
+    },
+    {
+      "id": "t2b-tf-003",
+      "type": "tf",
+      "prompt": "In the Von Neumann architecture, memory is bundled inside the CPU together with the ALU and the control unit.",
+      "answer": false,
+      "explanation": "Figure 5.3 shows the CPU contains only the control unit and the ALU; memory and input-output are separate subsystems.",
+      "source": {
+        "page": 6,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-006",
+      "type": "mcq",
+      "prompt": "The von Neumann architecture ___",
+      "options": [
+        "uses a single bus for data and instructions",
+        "uses separate memories for data and instructions",
+        "executes sequentially without a program counter",
+        "has no ALU"
+      ],
+      "answer": "A",
+      "explanation": "All subsystems connect to one bus, and programs are stored in the same memory as data (stored program). It has a PC and an ALU.",
+      "source": {
+        "page": 6,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-007",
+      "type": "mcq",
+      "prompt": "Which statement about random access memory (RAM) is correct?",
+      "options": [
+        "Cells near address 0 are accessed faster than other cells",
+        "It takes equal time to access any cell",
+        "Its cell values can be read but never changed",
+        "All of its cells share one common address"
+      ],
+      "answer": "B",
+      "explanation": "RAM is organized into cells with unique addresses, takes equal time to access any cell, and its cell values may be read and changed.",
+      "source": {
+        "page": 7,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-008",
+      "type": "mcq",
+      "prompt": "Read-only memory (ROM) is:",
+      "options": [
+        "A fast but expensive memory built into the CPU",
+        "A register that holds the address of the next instruction",
+        "A type of RAM with prerecorded information that cannot be modified or changed",
+        "A memory whose cell values may be read and changed"
+      ],
+      "answer": "C",
+      "explanation": "ROM is a type of RAM with prerecorded information that cannot be modified or changed.",
+      "source": {
+        "page": 7,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-tf-004",
+      "type": "tf",
+      "prompt": "The values stored in ROM may be read and changed just like the values in ordinary RAM.",
+      "answer": false,
+      "explanation": "ROM holds prerecorded information that cannot be modified or changed.",
+      "source": {
+        "page": 7,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-009",
+      "type": "mcq",
+      "prompt": "The cell size (memory width) is typically:",
+      "options": [
+        "4 bits",
+        "16 bits",
+        "32 bits",
+        "8 bits"
+      ],
+      "answer": "D",
+      "explanation": "The slide says cell size/memory width is typically 8 bits.",
+      "source": {
+        "page": 7,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-010",
+      "type": "mcq",
+      "prompt": "If N is the length of the address, the maximum memory size (address space) is:",
+      "options": [
+        "\\(N^2\\)",
+        "\\(2N\\)",
+        "\\(2^N\\)",
+        "\\(N\\)"
+      ],
+      "answer": "C",
+      "explanation": "Maximum memory size/address space is 2 to the power N, where N is the length of the address.",
+      "source": {
+        "page": 7,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-061",
+      "type": "mcq",
+      "prompt": "In 3-bit memory addresses, how many memory locations can it access?",
+      "options": [
+        "3",
+        "6",
+        "8",
+        "9"
+      ],
+      "answer": "C",
+      "explanation": "Maximum memory size is \\(2^N\\) where N is the address length: \\(2^3 = 8\\) locations (addresses 000 to 111).",
+      "source": {
+        "page": 7,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-062",
+      "type": "mcq",
+      "prompt": "In 8-bit memory addresses, how many memory locations can it access?",
+      "options": [
+        "256",
+        "8",
+        "16",
+        "64"
+      ],
+      "answer": "A",
+      "explanation": "Maximum memory size is \\(2^N\\): \\(2^8 = 256\\) locations (addresses 0 to 255).",
+      "source": {
+        "page": 7,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-063",
+      "type": "mcq",
+      "prompt": "If the maximum memory size is 64 memory cells, what is the length N of the memory address?",
+      "options": [
+        "5",
+        "6",
+        "8",
+        "32"
+      ],
+      "answer": "B",
+      "explanation": "Maximum memory size is \\(2^N\\), where N is the length of the address: \\(2^6 = 64\\), so N = 6 bits.",
+      "source": {
+        "page": 7,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-match-008",
+      "type": "matching",
+      "title": "Match each type of memory/storage with its description",
+      "pairs": [
+        {
+          "left": "RAM",
+          "right": "Equal time to access any cell; values may be read and changed"
+        },
+        {
+          "left": "ROM",
+          "right": "Prerecorded information that cannot be modified or changed"
+        },
+        {
+          "left": "Cache memory",
+          "right": "Fast but expensive; built into the CPU"
+        },
+        {
+          "left": "Mass data storage",
+          "right": "Nonvolatile; disks store sectors of data stored in tracks"
+        }
+      ],
+      "source": {
+        "page": 7,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-012",
+      "type": "mcq",
+      "prompt": "If memory addresses are 16 bits long, the maximum memory size is:",
+      "options": [
+        "16",
+        "1,048,576",
+        "4,294,967,296",
+        "65,536"
+      ],
+      "answer": "D",
+      "explanation": "The table gives N = 16 a maximum memory size of 2^16 = 65,536.",
+      "source": {
+        "page": 8,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-013",
+      "type": "mcq",
+      "prompt": "A computer with 32-bit memory addresses can access a maximum of how many memory cells?",
+      "options": [
+        "4,294,967,296",
+        "16,777,216",
+        "65,536",
+        "1,099,511,627,776"
+      ],
+      "answer": "A",
+      "explanation": "The table gives N = 32 a maximum memory size of 2^32 = 4,294,967,296.",
+      "source": {
+        "page": 8,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-014",
+      "type": "mcq",
+      "prompt": "Fetch is called a nondestructive operation because:",
+      "options": [
+        "It writes a new value into the memory cell",
+        "It erases the cell after reading it",
+        "It works only on ROM",
+        "It retrieves a value from memory without changing the cell"
+      ],
+      "answer": "D",
+      "explanation": "Fetch means retrieve from memory, and it is a nondestructive fetch: the cell keeps its value.",
+      "source": {
+        "page": 9,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-015",
+      "type": "mcq",
+      "prompt": "Which memory operation is described as destructive?",
+      "options": [
+        "Fetch",
+        "Decode",
+        "Store",
+        "Cache hit"
+      ],
+      "answer": "C",
+      "explanation": "Store writes to memory (destructive store), replacing the old value of the cell.",
+      "source": {
+        "page": 9,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-017",
+      "type": "mcq",
+      "prompt": "_____ register holds the address of the memory location to be accessed.",
+      "options": [
+        "MDR",
+        "MAR",
+        "PC",
+        "Mass Storage"
+      ],
+      "answer": "B",
+      "explanation": "The memory address register (MAR) holds the memory address to access.",
+      "source": {
+        "page": 9,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-018",
+      "type": "mcq",
+      "prompt": "_____ register receives data from a fetch and holds data to be stored.",
+      "options": [
+        "MAR",
+        "MDR",
+        "PC",
+        "IR"
+      ],
+      "answer": "B",
+      "explanation": "The memory data register (MDR) receives data from fetch and holds data to be stored.",
+      "source": {
+        "page": 9,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-tf-006",
+      "type": "tf",
+      "prompt": "The memory data register (MDR) holds the memory address to be accessed.",
+      "answer": false,
+      "explanation": "That is the MAR. The MDR receives data from fetch and holds data to be stored.",
+      "source": {
+        "page": 9,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-019",
+      "type": "mcq",
+      "prompt": "What does machine instruction 'STORE 11' do?",
+      "options": [
+        "Writes a value into the memory cell with address 11",
+        "Retrieves the value of memory cell 11 without changing it",
+        "Puts the number 11 into the program counter",
+        "Sends the value 11 to the I/O controller"
+      ],
+      "answer": "A",
+      "explanation": "Store means write to memory (destructive store), and 11 is the address field telling which memory address to operate on.",
+      "source": {
+        "page": 9,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-068",
+      "type": "mcq",
+      "prompt": "After the instruction 'STORE 20' is executed, what happens to the old value in memory cell 20?",
+      "options": [
+        "It is kept, and the new value is added to it",
+        "It is moved to memory cell 21",
+        "It is moved to a storage device",
+        "It is lost, because store is a destructive operation"
+      ],
+      "answer": "D",
+      "explanation": "Store means write to memory (destructive store): the new value replaces the old one, and the old content is lost.",
+      "source": {
+        "page": 9,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-069",
+      "type": "mcq",
+      "prompt": "In a store operation, the memory address goes into the _____ and the data to be stored goes into the _____.",
+      "options": [
+        "MDR; MAR",
+        "PC; IR",
+        "MAR; MDR",
+        "IR; PC"
+      ],
+      "answer": "C",
+      "explanation": "The MAR holds the memory address to access; the MDR receives data from a fetch and holds data to be stored.",
+      "source": {
+        "page": 9,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-020",
+      "type": "mcq",
+      "prompt": "Which circuit converts the MAR into a signal to a specific memory cell?",
+      "options": [
+        "Fetch/store controller",
+        "Decoder",
+        "ALU",
+        "Program counter"
+      ],
+      "answer": "B",
+      "explanation": "The decoder converts the MAR into a signal to a specific memory cell.",
+      "source": {
+        "page": 10,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-021",
+      "type": "mcq",
+      "prompt": "The fetch/store controller acts as the \"traffic cop\" for which register?",
+      "options": [
+        "MAR",
+        "PC",
+        "MDR",
+        "IR"
+      ],
+      "answer": "C",
+      "explanation": "The fetch/store controller is the traffic cop for the MDR, routing data to/from memory cells and the MDR.",
+      "source": {
+        "page": 10,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-tf-008",
+      "type": "tf",
+      "prompt": "The decoder is the circuit that routes data flow between the memory cells and the MDR.",
+      "answer": false,
+      "explanation": "Routing data to/from memory cells and the MDR is the job of the fetch/store controller; the decoder converts the MAR into a signal to a cell.",
+      "source": {
+        "page": 10,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-011",
+      "type": "mcq",
+      "prompt": "In 4-bit memory addresses, how many memory locations can it access?",
+      "options": [
+        "4",
+        "16",
+        "8",
+        "32"
+      ],
+      "answer": "B",
+      "explanation": "With N = 4, the decoder has 2^4 = 16 output lines, addresses 0000 (0) to 1111 (15).",
+      "source": {
+        "page": 11,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-022",
+      "type": "mcq",
+      "prompt": "For a MAR with 4 bits, the memory uses a decoder circuit of type:",
+      "options": [
+        "4-to-8",
+        "2-to-4",
+        "16-to-4",
+        "4-to-16"
+      ],
+      "answer": "D",
+      "explanation": "Figure 5.6 shows 4 input lines from the MAR and 2^4 = 16 output lines: a 4-to-16 decoder circuit.",
+      "source": {
+        "page": 11,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-023",
+      "type": "mcq",
+      "prompt": "In the two-dimensional memory organization, a memory cell is selected by:",
+      "options": [
+        "A separate selection line for every cell",
+        "The column selection lines only",
+        "The program counter",
+        "A row selection line and a column selection line"
+      ],
+      "answer": "D",
+      "explanation": "Figure 5.7 shows two-dimensional memory organized by row selection lines and column selection lines.",
+      "source": {
+        "page": 11,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-064",
+      "type": "mcq",
+      "prompt": "With 4-bit memory addresses, what is the address of the last memory cell?",
+      "options": [
+        "15",
+        "16",
+        "4",
+        "8"
+      ],
+      "answer": "A",
+      "explanation": "Cells are numbered 0 to \\(2^N - 1\\). With N = 4 the last address is 1111 = 15 (there are 16 cells, 0 to 15).",
+      "source": {
+        "page": 11,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-024",
+      "type": "mcq",
+      "prompt": "Why is cache memory used in computers?",
+      "options": [
+        "Because it is fast and helps the CPU get data quickly",
+        "Because it is cheaper than RAM",
+        "Because it stores data permanently (nonvolatile)",
+        "Because it holds the address of the next instruction"
+      ],
+      "answer": "A",
+      "explanation": "Cache memory is fast (but expensive) and is built into the CPU for fast access times.",
+      "source": {
+        "page": 12,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-025",
+      "type": "mcq",
+      "prompt": "Cache memory became necessary mainly because:",
+      "options": [
+        "CPU speeds increased more slowly than RAM speeds",
+        "RAM speeds increased more slowly than CPU speeds",
+        "RAM cell values cannot be changed",
+        "I/O devices became faster than the CPU"
+      ],
+      "answer": "B",
+      "explanation": "The slide says RAM speeds increased more slowly than CPU speeds, so fast cache is built into the CPU.",
+      "source": {
+        "page": 12,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-026",
+      "type": "mcq",
+      "prompt": "The principle of locality states that:",
+      "options": [
+        "Every memory cell takes equal time to access",
+        "Values far from recently accessed memory are more likely to be accessed",
+        "Values close to recently accessed memory are more likely to be accessed",
+        "Each memory cell is given a unique address"
+      ],
+      "answer": "C",
+      "explanation": "Principle of locality: values close to recently accessed memory are more likely to be accessed.",
+      "source": {
+        "page": 12,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-tf-010",
+      "type": "tf",
+      "prompt": "Using the principle of locality, the neighbors of accessed values are loaded into cache and recent values are kept there.",
+      "answer": true,
+      "explanation": "The slide says: load neighbors into cache and keep recent values there.",
+      "source": {
+        "page": 12,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-match-007",
+      "type": "matching",
+      "title": "Match each memory term with its meaning",
+      "pairs": [
+        {
+          "left": "Fetch",
+          "right": "Retrieve from memory (nondestructive)"
+        },
+        {
+          "left": "Store",
+          "right": "Write to memory (destructive)"
+        },
+        {
+          "left": "Memory access time",
+          "right": "Time required to fetch/store"
+        },
+        {
+          "left": "Principle of locality",
+          "right": "Values near recently accessed memory are likely to be accessed"
+        },
+        {
+          "left": "Cache hit rate",
+          "right": "Percentage of times values are found in cache"
+        }
+      ],
+      "source": {
+        "page": 12,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-072",
+      "type": "mcq",
+      "prompt": "Cache memory is:",
+      "options": [
+        "Slow but cheap, and built into the hard disk",
+        "Nonvolatile mass storage",
+        "Fast but expensive, and built into the CPU",
+        "A type of ROM that cannot be changed"
+      ],
+      "answer": "C",
+      "explanation": "Cache memory is fast but expensive; it is built into the CPU for fast access times.",
+      "source": {
+        "page": 12,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-027",
+      "type": "mcq",
+      "prompt": "Which part of the CPU performs mathematical operations:",
+      "options": [
+        "Control unit",
+        "Program counter (PC)",
+        "Memory data register (MDR)",
+        "ALU"
+      ],
+      "answer": "D",
+      "explanation": "The ALU contains circuits for arithmetic: addition, subtraction, multiplication, and division.",
+      "source": {
+        "page": 13,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-028",
+      "type": "mcq",
+      "prompt": "The data path describes:",
+      "options": [
+        "How information flows in the ALU, from registers to circuits and back to registers",
+        "How the MAR is converted into a signal to a memory cell",
+        "The order of the fetch, decode, and execute phases",
+        "How the program counter is increased by 1"
+      ],
+      "answer": "A",
+      "explanation": "Data path: how information flows in the ALU, from registers to circuits and from circuits back to registers.",
+      "source": {
+        "page": 13,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-match-002",
+      "type": "matching",
+      "title": "Match each part of the ALU with its description",
+      "pairs": [
+        {
+          "left": "Arithmetic circuits",
+          "right": "Addition, subtraction, multiplication, and division"
+        },
+        {
+          "left": "Comparison and logic circuits",
+          "right": "Equality, and, or, not"
+        },
+        {
+          "left": "Registers",
+          "right": "High-speed, dedicated memory connected to circuits"
+        },
+        {
+          "left": "Data path",
+          "right": "How information flows in the ALU"
+        }
+      ],
+      "source": {
+        "page": 13,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-071",
+      "type": "mcq",
+      "prompt": "Which part of the CPU performs comparison and logic operations such as equality, AND, OR, and NOT?",
+      "options": [
+        "Control unit",
+        "ALU",
+        "Instruction decoder circuit",
+        "Fetch/store controller"
+      ],
+      "answer": "B",
+      "explanation": "The ALU contains circuits for arithmetic and circuits for comparison and logic (equality, and, or, not).",
+      "source": {
+        "page": 13,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-029",
+      "type": "mcq",
+      "prompt": "In the three-register ALU organization, registers A and B ___, and register C ___.",
+      "options": [
+        "receive the result; holds the two inputs",
+        "hold the two inputs to the ALU; receives the result",
+        "hold memory addresses; holds the op code",
+        "hold the address of the next instruction; holds the current instruction"
+      ],
+      "answer": "B",
+      "explanation": "Figure 5.16 shows registers A and B feeding the ALU, and the ALU output going to register C.",
+      "source": {
+        "page": 14,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-031",
+      "type": "mcq",
+      "prompt": "Programs must be loaded into _____ before they can be executed.",
+      "options": [
+        "Memory (RAM)",
+        "Mass storage (disk)",
+        "The ALU",
+        "The I/O controller"
+      ],
+      "answer": "A",
+      "explanation": "By the stored program characteristic, programs are stored in memory, where the control unit fetches instructions from.",
+      "source": {
+        "page": 7,
+        "part": 1
+      }
+    },
+    {
+      "id": "t2b-mcq-030",
+      "type": "mcq",
+      "prompt": "The stored program characteristic means that:",
+      "options": [
+        "Programs are stored permanently inside the ALU registers",
+        "Programs are stored only in cache memory",
+        "Programs are encoded in binary and stored in the computer's memory",
+        "Programs are stored on mass storage and executed from there"
+      ],
+      "answer": "C",
+      "explanation": "Stored program characteristic: programs are encoded in binary and stored in the computer's memory.",
+      "source": {
+        "page": 15,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-032",
+      "type": "mcq",
+      "prompt": "What is the role of the control unit in a computer?",
+      "options": [
+        "It performs arithmetic and logic operations",
+        "It fetches, decodes, and executes instructions",
+        "It stores data and programs permanently",
+        "It converts the MAR into a signal to a memory cell"
+      ],
+      "answer": "B",
+      "explanation": "The control unit fetches instructions from memory, decodes them, and executes them.",
+      "source": {
+        "page": 15,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-033",
+      "type": "mcq",
+      "prompt": "In an encoded instruction, the operation code (op code) tells:",
+      "options": [
+        "Which memory addresses/registers to operate on",
+        "The address of the next instruction",
+        "Which operation to perform",
+        "How many bits each memory cell has"
+      ],
+      "answer": "C",
+      "explanation": "The op code tells which operation; the addresses tell which memory addresses/registers to operate on.",
+      "source": {
+        "page": 15,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-066",
+      "type": "mcq",
+      "prompt": "In the machine instruction 'STORE 11', the number 11 is:",
+      "options": [
+        "The op code",
+        "The memory address to operate on",
+        "The value to be written",
+        "The number of times the instruction is repeated"
+      ],
+      "answer": "B",
+      "explanation": "Encoded instructions have an op code (which operation: STORE) and addresses (which memory addresses/registers to operate on: 11).",
+      "source": {
+        "page": 15,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-067",
+      "type": "mcq",
+      "prompt": "In the machine instruction 'STORE 11', the part 'STORE' is the:",
+      "options": [
+        "Op code",
+        "Address field",
+        "Program counter",
+        "Memory data register"
+      ],
+      "answer": "A",
+      "explanation": "The operation code (op code) tells which operation to perform (store = write to memory); 11 is the address.",
+      "source": {
+        "page": 15,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-070",
+      "type": "mcq",
+      "prompt": "Which unit fetches instructions from memory, decodes them, and executes them?",
+      "options": [
+        "Control unit",
+        "ALU",
+        "Memory unit",
+        "I/O controller"
+      ],
+      "answer": "A",
+      "explanation": "The control unit fetches instructions from memory, decodes them, and executes them; the ALU performs the computations.",
+      "source": {
+        "page": 15,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-tf-020",
+      "type": "tf",
+      "prompt": "The ALU fetches instructions from memory, decodes them, and executes them.",
+      "answer": false,
+      "explanation": "That is the control unit. The ALU contains the arithmetic, comparison and logic circuits and performs computations.",
+      "source": {
+        "page": 15,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-tf-022",
+      "type": "tf",
+      "prompt": "The stored program characteristic of the Von Neumann architecture means that programs are encoded in binary and stored in the computer's memory.",
+      "answer": true,
+      "explanation": "The control unit slide states the stored program characteristic: programs are encoded in binary and stored in the computer's memory.",
+      "source": {
+        "page": 15,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-tf-011",
+      "type": "tf",
+      "prompt": "In machine language, sequences of instructions encode algorithms.",
+      "answer": true,
+      "explanation": "The slide says sequences of instructions encode algorithms.",
+      "source": {
+        "page": 16,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-034",
+      "type": "mcq",
+      "prompt": "What is the purpose of an instruction set in a processor?",
+      "options": [
+        "It stores the data the processor is working on",
+        "It speeds up memory access by keeping recent values",
+        "It holds the address of the next instruction",
+        "It tells the processor which operations it can perform"
+      ],
+      "answer": "D",
+      "explanation": "An instruction set is the set of instructions implemented by a particular chip, i.e. the operations it can perform.",
+      "source": {
+        "page": 16,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-035",
+      "type": "mcq",
+      "prompt": "Why can machine language written for one kind of processor not run directly on a different kind of processor?",
+      "options": [
+        "Each kind of processor has a different instruction set (speaks a different language)",
+        "Different processors use different cell sizes",
+        "Machine language cannot be carried out by hardware",
+        "Only RISC processors can run machine language"
+      ],
+      "answer": "A",
+      "explanation": "The slide says each kind of processor has a different instruction set, so it speaks a different language.",
+      "source": {
+        "page": 16,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-036",
+      "type": "mcq",
+      "prompt": "Which is a characteristic of RISC?",
+      "options": [
+        "Large instruction set",
+        "Small instruction set with each instruction highly optimized",
+        "A single instruction can do a lot of work",
+        "Complex to design hardware"
+      ],
+      "answer": "B",
+      "explanation": "RISC: small instruction sets, each instruction highly optimized, easy to design hardware.",
+      "source": {
+        "page": 17,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-037",
+      "type": "mcq",
+      "prompt": "Which is a characteristic of CISC?",
+      "options": [
+        "Small instruction sets",
+        "Each instruction highly optimized",
+        "A single instruction can do a lot of work",
+        "Easy to design hardware"
+      ],
+      "answer": "C",
+      "explanation": "CISC: large instruction set, single instruction can do a lot of work, complex to design hardware.",
+      "source": {
+        "page": 17,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-038",
+      "type": "mcq",
+      "prompt": "According to the slides, modern hardware is:",
+      "options": [
+        "Purely RISC",
+        "Purely CISC",
+        "Without any instruction set",
+        "A compromise between RISC and CISC"
+      ],
+      "answer": "D",
+      "explanation": "The slide says modern hardware is a compromise between RISC and CISC.",
+      "source": {
+        "page": 17,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-tf-012",
+      "type": "tf",
+      "prompt": "CISC has a large instruction set and its hardware is complex to design.",
+      "answer": true,
+      "explanation": "CISC: large instruction set, single instruction can do a lot of work, complex to design hardware.",
+      "source": {
+        "page": 17,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-tf-013",
+      "type": "tf",
+      "prompt": "In RISC, a single instruction can do a lot of work.",
+      "answer": false,
+      "explanation": "That describes CISC. RISC has small instruction sets with each instruction highly optimized.",
+      "source": {
+        "page": 17,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-match-003",
+      "type": "matching",
+      "title": "Match each term with its description",
+      "pairs": [
+        {
+          "left": "RISC",
+          "right": "Small instruction set; each instruction highly optimized"
+        },
+        {
+          "left": "CISC",
+          "right": "Large instruction set; one instruction can do a lot of work"
+        },
+        {
+          "left": "Instruction set",
+          "right": "Instructions implemented by a particular chip"
+        },
+        {
+          "left": "Machine language",
+          "right": "Binary strings that encode instructions"
+        }
+      ],
+      "source": {
+        "page": 17,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-073",
+      "type": "mcq",
+      "prompt": "A large instruction set in which a single instruction can do a lot of work, with complex-to-design hardware, describes:",
+      "options": [
+        "RISC",
+        "Machine language",
+        "The Von Neumann cycle",
+        "CISC"
+      ],
+      "answer": "D",
+      "explanation": "Complex instruction set computer (CISC): large instruction set, single instruction can do a lot of work, complex to design hardware.",
+      "source": {
+        "page": 17,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-074",
+      "type": "mcq",
+      "prompt": "Small instruction sets, each instruction highly optimized, and easy-to-design hardware describe:",
+      "options": [
+        "RISC",
+        "CISC",
+        "ROM",
+        "The instruction register"
+      ],
+      "answer": "A",
+      "explanation": "Reduced instruction set computer (RISC): small instruction sets, each instruction highly optimized, easy to design hardware.",
+      "source": {
+        "page": 17,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-075",
+      "type": "mcq",
+      "prompt": "Which statement correctly differentiates between RISC and CISC?",
+      "options": [
+        "RISC has a large instruction set; CISC has a small instruction set",
+        "In RISC a single instruction can do a lot of work; in CISC each instruction is highly optimized",
+        "RISC has a small instruction set and easy-to-design hardware; CISC has a large instruction set and complex-to-design hardware",
+        "RISC hardware is complex to design; CISC hardware is easy to design"
+      ],
+      "answer": "C",
+      "explanation": "RISC: small instruction sets, highly optimized instructions, easy hardware. CISC: large instruction set, one instruction does a lot of work, complex hardware.",
+      "source": {
+        "page": 17,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-076",
+      "type": "mcq",
+      "prompt": "RISC stands for:",
+      "options": [
+        "Random instruction set computer",
+        "Reduced instruction set computer",
+        "Register instruction storage circuit",
+        "Rapid instruction set controller"
+      ],
+      "answer": "B",
+      "explanation": "RISC = Reduced instruction set computer; CISC = Complex instruction set computer.",
+      "source": {
+        "page": 17,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-tf-023",
+      "type": "tf",
+      "prompt": "Modern hardware is a compromise between RISC and CISC.",
+      "answer": true,
+      "explanation": "The slide says modern hardware is a compromise between RISC and CISC.",
+      "source": {
+        "page": 17,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-039",
+      "type": "mcq",
+      "prompt": "The program counter (PC) register holds:",
+      "options": [
+        "The encoding of the current instruction",
+        "The memory address to access",
+        "The data received from a fetch",
+        "The address of the next instruction"
+      ],
+      "answer": "D",
+      "explanation": "The PC register holds the address of the next instruction.",
+      "source": {
+        "page": 18,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-040",
+      "type": "mcq",
+      "prompt": "_____ holds the encoding of the current instruction.",
+      "options": [
+        "Program counter (PC)",
+        "Memory data register (MDR)",
+        "Instruction register (IR)",
+        "Memory address register (MAR)"
+      ],
+      "answer": "C",
+      "explanation": "The instruction register (IR) holds the encoding of the current instruction.",
+      "source": {
+        "page": 18,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-041",
+      "type": "mcq",
+      "prompt": "The instruction decoder circuit:",
+      "options": [
+        "Converts the MAR into a signal to a specific memory cell",
+        "Decodes the op code of an instruction and signals helper circuits, one per instruction",
+        "Routes data flow to/from memory cells and the MDR",
+        "Holds the address of the next instruction"
+      ],
+      "answer": "B",
+      "explanation": "The instruction decoder circuit decodes the op code and signals helper circuits, one per instruction.",
+      "source": {
+        "page": 18,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-match-005",
+      "type": "matching",
+      "title": "Match each register with what it holds",
+      "pairs": [
+        {
+          "left": "MAR",
+          "right": "The memory address to access"
+        },
+        {
+          "left": "MDR",
+          "right": "Data from a fetch or data to be stored"
+        },
+        {
+          "left": "PC",
+          "right": "The address of the next instruction"
+        },
+        {
+          "left": "IR",
+          "right": "The encoding of the current instruction"
+        }
+      ],
+      "source": {
+        "page": 18,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-065",
+      "type": "mcq",
+      "prompt": "_____ register holds the address of the next instruction.",
+      "options": [
+        "MAR",
+        "IR",
+        "PC",
+        "MDR"
+      ],
+      "answer": "C",
+      "explanation": "The program counter (PC) register holds the address of the next instruction; the IR holds the current instruction.",
+      "source": {
+        "page": 18,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-043",
+      "type": "mcq",
+      "prompt": "The instruction register (IR) is divided into which two parts?",
+      "options": [
+        "Op code and address field(s)",
+        "Row and column",
+        "Register A and register B",
+        "MAR and MDR"
+      ],
+      "answer": "A",
+      "explanation": "Figure 5.22 shows the IR made of the op code and the address field(s).",
+      "source": {
+        "page": 19,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-044",
+      "type": "mcq",
+      "prompt": "The fetch/decode/execute phase is also called:",
+      "options": [
+        "The Von Neumann bottleneck",
+        "The principle of locality",
+        "The data path",
+        "The Von Neumann cycle"
+      ],
+      "answer": "D",
+      "explanation": "The fetch/decode/execute phase is also called the Von Neumann cycle.",
+      "source": {
+        "page": 20,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-045",
+      "type": "mcq",
+      "prompt": "A Von Neumann machine repeats the fetch/decode/execute phase until:",
+      "options": [
+        "The cache becomes full",
+        "The program counter reaches 0",
+        "A HALT instruction or an error",
+        "The ALU finishes one addition"
+      ],
+      "answer": "C",
+      "explanation": "The machine repeats the cycle until a HALT instruction or error.",
+      "source": {
+        "page": 20,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-046",
+      "type": "mcq",
+      "prompt": "In which phase does the instruction decoder get the op code?",
+      "options": [
+        "Fetch phase",
+        "Decode phase",
+        "Execute phase",
+        "Store phase"
+      ],
+      "answer": "B",
+      "explanation": "Decode phase: the instruction decoder gets the op code.",
+      "source": {
+        "page": 20,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-tf-015",
+      "type": "tf",
+      "prompt": "The execute phase is the same for every instruction.",
+      "answer": false,
+      "explanation": "The slide says the execute phase is different for each instruction.",
+      "source": {
+        "page": 20,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-match-004",
+      "type": "matching",
+      "title": "Match each part of the Von Neumann cycle with its description",
+      "pairs": [
+        {
+          "left": "Fetch phase",
+          "right": "Gets the next instruction"
+        },
+        {
+          "left": "Decode phase",
+          "right": "Instruction decoder gets the op code"
+        },
+        {
+          "left": "Execute phase",
+          "right": "Different for each instruction"
+        },
+        {
+          "left": "HALT instruction",
+          "right": "Stops the repeating cycle"
+        }
+      ],
+      "source": {
+        "page": 20,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-077",
+      "type": "mcq",
+      "prompt": "The correct order of the phases of the Von Neumann cycle is:",
+      "options": [
+        "Decode, fetch, execute",
+        "Execute, fetch, decode",
+        "Fetch, execute, decode",
+        "Fetch, decode, execute"
+      ],
+      "answer": "D",
+      "explanation": "The fetch/decode/execute phase (Von Neumann cycle) runs in this order: fetch phase, then decode phase (the instruction decoder gets the op code), then execute phase.",
+      "source": {
+        "page": 20,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-tf-021",
+      "type": "tf",
+      "prompt": "A Von Neumann machine repeats the fetch/decode/execute cycle until a HALT instruction or an error.",
+      "answer": true,
+      "explanation": "The slide says the machine repeats the fetch/decode/execute phase until a HALT instruction or error.",
+      "source": {
+        "page": 20,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-047",
+      "type": "mcq",
+      "prompt": "In the organization of a Von Neumann computer, the MAR, the MDR, and the fetch/store controller belong to which unit?",
+      "options": [
+        "Arithmetic/logic unit",
+        "Control unit",
+        "Input/output",
+        "Memory unit"
+      ],
+      "answer": "D",
+      "explanation": "Figure 5.24 places MAR, MDR, memory decoder circuits, and the fetch/store controller in the memory unit.",
+      "source": {
+        "page": 21,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-048",
+      "type": "mcq",
+      "prompt": "In the organization of a Von Neumann computer, which components belong to the control unit?",
+      "options": [
+        "PC, IR, and the instruction decoder circuit",
+        "MAR, MDR, and the fetch/store controller",
+        "Registers R0-R3 and the condition code register",
+        "The I/O controller and the I/O device"
+      ],
+      "answer": "A",
+      "explanation": "Figure 5.24 shows the PC, IR, and instruction decoder circuit in the control unit.",
+      "source": {
+        "page": 21,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-050",
+      "type": "mcq",
+      "prompt": "The Von Neumann bottleneck is:",
+      "options": [
+        "The percentage of times values are found in cache",
+        "The inability of sequential machines to handle larger problems",
+        "The slowness of RAM compared to cache",
+        "The limit on memory size set by the address length"
+      ],
+      "answer": "B",
+      "explanation": "Von Neumann bottleneck: inability of sequential machines to handle larger problems.",
+      "source": {
+        "page": 22,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-051",
+      "type": "mcq",
+      "prompt": "Why can chips not keep getting faster by putting gates much closer together?",
+      "options": [
+        "Signals through wire are limited by the speed of light, and heat production increases too fast",
+        "Gates cannot be built from transistors",
+        "RAM speeds increased faster than CPU speeds",
+        "Instruction sets become too small"
+      ],
+      "answer": "A",
+      "explanation": "The slide says the speed of light pertains to signals through wire, gates cannot be put much closer, and heat production increases too fast.",
+      "source": {
+        "page": 22,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-052",
+      "type": "mcq",
+      "prompt": "What is parallel processing?",
+      "options": [
+        "One processing unit executing instructions one after another",
+        "Many processing units operating at the same time",
+        "Loading the neighbors of recent values into cache",
+        "Organizing memory into rows and columns"
+      ],
+      "answer": "B",
+      "explanation": "Parallel processing: many processing units operating at the same time.",
+      "source": {
+        "page": 23,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-053",
+      "type": "mcq",
+      "prompt": "Most non-Von Neumann architectures are experimental/theoretical. Which one is the exception?",
+      "options": [
+        "CISC",
+        "Cache memory",
+        "Parallel processing",
+        "The Von Neumann cycle"
+      ],
+      "answer": "C",
+      "explanation": "The slide says most non-Von Neumann architectures are experimental/theoretical, EXCEPT parallel processing.",
+      "source": {
+        "page": 23,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-match-006",
+      "type": "matching",
+      "title": "Match each period with its example of parallel processing",
+      "pairs": [
+        {
+          "left": "In the past",
+          "right": "Supercomputers"
+        },
+        {
+          "left": "In the present",
+          "right": "Desktop multicore machines and the cloud"
+        },
+        {
+          "left": "In the future",
+          "right": "Quantum computing"
+        }
+      ],
+      "source": {
+        "page": 23,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-tf-019",
+      "type": "tf",
+      "prompt": "Parallel processing is a non-Von Neumann architecture.",
+      "answer": true,
+      "explanation": "Non-Von Neumann architectures are other ways to organize computers; most are experimental/theoretical, EXCEPT parallel processing.",
+      "source": {
+        "page": 23,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-055",
+      "type": "mcq",
+      "prompt": "Which of the following correctly states two properties of the Von Neumann architecture?",
+      "options": [
+        "Data and instructions use separate memories, and there is no control unit",
+        "Many processing units operate at the same time, and there is no memory",
+        "Programs are stored in memory, and execution is sequential unless the program says otherwise",
+        "Programs are stored in the ALU, and instructions execute in random order"
+      ],
+      "answer": "C",
+      "explanation": "The summary says Von Neumann machines have memory, I/O, ALU, and control unit; programs are stored in memory; execution is sequential unless the program says otherwise.",
+      "source": {
+        "page": 24,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-060",
+      "type": "mcq",
+      "prompt": "Which of the following is NOT a property of the Von Neumann architecture?",
+      "options": [
+        "Programs are stored in memory",
+        "Execution is sequential unless the program says otherwise",
+        "It has four subsystems: memory, I/O, ALU, and control unit",
+        "Many processing units operate at the same time"
+      ],
+      "answer": "D",
+      "explanation": "Von Neumann machines store programs in memory and execute sequentially. Many processing units operating at the same time is parallel processing, a non-Von Neumann architecture.",
+      "source": {
+        "page": 24,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-match-001",
+      "type": "matching",
+      "title": "Match each Von Neumann subsystem with its role",
+      "pairs": [
+        {
+          "left": "Memory",
+          "right": "Functional unit where data is stored/retrieved"
+        },
+        {
+          "left": "Input/output",
+          "right": "Slow; needs a dedicated controller to free the CPU"
+        },
+        {
+          "left": "Arithmetic/logic unit (ALU)",
+          "right": "Performs computations using dedicated registers"
+        },
+        {
+          "left": "Control unit",
+          "right": "Fetches, decodes, and executes instructions"
+        }
+      ],
+      "source": {
+        "page": 25,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-tf-017",
+      "type": "tf",
+      "prompt": "Parallel processing architectures can perform multiple instructions at one time.",
+      "answer": true,
+      "explanation": "The summary says parallel processing architectures can perform multiple instructions at one time.",
+      "source": {
+        "page": 25,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-056",
+      "type": "mcq",
+      "prompt": "According to the summary, mass data storage is:",
+      "options": [
+        "Volatile",
+        "Nonvolatile",
+        "Built into the CPU",
+        "The same as cache memory"
+      ],
+      "answer": "B",
+      "explanation": "The summary says mass data storage is nonvolatile.",
+      "source": {
+        "page": 25,
+        "part": 2
+      }
+    },
+    {
+      "id": "t2b-mcq-058",
+      "type": "mcq",
+      "prompt": "Why does I/O need a dedicated controller?",
+      "options": [
+        "I/O is faster than the CPU",
+        "The controller decodes op codes for the CPU",
+        "The controller holds the address of the next instruction",
+        "I/O is slow, so the controller frees the CPU"
+      ],
+      "answer": "D",
+      "explanation": "The summary says I/O is slow and needs a dedicated controller to free the CPU.",
+      "source": {
+        "page": 25,
+        "part": 2
+      }
+    }
+  ]
+}

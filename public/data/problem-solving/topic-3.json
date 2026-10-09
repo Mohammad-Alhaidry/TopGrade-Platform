@@ -1,0 +1,2177 @@
+{
+  "schemaVersion": 1,
+  "course": {
+    "id": "problem-solving",
+    "titleAr": "حل المشاكل والبرمجة",
+    "titleEn": "Problem Solving & Programming"
+  },
+  "topic": {
+    "id": "topic-3",
+    "number": 3,
+    "title": "Number Systems & Logic Gates"
+  },
+  "questions": [
+    {
+      "id": "t3-mcq-001",
+      "type": "mcq",
+      "prompt": "Computers understand only two states. These states are:",
+      "options": [
+        "0 and 1",
+        "1 and 2",
+        "True, False and Unknown",
+        "0 to 9"
+      ],
+      "answer": "A",
+      "explanation": "Slide 1: computers understand only two states: 0 and 1.",
+      "source": {
+        "page": 2
+      }
+    },
+    {
+      "id": "t3-mcq-002",
+      "type": "mcq",
+      "prompt": "The smallest unit of data in a computer is the:",
+      "options": [
+        "Byte",
+        "Bit",
+        "Sample",
+        "Pixel"
+      ],
+      "answer": "B",
+      "explanation": "Slide 4: a bit is the smallest unit of data in a computer.",
+      "source": {
+        "page": 5
+      }
+    },
+    {
+      "id": "t3-mcq-003",
+      "type": "mcq",
+      "prompt": "In binary, the bit 1 represents the state:",
+      "options": [
+        "OFF",
+        "Negative",
+        "Unknown",
+        "ON"
+      ],
+      "answer": "D",
+      "explanation": "Slide 4: 0 -> OFF and 1 -> ON.",
+      "source": {
+        "page": 5
+      }
+    },
+    {
+      "id": "t3-tf-001",
+      "type": "tf",
+      "prompt": "The bit 0 represents ON and the bit 1 represents OFF.",
+      "answer": false,
+      "explanation": "It is the opposite: 0 -> OFF and 1 -> ON.",
+      "source": {
+        "page": 5
+      }
+    },
+    {
+      "id": "t3-match-001",
+      "type": "matching",
+      "title": "Match each type of information with how it becomes bits",
+      "pairs": [
+        {
+          "left": "Numbers",
+          "right": "Binary (for example 1011)"
+        },
+        {
+          "left": "Text",
+          "right": "Character codes"
+        },
+        {
+          "left": "Images",
+          "right": "Pixels"
+        },
+        {
+          "left": "Sound",
+          "right": "Samples"
+        },
+        {
+          "left": "Logic",
+          "right": "True / False"
+        }
+      ],
+      "source": {
+        "page": 5
+      }
+    },
+    {
+      "id": "t3-mcq-004",
+      "type": "mcq",
+      "prompt": "Why is the binary number system used in digital computers?",
+      "options": [
+        "Because binary numbers are shorter than decimal numbers",
+        "Because it uses ten digits like humans do",
+        "Because it does not need to be interpreted for display",
+        "Because its two states (On/Off) give stability and reliability"
+      ],
+      "answer": "D",
+      "explanation": "The slide says binary is important to computing systems because of its stability and reliability.",
+      "source": {
+        "page": 7
+      }
+    },
+    {
+      "id": "t3-mcq-005",
+      "type": "mcq",
+      "prompt": "All data stored inside a computer is stored in binary, which is also called:",
+      "options": [
+        "Decimal language",
+        "Machine language",
+        "Unicode",
+        "Human language"
+      ],
+      "answer": "B",
+      "explanation": "All data is stored in binary (also called machine language) and interpreted to display on the screen in human language.",
+      "source": {
+        "page": 7
+      }
+    },
+    {
+      "id": "t3-tf-002",
+      "type": "tf",
+      "prompt": "Binary is the simple idea of On/Off, Yes/No, True/False, and Positive/Negative.",
+      "answer": true,
+      "explanation": "This is exactly how the slide describes binary.",
+      "source": {
+        "page": 7
+      }
+    },
+    {
+      "id": "t3-mcq-006",
+      "type": "mcq",
+      "prompt": "The letter \"A\" is stored in memory as 01000001. Convert this value from binary to decimal:",
+      "options": [
+        "65",
+        "64",
+        "66",
+        "130"
+      ],
+      "answer": "A",
+      "explanation": "01000001 = 64 + 1 = 65 (only the 2^6 = 64 and 2^0 = 1 places hold a 1).",
+      "source": {
+        "page": 8
+      }
+    },
+    {
+      "id": "t3-mcq-007",
+      "type": "mcq",
+      "prompt": "What base is the binary number system?",
+      "options": [
+        "Base 8",
+        "Base 1",
+        "Base 10",
+        "Base 2"
+      ],
+      "answer": "D",
+      "explanation": "Slide 5: Binary System (Base 2) uses only 0 and 1.",
+      "source": {
+        "page": 9
+      }
+    },
+    {
+      "id": "t3-mcq-008",
+      "type": "mcq",
+      "prompt": "The decimal number system uses:",
+      "options": [
+        "9 digits (1-9), each position a power of 10",
+        "10 digits (1-10), each position a power of 2",
+        "10 digits (0-9), each position a power of 10",
+        "2 digits (0 and 1), each position a power of 2"
+      ],
+      "answer": "C",
+      "explanation": "Slide 5: Decimal (Base 10) uses 10 digits 0-9 and each position represents a power of 10.",
+      "source": {
+        "page": 9
+      }
+    },
+    {
+      "id": "t3-tf-003",
+      "type": "tf",
+      "prompt": "Decimal and binary use a completely different concept for place values.",
+      "answer": false,
+      "explanation": "Slide 5 key idea: same concept, different base.",
+      "source": {
+        "page": 9
+      }
+    },
+    {
+      "id": "t3-mcq-009",
+      "type": "mcq",
+      "prompt": "In a binary number, the powers of 2 start from 0 at which position?",
+      "options": [
+        "The rightmost bit",
+        "The leftmost bit",
+        "The second bit from the right",
+        "The middle bit"
+      ],
+      "answer": "A",
+      "explanation": "Slide 6: remember, start powers from 0 on the right.",
+      "source": {
+        "page": 10
+      }
+    },
+    {
+      "id": "t3-mcq-010",
+      "type": "mcq",
+      "prompt": "What are the steps to convert a binary number to decimal?",
+      "options": [
+        "Write the powers of 2, multiply each bit by its place value, add the results",
+        "Flip all bits and add 1",
+        "Write the powers of 10, multiply each bit by its place value, add the results",
+        "Divide by 2 repeatedly and read the remainders from bottom to top"
+      ],
+      "answer": "A",
+      "explanation": "Slide 7: Step 1 write the powers of 2; Step 2 multiply each bit by its place value; Step 3 add the results.",
+      "source": {
+        "page": 11
+      }
+    },
+    {
+      "id": "t3-mcq-011",
+      "type": "mcq",
+      "prompt": "Convert from binary to decimal: 1111",
+      "options": [
+        "30",
+        "16",
+        "14",
+        "15"
+      ],
+      "answer": "D",
+      "explanation": "1111 (base 2) = 8 + 4 + 2 + 1 = 15 (base 10).",
+      "source": {
+        "page": 11
+      }
+    },
+    {
+      "id": "t3-mcq-012",
+      "type": "mcq",
+      "prompt": "Convert from binary to decimal: 1001",
+      "options": [
+        "8",
+        "1001",
+        "9",
+        "18"
+      ],
+      "answer": "C",
+      "explanation": "1001 (base 2) = 8 + 1 = 9 (base 10).",
+      "source": {
+        "page": 11
+      }
+    },
+    {
+      "id": "t3-mcq-013",
+      "type": "mcq",
+      "prompt": "Convert from binary to decimal: 1100",
+      "options": [
+        "12",
+        "3",
+        "11",
+        "24"
+      ],
+      "answer": "A",
+      "explanation": "1100 (base 2) = 8 + 4 = 12 (base 10).",
+      "source": {
+        "page": 11
+      }
+    },
+    {
+      "id": "t3-mcq-014",
+      "type": "mcq",
+      "prompt": "Convert from binary to decimal: 1011",
+      "options": [
+        "1011",
+        "22",
+        "13",
+        "11"
+      ],
+      "answer": "D",
+      "explanation": "1011 (base 2) = 8 + 2 + 1 = 11 (base 10).",
+      "source": {
+        "page": 11
+      }
+    },
+    {
+      "id": "t3-mcq-015",
+      "type": "mcq",
+      "prompt": "Convert from binary to decimal: 10110",
+      "options": [
+        "13",
+        "10110",
+        "22",
+        "44"
+      ],
+      "answer": "C",
+      "explanation": "10110 (base 2) = 16 + 4 + 2 = 22 (base 10).",
+      "source": {
+        "page": 11
+      }
+    },
+    {
+      "id": "t3-mcq-016",
+      "type": "mcq",
+      "prompt": "Convert from binary to decimal: 11001",
+      "options": [
+        "19",
+        "25",
+        "50",
+        "24"
+      ],
+      "answer": "B",
+      "explanation": "11001 (base 2) = 16 + 8 + 1 = 25 (base 10).",
+      "source": {
+        "page": 11
+      }
+    },
+    {
+      "id": "t3-mcq-017",
+      "type": "mcq",
+      "prompt": "A student reads 1101 (binary) as \"one thousand one hundred and one\". What is the correct value in decimal?",
+      "options": [
+        "26",
+        "13",
+        "1101",
+        "11"
+      ],
+      "answer": "B",
+      "explanation": "Slide 8 exam tip: 1101 is a binary number: 8 + 4 + 0 + 1 = 13.",
+      "source": {
+        "page": 12
+      }
+    },
+    {
+      "id": "t3-mcq-018",
+      "type": "mcq",
+      "prompt": "Convert from decimal to binary: 14",
+      "options": [
+        "111",
+        "1101",
+        "1111",
+        "1110"
+      ],
+      "answer": "D",
+      "explanation": "14 ÷ 2 = 7 r 0, 7 ÷ 2 = 3 r 1, 3 ÷ 2 = 1 r 1, 1 ÷ 2 = 0 r 1; read the remainders from bottom to top: 1110.",
+      "source": {
+        "page": 13
+      }
+    },
+    {
+      "id": "t3-tf-004",
+      "type": "tf",
+      "prompt": "The decimal number 11 equals 1011 in binary.",
+      "answer": true,
+      "explanation": "11 ÷ 2 = 5 r 1, 5 ÷ 2 = 2 r 1, 2 ÷ 2 = 1 r 0, 1 ÷ 2 = 0 r 1; read the remainders from bottom to top: 1011.",
+      "source": {
+        "page": 13
+      }
+    },
+    {
+      "id": "t3-mcq-019",
+      "type": "mcq",
+      "prompt": "Convert from decimal to binary: 9",
+      "options": [
+        "1010",
+        "10010",
+        "1000",
+        "1001"
+      ],
+      "answer": "D",
+      "explanation": "9 ÷ 2 = 4 r 1, 4 ÷ 2 = 2 r 0, 2 ÷ 2 = 1 r 0, 1 ÷ 2 = 0 r 1; read the remainders from bottom to top: 1001.",
+      "source": {
+        "page": 13
+      }
+    },
+    {
+      "id": "t3-mcq-020",
+      "type": "mcq",
+      "prompt": "Convert from decimal to binary: 15",
+      "options": [
+        "1111",
+        "10000",
+        "1110",
+        "11110"
+      ],
+      "answer": "A",
+      "explanation": "15 ÷ 2 = 7 r 1, 7 ÷ 2 = 3 r 1, 3 ÷ 2 = 1 r 1, 1 ÷ 2 = 0 r 1; read the remainders from bottom to top: 1111.",
+      "source": {
+        "page": 13
+      }
+    },
+    {
+      "id": "t3-mcq-021",
+      "type": "mcq",
+      "prompt": "Convert from decimal to binary: 19",
+      "options": [
+        "10010",
+        "10100",
+        "11001",
+        "10011"
+      ],
+      "answer": "D",
+      "explanation": "19 ÷ 2 = 9 r 1, 9 ÷ 2 = 4 r 1, 4 ÷ 2 = 2 r 0, 2 ÷ 2 = 1 r 0, 1 ÷ 2 = 0 r 1; read the remainders from bottom to top: 10011.",
+      "source": {
+        "page": 13
+      }
+    },
+    {
+      "id": "t3-tf-005",
+      "type": "tf",
+      "prompt": "The decimal number 21 equals 10110 in binary.",
+      "answer": false,
+      "explanation": "21 ÷ 2 = 10 r 1, 10 ÷ 2 = 5 r 0, 5 ÷ 2 = 2 r 1, 2 ÷ 2 = 1 r 0, 1 ÷ 2 = 0 r 1; read the remainders from bottom to top: 10101. So 21 = 10101, not 10110 (10110 = 22).",
+      "source": {
+        "page": 13
+      }
+    },
+    {
+      "id": "t3-mcq-022",
+      "type": "mcq",
+      "prompt": "Convert from decimal to binary: 20",
+      "options": [
+        "101",
+        "10100",
+        "10101",
+        "10011"
+      ],
+      "answer": "B",
+      "explanation": "20 ÷ 2 = 10 r 0, 10 ÷ 2 = 5 r 0, 5 ÷ 2 = 2 r 1, 2 ÷ 2 = 1 r 0, 1 ÷ 2 = 0 r 1; read the remainders from bottom to top: 10100.",
+      "source": {
+        "page": 13
+      }
+    },
+    {
+      "id": "t3-mcq-023",
+      "type": "mcq",
+      "prompt": "Converting 13 (base 10) by repeated division by 2 gives the remainders 1, 0, 1, 1 (in the order they are found). What is the binary result?",
+      "options": [
+        "1101",
+        "1110",
+        "0111",
+        "1011"
+      ],
+      "answer": "A",
+      "explanation": "Slide 9: read the remainders from bottom to top: 13 = 1101 (base 2).",
+      "source": {
+        "page": 13
+      }
+    },
+    {
+      "id": "t3-mcq-101",
+      "type": "mcq",
+      "prompt": "Convert from decimal to binary: 10",
+      "options": [
+        "0101",
+        "1000",
+        "1100",
+        "1010"
+      ],
+      "answer": "D",
+      "explanation": "10 ÷ 2 = 5 r 0, 5 ÷ 2 = 2 r 1, 2 ÷ 2 = 1 r 0, 1 ÷ 2 = 0 r 1; read the remainders from bottom to top: 1010. (Slide 10; check: 8 + 2 = 10.) 0101 is the remainders read from top to bottom.",
+      "source": {
+        "page": 14
+      }
+    },
+    {
+      "id": "t3-tf-006",
+      "type": "tf",
+      "prompt": "When converting decimal to binary by repeated division by 2, the remainders are read from top to bottom.",
+      "answer": false,
+      "explanation": "Slide 9: read the remainders from bottom to top.",
+      "source": {
+        "page": 13
+      }
+    },
+    {
+      "id": "t3-match-002",
+      "type": "matching",
+      "title": "Match each decimal number with its 4-bit binary form",
+      "pairs": [
+        {
+          "left": "14",
+          "right": "1110"
+        },
+        {
+          "left": "12",
+          "right": "1100"
+        },
+        {
+          "left": "9",
+          "right": "1001"
+        },
+        {
+          "left": "7",
+          "right": "0111"
+        },
+        {
+          "left": "6",
+          "right": "0110"
+        }
+      ],
+      "source": {
+        "page": 13
+      }
+    },
+    {
+      "id": "t3-mcq-024",
+      "type": "mcq",
+      "prompt": "Convert from binary to decimal: 101",
+      "options": [
+        "4",
+        "10",
+        "5",
+        "6"
+      ],
+      "answer": "C",
+      "explanation": "101 (base 2) = 4 + 1 = 5 (base 10).",
+      "source": {
+        "page": 15
+      }
+    },
+    {
+      "id": "t3-tf-007",
+      "type": "tf",
+      "prompt": "The binary number 1110 equals 1110 in decimal.",
+      "answer": false,
+      "explanation": "1110 (base 2) = 8 + 4 + 2 = 14 (base 10).",
+      "source": {
+        "page": 15
+      }
+    },
+    {
+      "id": "t3-tf-008",
+      "type": "tf",
+      "prompt": "The binary number 10011 equals 19 in decimal.",
+      "answer": true,
+      "explanation": "10011 (base 2) = 16 + 2 + 1 = 19 (base 10).",
+      "source": {
+        "page": 15
+      }
+    },
+    {
+      "id": "t3-mcq-025",
+      "type": "mcq",
+      "prompt": "Convert from decimal to binary: 12",
+      "options": [
+        "1100",
+        "1011",
+        "1101",
+        "11"
+      ],
+      "answer": "A",
+      "explanation": "12 ÷ 2 = 6 r 0, 6 ÷ 2 = 3 r 0, 3 ÷ 2 = 1 r 1, 1 ÷ 2 = 0 r 1; read the remainders from bottom to top: 1100.",
+      "source": {
+        "page": 15
+      }
+    },
+    {
+      "id": "t3-mcq-026",
+      "type": "mcq",
+      "prompt": "Convert from decimal to binary: 7",
+      "options": [
+        "1000",
+        "1110",
+        "111",
+        "110"
+      ],
+      "answer": "C",
+      "explanation": "7 ÷ 2 = 3 r 1, 3 ÷ 2 = 1 r 1, 1 ÷ 2 = 0 r 1; read the remainders from bottom to top: 111.",
+      "source": {
+        "page": 15
+      }
+    },
+    {
+      "id": "t3-mcq-100",
+      "type": "mcq",
+      "prompt": "Convert from decimal to binary: 25",
+      "options": [
+        "10011",
+        "11000",
+        "11001",
+        "11010"
+      ],
+      "answer": "C",
+      "explanation": "25 ÷ 2 = 12 r 1, 12 ÷ 2 = 6 r 0, 6 ÷ 2 = 3 r 0, 3 ÷ 2 = 1 r 1, 1 ÷ 2 = 0 r 1; read the remainders from bottom to top: 11001. 10011 is the remainders read from top to bottom.",
+      "source": {
+        "page": 15
+      }
+    },
+    {
+      "id": "t3-mcq-027",
+      "type": "mcq",
+      "prompt": "Which method converts a decimal number to binary?",
+      "options": [
+        "Using place values (powers of 2) and adding",
+        "Flipping the bits and adding 1",
+        "Repeated division by 2",
+        "Repeated multiplication by 10"
+      ],
+      "answer": "C",
+      "explanation": "Recap: Decimal -> Binary uses repeated division by 2; Binary -> Decimal uses place values.",
+      "source": {
+        "page": 16
+      }
+    },
+    {
+      "id": "t3-mcq-028",
+      "type": "mcq",
+      "prompt": "In binary addition, 1 + 1 equals:",
+      "options": [
+        "10 (write 0, carry 1)",
+        "2 (write 2, no carry)",
+        "11 (write 1, carry 1)",
+        "0 (write 0, no carry)"
+      ],
+      "answer": "A",
+      "explanation": "Slide 12: 1 + 1 = 10 -> write 0, carry 1.",
+      "source": {
+        "page": 18
+      }
+    },
+    {
+      "id": "t3-tf-009",
+      "type": "tf",
+      "prompt": "Binary addition works like decimal addition, but there are only two digits: 0 and 1.",
+      "answer": true,
+      "explanation": "This is the key idea of slide 12.",
+      "source": {
+        "page": 18
+      }
+    },
+    {
+      "id": "t3-mcq-029",
+      "type": "mcq",
+      "prompt": "Perform the following binary addition: 00111 + 01110",
+      "options": [
+        "01001",
+        "10101",
+        "01111",
+        "10011"
+      ],
+      "answer": "B",
+      "explanation": "00111 (7) + 01110 (14) = 21 = 10101 in binary, carrying 1 whenever 1 + 1 occurs.",
+      "source": {
+        "page": 18
+      }
+    },
+    {
+      "id": "t3-mcq-030",
+      "type": "mcq",
+      "prompt": "Perform the following binary addition: 0101 + 0010",
+      "options": [
+        "1001",
+        "0111",
+        "1000",
+        "0101"
+      ],
+      "answer": "B",
+      "explanation": "0101 (5) + 0010 (2) = 7 = 0111 in binary, carrying 1 whenever 1 + 1 occurs.",
+      "source": {
+        "page": 18
+      }
+    },
+    {
+      "id": "t3-mcq-031",
+      "type": "mcq",
+      "prompt": "Perform the following binary addition: 0101 + 0011",
+      "options": [
+        "0111",
+        "0110",
+        "1000",
+        "1010"
+      ],
+      "answer": "C",
+      "explanation": "0101 (5) + 0011 (3) = 8 = 1000 in binary, carrying 1 whenever 1 + 1 occurs.",
+      "source": {
+        "page": 18
+      }
+    },
+    {
+      "id": "t3-mcq-032",
+      "type": "mcq",
+      "prompt": "Perform the following binary addition: 1011 + 0110",
+      "options": [
+        "1101",
+        "10001",
+        "1111",
+        "0001"
+      ],
+      "answer": "B",
+      "explanation": "1011 (11) + 0110 (6) = 17 = 10001 in binary, carrying 1 whenever 1 + 1 occurs.",
+      "source": {
+        "page": 18
+      }
+    },
+    {
+      "id": "t3-tf-010",
+      "type": "tf",
+      "prompt": "In binary, 1100 + 1010 = 10110.",
+      "answer": true,
+      "explanation": "1100 (12) + 1010 (10) = 22 = 10110 in binary, carrying 1 whenever 1 + 1 occurs.",
+      "source": {
+        "page": 18
+      }
+    },
+    {
+      "id": "t3-tf-011",
+      "type": "tf",
+      "prompt": "In binary, 0110 + 0111 = 0001.",
+      "answer": false,
+      "explanation": "0110 (6) + 0111 (7) = 13 = 1101 in binary, carrying 1 whenever 1 + 1 occurs.",
+      "source": {
+        "page": 18
+      }
+    },
+    {
+      "id": "t3-mcq-033",
+      "type": "mcq",
+      "prompt": "Perform the following binary addition: 01101 + 01011",
+      "options": [
+        "00110",
+        "11100",
+        "10110",
+        "11000"
+      ],
+      "answer": "D",
+      "explanation": "01101 (13) + 01011 (11) = 24 = 11000. Right to left: 1+1=0 carry 1, 0+1+1=0 carry 1, 1+0+1=0 carry 1, 1+1+1=1 carry 1, 0+0+1=1. 00110 ignores the carries.",
+      "source": {
+        "page": 18
+      }
+    },
+    {
+      "id": "t3-tf-012",
+      "type": "tf",
+      "prompt": "In binary, 00101 + 01111 = 01010.",
+      "answer": false,
+      "explanation": "00101 (5) + 01111 (15) = 20 = 10100 in binary, carrying 1 whenever 1 + 1 occurs.",
+      "source": {
+        "page": 18
+      }
+    },
+    {
+      "id": "t3-mcq-034",
+      "type": "mcq",
+      "prompt": "Perform the following binary addition: 10110 + 01011",
+      "options": [
+        "11101",
+        "100001",
+        "11111",
+        "00001"
+      ],
+      "answer": "B",
+      "explanation": "10110 (22) + 01011 (11) = 33 = 100001 in binary, carrying 1 whenever 1 + 1 occurs.",
+      "source": {
+        "page": 18
+      }
+    },
+    {
+      "id": "t3-match-003",
+      "type": "matching",
+      "title": "Match each binary addition with its result",
+      "pairs": [
+        {
+          "left": "0101 + 0011",
+          "right": "1000"
+        },
+        {
+          "left": "0110 + 0011",
+          "right": "1001"
+        },
+        {
+          "left": "1110 + 0010",
+          "right": "10000"
+        },
+        {
+          "left": "0101 + 0010",
+          "right": "0111"
+        }
+      ],
+      "source": {
+        "page": 18
+      }
+    },
+    {
+      "id": "t3-mcq-035",
+      "type": "mcq",
+      "prompt": "Perform the following binary addition: 1110 + 0010",
+      "options": [
+        "1110",
+        "0000",
+        "10000",
+        "1100"
+      ],
+      "answer": "C",
+      "explanation": "1110 (14) + 0010 (2) = 16 = 10000 in binary, carrying 1 whenever 1 + 1 occurs.",
+      "source": {
+        "page": 19
+      }
+    },
+    {
+      "id": "t3-mcq-036",
+      "type": "mcq",
+      "prompt": "With 4 bits, an unsigned integer can represent the values:",
+      "options": [
+        "-8 to 7",
+        "0 to 15",
+        "1 to 16",
+        "0 to 16"
+      ],
+      "answer": "B",
+      "explanation": "Slide: with 4 bits, 0000 -> 1111, i.e. 0 -> 15.",
+      "source": {
+        "page": 19
+      }
+    },
+    {
+      "id": "t3-mcq-037",
+      "type": "mcq",
+      "prompt": "Adding 1110 + 0010 gives 10000. Why is this a problem when using 4 bits?",
+      "options": [
+        "The result is negative, so overflow occurs",
+        "The result needs 5 bits, so overflow occurs",
+        "There is no problem; 16 fits in 4 bits",
+        "The result needs only 3 bits, so data is lost"
+      ],
+      "answer": "B",
+      "explanation": "Slide: 14 + 2 = 16 = 10000, which requires 5 bits -> this is called overflow.",
+      "source": {
+        "page": 19
+      }
+    },
+    {
+      "id": "t3-mcq-039",
+      "type": "mcq",
+      "prompt": "Overflow occurs when:",
+      "options": [
+        "Two numbers with the same sign are compared",
+        "The remainders are read from bottom to top",
+        "A negative number is represented using two's complement",
+        "A result is too large to fit in the available number of bits"
+      ],
+      "answer": "D",
+      "explanation": "Slide 13: overflow occurs when a result is too large to fit in the available number of bits.",
+      "source": {
+        "page": 20
+      }
+    },
+    {
+      "id": "t3-tf-013",
+      "type": "tf",
+      "prompt": "The value 20 (base 10) can be stored using only 4 unsigned bits.",
+      "answer": false,
+      "explanation": "20 = 10100 needs 5 bits; 4 unsigned bits hold only 0 to 15, so it causes overflow.",
+      "source": {
+        "page": 20
+      }
+    },
+    {
+      "id": "t3-tf-014",
+      "type": "tf",
+      "prompt": "The value 5 (base 10) can be stored using only 4 unsigned bits.",
+      "answer": true,
+      "explanation": "5 = 0101 fits in 4 bits; 4 unsigned bits hold 0 to 15.",
+      "source": {
+        "page": 20
+      }
+    },
+    {
+      "id": "t3-mcq-040",
+      "type": "mcq",
+      "prompt": "Using 4 unsigned bits, which addition causes overflow?",
+      "options": [
+        "0110 + 0011",
+        "0101 + 0100",
+        "1001 + 0111",
+        "1000 + 0111"
+      ],
+      "answer": "C",
+      "explanation": "1001 + 0111 = 9 + 7 = 16 = 10000, which needs 5 bits. The others give 9, 9 and 15, which fit in 4 bits.",
+      "source": {
+        "page": 20
+      }
+    },
+    {
+      "id": "t3-mcq-041",
+      "type": "mcq",
+      "prompt": "Can 18 (base 10) be stored using 4 unsigned bits?",
+      "options": [
+        "No: 18 = 10010 needs 5 bits, so overflow occurs",
+        "Yes: 18 = 1001 fits in 4 bits",
+        "Yes: 4 unsigned bits hold 0 to 18",
+        "No: 4 unsigned bits hold only 0 to 7"
+      ],
+      "answer": "A",
+      "explanation": "Slide 17: 18 = 10010 (16 + 2) needs 5 bits, but 4 unsigned bits hold only 0000 to 1111 (0 to 15), so it causes overflow.",
+      "source": {
+        "page": 24
+      }
+    },
+    {
+      "id": "t3-mcq-042",
+      "type": "mcq",
+      "prompt": "In the simple approach for representing negative numbers, the leftmost bit is used as a sign. Which is correct?",
+      "options": [
+        "1 -> Positive, 0 -> Negative",
+        "0 -> Negative, 1 -> Zero",
+        "0 -> Positive, 1 -> Negative",
+        "The rightmost bit is the sign"
+      ],
+      "answer": "C",
+      "explanation": "Slide 14: the leftmost bit is the sign: 0 -> Positive, 1 -> Negative.",
+      "source": {
+        "page": 21
+      }
+    },
+    {
+      "id": "t3-tf-015",
+      "type": "tf",
+      "prompt": "Using the leftmost bit as a sign (0 positive, 1 negative) leads to sign-magnitude representation.",
+      "answer": true,
+      "explanation": "Slide 14: this leads to Sign-Magnitude Representation.",
+      "source": {
+        "page": 21
+      }
+    },
+    {
+      "id": "t3-mcq-043",
+      "type": "mcq",
+      "prompt": "In a 4-bit sign-magnitude number, how are the bits used?",
+      "options": [
+        "All 4 bits for the magnitude",
+        "2 bits for the sign, 2 bits for the magnitude",
+        "1 bit for the sign, 3 bits for the magnitude",
+        "3 bits for the sign, 1 bit for the magnitude"
+      ],
+      "answer": "C",
+      "explanation": "Slide 15: for a 4-bit number, 1 bit -> sign and 3 bits -> magnitude.",
+      "source": {
+        "page": 22
+      }
+    },
+    {
+      "id": "t3-tf-016",
+      "type": "tf",
+      "prompt": "Using 4-bit sign-magnitude, -6 is represented as 1010.",
+      "answer": false,
+      "explanation": "Sign bit 1 (negative) followed by the 3-bit magnitude 110: -6 = 1110.",
+      "source": {
+        "page": 22
+      }
+    },
+    {
+      "id": "t3-mcq-044",
+      "type": "mcq",
+      "prompt": "In 4-bit sign-magnitude, what value does 1100 represent?",
+      "options": [
+        "-4",
+        "-5",
+        "4",
+        "12"
+      ],
+      "answer": "A",
+      "explanation": "Leftmost bit 1 means negative; magnitude 100 = 4, so 1100 = -4.",
+      "source": {
+        "page": 22
+      }
+    },
+    {
+      "id": "t3-mcq-045",
+      "type": "mcq",
+      "prompt": "What problem does sign-magnitude representation have?",
+      "options": [
+        "It needs 5 bits to represent -5",
+        "It cannot represent negative numbers",
+        "Zero cannot be represented at all",
+        "There are two representations for zero (0000 and 1000)"
+      ],
+      "answer": "D",
+      "explanation": "Slide 15: +0 = 0000 and -0 = 1000, so there are two representations for zero.",
+      "source": {
+        "page": 22
+      }
+    },
+    {
+      "id": "t3-tf-017",
+      "type": "tf",
+      "prompt": "In 4-bit sign-magnitude, -0 is written as 1000.",
+      "answer": true,
+      "explanation": "Slide 15: +0 = 0000 and -0 = 1000.",
+      "source": {
+        "page": 22
+      }
+    },
+    {
+      "id": "t3-match-004",
+      "type": "matching",
+      "title": "Match each 4-bit value with its bit pattern",
+      "pairs": [
+        {
+          "left": "-5 in two's complement",
+          "right": "1011"
+        },
+        {
+          "left": "-5 in sign-magnitude",
+          "right": "1101"
+        },
+        {
+          "left": "+5",
+          "right": "0101"
+        },
+        {
+          "left": "-0 in sign-magnitude",
+          "right": "1000"
+        },
+        {
+          "left": "Largest unsigned value (15)",
+          "right": "1111"
+        }
+      ],
+      "source": {
+        "page": 22
+      }
+    },
+    {
+      "id": "t3-mcq-046",
+      "type": "mcq",
+      "prompt": "To find the two's complement (negative) representation of a binary number, you:",
+      "options": [
+        "Flip all bits only",
+        "Add 1, then divide by 2",
+        "Flip only the leftmost bit",
+        "Flip all bits, then add 1"
+      ],
+      "answer": "D",
+      "explanation": "Slide 16: Two's Complement = Flip the bits + Add 1.",
+      "source": {
+        "page": 23
+      }
+    },
+    {
+      "id": "t3-mcq-047",
+      "type": "mcq",
+      "prompt": "Using 4 bits, find the two's complement representation of -5.",
+      "options": [
+        "0101",
+        "1010",
+        "1101",
+        "1011"
+      ],
+      "answer": "D",
+      "explanation": "+5 = 0101; flip all bits -> 1010; add 1 -> 1011.",
+      "source": {
+        "page": 23
+      }
+    },
+    {
+      "id": "t3-mcq-048",
+      "type": "mcq",
+      "prompt": "Using 4 bits, find the two's complement representation of -6.",
+      "options": [
+        "0110",
+        "1010",
+        "1001",
+        "1110"
+      ],
+      "answer": "B",
+      "explanation": "+6 = 0110; flip all bits -> 1001; add 1 -> 1010.",
+      "source": {
+        "page": 23
+      }
+    },
+    {
+      "id": "t3-tf-018",
+      "type": "tf",
+      "prompt": "Using 4-bit two's complement, -1 is represented as 1111.",
+      "answer": true,
+      "explanation": "+1 = 0001; flip all bits -> 1110; add 1 -> 1111.",
+      "source": {
+        "page": 23
+      }
+    },
+    {
+      "id": "t3-mcq-049",
+      "type": "mcq",
+      "prompt": "The 4-bit pattern 1011 means -5 in two's complement. What does the same pattern 1011 mean in 4-bit sign-magnitude?",
+      "options": [
+        "-11",
+        "+11",
+        "-5",
+        "-3"
+      ],
+      "answer": "D",
+      "explanation": "In sign-magnitude, the leading 1 is the sign (negative) and 011 = 3, so 1011 = -3.",
+      "source": {
+        "page": 23
+      }
+    },
+    {
+      "id": "t3-tf-019",
+      "type": "tf",
+      "prompt": "Two's complement of 0101 (+5) using 4 bits is 1010.",
+      "answer": false,
+      "explanation": "1010 is only the flipped bits; you must also add 1, giving 1011.",
+      "source": {
+        "page": 23
+      }
+    },
+    {
+      "id": "t3-mcq-050",
+      "type": "mcq",
+      "prompt": "Perform the following binary addition: 0110 + 0011",
+      "options": [
+        "0111",
+        "1001",
+        "0101",
+        "1011"
+      ],
+      "answer": "B",
+      "explanation": "0110 (6) + 0011 (3) = 9 = 1001 in binary, carrying 1 whenever 1 + 1 occurs.",
+      "source": {
+        "page": 24
+      }
+    },
+    {
+      "id": "t3-mcq-051",
+      "type": "mcq",
+      "prompt": "Using 4-bit sign-magnitude, represent -3.",
+      "options": [
+        "1101",
+        "0011",
+        "1011",
+        "1100"
+      ],
+      "answer": "C",
+      "explanation": "Sign bit 1 (negative) followed by the 3-bit magnitude 011: -3 = 1011.",
+      "source": {
+        "page": 24
+      }
+    },
+    {
+      "id": "t3-mcq-052",
+      "type": "mcq",
+      "prompt": "Using 4 bits, find the two's complement representation of -3.",
+      "options": [
+        "0011",
+        "1100",
+        "1101",
+        "1011"
+      ],
+      "answer": "C",
+      "explanation": "+3 = 0011; flip all bits -> 1100; add 1 -> 1101.",
+      "source": {
+        "page": 24
+      }
+    },
+    {
+      "id": "t3-mcq-053",
+      "type": "mcq",
+      "prompt": "Why is two's complement better than sign-magnitude when representing zero?",
+      "options": [
+        "It uses the leftmost bit as the sign",
+        "It cannot represent zero",
+        "It has two representations for zero (+0 and -0)",
+        "It does not have two different representations for zero"
+      ],
+      "answer": "D",
+      "explanation": "Sign-magnitude has +0 = 0000 and -0 = 1000; this double zero is one reason two's complement is commonly used.",
+      "source": {
+        "page": 24
+      }
+    },
+    {
+      "id": "t3-tf-020",
+      "type": "tf",
+      "prompt": "Negative integers can be represented using sign-magnitude or two's complement.",
+      "answer": true,
+      "explanation": "Recap of the signed numbers section.",
+      "source": {
+        "page": 25
+      }
+    },
+    {
+      "id": "t3-tf-021",
+      "type": "tf",
+      "prompt": "The computer \"sees\" a letter, picture, or sound the way we do.",
+      "answer": false,
+      "explanation": "Key takeaway: the computer does not see them the way we do; it stores a binary representation of it.",
+      "source": {
+        "page": 27
+      }
+    },
+    {
+      "id": "t3-mcq-054",
+      "type": "mcq",
+      "prompt": "How does a computer store the letter A?",
+      "options": [
+        "It stores the letter as a sound sample",
+        "It stores a small picture of the letter in pixels",
+        "It stores the letter exactly as it appears on the keyboard",
+        "It assigns the character a numeric code, which is then represented in binary"
+      ],
+      "answer": "D",
+      "explanation": "Slide 19: the computer assigns each character a numeric code, which can then be represented in binary.",
+      "source": {
+        "page": 28
+      }
+    },
+    {
+      "id": "t3-mcq-055",
+      "type": "mcq",
+      "prompt": "ASCII is used for:",
+      "options": [
+        "Letters, digits, symbols, and control characters",
+        "The number of samples per second",
+        "Characters from many languages such as Arabic and Chinese",
+        "Pixel colors in RGB images"
+      ],
+      "answer": "A",
+      "explanation": "Slide 19: ASCII maps characters to numeric codes and is used for letters, digits, symbols and control characters.",
+      "source": {
+        "page": 28
+      }
+    },
+    {
+      "id": "t3-mcq-056",
+      "type": "mcq",
+      "prompt": "Which code was designed to represent characters from many languages?",
+      "options": [
+        "Unicode",
+        "ASCII",
+        "RGB",
+        "Binary"
+      ],
+      "answer": "A",
+      "explanation": "Slide 19: Unicode is designed to represent characters from many languages.",
+      "source": {
+        "page": 28
+      }
+    },
+    {
+      "id": "t3-tf-022",
+      "type": "tf",
+      "prompt": "The summary of text representation is: Character -> Code -> Binary Representation.",
+      "answer": true,
+      "explanation": "This is the summary on the slide.",
+      "source": {
+        "page": 29
+      }
+    },
+    {
+      "id": "t3-mcq-057",
+      "type": "mcq",
+      "prompt": "For an RGB image, color is represented using intensities of:",
+      "options": [
+        "Red, Yellow, Blue",
+        "Red, Gray, Black",
+        "Black and White only",
+        "Red, Green, Blue"
+      ],
+      "answer": "D",
+      "explanation": "Slide 20: for an RGB image, color is represented using Red, Green and Blue.",
+      "source": {
+        "page": 31
+      }
+    },
+    {
+      "id": "t3-mcq-058",
+      "type": "mcq",
+      "prompt": "In RGB, which color is (0, 0, 0)?",
+      "options": [
+        "White",
+        "Red",
+        "Black",
+        "Blue"
+      ],
+      "answer": "C",
+      "explanation": "Slide 20: Black -> (0, 0, 0).",
+      "source": {
+        "page": 31
+      }
+    },
+    {
+      "id": "t3-mcq-059",
+      "type": "mcq",
+      "prompt": "Convert from decimal to binary: 255",
+      "options": [
+        "100000000",
+        "11111111",
+        "11111110",
+        "1111111"
+      ],
+      "answer": "B",
+      "explanation": "255 ÷ 2 = 127 r 1, 127 ÷ 2 = 63 r 1, 63 ÷ 2 = 31 r 1, 31 ÷ 2 = 15 r 1, 15 ÷ 2 = 7 r 1, 7 ÷ 2 = 3 r 1, 3 ÷ 2 = 1 r 1, 1 ÷ 2 = 0 r 1; read the remainders from bottom to top: 11111111.",
+      "source": {
+        "page": 13
+      }
+    },
+    {
+      "id": "t3-tf-023",
+      "type": "tf",
+      "prompt": "More pixels give more image detail and more data.",
+      "answer": true,
+      "explanation": "Slide 20, resolution matters: more pixels -> more image detail -> more data.",
+      "source": {
+        "page": 31
+      }
+    },
+    {
+      "id": "t3-match-005",
+      "type": "matching",
+      "title": "Match each RGB value with its color",
+      "pairs": [
+        {
+          "left": "(255, 0, 0)",
+          "right": "Red"
+        },
+        {
+          "left": "(0, 0, 0)",
+          "right": "Black"
+        },
+        {
+          "left": "(255, 255, 255)",
+          "right": "White"
+        },
+        {
+          "left": "(255, 0, 255)",
+          "right": "Magenta"
+        }
+      ],
+      "source": {
+        "page": 31
+      }
+    },
+    {
+      "id": "t3-mcq-060",
+      "type": "mcq",
+      "prompt": "Sampling rate means:",
+      "options": [
+        "How many bits represent each sample",
+        "How much data is removed by compression",
+        "How many pixels are in an image",
+        "How many samples are taken per second"
+      ],
+      "answer": "D",
+      "explanation": "Slide 21: Sampling Rate -> how many samples are taken per second.",
+      "source": {
+        "page": 32
+      }
+    },
+    {
+      "id": "t3-mcq-061",
+      "type": "mcq",
+      "prompt": "Bit depth means:",
+      "options": [
+        "How many samples are taken per second",
+        "The number of colors in a pixel",
+        "How many bits are used to represent each sample",
+        "The number of inputs of a gate"
+      ],
+      "answer": "C",
+      "explanation": "Slide 21: Bit Depth -> how many bits are used to represent each sample.",
+      "source": {
+        "page": 32
+      }
+    },
+    {
+      "id": "t3-mcq-062",
+      "type": "mcq",
+      "prompt": "Which should represent the original sound more closely over the same period?",
+      "options": [
+        "Taking 100 samples",
+        "Taking 10 samples",
+        "Taking 1 sample",
+        "Both are equally accurate"
+      ],
+      "answer": "A",
+      "explanation": "More samples / more bits -> more data and potentially more accurate representation.",
+      "source": {
+        "page": 33
+      }
+    },
+    {
+      "id": "t3-mcq-063",
+      "type": "mcq",
+      "prompt": "In which type of compression is no information permanently lost?",
+      "options": [
+        "Lossy compression",
+        "Lossless compression",
+        "Sampling",
+        "Overflow"
+      ],
+      "answer": "B",
+      "explanation": "Slide 22: lossless compression - no information is permanently lost.",
+      "source": {
+        "page": 34
+      }
+    },
+    {
+      "id": "t3-mcq-064",
+      "type": "mcq",
+      "prompt": "Which type of compression removes some information to reduce the size further?",
+      "options": [
+        "Lossy compression",
+        "Lossless compression",
+        "Two's complement",
+        "Unicode"
+      ],
+      "answer": "A",
+      "explanation": "Slide 22: lossy compression - some information is removed to reduce the size further.",
+      "source": {
+        "page": 34
+      }
+    },
+    {
+      "id": "t3-match-006",
+      "type": "matching",
+      "title": "Match each term with its meaning",
+      "pairs": [
+        {
+          "left": "Sampling rate",
+          "right": "How many samples are taken per second"
+        },
+        {
+          "left": "Bit depth",
+          "right": "How many bits are used to represent each sample"
+        },
+        {
+          "left": "Lossless compression",
+          "right": "No information is permanently lost"
+        },
+        {
+          "left": "Lossy compression",
+          "right": "Some information is removed to reduce size further"
+        },
+        {
+          "left": "Pixel",
+          "right": "Picture element that stores color information"
+        }
+      ],
+      "source": {
+        "page": 34
+      }
+    },
+    {
+      "id": "t3-mcq-065",
+      "type": "mcq",
+      "prompt": "In Boolean logic, 1 represents:",
+      "options": [
+        "False",
+        "OFF",
+        "True",
+        "Unknown"
+      ],
+      "answer": "C",
+      "explanation": "Slide 23: True -> 1, False -> 0.",
+      "source": {
+        "page": 37
+      }
+    },
+    {
+      "id": "t3-mcq-066",
+      "type": "mcq",
+      "prompt": "A statement that can be evaluated as True or False is called a:",
+      "options": [
+        "Character code",
+        "Truth table",
+        "Boolean expression",
+        "Logic gate"
+      ],
+      "answer": "C",
+      "explanation": "Slide 24: a statement that can be evaluated as True or False is called a Boolean expression.",
+      "source": {
+        "page": 38
+      }
+    },
+    {
+      "id": "t3-mcq-067",
+      "type": "mcq",
+      "prompt": "What is the value of the Boolean expression 10 == 7?",
+      "options": [
+        "10",
+        "Not a Boolean expression",
+        "True",
+        "False"
+      ],
+      "answer": "D",
+      "explanation": "Slide 24: 10 == 7 -> False.",
+      "source": {
+        "page": 38
+      }
+    },
+    {
+      "id": "t3-mcq-068",
+      "type": "mcq",
+      "prompt": "Which operation gives TRUE only when both inputs are TRUE?",
+      "options": [
+        "None of them",
+        "NOT",
+        "AND",
+        "OR"
+      ],
+      "answer": "C",
+      "explanation": "Slide 25: AND - the result is True only when BOTH inputs are True.",
+      "source": {
+        "page": 39
+      }
+    },
+    {
+      "id": "t3-mcq-069",
+      "type": "mcq",
+      "prompt": "Which operation gives TRUE when at least one input is TRUE?",
+      "options": [
+        "AND",
+        "OR",
+        "NOT",
+        "None of them"
+      ],
+      "answer": "B",
+      "explanation": "Slide 25: OR - the result is True when AT LEAST ONE input is True.",
+      "source": {
+        "page": 39
+      }
+    },
+    {
+      "id": "t3-mcq-070",
+      "type": "mcq",
+      "prompt": "Which operator reverses the Boolean value?",
+      "options": [
+        "NOT",
+        "OR",
+        "AND",
+        "XOR"
+      ],
+      "answer": "A",
+      "explanation": "Slide 25: NOT reverses the Boolean value.",
+      "source": {
+        "page": 39
+      }
+    },
+    {
+      "id": "t3-mcq-071",
+      "type": "mcq",
+      "prompt": "\"Correct username ___ correct password -> Access granted\". Which operator fits?",
+      "options": [
+        "Either AND or OR",
+        "AND",
+        "NOT",
+        "OR"
+      ],
+      "answer": "B",
+      "explanation": "Slide 25: both conditions must be true, so AND is used.",
+      "source": {
+        "page": 39
+      }
+    },
+    {
+      "id": "t3-match-007",
+      "type": "matching",
+      "title": "Match each Boolean operator with its symbol in the slides",
+      "pairs": [
+        {
+          "left": "AND",
+          "right": "• (dot)"
+        },
+        {
+          "left": "OR",
+          "right": "+ (plus)"
+        },
+        {
+          "left": "NOT",
+          "right": "~ (tilde)"
+        }
+      ],
+      "source": {
+        "page": 39
+      }
+    },
+    {
+      "id": "t3-tf-024",
+      "type": "tf",
+      "prompt": "NOT False -> True.",
+      "answer": true,
+      "explanation": "Slide 25: NOT True -> False and NOT False -> True.",
+      "source": {
+        "page": 39
+      }
+    },
+    {
+      "id": "t3-mcq-072",
+      "type": "mcq",
+      "prompt": "A truth table shows:",
+      "options": [
+        "Only the input combinations that give 1",
+        "The binary code of each character",
+        "The place value of each bit",
+        "The output for every possible combination of inputs"
+      ],
+      "answer": "D",
+      "explanation": "Slide 26: a truth table shows the output for every possible combination of inputs.",
+      "source": {
+        "page": 40
+      }
+    },
+    {
+      "id": "t3-mcq-073",
+      "type": "mcq",
+      "prompt": "With 2 Boolean inputs, how many possible input combinations are there?",
+      "options": [
+        "2",
+        "4",
+        "3",
+        "8"
+      ],
+      "answer": "B",
+      "explanation": "Slide 26 exam tip: with 2 Boolean inputs, there are 4 possible input combinations.",
+      "source": {
+        "page": 40
+      }
+    },
+    {
+      "id": "t3-mcq-074",
+      "type": "mcq",
+      "prompt": "The truth table of (A AND B) OR C has how many rows of input combinations?",
+      "options": [
+        "6",
+        "3",
+        "8",
+        "4"
+      ],
+      "answer": "C",
+      "explanation": "There are 3 inputs (A, B, C); each new input doubles the rows: 2 x 2 x 2 = 8.",
+      "source": {
+        "page": 41
+      }
+    },
+    {
+      "id": "t3-mcq-075",
+      "type": "mcq",
+      "prompt": "Construct the truth table for Y = (a + b) • (~a + ~b): the intermediate column a + b for ab = 00, 01, 10, 11 is:",
+      "options": [
+        "0, 1, 1, 1",
+        "0, 0, 0, 1",
+        "1, 0, 0, 0",
+        "0, 1, 1, 0"
+      ],
+      "answer": "A",
+      "explanation": "Row by row for ab = 00, 01, 10, 11 (• = AND, + = OR, ~ = NOT): a + b = 0, 1, 1, 1.",
+      "source": {
+        "page": 41
+      }
+    },
+    {
+      "id": "t3-mcq-076",
+      "type": "mcq",
+      "prompt": "Construct the truth table for Y = (a + b) • (~a + ~b): the intermediate column ~a + ~b for ab = 00, 01, 10, 11 is:",
+      "options": [
+        "0, 0, 0, 1",
+        "0, 1, 1, 1",
+        "1, 0, 0, 0",
+        "1, 1, 1, 0"
+      ],
+      "answer": "D",
+      "explanation": "Row by row for ab = 00, 01, 10, 11 (• = AND, + = OR, ~ = NOT): ~a = 1, 1, 0, 0; ~b = 1, 0, 1, 0; ~a + ~b = 1, 1, 1, 0.",
+      "source": {
+        "page": 41
+      }
+    },
+    {
+      "id": "t3-mcq-077",
+      "type": "mcq",
+      "prompt": "Construct the truth table for Y = (a + b) • (~a + ~b): the Y column for ab = 00, 01, 10, 11 is:",
+      "options": [
+        "1, 1, 1, 0",
+        "1, 0, 0, 1",
+        "0, 1, 1, 1",
+        "0, 1, 1, 0"
+      ],
+      "answer": "D",
+      "explanation": "Row by row for ab = 00, 01, 10, 11 (• = AND, + = OR, ~ = NOT): a + b = 0, 1, 1, 1; ~a = 1, 1, 0, 0; ~b = 1, 0, 1, 0; ~a + ~b = 1, 1, 1, 0; Y = 0, 1, 1, 0.",
+      "source": {
+        "page": 41
+      }
+    },
+    {
+      "id": "t3-mcq-078",
+      "type": "mcq",
+      "prompt": "Construct the truth table for Y = (a • b) + (~a • ~b): the intermediate column a • b for ab = 00, 01, 10, 11 is:",
+      "options": [
+        "1, 1, 1, 0",
+        "0, 1, 1, 1",
+        "0, 0, 0, 1",
+        "0, 1, 1, 0"
+      ],
+      "answer": "C",
+      "explanation": "Row by row for ab = 00, 01, 10, 11 (• = AND, + = OR, ~ = NOT): a • b = 0, 0, 0, 1.",
+      "source": {
+        "page": 41
+      }
+    },
+    {
+      "id": "t3-tf-025",
+      "type": "tf",
+      "prompt": "Construct the truth table for Y = (a • b) + (~a • ~b): the intermediate column ~a • ~b for ab = 00, 01, 10, 11 is 1, 0, 0, 0.",
+      "answer": true,
+      "explanation": "Row by row for ab = 00, 01, 10, 11 (• = AND, + = OR, ~ = NOT): ~a = 1, 1, 0, 0; ~b = 1, 0, 1, 0; ~a • ~b = 1, 0, 0, 0.",
+      "source": {
+        "page": 41
+      }
+    },
+    {
+      "id": "t3-mcq-079",
+      "type": "mcq",
+      "prompt": "Construct the truth table for Y = (a • b) + (~a • ~b): the Y column for ab = 00, 01, 10, 11 is:",
+      "options": [
+        "0, 1, 1, 1",
+        "1, 0, 0, 1",
+        "0, 1, 1, 0",
+        "0, 0, 0, 1"
+      ],
+      "answer": "B",
+      "explanation": "Row by row for ab = 00, 01, 10, 11 (• = AND, + = OR, ~ = NOT): a • b = 0, 0, 0, 1; ~a • ~b = 1, 0, 0, 0; Y = 1, 0, 0, 1.",
+      "source": {
+        "page": 41
+      }
+    },
+    {
+      "id": "t3-mcq-080",
+      "type": "mcq",
+      "prompt": "Construct the truth table for Y = (a + ~b) • ~a: the intermediate column a + ~b for ab = 00, 01, 10, 11 is:",
+      "options": [
+        "1, 0, 1, 1",
+        "0, 1, 0, 0",
+        "1, 1, 0, 1",
+        "0, 0, 1, 0"
+      ],
+      "answer": "A",
+      "explanation": "Row by row for ab = 00, 01, 10, 11 (• = AND, + = OR, ~ = NOT): ~b = 1, 0, 1, 0; a + ~b = 1, 0, 1, 1.",
+      "source": {
+        "page": 41
+      }
+    },
+    {
+      "id": "t3-mcq-081",
+      "type": "mcq",
+      "prompt": "Construct the truth table for Y = (a + ~b) • ~a: the Y column for ab = 00, 01, 10, 11 is:",
+      "options": [
+        "1, 0, 0, 0",
+        "0, 1, 1, 1",
+        "1, 1, 1, 1",
+        "0, 0, 0, 1"
+      ],
+      "answer": "A",
+      "explanation": "Row by row for ab = 00, 01, 10, 11 (• = AND, + = OR, ~ = NOT): ~b = 1, 0, 1, 0; a + ~b = 1, 0, 1, 1; ~a = 1, 1, 0, 0; Y = 1, 0, 0, 0.",
+      "source": {
+        "page": 41
+      }
+    },
+    {
+      "id": "t3-mcq-082",
+      "type": "mcq",
+      "prompt": "Construct the truth table for Y = (a • ~b) + (~a • b): the intermediate column a • ~b for ab = 00, 01, 10, 11 is:",
+      "options": [
+        "1, 1, 0, 1",
+        "0, 1, 0, 0",
+        "0, 0, 1, 0",
+        "1, 0, 1, 1"
+      ],
+      "answer": "C",
+      "explanation": "Row by row for ab = 00, 01, 10, 11 (• = AND, + = OR, ~ = NOT): ~b = 1, 0, 1, 0; a • ~b = 0, 0, 1, 0.",
+      "source": {
+        "page": 41
+      }
+    },
+    {
+      "id": "t3-mcq-083",
+      "type": "mcq",
+      "prompt": "Construct the truth table for Y = (a • ~b) + (~a • b): the Y column for ab = 00, 01, 10, 11 is:",
+      "options": [
+        "0, 1, 1, 0",
+        "0, 0, 0, 1",
+        "0, 1, 1, 1",
+        "1, 0, 0, 1"
+      ],
+      "answer": "A",
+      "explanation": "Row by row for ab = 00, 01, 10, 11 (• = AND, + = OR, ~ = NOT): a • ~b = 0, 0, 1, 0; ~a • b = 0, 1, 0, 0; Y = 0, 1, 1, 0.",
+      "source": {
+        "page": 41
+      }
+    },
+    {
+      "id": "t3-tf-026",
+      "type": "tf",
+      "prompt": "Construct the truth table for Y = (a + b) • ~(a • b): the Y column for ab = 00, 01, 10, 11 is 0, 1, 1, 0.",
+      "answer": true,
+      "explanation": "Row by row for ab = 00, 01, 10, 11 (• = AND, + = OR, ~ = NOT): a + b = 0, 1, 1, 1; a • b = 0, 0, 0, 1; ~(a • b) = 1, 1, 1, 0; Y = 0, 1, 1, 0.",
+      "source": {
+        "page": 41
+      }
+    },
+    {
+      "id": "t3-mcq-084",
+      "type": "mcq",
+      "prompt": "Construct the truth table for Y = (~a + b) • (a + ~b): the intermediate column ~a + b for ab = 00, 01, 10, 11 is:",
+      "options": [
+        "0, 1, 0, 0",
+        "1, 1, 0, 1",
+        "1, 0, 1, 1",
+        "0, 0, 1, 0"
+      ],
+      "answer": "B",
+      "explanation": "Row by row for ab = 00, 01, 10, 11 (• = AND, + = OR, ~ = NOT): ~a = 1, 1, 0, 0; ~a + b = 1, 1, 0, 1.",
+      "source": {
+        "page": 41
+      }
+    },
+    {
+      "id": "t3-tf-027",
+      "type": "tf",
+      "prompt": "Construct the truth table for Y = (~a + b) • (a + ~b): the intermediate column a + ~b for ab = 00, 01, 10, 11 is 0, 0, 1, 0.",
+      "answer": false,
+      "explanation": "Row by row for ab = 00, 01, 10, 11 (• = AND, + = OR, ~ = NOT): ~b = 1, 0, 1, 0; a + ~b = 1, 0, 1, 1. So it is 1, 0, 1, 1, not 0, 0, 1, 0.",
+      "source": {
+        "page": 41
+      }
+    },
+    {
+      "id": "t3-mcq-085",
+      "type": "mcq",
+      "prompt": "Construct the truth table for Y = (~a + b) • (a + ~b): the Y column for ab = 00, 01, 10, 11 is:",
+      "options": [
+        "0, 1, 1, 0",
+        "0, 0, 0, 1",
+        "1, 0, 0, 1",
+        "1, 1, 1, 1"
+      ],
+      "answer": "C",
+      "explanation": "Row by row for ab = 00, 01, 10, 11 (• = AND, + = OR, ~ = NOT): ~a + b = 1, 1, 0, 1; a + ~b = 1, 0, 1, 1; Y = 1, 0, 0, 1.",
+      "source": {
+        "page": 41
+      }
+    },
+    {
+      "id": "t3-tf-028",
+      "type": "tf",
+      "prompt": "Construct the truth table for Y = ~(a • b): the Y column for ab = 00, 01, 10, 11 is 0, 0, 0, 1.",
+      "answer": false,
+      "explanation": "Row by row for ab = 00, 01, 10, 11 (• = AND, + = OR, ~ = NOT): a • b = 0, 0, 0, 1; Y = 1, 1, 1, 0. So it is 1, 1, 1, 0, not 0, 0, 0, 1.",
+      "source": {
+        "page": 41
+      }
+    },
+    {
+      "id": "t3-mcq-086",
+      "type": "mcq",
+      "prompt": "Construct the truth table for (A AND B) OR C: the output column for ABC = 000, 001, 010, 011, 100, 101, 110, 111 (top to bottom) is:",
+      "options": [
+        "00000011",
+        "01010111",
+        "00000111",
+        "00010101"
+      ],
+      "answer": "B",
+      "explanation": "Compute A AND B first, then OR it with C: the output is 1 whenever C = 1 or A = B = 1, giving 01010111.",
+      "source": {
+        "page": 41
+      }
+    },
+    {
+      "id": "t3-mcq-087",
+      "type": "mcq",
+      "prompt": "Construct the truth table for A AND (B OR C): the output column for ABC = 000, 001, 010, 011, 100, 101, 110, 111 (top to bottom) is:",
+      "options": [
+        "00000111",
+        "01010111",
+        "00011111",
+        "01110111"
+      ],
+      "answer": "A",
+      "explanation": "Compute B OR C first, then AND it with A: only rows 101, 110, 111 give 1, so 00000111.",
+      "source": {
+        "page": 41
+      }
+    },
+    {
+      "id": "t3-mcq-088",
+      "type": "mcq",
+      "prompt": "Boolean operations can be implemented physically using electronic components called:",
+      "options": [
+        "Samples",
+        "Logic gates",
+        "Registers",
+        "Pixels"
+      ],
+      "answer": "B",
+      "explanation": "Slide 28: Boolean operations can be implemented physically using electronic components called logic gates.",
+      "source": {
+        "page": 42
+      }
+    },
+    {
+      "id": "t3-match-008",
+      "type": "matching",
+      "title": "Match each logic gate with the output expression written on it in the slides",
+      "pairs": [
+        {
+          "left": "AND gate",
+          "right": "a • b"
+        },
+        {
+          "left": "OR gate",
+          "right": "a + b"
+        },
+        {
+          "left": "NOT gate",
+          "right": "ā (a with a bar over it, i.e. NOT a)"
+        }
+      ],
+      "source": {
+        "page": 42
+      }
+    },
+    {
+      "id": "t3-mcq-089",
+      "type": "mcq",
+      "prompt": "For an OR gate, which input pair gives output 0?",
+      "options": [
+        "1 OR 0",
+        "0 OR 0",
+        "1 OR 1",
+        "0 OR 1"
+      ],
+      "answer": "B",
+      "explanation": "Slide 29: 0 OR 0 -> 0; all other combinations give 1.",
+      "source": {
+        "page": 43
+      }
+    },
+    {
+      "id": "t3-tf-029",
+      "type": "tf",
+      "prompt": "1 AND 0 -> 1.",
+      "answer": false,
+      "explanation": "Slide 29: 1 AND 0 -> 0; AND gives 1 only when both inputs are 1.",
+      "source": {
+        "page": 43
+      }
+    },
+    {
+      "id": "t3-mcq-090",
+      "type": "mcq",
+      "prompt": "For the circuit (NOT A) OR B, i.e. ~A + B, find the output of the first gate and the final output when A = 1, B = 0.",
+      "options": [
+        "NOT A = 0, final output = 0",
+        "NOT A = 1, final output = 0",
+        "NOT A = 1, final output = 1",
+        "NOT A = 0, final output = 1"
+      ],
+      "answer": "A",
+      "explanation": "NOT 1 -> 0; then 0 OR 0 -> 0.",
+      "source": {
+        "page": 46
+      }
+    },
+    {
+      "id": "t3-mcq-091",
+      "type": "mcq",
+      "prompt": "For the circuit (A AND B) OR C, find the output of the first gate and the final output when A = 1, B = 1, C = 0.",
+      "options": [
+        "A AND B = 0, final output = 1",
+        "A AND B = 1, final output = 0",
+        "A AND B = 1, final output = 1",
+        "A AND B = 0, final output = 0"
+      ],
+      "answer": "C",
+      "explanation": "Step 1: 1 AND 1 -> 1. Step 2: 1 OR 0 -> 1. Final output = 1.",
+      "source": {
+        "page": 46
+      }
+    },
+    {
+      "id": "t3-mcq-092",
+      "type": "mcq",
+      "prompt": "For the circuit (A AND B) OR C, find the output of the first gate and the final output when A = 1, B = 0, C = 1.",
+      "options": [
+        "A AND B = 0, final output = 1",
+        "A AND B = 1, final output = 1",
+        "A AND B = 0, final output = 0",
+        "A AND B = 1, final output = 0"
+      ],
+      "answer": "A",
+      "explanation": "Step 1: 1 AND 0 -> 0. Step 2: 0 OR 1 -> 1. Final output = 1.",
+      "source": {
+        "page": 46
+      }
+    },
+    {
+      "id": "t3-mcq-093",
+      "type": "mcq",
+      "prompt": "For the circuit (A AND B) OR C, find the output of the first gate and the final output when A = 0, B = 1, C = 0.",
+      "options": [
+        "A AND B = 0, final output = 0",
+        "A AND B = 1, final output = 1",
+        "A AND B = 1, final output = 0",
+        "A AND B = 0, final output = 1"
+      ],
+      "answer": "A",
+      "explanation": "Step 1: 0 AND 1 -> 0. Step 2: 0 OR 0 -> 0. Final output = 0.",
+      "source": {
+        "page": 46
+      }
+    },
+    {
+      "id": "t3-mcq-094",
+      "type": "mcq",
+      "prompt": "For the circuit A AND (B OR C), find the output of the first gate and the final output when A = 1, B = 0, C = 1.",
+      "options": [
+        "B OR C = 0, final output = 0",
+        "B OR C = 1, final output = 1",
+        "B OR C = 0, final output = 1",
+        "B OR C = 1, final output = 0"
+      ],
+      "answer": "B",
+      "explanation": "Step 1: 0 OR 1 -> 1. Step 2: 1 AND 1 -> 1. Final output = 1.",
+      "source": {
+        "page": 46
+      }
+    },
+    {
+      "id": "t3-mcq-095",
+      "type": "mcq",
+      "prompt": "For the circuit A AND (B OR C), find the output of the first gate and the final output when A = 0, B = 1, C = 1.",
+      "options": [
+        "B OR C = 1, final output = 1",
+        "B OR C = 0, final output = 1",
+        "B OR C = 0, final output = 0",
+        "B OR C = 1, final output = 0"
+      ],
+      "answer": "D",
+      "explanation": "Step 1: 1 OR 1 -> 1. Step 2: 0 AND 1 -> 0. Final output = 0.",
+      "source": {
+        "page": 46
+      }
+    },
+    {
+      "id": "t3-tf-030",
+      "type": "tf",
+      "prompt": "For the circuit (A AND B) OR C with A = 1, B = 0, C = 0, the final output is 1.",
+      "answer": false,
+      "explanation": "Step 1: 1 AND 0 -> 0. Step 2: 0 OR 0 -> 0. The final output is 0, not 1.",
+      "source": {
+        "page": 46
+      }
+    },
+    {
+      "id": "t3-mcq-096",
+      "type": "mcq",
+      "prompt": "To analyze the circuit (A AND B) OR C, what is the correct order of steps?",
+      "options": [
+        "Find the AND output, send it to the OR gate, determine the final output",
+        "Apply NOT to every input, then use OR",
+        "Find the output first, then guess the inputs",
+        "Find the OR output, send it to the AND gate, determine the final output"
+      ],
+      "answer": "A",
+      "explanation": "Slide 30: Step 1 find the output of the AND gate; Step 2 send that result to the OR gate; Step 3 determine the final output.",
+      "source": {
+        "page": 46
+      }
+    },
+    {
+      "id": "t3-match-009",
+      "type": "matching",
+      "title": "Match each circuit with what it does",
+      "pairs": [
+        {
+          "left": "Adder",
+          "right": "Adds binary numbers"
+        },
+        {
+          "left": "Comparator",
+          "right": "Compares two binary values"
+        },
+        {
+          "left": "Multiplexer (MUX)",
+          "right": "Selects one input from several inputs"
+        },
+        {
+          "left": "Decoder",
+          "right": "Activates/selects an output based on a binary input"
+        }
+      ],
+      "source": {
+        "page": 49
+      }
+    },
+    {
+      "id": "t3-tf-031",
+      "type": "tf",
+      "prompt": "AND, OR, and NOT gates are simple building blocks that can be combined to create more useful circuits.",
+      "answer": true,
+      "explanation": "Slide 31: by combining gates, computers create more useful circuits.",
+      "source": {
+        "page": 49
+      }
+    },
+    {
+      "id": "t3-mcq-097",
+      "type": "mcq",
+      "prompt": "In the decoder example, the operation code 10 activates which circuit?",
+      "options": [
+        "Subtract circuit",
+        "Multiply circuit",
+        "Add circuit",
+        "Divide circuit"
+      ],
+      "answer": "B",
+      "explanation": "Figure 4.37: 00 = add, 01 = subtract, 10 = multiply, 11 = divide.",
+      "source": {
+        "page": 50
+      }
+    },
+    {
+      "id": "t3-mcq-098",
+      "type": "mcq",
+      "prompt": "A decoder circuit is used to:",
+      "options": [
+        "Compare two binary values",
+        "Add two binary numbers",
+        "Choose one data value from a set of registers based on a selector pattern",
+        "Select a single arithmetic instruction, given a code for that instruction"
+      ],
+      "answer": "D",
+      "explanation": "Decoder circuit uses: to select a single arithmetic instruction given a code; the code activates one output line.",
+      "source": {
+        "page": 50
+      }
+    },
+    {
+      "id": "t3-tf-032",
+      "type": "tf",
+      "prompt": "A decoder chooses one data value from a set of registers based on a selector pattern.",
+      "answer": false,
+      "explanation": "That is a multiplexer; a decoder uses a code to activate one output line (for example, to select an arithmetic circuit).",
+      "source": {
+        "page": 50
+      }
+    },
+    {
+      "id": "t3-mcq-099",
+      "type": "mcq",
+      "prompt": "In a multiplexer circuit:",
+      "options": [
+        "Two binary values are compared",
+        "One code activates one of many output lines",
+        "Many data values flow in, and only the selected one comes out",
+        "All inputs come out together"
+      ],
+      "answer": "C",
+      "explanation": "Multiplexer circuit uses: many data values flow into the multiplexer, only the selected one comes out.",
+      "source": {
+        "page": 51
+      }
+    }
+  ]
+}
