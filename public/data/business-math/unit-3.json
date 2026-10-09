@@ -1,0 +1,1555 @@
+{
+  "schemaVersion": 1,
+  "course": {
+    "id": "business-math",
+    "titleAr": "رياضيات الأعمال",
+    "titleEn": "Business Mathematics"
+  },
+  "topic": {
+    "id": "unit-3",
+    "number": 3,
+    "title": "المصفوفات"
+  },
+  "questions": [
+    {
+      "id": "u3-mcq-001",
+      "type": "mcq",
+      "prompt": "إذا كانت \\(A = \\begin{bmatrix} 8 & -2 & 5 & 6 \\\\ -1 & 3 & -3 & 6 \\\\ 7 & -8 & 1 & 4 \\end{bmatrix}\\) فإن العنصر \\(a_{21}\\) يساوي:",
+      "options": [
+        "\\(-2\\)",
+        "\\(3\\)",
+        "\\(-1\\)",
+        "\\(7\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(a_{21}\\) هو العنصر في الصف الثاني والعمود الأول وهو \\(-1\\). (العدد \\(-2\\) هو \\(a_{12}\\) وليس \\(a_{21}\\)).",
+      "source": {
+        "page": 60
+      }
+    },
+    {
+      "id": "u3-mcq-002",
+      "type": "mcq",
+      "prompt": "إذا كانت \\(B = \\begin{bmatrix} 4 & 9 & -2 \\\\ 0 & 7 & 5 \\end{bmatrix}\\) فإن \\(b_{23} + b_{12}\\) يساوي:",
+      "options": [
+        "\\(14\\)",
+        "\\(7\\)",
+        "\\(5\\)",
+        "\\(9\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\(b_{23}=5\\) (الصف 2، العمود 3) و \\(b_{12}=9\\) (الصف 1، العمود 2)، إذن المجموع \\(5+9=14\\).",
+      "source": {
+        "page": 60
+      }
+    },
+    {
+      "id": "u3-mcq-003",
+      "type": "mcq",
+      "prompt": "مرتبة المصفوفة \\(B = \\begin{bmatrix} 4 & 7 \\\\ 3 & 6 \\\\ 2 & 4 \\end{bmatrix}\\) هي:",
+      "options": [
+        "\\(2 \\times 3\\)",
+        "\\(3 \\times 2\\)",
+        "\\(3 \\times 3\\)",
+        "\\(6\\)"
+      ],
+      "answer": "B",
+      "explanation": "المصفوفة B فيها ثلاثة صفوف وعمودان، فمرتبتها (3x2)، أما العدد 6 فهو سعتها (عدد عناصرها).",
+      "source": {
+        "page": 61
+      }
+    },
+    {
+      "id": "u3-mcq-004",
+      "type": "mcq",
+      "prompt": "عدد عناصر (سعة) المصفوفة \\(B = \\begin{bmatrix} 4 & 7 \\\\ 3 & 6 \\\\ 2 & 4 \\end{bmatrix}\\) هو:",
+      "options": [
+        "\\(5\\)",
+        "\\(3\\)",
+        "\\(6\\)",
+        "\\(2\\)"
+      ],
+      "answer": "C",
+      "explanation": "السعة = عدد الصفوف × عدد الأعمدة \\(= 3 \\times 2 = 6\\) عناصر.",
+      "source": {
+        "page": 61
+      }
+    },
+    {
+      "id": "u3-mcq-005",
+      "type": "mcq",
+      "prompt": "مصفوفة مرتبتها \\(4 \\times 5\\)، فإن عدد عناصرها (سعتها) يساوي:",
+      "options": [
+        "\\(9\\)",
+        "\\(4\\)",
+        "\\(5\\)",
+        "\\(20\\)"
+      ],
+      "answer": "D",
+      "explanation": "السعة = عدد الصفوف × عدد الأعمدة \\(= 4 \\times 5 = 20\\) عنصراً.",
+      "source": {
+        "page": 61
+      }
+    },
+    {
+      "id": "u3-mcq-006",
+      "type": "mcq",
+      "prompt": "إذا كانت \\(A = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}\\) و \\(B = \\begin{bmatrix} 5 & 2 \\\\ 3 & 4 \\end{bmatrix}\\) فإن:",
+      "options": [
+        "\\(A = B\\) لأنهما من نفس المرتبة",
+        "\\(A \\neq B\\) لأن \\(a_{11} \\neq b_{11}\\)",
+        "\\(A \\neq B\\) لاختلاف المرتبة",
+        "\\(A = B\\) لأن معظم العناصر المتناظرة متساوية"
+      ],
+      "answer": "B",
+      "explanation": "المصفوفتان من نفس المرتبة لكن \\(a_{11}=1 \\neq b_{11}=5\\)، فهما غير متساويتين.",
+      "source": {
+        "page": 64
+      }
+    },
+    {
+      "id": "u3-mcq-007",
+      "type": "mcq",
+      "prompt": "إذا كانت \\(A = \\begin{bmatrix} 1 & 3 & 3 \\\\ 4 & 5 & 2 \\\\ 3 & 0 & Y \\end{bmatrix}\\) و \\(B = \\begin{bmatrix} 1 & X & 3 \\\\ 4 & 5 & Z \\\\ 3 & 0 & 9 \\end{bmatrix}\\) وكانت المصفوفتان متساويتين فإن قيم المجاهيل هي:",
+      "options": [
+        "\\(X=2,\\ Y=9,\\ Z=3\\)",
+        "\\(X=3,\\ Y=2,\\ Z=9\\)",
+        "\\(X=9,\\ Y=3,\\ Z=2\\)",
+        "\\(X=3,\\ Y=9,\\ Z=2\\)"
+      ],
+      "answer": "D",
+      "explanation": "من تساوي العناصر المتناظرة: \\(X = a_{12} = 3\\)، \\(Z = a_{23} = 2\\)، \\(Y = b_{33} = 9\\).",
+      "source": {
+        "page": 65
+      }
+    },
+    {
+      "id": "u3-mcq-008",
+      "type": "mcq",
+      "prompt": "إذا كانت \\(A = \\begin{bmatrix} 1 & 3 & 3 \\\\ 4 & 5 & 2 \\\\ 3 & 0 & Y \\end{bmatrix}\\) و \\(B = \\begin{bmatrix} 1 & X & 3 \\\\ 4 & 5 & Z \\\\ 3 & 0 & 9 \\end{bmatrix}\\) وكانت \\(A = B\\) فإن قيمة \\(X^{Z}\\) تساوي:",
+      "options": [
+        "\\(9\\)",
+        "\\(6\\)",
+        "\\(8\\)",
+        "\\(5\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\(X = 3\\) و \\(Z = 2\\)، إذن \\(X^{Z} = 3^{2} = 9\\) وهي تساوي Y.",
+      "source": {
+        "page": 65
+      }
+    },
+    {
+      "id": "u3-mcq-009",
+      "type": "mcq",
+      "prompt": "إذا كانت \\(A = \\begin{bmatrix} 2X-1 & 4 \\\\ 0 & 6 \\end{bmatrix}\\) و \\(B = \\begin{bmatrix} 7 & 4 \\\\ 0 & 6 \\end{bmatrix}\\) وكانت \\(A = B\\) فإن قيمة X تساوي:",
+      "options": [
+        "\\(3\\)",
+        "\\(4\\)",
+        "\\(3.5\\)",
+        "\\(8\\)"
+      ],
+      "answer": "B",
+      "explanation": "من تساوي العنصرين المتناظرين: \\(2X - 1 = 7 \\Rightarrow 2X = 8 \\Rightarrow X = 4\\).",
+      "source": {
+        "page": 65
+      }
+    },
+    {
+      "id": "u3-mcq-010",
+      "type": "mcq",
+      "prompt": "إذا كانت \\(\\begin{bmatrix} X+Y & 2 \\\\ X-Y & 5 \\end{bmatrix} = \\begin{bmatrix} 8 & 2 \\\\ 2 & 5 \\end{bmatrix}\\) فإن:",
+      "options": [
+        "\\(X = 3,\\ Y = 5\\)",
+        "\\(X = 6,\\ Y = 2\\)",
+        "\\(X = 5,\\ Y = 3\\)",
+        "\\(X = 4,\\ Y = 4\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(X + Y = 8\\) و \\(X - Y = 2\\)، بالجمع: \\(2X = 10 \\Rightarrow X = 5\\)، ثم \\(Y = 3\\).",
+      "source": {
+        "page": 65
+      }
+    },
+    {
+      "id": "u3-mcq-011",
+      "type": "mcq",
+      "prompt": "إذا كانت \\(A = \\begin{bmatrix} 1 & 2 & 3 \\\\ 4 & 5 & 6 \\\\ 7 & 8 & 9 \\end{bmatrix}\\) فإن \\(A^{T}\\) يساوي:",
+      "options": [
+        "\\(\\begin{bmatrix} 9 & 8 & 7 \\\\ 6 & 5 & 4 \\\\ 3 & 2 & 1 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 1 & 4 & 7 \\\\ 2 & 5 & 8 \\\\ 3 & 6 & 9 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 7 & 8 & 9 \\\\ 4 & 5 & 6 \\\\ 1 & 2 & 3 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 3 & 2 & 1 \\\\ 6 & 5 & 4 \\\\ 9 & 8 & 7 \\end{bmatrix}\\)"
+      ],
+      "answer": "B",
+      "explanation": "نجعل الصف الأول عموداً أول وهكذا: \\(A^{T} = \\begin{bmatrix} 1 & 4 & 7 \\\\ 2 & 5 & 8 \\\\ 3 & 6 & 9 \\end{bmatrix}\\).",
+      "source": {
+        "page": 67
+      }
+    },
+    {
+      "id": "u3-mcq-012",
+      "type": "mcq",
+      "prompt": "إذا كانت \\(B = \\begin{bmatrix} 1 & 2 & 3 \\\\ 6 & 4 & 2 \\end{bmatrix}\\) فإن \\(B^{T}\\) يساوي:",
+      "options": [
+        "\\(\\begin{bmatrix} 6 & 1 \\\\ 4 & 2 \\\\ 2 & 3 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 1 & 2 \\\\ 3 & 6 \\\\ 4 & 2 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 1 & 6 \\\\ 2 & 4 \\\\ 3 & 2 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 3 & 2 & 1 \\\\ 2 & 4 & 6 \\end{bmatrix}\\)"
+      ],
+      "answer": "C",
+      "explanation": "الصف الأول (1, 2, 3) يصبح العمود الأول والصف الثاني (6, 4, 2) يصبح العمود الثاني، ومرتبة \\(B^{T}\\) هي \\((3 \\times 2)\\).",
+      "source": {
+        "page": 67
+      }
+    },
+    {
+      "id": "u3-mcq-013",
+      "type": "mcq",
+      "prompt": "إذا كانت المصفوفة A من المرتبة \\((4 \\times 2)\\) فإن مرتبة \\(A^{T}\\) هي:",
+      "options": [
+        "\\(2 \\times 4\\)",
+        "\\(4 \\times 2\\)",
+        "\\(2 \\times 2\\)",
+        "\\(4 \\times 4\\)"
+      ],
+      "answer": "A",
+      "explanation": "عدد صفوف المنقول = عدد أعمدة المصفوفة الأصلية، فمرتبة \\(A^{T}\\) هي \\((2 \\times 4)\\).",
+      "source": {
+        "page": 66
+      }
+    },
+    {
+      "id": "u3-mcq-014",
+      "type": "mcq",
+      "prompt": "المصفوفة \\(\\begin{bmatrix} 2 & 4 & 3 \\\\ 5 & 0 & 1 \\\\ 0 & 6 & 2 \\end{bmatrix}\\) مصفوفة:",
+      "options": [
+        "مربعة",
+        "صفرية",
+        "قطرية",
+        "وحدة"
+      ],
+      "answer": "A",
+      "explanation": "عدد صفوفها (3) يساوي عدد أعمدتها (3) فهي مربعة، وليست قطرية لأن عناصرها خارج القطر ليست أصفاراً.",
+      "source": {
+        "page": 68
+      }
+    },
+    {
+      "id": "u3-mcq-015",
+      "type": "mcq",
+      "prompt": "أي من المصفوفات التالية تمثل مصفوفة الوحدة \\(I_{2}\\)؟",
+      "options": [
+        "\\(\\begin{bmatrix} 0 & 1 \\\\ 1 & 0 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 1 & 1 \\\\ 1 & 1 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 0 & 0 \\\\ 0 & 0 \\end{bmatrix}\\)"
+      ],
+      "answer": "B",
+      "explanation": "مصفوفة الوحدة: عناصر القطر الرئيسي تساوي 1 وباقي العناصر أصفار.",
+      "source": {
+        "page": 69
+      }
+    },
+    {
+      "id": "u3-mcq-016",
+      "type": "mcq",
+      "prompt": "المصفوفة \\(\\begin{bmatrix} 2 & 0 & 0 \\\\ 0 & 5 & 0 \\\\ 0 & 0 & 3 \\end{bmatrix}\\) مصفوفة:",
+      "options": [
+        "عددية",
+        "وحدة",
+        "صفرية",
+        "قطرية"
+      ],
+      "answer": "D",
+      "explanation": "عناصرها خارج القطر الرئيسي أصفار فهي قطرية، وليست عددية لأن عناصر قطرها (2، 5، 3) غير متساوية.",
+      "source": {
+        "page": 70
+      }
+    },
+    {
+      "id": "u3-mcq-017",
+      "type": "mcq",
+      "prompt": "إذا كانت \\(B = \\begin{bmatrix} 2 & 0 & 0 \\\\ 0 & 5 & 0 \\\\ 0 & 0 & 3 \\end{bmatrix}\\) مصفوفة قطرية فإنها تكتب بالصورة:",
+      "options": [
+        "\\(D = \\operatorname{diag}(2 \\quad 5 \\quad 3)\\)",
+        "\\(D = \\operatorname{diag}(3 \\quad 5 \\quad 2)\\)",
+        "\\(D = \\operatorname{diag}(2 \\quad 0 \\quad 0)\\)",
+        "\\(D = \\operatorname{diag}(1 \\quad 1 \\quad 1)\\)"
+      ],
+      "answer": "A",
+      "explanation": "تكتب المصفوفة القطرية بعناصر قطرها الرئيسي بالترتيب من الأعلى: 2 ثم 5 ثم 3.",
+      "source": {
+        "page": 70
+      }
+    },
+    {
+      "id": "u3-mcq-018",
+      "type": "mcq",
+      "prompt": "المصفوفة \\(\\begin{bmatrix} 1 & 0 & 0 \\\\ -3 & 4 & 0 \\\\ 2 & -1 & 6 \\end{bmatrix}\\) مصفوفة:",
+      "options": [
+        "مثلثية عليا",
+        "مثلثية سفلى",
+        "قطرية",
+        "متماثلة"
+      ],
+      "answer": "B",
+      "explanation": "جميع العناصر الواقعة أعلى القطر الرئيسي أصفار، فهي مثلثية سفلى.",
+      "source": {
+        "page": 70
+      }
+    },
+    {
+      "id": "u3-mcq-019",
+      "type": "mcq",
+      "prompt": "المصفوفة \\(\\begin{bmatrix} 5 & 2 & 6 \\\\ 0 & -1 & 4 \\\\ 0 & 0 & 3 \\end{bmatrix}\\) مصفوفة:",
+      "options": [
+        "مثلثية سفلى",
+        "قطرية",
+        "مثلثية عليا",
+        "متماثلة"
+      ],
+      "answer": "C",
+      "explanation": "جميع العناصر الواقعة أسفل القطر الرئيسي أصفار، فهي مثلثية عليا.",
+      "source": {
+        "page": 71
+      }
+    },
+    {
+      "id": "u3-mcq-020",
+      "type": "mcq",
+      "prompt": "المصفوفة \\(\\begin{bmatrix} \\sqrt{5} & 0 & 0 \\\\ 0 & \\sqrt{5} & 0 \\\\ 0 & 0 & \\sqrt{5} \\end{bmatrix}\\) مصفوفة:",
+      "options": [
+        "وحدة",
+        "صفرية",
+        "غير مربعة",
+        "عددية"
+      ],
+      "answer": "D",
+      "explanation": "مربعة، عناصر قطرها الرئيسي متساوية \\((\\sqrt{5})\\) وما خارجه أصفار فهي عددية، وليست وحدة لأن عناصر القطر لا تساوي 1.",
+      "source": {
+        "page": 71
+      }
+    },
+    {
+      "id": "u3-mcq-021",
+      "type": "mcq",
+      "prompt": "تعد المصفوفة العددية حالة خاصة من المصفوفة:",
+      "options": [
+        "الصفرية",
+        "الوحدة",
+        "القطرية",
+        "لا شيء مما سبق"
+      ],
+      "answer": "C",
+      "explanation": "نص المقرر: «وتعد المصفوفة العددية حالة خاصة من المصفوفة القطرية».",
+      "source": {
+        "page": 71
+      }
+    },
+    {
+      "id": "u3-mcq-022",
+      "type": "mcq",
+      "prompt": "المصفوفة \\(\\begin{bmatrix} 1 & -1 & 4 \\\\ -1 & 0 & 3 \\\\ 4 & 3 & 5 \\end{bmatrix}\\) مصفوفة:",
+      "options": [
+        "قطرية",
+        "متماثلة",
+        "مثلثية عليا",
+        "وحدة"
+      ],
+      "answer": "B",
+      "explanation": "عناصر المثلث العلوي تساوي عناصر المثلث السفلي \\((a_{12}=a_{21}=-1,\\ a_{13}=a_{31}=4,\\ a_{23}=a_{32}=3)\\) أي \\(A = A^{T}\\).",
+      "source": {
+        "page": 72
+      }
+    },
+    {
+      "id": "u3-mcq-023",
+      "type": "mcq",
+      "prompt": "أي من المصفوفات التالية متماثلة؟",
+      "options": [
+        "\\(\\begin{bmatrix} 3 & 5 \\\\ -5 & 8 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 3 & 5 \\\\ 8 & 5 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 3 & 5 \\\\ 5 & 8 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 5 & 3 \\\\ 8 & 5 \\end{bmatrix}\\)"
+      ],
+      "answer": "C",
+      "explanation": "المتماثلة تحقق \\(a_{12} = a_{21}\\) أي \\(A = A^{T}\\)، وهذا يتحقق في \\(\\begin{bmatrix} 3 & 5 \\\\ 5 & 8 \\end{bmatrix}\\).",
+      "source": {
+        "page": 72
+      }
+    },
+    {
+      "id": "u3-mcq-024",
+      "type": "mcq",
+      "prompt": "إذا كانت المصفوفة \\(A = \\begin{bmatrix} 2 & X+1 \\\\ 5 & 3 \\end{bmatrix}\\) متماثلة فإن قيمة X تساوي:",
+      "options": [
+        "\\(6\\)",
+        "\\(5\\)",
+        "\\(-4\\)",
+        "\\(4\\)"
+      ],
+      "answer": "D",
+      "explanation": "المتماثلة: \\(a_{12} = a_{21} \\Rightarrow X + 1 = 5 \\Rightarrow X = 4\\).",
+      "source": {
+        "page": 72
+      }
+    },
+    {
+      "id": "u3-mcq-025",
+      "type": "mcq",
+      "prompt": "إذا كانت \\(A = \\begin{bmatrix} 3 & -2 & 5 \\\\ 4 & 1 & 6 \\\\ 2 & -1 & 1 \\end{bmatrix}\\) و \\(B = \\begin{bmatrix} 7 & -3 & 1 \\\\ 8 & -1 & 0 \\\\ 3 & 4 & 2 \\end{bmatrix}\\) فإن \\(A + B\\) يساوي:",
+      "options": [
+        "\\(\\begin{bmatrix} 10 & -5 & 6 \\\\ 12 & 0 & 6 \\\\ 5 & 3 & 3 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} -4 & 1 & 4 \\\\ -4 & 2 & 6 \\\\ -1 & -5 & -1 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 10 & 1 & 6 \\\\ 12 & 0 & 6 \\\\ 5 & 3 & 3 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 10 & -5 & 6 \\\\ 12 & -2 & 6 \\\\ 5 & 3 & 3 \\end{bmatrix}\\)"
+      ],
+      "answer": "A",
+      "explanation": "نجمع العناصر المتناظرة: \\(3+7=10,\\ -2+(-3)=-5,\\ 5+1=6\\) وهكذا.",
+      "source": {
+        "page": 73
+      }
+    },
+    {
+      "id": "u3-mcq-026",
+      "type": "mcq",
+      "prompt": "إذا كانت \\(B = \\begin{bmatrix} 7 & -3 & 1 \\\\ 8 & -1 & 0 \\\\ 3 & 4 & 2 \\end{bmatrix}\\) و \\(C = \\begin{bmatrix} 5 & 1 & -2 \\\\ 9 & 0 & -3 \\\\ 6 & 2 & -1 \\end{bmatrix}\\) فإن \\(B - C\\) يساوي:",
+      "options": [
+        "\\(\\begin{bmatrix} -2 & 4 & -3 \\\\ 1 & 1 & -3 \\\\ 3 & -2 & -3 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 2 & -4 & 3 \\\\ -1 & -1 & 3 \\\\ -3 & 2 & 3 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 12 & -2 & -1 \\\\ 17 & -1 & -3 \\\\ 9 & 6 & 1 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 2 & -4 & -1 \\\\ -1 & -1 & -3 \\\\ -3 & 2 & 1 \\end{bmatrix}\\)"
+      ],
+      "answer": "B",
+      "explanation": "نطرح العناصر المتناظرة: \\(7-5=2,\\ -3-1=-4,\\ 1-(-2)=3\\) وهكذا.",
+      "source": {
+        "page": 73
+      }
+    },
+    {
+      "id": "u3-mcq-027",
+      "type": "mcq",
+      "prompt": "إذا كانت \\(A = \\begin{bmatrix} 5 & 3 \\\\ 1 & 3 \\end{bmatrix}\\) و \\(B = \\begin{bmatrix} 6 & 4 \\\\ 2 & 3 \\end{bmatrix}\\) فإن \\(A + B\\) يساوي:",
+      "options": [
+        "\\(\\begin{bmatrix} 36 & 29 \\\\ 12 & 13 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 11 & 7 \\\\ 3 & 9 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 11 & 7 \\\\ 3 & 6 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 1 & 1 \\\\ 1 & 0 \\end{bmatrix}\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(A + B = \\begin{bmatrix} 11 & 7 \\\\ 3 & 6 \\end{bmatrix}\\) بجمع العناصر المتناظرة.",
+      "source": {
+        "page": 73
+      }
+    },
+    {
+      "id": "u3-mcq-028",
+      "type": "mcq",
+      "prompt": "إذا كانت \\(B = \\begin{bmatrix} 6 & 4 \\\\ 2 & 3 \\end{bmatrix}\\) و \\(C = \\begin{bmatrix} 3 & 1 \\\\ 1 & 2 \\\\ 5 & 4 \\end{bmatrix}\\) فإن \\(B - C\\):",
+      "options": [
+        "\\(\\begin{bmatrix} 3 & 3 \\\\ 1 & 1 \\end{bmatrix}\\)",
+        "يمكن إجراؤها لأن عدد أعمدة B يساوي عدد أعمدة C",
+        "يمكن إجراؤها لأن عدد أعمدة B يساوي عدد صفوف C",
+        "لا يمكن إجراؤها لأن المصفوفتين ليستا من نفس الترتيب"
+      ],
+      "answer": "D",
+      "explanation": "مرتبة B هي (2x2) ومرتبة C هي (3x2)، فلا يمكن الطرح لأن شرطه تساوي الترتيب.",
+      "source": {
+        "page": 73
+      }
+    },
+    {
+      "id": "u3-mcq-029",
+      "type": "mcq",
+      "prompt": "إذا كان \\(\\begin{bmatrix} X & 2 \\\\ 1 & 4 \\end{bmatrix} + \\begin{bmatrix} 3 & 1 \\\\ 2 & Y \\end{bmatrix} = \\begin{bmatrix} 7 & 3 \\\\ 3 & 6 \\end{bmatrix}\\) فإن:",
+      "options": [
+        "\\(X = 4,\\ Y = 2\\)",
+        "\\(X = 10,\\ Y = 10\\)",
+        "\\(X = 2,\\ Y = 4\\)",
+        "\\(X = -4,\\ Y = -2\\)"
+      ],
+      "answer": "A",
+      "explanation": "من تساوي العناصر المتناظرة: \\(X + 3 = 7 \\Rightarrow X = 4\\)، و \\(4 + Y = 6 \\Rightarrow Y = 2\\).",
+      "source": {
+        "page": 73
+      }
+    },
+    {
+      "id": "u3-mcq-030",
+      "type": "mcq",
+      "prompt": "إذا كانت \\(A = \\begin{bmatrix} 3 & -2 & 5 \\\\ 4 & 1 & 6 \\\\ 2 & -1 & 1 \\end{bmatrix}\\) فإن \\(3A\\) يساوي:",
+      "options": [
+        "\\(\\begin{bmatrix} 9 & -2 & 5 \\\\ 12 & 1 & 6 \\\\ 6 & -1 & 1 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 9 & -6 & 15 \\\\ 12 & 3 & 18 \\\\ 6 & -3 & 3 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 6 & 1 & 8 \\\\ 7 & 4 & 9 \\\\ 5 & 2 & 4 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 9 & 6 & 15 \\\\ 12 & 3 & 18 \\\\ 6 & 3 & 3 \\end{bmatrix}\\)"
+      ],
+      "answer": "B",
+      "explanation": "نضرب 3 في جميع عناصر A، فالصف الثالث مثلاً: \\(3 \\times 2 = 6,\\ 3 \\times (-1) = -3,\\ 3 \\times 1 = 3\\).",
+      "source": {
+        "page": 74
+      }
+    },
+    {
+      "id": "u3-mcq-031",
+      "type": "mcq",
+      "prompt": "إذا كانت \\(A = \\begin{bmatrix} 3 & -2 & 5 \\\\ 4 & 1 & 6 \\\\ 2 & -1 & 1 \\end{bmatrix}\\) و \\(B = \\begin{bmatrix} 5 & -3 & 1 \\\\ 6 & -1 & 0 \\\\ 1 & 2 & 2 \\end{bmatrix}\\) فإن الصف الأول من المصفوفة \\(3A - 2B\\) هو:",
+      "options": [
+        "\\(\\begin{bmatrix} -1 & -12 & 13 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 19 & -12 & 17 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} -1 & 0 & 13 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} -2 & 1 & 4 \\end{bmatrix}\\)"
+      ],
+      "answer": "C",
+      "explanation": "الصف الأول من \\(3A\\) هو \\((9, -6, 15)\\) ومن \\(2B\\) هو \\((10, -6, 2)\\)، والفرق: \\((9-10,\\ -6-(-6),\\ 15-2) = (-1,\\ 0,\\ 13)\\).",
+      "source": {
+        "page": 74
+      }
+    },
+    {
+      "id": "u3-mcq-032",
+      "type": "mcq",
+      "prompt": "إذا كانت \\(A = \\begin{bmatrix} -1 & 1 \\\\ 3 & 2 \\end{bmatrix}\\) و \\(B = \\begin{bmatrix} 5 & 3 \\\\ -6 & -4 \\end{bmatrix}\\) فإن \\(3A - 5B + 3I\\) يساوي:",
+      "options": [
+        "\\(\\begin{bmatrix} 19 & 18 \\\\ -21 & -17 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} -31 & -12 \\\\ 39 & 23 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} -25 & -9 \\\\ 42 & 29 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} -25 & -12 \\\\ 39 & 29 \\end{bmatrix}\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(3A = \\begin{bmatrix} -3 & 3 \\\\ 9 & 6 \\end{bmatrix}\\)، \\(5B = \\begin{bmatrix} 25 & 15 \\\\ -30 & -20 \\end{bmatrix}\\)، \\(3I = \\begin{bmatrix} 3 & 0 \\\\ 0 & 3 \\end{bmatrix}\\)، إذن \\(3A - 5B + 3I = \\begin{bmatrix} -25 & -12 \\\\ 39 & 29 \\end{bmatrix}\\).",
+      "source": {
+        "page": 75
+      }
+    },
+    {
+      "id": "u3-mcq-033",
+      "type": "mcq",
+      "prompt": "إذا كانت \\(A = \\begin{bmatrix} 1 & -3 \\\\ 0 & 4 \\end{bmatrix}\\) فإن \\(-2A\\) يساوي:",
+      "options": [
+        "\\(\\begin{bmatrix} -2 & 6 \\\\ 0 & -8 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} -2 & -6 \\\\ 0 & -8 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 2 & -6 \\\\ 0 & 8 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} -2 & -3 \\\\ 0 & 4 \\end{bmatrix}\\)"
+      ],
+      "answer": "A",
+      "explanation": "نضرب \\(-2\\) في جميع العناصر: \\(-2 \\times 1 = -2,\\ -2 \\times (-3) = 6,\\ -2 \\times 0 = 0,\\ -2 \\times 4 = -8\\).",
+      "source": {
+        "page": 74
+      }
+    },
+    {
+      "id": "u3-mcq-034",
+      "type": "mcq",
+      "prompt": "إذا كانت \\(A = \\begin{bmatrix} 2 & 1 \\\\ 0 & 3 \\end{bmatrix}\\) و \\(I\\) مصفوفة الوحدة من المرتبة الثانية فإن \\(2A + I\\) يساوي:",
+      "options": [
+        "\\(\\begin{bmatrix} 5 & 3 \\\\ 1 & 7 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 5 & 2 \\\\ 0 & 7 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 6 & 2 \\\\ 0 & 8 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 4 & 2 \\\\ 0 & 6 \\end{bmatrix}\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(2A = \\begin{bmatrix} 4 & 2 \\\\ 0 & 6 \\end{bmatrix}\\) ثم نضيف 1 لعناصر القطر الرئيسي فقط (عناصر I): \\(\\begin{bmatrix} 5 & 2 \\\\ 0 & 7 \\end{bmatrix}\\).",
+      "source": {
+        "page": 75
+      }
+    },
+    {
+      "id": "u3-mcq-035",
+      "type": "mcq",
+      "prompt": "إذا كانت A من المرتبة \\((3 \\times 2)\\) و B من المرتبة \\((2 \\times 4)\\) فإن مرتبة المصفوفة \\(AB\\) هي:",
+      "options": [
+        "\\(2 \\times 2\\)",
+        "\\(4 \\times 3\\)",
+        "\\(3 \\times 2\\)",
+        "\\(3 \\times 4\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(A_{3 \\times 2} \\times B_{2 \\times 4} = C_{3 \\times 4}\\): صفوف الأولى × أعمدة الثانية.",
+      "source": {
+        "page": 76
+      }
+    },
+    {
+      "id": "u3-mcq-036",
+      "type": "mcq",
+      "prompt": "إذا كانت A من المرتبة \\((2 \\times 3)\\) و B من المرتبة \\((3 \\times 1)\\) فأي العبارات التالية صحيحة؟",
+      "options": [
+        "يمكن إيجاد AB ومرتبتها \\((2 \\times 1)\\)، ولا يمكن إيجاد BA",
+        "يمكن إيجاد BA ومرتبتها \\((3 \\times 3)\\)، ولا يمكن إيجاد AB",
+        "يمكن إيجاد AB و BA معاً",
+        "لا يمكن إيجاد AB ولا BA"
+      ],
+      "answer": "A",
+      "explanation": "AB: أعمدة A (3) = صفوف B (3) والناتج \\((2 \\times 1)\\). BA: أعمدة B (1) ≠ صفوف A (2) فلا يمكن.",
+      "source": {
+        "page": 78
+      }
+    },
+    {
+      "id": "u3-mcq-037",
+      "type": "mcq",
+      "prompt": "إذا كانت \\(A = \\begin{bmatrix} 2 & 3 & 1 \\\\ 0 & 2 & 4 \\end{bmatrix}\\) و \\(B = \\begin{bmatrix} 1 & 4 \\\\ 5 & 0 \\\\ 3 & 2 \\end{bmatrix}\\) فإن \\(AB\\) يساوي:",
+      "options": [
+        "\\(\\begin{bmatrix} 20 & 22 \\\\ 10 & 8 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 20 & 10 \\\\ 22 & 8 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 20 & 10 \\\\ 12 & 8 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 17 & 10 \\\\ 22 & 8 \\end{bmatrix}\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(c_{11} = 2(1)+3(5)+1(3) = 20\\)، \\(c_{12} = 2(4)+3(0)+1(2) = 10\\)، \\(c_{21} = 0(1)+2(5)+4(3) = 22\\)، \\(c_{22} = 0(4)+2(0)+4(2) = 8\\).",
+      "source": {
+        "page": 77
+      }
+    },
+    {
+      "id": "u3-mcq-038",
+      "type": "mcq",
+      "prompt": "إذا كانت \\(A = \\begin{bmatrix} 2 & 3 & 1 \\\\ 0 & 2 & 4 \\end{bmatrix}\\) و \\(B = \\begin{bmatrix} 1 & 4 \\\\ 5 & 0 \\\\ 3 & 2 \\end{bmatrix}\\) فإن مرتبة المصفوفة \\(BA\\) هي:",
+      "options": [
+        "\\(2 \\times 2\\)",
+        "\\(3 \\times 2\\)",
+        "\\(3 \\times 3\\)",
+        "لا يمكن إيجاد BA"
+      ],
+      "answer": "C",
+      "explanation": "B من المرتبة \\((3 \\times 2)\\) و A من المرتبة \\((2 \\times 3)\\)، أعمدة B (2) = صفوف A (2)، فالناتج \\((3 \\times 3)\\). لاحظ أن مرتبة AB هي \\((2 \\times 2)\\) فالضرب ليس تبادلياً.",
+      "source": {
+        "page": 77
+      }
+    },
+    {
+      "id": "u3-mcq-039",
+      "type": "mcq",
+      "prompt": "إذا كانت \\(A = \\begin{bmatrix} 2 & 0 & 1 \\\\ 3 & 2 & 4 \\end{bmatrix}\\) و \\(B = \\begin{bmatrix} 2 \\\\ 1 \\\\ 3 \\end{bmatrix}\\) فإن \\(AB\\) يساوي:",
+      "options": [
+        "\\(\\begin{bmatrix} 7 & 20 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 4 & 0 & 3 \\\\ 6 & 2 & 12 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 6 \\\\ 20 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 7 \\\\ 20 \\end{bmatrix}\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\((2 \\times 2)+(0 \\times 1)+(1 \\times 3) = 7\\) و \\((3 \\times 2)+(2 \\times 1)+(4 \\times 3) = 20\\)، والناتج من المرتبة \\((2 \\times 1)\\).",
+      "source": {
+        "page": 78
+      }
+    },
+    {
+      "id": "u3-mcq-040",
+      "type": "mcq",
+      "prompt": "إذا كانت \\(A = \\begin{bmatrix} 5 & 3 \\\\ 1 & 3 \\end{bmatrix}\\) و \\(B = \\begin{bmatrix} 6 & 4 \\\\ 2 & 3 \\end{bmatrix}\\) فإن \\(AB\\) يساوي:",
+      "options": [
+        "\\(\\begin{bmatrix} 36 & 29 \\\\ 12 & 13 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 34 & 30 \\\\ 13 & 15 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 30 & 12 \\\\ 2 & 9 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 36 & 12 \\\\ 29 & 13 \\end{bmatrix}\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\(c_{11}=5(6)+3(2)=36\\)، \\(c_{12}=5(4)+3(3)=29\\)، \\(c_{21}=1(6)+3(2)=12\\)، \\(c_{22}=1(4)+3(3)=13\\). (المصفوفة \\(\\begin{bmatrix} 34 & 30 \\\\ 13 & 15 \\end{bmatrix}\\) هي BA وليست AB).",
+      "source": {
+        "page": 76
+      }
+    },
+    {
+      "id": "u3-mcq-041",
+      "type": "mcq",
+      "prompt": "إذا كانت \\(D = \\begin{bmatrix} 1 & 2 & 4 \\\\ 2 & 5 & 2 \\\\ 4 & 3 & 1 \\end{bmatrix}\\) و \\(C = \\begin{bmatrix} 3 & 1 \\\\ 1 & 2 \\\\ 5 & 4 \\end{bmatrix}\\) فإن \\(D \\times C\\) يساوي:",
+      "options": [
+        "\\(\\begin{bmatrix} 25 & 21 & 20 \\\\ 21 & 20 & 14 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 25 & 21 \\\\ 21 & 20 \\\\ 20 & 14 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 25 & 21 \\\\ 21 & 20 \\\\ 20 & 4 \\end{bmatrix}\\)",
+        "لا يمكن إيجاده"
+      ],
+      "answer": "B",
+      "explanation": "D من المرتبة \\((3 \\times 3)\\) و C من المرتبة \\((3 \\times 2)\\) فالضرب ممكن والناتج \\((3 \\times 2)\\)، مثلاً \\(c_{11} = 1(3)+2(1)+4(5) = 25\\).",
+      "source": {
+        "page": 76
+      }
+    },
+    {
+      "id": "u3-mcq-042",
+      "type": "mcq",
+      "prompt": "إذا كانت \\(C = \\begin{bmatrix} 3 & 1 \\\\ 1 & 2 \\\\ 5 & 4 \\end{bmatrix}\\) و \\(D = \\begin{bmatrix} 1 & 2 & 4 \\\\ 2 & 5 & 2 \\\\ 4 & 3 & 1 \\end{bmatrix}\\) فإن \\(C \\times D\\):",
+      "options": [
+        "يمكن إيجاده ومرتبته \\((3 \\times 2)\\)",
+        "يمكن إيجاده ومرتبته \\((3 \\times 3)\\)",
+        "لا يمكن إيجاده لأن عدد أعمدة C لا يساوي عدد صفوف D",
+        "يمكن إيجاده ومرتبته \\((2 \\times 3)\\)"
+      ],
+      "answer": "C",
+      "explanation": "C من المرتبة \\((3 \\times 2)\\) و D من المرتبة \\((3 \\times 3)\\): أعمدة C (2) ≠ صفوف D (3).",
+      "source": {
+        "page": 76
+      }
+    },
+    {
+      "id": "u3-mcq-043",
+      "type": "mcq",
+      "prompt": "إذا كانت \\(A = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}\\) و \\(B = \\begin{bmatrix} 2 & 0 \\\\ 1 & 5 \\end{bmatrix}\\) فإن العنصر \\(c_{21}\\) في المصفوفة \\(C = AB\\) يساوي:",
+      "options": [
+        "\\(6\\)",
+        "\\(16\\)",
+        "\\(20\\)",
+        "\\(10\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(c_{21}\\) = الصف الثاني من A × العمود الأول من B \\(= (3 \\times 2) + (4 \\times 1) = 10\\).",
+      "source": {
+        "page": 76
+      }
+    },
+    {
+      "id": "u3-mcq-044",
+      "type": "mcq",
+      "prompt": "إذا كانت \\(A = \\begin{bmatrix} 6 & 5 \\\\ 2 & 3 \\end{bmatrix}\\) فإن محددها \\(|A|\\) يساوي:",
+      "options": [
+        "\\(28\\)",
+        "\\(8\\)",
+        "\\(-8\\)",
+        "\\(9\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(|A| = (6 \\times 3) - (5 \\times 2) = 18 - 10 = 8\\).",
+      "source": {
+        "page": 80
+      }
+    },
+    {
+      "id": "u3-mcq-045",
+      "type": "mcq",
+      "prompt": "إذا كانت \\(A = \\begin{bmatrix} 6 & 5 \\\\ 2 & 3 \\end{bmatrix}\\) فإن \\(A^{-1}\\) يساوي:",
+      "options": [
+        "\\(\\frac{1}{8} \\begin{bmatrix} 3 & 5 \\\\ 2 & 6 \\end{bmatrix}\\)",
+        "\\(\\frac{1}{8} \\begin{bmatrix} 6 & -5 \\\\ -2 & 3 \\end{bmatrix}\\)",
+        "\\(\\frac{1}{8} \\begin{bmatrix} 3 & -5 \\\\ -2 & 6 \\end{bmatrix}\\)",
+        "\\(\\frac{1}{28} \\begin{bmatrix} 3 & -5 \\\\ -2 & 6 \\end{bmatrix}\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(|A| = 18 - 10 = 8\\)، نبدل عناصر القطر الرئيسي ونغير إشارات القطر الفرعي: \\(A^{-1} = \\frac{1}{8}\\begin{bmatrix} 3 & -5 \\\\ -2 & 6 \\end{bmatrix}\\).",
+      "source": {
+        "page": 80
+      }
+    },
+    {
+      "id": "u3-mcq-046",
+      "type": "mcq",
+      "prompt": "إذا كانت \\(A = \\begin{bmatrix} 2 & 6 \\\\ 1 & 5 \\end{bmatrix}\\) فإن \\(A^{-1}\\) يساوي:",
+      "options": [
+        "\\(\\begin{bmatrix} 1.25 & -0.25 \\\\ -1.5 & 0.5 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 0.5 & -1.5 \\\\ -0.25 & 1.25 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 1.25 & 1.5 \\\\ 0.25 & 0.5 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 1.25 & -1.5 \\\\ -0.25 & 0.5 \\end{bmatrix}\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(|A| = 10 - 6 = 4\\)، \\(A^{-1} = \\frac{1}{4}\\begin{bmatrix} 5 & -6 \\\\ -1 & 2 \\end{bmatrix} = \\begin{bmatrix} 1.25 & -1.5 \\\\ -0.25 & 0.5 \\end{bmatrix}\\).",
+      "source": {
+        "page": 81
+      }
+    },
+    {
+      "id": "u3-mcq-047",
+      "type": "mcq",
+      "prompt": "إذا كانت \\(A = \\begin{bmatrix} 5 & 3 \\\\ 1 & 3 \\end{bmatrix}\\) فإن \\(A^{-1}\\) يساوي:",
+      "options": [
+        "\\(\\frac{1}{12} \\begin{bmatrix} 3 & -3 \\\\ -1 & 5 \\end{bmatrix}\\)",
+        "\\(\\frac{1}{18} \\begin{bmatrix} 3 & -3 \\\\ -1 & 5 \\end{bmatrix}\\)",
+        "\\(\\frac{1}{12} \\begin{bmatrix} 5 & -3 \\\\ -1 & 3 \\end{bmatrix}\\)",
+        "\\(\\frac{1}{12} \\begin{bmatrix} -3 & 3 \\\\ 1 & -5 \\end{bmatrix}\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\(|A| = (5 \\times 3) - (3 \\times 1) = 12\\)، ثم \\(A^{-1} = \\frac{1}{12}\\begin{bmatrix} 3 & -3 \\\\ -1 & 5 \\end{bmatrix}\\).",
+      "source": {
+        "page": 79
+      }
+    },
+    {
+      "id": "u3-mcq-048",
+      "type": "mcq",
+      "prompt": "إذا كانت \\(A = \\begin{bmatrix} 5 & 3 \\\\ 1 & 3 \\end{bmatrix}\\) فإن \\(A \\times A^{-1}\\) يساوي:",
+      "options": [
+        "\\(\\begin{bmatrix} 0 & 0 \\\\ 0 & 0 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 5 & 3 \\\\ 1 & 3 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 1 & 1 \\\\ 1 & 1 \\end{bmatrix}\\)"
+      ],
+      "answer": "B",
+      "explanation": "حاصل ضرب المصفوفة في معكوسها يساوي مصفوفة الوحدة.",
+      "source": {
+        "page": 79
+      }
+    },
+    {
+      "id": "u3-mcq-049",
+      "type": "mcq",
+      "prompt": "أي من المصفوفات التالية ليس لها معكوس؟",
+      "options": [
+        "\\(\\begin{bmatrix} 2 & 4 \\\\ 1 & 3 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 3 & 1 \\\\ 2 & 1 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 6 & 5 \\\\ 2 & 3 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 2 & 4 \\\\ 1 & 2 \\end{bmatrix}\\)"
+      ],
+      "answer": "D",
+      "explanation": "محدد \\(\\begin{bmatrix} 2 & 4 \\\\ 1 & 2 \\end{bmatrix}\\) يساوي \\((2 \\times 2) - (4 \\times 1) = 0\\)، فلا يوجد لها معكوس.",
+      "source": {
+        "page": 79
+      }
+    },
+    {
+      "id": "u3-mcq-050",
+      "type": "mcq",
+      "prompt": "المصفوفة \\(A = \\begin{bmatrix} k & 2 \\\\ 3 & 6 \\end{bmatrix}\\) ليس لها معكوس عندما k تساوي:",
+      "options": [
+        "\\(1\\)",
+        "\\(-1\\)",
+        "\\(4\\)",
+        "\\(9\\)"
+      ],
+      "answer": "A",
+      "explanation": "لا يوجد معكوس إذا كان المحدد صفراً: \\(6k - (2 \\times 3) = 0 \\Rightarrow k = 1\\).",
+      "source": {
+        "page": 79
+      }
+    },
+    {
+      "id": "u3-mcq-051",
+      "type": "mcq",
+      "prompt": "محدد المصفوفة \\(A = \\begin{bmatrix} a_{11} & a_{12} \\\\ a_{21} & a_{22} \\end{bmatrix}\\) يحسب بالعلاقة:",
+      "options": [
+        "\\(|A| = a_{11} \\times a_{22} + a_{12} \\times a_{21}\\)",
+        "\\(|A| = a_{12} \\times a_{21} - a_{11} \\times a_{22}\\)",
+        "\\(|A| = a_{11} \\times a_{22} - a_{12} \\times a_{21}\\)",
+        "\\(|A| = a_{11} + a_{22} - a_{12} - a_{21}\\)"
+      ],
+      "answer": "C",
+      "explanation": "المحدد = حاصل ضرب عناصر القطر الرئيسي ناقص حاصل ضرب عناصر القطر الفرعي.",
+      "source": {
+        "page": 79
+      }
+    },
+    {
+      "id": "u3-mcq-052",
+      "type": "mcq",
+      "prompt": "إذا كانت \\(A = \\begin{bmatrix} 4 & 7 \\\\ 2 & 4 \\end{bmatrix}\\) فإن \\(A^{-1}\\) يساوي:",
+      "options": [
+        "\\(\\begin{bmatrix} 2 & 3.5 \\\\ 1 & 2 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 2 & -1 \\\\ -3.5 & 2 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 8 & -14 \\\\ -4 & 8 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 2 & -3.5 \\\\ -1 & 2 \\end{bmatrix}\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(|A| = 16 - 14 = 2\\)، \\(A^{-1} = \\frac{1}{2}\\begin{bmatrix} 4 & -7 \\\\ -2 & 4 \\end{bmatrix} = \\begin{bmatrix} 2 & -3.5 \\\\ -1 & 2 \\end{bmatrix}\\).",
+      "source": {
+        "page": 79
+      }
+    },
+    {
+      "id": "u3-tf-001",
+      "type": "tf",
+      "prompt": "تُعرف المصفوفة (Matrix) بأنها تشكيل رياضي مكون من مجموعة من العناصر على هيئة صفوف وأعمدة محصورة بين قوسين.",
+      "answer": true,
+      "explanation": "هذا هو تعريف المصفوفة كما ورد في المقرر.",
+      "source": {
+        "page": 59
+      }
+    },
+    {
+      "id": "u3-tf-002",
+      "type": "tf",
+      "prompt": "تسمى العناصر التي تقع على الخطوط الأفقية في المصفوفة بالأعمدة (Columns) أو المتجهات العمودية.",
+      "answer": false,
+      "explanation": "العناصر التي تقع على الخطوط الأفقية تسمى الصفوف (Rows) أو المتجهات الصفية، أما التي تقع على الخطوط العمودية فتسمى الأعمدة.",
+      "source": {
+        "page": 59
+      }
+    },
+    {
+      "id": "u3-tf-003",
+      "type": "tf",
+      "prompt": "يُشار إلى عدد الصفوف والأعمدة التي تتضمنها المصفوفة بالرمز \\((m \\times n)\\) ويسمى هذا الرمز بمرتبة المصفوفة أو درجة المصفوفة.",
+      "answer": true,
+      "explanation": "الرمز \\((m \\times n)\\) يسمى مرتبة المصفوفة أو درجتها، حيث m عدد الصفوف و n عدد الأعمدة.",
+      "source": {
+        "page": 60
+      }
+    },
+    {
+      "id": "u3-tf-004",
+      "type": "tf",
+      "prompt": "في المصفوفة \\(A_{m \\times n} = (a_{ij})\\) يمثل \\(a_{ij}\\) العنصر الذي يقع في العمود (i) والصف (j).",
+      "answer": false,
+      "explanation": "\\(a_{ij}\\) هو العنصر الذي يقع في الصف (i) والعمود (j).",
+      "source": {
+        "page": 60
+      }
+    },
+    {
+      "id": "u3-tf-005",
+      "type": "tf",
+      "prompt": "تُعرف سعة المصفوفة بأنها عبارة عن عدد صفوف المصفوفة في عدد أعمدتها.",
+      "answer": true,
+      "explanation": "سعة المصفوفة = عدد الصفوف × عدد الأعمدة = عدد عناصر المصفوفة.",
+      "source": {
+        "page": 61
+      }
+    },
+    {
+      "id": "u3-tf-006",
+      "type": "tf",
+      "prompt": "سعة المصفوفة هي عدد صفوف المصفوفة مضافاً إليه عدد أعمدتها.",
+      "answer": false,
+      "explanation": "سعة المصفوفة هي حاصل ضرب عدد الصفوف في عدد الأعمدة وليس مجموعهما.",
+      "source": {
+        "page": 61
+      }
+    },
+    {
+      "id": "u3-tf-007",
+      "type": "tf",
+      "prompt": "يقال على المصفوفتين A و B متساويتين إذا وفقط إذا كانتا من نفس المرتبة (الدرجة) وكان كل عنصر من عناصر A يساوي العنصر المناظر له في B.",
+      "answer": true,
+      "explanation": "شرطا التساوي: نفس المرتبة، و \\(a_{ij} = b_{ij}\\) لكل العناصر المتناظرة.",
+      "source": {
+        "page": 62
+      }
+    },
+    {
+      "id": "u3-tf-008",
+      "type": "tf",
+      "prompt": "يكفي لكي تكون المصفوفتان متساويتين أن تكونا من نفس المرتبة (الدرجة).",
+      "answer": false,
+      "explanation": "لا يكفي تساوي المرتبة، بل يجب أيضاً أن تكون العناصر المتناظرة متساوية.",
+      "source": {
+        "page": 62
+      }
+    },
+    {
+      "id": "u3-tf-009",
+      "type": "tf",
+      "prompt": "المصفوفتان \\(C = \\begin{bmatrix} 3 & 5 \\\\ 4 & 1 \\end{bmatrix}\\) و \\(D = \\begin{bmatrix} \\sqrt{9} & \\sqrt{25} \\\\ 4 & 1 \\end{bmatrix}\\) متساويتان.",
+      "answer": true,
+      "explanation": "\\(\\sqrt{9}=3\\) و \\(\\sqrt{25}=5\\)، فالعناصر المتناظرة متساوية والمرتبة واحدة، إذن C = D.",
+      "source": {
+        "page": 64
+      }
+    },
+    {
+      "id": "u3-tf-010",
+      "type": "tf",
+      "prompt": "المصفوفتان \\(E = \\begin{bmatrix} 5 & 7 \\\\ 3 & 2 \\end{bmatrix}\\) و \\(F = \\begin{bmatrix} 5 & 7 & 1 \\\\ 3 & 2 & 6 \\end{bmatrix}\\) متساويتان.",
+      "answer": false,
+      "explanation": "E ≠ F لاختلاف المرتبة: مرتبة E هي (2x2) ومرتبة F هي (2x3).",
+      "source": {
+        "page": 64
+      }
+    },
+    {
+      "id": "u3-tf-011",
+      "type": "tf",
+      "prompt": "منقول (مبدلة) المصفوفة هو عبارة عن تبديل صفوف المصفوفة محل أعمدتها.",
+      "answer": true,
+      "explanation": "المنقول: تصبح الصفوف أعمدة والأعمدة صفوفاً.",
+      "source": {
+        "page": 66
+      }
+    },
+    {
+      "id": "u3-tf-012",
+      "type": "tf",
+      "prompt": "يرمز لمبدلة (منقول) المصفوفة A بالرمز \\(A^{-1}\\).",
+      "answer": false,
+      "explanation": "يرمز لمنقول المصفوفة بالرمز \\(A^{T}\\) أو \\(A^{\\prime}\\)، أما \\(A^{-1}\\) فهو معكوس المصفوفة.",
+      "source": {
+        "page": 66
+      }
+    },
+    {
+      "id": "u3-tf-013",
+      "type": "tf",
+      "prompt": "إذا كانت المصفوفة A من المرتبة \\((2 \\times 3)\\) فإن منقولها \\(A^{T}\\) يكون من المرتبة \\((2 \\times 3)\\) أيضاً.",
+      "answer": false,
+      "explanation": "عند النقل يصبح عدد صفوف المنقول مساوياً لعدد أعمدة الأصلية، فمرتبة \\(A^{T}\\) هي \\((3 \\times 2)\\).",
+      "source": {
+        "page": 66
+      }
+    },
+    {
+      "id": "u3-tf-014",
+      "type": "tf",
+      "prompt": "إذا كانت \\(B = \\begin{bmatrix} 1 & 2 & 3 \\\\ 6 & 4 & 2 \\end{bmatrix}\\) فإن \\(\\left(B^{T}\\right)^{T} = B\\).",
+      "answer": true,
+      "explanation": "منقول المنقول يعيد المصفوفة الأصلية: \\(\\left(B^{T}_{3 \\times 2}\\right)^{T} = B_{2 \\times 3}\\).",
+      "source": {
+        "page": 67
+      }
+    },
+    {
+      "id": "u3-tf-015",
+      "type": "tf",
+      "prompt": "المصفوفة المربعة (Square Matrix) هي المصفوفة التي يتساوى فيها عدد الصفوف مع عدد الأعمدة أي \\(m = n\\).",
+      "answer": true,
+      "explanation": "هذا تعريف المصفوفة المربعة.",
+      "source": {
+        "page": 68
+      }
+    },
+    {
+      "id": "u3-tf-016",
+      "type": "tf",
+      "prompt": "المصفوفة الصفرية (Zero Matrix) هي المصفوفة التي تكون جميع عناصرها مساوية للواحد.",
+      "answer": false,
+      "explanation": "المصفوفة الصفرية جميع عناصرها مساوية للصفر.",
+      "source": {
+        "page": 69
+      }
+    },
+    {
+      "id": "u3-tf-017",
+      "type": "tf",
+      "prompt": "المصفوفة \\(\\begin{bmatrix} 0 & 0 \\\\ 0 & 0 \\\\ 0 & 0 \\end{bmatrix}\\) مصفوفة صفرية.",
+      "answer": true,
+      "explanation": "جميع عناصرها أصفار، ولا يشترط في المصفوفة الصفرية أن تكون مربعة.",
+      "source": {
+        "page": 69
+      }
+    },
+    {
+      "id": "u3-tf-018",
+      "type": "tf",
+      "prompt": "مصفوفة الوحدة (المصفوفة الحيادية) هي مصفوفة مربعة جميع عناصرها أصفار باستثناء عناصر القطر الرئيسي تساوي واحداً، ويرمز لها بالرمز \\(I_{n}\\).",
+      "answer": true,
+      "explanation": "هذا تعريف مصفوفة الوحدة \\(I_{n}\\).",
+      "source": {
+        "page": 69
+      }
+    },
+    {
+      "id": "u3-tf-019",
+      "type": "tf",
+      "prompt": "المصفوفة القطرية (Diagonal Matrix) هي مصفوفة مربعة تكون جميع عناصرها التي تقع خارج القطر الرئيسي أصفاراً، ويرمز لها بالرمز (D).",
+      "answer": true,
+      "explanation": "هذا تعريف المصفوفة القطرية.",
+      "source": {
+        "page": 70
+      }
+    },
+    {
+      "id": "u3-tf-020",
+      "type": "tf",
+      "prompt": "تعد مصفوفة الوحدة حالة خاصة من المصفوفة الصفرية.",
+      "answer": false,
+      "explanation": "تعد مصفوفة الوحدة حالة خاصة من المصفوفة القطرية (قطرها الرئيسي آحاد وخارجه أصفار).",
+      "source": {
+        "page": 70
+      }
+    },
+    {
+      "id": "u3-tf-021",
+      "type": "tf",
+      "prompt": "المصفوفة المثلثية السفلى هي مصفوفة مربعة جميع عناصرها الواقعة أعلى القطر الرئيسي أصفاراً.",
+      "answer": true,
+      "explanation": "في المثلثية السفلى تكون العناصر فوق القطر الرئيسي أصفاراً.",
+      "source": {
+        "page": 70
+      }
+    },
+    {
+      "id": "u3-tf-022",
+      "type": "tf",
+      "prompt": "المصفوفة المثلثية العليا هي مصفوفة مربعة جميع عناصرها الواقعة أعلى القطر الرئيسي أصفاراً.",
+      "answer": false,
+      "explanation": "المثلثية العليا: جميع عناصرها الواقعة أسفل القطر الرئيسي أصفار.",
+      "source": {
+        "page": 71
+      }
+    },
+    {
+      "id": "u3-tf-023",
+      "type": "tf",
+      "prompt": "المصفوفة العددية هي مصفوفة مربعة جميع عناصر قطرها الرئيسي متساوية، أما عناصرها الأخرى خارج القطر فتكون أصفاراً.",
+      "answer": true,
+      "explanation": "هذا تعريف المصفوفة العددية (Numerical Matrix).",
+      "source": {
+        "page": 71
+      }
+    },
+    {
+      "id": "u3-tf-024",
+      "type": "tf",
+      "prompt": "تعد المصفوفة القطرية حالة خاصة من المصفوفة العددية.",
+      "answer": false,
+      "explanation": "العكس هو الصحيح: المصفوفة العددية حالة خاصة من المصفوفة القطرية.",
+      "source": {
+        "page": 71
+      }
+    },
+    {
+      "id": "u3-tf-025",
+      "type": "tf",
+      "prompt": "المصفوفة المتماثلة هي مصفوفة مربعة تكون فيها عناصر المثلث العلوي مساوية لعناصر المثلث السفلي.",
+      "answer": true,
+      "explanation": "هذا تعريف المصفوفة المتماثلة (Symmetric Matrix).",
+      "source": {
+        "page": 72
+      }
+    },
+    {
+      "id": "u3-tf-026",
+      "type": "tf",
+      "prompt": "تعد المصفوفة A مصفوفة متماثلة إذا كانت \\(A = A^{T}\\).",
+      "answer": true,
+      "explanation": "المصفوفة المتماثلة تساوي منقولها: \\(A = A^{T}\\).",
+      "source": {
+        "page": 72
+      }
+    },
+    {
+      "id": "u3-tf-027",
+      "type": "tf",
+      "prompt": "يشترط لجمع (أو طرح) مصفوفتين أن تكون المصفوفتان من نفس الترتيب، ويتم ذلك بجمع (أو طرح) العناصر المتناظرة في المصفوفتين.",
+      "answer": true,
+      "explanation": "شرط الجمع والطرح: نفس الترتيب (المرتبة)، والعملية على العناصر المتناظرة.",
+      "source": {
+        "page": 73
+      }
+    },
+    {
+      "id": "u3-tf-028",
+      "type": "tf",
+      "prompt": "يشترط لجمع مصفوفتين أن يكون عدد أعمدة المصفوفة الأولى مساوياً لعدد صفوف المصفوفة الثانية.",
+      "answer": false,
+      "explanation": "هذا شرط الضرب، أما شرط الجمع فهو أن تكون المصفوفتان من نفس الترتيب.",
+      "source": {
+        "page": 73
+      }
+    },
+    {
+      "id": "u3-tf-029",
+      "type": "tf",
+      "prompt": "إذا كانت \\(A = \\begin{bmatrix} 5 & 3 \\\\ 1 & 3 \\end{bmatrix}\\) و \\(B = \\begin{bmatrix} 6 & 4 \\\\ 2 & 3 \\end{bmatrix}\\) فإن \\(B - A = \\begin{bmatrix} 1 & 1 \\\\ 1 & 0 \\end{bmatrix}\\).",
+      "answer": true,
+      "explanation": "\\(6-5=1,\\ 4-3=1,\\ 2-1=1,\\ 3-3=0\\).",
+      "source": {
+        "page": 73
+      }
+    },
+    {
+      "id": "u3-tf-030",
+      "type": "tf",
+      "prompt": "إذا كانت A من المرتبة \\((3 \\times 3)\\) و C من المرتبة \\((3 \\times 2)\\) فإنه يمكن إيجاد \\(A + C\\).",
+      "answer": false,
+      "explanation": "لا يمكن إجراء عملية الجمع لأن المصفوفتين ليستا من نفس الترتيب.",
+      "source": {
+        "page": 74
+      }
+    },
+    {
+      "id": "u3-tf-031",
+      "type": "tf",
+      "prompt": "عند ضرب مقدار ثابت في مصفوفة يتم ضرب المقدار الثابت في عناصر القطر الرئيسي فقط.",
+      "answer": false,
+      "explanation": "يتم ضرب المقدار الثابت في جميع عناصر المصفوفة.",
+      "source": {
+        "page": 74
+      }
+    },
+    {
+      "id": "u3-tf-032",
+      "type": "tf",
+      "prompt": "\\(3 \\begin{bmatrix} 1 & -3 & 2 \\\\ 4 & 6 & 5 \\\\ 3 & 2 & 1 \\end{bmatrix} = \\begin{bmatrix} 3 & -9 & 6 \\\\ 12 & 18 & 15 \\\\ 9 & 6 & 3 \\end{bmatrix}\\)",
+      "answer": true,
+      "explanation": "نضرب الثابت 3 في كل عنصر من عناصر المصفوفة.",
+      "source": {
+        "page": 74
+      }
+    },
+    {
+      "id": "u3-tf-033",
+      "type": "tf",
+      "prompt": "\\(4 \\begin{bmatrix} 2 & 0 & 1 \\\\ -1 & 4 & 3 \\end{bmatrix} = \\begin{bmatrix} 8 & 0 & 4 \\\\ -1 & 16 & 12 \\end{bmatrix}\\)",
+      "answer": false,
+      "explanation": "يجب ضرب 4 في جميع العناصر، فالعنصر في الصف الثاني والعمود الأول يساوي \\(4 \\times (-1) = -4\\) وليس \\(-1\\).",
+      "source": {
+        "page": 74
+      }
+    },
+    {
+      "id": "u3-tf-034",
+      "type": "tf",
+      "prompt": "إذا كانت \\(A = \\begin{bmatrix} 3 & -2 & 5 \\\\ 4 & 1 & 6 \\\\ 2 & -1 & 1 \\end{bmatrix}\\) و \\(B = \\begin{bmatrix} 5 & -3 & 1 \\\\ 6 & -1 & 0 \\\\ 1 & 2 & 2 \\end{bmatrix}\\) فإن \\(3A - 2B = \\begin{bmatrix} -1 & 0 & 13 \\\\ 0 & 5 & 18 \\\\ 4 & -7 & -1 \\end{bmatrix}\\).",
+      "answer": true,
+      "explanation": "\\(3A = \\begin{bmatrix} 9 & -6 & 15 \\\\ 12 & 3 & 18 \\\\ 6 & -3 & 3 \\end{bmatrix}\\) و \\(2B = \\begin{bmatrix} 10 & -6 & 2 \\\\ 12 & -2 & 0 \\\\ 2 & 4 & 4 \\end{bmatrix}\\) ثم نطرح العناصر المتناظرة.",
+      "source": {
+        "page": 74
+      }
+    },
+    {
+      "id": "u3-tf-035",
+      "type": "tf",
+      "prompt": "يشترط لإجراء عملية ضرب مصفوفتين أن يكون عدد أعمدة المصفوفة الأولى مساوياً لعدد صفوف المصفوفة الثانية.",
+      "answer": true,
+      "explanation": "هذا شرط ضرب المصفوفات.",
+      "source": {
+        "page": 76
+      }
+    },
+    {
+      "id": "u3-tf-036",
+      "type": "tf",
+      "prompt": "يشترط لإجراء عملية ضرب مصفوفتين أن يكون عدد صفوف المصفوفة الأولى مساوياً لعدد صفوف المصفوفة الثانية.",
+      "answer": false,
+      "explanation": "الشرط: عدد أعمدة المصفوفة الأولى = عدد صفوف المصفوفة الثانية.",
+      "source": {
+        "page": 76
+      }
+    },
+    {
+      "id": "u3-tf-037",
+      "type": "tf",
+      "prompt": "ينتج من عملية ضرب مصفوفتين مصفوفة جديدة عدد صفوفها هو نفس عدد صفوف المصفوفة الأولى وعدد أعمدتها هو نفس عدد أعمدة المصفوفة الثانية.",
+      "answer": true,
+      "explanation": "\\(A_{m \\times n} \\times B_{n \\times s} = C_{m \\times s}\\).",
+      "source": {
+        "page": 76
+      }
+    },
+    {
+      "id": "u3-tf-038",
+      "type": "tf",
+      "prompt": "عملية الضرب في المصفوفات تبادلية، أي أن حاصل ضرب المصفوفة A في المصفوفة B يساوي دائماً حاصل ضرب المصفوفة B في المصفوفة A.",
+      "answer": false,
+      "explanation": "عملية الضرب في المصفوفات ليست تبادلية، فليس بالضرورة أن يكون AB = BA.",
+      "source": {
+        "page": 76
+      }
+    },
+    {
+      "id": "u3-tf-039",
+      "type": "tf",
+      "prompt": "العنصر \\(c_{ij}\\) في مصفوفة حاصل الضرب \\(C = AB\\) هو مجموع حاصل ضرب عناصر الصف i من المصفوفة الأولى في عناصر العمود j المناظرة من المصفوفة الثانية.",
+      "answer": true,
+      "explanation": "هذه طريقة حساب عناصر حاصل ضرب المصفوفات.",
+      "source": {
+        "page": 76
+      }
+    },
+    {
+      "id": "u3-tf-040",
+      "type": "tf",
+      "prompt": "معكوس المصفوفة يقصد به المعكوس الضربي للمصفوفة بحيث يكون حاصل ضرب المصفوفة في معكوسها يساوي مصفوفة الوحدة.",
+      "answer": true,
+      "explanation": "\\(A \\times A^{-1} = I\\).",
+      "source": {
+        "page": 79
+      }
+    },
+    {
+      "id": "u3-tf-041",
+      "type": "tf",
+      "prompt": "حاصل ضرب المصفوفة في معكوسها يساوي المصفوفة الصفرية.",
+      "answer": false,
+      "explanation": "حاصل ضرب المصفوفة في معكوسها يساوي مصفوفة الوحدة.",
+      "source": {
+        "page": 79
+      }
+    },
+    {
+      "id": "u3-tf-042",
+      "type": "tf",
+      "prompt": "يشترط لإمكانية إيجاد معكوس المصفوفة أن تكون مصفوفة مربعة ومحددها لا يساوي صفر.",
+      "answer": true,
+      "explanation": "شرطا وجود المعكوس: مربعة، ومحددها ≠ 0.",
+      "source": {
+        "page": 79
+      }
+    },
+    {
+      "id": "u3-tf-044",
+      "type": "tf",
+      "prompt": "عند إيجاد معكوس المصفوفة \\((2 \\times 2)\\) نقوم بتغيير إشارات عناصر القطر الرئيسي وتبديل عناصر القطر الفرعي.",
+      "answer": false,
+      "explanation": "العكس: نبدل عناصر القطر الرئيسي ونغير إشارات عناصر القطر الفرعي.",
+      "source": {
+        "page": 79
+      }
+    },
+    {
+      "id": "u3-match-001",
+      "type": "matching",
+      "title": "صل كل نوع من أنواع المصفوفات بتعريفه:",
+      "pairs": [
+        {
+          "left": "المصفوفة المربعة",
+          "right": "يتساوى فيها عدد الصفوف مع عدد الأعمدة"
+        },
+        {
+          "left": "المصفوفة الصفرية",
+          "right": "جميع عناصرها مساوية للصفر"
+        },
+        {
+          "left": "مصفوفة الوحدة",
+          "right": "مربعة عناصر قطرها الرئيسي واحد وباقي عناصرها أصفار"
+        },
+        {
+          "left": "المصفوفة القطرية",
+          "right": "مربعة جميع عناصرها خارج القطر الرئيسي أصفار"
+        }
+      ],
+      "explanation": "تعريفات أنواع المصفوفات كما في المقرر.",
+      "source": {
+        "page": 68
+      }
+    },
+    {
+      "id": "u3-match-002",
+      "type": "matching",
+      "title": "صل كل نوع من أنواع المصفوفات بتعريفه:",
+      "pairs": [
+        {
+          "left": "المصفوفة المثلثية السفلى",
+          "right": "جميع عناصرها الواقعة أعلى القطر الرئيسي أصفار"
+        },
+        {
+          "left": "المصفوفة المثلثية العليا",
+          "right": "جميع عناصرها الواقعة أسفل القطر الرئيسي أصفار"
+        },
+        {
+          "left": "المصفوفة العددية",
+          "right": "عناصر قطرها الرئيسي متساوية وما خارجه أصفار"
+        },
+        {
+          "left": "المصفوفة المتماثلة",
+          "right": "عناصر المثلث العلوي مساوية لعناصر المثلث السفلي"
+        }
+      ],
+      "explanation": "تعريفات أنواع المصفوفات كما في المقرر.",
+      "source": {
+        "page": 70
+      }
+    },
+    {
+      "id": "u3-match-003",
+      "type": "matching",
+      "title": "صل كل مصفوفة بنوعها:",
+      "pairs": [
+        {
+          "left": "\\(\\begin{bmatrix} 1 & 0 \\\\ 3 & 4 \\end{bmatrix}\\)",
+          "right": "مثلثية سفلى"
+        },
+        {
+          "left": "\\(\\begin{bmatrix} 5 & 2 \\\\ 0 & 1 \\end{bmatrix}\\)",
+          "right": "مثلثية عليا"
+        },
+        {
+          "left": "\\(\\begin{bmatrix} 1 & 7 \\\\ 7 & 2 \\end{bmatrix}\\)",
+          "right": "متماثلة"
+        },
+        {
+          "left": "\\(\\begin{bmatrix} 0 & 0 & 0 \\\\ 0 & 0 & 0 \\end{bmatrix}\\)",
+          "right": "صفرية"
+        }
+      ],
+      "explanation": "السفلى: أصفار أعلى القطر، العليا: أصفار أسفل القطر، المتماثلة: a12 = a21، الصفرية: كل عناصرها أصفار.",
+      "source": {
+        "page": 70
+      }
+    },
+    {
+      "id": "u3-match-004",
+      "type": "matching",
+      "title": "صل كل مصفوفة بمرتبتها:",
+      "pairs": [
+        {
+          "left": "\\(\\begin{bmatrix} 1 & 2 & 3 \\end{bmatrix}\\)",
+          "right": "1 × 3"
+        },
+        {
+          "left": "\\(\\begin{bmatrix} 1 \\\\ 2 \\\\ 3 \\end{bmatrix}\\)",
+          "right": "3 × 1"
+        },
+        {
+          "left": "\\(\\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\\\ 5 & 6 \\end{bmatrix}\\)",
+          "right": "3 × 2"
+        },
+        {
+          "left": "\\(\\begin{bmatrix} 1 & 2 & 3 \\\\ 4 & 5 & 6 \\end{bmatrix}\\)",
+          "right": "2 × 3"
+        }
+      ],
+      "explanation": "المرتبة = عدد الصفوف × عدد الأعمدة.",
+      "source": {
+        "page": 61
+      }
+    },
+    {
+      "id": "u3-match-005",
+      "type": "matching",
+      "title": "صل كل حاصل ضرب بمرتبة الناتج:",
+      "pairs": [
+        {
+          "left": "\\(A_{2 \\times 3} \\times B_{3 \\times 4}\\)",
+          "right": "2 × 4"
+        },
+        {
+          "left": "\\(A_{4 \\times 1} \\times B_{1 \\times 3}\\)",
+          "right": "4 × 3"
+        },
+        {
+          "left": "\\(A_{3 \\times 3} \\times B_{3 \\times 1}\\)",
+          "right": "3 × 1"
+        },
+        {
+          "left": "\\(A_{2 \\times 2} \\times B_{3 \\times 2}\\)",
+          "right": "لا يمكن إجراء الضرب"
+        }
+      ],
+      "explanation": "يمكن الضرب إذا كان عدد أعمدة الأولى = عدد صفوف الثانية، والناتج بعدد صفوف الأولى وعدد أعمدة الثانية.",
+      "source": {
+        "page": 76
+      }
+    },
+    {
+      "id": "u3-match-006",
+      "type": "matching",
+      "title": "صل كل مصطلح إنجليزي بمعناه:",
+      "pairs": [
+        {
+          "left": "Square Matrix",
+          "right": "المصفوفة المربعة"
+        },
+        {
+          "left": "Identity (Unit) Matrix",
+          "right": "مصفوفة الوحدة (الحيادية)"
+        },
+        {
+          "left": "Transpose of Matrix",
+          "right": "منقول (مبدلة) المصفوفة"
+        },
+        {
+          "left": "Symmetric Matrix",
+          "right": "المصفوفة المتماثلة"
+        },
+        {
+          "left": "Numerical Matrix",
+          "right": "المصفوفة العددية"
+        }
+      ],
+      "explanation": "المصطلحات كما وردت في المقرر.",
+      "source": {
+        "page": 66
+      }
+    },
+    {
+      "id": "u3-match-007",
+      "type": "matching",
+      "title": "صل كل رمز بما يدل عليه:",
+      "pairs": [
+        {
+          "left": "\\(A^{T}\\)",
+          "right": "منقول المصفوفة A"
+        },
+        {
+          "left": "\\(A^{-1}\\)",
+          "right": "معكوس المصفوفة A"
+        },
+        {
+          "left": "\\(I_{n}\\)",
+          "right": "مصفوفة الوحدة"
+        },
+        {
+          "left": "\\(|A|\\)",
+          "right": "محدد المصفوفة A"
+        },
+        {
+          "left": "\\(a_{ij}\\)",
+          "right": "العنصر الواقع في الصف i والعمود j"
+        }
+      ],
+      "explanation": "الرموز المستخدمة في المقرر.",
+      "source": {
+        "page": 66
+      }
+    },
+    {
+      "id": "u3-match-008",
+      "type": "matching",
+      "title": "صل كل عملية بشرط إجرائها:",
+      "pairs": [
+        {
+          "left": "جمع أو طرح مصفوفتين",
+          "right": "أن تكون المصفوفتان من نفس الترتيب"
+        },
+        {
+          "left": "ضرب مصفوفتين AB",
+          "right": "عدد أعمدة الأولى يساوي عدد صفوف الثانية"
+        },
+        {
+          "left": "إيجاد معكوس المصفوفة",
+          "right": "أن تكون مربعة ومحددها لا يساوي صفر"
+        },
+        {
+          "left": "تساوي مصفوفتين",
+          "right": "نفس المرتبة والعناصر المتناظرة متساوية"
+        }
+      ],
+      "explanation": "شروط العمليات كما وردت في المقرر.",
+      "source": {
+        "page": 73
+      }
+    },
+    {
+      "id": "u3-match-009",
+      "type": "matching",
+      "title": "صل كل خطوة من خطوات إيجاد معكوس المصفوفة (2×2) بمضمونها:",
+      "pairs": [
+        {
+          "left": "الخطوة الأولى",
+          "right": "حساب محدد المصفوفة"
+        },
+        {
+          "left": "الخطوة الثانية",
+          "right": "تبديل العناصر في القطر الرئيسي"
+        },
+        {
+          "left": "الخطوة الثالثة",
+          "right": "تغيير إشارات عناصر القطر الفرعي"
+        },
+        {
+          "left": "الخطوة الرابعة",
+          "right": "ضرب المصفوفة في 1 على المحدد"
+        }
+      ],
+      "explanation": "خطوات إيجاد المعكوس كما في المقرر.",
+      "source": {
+        "page": 79
+      }
+    },
+    {
+      "id": "u3-match-010",
+      "type": "matching",
+      "title": "إذا كانت المصفوفة A كما يلي، صل كل عنصر بقيمته: \\(A = \\begin{bmatrix} 8 & -2 & 5 & 6 \\\\ -1 & 3 & -3 & 6 \\\\ 7 & -8 & 1 & 4 \\end{bmatrix}\\)",
+      "pairs": [
+        {
+          "left": "\\(a_{21}\\)",
+          "right": "-1"
+        },
+        {
+          "left": "\\(a_{32}\\)",
+          "right": "-8"
+        },
+        {
+          "left": "\\(a_{14}\\)",
+          "right": "6"
+        },
+        {
+          "left": "\\(a_{23}\\)",
+          "right": "-3"
+        }
+      ],
+      "explanation": "\\(a_{ij}\\): العنصر في الصف i والعمود j.",
+      "source": {
+        "page": 60
+      }
+    }
+  ]
+}

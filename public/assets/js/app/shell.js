@@ -2,6 +2,7 @@
 // The top header is built once and never re-rendered: theme switch, logo, language switch.
 // Each screen below it can add a page bar (back/close, title, page actions) and a footer.
 
+import { fitMath } from './math.js';
 import { h, icon, ICONS } from '../quiz/dom.js';
 import { contentLang } from './catalog.js';
 import { href } from './router.js';
@@ -31,7 +32,17 @@ export function mount(screenEl, { focus, onKey = null, scrollTo = null } = {}) {
   scrollTo?.scrollIntoView({ block: 'start' });
   const target = typeof focus === 'string' ? screenEl.querySelector(focus) : focus ?? screenEl.querySelector('[data-autofocus]');
   target?.focus({ preventScroll: true });
+  fitMath(screenEl);
 }
+
+// Phone turned or window resized: formulas that were shrunk to fit may fit again (or need shrinking).
+let fitTimer = 0;
+globalThis.addEventListener?.('resize', () => {
+  clearTimeout(fitTimer);
+  fitTimer = setTimeout(() => fitMath(root), 150);
+});
+// The math font arrives after the first paint and changes every formula's width.
+globalThis.document?.fonts?.ready.then(() => fitMath(root));
 
 /* ---------- Fixed top header ---------- */
 

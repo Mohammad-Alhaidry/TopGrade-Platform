@@ -39,6 +39,7 @@ export function icon(...paths) {
 export const ICONS = {
   chevronLeft: ["M15 6l-6 6l6 6"],
   chevronRight: ["M9 6l6 6l-6 6"],
+  chevronDown: ["M6 9l6 6l6 -6"],
   check: ["M5 12l5 5l10 -10"],
   cross: ["M18 6l-12 12", "M6 6l12 12"],
   close: ["M18 6l-12 12", "M6 6l12 12"],

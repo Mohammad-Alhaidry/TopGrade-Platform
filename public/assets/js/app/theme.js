@@ -2,7 +2,7 @@
 // this module flips it and remembers the choice. Without a saved choice it follows the phone's setting.
 
 const STORAGE_KEY = 'topgrade.theme';
-const BAR = { light: '#FFFFFF', dark: '#0B1730' }; // browser/status bar colour per theme
+const BAR = { light: '#FFFFFF', dark: '#0E1513' }; // browser/status bar colour per theme (the header's --card)
 
 export const theme = () => (document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light');
 
@@ -10,8 +10,17 @@ function paintBar() {
   document.querySelector('meta[name="theme-color"]')?.setAttribute('content', BAR[theme()]);
 }
 
+// Switch every colour in one frame: with transitions running, buttons and cards would each fade at their own
+// pace and the page would shimmer through mixed colours.
+function switchTo(next) {
+  const root = document.documentElement;
+  root.classList.add('theme-switch');
+  root.dataset.theme = next;
+  requestAnimationFrame(() => requestAnimationFrame(() => root.classList.remove('theme-switch')));
+}
+
 export function setTheme(next) {
-  document.documentElement.dataset.theme = next;
+  switchTo(next);
   try {
     localStorage.setItem(STORAGE_KEY, next);
   } catch {
@@ -33,7 +42,7 @@ export function initTheme() {
       /* ignore */
     }
     if (!saved) {
-      document.documentElement.dataset.theme = e.matches ? 'dark' : 'light';
+      switchTo(e.matches ? 'dark' : 'light');
       paintBar();
     }
   });

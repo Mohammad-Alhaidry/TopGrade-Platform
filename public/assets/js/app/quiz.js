@@ -9,9 +9,9 @@ import { createSession, summarize } from '../quiz/session.js';
 import { serializeRun, deserializeRun, savedBankKey } from '../quiz/store.js';
 import { confirmDialog, openSheet } from '../quiz/dialog.js';
 import { h, icon, ICONS, TYPE_ICONS, staticSvg } from '../quiz/dom.js';
-import { pagebar, iconButton, backLink, backIcon, screen, mount, contentText } from './shell.js';
+import { pagebar, iconButton, backLink, backIcon, screen, mount, contentText, enText } from './shell.js';
 import { readProgress, writeProgress, recordAnswers, recordRun, topicStats } from './progress.js';
-import { topicKey, topicLabel } from './catalog.js';
+import { topicKey, topicLabel, contentLang } from './catalog.js';
 import { paths } from './routes.js';
 import { navigate } from './router.js';
 import { t, lang, localName } from './i18n.js';
@@ -21,6 +21,13 @@ import { track } from './analytics.js';
 const STORAGE_KEY = 'topgrade.run.v1';
 // Question content in the open course's language and direction (Arabic courses read right to left).
 const cText = (attrs) => contentText(state.ctx?.course, attrs);
+// Answers with no Arabic in them (formulas, numbers, English terms) read left to right even in an Arabic
+// course, so their letters and text start on the left; all of a question's answers share one direction.
+const ARABIC = /[\u0621-\u064A\u0671-\u06D3\u06FA-\u06FF]/;
+// Arabic words outside the math, ignoring a bare "و" between two formulas ("\(Q+3P=-2\) و \(Q-6P=3\)" is formulas).
+const arabicWords = (text) => ARABIC.test(String(text).replace(/\\\(.+?\\\)/gs, ' ').replace(/(^|\s)و(?=\s|$)/g, ' '));
+const answerText = (texts, attrs) => (texts.some(arabicWords) ? cText(attrs) : enText(attrs));
+const answerContent = (tag, text) => (arabicWords(text) ? content(tag, {}, text) : h(tag, enText(), rich(text, { wrap: true })));
 const COUNT_CHOICES = [10, 20, 40];
 const typeLabel = (type) => t(`type.${type}`);
 
@@ -336,15 +343,15 @@ function showQuestion(focus) {
 const figure = (q) => (q.image ? h('img', { class: 'qfig', src: `data/${q.image.src}`, alt: q.image.alt, loading: 'lazy' }) : null);
 
 /** Prompt text with "____" shown as a gap; `fill` puts the chosen word into it. */
-function promptContent(text, fill = null) {
+function promptContent(text, fill = null, opts = {}) {
   return text.split(/(_{3,})/).map((part) => {
-    if (!/^_{3,}$/.test(part)) return rich(part);
+    if (!/^_{3,}$/.test(part)) return rich(part, opts);
     if (!fill?.word) return h('span', { class: 'gap', 'aria-label': t('q.blank') });
     return h('span', { class: `gap gap--filled${fill.state ? ` is-${fill.state}` : ''}` }, fill.word);
   });
 }
 
-function optionButton({ key: k, text, selected, right, wrong, dim, disabled, data, onclick, content = true }) {
+function optionButton({ key: k, text, selected, right, wrong, dim, disabled, data, onclick, attrs = cText() }) {
   return h('button', {
     type: 'button',
     class: `option${selected ? ' is-selected' : ''}${right ? ' is-right' : ''}${wrong ? ' is-wrong' : ''}${dim ? ' is-dim' : ''}`,
@@ -352,10 +359,10 @@ function optionButton({ key: k, text, selected, right, wrong, dim, disabled, dat
     disabled,
     dataset: data,
     onclick,
-    ...(content ? cText() : {}),
+    ...attrs,
   },
   k ? h('span', { class: 'option__key' }, k) : null,
-  h('span', { class: 'option__text' }, rich(text)),
+  attrs.dir === 'rtl' ? content('span', { class: 'option__text' }, text) : h('span', { class: 'option__text' }, rich(text, { wrap: attrs.dir === 'ltr' })),
   right || wrong ? h('span', { class: 'option__mark' }, icon(...(right ? ICONS.check : ICONS.cross))) : null);
 }
 
@@ -374,6 +381,7 @@ function mcqAnswers(item, response, revealed) {
         dim: revealed && !selected && !right,
         disabled: revealed,
         data: { opt: String(optIndex) },
+        attrs: answerText(q.options),
         onclick: () => setResponse(optIndex, `[data-opt="${optIndex}"]`),
       });
     }));
@@ -387,7 +395,7 @@ function tfAnswers(item, response, revealed) {
       const right = revealed && q.answer === value;
       return optionButton({
         text: t(value ? 'true' : 'false'),
-        content: false,
+        attrs: {},
         selected,
         right,
         wrong: revealed && selected && !right,
@@ -413,41 +421,143 @@ function blankAnswers(item, response, revealed) {
         dim: revealed && !selected && !right,
         disabled: revealed,
         data: { word: String(pos) },
+        attrs: answerText(item.wordChoices),
         onclick: () => setResponse(word, `[data-word="${pos}"]`),
       });
     }));
 }
 
+/** A matching item: a symbol or formula sits on the list's own side (the formula still reads left to right). */
+const pairLeft = (cls, text, attrs = {}) => (arabicWords(text) ? content('span', { class: cls, ...attrs }, text) : h('span', { class: cls, ...attrs }, rich(text)));
+
 function matchingAnswer(item, response, revealed, onChange) {
   const q = item.question;
   const current = Array.isArray(response) ? [...response] : q.pairs.map(() => '');
   const marks = revealed ? matchingResults(q, current) : [];
+  // The items and their pickers follow the course's direction ("اختر…" in an Arabic course); a picked formula or
+  // English term keeps its own reading direction inside (dir=auto). In the list of choices, choices without
+  // Arabic words read left to right, as answers do. The list is the app's own sheet rather than a native
+  // <select>: Android draws a native picker in the system's direction (radio on one side, text on the other).
+  const choiceDir = item.choiceOrder.some(arabicWords) ? { dir: 'rtl', lang: 'ar' } : { dir: 'ltr', lang: 'en' };
+  const placeholder = t('match.choose', {}, contentLang(state.ctx?.course));
+
+  const pick = (i) => openSheet({
+    title: content('span', {}, q.pairs[i].left),
+    closeLabel: t('close'),
+    // A choice already given to another item is hidden, so one answer is not used twice. The red × beside an
+    // item's choice gives it back to the list.
+    build: (close) => h('div', { class: 'options picklist', role: 'group', 'aria-label': t('q.options') },
+      item.choiceOrder.filter((choice) => !current.some((c, j) => j !== i && c === choice)).map((choice) => optionButton({
+        text: choice,
+        selected: current[i] === choice,
+        attrs: { ...choiceDir },
+        onclick: () => close(choice),
+      }))),
+  }).then((choice) => { if (choice) setChoice(i, choice); });
+
+  const setChoice = (i, choice) => {
+    current[i] = choice;
+    state.run.session.responses[state.run.index] = [...current];
+    writeSaved(state.run);
+    const button = document.getElementById(`pick-${i}`);
+    button.classList.toggle('is-empty', !choice);
+    button.querySelector('.pick__text').textContent = choice || placeholder;
+    document.getElementById(`unpick-${i}`).hidden = !choice;
+    onChange();
+    button.focus();
+  };
+
   return h('ul', cText({ class: 'pairs' }),
     q.pairs.map((pair, i) =>
       h('li', { class: `card pair${revealed ? (marks[i] ? ' is-right' : ' is-wrong') : ''}` },
-        h('span', { class: 'pair__left', id: `pair-${i}` }, rich(pair.left)),
+        pairLeft('pair__left', pair.left, { id: `pair-${i}` }),
         h('div', { class: 'pair__pick' },
-          h('select', {
-            // Follows the chosen item's own direction, so "Choose…" reads right in either interface language.
-            dir: 'auto',
+          h('button', {
+            type: 'button',
+            class: `pick${current[i] ? '' : ' is-empty'}`,
+            ...cText(),
             disabled: revealed,
-            'aria-labelledby': `pair-${i}`,
-            onchange: (e) => {
-              current[i] = e.target.value;
-              state.run.session.responses[state.run.index] = [...current];
-              writeSaved(state.run);
-              onChange();
-            },
+            'aria-haspopup': 'dialog',
+            'aria-labelledby': `pair-${i} pick-${i}`,
+            id: `pick-${i}`,
+            onclick: () => pick(i),
           },
-          h('option', { value: '', selected: !current[i] }, t('match.choose')),
-          item.choiceOrder.map((choice) => h('option', { value: choice, selected: current[i] === choice }, choice))),
+          h('span', { class: 'pick__text', dir: 'auto' }, current[i] || placeholder),
+          revealed ? null : h('span', { class: 'pick__chev', 'aria-hidden': 'true' }, icon(...ICONS.chevronDown))),
+          revealed ? null : h('button', {
+            type: 'button',
+            class: 'unpick',
+            id: `unpick-${i}`,
+            hidden: !current[i],
+            'aria-label': t('match.clear'),
+            onclick: () => setChoice(i, ''),
+          }, icon(...ICONS.close)),
           revealed ? h('span', { class: 'pair__mark' }, icon(...(marks[i] ? ICONS.check : ICONS.cross))) : null),
-        revealed && !marks[i] ? h('p', { class: 'pair__fix' }, h('span', { class: 'pair__fix-label' }, t('answerLabel')), ' ', h('strong', {}, pair.right)) : null)));
+        revealed && !marks[i] ? h('p', { class: 'pair__fix' }, h('span', { class: 'pair__fix-label' }, t('answerLabel')), ' ', answerContent('strong', pair.right)) : null)));
+}
+
+// Arabic content never shares a line with an equation: the bidi algorithm reorders words and punctuation around
+// it ("يُهمل P=−6، إذن P*=2" reads in a confusing order). So every equation or expression (anything with a
+// relation, an operator or a structure such as a fraction or matrix) gets its own left-to-right line, and the
+// Arabic around it its own right-to-left lines. A lone symbol or number (X, Q_d, 200Q, -8) stays in the sentence.
+// Left-to-right lines (and English courses) may wrap inside a long formula, see texPieces in math.js.
+const isEquation = (raw) => {
+  const tex = raw.replace(/\\[,;:! ]/g, ' ');
+  return !/^\s*-?\d+(?:\.\d+)?\s*$/.test(tex)
+  && (/[=<>+\-|,]|\\[a-zA-Z]*(?:frac|begin|sqrt|sum|Rightarrow|Leftrightarrow|ne|neq|le|ge|leq|geq|approx|times|cdot|div|pm|mp|cup|cap|in|subset|to)(?![a-zA-Z])/.test(tex)
+    || tex.replace(/\s/g, '').length >= 12);
+};
+const EDGE_PUNCT = /^[\s.,،:؛]+|[\s.,،؛]+$/g;
+const isRtl = () => contentLang(state.ctx?.course) === 'ar';
+
+/** Drops a bracket whose partner went to another line, e.g. "(8 تنتج من" when ")" followed a formula. Math is skipped. */
+function balanced(line) {
+  const parts = line.split(/(\\\(.+?\\\))/s);
+  const open = [];
+  const drop = new Set();
+  parts.forEach((part, p) => {
+    if (p % 2) return;
+    [...part].forEach((c, i) => {
+      if (c === '(') open.push(`${p}:${i}`);
+      else if (c === ')') { if (open.length) open.pop(); else drop.add(`${p}:${i}`); }
+    });
+  });
+  open.forEach((k) => drop.add(k));
+  return parts.map((part, p) => (p % 2 ? part : [...part].filter((c, i) => !drop.has(`${p}:${i}`)).join(''))).join('');
+}
+
+function mixedLines(text) {
+  if (!isRtl() || typeof text !== 'string' || !ARABIC.test(text)) return null;
+  const lines = [];
+  let words = '';
+  const flush = () => {
+    const line = balanced(words.replace(EDGE_PUNCT, '')).replace(EDGE_PUNCT, '');
+    // A bare "و" between two formula lines adds nothing once they stand on lines of their own.
+    if (/[^\s.,،:؛()]/.test(line) && line !== 'و') lines.push({ text: line, ltr: !ARABIC.test(line) });
+    words = '';
+  };
+  for (const part of text.split(/(\\\(.+?\\\))/s)) {
+    if (part.startsWith('\\(') && isEquation(part.slice(2, -2))) {
+      flush();
+      lines.push({ text: part, ltr: true });
+    } else words += part;
+  }
+  flush();
+  return lines.length > 1 ? lines : null;
+}
+
+/** Course content (prompt, option, explanation): one line, or Arabic and formula lines as mixedLines decides. */
+function content(tag, attrs, text, draw = rich) {
+  const lines = mixedLines(text);
+  if (isRtl() && typeof text === 'string' && !arabicWords(text)) return h(tag, enText(attrs), draw(text, { wrap: true }));
+  if (!lines) return h(tag, cText(attrs), draw(text, { wrap: !isRtl() }));
+  return h(tag, cText({ ...attrs, class: `${attrs.class ?? ''} lines`.trim() }),
+    lines.map((l) => h('span', l.ltr ? enText({ class: 'line line--math' }) : { class: 'line' }, draw(l.text, { wrap: l.ltr }))));
 }
 
 function notes(q) {
   return [
-    q.explanation ? h('p', cText({ class: 'note' }), rich(q.explanation)) : null,
+    q.explanation ? content('p', { class: 'note' }, q.explanation) : null,
     q.source?.page !== undefined ? h('p', { class: 'note note--source' }, t('pageN', { p: q.source.page })) : null,
   ];
 }
@@ -460,7 +570,7 @@ function verdictBar(q, response, last) {
     detail = h('p', { class: 'verdict__detail' }, t('v.matched', { r: right, n: q.pairs.length }));
   } else if (!ok) {
     detail = h('p', { class: 'verdict__detail' }, t('answerLabel'), ' ',
-      h('strong', q.type === 'tf' ? {} : cText(), q.type === 'tf' ? t(q.answer ? 'true' : 'false') : rich(correctAnswerText(q))));
+      (q.type === 'tf' ? h('strong', {}, t(q.answer ? 'true' : 'false')) : answerContent('strong', correctAnswerText(q))));
   }
   return h('footer', { class: `bar bar--verdict ${ok ? 'is-right' : 'is-wrong'}` },
     h('div', { class: 'verdict', role: 'status' },
@@ -584,9 +694,9 @@ function questionView() {
     body: [
       h('section', { class: 'card qcard' },
         h('p', { class: 'qcard__hint' }, h('span', { class: 'qcard__type' }, typeLabel(q.type)), h('span', {}, t(`hint.${q.type}`))),
-        h('p', cText({ class: 'qcard__prompt' }),
-          q.type === 'matching' ? q.title
-            : promptContent(q.prompt, q.type === 'fib' ? { word: response, state: revealed ? (isCorrect(q, response) ? 'right' : 'wrong') : null } : null)),
+        q.type === 'matching' ? content('p', { class: 'qcard__prompt' }, q.title)
+          : content('p', { class: 'qcard__prompt' }, q.prompt, (text, opts) => promptContent(text,
+            q.type === 'fib' ? { word: response, state: revealed ? (isCorrect(q, response) ? 'right' : 'wrong') : null } : null, opts)),
         figure(q)),
       answers,
     ],
@@ -752,7 +862,7 @@ function openReview(focusNumber) {
 function reviewEntry({ item, response, correct, answered }, n) {
   const q = item.question;
   const status = correct ? 'is-right' : answered ? 'is-wrong' : 'is-skip';
-  const shown = (text) => (q.type === 'tf' ? h('dd', {}, text === 'True' ? t('true') : t('false')) : h('dd', cText(), rich(text)));
+  const shown = (text) => (q.type === 'tf' ? h('dd', {}, text === 'True' ? t('true') : t('false')) : answerContent('dd', text));
   const body =
     q.type === 'matching'
       ? h('ul', cText({ class: 'rpairs' }),
@@ -760,7 +870,7 @@ function reviewEntry({ item, response, correct, answered }, n) {
             const ok = matchingResults(q, response)[i];
             const chosen = Array.isArray(response) && response[i];
             return h('li', { class: ok ? 'is-right' : 'is-wrong' },
-              h('span', { class: 'rpairs__left' }, rich(p.left)),
+              pairLeft('rpairs__left', p.left),
               h('span', { class: 'rpairs__right' },
                 ok ? p.right : [chosen ? h('s', {}, chosen) : h('em', { lang: document.documentElement.lang }, t('rev.none')), ' ', h('strong', {}, p.right)]));
           }))
@@ -773,7 +883,7 @@ function reviewEntry({ item, response, correct, answered }, n) {
       h('span', { class: 'rcard__num' }, String(n)),
       h('span', {}, typeLabel(q.type)),
       h('span', { class: 'rcard__state' }, answered ? icon(...(correct ? ICONS.check : ICONS.cross)) : null, t(correct ? 'st.correct' : answered ? 'st.wrong' : 'st.skipped'))),
-    h('p', cText({ class: 'rcard__prompt' }), q.type === 'matching' ? q.title : promptContent(q.prompt)),
+    content('p', { class: 'rcard__prompt' }, q.type === 'matching' ? q.title : q.prompt, (text, opts) => promptContent(text, null, opts)),
     figure(q),
     body,
     notes(q));

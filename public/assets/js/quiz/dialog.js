@@ -41,7 +41,8 @@ export function openSheet({ title, build, closeLabel = 'Close' }) {
   let dialog;
   const close = (value = '') => dialog.close(value);
   dialog = h('dialog', { class: 'dialog dialog--sheet', 'aria-labelledby': 'sheet-title' },
-    h('div', { class: 'dialog__panel' },
+    // The sheet itself takes focus on open (not its Close button, which would show a focus ring for no reason).
+    h('div', { class: 'dialog__panel', tabindex: '-1', autofocus: true },
       h('div', { class: 'sheet__head' },
         h('h2', { class: 'dialog__title', id: 'sheet-title' }, title),
         h('button', { type: 'button', class: 'btn btn--quiet sheet__close', onclick: () => close() }, closeLabel)),
