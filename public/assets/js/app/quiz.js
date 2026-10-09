@@ -88,6 +88,9 @@ const enterQuizHistory = () =>
 const inRun = () => state.screen === 'quiz' && state.run && !state.run.finishedAt;
 
 /** Called by the router before it handles Back. Returns true when the quiz handled it. */
+/** True on a topic's setup screen: no quiz on screen, so a reload loses nothing. */
+export const quizIdle = () => state.screen === 'setup';
+
 export function handlePop() {
   if (inRun()) {
     history.pushState({ screen: 'quiz' }, '');
