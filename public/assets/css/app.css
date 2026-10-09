@@ -59,7 +59,7 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--accent);outline
 @media(hover:hover){.iconbtn:hover,.pillbtn:not(.pillbtn--score):hover{background:var(--tint);border-color:var(--line-strong)}}
 
 /* Bottom action bar */
-.bar{flex:none;display:grid;gap:10px;padding:10px max(var(--pad),calc((100% - var(--content)) / 2)) max(10px,env(safe-area-inset-bottom));background:var(--card);border-top:1px solid var(--line)}
+.bar{flex:none;display:grid;grid-template-columns:minmax(0,1fr);gap:10px;padding:10px max(var(--pad),calc((100% - var(--content)) / 2)) max(10px,env(safe-area-inset-bottom));background:var(--card);border-top:1px solid var(--line)}
 .bar--split{grid-template-columns:auto 1fr}
 .bar--even{grid-template-columns:1fr 1fr}
 .bar--even .btn{padding:0 12px}
@@ -187,8 +187,18 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--accent);outline
 .pair.is-wrong{border-color:var(--wrong-line);background:var(--wrong-bg)}
 .pair__left{font:700 14px/1.35 var(--ui);color:var(--ink)}
 .pair__pick{display:flex;align-items:center;gap:8px;min-width:0}
-.pair select{flex:1;width:100%;min-width:0;min-height:44px;padding:0 34px 0 11px;border:1px solid var(--line-strong);border-radius:var(--r-sm);background:var(--soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23475569' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 10px center/16px;font:500 16px/1.3 var(--ui);color:var(--text);text-overflow:ellipsis;appearance:none;-webkit-appearance:none}
-.pair select:disabled{opacity:1;background-image:none;background-color:var(--card);padding-right:11px;color:var(--text)}
+.pick{flex:1;display:flex;align-items:center;gap:8px;width:100%;min-width:0;min-height:44px;padding:8px 11px;border:1px solid var(--line-strong);border-radius:var(--r-sm);background:var(--soft);font:500 15px/1.35 var(--ui);color:var(--text);text-align:start;cursor:pointer}
+.pick__text{flex:1;min-width:0}
+/* The picked text keeps its own reading direction (dir=auto) but sits on the picker's side. */
+.pick[dir=rtl] .pick__text{text-align:right}
+.pick[dir=ltr] .pick__text{text-align:left}
+.pick.is-empty .pick__text{color:var(--muted)}
+.pick__chev svg{display:block;width:16px;height:16px;fill:none;stroke:var(--muted);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.pick:disabled{cursor:default;background:var(--card);color:var(--text)}
+.picklist{display:grid;grid-template-columns:minmax(0,1fr);gap:8px}
+.unpick[hidden]{display:none}
+.unpick{flex:none;display:grid;place-items:center;width:30px;height:30px;padding:0;border:0;border-radius:999px;background:var(--wrong-bg);color:var(--wrong);cursor:pointer}
+.unpick svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round}
 .pair__mark svg{display:block;width:20px;height:20px;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .pair.is-right .pair__mark svg{stroke:var(--right)}
 .pair.is-wrong .pair__mark svg{stroke:var(--wrong)}
@@ -199,13 +209,13 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--accent);outline
 .bar--verdict{gap:10px;padding-top:12px;border-top-width:2px;animation:rise 200ms ease-out}
 .bar--verdict.is-right{background:var(--right-bg);border-top-color:var(--right-line)}
 .bar--verdict.is-wrong{background:var(--wrong-bg);border-top-color:var(--wrong-line)}
-@keyframes rise{from{transform:translateY(16px);opacity:.5}to{transform:none;opacity:1}}
+@keyframes rise{from{transform:translateY(16px)}to{transform:none}}
 .verdict{display:flex;align-items:flex-start;gap:10px;min-width:0}
 .verdict__icon{display:grid;place-items:center;flex:none;width:28px;height:28px;border-radius:50%;color:#fff}
 .is-right .verdict__icon{background:var(--right)}
 .is-wrong .verdict__icon{background:var(--wrong)}
 .verdict__icon svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.verdict__copy{display:grid;gap:2px;min-width:0;padding-top:3px}
+.verdict__copy{flex:1;display:grid;grid-template-columns:minmax(0,1fr);gap:2px;min-width:0;padding-top:3px}
 .verdict__title{margin:0;font:800 16px/1.25 var(--ui)}
 .is-right .verdict__title{color:var(--right-ink)}
 .is-wrong .verdict__title{color:var(--wrong-ink)}
@@ -216,6 +226,9 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--accent);outline
 .is-wrong .btn--verdict{background:var(--wrong);box-shadow:0 6px 14px -6px rgba(220,38,38,.5)}
 .note{margin:0;font:400 13.5px/1.5 var(--ui);color:var(--text)}
 .note--source{color:var(--muted);font-size:12.5px}
+/* Arabic content split into Arabic lines and formula lines (quiz.js mixedLines). */
+.lines>.line{display:block}
+.lines>.line+.line{margin-top:2px}
 
 /* ---------- Results ---------- */
 .score{display:flex;align-items:center;gap:16px;padding:14px var(--pad)}
@@ -269,7 +282,7 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--accent);outline
 .pagebar__meter span{display:block;height:100%;background:var(--primary);transform-origin:var(--start);transition:transform 260ms ease}
 .qcount strong{font-weight:800}
 .review{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:minmax(0,1fr);gap:10px}
-.rcard{display:grid;gap:9px;padding:12px var(--pad) 14px;scroll-margin-top:12px}
+.rcard{display:grid;grid-template-columns:minmax(0,1fr);gap:9px;padding:12px var(--pad) 14px;scroll-margin-top:12px}
 .rcard:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 .rcard__meta{display:flex;align-items:center;gap:8px;margin:0;font:600 12px/1 var(--ui);color:var(--muted)}
 .rcard__num{display:grid;place-items:center;min-width:24px;height:24px;padding:0 6px;border-radius:var(--r-sm);border:1px solid var(--line);background:var(--soft);font-weight:800;color:var(--ink);font-variant-numeric:tabular-nums}
@@ -280,15 +293,15 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--accent);outline
 .rcard.is-skip .rcard__state{color:var(--muted);background:var(--soft)}
 .rcard__prompt{margin:0;font:700 15px/1.45 var(--ui);color:var(--ink);overflow-wrap:anywhere}
 .rcard__prompt .gap{width:3em}
-.rans{display:grid;gap:6px;margin:0;padding:10px 12px;border-radius:var(--r-ctl);background:var(--soft);border:1px solid var(--line)}
-.rans div{display:grid;gap:1px}
+.rans{display:grid;grid-template-columns:minmax(0,1fr);gap:6px;margin:0;padding:10px 12px;border-radius:var(--r-ctl);background:var(--soft);border:1px solid var(--line)}
+.rans div{display:grid;grid-template-columns:minmax(0,1fr);gap:1px}
 .rans dt{font:600 11.5px/1.3 var(--ui);color:var(--muted)}
 .rans dd{margin:0;font:600 14px/1.4 var(--ui);overflow-wrap:anywhere}
 .rans .is-right dd{color:var(--right-ink)}
 .rans .is-wrong dd{color:var(--wrong-ink)}
 .rans em,.rpairs em{font-style:normal;font-weight:500;color:var(--faint)}
-.rpairs{list-style:none;display:grid;gap:7px;margin:0;padding:10px 12px;border-radius:var(--r-ctl);background:var(--soft);border:1px solid var(--line)}
-.rpairs li{display:grid;gap:1px;font:500 13.5px/1.4 var(--ui)}
+.rpairs{list-style:none;display:grid;grid-template-columns:minmax(0,1fr);gap:7px;margin:0;padding:10px 12px;border-radius:var(--r-ctl);background:var(--soft);border:1px solid var(--line)}
+.rpairs li{display:grid;grid-template-columns:minmax(0,1fr);gap:1px;font:500 13.5px/1.4 var(--ui)}
 .rpairs__left{font-weight:700;color:var(--ink)}
 .rpairs .is-right .rpairs__right{color:var(--right-ink)}
 .rpairs s{color:var(--wrong-ink)}
@@ -298,8 +311,9 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--accent);outline
 .dialog{width:min(380px,calc(100% - 32px));max-height:calc(100dvh - 32px);margin:auto;padding:0;border:1px solid var(--line);border-radius:var(--r-lg);background:var(--card);color:var(--text);box-shadow:0 24px 60px #0A161447}
 .dialog::backdrop{background:#0A161480}
 .dialog[open]{animation:pop 170ms ease-out}
-@keyframes pop{from{transform:scale(.97);opacity:0}to{transform:none;opacity:1}}
-.dialog__panel{display:grid;gap:6px;padding:20px}
+@keyframes pop{from{transform:scale(.97)}to{transform:none}}
+.dialog__panel{display:grid;grid-template-columns:minmax(0,1fr);gap:6px;padding:20px}
+.dialog__panel:focus{outline:none}
 .dialog__title{margin:0;font:800 18px/1.3 var(--ui);color:var(--ink)}
 .dialog__text{margin:0;font:400 14.5px/1.5 var(--ui);color:var(--muted)}
 .dialog__actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
@@ -507,9 +521,14 @@ a.card:active,button.card:active{transform:scale(.99)}
 [lang=en]{--ui:var(--english)}
 body{font-family:var(--ui)}
 [dir=rtl] .qcard__prompt,[dir=rtl] .option,[dir=rtl] .pairs,[dir=rtl] .rcard__prompt,[dir=rtl] .rpairs{font-family:var(--english)}
-/* English content inside the Arabic interface: Safari resolves an inherited "start" against the parent's
-   direction, so pin it explicitly. */
+/* Content keeps its own direction whatever the interface language (English content in the Arabic interface,
+   Arabic content in the English one): Safari resolves an inherited "start" against the parent's direction, and
+   the root's own alignment is inherited, so pin both explicitly. */
 [lang=en][dir=ltr]{text-align:left}
+[lang=ar][dir=rtl]{text-align:right}
+
+/* theme.js: no transitions while the theme flips, so every colour changes in the same frame. */
+.theme-switch,.theme-switch *,.theme-switch *::before,.theme-switch *::after{transition:none!important;animation:none!important}
 
 [data-theme=dark]{
   color-scheme:dark;
@@ -531,7 +550,6 @@ body{background:var(--canvas);color:var(--text)}
 [data-theme=dark] .hdr__brand .logo--dark{display:block}
 [data-theme=dark] .attention__row{background:rgba(0,0,0,.2)}
 [data-theme=dark] .btn--light{background:#fff}
-[data-theme=dark] .pair select{color-scheme:dark}
 [data-theme=dark] .dialog::backdrop{background:rgba(0,0,0,.65)}
 
 /* ---------- Tablets and iPad portrait (700px+) ---------- */
