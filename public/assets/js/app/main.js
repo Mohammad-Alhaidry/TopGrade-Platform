@@ -3,7 +3,7 @@
 
 import { startRouter, currentRoute, setNavigationGuard, navigate } from './router.js';
 import { loadCatalog, findCourse, findTopic, loadTopicBank } from './catalog.js';
-import { openTopic, handlePop, allowNavigation, rerender } from './quiz.js';
+import { openTopic, handlePop, allowNavigation, rerender, quizIdle } from './quiz.js';
 import { showHome } from './views/home.js';
 import { showCourses } from './views/courses.js';
 import { showCourse } from './views/course.js';
@@ -47,7 +47,8 @@ async function render(route) {
     const { name, params } = route;
     if (name === 'moved') return navigate(params.to, { replace: true });
     document.title = pageTitle(route, ctx.catalog, lang());
-    if (SAFE_TO_UPDATE.has(name) && applyUpdateIfReady()) return; // reloads into the new version
+    // Any move to another page leaves the current screen anyway: switch to a downloaded update now.
+    if (applyUpdateIfReady()) return; // reloads into the new version
     if (name === 'home') return await showHome(ctx);
     if (name === 'courses') return await showCourses(ctx);
     if (name === 'review') return await showReview(ctx);
@@ -87,8 +88,15 @@ setNavigationGuard(allowNavigation);
 startRouter(render, handlePop);
 
 // An update that finishes downloading while the student is on a safe screen is applied straight away.
+// Safe = nothing on screen would be lost by a reload: any page but a quiz in progress (its question, results or
+// answer review); a topic's setup screen is safe.
+const safeToUpdate = () => SAFE_TO_UPDATE.has(currentRoute().name) || (currentRoute().name === 'topic' && quizIdle());
 onUpdateReady(() => {
-  if (SAFE_TO_UPDATE.has(currentRoute().name)) applyUpdateIfReady();
+  if (safeToUpdate()) applyUpdateIfReady();
+});
+// An app brought back from the background (phones keep it open for days) takes a waiting update at once.
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'visible' && safeToUpdate()) applyUpdateIfReady();
 });
 registerServiceWorker();
 
