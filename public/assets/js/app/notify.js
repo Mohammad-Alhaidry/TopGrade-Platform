@@ -9,6 +9,7 @@ import { track } from './analytics.js';
 
 const COURSES_KEY = 'topgrade.push.courses';
 const INVITED_KEY = 'topgrade.push.invited';
+const SYNCED_KEY = 'topgrade.push.synced';
 const API = new URL('api/push/', document.baseURI).href;
 
 const read = (key, fallback) => {
@@ -91,6 +92,7 @@ export async function follow(courseId) {
     const courses = [...new Set([...followed(), courseId])];
     await post('subscribe', { subscription: sub.toJSON(), courses, lang: lang() });
     write(COURSES_KEY, courses);
+    write(SYNCED_KEY, Date.now());
     track('push_follow', { course: courseId });
     return 'on';
   } catch (err) {
@@ -123,3 +125,35 @@ export async function shouldInvite(courseId) {
   return !(await isFollowing(courseId));
 }
 export const markInvited = (courseId) => write(INVITED_KEY, [...new Set([...read(INVITED_KEY, []), courseId])]);
+
+/** The app was opened from a notification (its link ends in ?n=<id>): count the tap, then tidy the address. */
+export function reportOpen() {
+  const url = new URL(location.href);
+  const id = Number(url.searchParams.get('n'));
+  if (!Number.isInteger(id) || id <= 0) return;
+  url.searchParams.delete('n');
+  history.replaceState(history.state, '', url.pathname + url.search + url.hash);
+  track('push_open', { id });
+  post('click', { id }).catch(() => {});
+}
+
+/**
+ * At startup (at most once a day): re-register this device's courses with the server, as native apps re-send their
+ * push token on launch. Repairs a subscription the server dropped, and clears the bell if the browser no longer
+ * has one (notifications turned off in the settings, site data cleared).
+ */
+export async function syncSubscription() {
+  const courses = followed();
+  if (!courses.length || Date.now() - read(SYNCED_KEY, 0) < 24 * 3600 * 1000) return;
+  try {
+    const sub = await subscription();
+    if (!sub) {
+      write(COURSES_KEY, []);
+      return;
+    }
+    await post('subscribe', { subscription: sub.toJSON(), courses, lang: lang() });
+    write(SYNCED_KEY, Date.now());
+  } catch {
+    /* offline: try again next time */
+  }
+}

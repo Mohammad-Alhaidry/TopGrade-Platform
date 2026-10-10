@@ -96,7 +96,17 @@ async function deliver(site, { title, body, url, course, test }) {
   const record = { id, site, created: now, title, body, url, course: course || null, test: test ? 1 : 0, total: rows.length, delivered: 0, failed: 0, removed: 0, clicks: 0 };
   store.sends.push(record);
   save();
-  const payload = JSON.stringify({ id, title, body, url, tag: course ? `course-${course}` : 'smartpro' });
+  // Declarative Web Push (Safari 18.4+ on iPhone/iPad Home Screen apps and Mac): the browser shows the notification
+  // itself from "notification", even if the service worker fails. Other browsers ignore those fields and our
+  // service worker shows it from the same message. The link carries ?n=<id> so the app counts the tap.
+  const tag = course ? `course-${course}` : 'smartpro';
+  const open = new URL(url);
+  open.searchParams.set('n', String(id));
+  const payload = JSON.stringify({
+    web_push: 8030,
+    notification: { title, body, navigate: open.href, lang: 'ar', dir: 'auto', tag },
+    id, title, body, url: open.href, tag,
+  });
 
   let delivered = 0, failed = 0, removed = 0;
   const queue = [...rows];

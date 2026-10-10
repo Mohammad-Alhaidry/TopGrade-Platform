@@ -10,12 +10,21 @@ import { follow, unfollow, isFollowing, seemsFollowing, shouldInvite, markInvite
 /** Explains why following did not happen; true when it did. */
 function explain(result) {
   if (result === 'on') return true;
-  if (result === 'install' || result === 'blocked') {
+  if (result === 'install') {
+    // iPhone/iPad: Apple delivers notifications only to an app added to the Home Screen, never to a Safari tab.
     openSheet({
-      title: t(result === 'install' ? 'push.installTitle' : 'push.blockedTitle'),
+      title: t('push.installTitle'),
       closeLabel: t('close'),
-      build: () => h('p', { class: 'sheet__text' }, t(result === 'install' ? 'push.installText' : 'push.blockedText')),
+      build: () => [
+        h('p', { class: 'sheet__text' }, t('push.installText')),
+        h('ol', { class: 'install__steps push-steps' },
+          h('li', {}, t('inst.tap'), ' ', h('span', { class: 'install__key', 'aria-label': t('inst.share') }, icon(...ICONS.share)), ' ', t('inst.shareBar')),
+          h('li', {}, t('inst.choose'), ' ', h('strong', {}, t('inst.addHome')), ' ', h('span', { class: 'install__key', 'aria-hidden': 'true' }, icon(...ICONS.addSquare))),
+          h('li', {}, t('push.installStep3'))),
+      ],
     });
+  } else if (result === 'blocked') {
+    openSheet({ title: t('push.blockedTitle'), closeLabel: t('close'), build: () => h('p', { class: 'sheet__text' }, t('push.blockedText')) });
   } else toast(t(result === 'denied' ? 'push.denied' : result === 'none' ? 'push.none' : 'push.error'));
   return false;
 }
