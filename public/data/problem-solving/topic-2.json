@@ -22,7 +22,7 @@
         "Only stores data permanently"
       ],
       "answer": "B",
-      "explanation": "The slides define a computer as \"an electronic device that stores and processes data.\"",
+      "explanation": "The course defines a computer as \"an electronic device that stores and processes data.\"",
       "source": {
         "page": 2,
         "part": 1
@@ -73,7 +73,7 @@
         "Output devices"
       ],
       "answer": "A",
-      "explanation": "The slides list communication devices \"such as modems and network interface cards.\"",
+      "explanation": "The course lists communication devices \"such as modems and network interface cards.\"",
       "source": {
         "page": 2,
         "part": 1
@@ -117,7 +117,7 @@
         "A bus"
       ],
       "answer": "D",
-      "explanation": "The slides state that a computer's components are interconnected by a subsystem called a bus.",
+      "explanation": "The course states that a computer's components are interconnected by a subsystem called a bus.",
       "source": {
         "page": 3,
         "part": 1
@@ -161,7 +161,7 @@
         "The permanent store of programs and data"
       ],
       "answer": "A",
-      "explanation": "The slides call the CPU \"the brain of a computer.\"",
+      "explanation": "The course calls the CPU \"the brain of a computer.\"",
       "source": {
         "page": 5,
         "part": 1
@@ -195,7 +195,7 @@
         "Dot pitch"
       ],
       "answer": "B",
-      "explanation": "The slides state that the CPU speed is measured in megahertz (MHz).",
+      "explanation": "The course states that the CPU speed is measured in megahertz (MHz).",
       "source": {
         "page": 5,
         "part": 1
@@ -246,7 +246,7 @@
         "An ordered sequence of bytes"
       ],
       "answer": "D",
-      "explanation": "The slides define a memory unit as an ordered sequence of bytes, each holding eight bits.",
+      "explanation": "The course defines a memory unit as an ordered sequence of bytes, each holding eight bits.",
       "source": {
         "page": 7,
         "part": 1
@@ -291,7 +291,7 @@
       "type": "tf",
       "prompt": "A program and its data must be brought to memory before they can be executed.",
       "answer": true,
-      "explanation": "The slide says a program and its data must be brought to memory before they can be executed; storage devices only keep them permanently.",
+      "explanation": "The course says a program and its data must be brought to memory before they can be executed; storage devices only keep them permanently.",
       "source": {
         "page": 7,
         "part": 1
@@ -308,7 +308,7 @@
         "It sends data from the computer to the user"
       ],
       "answer": "B",
-      "explanation": "The slides say memory is volatile because information is lost when the power is off.",
+      "explanation": "The course says memory is volatile because information is lost when the power is off.",
       "source": {
         "page": 9,
         "part": 1
@@ -523,7 +523,7 @@
         "Communicate with the computer"
       ],
       "answer": "D",
-      "explanation": "The slides state that input and output devices let the user communicate with the computer.",
+      "explanation": "The course states that input and output devices let the user communicate with the computer.",
       "source": {
         "page": 13,
         "part": 1
@@ -602,7 +602,7 @@
         "A communication device"
       ],
       "answer": "B",
-      "explanation": "The microphone appears on the Input Devices slide because it sends data to the computer.",
+      "explanation": "The microphone appears among the input devices because it sends data to the computer.",
       "source": {
         "page": 14,
         "part": 1
@@ -611,7 +611,7 @@
     {
       "id": "t2a-match-004",
       "type": "matching",
-      "title": "Match each device with its group, as shown in the slides",
+      "title": "Match each device with its group",
       "pairs": [
         {
           "left": "Microphone",
@@ -646,7 +646,7 @@
         "Only quantum computers"
       ],
       "answer": "B",
-      "explanation": "The slides state that the Von Neumann architecture is the foundation for nearly all modern computers.",
+      "explanation": "The course states that the Von Neumann architecture is the foundation for nearly all modern computers.",
       "source": {
         "page": 5,
         "part": 2
@@ -697,7 +697,7 @@
         "Mass data storage"
       ],
       "answer": "B",
-      "explanation": "The slide says the ALU and control unit are often bundled inside the central processing unit (CPU); memory and I/O are separate subsystems.",
+      "explanation": "The course says the ALU and control unit are often bundled inside the central processing unit (CPU); memory and I/O are separate subsystems.",
       "source": {
         "page": 5,
         "part": 2
@@ -725,7 +725,7 @@
       "type": "tf",
       "prompt": "In the Von Neumann architecture, memory is bundled inside the CPU together with the ALU and the control unit.",
       "answer": false,
-      "explanation": "Figure 5.3 shows the CPU contains only the control unit and the ALU; memory and input-output are separate subsystems.",
+      "explanation": "The CPU contains only the control unit and the ALU; memory and input-output are separate subsystems.",
       "source": {
         "page": 6,
         "part": 2
@@ -804,7 +804,7 @@
         "8 bits"
       ],
       "answer": "D",
-      "explanation": "The slide says cell size/memory width is typically 8 bits.",
+      "explanation": "The course says cell size/memory width is typically 8 bits.",
       "source": {
         "page": 7,
         "part": 2
@@ -1142,7 +1142,7 @@
         "4-to-16"
       ],
       "answer": "D",
-      "explanation": "Figure 5.6 shows 4 input lines from the MAR and 2^4 = 16 output lines: a 4-to-16 decoder circuit.",
+      "explanation": "4 input lines from the MAR and 2^4 = 16 output lines: a 4-to-16 decoder circuit.",
       "source": {
         "page": 11,
         "part": 2
@@ -1159,7 +1159,7 @@
         "A row selection line and a column selection line"
       ],
       "answer": "D",
-      "explanation": "Figure 5.7 shows two-dimensional memory organized by row selection lines and column selection lines.",
+      "explanation": "Two-dimensional memory organized by row selection lines and column selection lines.",
       "source": {
         "page": 11,
         "part": 2
@@ -1210,7 +1210,7 @@
         "I/O devices became faster than the CPU"
       ],
       "answer": "B",
-      "explanation": "The slide says RAM speeds increased more slowly than CPU speeds, so fast cache is built into the CPU.",
+      "explanation": "The course says RAM speeds increased more slowly than CPU speeds, so fast cache is built into the CPU.",
       "source": {
         "page": 12,
         "part": 2
@@ -1238,7 +1238,7 @@
       "type": "tf",
       "prompt": "Using the principle of locality, the neighbors of accessed values are loaded into cache and recent values are kept there.",
       "answer": true,
-      "explanation": "The slide says: load neighbors into cache and keep recent values there.",
+      "explanation": "The course says: load neighbors into cache and keep recent values there.",
       "source": {
         "page": 12,
         "part": 2
@@ -1381,7 +1381,7 @@
         "hold the address of the next instruction; holds the current instruction"
       ],
       "answer": "B",
-      "explanation": "Figure 5.16 shows registers A and B feeding the ALU, and the ALU output going to register C.",
+      "explanation": "Registers A and B feeding the ALU, and the ALU output going to register C.",
       "source": {
         "page": 14,
         "part": 2
@@ -1522,7 +1522,7 @@
       "type": "tf",
       "prompt": "The stored program characteristic of the Von Neumann architecture means that programs are encoded in binary and stored in the computer's memory.",
       "answer": true,
-      "explanation": "The control unit slide states the stored program characteristic: programs are encoded in binary and stored in the computer's memory.",
+      "explanation": "The course states the stored program characteristic: programs are encoded in binary and stored in the computer's memory.",
       "source": {
         "page": 15,
         "part": 2
@@ -1533,7 +1533,7 @@
       "type": "tf",
       "prompt": "In machine language, sequences of instructions encode algorithms.",
       "answer": true,
-      "explanation": "The slide says sequences of instructions encode algorithms.",
+      "explanation": "The course says sequences of instructions encode algorithms.",
       "source": {
         "page": 16,
         "part": 2
@@ -1550,7 +1550,7 @@
         "It tells the processor which operations it can perform"
       ],
       "answer": "D",
-      "explanation": "An instruction set is the set of instructions implemented by a particular chip, i.e. the operations it can perform.",
+      "explanation": "An instruction set is the set of instructions implemented by a particular chip, i.e. The operations it can perform.",
       "source": {
         "page": 16,
         "part": 2
@@ -1567,7 +1567,7 @@
         "Only RISC processors can run machine language"
       ],
       "answer": "A",
-      "explanation": "The slide says each kind of processor has a different instruction set, so it speaks a different language.",
+      "explanation": "The course says each kind of processor has a different instruction set, so it speaks a different language.",
       "source": {
         "page": 16,
         "part": 2
@@ -1610,7 +1610,7 @@
     {
       "id": "t2b-mcq-038",
       "type": "mcq",
-      "prompt": "According to the slides, modern hardware is:",
+      "prompt": "Modern hardware is:",
       "options": [
         "Purely RISC",
         "Purely CISC",
@@ -1618,7 +1618,7 @@
         "A compromise between RISC and CISC"
       ],
       "answer": "D",
-      "explanation": "The slide says modern hardware is a compromise between RISC and CISC.",
+      "explanation": "The course says modern hardware is a compromise between RISC and CISC.",
       "source": {
         "page": 17,
         "part": 2
@@ -1746,7 +1746,7 @@
       "type": "tf",
       "prompt": "Modern hardware is a compromise between RISC and CISC.",
       "answer": true,
-      "explanation": "The slide says modern hardware is a compromise between RISC and CISC.",
+      "explanation": "The course says modern hardware is a compromise between RISC and CISC.",
       "source": {
         "page": 17,
         "part": 2
@@ -1858,7 +1858,7 @@
         "MAR and MDR"
       ],
       "answer": "A",
-      "explanation": "Figure 5.22 shows the IR made of the op code and the address field(s).",
+      "explanation": "The IR made of the op code and the address field(s).",
       "source": {
         "page": 19,
         "part": 2
@@ -1920,7 +1920,7 @@
       "type": "tf",
       "prompt": "The execute phase is the same for every instruction.",
       "answer": false,
-      "explanation": "The slide says the execute phase is different for each instruction.",
+      "explanation": "The course says the execute phase is different for each instruction.",
       "source": {
         "page": 20,
         "part": 2
@@ -1975,7 +1975,7 @@
       "type": "tf",
       "prompt": "A Von Neumann machine repeats the fetch/decode/execute cycle until a HALT instruction or an error.",
       "answer": true,
-      "explanation": "The slide says the machine repeats the fetch/decode/execute phase until a HALT instruction or error.",
+      "explanation": "The course says the machine repeats the fetch/decode/execute phase until a HALT instruction or error.",
       "source": {
         "page": 20,
         "part": 2
@@ -1992,7 +1992,7 @@
         "Memory unit"
       ],
       "answer": "D",
-      "explanation": "Figure 5.24 places MAR, MDR, memory decoder circuits, and the fetch/store controller in the memory unit.",
+      "explanation": "MAR, MDR, memory decoder circuits, and the fetch/store controller in the memory unit.",
       "source": {
         "page": 21,
         "part": 2
@@ -2009,7 +2009,7 @@
         "The I/O controller and the I/O device"
       ],
       "answer": "A",
-      "explanation": "Figure 5.24 shows the PC, IR, and instruction decoder circuit in the control unit.",
+      "explanation": "The PC, IR, and instruction decoder circuit in the control unit.",
       "source": {
         "page": 21,
         "part": 2
@@ -2043,7 +2043,7 @@
         "Instruction sets become too small"
       ],
       "answer": "A",
-      "explanation": "The slide says the speed of light pertains to signals through wire, gates cannot be put much closer, and heat production increases too fast.",
+      "explanation": "The course says the speed of light pertains to signals through wire, gates cannot be put much closer, and heat production increases too fast.",
       "source": {
         "page": 22,
         "part": 2
@@ -2077,7 +2077,7 @@
         "The Von Neumann cycle"
       ],
       "answer": "C",
-      "explanation": "The slide says most non-Von Neumann architectures are experimental/theoretical, EXCEPT parallel processing.",
+      "explanation": "The course says most non-Von Neumann architectures are experimental/theoretical, EXCEPT parallel processing.",
       "source": {
         "page": 23,
         "part": 2

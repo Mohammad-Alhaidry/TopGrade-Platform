@@ -22,7 +22,7 @@
         "hardware"
       ],
       "answer": "A",
-      "explanation": "The slide says: computer programs, known as software, are instructions to the computer.",
+      "explanation": "The course says: computer programs, known as software, are instructions to the computer.",
       "source": {
         "page": 2,
         "part": 1
@@ -39,7 +39,7 @@
         "A virtual machine"
       ],
       "answer": "B",
-      "explanation": "The slide states that without programs, a computer is an empty machine.",
+      "explanation": "The course states that without programs, a computer is an empty machine.",
       "source": {
         "page": 2,
         "part": 1
@@ -73,7 +73,7 @@
         "1101101010011010"
       ],
       "answer": "D",
-      "explanation": "The slide shows 1101101010011010 as a binary (machine language) instruction to add two numbers.",
+      "explanation": "The course shows 1101101010011010 as a binary (machine language) instruction to add two numbers.",
       "source": {
         "page": 3,
         "part": 1
@@ -135,7 +135,7 @@
         "print(\"Hello World\")"
       ],
       "answer": "A",
-      "explanation": "The slide gives ADD 2, 3, result as an example of assembly code for adding two numbers.",
+      "explanation": "The course gives ADD 2, 3, result as an example of assembly code for adding two numbers.",
       "source": {
         "page": 4,
         "part": 1
@@ -225,7 +225,7 @@
         "A machine-code file"
       ],
       "answer": "B",
-      "explanation": "The slide gives this as a high-level language statement (instruction).",
+      "explanation": "The course gives this as a high-level language statement (instruction).",
       "source": {
         "page": 5,
         "part": 1
@@ -236,7 +236,7 @@
       "type": "tf",
       "prompt": "Because the computer cannot understand high-level languages, a program called an interpreter or a compiler is used to convert them into machine code.",
       "answer": true,
-      "explanation": "Slide: \"Since the computer cannot understand high-level languages, however, a program called interpreter or compiler is used to convert high-level language programs into machine code.\"",
+      "explanation": "\"Since the computer cannot understand high-level languages, however, a program called interpreter or compiler is used to convert high-level language programs into machine code.\"",
       "source": {
         "page": 5,
         "part": 1
@@ -293,7 +293,7 @@
         "An assembler is needed to run high-level languages such as Python"
       ],
       "answer": "C",
-      "explanation": "Slides: an assembler converts assembly language programs into machine code; an interpreter or compiler converts high-level language programs into machine code. Option B is false because an interpreter translates and executes one statement at a time.",
+      "explanation": "An assembler converts assembly language programs into machine code; an interpreter or compiler converts high-level language programs into machine code. Option B is false because an interpreter translates and executes one statement at a time.",
       "source": {
         "page": 5,
         "part": 1
@@ -310,7 +310,7 @@
         "Binary code"
       ],
       "answer": "A",
-      "explanation": "Slide: \"The high-level languages are English-like and easy to learn and program.\" Machine language is binary code, and assembly language is still tedious to write.",
+      "explanation": "\"The high-level languages are English-like and easy to learn and program.\" Machine language is binary code, and assembly language is still tedious to write.",
       "source": {
         "page": 5,
         "part": 1
@@ -362,7 +362,7 @@
         "Primitive instructions"
       ],
       "answer": "C",
-      "explanation": "The slide says the instructions in a high-level programming language are called statements.",
+      "explanation": "The course says the instructions in a high-level programming language are called statements.",
       "source": {
         "page": 7,
         "part": 1
@@ -413,7 +413,7 @@
         "Exactly one machine instruction"
       ],
       "answer": "B",
-      "explanation": "The slide notes that a statement from the source code may be translated into several machine instructions.",
+      "explanation": "The course notes that a statement from the source code may be translated into several machine instructions.",
       "source": {
         "page": 8,
         "part": 1
@@ -441,7 +441,7 @@
         "Debugger"
       ],
       "answer": "B",
-      "explanation": "This is the slide definition of an interpreter. A compiler first translates the entire source code into a machine-code file.",
+      "explanation": "This is the definition of an interpreter. A compiler first translates the entire source code into a machine-code file.",
       "source": {
         "page": 8,
         "part": 1
@@ -452,7 +452,7 @@
       "type": "tf",
       "prompt": "An interpreter translates one statement into machine code or virtual machine code and then executes it right away.",
       "answer": true,
-      "explanation": "Slide: \"An interpreter reads one statement from the source code, translates it to the machine code or virtual machine code, and then executes it right away.\"",
+      "explanation": "\"An interpreter reads one statement from the source code, translates it to the machine code or virtual machine code, and then executes it right away.\"",
       "source": {
         "page": 8,
         "part": 1
@@ -486,7 +486,7 @@
         "Only a compiler can translate high-level language programs into machine code"
       ],
       "answer": "B",
-      "explanation": "An interpreter \"reads one statement ... translates it ... and then executes it right away\"; a compiler \"translates the entire source code into a machine-code file, and the machine-code file is then executed\". Both translate high-level languages; assembly language is translated by an assembler.",
+      "explanation": "An interpreter \"reads one statement ... Translates it ... And then executes it right away\"; a compiler \"translates the entire source code into a machine-code file, and the machine-code file is then executed\". Both translate high-level languages; assembly language is translated by an assembler.",
       "source": {
         "page": 9,
         "part": 1
@@ -497,7 +497,7 @@
       "type": "tf",
       "prompt": "A compiler translates the entire source code into a machine-code file, which is then executed.",
       "answer": true,
-      "explanation": "This is the slide's definition of compiling source code.",
+      "explanation": "This is the definition of compiling source code.",
       "source": {
         "page": 9,
         "part": 1
@@ -525,7 +525,7 @@
         "page": 9,
         "part": 1
       },
-      "explanation": "Assembler: assembly language to machine code (Topic 4 part 1, slide 24). Interpreter: one statement translated, then executed right away (slide 28). Compiler: the whole source code becomes a machine-code file that is then executed (slide 29)."
+      "explanation": "Assembler: assembly language to machine code. Interpreter: one statement translated, then executed right away. Compiler: the whole source code becomes a machine-code file that is then executed."
     },
     {
       "id": "t4-mcq-061",
@@ -538,7 +538,7 @@
         "Operating system"
       ],
       "answer": "A",
-      "explanation": "This is the slide definition of a compiler. An interpreter translates and executes one statement at a time; an assembler converts assembly language (not high-level source code) into machine code.",
+      "explanation": "This is the definition of a compiler. An interpreter translates and executes one statement at a time; an assembler converts assembly language (not high-level source code) into machine code.",
       "source": {
         "page": 9,
         "part": 1
@@ -626,7 +626,7 @@
       "type": "tf",
       "prompt": "Application programs such as an Internet browser and a word processor can run without an operating system.",
       "answer": false,
-      "explanation": "The slide says application programs cannot run without an operating system.",
+      "explanation": "The course says application programs cannot run without an operating system.",
       "source": {
         "page": 11,
         "part": 1
@@ -681,7 +681,7 @@
       "type": "tf",
       "prompt": "In a compiled language, the entire source code is compiled and then executed altogether.",
       "answer": true,
-      "explanation": "The slide contrasts Python (interpreted) with compiled languages, where the entire source code is compiled then executed.",
+      "explanation": "The course contrasts Python (interpreted) with compiled languages, where the entire source code is compiled then executed.",
       "source": {
         "page": 14,
         "part": 1
@@ -777,7 +777,7 @@
         "print(\"Hello World\")"
       ],
       "answer": "D",
-      "explanation": "print \"Hello World\" works only on Python 2; on Python 3 you write print(\"Hello World\").",
+      "explanation": "Print \"Hello World\" works only on Python 2; on Python 3 you write print(\"Hello World\").",
       "source": {
         "page": 17,
         "part": 1
@@ -828,7 +828,7 @@
         "25 to 40 percent"
       ],
       "answer": "D",
-      "explanation": "The slide says 25 to 40 percent of time is spent on problem specification and program design.",
+      "explanation": "The course says 25 to 40 percent of time is spent on problem specification and program design.",
       "source": {
         "page": 3,
         "part": 2
@@ -890,7 +890,7 @@
         "Feasibility study, program design, problem specification, coding"
       ],
       "answer": "C",
-      "explanation": "The slide lists a. Feasibility study, b. Problem specification, c. Program design, d. Algorithm selection or development, and analysis.",
+      "explanation": "The course lists a. Feasibility study, b. Problem specification, c. Program design, d. Algorithm selection or development, and analysis.",
       "source": {
         "page": 4,
         "part": 2
@@ -1058,7 +1058,7 @@
         "faster hardware"
       ],
       "answer": "B",
-      "explanation": "The coding slide states: better design = easier coding.",
+      "explanation": "The course states: better design = easier coding.",
       "source": {
         "page": 8,
         "part": 2
@@ -1131,7 +1131,7 @@
       "type": "tf",
       "prompt": "Logic errors are errors in the algorithm itself that give wrong results.",
       "answer": true,
-      "explanation": "That is the slide's definition of logic errors.",
+      "explanation": "That is the definition of logic errors.",
       "source": {
         "page": 8,
         "part": 2
@@ -1244,7 +1244,7 @@
       "type": "tf",
       "prompt": "Regression testing is done when a change occurs, to be sure the change did not introduce errors.",
       "answer": true,
-      "explanation": "That is the slide's definition of regression testing.",
+      "explanation": "That is the definition of regression testing.",
       "source": {
         "page": 9,
         "part": 2
@@ -1324,7 +1324,7 @@
       "type": "tf",
       "prompt": "Empirical testing means developing a test suite to check correctness.",
       "answer": true,
-      "explanation": "Slide: \"Empirical testing: develop a test suite to check correctness.\"",
+      "explanation": "\"Empirical testing: develop a test suite to check correctness.\"",
       "source": {
         "page": 9,
         "part": 2
@@ -1456,7 +1456,7 @@
     {
       "id": "t4-mcq-053",
       "type": "mcq",
-      "prompt": "The two models for the software development process presented in the slides are:",
+      "prompt": "The two models for the software development process presented in the course are:",
       "options": [
         "Compiler model and Interpreter model",
         "Feasibility model and Maintenance model",
@@ -1543,7 +1543,7 @@
         "The previous steps are never revisited"
       ],
       "answer": "C",
-      "explanation": "Options A, B and D are the three Waterfall points on the slide. \"A flexible and iterative approach\" describes the Agile model.",
+      "explanation": "Options A, B and D are the three Waterfall points on the course. \"A flexible and iterative approach\" describes the Agile model.",
       "source": {
         "page": 13,
         "part": 2
@@ -1644,7 +1644,7 @@
       "type": "tf",
       "prompt": "The Agile model is presented as an alternative to the Waterfall model.",
       "answer": true,
-      "explanation": "The slide says Agile is an alternative to the waterfall model.",
+      "explanation": "The course says Agile is an alternative to the waterfall model.",
       "source": {
         "page": 15,
         "part": 2
@@ -1777,7 +1777,7 @@
       "type": "tf",
       "prompt": "According to the summary, the Software Development Life Cycle is critical in developing and documenting a software product.",
       "answer": true,
-      "explanation": "This is stated in the Topic 4 Part 2 summary.",
+      "explanation": "This is stated in the course summary.",
       "source": {
         "page": 17,
         "part": 2
@@ -1788,7 +1788,7 @@
       "type": "tf",
       "prompt": "The Waterfall model and the Agile model have the same philosophy.",
       "answer": false,
-      "explanation": "Summary slide: \"The Waterfall model and Agile models have different philosophies.\" Waterfall is sequential; Agile is flexible and iterative and expects changes.",
+      "explanation": "Course summary: \"The Waterfall model and Agile models have different philosophies.\" Waterfall is sequential; Agile is flexible and iterative and expects changes.",
       "source": {
         "page": 17,
         "part": 2

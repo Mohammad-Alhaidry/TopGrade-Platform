@@ -22,7 +22,7 @@
         "0 to 9"
       ],
       "answer": "A",
-      "explanation": "Slide 1: computers understand only two states: 0 and 1.",
+      "explanation": "Computers understand only two states: 0 and 1.",
       "source": {
         "page": 2
       }
@@ -38,7 +38,7 @@
         "Pixel"
       ],
       "answer": "B",
-      "explanation": "Slide 4: a bit is the smallest unit of data in a computer.",
+      "explanation": "A bit is the smallest unit of data in a computer.",
       "source": {
         "page": 5
       }
@@ -54,7 +54,7 @@
         "ON"
       ],
       "answer": "D",
-      "explanation": "Slide 4: 0 -> OFF and 1 -> ON.",
+      "explanation": "0 -> OFF and 1 -> ON.",
       "source": {
         "page": 5
       }
@@ -110,7 +110,7 @@
         "Because its two states (On/Off) give stability and reliability"
       ],
       "answer": "D",
-      "explanation": "The slide says binary is important to computing systems because of its stability and reliability.",
+      "explanation": "The course says binary is important to computing systems because of its stability and reliability.",
       "source": {
         "page": 7
       }
@@ -136,7 +136,7 @@
       "type": "tf",
       "prompt": "Binary is the simple idea of On/Off, Yes/No, True/False, and Positive/Negative.",
       "answer": true,
-      "explanation": "This is exactly how the slide describes binary.",
+      "explanation": "This is exactly how the course describes binary.",
       "source": {
         "page": 7
       }
@@ -168,7 +168,7 @@
         "Base 2"
       ],
       "answer": "D",
-      "explanation": "Slide 5: Binary System (Base 2) uses only 0 and 1.",
+      "explanation": "Binary System (Base 2) uses only 0 and 1.",
       "source": {
         "page": 9
       }
@@ -184,7 +184,7 @@
         "2 digits (0 and 1), each position a power of 2"
       ],
       "answer": "C",
-      "explanation": "Slide 5: Decimal (Base 10) uses 10 digits 0-9 and each position represents a power of 10.",
+      "explanation": "Decimal (Base 10) uses 10 digits 0-9 and each position represents a power of 10.",
       "source": {
         "page": 9
       }
@@ -194,7 +194,7 @@
       "type": "tf",
       "prompt": "Decimal and binary use a completely different concept for place values.",
       "answer": false,
-      "explanation": "Slide 5 key idea: same concept, different base.",
+      "explanation": "Key idea: same concept, different base.",
       "source": {
         "page": 9
       }
@@ -210,7 +210,7 @@
         "The middle bit"
       ],
       "answer": "A",
-      "explanation": "Slide 6: remember, start powers from 0 on the right.",
+      "explanation": "Remember, start powers from 0 on the right.",
       "source": {
         "page": 10
       }
@@ -226,7 +226,7 @@
         "Divide by 2 repeatedly and read the remainders from bottom to top"
       ],
       "answer": "A",
-      "explanation": "Slide 7: Step 1 write the powers of 2; Step 2 multiply each bit by its place value; Step 3 add the results.",
+      "explanation": "Step 1 write the powers of 2; Step 2 multiply each bit by its place value; Step 3 add the results.",
       "source": {
         "page": 11
       }
@@ -338,7 +338,7 @@
         "11"
       ],
       "answer": "B",
-      "explanation": "Slide 8 exam tip: 1101 is a binary number: 8 + 4 + 0 + 1 = 13.",
+      "explanation": "Exam tip: 1101 is a binary number: 8 + 4 + 0 + 1 = 13.",
       "source": {
         "page": 12
       }
@@ -454,7 +454,7 @@
         "1011"
       ],
       "answer": "A",
-      "explanation": "Slide 9: read the remainders from bottom to top: 13 = 1101 (base 2).",
+      "explanation": "Read the remainders from bottom to top: 13 = 1101 (base 2).",
       "source": {
         "page": 13
       }
@@ -470,7 +470,7 @@
         "1010"
       ],
       "answer": "D",
-      "explanation": "10 ÷ 2 = 5 r 0, 5 ÷ 2 = 2 r 1, 2 ÷ 2 = 1 r 0, 1 ÷ 2 = 0 r 1; read the remainders from bottom to top: 1010. (Slide 10; check: 8 + 2 = 10.) 0101 is the remainders read from top to bottom.",
+      "explanation": "10 ÷ 2 = 5 r 0, 5 ÷ 2 = 2 r 1, 2 ÷ 2 = 1 r 0, 1 ÷ 2 = 0 r 1; read the remainders from bottom to top: 1010. (check: 8 + 2 = 10.) 0101 is the remainders read from top to bottom.",
       "source": {
         "page": 14
       }
@@ -480,7 +480,7 @@
       "type": "tf",
       "prompt": "When converting decimal to binary by repeated division by 2, the remainders are read from top to bottom.",
       "answer": false,
-      "explanation": "Slide 9: read the remainders from bottom to top.",
+      "explanation": "Read the remainders from bottom to top.",
       "source": {
         "page": 13
       }
@@ -626,7 +626,7 @@
         "0 (write 0, no carry)"
       ],
       "answer": "A",
-      "explanation": "Slide 12: 1 + 1 = 10 -> write 0, carry 1.",
+      "explanation": "1 + 1 = 10 -> write 0, carry 1.",
       "source": {
         "page": 18
       }
@@ -636,7 +636,7 @@
       "type": "tf",
       "prompt": "Binary addition works like decimal addition, but there are only two digits: 0 and 1.",
       "answer": true,
-      "explanation": "This is the key idea of slide 12.",
+      "explanation": "This is the key idea of binary addition: binary uses only the digits 0 and 1.",
       "source": {
         "page": 18
       }
@@ -820,7 +820,7 @@
         "0 to 16"
       ],
       "answer": "B",
-      "explanation": "Slide: with 4 bits, 0000 -> 1111, i.e. 0 -> 15.",
+      "explanation": "With 4 bits, 0000 -> 1111, i.e. 0 -> 15.",
       "source": {
         "page": 19
       }
@@ -836,7 +836,7 @@
         "The result needs only 3 bits, so data is lost"
       ],
       "answer": "B",
-      "explanation": "Slide: 14 + 2 = 16 = 10000, which requires 5 bits -> this is called overflow.",
+      "explanation": "14 + 2 = 16 = 10000, which requires 5 bits -> this is called overflow.",
       "source": {
         "page": 19
       }
@@ -852,7 +852,7 @@
         "A result is too large to fit in the available number of bits"
       ],
       "answer": "D",
-      "explanation": "Slide 13: overflow occurs when a result is too large to fit in the available number of bits.",
+      "explanation": "Overflow occurs when a result is too large to fit in the available number of bits.",
       "source": {
         "page": 20
       }
@@ -904,7 +904,7 @@
         "No: 4 unsigned bits hold only 0 to 7"
       ],
       "answer": "A",
-      "explanation": "Slide 17: 18 = 10010 (16 + 2) needs 5 bits, but 4 unsigned bits hold only 0000 to 1111 (0 to 15), so it causes overflow.",
+      "explanation": "18 = 10010 (16 + 2) needs 5 bits, but 4 unsigned bits hold only 0000 to 1111 (0 to 15), so it causes overflow.",
       "source": {
         "page": 24
       }
@@ -920,7 +920,7 @@
         "The rightmost bit is the sign"
       ],
       "answer": "C",
-      "explanation": "Slide 14: the leftmost bit is the sign: 0 -> Positive, 1 -> Negative.",
+      "explanation": "The leftmost bit is the sign: 0 -> Positive, 1 -> Negative.",
       "source": {
         "page": 21
       }
@@ -930,7 +930,7 @@
       "type": "tf",
       "prompt": "Using the leftmost bit as a sign (0 positive, 1 negative) leads to sign-magnitude representation.",
       "answer": true,
-      "explanation": "Slide 14: this leads to Sign-Magnitude Representation.",
+      "explanation": "This leads to Sign-Magnitude Representation.",
       "source": {
         "page": 21
       }
@@ -946,7 +946,7 @@
         "3 bits for the sign, 1 bit for the magnitude"
       ],
       "answer": "C",
-      "explanation": "Slide 15: for a 4-bit number, 1 bit -> sign and 3 bits -> magnitude.",
+      "explanation": "For a 4-bit number, 1 bit -> sign and 3 bits -> magnitude.",
       "source": {
         "page": 22
       }
@@ -988,7 +988,7 @@
         "There are two representations for zero (0000 and 1000)"
       ],
       "answer": "D",
-      "explanation": "Slide 15: +0 = 0000 and -0 = 1000, so there are two representations for zero.",
+      "explanation": "+0 = 0000 and -0 = 1000, so there are two representations for zero.",
       "source": {
         "page": 22
       }
@@ -998,7 +998,7 @@
       "type": "tf",
       "prompt": "In 4-bit sign-magnitude, -0 is written as 1000.",
       "answer": true,
-      "explanation": "Slide 15: +0 = 0000 and -0 = 1000.",
+      "explanation": "+0 = 0000 and -0 = 1000.",
       "source": {
         "page": 22
       }
@@ -1044,7 +1044,7 @@
         "Flip all bits, then add 1"
       ],
       "answer": "D",
-      "explanation": "Slide 16: Two's Complement = Flip the bits + Add 1.",
+      "explanation": "Two's Complement = Flip the bits + Add 1.",
       "source": {
         "page": 23
       }
@@ -1212,7 +1212,7 @@
         "It assigns the character a numeric code, which is then represented in binary"
       ],
       "answer": "D",
-      "explanation": "Slide 19: the computer assigns each character a numeric code, which can then be represented in binary.",
+      "explanation": "The computer assigns each character a numeric code, which can then be represented in binary.",
       "source": {
         "page": 28
       }
@@ -1228,7 +1228,7 @@
         "Pixel colors in RGB images"
       ],
       "answer": "A",
-      "explanation": "Slide 19: ASCII maps characters to numeric codes and is used for letters, digits, symbols and control characters.",
+      "explanation": "ASCII maps characters to numeric codes and is used for letters, digits, symbols and control characters.",
       "source": {
         "page": 28
       }
@@ -1244,7 +1244,7 @@
         "Binary"
       ],
       "answer": "A",
-      "explanation": "Slide 19: Unicode is designed to represent characters from many languages.",
+      "explanation": "Unicode is designed to represent characters from many languages.",
       "source": {
         "page": 28
       }
@@ -1254,7 +1254,7 @@
       "type": "tf",
       "prompt": "The summary of text representation is: Character -> Code -> Binary Representation.",
       "answer": true,
-      "explanation": "This is the summary on the slide.",
+      "explanation": "This is from the course summary.",
       "source": {
         "page": 29
       }
@@ -1270,7 +1270,7 @@
         "Red, Green, Blue"
       ],
       "answer": "D",
-      "explanation": "Slide 20: for an RGB image, color is represented using Red, Green and Blue.",
+      "explanation": "For an RGB image, color is represented using Red, Green and Blue.",
       "source": {
         "page": 31
       }
@@ -1286,7 +1286,7 @@
         "Blue"
       ],
       "answer": "C",
-      "explanation": "Slide 20: Black -> (0, 0, 0).",
+      "explanation": "Black -> (0, 0, 0).",
       "source": {
         "page": 31
       }
@@ -1312,7 +1312,7 @@
       "type": "tf",
       "prompt": "More pixels give more image detail and more data.",
       "answer": true,
-      "explanation": "Slide 20, resolution matters: more pixels -> more image detail -> more data.",
+      "explanation": "Resolution matters: more pixels -> more image detail -> more data.",
       "source": {
         "page": 31
       }
@@ -1354,7 +1354,7 @@
         "How many samples are taken per second"
       ],
       "answer": "D",
-      "explanation": "Slide 21: Sampling Rate -> how many samples are taken per second.",
+      "explanation": "Sampling Rate -> how many samples are taken per second.",
       "source": {
         "page": 32
       }
@@ -1370,7 +1370,7 @@
         "The number of inputs of a gate"
       ],
       "answer": "C",
-      "explanation": "Slide 21: Bit Depth -> how many bits are used to represent each sample.",
+      "explanation": "Bit Depth -> how many bits are used to represent each sample.",
       "source": {
         "page": 32
       }
@@ -1402,7 +1402,7 @@
         "Overflow"
       ],
       "answer": "B",
-      "explanation": "Slide 22: lossless compression - no information is permanently lost.",
+      "explanation": "Lossless compression - no information is permanently lost.",
       "source": {
         "page": 34
       }
@@ -1418,7 +1418,7 @@
         "Unicode"
       ],
       "answer": "A",
-      "explanation": "Slide 22: lossy compression - some information is removed to reduce the size further.",
+      "explanation": "Lossy compression - some information is removed to reduce the size further.",
       "source": {
         "page": 34
       }
@@ -1464,7 +1464,7 @@
         "Unknown"
       ],
       "answer": "C",
-      "explanation": "Slide 23: True -> 1, False -> 0.",
+      "explanation": "True -> 1, False -> 0.",
       "source": {
         "page": 37
       }
@@ -1480,7 +1480,7 @@
         "Logic gate"
       ],
       "answer": "C",
-      "explanation": "Slide 24: a statement that can be evaluated as True or False is called a Boolean expression.",
+      "explanation": "A statement that can be evaluated as True or False is called a Boolean expression.",
       "source": {
         "page": 38
       }
@@ -1496,7 +1496,7 @@
         "False"
       ],
       "answer": "D",
-      "explanation": "Slide 24: 10 == 7 -> False.",
+      "explanation": "10 == 7 -> False.",
       "source": {
         "page": 38
       }
@@ -1512,7 +1512,7 @@
         "OR"
       ],
       "answer": "C",
-      "explanation": "Slide 25: AND - the result is True only when BOTH inputs are True.",
+      "explanation": "AND - the result is True only when BOTH inputs are True.",
       "source": {
         "page": 39
       }
@@ -1528,7 +1528,7 @@
         "None of them"
       ],
       "answer": "B",
-      "explanation": "Slide 25: OR - the result is True when AT LEAST ONE input is True.",
+      "explanation": "OR - the result is True when AT LEAST ONE input is True.",
       "source": {
         "page": 39
       }
@@ -1544,7 +1544,7 @@
         "XOR"
       ],
       "answer": "A",
-      "explanation": "Slide 25: NOT reverses the Boolean value.",
+      "explanation": "NOT reverses the Boolean value.",
       "source": {
         "page": 39
       }
@@ -1560,7 +1560,7 @@
         "OR"
       ],
       "answer": "B",
-      "explanation": "Slide 25: both conditions must be true, so AND is used.",
+      "explanation": "Both conditions must be true, so AND is used.",
       "source": {
         "page": 39
       }
@@ -1568,7 +1568,7 @@
     {
       "id": "t3-match-007",
       "type": "matching",
-      "title": "Match each Boolean operator with its symbol in the slides",
+      "title": "Match each Boolean operator with its symbol",
       "pairs": [
         {
           "left": "AND",
@@ -1592,7 +1592,7 @@
       "type": "tf",
       "prompt": "NOT False -> True.",
       "answer": true,
-      "explanation": "Slide 25: NOT True -> False and NOT False -> True.",
+      "explanation": "NOT True -> False and NOT False -> True.",
       "source": {
         "page": 39
       }
@@ -1608,7 +1608,7 @@
         "The output for every possible combination of inputs"
       ],
       "answer": "D",
-      "explanation": "Slide 26: a truth table shows the output for every possible combination of inputs.",
+      "explanation": "A truth table shows the output for every possible combination of inputs.",
       "source": {
         "page": 40
       }
@@ -1624,7 +1624,7 @@
         "8"
       ],
       "answer": "B",
-      "explanation": "Slide 26 exam tip: with 2 Boolean inputs, there are 4 possible input combinations.",
+      "explanation": "Exam tip: with 2 Boolean inputs, there are 4 possible input combinations.",
       "source": {
         "page": 40
       }
@@ -1688,7 +1688,7 @@
         "0, 1, 1, 0"
       ],
       "answer": "D",
-      "explanation": "Row by row for ab = 00, 01, 10, 11 (• = AND, + = OR, ~ = NOT): a + b = 0, 1, 1, 1; ~a = 1, 1, 0, 0; ~b = 1, 0, 1, 0; ~a + ~b = 1, 1, 1, 0; Y = 0, 1, 1, 0.",
+      "explanation": "Row by row for ab = 00, 01, 10, 11 (• = AND, + = OR, ~ = NOT): a + b = 0, 1, 1, 1; ~a = 1, 1, 0, 0; ~b = 1, 0, 1, 0; ~a + ~b = 1, 1, 1, 0; y = 0, 1, 1, 0.",
       "source": {
         "page": 41
       }
@@ -1730,7 +1730,7 @@
         "0, 0, 0, 1"
       ],
       "answer": "B",
-      "explanation": "Row by row for ab = 00, 01, 10, 11 (• = AND, + = OR, ~ = NOT): a • b = 0, 0, 0, 1; ~a • ~b = 1, 0, 0, 0; Y = 1, 0, 0, 1.",
+      "explanation": "Row by row for ab = 00, 01, 10, 11 (• = AND, + = OR, ~ = NOT): a • b = 0, 0, 0, 1; ~a • ~b = 1, 0, 0, 0; y = 1, 0, 0, 1.",
       "source": {
         "page": 41
       }
@@ -1762,7 +1762,7 @@
         "0, 0, 0, 1"
       ],
       "answer": "A",
-      "explanation": "Row by row for ab = 00, 01, 10, 11 (• = AND, + = OR, ~ = NOT): ~b = 1, 0, 1, 0; a + ~b = 1, 0, 1, 1; ~a = 1, 1, 0, 0; Y = 1, 0, 0, 0.",
+      "explanation": "Row by row for ab = 00, 01, 10, 11 (• = AND, + = OR, ~ = NOT): ~b = 1, 0, 1, 0; a + ~b = 1, 0, 1, 1; ~a = 1, 1, 0, 0; y = 1, 0, 0, 0.",
       "source": {
         "page": 41
       }
@@ -1794,7 +1794,7 @@
         "1, 0, 0, 1"
       ],
       "answer": "A",
-      "explanation": "Row by row for ab = 00, 01, 10, 11 (• = AND, + = OR, ~ = NOT): a • ~b = 0, 0, 1, 0; ~a • b = 0, 1, 0, 0; Y = 0, 1, 1, 0.",
+      "explanation": "Row by row for ab = 00, 01, 10, 11 (• = AND, + = OR, ~ = NOT): a • ~b = 0, 0, 1, 0; ~a • b = 0, 1, 0, 0; y = 0, 1, 1, 0.",
       "source": {
         "page": 41
       }
@@ -1804,7 +1804,7 @@
       "type": "tf",
       "prompt": "Construct the truth table for Y = (a + b) • ~(a • b): the Y column for ab = 00, 01, 10, 11 is 0, 1, 1, 0.",
       "answer": true,
-      "explanation": "Row by row for ab = 00, 01, 10, 11 (• = AND, + = OR, ~ = NOT): a + b = 0, 1, 1, 1; a • b = 0, 0, 0, 1; ~(a • b) = 1, 1, 1, 0; Y = 0, 1, 1, 0.",
+      "explanation": "Row by row for ab = 00, 01, 10, 11 (• = AND, + = OR, ~ = NOT): a + b = 0, 1, 1, 1; a • b = 0, 0, 0, 1; ~(a • b) = 1, 1, 1, 0; y = 0, 1, 1, 0.",
       "source": {
         "page": 41
       }
@@ -1846,7 +1846,7 @@
         "1, 1, 1, 1"
       ],
       "answer": "C",
-      "explanation": "Row by row for ab = 00, 01, 10, 11 (• = AND, + = OR, ~ = NOT): ~a + b = 1, 1, 0, 1; a + ~b = 1, 0, 1, 1; Y = 1, 0, 0, 1.",
+      "explanation": "Row by row for ab = 00, 01, 10, 11 (• = AND, + = OR, ~ = NOT): ~a + b = 1, 1, 0, 1; a + ~b = 1, 0, 1, 1; y = 1, 0, 0, 1.",
       "source": {
         "page": 41
       }
@@ -1856,7 +1856,7 @@
       "type": "tf",
       "prompt": "Construct the truth table for Y = ~(a • b): the Y column for ab = 00, 01, 10, 11 is 0, 0, 0, 1.",
       "answer": false,
-      "explanation": "Row by row for ab = 00, 01, 10, 11 (• = AND, + = OR, ~ = NOT): a • b = 0, 0, 0, 1; Y = 1, 1, 1, 0. So it is 1, 1, 1, 0, not 0, 0, 0, 1.",
+      "explanation": "Row by row for ab = 00, 01, 10, 11 (• = AND, + = OR, ~ = NOT): a • b = 0, 0, 0, 1; y = 1, 1, 1, 0. So it is 1, 1, 1, 0, not 0, 0, 0, 1.",
       "source": {
         "page": 41
       }
@@ -1904,7 +1904,7 @@
         "Pixels"
       ],
       "answer": "B",
-      "explanation": "Slide 28: Boolean operations can be implemented physically using electronic components called logic gates.",
+      "explanation": "Boolean operations can be implemented physically using electronic components called logic gates.",
       "source": {
         "page": 42
       }
@@ -1912,7 +1912,7 @@
     {
       "id": "t3-match-008",
       "type": "matching",
-      "title": "Match each logic gate with the output expression written on it in the slides",
+      "title": "Match each logic gate with the output expression written on it",
       "pairs": [
         {
           "left": "AND gate",
@@ -1942,7 +1942,7 @@
         "0 OR 1"
       ],
       "answer": "B",
-      "explanation": "Slide 29: 0 OR 0 -> 0; all other combinations give 1.",
+      "explanation": "0 OR 0 -> 0; all other combinations give 1.",
       "source": {
         "page": 43
       }
@@ -1952,7 +1952,7 @@
       "type": "tf",
       "prompt": "1 AND 0 -> 1.",
       "answer": false,
-      "explanation": "Slide 29: 1 AND 0 -> 0; AND gives 1 only when both inputs are 1.",
+      "explanation": "1 AND 0 -> 0; AND gives 1 only when both inputs are 1.",
       "source": {
         "page": 43
       }
@@ -2074,7 +2074,7 @@
         "Find the OR output, send it to the AND gate, determine the final output"
       ],
       "answer": "A",
-      "explanation": "Slide 30: Step 1 find the output of the AND gate; Step 2 send that result to the OR gate; Step 3 determine the final output.",
+      "explanation": "Step 1 find the output of the AND gate; Step 2 send that result to the OR gate; Step 3 determine the final output.",
       "source": {
         "page": 46
       }
@@ -2110,7 +2110,7 @@
       "type": "tf",
       "prompt": "AND, OR, and NOT gates are simple building blocks that can be combined to create more useful circuits.",
       "answer": true,
-      "explanation": "Slide 31: by combining gates, computers create more useful circuits.",
+      "explanation": "By combining gates, computers create more useful circuits.",
       "source": {
         "page": 49
       }
@@ -2126,7 +2126,7 @@
         "Divide circuit"
       ],
       "answer": "B",
-      "explanation": "Figure 4.37: 00 = add, 01 = subtract, 10 = multiply, 11 = divide.",
+      "explanation": "00 = add, 01 = subtract, 10 = multiply, 11 = divide.",
       "source": {
         "page": 50
       }

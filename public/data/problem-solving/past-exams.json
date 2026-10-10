@@ -22,7 +22,7 @@
         "Computer applications only"
       ],
       "answer": "C",
-      "explanation": "Topic 1: \"Computer science is the study of algorithms\", including their formal properties, hardware and linguistic realizations, and applications. Studying only hardware, languages or applications are the listed misconceptions.",
+      "explanation": "\"Computer science is the study of algorithms\", including their formal properties, hardware and linguistic realizations, and applications. Studying only hardware, languages or applications are the listed misconceptions.",
       "topic": 1
     },
     {
@@ -50,7 +50,7 @@
         "Primitive algorithm"
       ],
       "answer": "C",
-      "explanation": "Topic 1: an infinite loop \"runs forever\" and is \"usually a mistake\". A real algorithm must halt in a finite amount of time.",
+      "explanation": "An infinite loop \"runs forever\" and is \"usually a mistake\". A real algorithm must halt in a finite amount of time.",
       "topic": 1
     },
     {
@@ -64,7 +64,7 @@
         "Base 16"
       ],
       "answer": "B",
-      "explanation": "Topic 3, Slide 5: the decimal system is base 10 (digits 0-9, powers of 10); the binary system is base 2: it uses only 0 and 1, and each position represents a power of 2.",
+      "explanation": "The decimal system is base 10 (digits 0-9, powers of 10); the binary system is base 2: it uses only 0 and 1, and each position represents a power of 2.",
       "topic": 3
     },
     {
@@ -78,7 +78,7 @@
         "Zero"
       ],
       "answer": "C",
-      "explanation": "Topic 3: \"True → 1, False → 0\" (Slide 23), and a bit 1 means ON while 0 means OFF (Slide 4). So 1 represents True; False, Off and zero are what 0 represents.",
+      "explanation": "\"True → 1, False → 0\", and a bit 1 means ON while 0 means OFF. So 1 represents True; False, Off and zero are what 0 represents.",
       "topic": 3
     },
     {
@@ -92,7 +92,7 @@
         "Binary"
       ],
       "answer": "B",
-      "explanation": "Topic 1: conditional operations \"ask a question and the next operation is then selected on the basis of the answer to that question\".",
+      "explanation": "Conditional operations \"ask a question and the next operation is then selected on the basis of the answer to that question\".",
       "topic": 1
     },
     {
@@ -120,7 +120,7 @@
         "XOR"
       ],
       "answer": "C",
-      "explanation": "Topic 3, Slide 25: AND: \"The result is True only when BOTH inputs are True\" (AND → Both). OR is True when at least one input is True, and NOT reverses a single value. XOR is not taught in the slides (they cover only AND, OR and NOT), and it is not the answer.",
+      "explanation": "AND: \"The result is True only when BOTH inputs are True\" (AND → Both). OR is True when at least one input is True, and NOT reverses a single value. XOR is not taught in the course (they cover only AND, OR and NOT), and it is not the answer.",
       "topic": 3
     },
     {
@@ -134,7 +134,7 @@
         "Cache only"
       ],
       "answer": "B",
-      "explanation": "Topic 2: \"A program and its data must be brought to memory before they can be executed\"; the CPU \"retrieves instructions from memory and executes them\". Programs are kept permanently on storage devices (hard disk) and moved to memory when used.",
+      "explanation": "\"A program and its data must be brought to memory before they can be executed\"; the CPU \"retrieves instructions from memory and executes them\". Programs are kept permanently on storage devices (hard disk) and moved to memory when used.",
       "topic": 2
     },
     {
@@ -148,7 +148,7 @@
         "Bus and Cache"
       ],
       "answer": "B",
-      "explanation": "Topic 2: \"ALU and control unit are often bundled inside the central processing unit (CPU)\".",
+      "explanation": "\"ALU and control unit are often bundled inside the central processing unit (CPU)\".",
       "topic": 2
     },
     {
@@ -169,7 +169,7 @@
           "right": "Translates the entire source code into a machine-code file, which is then executed"
         }
       ],
-      "explanation": "Topic 4: an assembler converts assembly language into machine code; an interpreter \"reads one statement ... translates it ... and then executes it right away\"; a compiler \"translates the entire source code into a machine-code file\".",
+      "explanation": "An assembler converts assembly language into machine code; an interpreter \"reads one statement ... Translates it ... And then executes it right away\"; a compiler \"translates the entire source code into a machine-code file\".",
       "topic": 4
     },
     {
@@ -183,7 +183,7 @@
         "Operating system"
       ],
       "answer": "C",
-      "explanation": "This is the slide definition of an interpreter. A compiler translates the whole program first, and an assembler only translates assembly language.",
+      "explanation": "This is the definition of an interpreter. A compiler translates the whole program first, and an assembler only translates assembly language.",
       "topic": 4
     },
     {
@@ -197,7 +197,7 @@
         "Debugger"
       ],
       "answer": "B",
-      "explanation": "Topic 4: \"a program called assembler is used to convert assembly language programs into machine code\". Interpreters and compilers translate high-level languages.",
+      "explanation": "\"a program called assembler is used to convert assembly language programs into machine code\". Interpreters and compilers translate high-level languages.",
       "topic": 4
     },
     {
@@ -219,7 +219,7 @@
         "The problem specification can change at any time"
       ],
       "answer": "B",
-      "explanation": "Topic 4: in the Waterfall model \"the software development process is sequential. One step must be completed before moving on to the next. The previous steps are never revisited.\" The other options describe the Agile model.",
+      "explanation": "In the Waterfall model \"the software development process is sequential. One step must be completed before moving on to the next. The previous steps are never revisited.\" The other options describe the Agile model.",
       "topic": 4
     },
     {
@@ -233,7 +233,7 @@
         "Problem specification is written once and never changes"
       ],
       "answer": "C",
-      "explanation": "Topic 4: Agile \"is a flexible and iterative approach\"; its philosophy: problem specification can change at any time, changes are expected, and the customer or user is involved throughout.",
+      "explanation": "Agile \"is a flexible and iterative approach\"; its philosophy: problem specification can change at any time, changes are expected, and the customer or user is involved throughout.",
       "topic": 4
     },
     {
@@ -241,7 +241,7 @@
       "type": "tf",
       "prompt": "Comparing the two models: in the Waterfall Model the previous steps are never revisited, while the Agile Model expects changes and responds to them in an agile way.",
       "answer": true,
-      "explanation": "Both halves are slide wording: Waterfall \"previous steps are never revisited\"; Agile \"changes are expected; respond in an agile way\".",
+      "explanation": "Both halves are course wording: Waterfall \"previous steps are never revisited\"; Agile \"changes are expected; respond in an agile way\".",
       "topic": 4
     },
     {
@@ -263,7 +263,7 @@
         "11101"
       ],
       "answer": "B",
-      "explanation": "Topic 3, Slide 12 rules: 0+0=0, 0+1=1, 1+0=1, 1+1=10 → write 0, carry 1 (and 1+1+carry 1 = 11 → write 1, carry 1). Right to left: 1+0=1; 1+1=0 carry 1; 1+1+1=1 carry 1; 0+1+1=0 carry 1; 0+0+1=1. So 00111₂ + 01110₂ = 10101₂ (7 + 14 = 21). 01001 forgets the carries; 01111 writes 1+1 as 1.",
+      "explanation": "Addition rules: 0+0=0, 0+1=1, 1+0=1, 1+1=10 (write 0, carry 1). When a carry meets 1+1, add it on: 1+1=10, then 10+1=11 (write 1, carry 1). Right to left: 1+0=1; 1+1=0 carry 1; 1+1+1=1 carry 1; 0+1+1=0 carry 1; 0+0+1=1. So 00111₂ + 01110₂ = 10101₂ (7 + 14 = 21). 01001 forgets the carries; 01111 writes 1+1 as 1.",
       "topic": 3
     },
     {
@@ -277,7 +277,7 @@
         "1100"
       ],
       "answer": "C",
-      "explanation": "Topic 3, Slide 9: repeated division by 2. 14 ÷ 2 = 7 r 0, 7 ÷ 2 = 3 r 1, 3 ÷ 2 = 1 r 1, 1 ÷ 2 = 0 r 1. Read the remainders from bottom to top: 14₁₀ = 1110₂ (check: 8 + 4 + 2 + 0 = 14). 0111 is the remainders read top to bottom.",
+      "explanation": "Repeated division by 2. 14 ÷ 2 = 7 r 0, 7 ÷ 2 = 3 r 1, 3 ÷ 2 = 1 r 1, 1 ÷ 2 = 0 r 1. Read the remainders from bottom to top: 14₁₀ = 1110₂ (check: 8 + 4 + 2 + 0 = 14). 0111 is the remainders read top to bottom.",
       "topic": 3
     },
     {
@@ -291,7 +291,7 @@
         "15"
       ],
       "answer": "D",
-      "explanation": "Topic 3, Slide 7: multiply each bit by its place value and add: 1111₂ = (1×8) + (1×4) + (1×2) + (1×1) = 15₁₀, the largest 4-bit unsigned value (0000₂ → 1111₂ = 0 → 15). 4 only counts the 1s; 16 would need 5 bits (10000₂).",
+      "explanation": "Multiply each bit by its place value and add: 1111₂ = (1×8) + (1×4) + (1×2) + (1×1) = 15₁₀, the largest 4-bit unsigned value (0000₂ → 1111₂ = 0 → 15). 4 only counts the 1s; 16 would need 5 bits (10000₂).",
       "topic": 3
     },
     {
@@ -305,7 +305,7 @@
         "1, 0, 0, 1"
       ],
       "answer": "B",
-      "explanation": "Work as on Topic 3, Slide 27: one intermediate column at a time, one row at a time. a ∨ b (OR) = 0,1,1,1; ¬a = 1,1,0,0 and ¬b = 1,0,1,0, so ¬a ∨ ¬b = 1,1,1,0. AND the two columns row by row (1 only when both are 1): Y = 0,1,1,0. (0,1,1,1 is only a ∨ b; 1,1,1,0 is only ¬a ∨ ¬b.) (The exam writes OR as ∨, AND as ∧, NOT as ¬; the Topic 3 slides write them as +, • and ~.)",
+      "explanation": "Work one intermediate column at a time, one row at a time. a ∨ b (OR) = 0,1,1,1; ¬a = 1,1,0,0 and ¬b = 1,0,1,0, so ¬a ∨ ¬b = 1,1,1,0. AND the two columns row by row (1 only when both are 1): y = 0,1,1,0. (0,1,1,1 is only a ∨ b; 1,1,1,0 is only ¬a ∨ ¬b.) (The exam writes OR as ∨, AND as ∧, NOT as ¬; the course write them as +, • and ~.)",
       "topic": 3
     },
     {
@@ -319,7 +319,7 @@
         "0, 0, 0, 1"
       ],
       "answer": "A",
-      "explanation": "NOT reverses each value (Topic 3, Slide 25): ¬a = 1,1,0,0 and ¬b = 1,0,1,0. OR gives 1 when at least one is 1, so ¬a ∨ ¬b = 1,1,1,0: it is 0 only for a = b = 1. (0,1,1,1 is a ∨ b; 1,0,0,0 is ¬a ∧ ¬b; 0,0,0,1 is a ∧ b.) (The exam writes OR as ∨, AND as ∧, NOT as ¬; the Topic 3 slides write them as +, • and ~.)",
+      "explanation": "NOT reverses each value: ¬a = 1,1,0,0 and ¬b = 1,0,1,0. OR gives 1 when at least one is 1, so ¬a ∨ ¬b = 1,1,1,0: it is 0 only for a = b = 1. (0,1,1,1 is a ∨ b; 1,0,0,0 is ¬a ∧ ¬b; 0,0,0,1 is a ∧ b.) (The exam writes OR as ∨, AND as ∧, NOT as ¬; the course write them as +, • and ~.)",
       "topic": 3
     },
     {
@@ -333,7 +333,7 @@
         "0, 1, 1, 0"
       ],
       "answer": "B",
-      "explanation": "OR is True when at least one input is True (Topic 3, Slides 25-26 OR truth table): 0 OR 0 = 0, 0 OR 1 = 1, 1 OR 0 = 1, 1 OR 1 = 1, so a ∨ b = 0,1,1,1. (0,0,0,1 is a ∧ b; 1,1,1,0 is ¬a ∨ ¬b; 0,1,1,0 is the final Y.) (The exam writes OR as ∨, AND as ∧, NOT as ¬; the Topic 3 slides write them as +, • and ~.)",
+      "explanation": "OR is True when at least one input is True: 0 OR 0 = 0, 0 OR 1 = 1, 1 OR 0 = 1, 1 OR 1 = 1, so a ∨ b = 0,1,1,1. (0,0,0,1 is a ∧ b; 1,1,1,0 is ¬a ∨ ¬b; 0,1,1,0 is the final Y.) (The exam writes OR as ∨, AND as ∧, NOT as ¬; the course write them as +, • and ~.)",
       "topic": 3
     },
     {
@@ -347,7 +347,7 @@
         "It was the first number system invented."
       ],
       "answer": "C",
-      "explanation": "Topic 3: \"Binary is the simple idea of On/Off, Yes/No, True/False\" and \"is important to computing systems because of its stability and reliability\"; each bit is 0 → OFF or 1 → ON. So binary maps reliably onto two-state devices. It is not easier for humans than decimal.",
+      "explanation": "\"Binary is the simple idea of On/Off, Yes/No, True/False\" and \"is important to computing systems because of its stability and reliability\"; each bit is 0 → OFF or 1 → ON. So binary maps reliably onto two-state devices. It is not easier for humans than decimal.",
       "topic": 3
     },
     {
@@ -431,7 +431,7 @@
         "Load data from memory address 11 into a register cell"
       ],
       "answer": "B",
-      "explanation": "STORE writes the value held in a register into memory cell 11; the slides call a store a write to memory (destructive store). Moving data from memory address 11 into a register is a fetch (load), not a store.",
+      "explanation": "STORE writes the value held in a register into memory cell 11; the course call a store a write to memory (destructive store). Moving data from memory address 11 into a register is a fetch (load), not a store.",
       "topic": 2
     },
     {
@@ -445,7 +445,7 @@
         "A collection of operations that keeps running until the user stops it"
       ],
       "answer": "B",
-      "explanation": "This is the slide's formal definition. A machine, robot or person carrying out the steps is the computing agent, and an algorithm must halt in a finite amount of time.",
+      "explanation": "This is the course's formal definition. A machine, robot or person carrying out the steps is the computing agent, and an algorithm must halt in a finite amount of time.",
       "topic": 1
     },
     {
@@ -459,7 +459,7 @@
         "The instruction \"Go back and do it again\""
       ],
       "answer": "C",
-      "explanation": "Topic 1 gives \"Making a Morning Coffee\" as an everyday algorithm: an ordered sequence of steps. The machine is not an algorithm, and \"Go back and do it again (Do what again?)\" is an ambiguous statement.",
+      "explanation": "The course gives \"Making a Morning Coffee\" as an everyday algorithm: an ordered sequence of steps. The machine is not an algorithm, and \"Go back and do it again (Do what again?)\" is an ambiguous statement.",
       "topic": 1
     },
     {
@@ -467,7 +467,7 @@
       "type": "tf",
       "prompt": "Informally, an algorithm is an ordered sequence of instructions that is guaranteed to solve a specific problem.",
       "answer": true,
-      "explanation": "This is the slide's informal definition of an algorithm (Step 1, Step 2, ..., Step n: Stop).",
+      "explanation": "This is the course's informal definition of an algorithm (Step 1, Step 2, ..., Step n: Stop).",
       "topic": 1
     },
     {
@@ -481,7 +481,7 @@
         "MAR, MDR, PC, IR"
       ],
       "answer": "A",
-      "explanation": "Topic 2: \"The four major subsystems of the Von Neumann architecture: Memory, Input/output, Arithmetic/logic unit (ALU), Control Unit\".",
+      "explanation": "\"The four major subsystems of the Von Neumann architecture: Memory, Input/output, Arithmetic/logic unit (ALU), Control Unit\".",
       "topic": 2
     },
     {
@@ -495,7 +495,7 @@
         "The ALU fetches and decodes instructions, so there is no control unit"
       ],
       "answer": "A",
-      "explanation": "Summary slide: \"programs are stored in memory; execution is sequential unless program says otherwise\". Many processing units at once is parallel processing, a non-von Neumann architecture.",
+      "explanation": "Course summary: \"programs are stored in memory; execution is sequential unless program says otherwise\". Many processing units at once is parallel processing, a non-von Neumann architecture.",
       "topic": 2
     },
     {
@@ -503,7 +503,7 @@
       "type": "tf",
       "prompt": "Stored program characteristic of the von Neumann architecture: programs are encoded in binary and stored in the computer's memory.",
       "answer": true,
-      "explanation": "Topic 2, Control Unit: \"Stored program characteristic: Programs are encoded in binary and stored in the computer's memory\".",
+      "explanation": "\"Stored program characteristic: Programs are encoded in binary and stored in the computer's memory\".",
       "topic": 2
     },
     {
@@ -511,7 +511,7 @@
       "type": "tf",
       "prompt": "A von Neumann machine repeats the fetch/decode/execute cycle until a HALT instruction or an error.",
       "answer": true,
-      "explanation": "Topic 2: \"Fetch/decode/execute phase: Machine repeats until HALT instruction or error. Also called Von Neumann cycle.\"",
+      "explanation": "\"Fetch/decode/execute phase: Machine repeats until HALT instruction or error. Also called Von Neumann cycle.\"",
       "topic": 2
     },
     {
@@ -528,7 +528,7 @@
           "right": "Large instruction set; a single instruction can do a lot of work; complex to design hardware"
         }
       ],
-      "explanation": "Topic 2: RISC = small instruction sets, each instruction highly optimized, easy to design hardware; CISC = large instruction set, single instruction can do a lot of work, complex to design hardware.",
+      "explanation": "RISC = small instruction sets, each instruction highly optimized, easy to design hardware; CISC = large instruction set, single instruction can do a lot of work, complex to design hardware.",
       "topic": 2
     },
     {
@@ -558,7 +558,7 @@
       "type": "tf",
       "prompt": "Modern hardware is a compromise between RISC and CISC.",
       "answer": true,
-      "explanation": "Topic 2 states: \"Modern hardware is a compromise between RISC and CISC\".",
+      "explanation": "The course states: \"Modern hardware is a compromise between RISC and CISC\".",
       "topic": 2
     },
     {
@@ -572,7 +572,7 @@
         "1110"
       ],
       "answer": "C",
-      "explanation": "Topic 3, Slide 9: repeated division by 2. 12 ÷ 2 = 6 r 0, 6 ÷ 2 = 3 r 0, 3 ÷ 2 = 1 r 1, 1 ÷ 2 = 0 r 1. Read the remainders from bottom to top: 12₁₀ = 1100₂ (check: 8 + 4 = 12). 0011 is the remainders read top to bottom.",
+      "explanation": "Repeated division by 2. 12 ÷ 2 = 6 r 0, 6 ÷ 2 = 3 r 0, 3 ÷ 2 = 1 r 1, 1 ÷ 2 = 0 r 1. Read the remainders from bottom to top: 12₁₀ = 1100₂ (check: 8 + 4 = 12). 0011 is the remainders read top to bottom.",
       "topic": 3
     },
     {
@@ -586,7 +586,7 @@
         "1010"
       ],
       "answer": "B",
-      "explanation": "Topic 3, Slide 12 rules: no column has 1+1, so there is no carry: 1+0=1, 0+1=1, 1+0=1, 0+0=0. So 0101₂ + 0010₂ = 0111₂ (5 + 2 = 7). 1000 is the slide's example 0101 + 0011, not this sum.",
+      "explanation": "No column has 1+1, so there is no carry: 1+0=1, 0+1=1, 1+0=1, 0+0=0. So 0101₂ + 0010₂ = 0111₂ (5 + 2 = 7). 1000 is the course's example 0101 + 0011, not this sum.",
       "topic": 3
     },
     {
@@ -614,7 +614,7 @@
         "Because it is fast and helps the CPU get data quickly"
       ],
       "answer": "D",
-      "explanation": "Topic 2: \"Cache memory is fast but expensive; built into the CPU for fast access times\", used because RAM speeds increased more slowly than CPU speeds.",
+      "explanation": "\"Cache memory is fast but expensive; built into the CPU for fast access times\", used because RAM speeds increased more slowly than CPU speeds.",
       "topic": 2
     },
     {
@@ -628,7 +628,7 @@
         "The RAM chip"
       ],
       "answer": "C",
-      "explanation": "Topic 2: \"Input and output devices let the user communicate with the computer\"; \"the most common input devices are keyboards and mice\". The motherboard connects all the parts, the CPU executes instructions, and the RAM chip is memory.",
+      "explanation": "\"Input and output devices let the user communicate with the computer\"; \"the most common input devices are keyboards and mice\". The motherboard connects all the parts, the CPU executes instructions, and the RAM chip is memory.",
       "topic": 2
     },
     {
@@ -642,7 +642,7 @@
         "It fetches, decodes, and executes instructions"
       ],
       "answer": "D",
-      "explanation": "Topic 2: \"Control unit fetches instructions from memory, decodes them, and executes them\".",
+      "explanation": "\"Control unit fetches instructions from memory, decodes them, and executes them\".",
       "topic": 2
     },
     {
@@ -656,7 +656,7 @@
         "Only used for graphics"
       ],
       "answer": "A",
-      "explanation": "Topic 2: parallel processing = \"Many processing units operating at the same time\" (e.g. multicore machines and the cloud).",
+      "explanation": "Parallel processing = \"Many processing units operating at the same time\" (e.g. Multicore machines and the cloud).",
       "topic": 2
     }
   ]
