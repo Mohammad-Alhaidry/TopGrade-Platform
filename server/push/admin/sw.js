@@ -37,7 +37,7 @@ self.addEventListener('push', (event) => {
   const n = msg.notification || msg;
   event.waitUntil(self.registration.showNotification(n.title || 'سمارت برو', {
     body: n.body || '',
-    icon: new URL('icon-192.png', self.registration.scope).href,
+    // No large picture: Android already shows the app's own icon beside the text (it would appear twice).
     badge: new URL('../assets/icons/badge-96.png', self.registration.scope).href,
     tag: n.tag || 'smartpro-test',
     dir: 'auto',
