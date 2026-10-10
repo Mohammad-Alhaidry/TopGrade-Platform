@@ -124,6 +124,27 @@ async function fromCache(url) {
   return (await cache.match(url)) ?? fetch(url);
 }
 
+// Course data (the course list and question banks) comes from the server first, so a new course or question is
+// there on the first open after a deploy, without waiting for the app update to download. The cached copy
+// answers when the server is slow (a few seconds) or the phone is offline.
+const DATA = new URL('data/', SCOPE).href;
+async function fromNetwork(url) {
+  const cache = await caches.open(CACHE);
+  try {
+    const res = await Promise.race([
+      fetch(url, { cache: 'no-cache' }),
+      new Promise((_, fail) => setTimeout(() => fail(new Error('slow network')), 4000)),
+    ]);
+    if (res.ok) {
+      cache.put(url, res.clone());
+      return res;
+    }
+  } catch {
+    /* offline or slow: fall back to the cached copy */
+  }
+  return (await cache.match(url)) ?? fetch(url);
+}
+
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   if (request.method !== 'GET' || !request.url.startsWith(SCOPE)) return;
@@ -137,6 +158,6 @@ self.addEventListener('fetch', (event) => {
   // ?fresh asks for the server's copy (e.g. the course list, when a link names a course this copy doesn't know yet).
   if (url.searchParams.has('fresh')) return;
   url.search = '';
-  if (PRECACHED.has(url.href)) event.respondWith(fromCache(url.href));
+  if (PRECACHED.has(url.href)) event.respondWith(url.href.startsWith(DATA) ? fromNetwork(url.href) : fromCache(url.href));
   // Anything else (e.g. the link-preview image) goes to the network as usual.
 });
