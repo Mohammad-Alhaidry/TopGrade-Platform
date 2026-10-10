@@ -175,6 +175,8 @@ function showLogin(message = '') {
   },
   h('div', { class: 'login__brand' }, h('img', { src: ICON, alt: '' }), h('h1', {}, 'إدارة سمارت برو'), h('p', {}, 'إرسال التنبيهات للطلاب ومتابعة نتائجها')),
   h('div', { class: 'card' },
+    // A hidden account name, so the phone's password manager can save and fill the password.
+    h('input', { type: 'text', name: 'username', autocomplete: 'username', value: 'smartpro', hidden: true, 'aria-hidden': 'true', tabindex: '-1' }),
     h('label', { class: 'field', for: 'pw' }, h('span', { class: 'label' }, 'كلمة المرور'), h('span', { class: 'pw' }, pw, toggle)),
     err, btn))));
   pw.focus();
