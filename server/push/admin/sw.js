@@ -37,7 +37,9 @@ self.addEventListener('push', (event) => {
   const n = msg.notification || msg;
   event.waitUntil(self.registration.showNotification(n.title || 'سمارت برو', {
     body: n.body || '',
-    // No large picture: Android already shows the app's own icon beside the text (it would appear twice).
+    // The large picture is a fully transparent image: Android already shows the app's own icon on the left, and with
+    // no picture at all Chrome draws a letter circle («S») on the right instead (NotificationBuilderBase.ensureNormalizedIcon).
+    icon: new URL('../assets/icons/blank-96.png', self.registration.scope).href,
     badge: new URL('../assets/icons/badge-96.png', self.registration.scope).href,
     tag: n.tag || 'smartpro-test',
     dir: 'auto',

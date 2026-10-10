@@ -1,7 +1,7 @@
 // إدارة سمارت برو: the owner's notifications app (served at /admin/ and /preview/admin/ by server/push).
 // Made of the students' app's own pieces (element builder, icons, sheets, theme, stylesheets) and its patterns:
-// the header, a 3-tab bar (Home, History, Settings), and "New notification" as a full screen like the topic setup
-// (choice tiles, a fixed action bar). No native pickers anywhere: every choice is a tile, a segment or a sheet.
+// the header, a 4-tab bar (Home, New notification, History, Settings), and the new notification laid out like the
+// topic setup (choice tiles, a fixed action bar above the tabs). No native pickers anywhere: every choice is a tile, a segment or a sheet.
 
 import { h, icon, ICONS } from '../assets/js/quiz/dom.js';
 import { confirmDialog, openSheet } from '../assets/js/quiz/dialog.js';
@@ -81,7 +81,7 @@ async function api(path, body) {
 }
 
 const state = { catalog: { courses: [] }, overview: null, history: [], tab: 'home', filter: 'all' };
-let current = ''; // the screen on show: a tab id, or 'compose' / 'done' / 'login'
+let current = ''; // the screen on show: a tab id, or 'done' / 'login'
 const course = (id) => state.catalog.courses.find((c) => c.id === id);
 const courseName = (id) => course(id)?.titleAr ?? id;
 const audienceName = (id) => (id ? `مشتركو ${courseName(id)}` : 'كل المشتركين');
@@ -123,7 +123,7 @@ const paintChip = () => chipSlot.replaceChildren(state.overview?.site === 'previ
 /* ---------- screens ---------- */
 
 const root = document.getElementById('app');
-const TABS = [['home', 'الرئيسية', ICONS.home], ['history', 'السجل', I.list], ['settings', 'الإعدادات', I.gear]];
+const TABS = [['home', 'الرئيسية', ICONS.home], ['compose', 'تنبيه جديد', I.send], ['history', 'السجل', I.list], ['settings', 'الإعدادات', I.gear]];
 const scrollMemory = {};
 
 function mountScreen(name, { bar = null, body, foot = null, className = '', enter = '' }) {
@@ -143,16 +143,25 @@ const pagebar = ({ start = null, title, sub = null, end = null }) => h('div', { 
 const tabbar = () => h('nav', { class: 'tabbar', 'aria-label': 'الأقسام' }, TABS.map(([id, label, paths]) => h('button', {
   type: 'button', class: `tab${state.tab === id ? ' is-active' : ''}`, 'aria-current': state.tab === id ? 'page' : null, onclick: () => go(id),
 }, h('span', { class: 'tab__icon' }, icon(...paths)), h('span', { class: 'tab__label' }, label))));
-const DRAW = { home: () => drawHome(), history: () => drawHistory(), settings: () => drawSettings() };
+let composeFrom = null; // a notification from the history to start the new one from
+const DRAW = {
+  home: () => drawHome(),
+  compose: () => { const from = composeFrom; composeFrom = null; showCompose(from); },
+  history: () => drawHistory(),
+  settings: () => drawSettings(),
+};
 
 /** A tab shows what we already have at once, then refreshes it in the background (no blank screen, no jump). */
 async function go(tab) {
   state.tab = tab;
   history.replaceState(null, '', `#${tab}`);
-  if (state.overview) DRAW[tab]();
+  const shown = Boolean(state.overview);
+  if (shown) DRAW[tab]();
   try {
     await refresh();
-    // Redraw only if the owner is still on this tab and not in the middle of something (a sheet, a form).
+    // Redraw only if the owner is still on this tab and not in the middle of something (a sheet, a form). The new
+    // notification is never redrawn under the owner's hands: its counts are already there and it keeps its scroll.
+    if (tab === 'compose' && shown) return;
     if (current === tab && !document.querySelector('dialog[open]') && !root.contains(document.activeElement?.closest('form'))) DRAW[tab]();
   } catch (err) { fail(err); }
 }
@@ -458,8 +467,8 @@ function saveDraft(d) { try { localStorage.setItem(DRAFT_KEY, JSON.stringify(d))
 function dropDraft() { try { localStorage.removeItem(DRAFT_KEY); } catch { /* nothing saved */ } }
 
 function openCompose(from = null) {
-  history.pushState(null, '', '#compose');
-  showCompose(from);
+  composeFrom = from;
+  go('compose');
 }
 
 function showCompose(from) {
@@ -649,23 +658,16 @@ function showCompose(from) {
 
   mountScreen('compose', {
     className: 'screen--compose',
-    enter: 'rise',
-    bar: pagebar({
-      start: h('button', { type: 'button', class: 'iconbtn', 'aria-label': 'إغلاق', onclick: () => history.back() }, icon(...ICONS.close)),
-      title: 'تنبيه جديد',
-      sub: 'تُحفظ المسودة تلقائيًا',
-    }),
+    bar: pagebar({ title: 'تنبيه جديد', sub: 'تُحفظ المسودة تلقائيًا' }),
     body: [form, warn],
-    foot: h('footer', { class: 'bar bar--even' }, testBtn, sendBtn),
+    foot: [h('footer', { class: 'bar bar--even' }, testBtn, sendBtn), tabbar()],
   });
   redraw();
 }
 
 /** After a send or a schedule: what happened, then back to the app. */
 function showDone(r, later) {
-  history.replaceState(null, '', '#done');
   const ok = later || r.delivered > 0;
-  const back = (tab) => { state.tab = tab; history.replaceState(null, '', `#${tab}`); go(tab); };
   mountScreen('done', {
     className: 'screen--done',
     enter: 'fade',
@@ -677,10 +679,11 @@ function showDone(r, later) {
         : !r.total ? 'لا يوجد مشتركون في هذا الجمهور.'
         : r.removed === r.total ? 'أصحاب هذه الاشتراكات أوقفوا التنبيهات أو حذفوا التطبيق، فحُذفت من القائمة.'
         : 'تعذّر الوصول لخدمة التنبيهات الآن. أعد الإرسال بعد قليل.'),
-      h('div', { class: 'done__card' }, h('p', { class: 'sent__title' }, r.title), h('p', { class: 'sent__body' }, r.body))),
-    foot: h('footer', { class: 'bar bar--even' },
-      h('button', { type: 'button', class: 'btn btn--secondary', onclick: () => back('home') }, 'الرئيسية'),
-      h('button', { type: 'button', class: 'btn btn--primary', onclick: () => back('history') }, 'عرض في السجل')),
+      h('div', { class: 'done__card' }, h('p', { class: 'sent__title' }, r.title), h('p', { class: 'sent__body' }, r.body)),
+      h('div', { class: 'done__actions' },
+        h('button', { type: 'button', class: 'btn btn--secondary', onclick: () => go('compose') }, 'تنبيه جديد آخر'),
+        h('button', { type: 'button', class: 'btn btn--primary', onclick: () => go('history') }, 'عرض في السجل'))),
+    foot: tabbar(),
   });
 }
 
@@ -689,15 +692,13 @@ function showDone(r, later) {
 addEventListener('popstate', () => {
   if (!state.overview) return;
   const tab = location.hash.slice(1);
-  if (tab === 'compose') showCompose(null);
-  else go(TABS.some(([id]) => id === tab) ? tab : state.tab);
+  go(TABS.some(([id]) => id === tab) ? tab : state.tab);
 });
 
 async function start() {
   state.catalog = await (await fetch(asset('data/catalog.json'), { cache: 'no-cache' })).json();
   await Promise.all([refresh(), pushOk() ? thisDevice().catch(() => null) : null]);
   const tab = location.hash.slice(1);
-  if (tab === 'compose') { history.replaceState(null, '', '#home'); state.tab = 'home'; drawHome(); openCompose(); return; }
   go(TABS.some(([id]) => id === tab) ? tab : 'home');
 }
 

@@ -5,13 +5,12 @@
 
 [hidden]{display:none!important}
 button.tab{border:0;background:none;font-family:inherit;cursor:pointer}
+.tabbar{grid-template-columns:repeat(4,1fr)}
 
 /* ---------- motion ---------- */
-/* A full screen (new notification) rises in like the app's sheets; sign-in and the result fade in. Tabs switch
-   instantly, as in the students' app. Reduced motion turns all of it off (app.css). */
-.enter--rise{animation:screen-rise 240ms cubic-bezier(.2,.8,.2,1)}
+/* Sign-in and the send result fade in; tabs switch instantly, as in the students' app. Reduced motion turns all of
+   it off (app.css). */
 .enter--fade{animation:screen-fade 180ms ease-out}
-@keyframes screen-rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
 @keyframes screen-fade{from{opacity:0}to{opacity:1}}
 .done__icon{animation:done-pop 360ms cubic-bezier(.3,1.5,.5,1) 80ms both}
 @keyframes done-pop{from{transform:scale(.4);opacity:0}to{transform:none;opacity:1}}
@@ -101,7 +100,12 @@ textarea.input{min-height:88px;resize:vertical}
 .done .empty__icon.is-warn{background:var(--warn-bg);color:var(--warn-ink)}
 .done p{max-width:34ch}
 .done__card{display:grid;gap:4px;width:100%;margin-top:6px;padding:12px 14px;border-radius:var(--r-ctl);background:var(--soft);box-shadow:inset 0 0 0 1px var(--line);text-align:start}
+.done__actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%;margin-top:6px}
+.done__actions .btn{padding:0 12px}
 .screen--done .body{justify-content:center}
+/* the new notification's buttons sit just above the tabs: tighter than the app's full action bar */
+.screen--compose > .bar{padding-block:8px}
+.screen--compose > .bar .btn{min-height:46px}
 
 /* ---------- a sent / scheduled notification ---------- */
 .sent{display:grid;gap:8px;padding:14px}
@@ -155,4 +159,9 @@ textarea.input{min-height:88px;resize:vertical}
 @media(min-width:700px){
   .compose .tiles>*{flex-basis:calc((100% - 16px) / 3)}
   .options--hours{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+/* wide screens: tabs become the side rail (app.css); the action bar keeps its place under the form */
+@media(min-width:1024px){
+  .screen--compose{grid-template-rows:auto minmax(0,1fr) auto;grid-template-areas:"nav bar" "nav body" "nav foot"}
+  .screen--compose > .bar{grid-area:foot}
 }
