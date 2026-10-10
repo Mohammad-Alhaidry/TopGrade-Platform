@@ -11,6 +11,7 @@ import { readProgress, overall, streak } from '../progress.js';
 import { topicKey, topicLabel } from '../catalog.js';
 import { savedRunTopic, readSavedRun, queueRun, newRun } from '../quiz.js';
 import { installOffer, promptInstall, dismissInstall, onInstallChange } from '../install.js';
+import { iosSteps } from '../install-steps.js';
 import { t, lang } from '../i18n.js';
 import { courseSummaries, courseCard } from './courses.js';
 
@@ -123,9 +124,7 @@ function installCard() {
   const close = h('button', { type: 'button', class: 'install__close', 'aria-label': t('inst.notNow'), onclick: dismissInstall }, icon(...ICONS.close));
   const body = offer === 'prompt'
     ? h('p', { class: 'install__text' }, t('inst.text'))
-    : h('ol', { class: 'install__steps' },
-        h('li', {}, t('inst.tap'), ' ', h('span', { class: 'install__key', 'aria-label': t('inst.share') }, icon(...ICONS.share)), ' ', t('inst.shareBar')),
-        h('li', {}, t('inst.choose'), ' ', h('strong', {}, t('inst.addHome')), ' ', h('span', { class: 'install__key', 'aria-hidden': 'true' }, icon(...ICONS.addSquare))));
+    : iosSteps();
   // Android/desktop: one compact row with the Install button beside the text. iPhone needs room for the steps.
   const row = offer === 'prompt';
   return h('section', { class: `card install${row ? ' install--row' : ''}`, 'aria-labelledby': 'install-title' },

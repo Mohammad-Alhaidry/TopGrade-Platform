@@ -5,6 +5,7 @@ import { h, icon, ICONS } from '../quiz/dom.js';
 import { confirmDialog, openSheet } from '../quiz/dialog.js';
 import { toast } from './shell.js';
 import { t, localName } from './i18n.js';
+import { iosSteps } from './install-steps.js';
 import { follow, unfollow, isFollowing, seemsFollowing, shouldInvite, markInvited } from './notify.js';
 
 /** Explains why following did not happen; true when it did. */
@@ -17,10 +18,7 @@ function explain(result) {
       closeLabel: t('close'),
       build: () => [
         h('p', { class: 'sheet__text' }, t('push.installText')),
-        h('ol', { class: 'install__steps push-steps' },
-          h('li', {}, t('inst.tap'), ' ', h('span', { class: 'install__key', 'aria-label': t('inst.share') }, icon(...ICONS.share)), ' ', t('inst.shareBar')),
-          h('li', {}, t('inst.choose'), ' ', h('strong', {}, t('inst.addHome')), ' ', h('span', { class: 'install__key', 'aria-hidden': 'true' }, icon(...ICONS.addSquare))),
-          h('li', {}, t('push.installStep3'))),
+        iosSteps({ className: 'install__steps push-steps', after: [[t('push.installStep3'), ICONS.bell]] }),
       ],
     });
   } else if (result === 'blocked') {

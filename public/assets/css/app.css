@@ -480,6 +480,8 @@ a.card:active,button.card:active{transform:scale(.99)}
 .install__steps{display:grid;gap:5px;margin:2px 0 0;padding-inline-start:18px;font:500 12.5px/1.6 var(--ui);color:var(--muted)}
 .install__steps li::marker{font-weight:800;color:var(--brand-ink)}
 .install__steps strong{color:var(--ink);font-weight:700}
+.install__hint{margin:6px 0 0;font:500 12px/1.7 var(--ui);color:var(--muted)}
+.install__hint strong{color:var(--ink);font-weight:700}
 .install__key{display:inline-grid;place-items:center;width:22px;height:22px;margin:0 1px;vertical-align:-6px;border-radius:var(--r-sm);border:1px solid var(--line-strong);background:var(--card);color:var(--accent)}
 .install__key svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .install__btn{justify-self:start;margin-top:6px}
