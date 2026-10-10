@@ -37,7 +37,7 @@ export function courseBell(course) {
     btn.setAttribute('aria-pressed', String(on));
     btn.setAttribute('aria-label', t(on ? 'push.following' : 'push.follow'));
     btn.title = t(on ? 'push.following' : 'push.follow');
-    btn.replaceChildren(icon(...(on ? ICONS.bellOn : ICONS.bell)));
+    btn.replaceChildren(icon(...ICONS.bell));
   };
   paint(seemsFollowing(course.id));
   isFollowing(course.id).then(paint).catch(() => {});
