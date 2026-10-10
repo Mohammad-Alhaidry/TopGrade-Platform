@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>إرسال التنبيهات | سمارت برو</title>
+<link rel="icon" href="../favicon.ico">
+<link rel="stylesheet" href="admin.css">
+<script type="module" src="admin.js"></script>
+</head>
+<body>
+<header class="top">
+  <img class="top__logo" src="../assets/img/logo-mark.png" alt="" width="40" height="40">
+  <div class="top__copy">
+    <h1>إرسال التنبيهات</h1>
+    <p>سمارت برو <span class="site" id="site"></span></p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="stats" aria-label="المشتركون">
+    <div class="stat stat--main"><span class="stat__label">كل المشتركين</span><strong class="stat__value" id="total">—</strong></div>
+    <div class="stat"><span class="stat__label">آخر اشتراك</span><strong class="stat__value stat__value--sm" id="last">—</strong></div>
+    <ul class="per-course" id="per-course"></ul>
+  </section>
+
+  <form class="card compose" id="compose" novalidate>
+    <h2>تنبيه جديد</h2>
+    <div class="row2">
+      <label class="field">
+        <span class="field__label">إلى</span>
+        <select id="to"></select>
+      </label>
+      <label class="field">
+        <span class="field__label">يفتح عند الضغط عليه</span>
+        <select id="path"></select>
+      </label>
+    </div>
+    <label class="field">
+      <span class="field__label">العنوان <span class="count" id="title-count">0/60</span></span>
+      <input id="title" maxlength="60" required autocomplete="off" placeholder="مثال: أسئلة جديدة في رياضيات الأعمال">
+    </label>
+    <label class="field">
+      <span class="field__label">النص <span class="count" id="body-count">0/180</span></span>
+      <textarea id="body" maxlength="180" rows="3" required placeholder="مثال: أضفنا اختبارات سابقة للوحدات 1–4. ابدأ التدريب الآن."></textarea>
+    </label>
+
+    <div class="preview" aria-label="كيف سيظهر التنبيه">
+      <span class="preview__label">المعاينة</span>
+      <div class="note">
+        <img class="note__icon" src="../assets/icons/icon-192.png" alt="" width="40" height="40">
+        <div class="note__copy">
+          <p class="note__app">سمارت برو · الآن</p>
+          <p class="note__title" id="pv-title">العنوان</p>
+          <p class="note__body" id="pv-body">النص</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="msg" id="msg" role="status" hidden></p>
+
+    <div class="actions">
+      <button type="button" class="btn btn--ghost" id="test" title="يرسل لآخر جهاز فعّل التنبيهات (جوالك بعد تفعيل الجرس)">إرسال تجربة</button>
+      <button type="submit" class="btn btn--primary" id="send">إرسال</button>
+    </div>
+  </form>
+
+  <section class="card history" aria-labelledby="history-title">
+    <h2 id="history-title">السجل</h2>
+    <ol class="sends" id="history"></ol>
+    <p class="empty" id="history-empty" hidden>لم يُرسل أي تنبيه بعد.</p>
+    <p class="hint">«إرسال تجربة» يرسل التنبيه لآخر جهاز فعّل الجرس فقط: فعّل الجرس في التطبيق على جوالك أولًا، ثم جرّب.</p>
+  </section>
+</main>
+
+<dialog class="confirm" id="confirm">
+  <form method="dialog">
+    <h2>تأكيد الإرسال</h2>
+    <p id="confirm-text"></p>
+    <div class="actions">
+      <button class="btn btn--ghost" value="">إلغاء</button>
+      <button class="btn btn--primary" value="send">إرسال الآن</button>
+    </div>
+  </form>
+</dialog>
+</body>
+</html>

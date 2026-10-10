@@ -83,6 +83,20 @@ export const forwardIcon = () => icon(...(isRTL() ? ICONS.chevronLeft : ICONS.ch
 export const iconButton = (iconNode, label, onclick) =>
   h('button', { type: 'button', class: 'iconbtn', 'aria-label': label, onclick }, iconNode);
 
+/** A short message at the bottom of the screen that goes away by itself (screen readers announce it). */
+let toastTimer = 0;
+export function toast(text) {
+  let el = document.getElementById('toast');
+  if (!el) {
+    el = h('p', { id: 'toast', class: 'toast', role: 'status', 'aria-live': 'polite' });
+    document.body.append(el);
+  }
+  el.textContent = text;
+  el.classList.add('is-on');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => el.classList.remove('is-on'), 3200);
+}
+
 export const backLink = (path, label) =>
   h('a', { class: 'iconbtn', href: href(path), 'aria-label': label }, backIcon());
 

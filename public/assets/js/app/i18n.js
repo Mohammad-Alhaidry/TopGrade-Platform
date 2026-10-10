@@ -110,6 +110,27 @@ const S = {
   'inst.btn': { en: 'Install', ar: 'تثبيت' },
   'inst.notNow': { en: 'Not now', ar: 'ليس الآن' },
 
+  // Notifications
+  'push.follow': { en: 'Turn on notifications for this course', ar: 'فعّل التنبيهات لهذا المقرر' },
+  'push.following': { en: 'Notifications on for this course', ar: 'التنبيهات مفعّلة لهذا المقرر' },
+  'push.onDone': { en: 'Notifications on: you will hear about new questions in this course.', ar: 'تم تفعيل التنبيهات: سيصلك كل جديد في هذا المقرر.' },
+  'push.offTitle': { en: 'Turn off notifications?', ar: 'إيقاف التنبيهات؟' },
+  'push.offText': { en: 'You will no longer get notifications about {course}.', ar: 'لن تصلك تنبيهات مقرر {course} بعد الآن.' },
+  'push.offBtn': { en: 'Turn off', ar: 'إيقاف' },
+  'push.keep': { en: 'Keep them on', ar: 'إبقاؤها' },
+  'push.offDone': { en: 'Notifications off for this course.', ar: 'تم إيقاف تنبيهات هذا المقرر.' },
+  'push.installTitle': { en: 'Add the app first', ar: 'أضف التطبيق أولًا' },
+  'push.installText': { en: 'On iPhone, notifications reach only the app added to the Home Screen. Add it, open it from its icon, then tap the bell again.', ar: 'على الآيفون تصل التنبيهات إلى التطبيق المضاف إلى الشاشة الرئيسية فقط. أضفه، ثم افتحه من أيقونته واضغط الجرس مرة أخرى.' },
+  'push.blockedTitle': { en: 'Notifications are off', ar: 'التنبيهات موقوفة' },
+  'push.blockedText': { en: 'Notifications are turned off for Smart Pro on this device. Turn them on in the phone or browser settings (Notifications), then tap the bell again.', ar: 'التنبيهات موقوفة لسمارت برو على هذا الجهاز. فعّلها من إعدادات الجوال أو المتصفح (الإشعارات)، ثم اضغط الجرس مرة أخرى.' },
+  'push.denied': { en: 'Notifications were not allowed. You can turn them on later from the bell.', ar: 'لم يتم السماح بالتنبيهات. يمكنك تفعيلها لاحقًا من الجرس.' },
+  'push.none': { en: 'This browser does not support notifications.', ar: 'هذا المتصفح لا يدعم التنبيهات.' },
+  'push.error': { en: 'Could not turn on notifications. Check your connection and try again.', ar: 'تعذّر تفعيل التنبيهات. تأكد من الاتصال وحاول مرة أخرى.' },
+  'push.inviteTitle': { en: 'Don’t miss new questions', ar: 'لا يفوتك الجديد' },
+  'push.inviteText': { en: 'Turn on notifications to hear when new questions are added to {course}.', ar: 'فعّل التنبيهات ليصلك إشعار عند إضافة أسئلة جديدة لمقرر {course}.' },
+  'push.inviteYes': { en: 'Turn on notifications', ar: 'فعّل التنبيهات' },
+  'push.inviteDone': { en: 'Notifications are on for this course.', ar: 'التنبيهات مفعّلة لهذا المقرر.' },
+
   // Courses / course
   'courses.title': { en: 'Courses', ar: 'المقررات' },
   'progressOf': { en: '{name} progress', ar: 'التقدّم في {name}' },

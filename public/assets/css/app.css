@@ -230,6 +230,22 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--accent);outline
 .lines>.line{display:block}
 .lines>.line+.line{margin-top:2px}
 
+/* Notifications: the bell in a course's top bar, the invitation after a quiz, the toast. */
+.bell.is-on{color:var(--brand-ink);border-color:var(--brand-ink);background:var(--tint)}
+.invite-slot:empty{display:none}
+.invite{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 12px;align-items:start;padding:14px var(--pad)}
+.invite__icon{grid-row:span 2;display:grid;place-items:center;width:40px;height:40px;border-radius:var(--r-ctl);background:var(--tint);color:var(--brand-ink)}
+.invite__icon svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.invite__copy{display:grid;gap:2px;min-width:0}
+.invite__title{margin:0;font:800 15.5px/1.35 var(--ui);color:var(--ink)}
+.invite__text,.invite__done{margin:0;font:500 13.5px/1.5 var(--ui);color:var(--muted)}
+.invite__done{color:var(--right-ink);font-weight:700}
+.invite__actions{grid-column:2;display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.invite__actions .btn{min-height:40px;padding:0 16px}
+.sheet__text{margin:0;font:500 14.5px/1.6 var(--ui);color:var(--text)}
+.toast{position:fixed;inset-inline:16px;bottom:calc(84px + env(safe-area-inset-bottom));z-index:50;max-width:520px;margin:0 auto;padding:12px 16px;border-radius:var(--r-ctl);background:var(--ink);color:var(--card);font:600 14px/1.45 var(--ui);text-align:center;box-shadow:0 10px 30px rgba(0,0,0,.25);opacity:0;transform:translateY(8px);pointer-events:none;transition:opacity 160ms ease,transform 160ms ease}
+.toast.is-on{opacity:1;transform:none}
+
 /* ---------- Results ---------- */
 .score{display:flex;align-items:center;gap:16px;padding:14px var(--pad)}
 .ring{position:relative;flex:none;width:104px;height:104px}

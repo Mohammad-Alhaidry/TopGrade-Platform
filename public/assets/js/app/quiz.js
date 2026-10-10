@@ -17,6 +17,7 @@ import { navigate } from './router.js';
 import { t, lang, localName } from './i18n.js';
 import { rich } from './math.js';
 import { track } from './analytics.js';
+import { inviteCard } from './push-ui.js';
 
 const STORAGE_KEY = 'topgrade.run.v1';
 // Question content in the open course's language and direction (Arabic courses read right to left).
@@ -819,6 +820,7 @@ function resultsView(run) {
           h('p', { class: 'score__line' }, t('res.line', { c: s.correct, n: s.total })),
           h('p', { class: 'score__time' }, duration(run.finishedAt - run.startedAt)),
           newBest ? h('p', { class: 'score__best' }, icon(...ICONS.flame), t('res.best', { p: run.prevBest })) : null)),
+      inviteCard(state.ctx.course),
       h('dl', { class: 'card stats' },
         h('div', { class: 'stats__item is-right' }, h('dt', {}, t('st.correct')), h('dd', {}, s.correct)),
         h('div', { class: 'stats__item is-wrong' }, h('dt', {}, t('st.wrong')), h('dd', {}, wrong)),
