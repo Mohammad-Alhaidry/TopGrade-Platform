@@ -197,6 +197,7 @@ const ADMIN_FILES = {
   'manifest.webmanifest': 'manifest.webmanifest', 'sw.js': 'sw.js',
   'icon-192.png': 'icon-192.png', 'icon-512.png': 'icon-512.png', 'apple-touch-icon.png': 'apple-touch-icon.png',
 };
+const PREVIEW_ADMIN = '/opt/smartpro-push-preview/admin';
 const TYPES = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.webmanifest': 'application/manifest+json', '.png': 'image/png' };
 
 /* ---------- routes ---------- */
@@ -364,8 +365,11 @@ async function route(req, res) {
   }
 
   if (pathname.startsWith('/admin/') && req.method === 'GET') {
+    // The preview site's admin app is the version being tried out (copied by tg-app-deploy --preview), so a
+    // change to it never reaches the live /admin/ before it is approved.
+    const dir = site === 'preview' && existsSync(PREVIEW_ADMIN) ? PREVIEW_ADMIN : join(HERE, 'admin');
     const file = ADMIN_FILES[pathname.slice('/admin/'.length)];
-    const full = file && join(HERE, 'admin', file);
+    const full = file && join(dir, file);
     if (!full || !existsSync(full)) return send(res, 404, 'not found');
     res.writeHead(200, { 'Content-Type': TYPES[extname(full)], 'Cache-Control': 'no-cache' });
     return res.end(readFileSync(full));
