@@ -137,7 +137,7 @@ function showLogin() {
       btn.disabled = true;
       err.hidden = true;
       try {
-        await api('login', { password: pw.value.trim() });
+        await api('login', { password: pw.value });
         await start();
       } catch (error) {
         err.textContent = errorText(error);
@@ -477,7 +477,7 @@ async function showSettings() {
     onsubmit: async (e) => {
       e.preventDefault();
       try {
-        await api('password', { current: cur.value.trim(), next: nxt.value.trim() });
+        await api('password', { current: cur.value, next: nxt.value });
         cur.value = nxt.value = '';
         toast('تم تغيير كلمة المرور. الأجهزة الأخرى ستطلب الدخول من جديد.');
       } catch (err) {

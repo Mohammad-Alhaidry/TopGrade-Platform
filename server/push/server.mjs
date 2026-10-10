@@ -65,7 +65,6 @@ const testsOf = (site) => Object.values(store.tests).filter((r) => r.site === si
 const hashPassword = (password, salt = randomBytes(16).toString('hex')) => `${salt}:${scryptSync(password, salt, 64).toString('hex')}`;
 function checkPassword(password) {
   if (!existsSync(ADMIN_PATH) || typeof password !== 'string' || password.length > 200) return false;
-  password = password.trim(); // a pasted password often carries a space or line break
   const [salt, hash] = JSON.parse(readFileSync(ADMIN_PATH, 'utf8')).password.split(':');
   return timingSafeEqual(scryptSync(password, salt, 64), Buffer.from(hash, 'hex'));
 }
