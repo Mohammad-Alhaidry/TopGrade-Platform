@@ -23,9 +23,6 @@
       ],
       "answer": "C",
       "explanation": "Topic 1: \"Computer science is the study of algorithms\", including their formal properties, hardware and linguistic realizations, and applications. Studying only hardware, languages or applications are the listed misconceptions.",
-      "source": {
-        "page": "Midterm A, Part 1 Q1"
-      },
       "topic": 1
     },
     {
@@ -40,9 +37,6 @@
       ],
       "answer": "B",
       "explanation": "An unambiguous operation \"can be understood by the computing agent without having to be further defined or simplified\"; statements like \"Start over (From where?)\" are ambiguous.",
-      "source": {
-        "page": "Midterm A, Part 1 Q2"
-      },
       "topic": 1
     },
     {
@@ -57,9 +51,6 @@
       ],
       "answer": "C",
       "explanation": "Topic 1: an infinite loop \"runs forever\" and is \"usually a mistake\". A real algorithm must halt in a finite amount of time.",
-      "source": {
-        "page": "Midterm A, Part 1 Q3"
-      },
       "topic": 1
     },
     {
@@ -74,9 +65,6 @@
       ],
       "answer": "B",
       "explanation": "Topic 3, Slide 5: the decimal system is base 10 (digits 0-9, powers of 10); the binary system is base 2: it uses only 0 and 1, and each position represents a power of 2.",
-      "source": {
-        "page": "Midterm A, Part 1 Q4 (also Midterm B, Part I Q1)"
-      },
       "topic": 3
     },
     {
@@ -91,9 +79,6 @@
       ],
       "answer": "C",
       "explanation": "Topic 3: \"True → 1, False → 0\" (Slide 23), and a bit 1 means ON while 0 means OFF (Slide 4). So 1 represents True; False, Off and zero are what 0 represents.",
-      "source": {
-        "page": "Midterm A, Part 1 Q5"
-      },
       "topic": 3
     },
     {
@@ -108,9 +93,6 @@
       ],
       "answer": "B",
       "explanation": "Topic 1: conditional operations \"ask a question and the next operation is then selected on the basis of the answer to that question\".",
-      "source": {
-        "page": "Midterm A, Part 1 Q6"
-      },
       "topic": 1
     },
     {
@@ -125,9 +107,6 @@
       ],
       "answer": "B",
       "explanation": "The arithmetic/logic unit (ALU) \"contains circuits for arithmetic: addition, subtraction, multiplication, and division\". The control unit fetches, decodes and executes instructions.",
-      "source": {
-        "page": "Midterm A, Part 1 Q7"
-      },
       "topic": 2
     },
     {
@@ -142,9 +121,6 @@
       ],
       "answer": "C",
       "explanation": "Topic 3, Slide 25: AND: \"The result is True only when BOTH inputs are True\" (AND → Both). OR is True when at least one input is True, and NOT reverses a single value. XOR is not taught in the slides (they cover only AND, OR and NOT), and it is not the answer.",
-      "source": {
-        "page": "Midterm A, Part 1 Q8"
-      },
       "topic": 3
     },
     {
@@ -159,9 +135,6 @@
       ],
       "answer": "B",
       "explanation": "Topic 2: \"A program and its data must be brought to memory before they can be executed\"; the CPU \"retrieves instructions from memory and executes them\". Programs are kept permanently on storage devices (hard disk) and moved to memory when used.",
-      "source": {
-        "page": "Midterm A, Part 1 Q9"
-      },
       "topic": 2
     },
     {
@@ -176,9 +149,6 @@
       ],
       "answer": "B",
       "explanation": "Topic 2: \"ALU and control unit are often bundled inside the central processing unit (CPU)\".",
-      "source": {
-        "page": "Midterm A, Part 1 Q10"
-      },
       "topic": 2
     },
     {
@@ -200,9 +170,6 @@
         }
       ],
       "explanation": "Topic 4: an assembler converts assembly language into machine code; an interpreter \"reads one statement ... translates it ... and then executes it right away\"; a compiler \"translates the entire source code into a machine-code file\".",
-      "source": {
-        "page": "Midterm A, Part 2 Q1"
-      },
       "topic": 4
     },
     {
@@ -217,9 +184,6 @@
       ],
       "answer": "C",
       "explanation": "This is the slide definition of an interpreter. A compiler translates the whole program first, and an assembler only translates assembly language.",
-      "source": {
-        "page": "Midterm A, Part 2 Q1"
-      },
       "topic": 4
     },
     {
@@ -234,9 +198,6 @@
       ],
       "answer": "B",
       "explanation": "Topic 4: \"a program called assembler is used to convert assembly language programs into machine code\". Interpreters and compilers translate high-level languages.",
-      "source": {
-        "page": "Midterm A, Part 2 Q1"
-      },
       "topic": 4
     },
     {
@@ -245,9 +206,6 @@
       "prompt": "Compare between an Assembler, an Interpreter, and a Compiler: a compiler translates and executes one statement at a time, while an interpreter translates the entire source code into a machine-code file first.",
       "answer": false,
       "explanation": "It is the other way round: an interpreter translates and executes one statement at a time; a compiler translates the entire source code into a machine-code file that is then executed.",
-      "source": {
-        "page": "Midterm A, Part 2 Q1"
-      },
       "topic": 4
     },
     {
@@ -262,9 +220,6 @@
       ],
       "answer": "B",
       "explanation": "Topic 4: in the Waterfall model \"the software development process is sequential. One step must be completed before moving on to the next. The previous steps are never revisited.\" The other options describe the Agile model.",
-      "source": {
-        "page": "Midterm A, Part 2 Q2"
-      },
       "topic": 4
     },
     {
@@ -279,9 +234,6 @@
       ],
       "answer": "C",
       "explanation": "Topic 4: Agile \"is a flexible and iterative approach\"; its philosophy: problem specification can change at any time, changes are expected, and the customer or user is involved throughout.",
-      "source": {
-        "page": "Midterm A, Part 2 Q2"
-      },
       "topic": 4
     },
     {
@@ -290,9 +242,6 @@
       "prompt": "Comparing the two models: in the Waterfall Model the previous steps are never revisited, while the Agile Model expects changes and responds to them in an agile way.",
       "answer": true,
       "explanation": "Both halves are slide wording: Waterfall \"previous steps are never revisited\"; Agile \"changes are expected; respond in an agile way\".",
-      "source": {
-        "page": "Midterm A, Part 2 Q2"
-      },
       "topic": 4
     },
     {
@@ -301,9 +250,6 @@
       "prompt": "In the Agile Model, the customer or user is involved only at the start, when the problem specification is written.",
       "answer": false,
       "explanation": "Agile philosophy: \"Customer or user is involved throughout process\", and the problem specification can change at any time.",
-      "source": {
-        "page": "Midterm A, Part 2 Q2"
-      },
       "topic": 4
     },
     {
@@ -318,9 +264,6 @@
       ],
       "answer": "B",
       "explanation": "Topic 3, Slide 12 rules: 0+0=0, 0+1=1, 1+0=1, 1+1=10 → write 0, carry 1 (and 1+1+carry 1 = 11 → write 1, carry 1). Right to left: 1+0=1; 1+1=0 carry 1; 1+1+1=1 carry 1; 0+1+1=0 carry 1; 0+0+1=1. So 00111₂ + 01110₂ = 10101₂ (7 + 14 = 21). 01001 forgets the carries; 01111 writes 1+1 as 1.",
-      "source": {
-        "page": "Midterm A, Part 3 Q1"
-      },
       "topic": 3
     },
     {
@@ -335,9 +278,6 @@
       ],
       "answer": "C",
       "explanation": "Topic 3, Slide 9: repeated division by 2. 14 ÷ 2 = 7 r 0, 7 ÷ 2 = 3 r 1, 3 ÷ 2 = 1 r 1, 1 ÷ 2 = 0 r 1. Read the remainders from bottom to top: 14₁₀ = 1110₂ (check: 8 + 4 + 2 + 0 = 14). 0111 is the remainders read top to bottom.",
-      "source": {
-        "page": "Midterm A, Part 3 Q2"
-      },
       "topic": 3
     },
     {
@@ -352,9 +292,6 @@
       ],
       "answer": "D",
       "explanation": "Topic 3, Slide 7: multiply each bit by its place value and add: 1111₂ = (1×8) + (1×4) + (1×2) + (1×1) = 15₁₀, the largest 4-bit unsigned value (0000₂ → 1111₂ = 0 → 15). 4 only counts the 1s; 16 would need 5 bits (10000₂).",
-      "source": {
-        "page": "Midterm A, Part 3 Q3"
-      },
       "topic": 3
     },
     {
@@ -369,9 +306,6 @@
       ],
       "answer": "B",
       "explanation": "Work as on Topic 3, Slide 27: one intermediate column at a time, one row at a time. a ∨ b (OR) = 0,1,1,1; ¬a = 1,1,0,0 and ¬b = 1,0,1,0, so ¬a ∨ ¬b = 1,1,1,0. AND the two columns row by row (1 only when both are 1): Y = 0,1,1,0. (0,1,1,1 is only a ∨ b; 1,1,1,0 is only ¬a ∨ ¬b.) (The exam writes OR as ∨, AND as ∧, NOT as ¬; the Topic 3 slides write them as +, • and ~.)",
-      "source": {
-        "page": "Midterm A, Part 3 Q4"
-      },
       "topic": 3
     },
     {
@@ -386,9 +320,6 @@
       ],
       "answer": "A",
       "explanation": "NOT reverses each value (Topic 3, Slide 25): ¬a = 1,1,0,0 and ¬b = 1,0,1,0. OR gives 1 when at least one is 1, so ¬a ∨ ¬b = 1,1,1,0: it is 0 only for a = b = 1. (0,1,1,1 is a ∨ b; 1,0,0,0 is ¬a ∧ ¬b; 0,0,0,1 is a ∧ b.) (The exam writes OR as ∨, AND as ∧, NOT as ¬; the Topic 3 slides write them as +, • and ~.)",
-      "source": {
-        "page": "Midterm A, Part 3 Q4"
-      },
       "topic": 3
     },
     {
@@ -403,9 +334,6 @@
       ],
       "answer": "B",
       "explanation": "OR is True when at least one input is True (Topic 3, Slides 25-26 OR truth table): 0 OR 0 = 0, 0 OR 1 = 1, 1 OR 0 = 1, 1 OR 1 = 1, so a ∨ b = 0,1,1,1. (0,0,0,1 is a ∧ b; 1,1,1,0 is ¬a ∨ ¬b; 0,1,1,0 is the final Y.) (The exam writes OR as ∨, AND as ∧, NOT as ¬; the Topic 3 slides write them as +, • and ~.)",
-      "source": {
-        "page": "Midterm A, Part 3 Q4"
-      },
       "topic": 3
     },
     {
@@ -420,9 +348,6 @@
       ],
       "answer": "C",
       "explanation": "Topic 3: \"Binary is the simple idea of On/Off, Yes/No, True/False\" and \"is important to computing systems because of its stability and reliability\"; each bit is 0 → OFF or 1 → ON. So binary maps reliably onto two-state devices. It is not easier for humans than decimal.",
-      "source": {
-        "page": "Midterm B, Part I Q2"
-      },
       "topic": 3
     },
     {
@@ -437,9 +362,6 @@
       ],
       "answer": "A",
       "explanation": "In the von Neumann diagram, memory, the CPU (control unit + ALU) and I/O all hang on one bus, and programs are stored in the same memory as data. It does have a program counter and an ALU.",
-      "source": {
-        "page": "Midterm B, Part I Q3"
-      },
       "topic": 2
     },
     {
@@ -454,9 +376,6 @@
       ],
       "answer": "A",
       "explanation": "Maximum memory size (address space) is 2^N where N is the length of the address: 2^4 = 16 locations.",
-      "source": {
-        "page": "Midterm B, Part I Q4"
-      },
       "topic": 2
     },
     {
@@ -471,9 +390,6 @@
       ],
       "answer": "A",
       "explanation": "Computer science is the study of algorithms; if we can specify an algorithm to solve a problem, we can automate its solution.",
-      "source": {
-        "page": "Midterm B, Part I Q5"
-      },
       "topic": 1
     },
     {
@@ -488,9 +404,6 @@
       ],
       "answer": "B",
       "explanation": "First generation (1950-1957): \"Vacuum tubes for processing and storage\". Transistors = second, integrated circuit = third, processor = fourth generation.",
-      "source": {
-        "page": "Midterm B, Part I Q6"
-      },
       "topic": 1
     },
     {
@@ -505,9 +418,6 @@
       ],
       "answer": "B",
       "explanation": "Memory address register (MAR) \"holds memory address to access\". MDR holds the data; PC holds the address of the next instruction.",
-      "source": {
-        "page": "Midterm B, Part I Q7"
-      },
       "topic": 2
     },
     {
@@ -522,9 +432,6 @@
       ],
       "answer": "B",
       "explanation": "STORE writes the value held in a register into memory cell 11; the slides call a store a write to memory (destructive store). Moving data from memory address 11 into a register is a fetch (load), not a store.",
-      "source": {
-        "page": "Midterm B, Part I Q8"
-      },
       "topic": 2
     },
     {
@@ -539,9 +446,6 @@
       ],
       "answer": "B",
       "explanation": "This is the slide's formal definition. A machine, robot or person carrying out the steps is the computing agent, and an algorithm must halt in a finite amount of time.",
-      "source": {
-        "page": "Midterm B, Part II Q1"
-      },
       "topic": 1
     },
     {
@@ -556,9 +460,6 @@
       ],
       "answer": "C",
       "explanation": "Topic 1 gives \"Making a Morning Coffee\" as an everyday algorithm: an ordered sequence of steps. The machine is not an algorithm, and \"Go back and do it again (Do what again?)\" is an ambiguous statement.",
-      "source": {
-        "page": "Midterm B, Part II Q1"
-      },
       "topic": 1
     },
     {
@@ -567,9 +468,6 @@
       "prompt": "Informally, an algorithm is an ordered sequence of instructions that is guaranteed to solve a specific problem.",
       "answer": true,
       "explanation": "This is the slide's informal definition of an algorithm (Step 1, Step 2, ..., Step n: Stop).",
-      "source": {
-        "page": "Midterm B, Part II Q1"
-      },
       "topic": 1
     },
     {
@@ -584,9 +482,6 @@
       ],
       "answer": "A",
       "explanation": "Topic 2: \"The four major subsystems of the Von Neumann architecture: Memory, Input/output, Arithmetic/logic unit (ALU), Control Unit\".",
-      "source": {
-        "page": "Midterm B, Part II Q2 (printed as \"1)\")"
-      },
       "topic": 2
     },
     {
@@ -601,9 +496,6 @@
       ],
       "answer": "A",
       "explanation": "Summary slide: \"programs are stored in memory; execution is sequential unless program says otherwise\". Many processing units at once is parallel processing, a non-von Neumann architecture.",
-      "source": {
-        "page": "Midterm B, Part II Q2 (printed as \"1)\")"
-      },
       "topic": 2
     },
     {
@@ -612,9 +504,6 @@
       "prompt": "Stored program characteristic of the von Neumann architecture: programs are encoded in binary and stored in the computer's memory.",
       "answer": true,
       "explanation": "Topic 2, Control Unit: \"Stored program characteristic: Programs are encoded in binary and stored in the computer's memory\".",
-      "source": {
-        "page": "Midterm B, Part II Q2 (printed as \"1)\")"
-      },
       "topic": 2
     },
     {
@@ -623,9 +512,6 @@
       "prompt": "A von Neumann machine repeats the fetch/decode/execute cycle until a HALT instruction or an error.",
       "answer": true,
       "explanation": "Topic 2: \"Fetch/decode/execute phase: Machine repeats until HALT instruction or error. Also called Von Neumann cycle.\"",
-      "source": {
-        "page": "Midterm B, Part II Q2 (printed as \"1)\")"
-      },
       "topic": 2
     },
     {
@@ -643,9 +529,6 @@
         }
       ],
       "explanation": "Topic 2: RISC = small instruction sets, each instruction highly optimized, easy to design hardware; CISC = large instruction set, single instruction can do a lot of work, complex to design hardware.",
-      "source": {
-        "page": "Midterm B, Part II Q3 (printed as \"2)\")"
-      },
       "topic": 2
     },
     {
@@ -660,9 +543,6 @@
       ],
       "answer": "C",
       "explanation": "CISC: \"Large instruction set; single instruction can do a lot of work; complex to design hardware\". Options A and B describe RISC.",
-      "source": {
-        "page": "Midterm B, Part II Q3 (printed as \"2)\")"
-      },
       "topic": 2
     },
     {
@@ -671,9 +551,6 @@
       "prompt": "RISC hardware is complex to design because each instruction can do a lot of work.",
       "answer": false,
       "explanation": "That describes CISC. RISC has a small, highly optimized instruction set and is easy to design hardware for.",
-      "source": {
-        "page": "Midterm B, Part II Q3 (printed as \"2)\")"
-      },
       "topic": 2
     },
     {
@@ -682,9 +559,6 @@
       "prompt": "Modern hardware is a compromise between RISC and CISC.",
       "answer": true,
       "explanation": "Topic 2 states: \"Modern hardware is a compromise between RISC and CISC\".",
-      "source": {
-        "page": "Midterm B, Part II Q3 (printed as \"2)\")"
-      },
       "topic": 2
     },
     {
@@ -699,9 +573,6 @@
       ],
       "answer": "C",
       "explanation": "Topic 3, Slide 9: repeated division by 2. 12 ÷ 2 = 6 r 0, 6 ÷ 2 = 3 r 0, 3 ÷ 2 = 1 r 1, 1 ÷ 2 = 0 r 1. Read the remainders from bottom to top: 12₁₀ = 1100₂ (check: 8 + 4 = 12). 0011 is the remainders read top to bottom.",
-      "source": {
-        "page": "Midterm B, Part II Q4a (printed as \"3) a\")"
-      },
       "topic": 3
     },
     {
@@ -716,9 +587,6 @@
       ],
       "answer": "B",
       "explanation": "Topic 3, Slide 12 rules: no column has 1+1, so there is no carry: 1+0=1, 0+1=1, 1+0=1, 0+0=0. So 0101₂ + 0010₂ = 0111₂ (5 + 2 = 7). 1000 is the slide's example 0101 + 0011, not this sum.",
-      "source": {
-        "page": "Midterm B, Part II Q4b (printed as \"3) b\")"
-      },
       "topic": 3
     },
     {
@@ -733,9 +601,6 @@
       ],
       "answer": "B",
       "explanation": "Instruction set = \"instructions implemented by a particular chip\"; each kind of processor has a different instruction set.",
-      "source": {
-        "page": "Quiz Q1"
-      },
       "topic": 2
     },
     {
@@ -750,9 +615,6 @@
       ],
       "answer": "D",
       "explanation": "Topic 2: \"Cache memory is fast but expensive; built into the CPU for fast access times\", used because RAM speeds increased more slowly than CPU speeds.",
-      "source": {
-        "page": "Quiz Q2"
-      },
       "topic": 2
     },
     {
@@ -767,9 +629,6 @@
       ],
       "answer": "C",
       "explanation": "Topic 2: \"Input and output devices let the user communicate with the computer\"; \"the most common input devices are keyboards and mice\". The motherboard connects all the parts, the CPU executes instructions, and the RAM chip is memory.",
-      "source": {
-        "page": "Quiz Q3"
-      },
       "topic": 2
     },
     {
@@ -784,9 +643,6 @@
       ],
       "answer": "D",
       "explanation": "Topic 2: \"Control unit fetches instructions from memory, decodes them, and executes them\".",
-      "source": {
-        "page": "Quiz Q4"
-      },
       "topic": 2
     },
     {
@@ -801,9 +657,6 @@
       ],
       "answer": "A",
       "explanation": "Topic 2: parallel processing = \"Many processing units operating at the same time\" (e.g. multicore machines and the cloud).",
-      "source": {
-        "page": "Quiz Q5"
-      },
       "topic": 2
     }
   ]
