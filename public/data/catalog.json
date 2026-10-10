@@ -4,13 +4,79 @@
     {
       "id": "problem-solving",
       "titleEn": "Problem Solving & Programming",
+      "math": true,
       "titleAr": "حل المشاكل والبرمجة",
       "topics": [
         {
           "id": "topic-1",
           "number": 1,
           "title": "Introduction to Computer Science",
-          "bank": "problem-solving/topic-1.json"
+          "bank": "problem-solving/topic-1.json",
+          "label": {
+            "en": "Chapter 1",
+            "ar": "الشابتر الأول"
+          }
+        },
+        {
+          "id": "topic-2",
+          "number": 2,
+          "title": "Computers Organization",
+          "label": {
+            "en": "Chapter 2",
+            "ar": "الشابتر الثاني"
+          },
+          "bank": "problem-solving/topic-2.json"
+        },
+        {
+          "id": "topic-3",
+          "number": 3,
+          "title": "Number Systems & Logic Gates",
+          "label": {
+            "en": "Chapter 3",
+            "ar": "الشابتر الثالث"
+          },
+          "bank": "problem-solving/topic-3.json"
+        },
+        {
+          "id": "topic-4",
+          "number": 4,
+          "title": "Programming Languages & SDLC",
+          "label": {
+            "en": "Chapter 4",
+            "ar": "الشابتر الرابع"
+          },
+          "bank": "problem-solving/topic-4.json"
+        },
+        {
+          "id": "past-exams",
+          "number": 5,
+          "title": "Past midterms and quizzes",
+          "label": {
+            "en": "Past exams",
+            "ar": "اختبارات سابقة"
+          },
+          "bank": "problem-solving/past-exams.json"
+        },
+        {
+          "id": "midterm",
+          "number": 6,
+          "title": "Chapters 1 to 4",
+          "label": {
+            "en": "Practice midterm",
+            "ar": "اختبار نصفي تجريبي"
+          },
+          "bank": "problem-solving/midterm.json",
+          "mix": [
+            "topic-1",
+            "topic-2",
+            "topic-3",
+            "topic-4",
+            "past-exams"
+          ],
+          "defaults": {
+            "mode": "exam",
+            "count": 40
+          }
         }
       ]
     },

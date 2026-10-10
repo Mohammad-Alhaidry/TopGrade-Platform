@@ -1,0 +1,1798 @@
+{
+  "schemaVersion": 1,
+  "course": {
+    "id": "problem-solving",
+    "titleAr": "حل المشاكل والبرمجة",
+    "titleEn": "Problem Solving & Programming"
+  },
+  "topic": {
+    "id": "topic-4",
+    "number": 4,
+    "title": "Programming Languages & SDLC"
+  },
+  "questions": [
+    {
+      "id": "t4-mcq-001",
+      "type": "mcq",
+      "prompt": "Computer programs, known as _____, are instructions to the computer.",
+      "options": [
+        "software",
+        "machine-code files",
+        "statements",
+        "hardware"
+      ],
+      "answer": "A",
+      "explanation": "The course says: computer programs, known as software, are instructions to the computer.",
+      "source": {
+        "page": 2,
+        "part": 1
+      }
+    },
+    {
+      "id": "t4-mcq-002",
+      "type": "mcq",
+      "prompt": "Without programs, a computer is:",
+      "options": [
+        "A slow but working machine",
+        "An empty machine",
+        "An operating system",
+        "A virtual machine"
+      ],
+      "answer": "B",
+      "explanation": "The course states that without programs, a computer is an empty machine.",
+      "source": {
+        "page": 2,
+        "part": 1
+      }
+    },
+    {
+      "id": "t4-mcq-003",
+      "type": "mcq",
+      "prompt": "Machine language is:",
+      "options": [
+        "A program that converts source code into machine code",
+        "An English-like language that is easy to learn",
+        "A set of primitive instructions built into every computer",
+        "A language that uses words such as ADD to write instructions"
+      ],
+      "answer": "C",
+      "explanation": "Machine language is a set of primitive instructions built into every computer, written in binary code.",
+      "source": {
+        "page": 3,
+        "part": 1
+      }
+    },
+    {
+      "id": "t4-mcq-004",
+      "type": "mcq",
+      "prompt": "Which of the following is an example of a machine language instruction to add two numbers?",
+      "options": [
+        "area = 5 * 5 * 3.1415",
+        "print(\"Hello World\")",
+        "ADD 2, 3, result",
+        "1101101010011010"
+      ],
+      "answer": "D",
+      "explanation": "The course shows 1101101010011010 as a binary (machine language) instruction to add two numbers.",
+      "source": {
+        "page": 3,
+        "part": 1
+      }
+    },
+    {
+      "id": "t4-tf-001",
+      "type": "tf",
+      "prompt": "Programs written in native machine language are easy to read and modify.",
+      "answer": false,
+      "explanation": "Programming in machine language is tedious, and the programs are highly difficult to read and modify.",
+      "source": {
+        "page": 3,
+        "part": 1
+      }
+    },
+    {
+      "id": "t4-mcq-067",
+      "type": "mcq",
+      "prompt": "Which type of language can the computer understand without any translation?",
+      "options": [
+        "Assembly language",
+        "High-level language",
+        "Machine language",
+        "Python"
+      ],
+      "answer": "C",
+      "explanation": "Machine language is the set of primitive instructions built into every computer. The computer cannot understand assembly language or high-level languages such as Python, so they must be converted into machine code.",
+      "source": {
+        "page": 3,
+        "part": 1
+      }
+    },
+    {
+      "id": "t4-mcq-005",
+      "type": "mcq",
+      "prompt": "A program called _____ is used to convert assembly language programs into machine code.",
+      "options": [
+        "an operating system",
+        "an interpreter",
+        "an assembler",
+        "a compiler"
+      ],
+      "answer": "C",
+      "explanation": "Since the computer cannot understand assembly language, a program called assembler converts it into machine code.",
+      "source": {
+        "page": 4,
+        "part": 1
+      }
+    },
+    {
+      "id": "t4-mcq-006",
+      "type": "mcq",
+      "prompt": "Which of the following is an assembly language instruction?",
+      "options": [
+        "ADD 2, 3, result",
+        "1101101010011010",
+        "area = 5 * 5 * 3.1415",
+        "print(\"Hello World\")"
+      ],
+      "answer": "A",
+      "explanation": "The course gives ADD 2, 3, result as an example of assembly code for adding two numbers.",
+      "source": {
+        "page": 4,
+        "part": 1
+      }
+    },
+    {
+      "id": "t4-mcq-007",
+      "type": "mcq",
+      "prompt": "Which statement about assembly language is correct?",
+      "options": [
+        "It is English-like and easy to learn",
+        "It is translated by an interpreter one statement at a time",
+        "The computer understands it directly without translation",
+        "It is easier than machine language, but writing code in it is still tedious"
+      ],
+      "answer": "D",
+      "explanation": "Writing assembly code is easier than machine language, but it is still tedious; an assembler translates it.",
+      "source": {
+        "page": 4,
+        "part": 1
+      }
+    },
+    {
+      "id": "t4-tf-002",
+      "type": "tf",
+      "prompt": "The computer can directly understand and execute assembly language without any translation.",
+      "answer": false,
+      "explanation": "The computer cannot understand assembly language, so an assembler converts it into machine code.",
+      "source": {
+        "page": 4,
+        "part": 1
+      }
+    },
+    {
+      "id": "t4-mcq-063",
+      "type": "mcq",
+      "prompt": "Which program converts the assembly instruction ADD 2, 3, result into machine code?",
+      "options": [
+        "Compiler",
+        "Interpreter",
+        "Operating system",
+        "Assembler"
+      ],
+      "answer": "D",
+      "explanation": "ADD 2, 3, result is assembly code, and \"a program called assembler is used to convert assembly language programs into machine code\".",
+      "source": {
+        "page": 4,
+        "part": 1
+      }
+    },
+    {
+      "id": "t4-mcq-066",
+      "type": "mcq",
+      "prompt": "Which of the following is TRUE about an assembler?",
+      "options": [
+        "It translates high-level source code one statement at a time",
+        "It converts assembly language programs into machine code",
+        "It translates the entire high-level source code into a machine-code file",
+        "It is a set of primitive instructions built into every computer"
+      ],
+      "answer": "B",
+      "explanation": "\"A program called assembler is used to convert assembly language programs into machine code.\" The other options describe an interpreter, a compiler, and machine language.",
+      "source": {
+        "page": 4,
+        "part": 1
+      }
+    },
+    {
+      "id": "t4-tf-024",
+      "type": "tf",
+      "prompt": "An assembler is used to convert high-level language programs into machine code.",
+      "answer": false,
+      "explanation": "An assembler converts assembly language programs into machine code. High-level language programs are converted by an interpreter or a compiler.",
+      "source": {
+        "page": 4,
+        "part": 1
+      }
+    },
+    {
+      "id": "t4-mcq-008",
+      "type": "mcq",
+      "prompt": "The instruction area = 5 * 5 * 3.1415, which computes the area of a circle with radius 5, is an example of:",
+      "options": [
+        "An assembly language instruction",
+        "A high-level language statement",
+        "A machine language instruction",
+        "A machine-code file"
+      ],
+      "answer": "B",
+      "explanation": "The course gives this as a high-level language statement (instruction).",
+      "source": {
+        "page": 5,
+        "part": 1
+      }
+    },
+    {
+      "id": "t4-tf-003",
+      "type": "tf",
+      "prompt": "Because the computer cannot understand high-level languages, a program called an interpreter or a compiler is used to convert them into machine code.",
+      "answer": true,
+      "explanation": "\"Since the computer cannot understand high-level languages, however, a program called interpreter or compiler is used to convert high-level language programs into machine code.\"",
+      "source": {
+        "page": 5,
+        "part": 1
+      }
+    },
+    {
+      "id": "t4-match-001",
+      "type": "matching",
+      "title": "Match each language level with its description",
+      "pairs": [
+        {
+          "left": "Machine language",
+          "right": "Primitive binary instructions built into every computer"
+        },
+        {
+          "left": "Assembly language",
+          "right": "Uses instructions like ADD 2, 3, result and needs an assembler"
+        },
+        {
+          "left": "High-level language",
+          "right": "English-like, easy to learn, translated by an interpreter or compiler"
+        }
+      ],
+      "source": {
+        "page": 5,
+        "part": 1
+      }
+    },
+    {
+      "id": "t4-mcq-064",
+      "type": "mcq",
+      "prompt": "Which program can convert the high-level statement area = 5 * 5 * 3.1415 into machine code?",
+      "options": [
+        "An assembler only",
+        "An interpreter or a compiler",
+        "The operating system",
+        "No program is needed; the computer understands it directly"
+      ],
+      "answer": "B",
+      "explanation": "\"Since the computer cannot understand high-level languages, a program called interpreter or compiler is used to convert high-level language programs into machine code.\"",
+      "source": {
+        "page": 5,
+        "part": 1
+      }
+    },
+    {
+      "id": "t4-mcq-065",
+      "type": "mcq",
+      "prompt": "Which of the following is TRUE when comparing an assembler with an interpreter and a compiler?",
+      "options": [
+        "An assembler translates high-level languages, while interpreters and compilers translate assembly language",
+        "An assembler, an interpreter, and a compiler all translate the entire source code before executing any of it",
+        "An assembler translates assembly language, while interpreters and compilers translate high-level languages",
+        "An assembler is needed to run high-level languages such as Python"
+      ],
+      "answer": "C",
+      "explanation": "An assembler converts assembly language programs into machine code; an interpreter or compiler converts high-level language programs into machine code. Option B is false because an interpreter translates and executes one statement at a time.",
+      "source": {
+        "page": 5,
+        "part": 1
+      }
+    },
+    {
+      "id": "t4-mcq-068",
+      "type": "mcq",
+      "prompt": "Which type of programming language is English-like and easy to learn and program?",
+      "options": [
+        "High-level language",
+        "Machine language",
+        "Assembly language",
+        "Binary code"
+      ],
+      "answer": "A",
+      "explanation": "\"The high-level languages are English-like and easy to learn and program.\" Machine language is binary code, and assembly language is still tedious to write.",
+      "source": {
+        "page": 5,
+        "part": 1
+      }
+    },
+    {
+      "id": "t4-match-002",
+      "type": "matching",
+      "title": "Match each popular high-level language with its description",
+      "pairs": [
+        {
+          "left": "Ada",
+          "right": "Developed for the Department of Defense"
+        },
+        {
+          "left": "COBOL",
+          "right": "Common Business Oriented Language, used for business applications"
+        },
+        {
+          "left": "Java",
+          "right": "Developed by Sun Microsystems for platform-independent Internet applications"
+        },
+        {
+          "left": "Pascal",
+          "right": "Simple, structured language primarily for teaching programming"
+        },
+        {
+          "left": "C++",
+          "right": "An object-oriented language based on C"
+        },
+        {
+          "left": "Visual Basic",
+          "right": "Microsoft language to rapidly develop Windows-based applications"
+        }
+      ],
+      "source": {
+        "page": 6,
+        "part": 1
+      }
+    },
+    {
+      "id": "t4-mcq-013",
+      "type": "mcq",
+      "prompt": "The instructions in a high-level programming language are called:",
+      "options": [
+        "Classes",
+        "Binary codes",
+        "Statements",
+        "Primitive instructions"
+      ],
+      "answer": "C",
+      "explanation": "The course says the instructions in a high-level programming language are called statements.",
+      "source": {
+        "page": 7,
+        "part": 1
+      }
+    },
+    {
+      "id": "t4-mcq-014",
+      "type": "mcq",
+      "prompt": "A program written in a high-level language is called a:",
+      "options": [
+        "Source program (source code)",
+        "Virtual machine",
+        "Assembly source file",
+        "Machine-code file"
+      ],
+      "answer": "A",
+      "explanation": "A program written in a high-level language is called a source program or source code.",
+      "source": {
+        "page": 7,
+        "part": 1
+      }
+    },
+    {
+      "id": "t4-mcq-015",
+      "type": "mcq",
+      "prompt": "How does an interpreter translate a program?",
+      "options": [
+        "It translates the entire source code into a machine-code file, which is then executed",
+        "It manages and controls the computer's activities",
+        "It converts assembly language programs into machine code",
+        "It reads one statement, translates it to machine code or virtual machine code, and executes it right away"
+      ],
+      "answer": "D",
+      "explanation": "An interpreter reads one statement from the source code, translates it, and then executes it right away.",
+      "source": {
+        "page": 8,
+        "part": 1
+      }
+    },
+    {
+      "id": "t4-mcq-016",
+      "type": "mcq",
+      "prompt": "One statement from the source code may be translated into:",
+      "options": [
+        "A separate source program",
+        "Several machine instructions",
+        "One assembly instruction only",
+        "Exactly one machine instruction"
+      ],
+      "answer": "B",
+      "explanation": "The course notes that a statement from the source code may be translated into several machine instructions.",
+      "source": {
+        "page": 8,
+        "part": 1
+      }
+    },
+    {
+      "id": "t4-tf-006",
+      "type": "tf",
+      "prompt": "An interpreter translates the entire source code into a machine-code file before executing it.",
+      "answer": false,
+      "explanation": "That describes a compiler; an interpreter translates and executes one statement at a time.",
+      "source": {
+        "page": 8,
+        "part": 1
+      }
+    },
+    {
+      "id": "t4-mcq-062",
+      "type": "mcq",
+      "prompt": "_____ reads one statement from the source code, translates it to machine code or virtual machine code, and then executes it right away.",
+      "options": [
+        "Compiler",
+        "Interpreter",
+        "Assembler",
+        "Debugger"
+      ],
+      "answer": "B",
+      "explanation": "This is the definition of an interpreter. A compiler first translates the entire source code into a machine-code file.",
+      "source": {
+        "page": 8,
+        "part": 1
+      }
+    },
+    {
+      "id": "t4-tf-025",
+      "type": "tf",
+      "prompt": "An interpreter translates one statement into machine code or virtual machine code and then executes it right away.",
+      "answer": true,
+      "explanation": "\"An interpreter reads one statement from the source code, translates it to the machine code or virtual machine code, and then executes it right away.\"",
+      "source": {
+        "page": 8,
+        "part": 1
+      }
+    },
+    {
+      "id": "t4-mcq-017",
+      "type": "mcq",
+      "prompt": "How does a compiler translate a program?",
+      "options": [
+        "It translates the entire source code into a machine-code file, and the machine-code file is then executed",
+        "It reads and executes one statement at a time right away",
+        "It converts assembly language programs into machine code",
+        "It runs the software on many data sets to check performance"
+      ],
+      "answer": "A",
+      "explanation": "A compiler translates the entire source code into a machine-code file, which is then executed.",
+      "source": {
+        "page": 9,
+        "part": 1
+      }
+    },
+    {
+      "id": "t4-mcq-018",
+      "type": "mcq",
+      "prompt": "The main difference between an interpreter and a compiler is that:",
+      "options": [
+        "A compiler translates assembly language, while an interpreter translates high-level language",
+        "An interpreter translates and executes one statement at a time, while a compiler translates the entire source code into a machine-code file that is then executed",
+        "An interpreter produces a machine-code file, while a compiler executes each statement right away",
+        "Only a compiler can translate high-level language programs into machine code"
+      ],
+      "answer": "B",
+      "explanation": "An interpreter \"reads one statement ... Translates it ... And then executes it right away\"; a compiler \"translates the entire source code into a machine-code file, and the machine-code file is then executed\". Both translate high-level languages; assembly language is translated by an assembler.",
+      "source": {
+        "page": 9,
+        "part": 1
+      }
+    },
+    {
+      "id": "t4-tf-007",
+      "type": "tf",
+      "prompt": "A compiler translates the entire source code into a machine-code file, which is then executed.",
+      "answer": true,
+      "explanation": "This is the definition of compiling source code.",
+      "source": {
+        "page": 9,
+        "part": 1
+      }
+    },
+    {
+      "id": "t4-match-003",
+      "type": "matching",
+      "title": "Compare between an Assembler, an Interpreter, and a Compiler. Match each tool with how it translates.",
+      "pairs": [
+        {
+          "left": "Assembler",
+          "right": "Converts assembly language programs into machine code"
+        },
+        {
+          "left": "Interpreter",
+          "right": "Translates one statement of the high-level source code and executes it right away"
+        },
+        {
+          "left": "Compiler",
+          "right": "Translates the entire high-level source code into a machine-code file, which is then executed"
+        }
+      ],
+      "source": {
+        "page": 9,
+        "part": 1
+      },
+      "explanation": "Assembler: assembly language to machine code. Interpreter: one statement translated, then executed right away. Compiler: the whole source code becomes a machine-code file that is then executed."
+    },
+    {
+      "id": "t4-mcq-061",
+      "type": "mcq",
+      "prompt": "_____ translates the entire high-level source code into a machine-code file, and the machine-code file is then executed.",
+      "options": [
+        "Compiler",
+        "Interpreter",
+        "Assembler",
+        "Operating system"
+      ],
+      "answer": "A",
+      "explanation": "This is the definition of a compiler. An interpreter translates and executes one statement at a time; an assembler converts assembly language (not high-level source code) into machine code.",
+      "source": {
+        "page": 9,
+        "part": 1
+      }
+    },
+    {
+      "id": "t4-tf-026",
+      "type": "tf",
+      "prompt": "A compiler executes each statement right away after translating it, without producing a machine-code file.",
+      "answer": false,
+      "explanation": "That describes an interpreter. A compiler translates the entire source code into a machine-code file, and the machine-code file is then executed.",
+      "source": {
+        "page": 9,
+        "part": 1
+      }
+    },
+    {
+      "id": "t4-match-009",
+      "type": "matching",
+      "title": "Compare an Assembler, an Interpreter, and a Compiler. Match each point with the correct answer.",
+      "pairs": [
+        {
+          "left": "Language translated by an assembler",
+          "right": "Assembly language"
+        },
+        {
+          "left": "Language translated by an interpreter or a compiler",
+          "right": "High-level language (source code)"
+        },
+        {
+          "left": "How much an interpreter translates before executing",
+          "right": "One statement at a time"
+        },
+        {
+          "left": "How much a compiler translates before executing",
+          "right": "The entire source code"
+        },
+        {
+          "left": "What a compiler produces",
+          "right": "A machine-code file that is then executed"
+        }
+      ],
+      "explanation": "Assembler: assembly language to machine code. Interpreter: reads one statement, translates it, executes it right away. Compiler: translates the entire source code into a machine-code file, which is then executed.",
+      "source": {
+        "page": 9,
+        "part": 1
+      }
+    },
+    {
+      "id": "t4-mcq-019",
+      "type": "mcq",
+      "prompt": "The operating system (OS) is:",
+      "options": [
+        "A program that converts assembly code into machine code",
+        "The hardware that executes machine instructions",
+        "A program that manages and controls a computer's activities",
+        "An application program such as a word processor"
+      ],
+      "answer": "C",
+      "explanation": "The operating system (OS) is a program that manages and controls a computer's activities.",
+      "source": {
+        "page": 11,
+        "part": 1
+      }
+    },
+    {
+      "id": "t4-mcq-021",
+      "type": "mcq",
+      "prompt": "In the layers User, Application Programs, Operating System, Hardware, which layer lies directly between the application programs and the hardware?",
+      "options": [
+        "Interpreter",
+        "User",
+        "Operating System",
+        "Compiler"
+      ],
+      "answer": "C",
+      "explanation": "The diagram shows User -> Application Programs -> Operating System -> Hardware.",
+      "source": {
+        "page": 11,
+        "part": 1
+      }
+    },
+    {
+      "id": "t4-tf-008",
+      "type": "tf",
+      "prompt": "Application programs such as an Internet browser and a word processor can run without an operating system.",
+      "answer": false,
+      "explanation": "The course says application programs cannot run without an operating system.",
+      "source": {
+        "page": 11,
+        "part": 1
+      }
+    },
+    {
+      "id": "t4-match-004",
+      "type": "matching",
+      "title": "Match each Python property with its meaning",
+      "pairs": [
+        {
+          "left": "General purpose",
+          "right": "Can be used to write code for any programming tasks"
+        },
+        {
+          "left": "Interpreted",
+          "right": "Translated and executed one statement at a time"
+        },
+        {
+          "left": "Object-oriented",
+          "right": "Data are objects created from classes"
+        },
+        {
+          "left": "Open source",
+          "right": "Users may study, change, and distribute the software"
+        }
+      ],
+      "source": {
+        "page": 13,
+        "part": 1
+      }
+    },
+    {
+      "id": "t4-mcq-022",
+      "type": "mcq",
+      "prompt": "Python is an interpreted language. This means Python code is:",
+      "options": [
+        "Translated and executed one statement at a time by an interpreter",
+        "Compiled entirely and then executed altogether",
+        "Converted into assembly code by an assembler",
+        "Written in binary code"
+      ],
+      "answer": "A",
+      "explanation": "Python code is translated and executed one statement at a time by an interpreter.",
+      "source": {
+        "page": 14,
+        "part": 1
+      }
+    },
+    {
+      "id": "t4-tf-009",
+      "type": "tf",
+      "prompt": "In a compiled language, the entire source code is compiled and then executed altogether.",
+      "answer": true,
+      "explanation": "The course contrasts Python (interpreted) with compiled languages, where the entire source code is compiled then executed.",
+      "source": {
+        "page": 14,
+        "part": 1
+      }
+    },
+    {
+      "id": "t4-tf-027",
+      "type": "tf",
+      "prompt": "Python is a compiled language: its entire source code is compiled and then executed altogether.",
+      "answer": false,
+      "explanation": "Python is interpreted: its code is translated and executed one statement at a time by an interpreter. Compiling the entire source code and then executing it altogether describes a compiled language.",
+      "source": {
+        "page": 14,
+        "part": 1
+      }
+    },
+    {
+      "id": "t4-mcq-023",
+      "type": "mcq",
+      "prompt": "A class is essentially:",
+      "options": [
+        "A layer between the application programs and the hardware",
+        "A machine-code file produced by a compiler",
+        "A single statement in a high-level language",
+        "A type that defines objects of the same kind with properties and methods for manipulating them"
+      ],
+      "answer": "D",
+      "explanation": "A class is a type that defines the objects of the same kind with properties and methods for manipulating objects.",
+      "source": {
+        "page": 15,
+        "part": 1
+      }
+    },
+    {
+      "id": "t4-mcq-024",
+      "type": "mcq",
+      "prompt": "Object-oriented programming is described as a powerful tool for:",
+      "options": [
+        "Writing binary machine instructions",
+        "Developing reusable software",
+        "Translating the whole program at once",
+        "Managing the computer's hardware"
+      ],
+      "answer": "B",
+      "explanation": "Object-oriented programming is a powerful tool for developing reusable software.",
+      "source": {
+        "page": 15,
+        "part": 1
+      }
+    },
+    {
+      "id": "t4-mcq-025",
+      "type": "mcq",
+      "prompt": "Python was created by:",
+      "options": [
+        "Guido van Rossum",
+        "Ada Lovelace",
+        "Blaise Pascal",
+        "Sun Microsystems"
+      ],
+      "answer": "A",
+      "explanation": "Python is created by Guido van Rossum in Netherlands in 1990.",
+      "source": {
+        "page": 16,
+        "part": 1
+      }
+    },
+    {
+      "id": "t4-mcq-027",
+      "type": "mcq",
+      "prompt": "Open-source software is software whose source code is released under a license that:",
+      "options": [
+        "Allows only the copyright holder to change the software",
+        "Lets users run the program but never see the source code",
+        "Grants users the rights to study, change, and distribute the software to anyone and for any purpose",
+        "Only works with the operating system it was written for"
+      ],
+      "answer": "C",
+      "explanation": "Open-source software releases source code under a license granting users the rights to study, change, and distribute it.",
+      "source": {
+        "page": 16,
+        "part": 1
+      }
+    },
+    {
+      "id": "t4-mcq-028",
+      "type": "mcq",
+      "prompt": "Which command works on Python 3?",
+      "options": [
+        "print \"Hello World\"",
+        "ADD \"Hello World\"",
+        "PRINT Hello World",
+        "print(\"Hello World\")"
+      ],
+      "answer": "D",
+      "explanation": "Print \"Hello World\" works only on Python 2; on Python 3 you write print(\"Hello World\").",
+      "source": {
+        "page": 17,
+        "part": 1
+      }
+    },
+    {
+      "id": "t4-mcq-029",
+      "type": "mcq",
+      "prompt": "Python 3 is not backward compatible with Python 2. This means:",
+      "options": [
+        "Python 3 is an older version than Python 2",
+        "Python 3 programs must be compiled instead of interpreted",
+        "A program written using Python 2 may not work on Python 3",
+        "A program written using Python 3 always works on Python 2"
+      ],
+      "answer": "C",
+      "explanation": "Python 3 is newer but not backward compatible, so a Python 2 program may not work on Python 3.",
+      "source": {
+        "page": 17,
+        "part": 1
+      }
+    },
+    {
+      "id": "t4-mcq-030",
+      "type": "mcq",
+      "prompt": "The software development life cycle (SDLC) is:",
+      "options": [
+        "The process required to create large-scale software projects",
+        "A program that translates source code into machine code",
+        "A tool that provides a program editor and debugger",
+        "A test suite used to check correctness"
+      ],
+      "answer": "A",
+      "explanation": "The SDLC is the process required to create large-scale software projects.",
+      "source": {
+        "page": 3,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-mcq-031",
+      "type": "mcq",
+      "prompt": "What percentage of time in the SDLC is spent on problem specification and program design?",
+      "options": [
+        "40 to 65 percent",
+        "5 to 10 percent",
+        "10 to 20 percent",
+        "25 to 40 percent"
+      ],
+      "answer": "D",
+      "explanation": "The course says 25 to 40 percent of time is spent on problem specification and program design.",
+      "source": {
+        "page": 3,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-mcq-033",
+      "type": "mcq",
+      "prompt": "In the SDLC, 40 to 65 percent of the time is spent on:",
+      "options": [
+        "Reviewing, modifying, fixing, and improving software",
+        "Problem specification and program design",
+        "Initial implementation",
+        "The feasibility study"
+      ],
+      "answer": "A",
+      "explanation": "40 to 65 percent of time is spent reviewing, modifying, fixing, and improving software.",
+      "source": {
+        "page": 3,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-tf-011",
+      "type": "tf",
+      "prompt": "In the SDLC, initial implementation takes the largest share of time (40 to 65 percent).",
+      "answer": false,
+      "explanation": "Initial implementation takes only 10 to 20 percent; 40 to 65 percent goes to reviewing, modifying, fixing, and improving software.",
+      "source": {
+        "page": 3,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-mcq-034",
+      "type": "mcq",
+      "prompt": "The SDLC steps are grouped into which three stages?",
+      "options": [
+        "Requirements, Design, Deploy",
+        "Before Implementation, Implementation, After Implementation",
+        "Coding, Testing, Review",
+        "Analysis, Development, Operation"
+      ],
+      "answer": "B",
+      "explanation": "The SDLC steps are listed under 1. Before Implementation, 2. Implementation, 3. After Implementation.",
+      "source": {
+        "page": 4,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-mcq-035",
+      "type": "mcq",
+      "prompt": "Which is the correct order of the 'Before Implementation' steps?",
+      "options": [
+        "Problem specification, feasibility study, algorithm selection/analysis, program design",
+        "Program design, feasibility study, problem specification, algorithm selection/analysis",
+        "Feasibility study, problem specification, program design, algorithm selection/analysis",
+        "Feasibility study, program design, problem specification, coding"
+      ],
+      "answer": "C",
+      "explanation": "The course lists a. Feasibility study, b. Problem specification, c. Program design, d. Algorithm selection or development, and analysis.",
+      "source": {
+        "page": 4,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-tf-013",
+      "type": "tf",
+      "prompt": "Coding and debugging are part of the Implementation stage of the SDLC.",
+      "answer": true,
+      "explanation": "Implementation: a. Coding, b. Debugging.",
+      "source": {
+        "page": 4,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-mcq-036",
+      "type": "mcq",
+      "prompt": "Which of the following belongs to the 'After Implementation' stage of the SDLC?",
+      "options": [
+        "Feasibility study",
+        "Program design",
+        "Coding",
+        "Maintenance"
+      ],
+      "answer": "D",
+      "explanation": "After Implementation includes testing/verification/benchmarking, documentation, and maintenance.",
+      "source": {
+        "page": 5,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-tf-012",
+      "type": "tf",
+      "prompt": "In the SDLC steps, Documentation is listed under the 'Before Implementation' stage.",
+      "answer": false,
+      "explanation": "Documentation is listed under After Implementation, with testing and maintenance.",
+      "source": {
+        "page": 5,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-mcq-037",
+      "type": "mcq",
+      "prompt": "Which SDLC step evaluates the costs and benefits of various solutions and considers alternatives?",
+      "options": [
+        "Benchmarking",
+        "Program design",
+        "Feasibility study",
+        "Problem specification"
+      ],
+      "answer": "C",
+      "explanation": "Feasibility study: evaluate the costs and benefits of various solutions; consider alternatives.",
+      "source": {
+        "page": 6,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-mcq-038",
+      "type": "mcq",
+      "prompt": "A clear statement of the problem the software is to solve is produced in which step?",
+      "options": [
+        "Problem specification",
+        "Coding",
+        "Program design",
+        "Feasibility study"
+      ],
+      "answer": "A",
+      "explanation": "Problem specification: clear statement of the problem the software is to solve; a problem specification document is prepared.",
+      "source": {
+        "page": 6,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-mcq-039",
+      "type": "mcq",
+      "prompt": "Breaking the problem into tasks and subtasks using divide-and-conquer (top-down decomposition) happens in which step?",
+      "options": [
+        "Integration testing",
+        "Problem specification",
+        "Coding",
+        "Program design"
+      ],
+      "answer": "D",
+      "explanation": "Program design: break the problem into tasks and subtasks; divide-and-conquer, top-down decomposition.",
+      "source": {
+        "page": 7,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-mcq-040",
+      "type": "mcq",
+      "prompt": "In the 'Algorithm selection or development, and analysis' step, the programmer:",
+      "options": [
+        "Translates the pseudocode into computer code",
+        "Chooses or designs an algorithm for each subtask and analyzes its efficiency",
+        "Tests how modules work together",
+        "Evaluates the costs and benefits of various solutions"
+      ],
+      "answer": "B",
+      "explanation": "This step: choose or design an algorithm for each subtask; analyze efficiency.",
+      "source": {
+        "page": 7,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-match-005",
+      "type": "matching",
+      "title": "Match each SDLC step with the document it produces",
+      "pairs": [
+        {
+          "left": "Problem specification",
+          "right": "Problem specification document"
+        },
+        {
+          "left": "Program design",
+          "right": "Program design document"
+        },
+        {
+          "left": "Algorithm selection and analysis",
+          "right": "Pseudocode with efficiency analysis and rationale"
+        },
+        {
+          "left": "Coding",
+          "right": "Program code document"
+        }
+      ],
+      "source": {
+        "page": 7,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-mcq-041",
+      "type": "mcq",
+      "prompt": "The coding step means:",
+      "options": [
+        "Translating the pseudocode and design into computer code",
+        "Locating and correcting program errors",
+        "Breaking the problem into tasks and subtasks",
+        "Proving the code is correct"
+      ],
+      "answer": "A",
+      "explanation": "Coding: translate the pseudocode and design into computer code.",
+      "source": {
+        "page": 8,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-mcq-042",
+      "type": "mcq",
+      "prompt": "In the coding step of the SDLC: Better design = _____",
+      "options": [
+        "no testing needed",
+        "easier coding",
+        "fewer documents",
+        "faster hardware"
+      ],
+      "answer": "B",
+      "explanation": "The course states: better design = easier coding.",
+      "source": {
+        "page": 8,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-mcq-043",
+      "type": "mcq",
+      "prompt": "Debugging is:",
+      "options": [
+        "Adding features to the software",
+        "Proving that the code is correct",
+        "Locating and correcting program errors",
+        "Running the software on many data sets"
+      ],
+      "answer": "C",
+      "explanation": "Debugging: locating and correcting program errors.",
+      "source": {
+        "page": 8,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-mcq-044",
+      "type": "mcq",
+      "prompt": "Dividing by zero is an example of which type of error?",
+      "options": [
+        "Logic error",
+        "Regression error",
+        "Syntax error",
+        "Runtime error"
+      ],
+      "answer": "D",
+      "explanation": "Runtime errors are illegal operations like dividing by zero.",
+      "source": {
+        "page": 8,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-mcq-045",
+      "type": "mcq",
+      "prompt": "An error in the algorithm itself that gives wrong results is a:",
+      "options": [
+        "Benchmarking error",
+        "Syntax error",
+        "Logic error",
+        "Runtime error"
+      ],
+      "answer": "C",
+      "explanation": "Logic errors: errors in the algorithm itself that give wrong results.",
+      "source": {
+        "page": 8,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-tf-014",
+      "type": "tf",
+      "prompt": "A syntax error is an illegal operation such as dividing by zero.",
+      "answer": false,
+      "explanation": "Dividing by zero is a runtime error; a syntax error is wrong grammar in code statements.",
+      "source": {
+        "page": 8,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-tf-015",
+      "type": "tf",
+      "prompt": "Logic errors are errors in the algorithm itself that give wrong results.",
+      "answer": true,
+      "explanation": "That is the definition of logic errors.",
+      "source": {
+        "page": 8,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-match-006",
+      "type": "matching",
+      "title": "Match each type of program error with its description",
+      "pairs": [
+        {
+          "left": "Syntax error",
+          "right": "Wrong grammar in code statements"
+        },
+        {
+          "left": "Runtime error",
+          "right": "Illegal operation such as dividing by zero"
+        },
+        {
+          "left": "Logic error",
+          "right": "Error in the algorithm itself that gives wrong results"
+        }
+      ],
+      "source": {
+        "page": 8,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-mcq-075",
+      "type": "mcq",
+      "prompt": "Wrong grammar in code statements is a:",
+      "options": [
+        "Syntax error",
+        "Logic error",
+        "Runtime error",
+        "Regression error"
+      ],
+      "answer": "A",
+      "explanation": "Syntax errors: \"wrong grammar in code statements\". Runtime errors are illegal operations like dividing by zero; logic errors are errors in the algorithm itself.",
+      "source": {
+        "page": 8,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-mcq-046",
+      "type": "mcq",
+      "prompt": "Which type of testing checks how modules work together?",
+      "options": [
+        "Integration testing",
+        "Program verification",
+        "Regression testing",
+        "Unit testing"
+      ],
+      "answer": "A",
+      "explanation": "Integration testing: test how modules work together.",
+      "source": {
+        "page": 9,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-mcq-047",
+      "type": "mcq",
+      "prompt": "When a change occurs, testing to be sure the change did not introduce errors is called:",
+      "options": [
+        "Empirical testing",
+        "Integration testing",
+        "Unit testing",
+        "Regression testing"
+      ],
+      "answer": "D",
+      "explanation": "Regression testing: when a change occurs, test to be sure the change did not introduce errors.",
+      "source": {
+        "page": 9,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-mcq-048",
+      "type": "mcq",
+      "prompt": "Running the software on many data sets (inputs) to check if performance meets the required limits is called:",
+      "options": [
+        "Debugging",
+        "Benchmarking",
+        "Program verification",
+        "Unit testing"
+      ],
+      "answer": "B",
+      "explanation": "Benchmarking: run the software on many data sets to check if performance meets the required limits.",
+      "source": {
+        "page": 9,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-tf-016",
+      "type": "tf",
+      "prompt": "Integration testing tests each module or subtask on its own.",
+      "answer": false,
+      "explanation": "Testing each module alone is unit testing; integration testing tests how modules work together.",
+      "source": {
+        "page": 9,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-tf-017",
+      "type": "tf",
+      "prompt": "Regression testing is done when a change occurs, to be sure the change did not introduce errors.",
+      "answer": true,
+      "explanation": "That is the definition of regression testing.",
+      "source": {
+        "page": 9,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-match-007",
+      "type": "matching",
+      "title": "Match each testing activity with its purpose",
+      "pairs": [
+        {
+          "left": "Empirical testing",
+          "right": "Develop a test suite to check correctness"
+        },
+        {
+          "left": "Unit testing",
+          "right": "Test each module or subtask"
+        },
+        {
+          "left": "Integration testing",
+          "right": "Test how modules work together"
+        },
+        {
+          "left": "Regression testing",
+          "right": "Make sure a change did not introduce errors"
+        },
+        {
+          "left": "Program verification",
+          "right": "Prove the code is correct"
+        },
+        {
+          "left": "Benchmarking",
+          "right": "Check performance on many data sets against required limits"
+        }
+      ],
+      "source": {
+        "page": 9,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-mcq-076",
+      "type": "mcq",
+      "prompt": "Testing each module or subtask is called:",
+      "options": [
+        "Integration testing",
+        "Unit testing",
+        "Regression testing",
+        "Benchmarking"
+      ],
+      "answer": "B",
+      "explanation": "Unit testing: \"test each module or subtask\". Integration testing tests how modules work together.",
+      "source": {
+        "page": 9,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-mcq-077",
+      "type": "mcq",
+      "prompt": "Which activity is done to prove that the code is correct?",
+      "options": [
+        "Benchmarking",
+        "Empirical testing",
+        "Program verification",
+        "Debugging"
+      ],
+      "answer": "C",
+      "explanation": "Program verification: \"to prove code is correct\". Empirical testing develops a test suite to check correctness; benchmarking checks performance.",
+      "source": {
+        "page": 9,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-tf-031",
+      "type": "tf",
+      "prompt": "Empirical testing means developing a test suite to check correctness.",
+      "answer": true,
+      "explanation": "\"Empirical testing: develop a test suite to check correctness.\"",
+      "source": {
+        "page": 9,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-mcq-049",
+      "type": "mcq",
+      "prompt": "External documentation consists of:",
+      "options": [
+        "All earlier documents, such as the problem specification and program design",
+        "The machine-code file",
+        "Only the instructions that help users run programs",
+        "Comments in the code"
+      ],
+      "answer": "A",
+      "explanation": "External documentation: all earlier documents (problem specification, program design, etc.).",
+      "source": {
+        "page": 10,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-mcq-050",
+      "type": "mcq",
+      "prompt": "Program maintenance includes:",
+      "options": [
+        "Breaking the problem into tasks and subtasks",
+        "Adding features, fixing bugs, and improving performance",
+        "Evaluating costs and benefits of solutions",
+        "Writing the problem specification document"
+      ],
+      "answer": "B",
+      "explanation": "Program maintenance: add features, fix bugs, and improve performance.",
+      "source": {
+        "page": 10,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-tf-018",
+      "type": "tf",
+      "prompt": "User documentation is information for programmers to understand the code.",
+      "answer": false,
+      "explanation": "That is technical documentation; user documentation helps users run programs.",
+      "source": {
+        "page": 10,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-match-008",
+      "type": "matching",
+      "title": "Match each type of documentation with its description",
+      "pairs": [
+        {
+          "left": "Internal documentation",
+          "right": "Comments in code"
+        },
+        {
+          "left": "External documentation",
+          "right": "All earlier documents (problem specification, program design, etc.)"
+        },
+        {
+          "left": "Technical documentation",
+          "right": "Information for programmers to understand the code"
+        },
+        {
+          "left": "User documentation",
+          "right": "Helps users run programs"
+        }
+      ],
+      "source": {
+        "page": 10,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-mcq-078",
+      "type": "mcq",
+      "prompt": "Comments in code are called:",
+      "options": [
+        "External documentation",
+        "User documentation",
+        "Technical documentation",
+        "Internal documentation"
+      ],
+      "answer": "D",
+      "explanation": "Internal documentation: \"comments in code\". External documentation is all the earlier documents (problem specification, program design, etc.).",
+      "source": {
+        "page": 10,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-mcq-051",
+      "type": "mcq",
+      "prompt": "IDE stands for:",
+      "options": [
+        "Internal Documentation Editor",
+        "Integrated Debugging Executor",
+        "Integrated Development Environment",
+        "Interpreted Development Engine"
+      ],
+      "answer": "C",
+      "explanation": "Most programmers use an Integrated Development Environment (IDE) for developing software.",
+      "source": {
+        "page": 11,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-mcq-052",
+      "type": "mcq",
+      "prompt": "Which of the following is NOT listed among the things an IDE provides?",
+      "options": [
+        "Version control and document management",
+        "Debugger",
+        "Program editor",
+        "Feasibility study"
+      ],
+      "answer": "D",
+      "explanation": "The IDE provides a program editor, file manager, compiler or interpreter, debugger, prototypes, rapid prototyping, and version control and document management.",
+      "source": {
+        "page": 11,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-mcq-053",
+      "type": "mcq",
+      "prompt": "The two models for the software development process presented in the course are:",
+      "options": [
+        "Compiler model and Interpreter model",
+        "Feasibility model and Maintenance model",
+        "Waterfall model and Agile model",
+        "Unit model and Integration model"
+      ],
+      "answer": "C",
+      "explanation": "There are two models for the software development process: 1. Waterfall model, 2. Agile model.",
+      "source": {
+        "page": 12,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-mcq-054",
+      "type": "mcq",
+      "prompt": "Which statement describes the Waterfall model?",
+      "options": [
+        "The process is sequential; one step must be completed before the next, and previous steps are never revisited",
+        "The customer or user is involved throughout the process",
+        "Problem specification can change at any time",
+        "It is a flexible and iterative approach"
+      ],
+      "answer": "A",
+      "explanation": "Waterfall: sequential; one step completed before moving on; previous steps never revisited.",
+      "source": {
+        "page": 13,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-tf-019",
+      "type": "tf",
+      "prompt": "In the Waterfall model, previous steps can be revisited whenever needed.",
+      "answer": false,
+      "explanation": "In the Waterfall model the process is sequential and the previous steps are never revisited.",
+      "source": {
+        "page": 13,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-mcq-069",
+      "type": "mcq",
+      "prompt": "In which model is the software development process sequential?",
+      "options": [
+        "Agile model",
+        "Waterfall model",
+        "Both models",
+        "Neither model"
+      ],
+      "answer": "B",
+      "explanation": "Waterfall model: \"The software development process is sequential.\" The Agile model is a flexible and iterative approach.",
+      "source": {
+        "page": 13,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-mcq-071",
+      "type": "mcq",
+      "prompt": "In which model are the previous steps never revisited?",
+      "options": [
+        "Agile model",
+        "Both models",
+        "Neither model",
+        "Waterfall model"
+      ],
+      "answer": "D",
+      "explanation": "Waterfall model: \"One step must be completed before moving on to the next. The previous steps are never revisited.\" Agile is iterative and expects changes.",
+      "source": {
+        "page": 13,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-mcq-074",
+      "type": "mcq",
+      "prompt": "Which of the following is NOT a characteristic of the Waterfall model?",
+      "options": [
+        "The software development process is sequential",
+        "One step must be completed before moving on to the next",
+        "It is a flexible and iterative approach",
+        "The previous steps are never revisited"
+      ],
+      "answer": "C",
+      "explanation": "Options A, B and D are the three Waterfall points on the course. \"A flexible and iterative approach\" describes the Agile model.",
+      "source": {
+        "page": 13,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-tf-028",
+      "type": "tf",
+      "prompt": "In the Waterfall model, one step must be completed before moving on to the next.",
+      "answer": true,
+      "explanation": "Waterfall model: the process is sequential; \"one step must be completed before moving on to the next\" and previous steps are never revisited.",
+      "source": {
+        "page": 13,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-mcq-059",
+      "type": "mcq",
+      "prompt": "Which is the correct order of the phases in the Waterfall model?",
+      "options": [
+        "Requirements, Design, Analysis, Coding/implementation, Testing, Operation/deployment, Maintenance",
+        "Analysis, Requirements, Design, Coding/implementation, Operation/deployment, Testing, Maintenance",
+        "Requirements, Analysis, Design, Coding/implementation, Testing, Operation/deployment, Maintenance",
+        "Requirements, Analysis, Coding/implementation, Design, Testing, Maintenance, Operation/deployment"
+      ],
+      "answer": "C",
+      "explanation": "The Waterfall diagram goes down step by step: Requirements, Analysis, Design, Coding/implementation, Testing, Operation/deployment, Maintenance. Each step is completed before the next one starts.",
+      "source": {
+        "page": 14,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-mcq-055",
+      "type": "mcq",
+      "prompt": "Which statement describes the Agile model?",
+      "options": [
+        "One step must be completed before moving on to the next",
+        "The process is strictly sequential",
+        "The previous steps are never revisited",
+        "It is a flexible and iterative approach in which changes are expected"
+      ],
+      "answer": "D",
+      "explanation": "Agile: a flexible and iterative approach; changes are expected; respond in an agile way.",
+      "source": {
+        "page": 15,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-mcq-056",
+      "type": "mcq",
+      "prompt": "In which model is the customer or user involved throughout the process?",
+      "options": [
+        "Neither model",
+        "Agile model",
+        "Waterfall model",
+        "Both models equally"
+      ],
+      "answer": "B",
+      "explanation": "Involving the customer or user throughout the process is part of the Agile philosophy.",
+      "source": {
+        "page": 15,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-mcq-057",
+      "type": "mcq",
+      "prompt": "How does the Agile model differ from the Waterfall model?",
+      "options": [
+        "Agile expects changes and keeps the user involved, while Waterfall completes each step in sequence without going back",
+        "Agile is sequential, while Waterfall is flexible and iterative",
+        "Agile has no testing, while Waterfall has no design",
+        "Agile never revisits previous steps, while Waterfall does"
+      ],
+      "answer": "A",
+      "explanation": "Waterfall is sequential with no revisiting; Agile is flexible and iterative, expects changes, and involves the customer throughout.",
+      "source": {
+        "page": 15,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-tf-020",
+      "type": "tf",
+      "prompt": "In the Agile model, the problem specification is fixed and cannot change once written.",
+      "answer": false,
+      "explanation": "Agile philosophy: problem specification can change at any time; changes are expected.",
+      "source": {
+        "page": 15,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-tf-021",
+      "type": "tf",
+      "prompt": "The Agile model is presented as an alternative to the Waterfall model.",
+      "answer": true,
+      "explanation": "The course says Agile is an alternative to the waterfall model.",
+      "source": {
+        "page": 15,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-tf-022",
+      "type": "tf",
+      "prompt": "In the Agile model, the customer or user is involved only at the beginning of the process.",
+      "answer": false,
+      "explanation": "Agile philosophy: the customer or user is involved throughout the process.",
+      "source": {
+        "page": 15,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-mcq-070",
+      "type": "mcq",
+      "prompt": "Which model is a flexible and iterative approach?",
+      "options": [
+        "Waterfall model",
+        "Neither model",
+        "Agile model",
+        "Both models"
+      ],
+      "answer": "C",
+      "explanation": "Agile model: \"It is a flexible and iterative approach\", an alternative to the waterfall model, which is sequential.",
+      "source": {
+        "page": 15,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-mcq-072",
+      "type": "mcq",
+      "prompt": "In which model can the problem specification change at any time?",
+      "options": [
+        "Agile model",
+        "Waterfall model",
+        "Both models",
+        "Neither model"
+      ],
+      "answer": "A",
+      "explanation": "Agile philosophy: \"Problem specification can change at any time; changes are expected.\" Waterfall is sequential and never revisits previous steps.",
+      "source": {
+        "page": 15,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-mcq-073",
+      "type": "mcq",
+      "prompt": "Which of the following is NOT part of the Agile model's philosophy?",
+      "options": [
+        "Problem specification can change at any time",
+        "Changes are expected; respond in an agile way",
+        "Customer or user is involved throughout the process",
+        "The previous steps are never revisited"
+      ],
+      "answer": "D",
+      "explanation": "The three points of the Agile philosophy are options A, B and C. \"The previous steps are never revisited\" describes the Waterfall model.",
+      "source": {
+        "page": 15,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-tf-029",
+      "type": "tf",
+      "prompt": "In the Agile model, changes are expected and the team responds to them in an agile way.",
+      "answer": true,
+      "explanation": "Agile philosophy: \"Changes are expected; respond in an agile way.\"",
+      "source": {
+        "page": 15,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-match-011",
+      "type": "matching",
+      "title": "Compare the Waterfall Model and the Agile Model. Match each point with the correct description.",
+      "pairs": [
+        {
+          "left": "Waterfall: order of the steps",
+          "right": "Sequential; one step must be completed before moving on to the next"
+        },
+        {
+          "left": "Waterfall: previous steps",
+          "right": "Never revisited"
+        },
+        {
+          "left": "Agile: type of approach",
+          "right": "Flexible and iterative"
+        },
+        {
+          "left": "Agile: problem specification",
+          "right": "Can change at any time"
+        },
+        {
+          "left": "Agile: customer or user",
+          "right": "Involved throughout the process"
+        }
+      ],
+      "explanation": "Waterfall: sequential, one step completed before the next, previous steps never revisited. Agile: flexible and iterative alternative to waterfall; problem specification can change at any time, changes are expected, customer or user involved throughout.",
+      "source": {
+        "page": 15,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-mcq-060",
+      "type": "mcq",
+      "prompt": "Which of the following is NOT one of the phases shown in the Agile Model cycle diagram?",
+      "options": [
+        "Deploy",
+        "Design",
+        "Review",
+        "Feasibility study"
+      ],
+      "answer": "D",
+      "explanation": "The Agile cycle shows Requirements feeding a loop of Design, Develop, Test, Deploy, and Review.",
+      "source": {
+        "page": 16,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-tf-023",
+      "type": "tf",
+      "prompt": "According to the summary, the Software Development Life Cycle is critical in developing and documenting a software product.",
+      "answer": true,
+      "explanation": "This is stated in the course summary.",
+      "source": {
+        "page": 17,
+        "part": 2
+      }
+    },
+    {
+      "id": "t4-tf-030",
+      "type": "tf",
+      "prompt": "The Waterfall model and the Agile model have the same philosophy.",
+      "answer": false,
+      "explanation": "Course summary: \"The Waterfall model and Agile models have different philosophies.\" Waterfall is sequential; Agile is flexible and iterative and expects changes.",
+      "source": {
+        "page": 17,
+        "part": 2
+      }
+    }
+  ]
+}
