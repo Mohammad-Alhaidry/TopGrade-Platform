@@ -3,7 +3,9 @@
 // settings (test devices, install, password, sign out). Plain DOM, no framework.
 
 const SITE_BASE = new URL('../', location.href); // the students' site: / or /preview/
-const ICON = new URL('icon-192.png', location.href).href;
+// The approved logo pair: black on light backgrounds, silver on dark ones (follows the phone's theme).
+const LOGO_LIGHT = new URL('assets/img/logo-mark.png', SITE_BASE).href;
+const LOGO_DARK = new URL('assets/img/logo-mark-dark.png', SITE_BASE).href;
 
 /* ---------- tiny DOM helpers ---------- */
 
@@ -85,6 +87,12 @@ function sheet(build) {
   });
 }
 
+function logo(cls) {
+  return h('picture', { class: cls },
+    h('source', { srcset: LOGO_DARK, media: '(prefers-color-scheme: dark)' }),
+    h('img', { src: LOGO_LIGHT, alt: 'سمارت برو', width: '160', height: '160' }));
+}
+
 /* ---------- server ---------- */
 
 class SignedOut extends Error {}
@@ -121,7 +129,7 @@ const TABS = [['home', 'الرئيسية', 'home'], ['compose', 'تنبيه جد
 function frame(title, sub, content) {
   root.replaceChildren(
     h('header', { class: 'bar' },
-      h('img', { class: 'bar__logo', src: ICON, alt: '' }),
+      logo('bar__logo'),
       h('div', { class: 'bar__title' }, h('h1', {}, title), sub ? h('p', {}, sub) : null),
       state.overview?.site === 'preview' ? h('span', { class: 'chip chip--warn' }, 'النسخة التجريبية') : null),
     h('main', { id: 'main' }, content),
@@ -173,7 +181,7 @@ function showLogin(message = '') {
       }
     },
   },
-  h('div', { class: 'login__brand' }, h('img', { src: ICON, alt: '' }), h('h1', {}, 'إدارة سمارت برو'), h('p', {}, 'إرسال التنبيهات للطلاب ومتابعة نتائجها')),
+  h('div', { class: 'login__brand' }, logo('login__logo'), h('h1', {}, 'إدارة سمارت برو'), h('p', {}, 'إرسال التنبيهات للطلاب ومتابعة نتائجها')),
   h('div', { class: 'card' },
     // A hidden account name, so the phone's password manager can save and fill the password.
     h('input', { type: 'text', name: 'username', autocomplete: 'username', value: 'smartpro', hidden: true, 'aria-hidden': 'true', tabindex: '-1' }),
