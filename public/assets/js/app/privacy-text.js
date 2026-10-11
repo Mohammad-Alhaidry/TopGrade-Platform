@@ -6,7 +6,7 @@ export const PRIVACY = {
     title: 'Privacy policy',
     updated: 'Last updated 11 October 2026',
     sections: [
-      ['Summary', 'No account needed. We don’t collect your name, email or phone number, and we never sell or share your data.'],
+      ['Summary', 'No account needed, and we don’t collect your name, email or phone number.'],
       ['On your device', 'Your answers, scores, mistakes and settings are saved on your device only. Clearing the site’s data or removing the app deletes them.'],
       ['Our server', 'Like any website, our server receives technical details such as your IP address and browser type, used only to run and protect the service.'],
       ['Usage statistics', 'We count how the app is used (pages, quizzes, answers, device type, country) anonymously to improve the courses, on our own server, without cookies or storing your IP address.'],
@@ -21,7 +21,7 @@ export const PRIVACY = {
     title: 'سياسة الخصوصية',
     updated: 'آخر تحديث: 11 أكتوبر 2026',
     sections: [
-      ['باختصار', 'لا تحتاج إلى حساب. لا نجمع اسمك أو بريدك أو رقم جوالك، ولا نبيع بياناتك أو نشاركها أبدًا.'],
+      ['باختصار', 'لا تحتاج إلى حساب، ولا نجمع اسمك أو بريدك أو رقم جوالك.'],
       ['على جهازك', 'إجاباتك ودرجاتك وأخطاؤك وإعداداتك محفوظة على جهازك فقط، وتُحذف بمسح بيانات الموقع أو حذف التطبيق.'],
       ['خادمنا', 'مثل أي موقع، يستقبل خادمنا معلومات تقنية مثل عنوان IP ونوع المتصفح، ونستخدمها لتشغيل الخدمة وحمايتها فقط.'],
       ['إحصائيات الاستخدام', 'نحسب استخدام التطبيق (الصفحات والاختبارات والإجابات ونوع الجهاز والدولة) دون معرفة هويتك لتحسين المقررات، على خادم خاص بنا، دون ملفات تعريف الارتباط ودون حفظ عنوان IP.'],
