@@ -74,7 +74,6 @@ textarea.input{min-height:88px;resize:vertical}
 .options--hours .option{justify-content:center;min-height:48px;padding:8px}
 .options--hours .option__text{flex:none;font-weight:700;font-variant-numeric:tabular-nums}
 .option:disabled:not(.is-selected){opacity:.4}
-.sheet__hint{text-align:center}
 
 /* notification preview: the phone's own look, not the app's */
 .phone{display:grid;gap:10px;padding:14px;border-radius:var(--r-ctl)}
@@ -137,7 +136,6 @@ textarea.input{min-height:88px;resize:vertical}
 .row__copy strong{display:block;font:700 14.5px/1.4 var(--ui);color:var(--ink)}
 .row__copy span{display:block;font:500 12.5px/1.45 var(--ui);color:var(--muted)}
 .card__pad{display:grid;gap:12px;padding:14px}
-.section-note{margin:-2px 2px 0}
 .admin-steps{font-size:13.5px;color:var(--text)}
 
 /* ---------- sign-in ---------- */

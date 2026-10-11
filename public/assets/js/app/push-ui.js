@@ -44,8 +44,7 @@ export function courseBell(course) {
     try {
       if (btn.classList.contains('is-on')) {
         const choice = await confirmDialog({
-          title: t('push.offTitle'),
-          text: t('push.offText', { course: localName(course).main }),
+          title: t('push.offTitle', { course: localName(course).main }),
           actions: [{ label: t('push.keep'), value: '' }, { label: t('push.offBtn'), value: 'off', primary: true }],
         });
         if (choice === 'off') {

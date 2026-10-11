@@ -6,6 +6,7 @@
 import { h, icon, ICONS } from '../assets/js/quiz/dom.js';
 import { confirmDialog, openSheet } from '../assets/js/quiz/dialog.js';
 import { initTheme, toggleTheme, theme } from '../assets/js/app/theme.js';
+import { iosBrowser } from '../assets/js/app/install.js';
 
 const SITE = new URL('../', location.href); // the students' site: / or /preview/
 const asset = (path) => new URL(path, SITE).href;
@@ -87,14 +88,14 @@ const courseName = (id) => course(id)?.titleAr ?? id;
 const audienceName = (id) => (id ? `مشتركو ${courseName(id)}` : 'كل المشتركين');
 const audienceCount = (id) => (id ? state.overview.perCourse[id] || 0 : state.overview.total);
 const ERRORS = {
-  'no test device': 'لا يوجد جهاز تجربة بعد. أضف جوالك من الإعدادات أولًا.',
-  'title and body are required': 'اكتب العنوان والنص أولًا.',
+  'no test device': 'أضف جهاز تجربة من الإعدادات.',
+  'title and body are required': 'اكتب العنوان والنص',
   'too far ahead': 'أبعد موعد ممكن بعد 60 يومًا.',
   'too many attempts': 'محاولات كثيرة. انتظر 15 دقيقة ثم حاول مرة أخرى.',
   'wrong password': 'كلمة المرور غير صحيحة.',
   'too short': 'كلمة المرور الجديدة 10 أحرف على الأقل.',
 };
-const errorText = (err) => ERRORS[err.message] || 'تعذّر الاتصال بالخادم. تأكد من الإنترنت وحاول مرة أخرى.';
+const errorText = (err) => ERRORS[err.message] || 'تعذّر الاتصال. حاول مرة أخرى.';
 const refresh = async () => { [state.overview, state.history] = await Promise.all([api('overview'), api('history')]); };
 const fail = (err) => (err instanceof SignedOut ? showLogin() : toast(errorText(err)));
 
@@ -123,7 +124,7 @@ const paintChip = () => chipSlot.replaceChildren(state.overview?.site === 'previ
 /* ---------- screens ---------- */
 
 const root = document.getElementById('app');
-const TABS = [['home', 'الرئيسية', ICONS.home], ['compose', 'تنبيه جديد', I.send], ['history', 'السجل', I.list], ['settings', 'الإعدادات', I.gear]];
+const TABS = [['home', 'الرئيسية', ICONS.home], ['compose', 'إشعار جديد', I.send], ['history', 'السجل', I.list], ['settings', 'الإعدادات', I.gear]];
 const scrollMemory = {};
 
 function mountScreen(name, { bar = null, body, foot = null, className = '', enter = '' }) {
@@ -198,8 +199,7 @@ function showLogin() {
     },
     h('div', { class: 'login__head' },
       h('span', { class: 'empty__icon' }, icon(...ICONS.bell)),
-      h('h1', {}, 'إدارة التنبيهات'),
-      h('p', {}, 'أرسل التنبيهات لطلاب سمارت برو وتابع من وصلهم ومن فتحها.')),
+      h('h1', {}, 'إدارة الإشعارات')),
     h('div', { class: 'card login__card' },
       // A hidden account name, so the phone's password manager can save and fill the password.
       h('input', { type: 'text', name: 'username', autocomplete: 'username', value: 'smartpro', hidden: true, tabindex: '-1', 'aria-hidden': 'true' }),
@@ -236,19 +236,18 @@ function sentCard(r, { compact = false } = {}) {
   }
   if (!compact) {
     const actions = h('div', { class: 'sent__actions' },
-      h('button', { type: 'button', class: 'btn btn--secondary btn--sm', onclick: () => openCompose({ course: r.course, title: r.title, body: r.body, path: pathOf(r.url) }) }, icon(...I.copy), 'استخدمه في تنبيه جديد'));
+      h('button', { type: 'button', class: 'btn btn--secondary btn--sm', onclick: () => openCompose({ course: r.course, title: r.title, body: r.body, path: pathOf(r.url) }) }, icon(...I.copy), 'إعادة استخدام'));
     if (r.status === 'scheduled') {
       const cancel = h('button', { type: 'button', class: 'btn btn--quiet btn--sm' }, 'إلغاء الجدولة');
       cancel.onclick = async () => {
         const choice = await confirmDialog({
-          title: 'إلغاء التنبيه المجدول؟',
-          text: `«${r.title}» لن يُرسل ${fmt(r.sendAt)}.`,
-          actions: [{ label: 'تراجع', value: '' }, { label: 'إلغاء الإرسال', value: 'yes', primary: true }],
+          title: 'إلغاء الإشعار المجدول؟',
+          actions: [{ label: 'تراجع', value: '' }, { label: 'إلغاء الجدولة', value: 'yes', primary: true }],
         });
         if (choice !== 'yes') return;
         try {
           await busy(cancel, 'جارٍ الإلغاء…', () => api('cancel', { id: r.id }));
-          toast('تم إلغاء التنبيه المجدول.');
+          toast('تم إلغاء الجدولة');
           go(state.tab);
         } catch (err) { fail(err); }
       };
@@ -271,13 +270,13 @@ function drawHome() {
     className: 'screen--admin-home',
     body: [
       h('section', { class: 'card course-hero' },
-        h('p', { class: 'course-hero__en' }, 'المشتركون في التنبيهات'),
-        h('p', { class: 'course-hero__ar' }, 'الجدد والموقفون: آخر 7 أيام'),
+        h('p', { class: 'course-hero__en' }, 'الإشعارات'),
+        h('p', { class: 'course-hero__ar' }, 'آخر 7 أيام'),
         h('dl', { class: 'course-hero__stats' },
           h('div', {}, h('dt', {}, 'المشتركون'), h('dd', {}, num(o.total))),
           h('div', {}, h('dt', {}, 'جدد'), h('dd', {}, num(o.newThisWeek))),
-          h('div', {}, h('dt', {}, 'أوقفوا'), h('dd', {}, num(o.leftThisWeek))))),
-      h('button', { type: 'button', class: 'btn btn--primary btn--block', onclick: () => openCompose() }, icon(...I.send), 'تنبيه جديد'),
+          h('div', {}, h('dt', {}, 'ألغوا'), h('dd', {}, num(o.leftThisWeek))))),
+      h('button', { type: 'button', class: 'btn btn--primary btn--block', onclick: () => openCompose() }, icon(...I.send), 'إشعار جديد'),
       scheduled.length ? [h('div', { class: 'section-head' }, h('h2', {}, 'مجدول')), scheduled.map((r) => sentCard(r, { compact: true }))] : null,
       h('div', { class: 'section-head' }, h('h2', {}, 'المشتركون حسب المقرر')),
       o.total
@@ -286,9 +285,8 @@ function drawHome() {
             return h('li', {}, h('div', { class: 'counts__top' }, h('span', {}, c.titleAr), h('strong', {}, num(n))),
               h('div', { class: 'meter', role: 'presentation' }, h('span', { style: `transform:scaleX(${n / max})` })));
           }))
-        : h('div', { class: 'card empty' }, h('span', { class: 'empty__icon' }, icon(...I.users)), h('h2', {}, 'لا يوجد مشتركون بعد'),
-            h('p', {}, 'يشترك الطالب من الجرس في صفحة المقرر، أو من بطاقة «لا يفوتك الجديد» بعد نتيجة اختباره.')),
-      last ? [h('div', { class: 'section-head' }, h('h2', {}, 'آخر تنبيه'), h('a', { href: '#history', onclick: (e) => { e.preventDefault(); go('history'); } }, 'السجل')), sentCard(last, { compact: true })] : null,
+        : h('div', { class: 'card empty' }, h('span', { class: 'empty__icon' }, icon(...I.users)), h('h2', {}, 'لا يوجد مشتركون بعد')),
+      last ? [h('div', { class: 'section-head' }, h('h2', {}, 'آخر إشعار'), h('a', { href: '#history', onclick: (e) => { e.preventDefault(); go('history'); } }, 'السجل')), sentCard(last, { compact: true })] : null,
     ],
     foot: tabbar(),
   });
@@ -303,12 +301,11 @@ function drawHistory() {
     const rows = state.history.filter((r) => (state.filter === 'all' ? true : state.filter === 'test' ? r.test : !r.test && r.status === state.filter));
     list.replaceChildren(...(rows.length ? rows.map((r) => sentCard(r))
       : [h('div', { class: 'card empty' }, h('span', { class: 'empty__icon' }, icon(...ICONS.bell)),
-          h('h2', {}, state.filter === 'scheduled' ? 'لا يوجد تنبيه مجدول' : state.filter === 'test' ? 'لا توجد تجارب' : 'لم ترسل أي تنبيه بعد'),
-          h('p', {}, 'التنبيهات التي ترسلها أو تجدولها تظهر هنا مع عدد من وصلهم ومن فتحها.'),
-          h('button', { type: 'button', class: 'btn btn--primary btn--sm', onclick: () => openCompose() }, 'تنبيه جديد'))]));
+          h('h2', {}, state.filter === 'scheduled' ? 'لا يوجد إشعار مجدول' : state.filter === 'test' ? 'لا توجد تجارب' : 'لم ترسل أي إشعار بعد'),
+          h('button', { type: 'button', class: 'btn btn--primary btn--sm', onclick: () => openCompose() }, 'إشعار جديد'))]));
   };
   const main = mountScreen('history', {
-    bar: pagebar({ title: 'السجل', sub: 'آخر 200 تنبيه' }),
+    bar: pagebar({ title: 'السجل' }),
     body: [segs('filter', FILTERS, state.filter, (v) => { state.filter = v; draw(); }), list],
     foot: tabbar(),
   });
@@ -342,13 +339,13 @@ function drawSettings() {
         if (sub) {
           await api('test-devices/remove', { endpoint: sub.endpoint });
           await sub.unsubscribe();
-          toast('لن يستقبل هذا الجهاز تنبيهات التجربة بعد الآن.');
+          toast('تمت إزالة الجهاز');
         } else {
-          if (await Notification.requestPermission() !== 'granted') { toast('لم يتم السماح بالتنبيهات على هذا الجهاز.'); return; }
+          if (await Notification.requestPermission() !== 'granted') { toast('لم يتم السماح بالإشعارات'); return; }
           const reg = await navigator.serviceWorker.ready;
           const s = (await reg.pushManager.getSubscription()) || await reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: b64(o.vapidKey) });
           await api('test-devices', { subscription: s.toJSON(), label: deviceLabel() });
-          toast('تم: هذا الجهاز يستقبل تنبيهات التجربة.');
+          toast('تمت إضافة الجهاز');
         }
         await thisDevice();
         await refresh();
@@ -362,8 +359,8 @@ function drawSettings() {
     h('div', { class: 'row' },
       h('span', { class: 'row__icon' }, icon(...I.phone)),
       h('div', { class: 'row__copy' }, h('strong', {}, 'هذا الجهاز'),
-        h('span', {}, pushOk() ? (sub ? 'يستقبل تنبيهات التجربة' : 'لا يستقبل تنبيهات التجربة')
-          : isIOS() && !standalone() ? 'على الآيفون تصل التنبيهات لتطبيق الإدارة المثبّت فقط. ثبّته بالخطوات أدناه.' : 'هذا المتصفح لا يدعم التنبيهات.')),
+        h('span', {}, pushOk() ? (sub ? 'مضاف' : 'غير مضاف')
+          : isIOS() && !standalone() ? 'أضف التطبيق إلى الشاشة الرئيسية' : 'الإشعارات غير مدعومة في هذا المتصفح')),
       pushOk() ? deviceBtn : null),
     others.length
       ? others.map((dv) => {
@@ -371,7 +368,7 @@ function drawSettings() {
           rm.onclick = async () => {
             try {
               await busy(rm, 'جارٍ الإزالة…', async () => { await api('test-devices/remove', { id: dv.id }); await refresh(); });
-              toast('تمت إزالة الجهاز.');
+              toast('تمت إزالة الجهاز');
               drawSettings();
             } catch (err) { fail(err); }
           };
@@ -381,15 +378,18 @@ function drawSettings() {
       : null);
 
   let install;
-  if (standalone()) install = note('info', ICONS.check, 'تطبيق الإدارة مثبّت على هذا الجهاز.');
+  if (standalone()) install = note('info', ICONS.check, 'مثبّت على هذا الجهاز');
   else if (installPrompt) {
     install = h('button', { type: 'button', class: 'btn btn--primary btn--block', onclick: async () => { installPrompt.prompt(); await installPrompt.userChoice; installPrompt = null; drawSettings(); } }, icon(...ICONS.download), 'تثبيت تطبيق الإدارة');
   } else if (isIOS()) {
-    install = h('ol', { class: 'install__steps admin-steps' },
-      h('li', {}, 'اضغط ', h('span', { class: 'install__key', 'aria-label': 'مشاركة' }, icon(...ICONS.share)), ' «مشاركة» في سفاري'),
-      h('li', {}, 'اختر ', h('strong', {}, 'إضافة إلى الشاشة الرئيسية'), ' ', h('span', { class: 'install__key', 'aria-hidden': 'true' }, icon(...ICONS.addSquare))),
-      h('li', {}, 'افتح «إدارة سمارت برو» من أيقونته وسجّل الدخول مرة واحدة'));
-  } else install = h('p', { class: 'field__hint' }, 'من قائمة المتصفح (⋮) اختر «تثبيت التطبيق» أو «إضافة إلى الشاشة الرئيسية».');
+    const key = (paths) => h('span', { class: 'install__key', 'aria-hidden': 'true' }, icon(...paths));
+    const add = h('li', {}, 'اختر ', h('strong', {}, 'إضافة إلى الشاشة الرئيسية'), ' ', key(ICONS.addSquare));
+    // Safari 26 moved Share behind the ⋯ button next to the address bar.
+    const share = iosBrowser(navigator.userAgent) === 'safari26'
+      ? [h('li', {}, 'اضغط ', key(ICONS.dots), ' بجانب شريط العنوان'), h('li', {}, 'اختر ', h('strong', {}, 'مشاركة'), ' ', key(ICONS.share))]
+      : [h('li', {}, 'اضغط ', h('strong', {}, 'مشاركة'), ' ', key(ICONS.share))];
+    install = h('ol', { class: 'install__steps admin-steps' }, share, add, h('li', {}, 'افتحه من الشاشة الرئيسية'));
+  } else install = h('p', { class: 'field__hint' }, 'من قائمة المتصفح ⋮ اختر «تثبيت التطبيق».');
 
   const cur = h('input', { class: 'input', type: 'password', autocomplete: 'current-password', dir: 'ltr', id: 'cur', required: true });
   const nxt = h('input', { class: 'input', type: 'password', autocomplete: 'new-password', dir: 'ltr', id: 'nxt', minlength: '10', required: true });
@@ -401,7 +401,7 @@ function drawSettings() {
       try {
         await busy(pwBtn, 'جارٍ الحفظ…', () => api('password', { current: cur.value, next: nxt.value }));
         cur.value = nxt.value = '';
-        toast('تم تغيير كلمة المرور. الأجهزة الأخرى ستطلب الدخول من جديد.');
+        toast('تم تغيير كلمة المرور');
       } catch (err) { fail(err); }
     },
   },
@@ -411,7 +411,7 @@ function drawSettings() {
 
   const outBtn = h('button', { type: 'button', class: 'btn btn--quiet btn--block' }, icon(...I.logout), 'تسجيل الخروج');
   outBtn.onclick = async () => {
-    const choice = await confirmDialog({ title: 'تسجيل الخروج؟', text: 'ستحتاج كلمة المرور للدخول مرة أخرى على هذا الجهاز.', actions: [{ label: 'إلغاء', value: '' }, { label: 'تسجيل الخروج', value: 'yes', primary: true }] });
+    const choice = await confirmDialog({ title: 'تسجيل الخروج؟', actions: [{ label: 'إلغاء', value: '' }, { label: 'تسجيل الخروج', value: 'yes', primary: true }] });
     if (choice !== 'yes') return;
     try { await api('logout', {}); } catch { /* signed out on this device anyway */ }
     showLogin();
@@ -421,7 +421,6 @@ function drawSettings() {
     bar: pagebar({ title: 'الإعدادات' }),
     body: [
       h('div', { class: 'section-head' }, h('h2', {}, 'أجهزة التجربة')), devices,
-      h('p', { class: 'field__hint section-note' }, 'زر «إرسال تجربة» يرسل التنبيه لهذه الأجهزة فقط، لتراه بنفسك قبل الطلاب.'),
       h('div', { class: 'section-head' }, h('h2', {}, 'تطبيق الإدارة')), h('div', { class: 'card card__pad' }, install),
       h('div', { class: 'section-head' }, h('h2', {}, 'كلمة المرور')), pwForm,
       outBtn,
@@ -506,15 +505,15 @@ function showCompose(from) {
         h('img', { class: 'pv__icon', src: asset('assets/icons/icon-192.png'), alt: '' }),
         h('div', { class: 'pv__copy' },
           h('div', { class: 'pv__head' }, h('span', {}, 'سمارت برو'), h('span', {}, 'الآن')),
-          h('p', { class: 'pv__title' }, d.title.trim() || 'عنوان التنبيه'),
-          h('p', { class: 'pv__body' }, d.body.trim() || 'نص التنبيه يظهر هنا.')))));
+          h('p', { class: 'pv__title' }, d.title.trim() || 'عنوان الإشعار'),
+          h('p', { class: 'pv__body' }, d.body.trim() || 'نص الإشعار يظهر هنا.')))));
     // At most one a day and about five a week to the same students, or they turn notifications off.
     const same = o.sends.filter((s) => !d.course || !s.course || s.course === d.course);
     const today = same.filter((s) => Date.now() - s.sentAt < 24 * 3600 * 1000).length;
     const notes = [];
-    if (today) notes.push(`أرسلت لهذا الجمهور ${today === 1 ? 'تنبيهًا' : `${today} تنبيهات`} خلال آخر 24 ساعة. الأفضل تنبيه واحد في اليوم كحد أقصى.`);
-    else if (same.length >= 4) notes.push(`أرسلت لهذا الجمهور ${same.length} تنبيهات هذا الأسبوع. أكثر من 5 في الأسبوع يدفع الطلاب لإيقاف التنبيهات.`);
-    if (d.title.length > LIMITS.title.ideal) notes.push('العنوان أطول من 30 حرفًا، وقد يظهر مقصوصًا على الآيفون.');
+    if (today) notes.push('أرسلت لهم إشعارًا خلال آخر 24 ساعة. يُفضّل إشعار واحد يوميًا.');
+    else if (same.length >= 4) notes.push(`أرسلت لهم ${same.length} إشعارات هذا الأسبوع. يُفضّل ألا تزيد على 5.`);
+    if (d.title.length > LIMITS.title.ideal) notes.push('العنوان طويل وقد يظهر مقصوصًا على الآيفون.');
     warn.replaceChildren(...notes.map((n) => note('warn', ICONS.alert, n)));
     warn.hidden = !notes.length;
     sendBtn.textContent = d.when === 'later' ? 'مراجعة وجدولة' : 'مراجعة وإرسال';
@@ -533,7 +532,7 @@ function showCompose(from) {
     const sendAt = at(d.day, d.hour);
     const hours = [...new Set([...BEST_HOURS, d.hour])].sort((a, b) => a - b);
     form.replaceChildren(
-      group('لمن يُرسل؟', h('div', { class: 'tiles' },
+      group('المستلمون', h('div', { class: 'tiles' },
         [null, ...state.catalog.courses.map((c) => c.id)].map((id) => tile('aud', id ?? 'all', d.course === id, id ? ICONS.book : I.users,
           id ? courseName(id) : 'كل المشتركين', `${num(audienceCount(id))} مشترك`, () => { d.course = id; keep(); redraw(); })))),
       group('الرسالة',
@@ -562,7 +561,7 @@ function showCompose(from) {
               keep(); redraw();
             }))),
           h('button', { type: 'button', class: 'pillbtn when__more', onclick: pickDay }, icon(...I.calendar), d.day > 1 ? fmtDay(dayStart(d.day).getTime()) : 'يوم آخر'),
-          h('div', { class: 'tiles' }, hours.map((hr) => tile('hour', hr, d.hour === hr, I.clock, hourLabel(hr), BEST_HOURS.includes(hr) ? 'وقت مناسب للطلاب' : null,
+          h('div', { class: 'tiles' }, hours.map((hr) => tile('hour', hr, d.hour === hr, I.clock, hourLabel(hr), BEST_HOURS.includes(hr) ? 'مقترح' : null,
             () => { d.hour = hr; keep(); redraw(); }, at(d.day, hr) < Date.now() + SOON))),
           h('button', { type: 'button', class: 'pillbtn when__more', onclick: pickHour }, icon(...I.clock), 'ساعة أخرى'),
           sendAt < Date.now() + SOON
@@ -605,15 +604,14 @@ function showCompose(from) {
   async function submit(test) {
     const titleText = d.title.trim(), bodyText = d.body.trim();
     if (!titleText || !bodyText) {
-      toast('اكتب العنوان والنص أولًا.');
+      toast('اكتب العنوان والنص');
       (titleText ? body : title).focus();
       return;
     }
     if (test && !o.testDevices.length) {
       const choice = await confirmDialog({
         title: 'لا يوجد جهاز تجربة',
-        text: 'أضف جوالك كجهاز تجربة من الإعدادات، ثم ارجع هنا. المسودة محفوظة.',
-        actions: [{ label: 'لاحقًا', value: '' }, { label: 'فتح الإعدادات', value: 'yes', primary: true }],
+        actions: [{ label: 'إلغاء', value: '' }, { label: 'الإعدادات', value: 'yes', primary: true }],
       });
       if (choice === 'yes') go('settings');
       return;
@@ -622,7 +620,7 @@ function showCompose(from) {
     const atMs = later ? at(d.day, d.hour) : null;
     if (later && !(atMs > Date.now() + 2 * 60000)) { toast('هذا الوقت مضى. اختر يومًا أو ساعة أخرى.'); return; }
     const count = audienceCount(d.course);
-    if (!test && !count) { toast('لا يوجد مشتركون في هذا الجمهور بعد.'); return; }
+    if (!test && !count) { toast('لا يوجد مشتركون بعد'); return; }
     if (!test) {
       const dest = destinations().find(([v]) => v === d.path);
       const choice = await openSheet({
@@ -635,7 +633,6 @@ function showCompose(from) {
             h('div', {}, h('dt', {}, 'النص'), h('dd', {}, bodyText)),
             h('div', {}, h('dt', {}, 'يفتح'), h('dd', {}, dest ? (dest[2] ? `${dest[1]}، ${dest[2]}` : dest[1]) : '')),
             h('div', {}, h('dt', {}, 'الوقت'), h('dd', {}, later ? fmt(atMs) : 'الآن'))),
-          h('p', { class: 'field__hint sheet__hint' }, later ? 'يمكنك إلغاؤه من السجل قبل موعده.' : 'لا يمكن التراجع بعد الإرسال.'),
           h('button', { type: 'button', class: 'btn btn--primary btn--block', onclick: () => close('yes') }, icon(...I.send), later ? 'جدولة' : 'إرسال الآن'),
         ],
       });
@@ -646,7 +643,7 @@ function showCompose(from) {
       const r = await busy(btn, later ? 'جارٍ الجدولة…' : 'جارٍ الإرسال…',
         () => api('send', { title: titleText, body: bodyText, course: d.course, path: d.path, test, at: atMs }));
       if (test) {
-        toast(r.delivered ? `وصلت التجربة إلى ${r.delivered === 1 ? 'جهازك' : `${r.delivered} أجهزة`}. تفقّد جوالك.` : 'لم تصل التجربة. أزل جهاز التجربة وأضفه من جديد في الإعدادات.');
+        toast(r.delivered ? 'تم إرسال التجربة' : 'لم تصل التجربة. أعد إضافة الجهاز من الإعدادات.');
         return;
       }
       dropDraft();
@@ -658,7 +655,7 @@ function showCompose(from) {
 
   mountScreen('compose', {
     className: 'screen--compose',
-    bar: pagebar({ title: 'تنبيه جديد', sub: 'تُحفظ المسودة تلقائيًا' }),
+    bar: pagebar({ title: 'إشعار جديد' }),
     body: [form, warn],
     foot: [h('footer', { class: 'bar bar--even' }, testBtn, sendBtn), tabbar()],
   });
@@ -674,14 +671,14 @@ function showDone(r, later) {
     body: h('section', { class: 'card empty done' },
       h('span', { class: `empty__icon done__icon${ok ? '' : ' is-warn'}` }, icon(...(ok ? ICONS.check : ICONS.alert))),
       h('h1', {}, later ? 'تمت الجدولة' : ok ? 'تم الإرسال' : 'لم يصل لأي جهاز'),
-      h('p', {}, later ? `يُرسل ${fmt(r.sendAt)} إلى ${audienceName(r.course)}.`
-        : ok ? `وصل إلى ${num(r.delivered)} من ${num(r.total)} مشترك. عدد من فتحه يظهر في السجل.`
-        : !r.total ? 'لا يوجد مشتركون في هذا الجمهور.'
-        : r.removed === r.total ? 'أصحاب هذه الاشتراكات أوقفوا التنبيهات أو حذفوا التطبيق، فحُذفت من القائمة.'
-        : 'تعذّر الوصول لخدمة التنبيهات الآن. أعد الإرسال بعد قليل.'),
+      h('p', {}, later ? `${fmt(r.sendAt)}`
+        : ok ? `وصل إلى ${num(r.delivered)} من ${num(r.total)} مشترك`
+        : !r.total ? 'لا يوجد مشتركون بعد'
+        : r.removed === r.total ? 'الاشتراكات لم تعد فعّالة'
+        : 'تعذّر الإرسال. حاول مرة أخرى.'),
       h('div', { class: 'done__card' }, h('p', { class: 'sent__title' }, r.title), h('p', { class: 'sent__body' }, r.body)),
       h('div', { class: 'done__actions' },
-        h('button', { type: 'button', class: 'btn btn--secondary', onclick: () => go('compose') }, 'تنبيه جديد آخر'),
+        h('button', { type: 'button', class: 'btn btn--secondary', onclick: () => go('compose') }, 'إشعار جديد آخر'),
         h('button', { type: 'button', class: 'btn btn--primary', onclick: () => go('history') }, 'عرض في السجل'))),
     foot: tabbar(),
   });
