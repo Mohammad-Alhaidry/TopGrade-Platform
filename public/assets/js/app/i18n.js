@@ -71,7 +71,6 @@ const S = {
   'home.coursesCount': { en: { one: 'Course', other: 'Courses' }, ar: { one: 'مقرر', two: 'مقرران', other: 'مقررات' } },
   'home.coursesBtn': { en: 'Courses', ar: 'المقررات' },
   'home.start': { en: 'Start practising', ar: 'ابدأ التدريب' },
-  'home.streakHint': { en: 'Practise today to keep your streak', ar: 'تدرّب اليوم لتحافظ على أيامك المتتالية' },
   'home.pickCourse': { en: 'Choose your course', ar: 'اختر مقررك' },
   'home.startHint': { en: '{n} questions from {topic}, {course}', ar: '{n} أسئلة من {topic}، {course}' },
   'home.progress': { en: 'Your progress', ar: 'تقدّمك' },

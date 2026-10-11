@@ -8,7 +8,7 @@ import { screen, tabbar, mount, forwardIcon, contentText } from '../shell.js';
 import { openSheet } from '../../quiz/dialog.js';
 import { href, navigate } from '../router.js';
 import { paths } from '../routes.js';
-import { readProgress, overall, streak, dayKey } from '../progress.js';
+import { readProgress, overall, streak } from '../progress.js';
 import { topicKey, topicLabel } from '../catalog.js';
 import { savedRunTopic, readSavedRun, queueRun, newRun } from '../quiz.js';
 import { onInstallChange } from '../install.js';
@@ -66,7 +66,6 @@ function quickQuiz(summaries) {
 function hero(progress, totals, summaries) {
   const all = overall(progress);
   const last = lastPick(summaries);
-  const practisedToday = progress.days.includes(dayKey(Date.now()));
   const days = streak(progress);
   const returning = all.answered > 0;
   return h('section', { class: 'hero', 'aria-labelledby': 'hero-title' },
@@ -82,10 +81,8 @@ function hero(progress, totals, summaries) {
     h('div', { class: 'hero__actions' },
       h('button', { type: 'button', class: 'btn btn--light', onclick: () => quickQuiz(summaries) }, icon(...ICONS.practice), t('home.start')),
       h('a', { class: 'btn btn--glass', href: href(paths.courses()) }, t('home.coursesBtn'))),
-    // A run of days going but nothing yet today: say so; otherwise name where the ten questions come from.
-    streak(progress) && !practisedToday
-      ? h('p', { class: 'hero__hint' }, t('home.streakHint'))
-      : last ? h('p', { class: 'hero__hint' }, t('home.startHint', { n: QUICK_COUNT, topic: topicLabel(last.topic, lang()), course: localName(last.course).main })) : null);
+    // Where the ten questions come from: the student's own last topic (nothing on a first visit, where they choose).
+    last ? h('p', { class: 'hero__hint' }, t('home.startHint', { n: QUICK_COUNT, topic: topicLabel(last.topic, lang()), course: localName(last.course).main })) : null);
 }
 
 function kpi(tone, iconPaths, value, label, link) {
