@@ -535,6 +535,9 @@ a.card:active,button.card:active{transform:scale(.99)}
 .prose__section{padding:12px 0;border-top:1px solid var(--line)}
 .prose h2{margin:0 0 6px;font:800 15px/1.3 var(--ui);color:var(--ink)}
 .prose p{margin:0;font:400 14px/1.6 var(--ui);color:var(--text);max-width:65ch}
+.prose__intro{margin:0 0 14px!important}
+.prose__list{display:grid;gap:6px;margin:0;padding-inline-start:18px;font:400 14px/1.6 var(--ui);color:var(--text);max-width:65ch}
+.prose__list strong{color:var(--ink);font-weight:700}
 .prose a{display:inline-block;padding-block:10px;color:var(--brand-ink);font-weight:600}
 
 /* ---------- Direction, language and theme ---------- */

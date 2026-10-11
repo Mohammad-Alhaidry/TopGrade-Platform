@@ -114,8 +114,10 @@ function pages({ catalog, banks }) {
   const p = PRIVACY.ar;
   out.push({
     path: 'privacy', route: { name: 'privacy', params: {} },
-    body: [crumbs([home, [p.title, 'privacy']]), h('h1', {}, esc(p.title)), h('p', {}, esc(p.updated)),
-      p.sections.map(([title, text]) => h('h2', {}, esc(title)) + h('p', {}, esc(text))),
+    body: [crumbs([home, [p.title, 'privacy']]), h('h1', {}, esc(p.title)), h('p', {}, esc(p.updated)), h('p', {}, esc(p.intro)),
+      p.sections.map(([title, text]) => h('h2', {}, esc(title)) + (Array.isArray(text)
+        ? h('ul', {}, text.map(([label, item]) => h('li', {}, `<strong>${esc(label)}</strong>: ${esc(item)}`)).join(''))
+        : h('p', {}, esc(text)))),
       h('h2', {}, esc(p.contact[0])), h('p', {}, esc(p.contact[1]), `<a href="./">${esc(p.contact[2])}</a>`, esc(p.contact[3]))],
     data: [breadcrumb([home, [p.title, 'privacy']])],
   });
