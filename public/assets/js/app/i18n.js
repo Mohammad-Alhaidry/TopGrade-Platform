@@ -35,8 +35,8 @@ const S = {
   },
   'meta.topicDesc': { en: 'Practise {topic} from {course}: {questions} ({types}).', ar: 'تدرّب على {topic} من مقرر {course}: {questions} ({types}).' },
   'meta.privacyDesc': {
-    en: 'How Smart Pro handles your data: no account, your progress stays on your device, and usage statistics are anonymous.',
-    ar: 'كيف يتعامل سمارت برو مع بياناتك: بدون حساب، وتقدّمك يبقى على جهازك، وإحصائيات الاستخدام مجهولة الهوية.',
+    en: 'How Smart Pro handles your data: your progress is saved on your device and usage statistics are anonymous.',
+    ar: 'كيف يتعامل سمارت برو مع بياناتك: تقدّمك محفوظ على جهازك، وإحصائيات الاستخدام مجهولة الهوية.',
   },
 
   // Counts
