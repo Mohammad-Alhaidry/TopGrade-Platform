@@ -230,6 +230,26 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--accent);outline
 .lines>.line{display:block}
 .lines>.line+.line{margin-top:2px}
 
+/* Notifications: the bell in a course's top bar, the invitation after a quiz, the toast. */
+/* On = the same bell, filled in the brand colour (no frame, no rings), like a subscribe bell. */
+.bell.is-on{color:var(--brand-ink)}
+.bell.is-on svg{fill:currentColor}
+.invite-slot:empty{display:none}
+.invite{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 12px;align-items:start;padding:14px var(--pad)}
+.invite__icon{grid-row:span 2;display:grid;place-items:center;width:40px;height:40px;border-radius:var(--r-ctl);background:var(--tint);color:var(--brand-ink)}
+.invite__icon svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.invite__copy{display:grid;gap:2px;min-width:0}
+.invite__title{margin:0;font:800 15.5px/1.35 var(--ui);color:var(--ink)}
+.invite__text,.invite__done{margin:0;font:500 13.5px/1.5 var(--ui);color:var(--muted)}
+.invite__done{color:var(--right-ink);font-weight:700}
+.invite__actions{grid-column:2;display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.invite__actions .btn{min-height:40px;padding:0 16px}
+.push-steps{gap:8px;margin:2px 0 4px;font-size:14.5px;color:var(--text)}
+.push-steps .install__key{width:26px;height:26px}
+.sheet__text{margin:0;font:500 14.5px/1.6 var(--ui);color:var(--text)}
+.toast{position:fixed;inset-inline:16px;bottom:calc(84px + env(safe-area-inset-bottom));z-index:50;max-width:520px;margin:0 auto;padding:12px 16px;border-radius:var(--r-ctl);background:var(--ink);color:var(--card);font:600 14px/1.45 var(--ui);text-align:center;box-shadow:0 10px 30px rgba(0,0,0,.25);opacity:0;transform:translateY(8px);pointer-events:none;transition:opacity 160ms ease,transform 160ms ease}
+.toast.is-on{opacity:1;transform:none}
+
 /* ---------- Results ---------- */
 .score{display:flex;align-items:center;gap:16px;padding:14px var(--pad)}
 .ring{position:relative;flex:none;width:104px;height:104px}
@@ -370,6 +390,8 @@ a.card{color:inherit;text-decoration:none}
 .hero__stat-label{font:500 11.5px/1.25 var(--ui);color:rgba(255,255,255,.88)}
 .hero__actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
 .hero__actions .btn{min-height:44px;font-size:14.5px;border-radius:var(--r-ctl)}
+.hero__actions .btn svg{width:18px;height:18px}
+.hero__hint{margin:8px 0 0;font:500 12px/1.4 var(--ui);color:rgba(255,255,255,.78);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .btn--glass{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.13);color:#fff}
 .btn--light{background:rgba(255,255,255,.94);color:#05564A}
 @media(hover:hover){.btn--glass:hover{background:rgba(255,255,255,.14)}.btn--light:hover{background:var(--card)}}
@@ -403,6 +425,7 @@ a.kpi:active{transform:scale(.99)}
 .section-label{margin:4px 2px -3px;font:700 12.5px/1.3 var(--ui);color:var(--muted)}
 
 .continue{display:flex;align-items:center;gap:12px;width:100%;padding:12px;border:1px solid var(--line);text-align:start;cursor:pointer;font:inherit}
+.streak .streak__icon{background:var(--warn);box-shadow:none}
 .continue__icon{display:grid;place-items:center;flex:none;width:42px;height:42px;border-radius:var(--r-ctl);background:var(--primary);color:#fff;box-shadow:var(--shadow-btn)}
 .continue__icon svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .continue__copy{display:grid;gap:1px;flex:1;min-width:0}
@@ -460,6 +483,8 @@ a.card:active,button.card:active{transform:scale(.99)}
 .install__steps{display:grid;gap:5px;margin:2px 0 0;padding-inline-start:18px;font:500 12.5px/1.6 var(--ui);color:var(--muted)}
 .install__steps li::marker{font-weight:800;color:var(--brand-ink)}
 .install__steps strong{color:var(--ink);font-weight:700}
+.install__hint{margin:6px 0 0;font:500 12px/1.7 var(--ui);color:var(--muted)}
+.install__hint strong{color:var(--ink);font-weight:700}
 .install__key{display:inline-grid;place-items:center;width:22px;height:22px;margin:0 1px;vertical-align:-6px;border-radius:var(--r-sm);border:1px solid var(--line-strong);background:var(--card);color:var(--accent)}
 .install__key svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .install__btn{justify-self:start;margin-top:6px}
@@ -504,6 +529,7 @@ a.card:active,button.card:active{transform:scale(.99)}
 
 /* ---------- Results extras ---------- */
 .score__best{display:inline-flex;align-items:center;gap:5px;margin:4px 0 0;padding:4px 9px;border-radius:999px;background:var(--warn-bg);color:var(--warn-ink);font:700 12px/1 var(--ui);justify-self:start}
+.score__share{justify-self:start;height:36px;margin-top:8px;padding:0 12px;font-size:12.5px;color:var(--brand-ink)}
 .score__best svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 
 /* ---------- Privacy policy ---------- */
@@ -513,6 +539,9 @@ a.card:active,button.card:active{transform:scale(.99)}
 .prose__section{padding:12px 0;border-top:1px solid var(--line)}
 .prose h2{margin:0 0 6px;font:800 15px/1.3 var(--ui);color:var(--ink)}
 .prose p{margin:0;font:400 14px/1.6 var(--ui);color:var(--text);max-width:65ch}
+.prose__intro{margin:0 0 14px!important}
+.prose__list{display:grid;gap:6px;margin:0;padding-inline-start:18px;font:400 14px/1.6 var(--ui);color:var(--text);max-width:65ch}
+.prose__list strong{color:var(--ink);font-weight:700}
 .prose a{display:inline-block;padding-block:10px;color:var(--brand-ink);font-weight:600}
 
 /* ---------- Direction, language and theme ---------- */

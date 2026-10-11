@@ -1,6 +1,6 @@
 // "Install the app" support.
 // Android/desktop Chromium: the browser fires `beforeinstallprompt`; we keep it and show our own Install button.
-// iPhone/iPad: there is no prompt, so we show the two Share-menu steps instead.
+// iPhone/iPad: there is no prompt, so we show the Add to Home Screen steps for the student's browser instead.
 // Nothing is shown when the app already runs installed, or after the student dismisses it.
 
 const DISMISS_KEY = 'topgrade.install.dismissed';
@@ -26,6 +26,21 @@ export function detectPlatform({ userAgent = '', platform = '', maxTouchPoints =
   // iPadOS 13+ reports itself as a Mac; touch support gives it away.
   const ios = /iPhone|iPad|iPod/.test(userAgent) || (platform === 'MacIntel' && maxTouchPoints > 1);
   return { ios, installed: Boolean(standalone || displayStandalone) };
+}
+
+/**
+ * Which "Add to Home Screen" steps fit this iPhone/iPad browser (unit-tested):
+ * 'safari26' Safari on iOS 26+ (Share sits behind the ⋯ button next to the address bar),
+ * 'safari' older Safari (Share in the bottom bar), 'ipad' (Share in the top bar), 'chrome' (Share in the address bar),
+ * 'other' any other browser (open the page in Safari first).
+ */
+export function iosBrowser(userAgent = '', { ipad = false } = {}) {
+  if (/CriOS/.test(userAgent)) return 'chrome';
+  if (/FxiOS|EdgiOS|OPiOS|FBAN|FBAV|Instagram|Snapchat|TikTok|musical_ly|Line\//.test(userAgent)) return 'other';
+  if (ipad || /iPad/.test(userAgent)) return 'ipad';
+  // Safari 26 keeps reporting iOS 18_6 in the OS part, so the Safari version decides.
+  const version = Number(/Version\/(\d+)/.exec(userAgent)?.[1] ?? 0);
+  return version >= 26 ? 'safari26' : 'safari';
 }
 
 export function currentPlatform() {

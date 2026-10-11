@@ -9,12 +9,16 @@ import { PRIVACY } from '../privacy-text.js';
 
 export function showPrivacy() {
   const p = PRIVACY[lang()];
-  const section = ([title, text]) => h('section', { class: 'prose__section' }, h('h2', {}, title), h('p', {}, text));
+  const body = (text) => (Array.isArray(text)
+    ? h('ul', { class: 'prose__list' }, text.map(([label, item]) => h('li', {}, h('strong', {}, label), ': ', item)))
+    : h('p', {}, text));
+  const section = ([title, text]) => h('section', { class: 'prose__section' }, h('h2', {}, title), body(text));
   const [cTitle, cText, cLink, cEnd] = p.contact;
   mount(screen({
     bar: pagebar({ start: backLink(paths.home(), t('priv.back')), title: p.title }),
     body: h('article', { class: 'card prose' },
       h('p', { class: 'prose__meta' }, p.updated),
+      h('p', { class: 'prose__intro' }, p.intro),
       p.sections.map(section),
       h('section', { class: 'prose__section' },
         h('h2', {}, cTitle),

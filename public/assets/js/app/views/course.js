@@ -7,6 +7,7 @@ import { href } from '../router.js';
 import { paths } from '../routes.js';
 import { t, lang, localName } from '../i18n.js';
 import { courseSummaries } from './courses.js';
+import { courseBell } from '../push-ui.js';
 
 function topicCard(course, { topic, stats }) {
   return h('a', { class: 'card topic-card', href: href(paths.topic(course.id, topic.id)) },
@@ -32,7 +33,7 @@ export async function showCourse(ctx, courseId) {
   const name = localName(course);
 
   mount(screen({
-    bar: pagebar({ start: backLink(paths.courses(), t('course.back')), title: t('courses.title') }),
+    bar: pagebar({ start: backLink(paths.courses(), t('course.back')), title: t('courses.title'), end: courseBell(course) }),
     body: [
       h('section', { class: 'card course-hero' },
         h('p', { class: 'course-hero__en', lang: name.mainLang }, name.main),

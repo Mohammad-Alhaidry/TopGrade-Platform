@@ -7,11 +7,12 @@ import { createSession } from '../../quiz/session.js';
 import { screen, tabbar, mount, forwardIcon, contentText } from '../shell.js';
 import { href, navigate } from '../router.js';
 import { paths } from '../routes.js';
-import { readProgress, overall, streak } from '../progress.js';
+import { readProgress, overall, streak, dayKey } from '../progress.js';
 import { topicKey, topicLabel } from '../catalog.js';
 import { savedRunTopic, readSavedRun, queueRun, newRun } from '../quiz.js';
-import { installOffer, promptInstall, dismissInstall, onInstallChange } from '../install.js';
-import { t, lang } from '../i18n.js';
+import { onInstallChange } from '../install.js';
+import { installCard } from '../install-card.js';
+import { t, lang, localName } from '../i18n.js';
 import { courseSummaries, courseCard } from './courses.js';
 
 const QUICK_COUNT = 10;
@@ -32,17 +33,22 @@ function heroStat(value, label) {
     h('span', { class: 'hero__stat-label' }, label));
 }
 
-/** Quick quiz: the most recently studied topic, else the first one. */
-function quickQuiz(summaries) {
+/** Quick practice: the most recently studied topic, else the first one (the most practised topic). */
+function quickPick(summaries) {
   const lastKey = readProgress().last?.topic;
   const all = summaries.flatMap(({ course, topics }) => topics.map((x) => ({ course, ...x })));
-  const pick = all.find((x) => topicKey(x.course, x.topic) === lastKey) ?? all[0];
+  return all.find((x) => topicKey(x.course, x.topic) === lastKey) ?? all[0];
+}
+
+function quickQuiz(summaries) {
+  const pick = quickPick(summaries);
   queueRun(pick.course, pick.topic, newRun(createSession(pick.bank, { count: QUICK_COUNT, mode: 'practice' })));
   navigate(paths.topic(pick.course.id, pick.topic.id));
 }
 
 function hero(progress, totals, summaries) {
   const all = overall(progress);
+  const pick = quickPick(summaries);
   const days = streak(progress);
   const returning = all.answered > 0;
   return h('section', { class: 'hero', 'aria-labelledby': 'hero-title' },
@@ -54,9 +60,23 @@ function hero(progress, totals, summaries) {
       returning
         ? [heroStat(t('n.days', { n: days }), t('home.streak')), heroStat(String(all.answered), t('home.answered'))]
         : [heroStat(String(totals.questions), t('home.practiceQuestions')), heroStat(String(totals.courses), t('home.coursesCount', { n: totals.courses }))]),
+    // Straight into ten questions: most visitors who left without answering had landed here (usage, October 2026).
     h('div', { class: 'hero__actions' },
-      h('a', { class: 'btn btn--glass', href: href(paths.courses()) }, t('home.coursesBtn')),
-      h('button', { type: 'button', class: 'btn btn--light', onclick: () => quickQuiz(summaries) }, t('home.quick'))));
+      h('button', { type: 'button', class: 'btn btn--light', onclick: () => quickQuiz(summaries) }, icon(...ICONS.practice), t('home.start')),
+      h('a', { class: 'btn btn--glass', href: href(paths.courses()) }, t('home.coursesBtn'))),
+    h('p', { class: 'hero__hint' }, t('home.startHint', { n: QUICK_COUNT, topic: topicLabel(pick.topic, lang()), course: localName(pick.course).main })));
+}
+
+/** Studied yesterday but not yet today: one tap keeps the run of days going. */
+function streakCard(progress, summaries) {
+  const days = streak(progress);
+  if (!days || progress.days.includes(dayKey(Date.now()))) return null;
+  return h('button', { type: 'button', class: 'card continue streak', onclick: () => quickQuiz(summaries) },
+    h('span', { class: 'continue__icon streak__icon' }, icon(...ICONS.flame)),
+    h('span', { class: 'continue__copy' },
+      h('span', { class: 'continue__title' }, t('streak.title', { days: t('n.days', { n: days }) })),
+      h('span', { class: 'continue__text' }, t('streak.text'))),
+    h('span', { class: 'continue__go' }, forwardIcon()));
 }
 
 function kpi(tone, iconPaths, value, label, link) {
@@ -117,26 +137,6 @@ function continueCard(summaries) {
   return null;
 }
 
-function installCard() {
-  const offer = installOffer();
-  if (!offer) return null;
-  const close = h('button', { type: 'button', class: 'install__close', 'aria-label': t('inst.notNow'), onclick: dismissInstall }, icon(...ICONS.close));
-  const body = offer === 'prompt'
-    ? h('p', { class: 'install__text' }, t('inst.text'))
-    : h('ol', { class: 'install__steps' },
-        h('li', {}, t('inst.tap'), ' ', h('span', { class: 'install__key', 'aria-label': t('inst.share') }, icon(...ICONS.share)), ' ', t('inst.shareBar')),
-        h('li', {}, t('inst.choose'), ' ', h('strong', {}, t('inst.addHome')), ' ', h('span', { class: 'install__key', 'aria-hidden': 'true' }, icon(...ICONS.addSquare))));
-  // Android/desktop: one compact row with the Install button beside the text. iPhone needs room for the steps.
-  const row = offer === 'prompt';
-  return h('section', { class: `card install${row ? ' install--row' : ''}`, 'aria-labelledby': 'install-title' },
-    h('img', { class: 'install__icon', src: 'assets/icons/icon-192.png', width: '192', height: '192', alt: '' }),
-    h('div', { class: 'install__copy' },
-      h('h2', { class: 'install__title', id: 'install-title' }, t(row ? 'inst.title' : 'inst.titleIos')),
-      body),
-    row ? h('button', { type: 'button', class: 'btn btn--primary btn--sm install__btn', onclick: promptInstall }, icon(...ICONS.download), h('span', {}, t('inst.btn'))) : null,
-    close);
-}
-
 let stopInstallUpdates = () => {};
 
 function helpCard() {
@@ -173,6 +173,7 @@ export async function showHome(ctx) {
       h('div', { class: 'col col--main' },
         hero(progress, totals, summaries),
         helpCard(),
+        streakCard(progress, summaries),
         continueCard(summaries),
         installSlot,
         h('h2', { class: 'section-label' }, t('home.progress')),
