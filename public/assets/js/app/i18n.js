@@ -42,7 +42,7 @@ const S = {
   // Counts
   'n.questions': {
     en: { one: '{n} question', other: '{n} questions' },
-    ar: { zero: 'لا أسئلة', one: 'سؤال واحد', two: 'سؤالان', few: '{n} أسئلة', many: '{n} سؤالًا', other: '{n} سؤال' },
+    ar: { zero: 'لا أسئلة', one: 'سؤال واحد', two: 'سؤالان', few: '{n} أسئلة', many: '{n} سؤالاً', other: '{n} سؤال' },
   },
   'n.topics': {
     en: { one: '{n} topic', other: '{n} topics' },
@@ -63,8 +63,8 @@ const S = {
 
   // Home
   'home.student': { en: 'Student', ar: 'طالب' },
-  'home.welcome': { en: 'Welcome to Smart Pro', ar: 'أهلًا بك في سمارت برو' },
-  'home.welcomeBack': { en: 'Welcome back', ar: 'أهلًا بعودتك' },
+  'home.welcome': { en: 'Welcome to Smart Pro', ar: 'أهلاً بك في سمارت برو' },
+  'home.welcomeBack': { en: 'Welcome back', ar: 'أهلاً بعودتك' },
   'home.streak': { en: 'Study streak', ar: 'أيام متتالية' },
   'home.answered': { en: 'Questions answered', ar: 'أسئلة محلولة' },
   'home.practiceQuestions': { en: 'Practice questions', ar: 'سؤال للتدريب' },
@@ -82,7 +82,7 @@ const S = {
   'home.attention': { en: 'Needs your attention', ar: 'يحتاج انتباهك' },
   'home.wrongCount': {
     en: { one: '{n} question you got wrong', other: '{n} questions you got wrong' },
-    ar: { one: 'سؤال واحد أخطأت فيه', two: 'سؤالان أخطأت فيهما', few: '{n} أسئلة أخطأت فيها', many: '{n} سؤالًا أخطأت فيه', other: '{n} سؤال أخطأت فيه' },
+    ar: { one: 'سؤال واحد أخطأت فيه', two: 'سؤالان أخطأت فيهما', few: '{n} أسئلة أخطأت فيها', many: '{n} سؤالاً أخطأت فيه', other: '{n} سؤال أخطأت فيه' },
   },
   'practise': { en: 'Practise', ar: 'تدرّب' },
   'home.yourCourses': { en: 'Your courses', ar: 'مقرراتك' },
@@ -171,7 +171,7 @@ const S = {
   'setup.all': { en: 'All {n}', ar: 'الكل {n}' },
   'setup.start': {
     en: { one: 'Start {n} question', other: 'Start {n} questions' },
-    ar: { one: 'ابدأ سؤالًا واحدًا', two: 'ابدأ سؤالين', few: 'ابدأ {n} أسئلة', many: 'ابدأ {n} سؤالًا', other: 'ابدأ {n} سؤال' },
+    ar: { one: 'ابدأ سؤالاً واحدًا', two: 'ابدأ سؤالين', few: 'ابدأ {n} أسئلة', many: 'ابدأ {n} سؤالاً', other: 'ابدأ {n} سؤال' },
   },
   'setup.chooseType': { en: 'Choose a question type', ar: 'اختر نوع أسئلة' },
   'type.mcq': { en: 'MCQ', ar: 'اختيار من متعدد' },
@@ -234,7 +234,7 @@ const S = {
   'close': { en: 'Close', ar: 'إغلاق' },
   'submit.title': {
     en: { one: 'Submit with {n} unanswered question?', other: 'Submit with {n} unanswered questions?' },
-    ar: { one: 'هل تريد التسليم مع وجود سؤال بلا إجابة؟', two: 'هل تريد التسليم مع وجود سؤالين بلا إجابة؟', few: 'هل تريد التسليم مع وجود {n} أسئلة بلا إجابة؟', many: 'هل تريد التسليم مع وجود {n} سؤالًا بلا إجابة؟', other: 'هل تريد التسليم مع وجود {n} سؤال بلا إجابة؟' },
+    ar: { one: 'هل تريد التسليم مع وجود سؤال بلا إجابة؟', two: 'هل تريد التسليم مع وجود سؤالين بلا إجابة؟', few: 'هل تريد التسليم مع وجود {n} أسئلة بلا إجابة؟', many: 'هل تريد التسليم مع وجود {n} سؤالاً بلا إجابة؟', other: 'هل تريد التسليم مع وجود {n} سؤال بلا إجابة؟' },
   },
   'submit.text': { en: 'Unanswered questions count as wrong.', ar: 'تُحتسب الأسئلة التي بلا إجابة خاطئة.' },
   'submit.stay': { en: 'Keep answering', ar: 'أكمل الإجابة' },

@@ -251,7 +251,7 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--accent);outline
 .toast.is-on{opacity:1;transform:none}
 
 /* ---------- Results ---------- */
-.score{display:flex;align-items:center;gap:16px;padding:14px var(--pad)}
+.score{display:flex;flex-wrap:wrap;align-items:center;gap:14px 16px;padding:14px var(--pad)}
 .ring{position:relative;flex:none;width:104px;height:104px}
 .ring svg{display:block;width:100%;height:100%;transform:rotate(-90deg)}
 .ring circle{fill:none;stroke-width:11;stroke-linecap:round}
@@ -529,7 +529,11 @@ a.card:active,button.card:active{transform:scale(.99)}
 
 /* ---------- Results extras ---------- */
 .score__best{display:inline-flex;align-items:center;gap:5px;margin:4px 0 0;padding:4px 9px;border-radius:999px;background:var(--warn-bg);color:var(--warn-ink);font:700 12px/1 var(--ui);justify-self:start}
-.score__share{justify-self:start;height:36px;margin-top:8px;padding:0 12px;font-size:12.5px;color:var(--brand-ink)}
+.score__share{flex:1 0 100%}
+/* Share: the score card's own action, in the brand tint so it stands out without competing with the bar's main button */
+.btn--share{min-height:48px;background:var(--tint);color:var(--brand-ink);box-shadow:inset 0 0 0 1.5px var(--primary)}
+.btn--share svg{width:20px;height:20px}
+@media(hover:hover){.btn--share:hover{background:var(--primary);color:#fff}}
 .score__best svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 
 /* ---------- Privacy policy ---------- */
