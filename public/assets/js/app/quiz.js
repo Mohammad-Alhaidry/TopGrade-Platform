@@ -19,6 +19,7 @@ import { rich } from './math.js';
 import { track } from './analytics.js';
 import { inviteCard } from './push-ui.js';
 import { installPromptCard } from './install-card.js';
+import { resultImage } from './share-card.js';
 
 const STORAGE_KEY = 'topgrade.run.v1';
 // Question content in the open course's language and direction (Arabic courses read right to left).
@@ -798,17 +799,24 @@ function scoreRing(percent) {
 const stateKey = (r) => (r.correct ? 'state.correct' : r.answered ? 'state.wrong' : 'state.skipped');
 
 /**
- * Shares the score with a link to this topic, through the phone's own share sheet (WhatsApp, Telegram…), or
- * WhatsApp where the browser has none. Students arrive by shared links, so a good score is our best invitation.
+ * Shares the result as an image in Smart Pro's identity with a link to this topic, through the phone's own share
+ * sheet (WhatsApp, Telegram, Instagram…); text and link where images cannot be shared; WhatsApp where the browser
+ * has no share sheet. Students arrive by shared links, so a good result is our best invitation.
+ * `image` is drawn when the result opens, so the tap shares at once (phones allow sharing only right after a tap).
  */
-async function shareScore(s) {
+async function shareScore(s, image) {
   const { course, topic } = state.ctx;
   const where = [localName(course).main, topicLabel(topic, lang())].join(lang() === 'ar' ? '، ' : ', ');
   const text = t('res.shareText', { c: s.correct, n: s.total, topic: where });
   const url = new URL(`${paths.topic(course.id, topic.id)}?ref=share`, document.baseURI).href;
   track('share', { topic: key(), score: s.percent });
   if (navigator.share) {
-    try { await navigator.share({ text, url }); } catch { /* closed the share sheet */ }
+    const blob = await image.catch(() => null);
+    const file = blob && new File([blob], 'smart-pro.png', { type: 'image/png' });
+    const withImage = file && navigator.canShare?.({ files: [file] });
+    try {
+      await navigator.share(withImage ? { files: [file], text: `${text} ${url}` } : { text, url });
+    } catch { /* closed the share sheet */ }
     return;
   }
   window.open(`https://wa.me/?text=${encodeURIComponent(`${text} ${url}`)}`, '_blank', 'noopener');
@@ -823,6 +831,8 @@ function resultsView(run) {
   const newBest = run.kind === 'topic' && run.prevBest !== null && s.percent > run.prevBest;
   const retry = () => beginRun(newRun(createSession(state.ctx.bank, { ids: missedIds, mode: session.mode }), 'mistakes'));
   const title = t(run.kind === 'mistakes' ? 'res.mistakes' : session.mode === 'exam' ? 'res.exam' : 'res.practice');
+  const image = resultImage({ course: state.ctx.course, topic: state.ctx.topic, correct: s.correct, total: s.total, percent: s.percent });
+  image.catch(() => {});
 
   return screen({
     className: 'screen--results',
@@ -832,14 +842,14 @@ function resultsView(run) {
       end: h('button', { type: 'button', class: 'pillbtn', onclick: leaveRun }, t('done')),
     }),
     body: [
-      h('section', { class: 'card score', 'aria-labelledby': 'score-title' },
+      h('section', { class: 'card score score--hero', 'aria-labelledby': 'score-title' },
         scoreRing(s.percent),
         h('div', { class: 'score__copy' },
           h('h2', { class: 'score__title', id: 'score-title' }, title),
           h('p', { class: 'score__line' }, t('res.line', { c: s.correct, n: s.total })),
           h('p', { class: 'score__time' }, duration(run.finishedAt - run.startedAt)),
           newBest ? h('p', { class: 'score__best' }, icon(...ICONS.flame), t('res.best', { p: run.prevBest })) : null),
-        h('button', { type: 'button', class: 'btn btn--share score__share', onclick: () => shareScore(s) }, icon(...ICONS.share), h('span', {}, t('res.share')))),
+        h('button', { type: 'button', class: 'btn btn--light score__share', onclick: () => shareScore(s, image) }, icon(...ICONS.share), h('span', {}, t('res.share')))),
       inviteCard(state.ctx.course, { otherwise: installPromptCard }),
       h('dl', { class: 'card stats' },
         h('div', { class: 'stats__item is-right' }, h('dt', {}, t('st.correct')), h('dd', {}, s.correct)),

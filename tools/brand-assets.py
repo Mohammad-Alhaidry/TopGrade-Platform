@@ -5,6 +5,7 @@ for dark backgrounds). Run again whenever a source logo changes:  python3 tools/
 
   assets/img/logo-mark.png / logo-mark-dark.png   SP mark only (header), light / dark theme
   assets/img/logo-full.png / logo-full-dark.png   mark + SMART PRO (launch screen), light / dark theme
+  assets/img/logo-mark-share.png                  silver mark, 360px, for the shared result image
   assets/icons/icon-*.png, maskable-*.png, apple-touch-icon.png, favicon.ico   silver mark on the dark tile
   assets/icons/og-image.png                       link preview (1200x630)
 """
@@ -53,6 +54,8 @@ def main():
     img = PUB / 'assets/img'
     for name, src in [('logo-mark', mark), ('logo-mark-dark', mark_dark)]:
         place(Image.new('RGBA', (160, 160), (0, 0, 0, 0)), src, 160, 160).save(img / f'{name}.png', optimize=True)
+    # The silver mark, large, for the shared result image (drawn on the brand's dark gradient).
+    place(Image.new('RGBA', (360, 360), (0, 0, 0, 0)), mark_dark, 360, 360).save(img / 'logo-mark-share.png', optimize=True)
     for name, src in [('logo-full', full), ('logo-full-dark', full_dark)]:
         fit(src, (360, 360)).save(img / f'{name}.png', optimize=True)
 

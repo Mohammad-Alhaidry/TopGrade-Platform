@@ -5,6 +5,7 @@
 import { h, icon, ICONS, WHATSAPP_SVG, staticSvg } from '../../quiz/dom.js';
 import { createSession } from '../../quiz/session.js';
 import { screen, tabbar, mount, forwardIcon, contentText } from '../shell.js';
+import { openSheet } from '../../quiz/dialog.js';
 import { href, navigate } from '../router.js';
 import { paths } from '../routes.js';
 import { readProgress, overall, streak, dayKey } from '../progress.js';
@@ -33,22 +34,39 @@ function heroStat(value, label) {
     h('span', { class: 'hero__stat-label' }, label));
 }
 
-/** Quick practice: the most recently studied topic, else the first one (the most practised topic). */
-function quickPick(summaries) {
+/** The topic they studied last, if any (quick practice continues there). */
+function lastPick(summaries) {
   const lastKey = readProgress().last?.topic;
   const all = summaries.flatMap(({ course, topics }) => topics.map((x) => ({ course, ...x })));
-  return all.find((x) => topicKey(x.course, x.topic) === lastKey) ?? all[0];
+  return lastKey ? all.find((x) => topicKey(x.course, x.topic) === lastKey) ?? null : null;
 }
 
+function startPractice(course, x) {
+  queueRun(course, x.topic, newRun(createSession(x.bank, { count: QUICK_COUNT, mode: 'practice' })));
+  navigate(paths.topic(course.id, x.topic.id));
+}
+
+/** Ten questions: in the topic they studied last, or, the first time, in the course they choose. */
 function quickQuiz(summaries) {
-  const pick = quickPick(summaries);
-  queueRun(pick.course, pick.topic, newRun(createSession(pick.bank, { count: QUICK_COUNT, mode: 'practice' })));
-  navigate(paths.topic(pick.course.id, pick.topic.id));
+  const last = lastPick(summaries);
+  if (last) return startPractice(last.course, last);
+  openSheet({
+    title: t('home.pickCourse'),
+    closeLabel: t('close'),
+    build: (close) => h('div', { class: 'options' }, summaries.map(({ course, topics, totalQuestions }) => {
+      const name = localName(course);
+      return h('button', {
+        type: 'button', class: 'option option--course',
+        onclick: () => { close(); startPractice(course, topics.find((x) => !x.topic.mix) ?? topics[0]); },
+      }, h('span', { class: 'option__text' }, h('strong', {}, name.main), h('small', {}, t('n.questions', { n: totalQuestions }))), forwardIcon());
+    })),
+  });
 }
 
 function hero(progress, totals, summaries) {
   const all = overall(progress);
-  const pick = quickPick(summaries);
+  const last = lastPick(summaries);
+  const practisedToday = progress.days.includes(dayKey(Date.now()));
   const days = streak(progress);
   const returning = all.answered > 0;
   return h('section', { class: 'hero', 'aria-labelledby': 'hero-title' },
@@ -64,19 +82,10 @@ function hero(progress, totals, summaries) {
     h('div', { class: 'hero__actions' },
       h('button', { type: 'button', class: 'btn btn--light', onclick: () => quickQuiz(summaries) }, icon(...ICONS.practice), t('home.start')),
       h('a', { class: 'btn btn--glass', href: href(paths.courses()) }, t('home.coursesBtn'))),
-    h('p', { class: 'hero__hint' }, t('home.startHint', { n: QUICK_COUNT, topic: topicLabel(pick.topic, lang()), course: localName(pick.course).main })));
-}
-
-/** Studied yesterday but not yet today: one tap keeps the run of days going. */
-function streakCard(progress, summaries) {
-  const days = streak(progress);
-  if (!days || progress.days.includes(dayKey(Date.now()))) return null;
-  return h('button', { type: 'button', class: 'card continue streak', onclick: () => quickQuiz(summaries) },
-    h('span', { class: 'continue__icon streak__icon' }, icon(...ICONS.flame)),
-    h('span', { class: 'continue__copy' },
-      h('span', { class: 'continue__title' }, t('streak.title', { days: t('n.days', { n: days }) })),
-      h('span', { class: 'continue__text' }, t('streak.text'))),
-    h('span', { class: 'continue__go' }, forwardIcon()));
+    // A run of days going but nothing yet today: say so; otherwise name where the ten questions come from.
+    streak(progress) && !practisedToday
+      ? h('p', { class: 'hero__hint' }, t('home.streakHint'))
+      : last ? h('p', { class: 'hero__hint' }, t('home.startHint', { n: QUICK_COUNT, topic: topicLabel(last.topic, lang()), course: localName(last.course).main })) : null);
 }
 
 function kpi(tone, iconPaths, value, label, link) {
@@ -173,7 +182,6 @@ export async function showHome(ctx) {
       h('div', { class: 'col col--main' },
         hero(progress, totals, summaries),
         helpCard(),
-        streakCard(progress, summaries),
         continueCard(summaries),
         installSlot,
         h('h2', { class: 'section-label' }, t('home.progress')),
