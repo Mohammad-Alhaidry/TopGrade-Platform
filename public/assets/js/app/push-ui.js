@@ -63,11 +63,18 @@ export function courseBell(course) {
   return btn;
 }
 
-/** After a quiz: once per course, an invitation to follow it (empty until we know it should show). */
-export function inviteCard(course) {
+/**
+ * After a quiz: once per course, an invitation to follow it (empty until we know it should show).
+ * `otherwise` builds what goes in its place when there is no invitation (the install offer).
+ */
+export function inviteCard(course, { otherwise = () => null } = {}) {
   const slot = h('div', { class: 'invite-slot' });
   shouldInvite(course.id).then((show) => {
-    if (!show) return;
+    if (!show) {
+      const other = otherwise();
+      if (other) slot.append(other);
+      return;
+    }
     markInvited(course.id);
     const copy = h('div', { class: 'invite__copy' },
       h('h2', { class: 'invite__title' }, t('push.inviteTitle')),

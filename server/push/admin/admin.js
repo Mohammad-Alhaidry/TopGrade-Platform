@@ -439,9 +439,9 @@ const TEMPLATES = [
   { label: 'اختبارات سابقة', title: () => 'أسئلة من اختبارات سابقة', body: (c) => `أضفنا أسئلة من اختبارات السنوات الماضية في ${c}. تدرّب عليها الآن.`, topic: 'past-exams' },
   { label: 'تذكير بالمذاكرة', title: () => 'وقت المراجعة', body: () => 'عشر دقائق تدريب اليوم تفرق في اختبارك. كمّل من حيث وقفت.' },
 ];
-// Times offered first: late morning, after midday, and the evening, when university students check their phones.
-// Any other hour from 8 am to 10 pm; never at night.
-const BEST_HOURS = [11, 13, 20, 21];
+// Times offered first: the two hours our students practise most (usage statistics, October 2026: 6-7 pm and
+// 9-10 pm, Riyadh time). Any other hour from 8 am to 10 pm from the sheet; never at night.
+const BEST_HOURS = [18, 21];
 const SOON = 5 * 60000;
 const dayStart = (offset) => { const d = new Date(); d.setHours(0, 0, 0, 0); d.setDate(d.getDate() + offset); return d; };
 const at = (day, hour) => { const d = dayStart(day); d.setHours(hour); return d.getTime(); };
