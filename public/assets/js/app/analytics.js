@@ -1,4 +1,4 @@
-// Anonymous usage statistics, sent to our own Umami server (stats.topgradeedu.com).
+// Anonymous usage statistics, sent to our own Umami server through this site (stats/tg.js and stats/api/tg are proxied by nginx).
 // No cookies, no names or contact details; Umami does not store IP addresses.
 // Everything here is best effort: when the tracker is blocked, offline or not loaded (local
 // testing; index.html limits it to app.topgradeedu.com), events are silently dropped.
