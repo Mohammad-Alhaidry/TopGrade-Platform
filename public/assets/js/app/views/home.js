@@ -22,7 +22,7 @@ const QUICK_COUNT = 10;
 // The moment a person touches the button, the real wa.me link is put on it, so the phone opens the WhatsApp app
 // directly: iPhone and Android only do that for a link to wa.me itself, not after a redirect from our server.
 const WHATSAPP_URL = 'whatsapp';
-const WHATSAPP_CODE = 'NzM3NTMwOTQ1NjY5'; // the number, reversed, base64
+const WHATSAPP_CODE = 'ODAwNDEyNjc3NzY5'; // the number, reversed, base64
 const whatsappLink = () => `https://wa.me/${[...atob(WHATSAPP_CODE)].reverse().join('')}`;
 const armWhatsapp = (e) => { e.currentTarget.href = whatsappLink(); };
 
