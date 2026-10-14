@@ -26,7 +26,7 @@ const S = {
   'meta.home': { en: 'Smart Pro | Free practice questions for King Khalid University courses', ar: 'سمارت برو | أسئلة تدريبية مجانية لمقررات جامعة الملك خالد' },
   'meta.homeDesc': {
     en: 'Free practice questions for King Khalid University courses: multiple choice, true or false and matching, with instant feedback and practice exams. No account needed.',
-    ar: 'أسئلة تدريبية مجانية لمقررات جامعة الملك خالد: اختيار من متعدد وصح أو خطأ وتوصيل، مع تصحيح فوري واختبارات تجريبية. بدون تسجيل حساب.',
+    ar: 'سمارت برو (Smart Pro): أسئلة تدريبية مجانية لمقررات جامعة الملك خالد، اختيار من متعدد وصح أو خطأ وتوصيل، مع تصحيح فوري واختبارات تجريبية. بدون تسجيل حساب.',
   },
   'meta.coursesDesc': { en: 'Every Smart Pro course with its topics and practice questions.', ar: 'كل مقررات سمارت برو مع مواضيعها وأسئلتها التدريبية.' },
   'meta.courseDesc': {
