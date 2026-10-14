@@ -4,7 +4,7 @@
   "description": "إرسال الإشعارات لطلاب سمارت برو",
   "lang": "ar",
   "dir": "rtl",
-  "id": "./",
+  "id": "/admin/",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
