@@ -1,0 +1,3253 @@
+{
+  "schemaVersion": 1,
+  "course": {
+    "id": "pre-calculus",
+    "titleAr": "مقدمة تفاضل",
+    "titleEn": "Pre-Calculus"
+  },
+  "topic": {
+    "id": "chapter-2",
+    "number": 2,
+    "title": "Real Functions"
+  },
+  "questions": [
+    {
+      "id": "c2s1-tf-001",
+      "type": "tf",
+      "prompt": "By Definition 2.1.1, a function \\(f\\) is a rule that assigns to each element \\(x\\) in a set \\(A\\) exactly one element, called \\(f(x)\\), in a set \\(B\\).",
+      "answer": true,
+      "explanation": "This is exactly the definition of a function: every input \\(x\\) in the domain \\(A\\) gets exactly one output \\(f(x)\\).",
+      "source": {
+        "page": 159
+      }
+    },
+    {
+      "id": "c2s1-match-001",
+      "type": "matching",
+      "title": "Match each item from the definition of a function with its name.",
+      "pairs": [
+        {
+          "left": "The set \\(A\\) of all inputs of \\(f\\)",
+          "right": "the domain of the function"
+        },
+        {
+          "left": "\\(\\{\\, f(x) \\mid x \\in A \\,\\}\\)",
+          "right": "the range of the function"
+        },
+        {
+          "left": "\\(x\\) in \\(y=f(x)\\)",
+          "right": "the independent variable"
+        },
+        {
+          "left": "\\(y\\) in \\(y=f(x)\\)",
+          "right": "the dependent variable"
+        },
+        {
+          "left": "\\(f(x)\\)",
+          "right": "the value of f at x (the image of x under f)"
+        }
+      ],
+      "source": {
+        "page": 159
+      }
+    },
+    {
+      "id": "c2s1-mcq-001",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=x^2\\) be the squaring function. Which pair gives the domain and the range of \\(f\\)?",
+      "options": [
+        "Domain \\(\\mathbb{R}\\), range \\(\\mathbb{R}\\)",
+        "Domain \\([0,\\infty)\\), range \\([0,\\infty)\\)",
+        "Domain \\(\\mathbb{R}\\), range \\([0,\\infty)\\)",
+        "Domain \\(\\mathbb{R}\\), range \\((0,\\infty)\\)"
+      ],
+      "answer": "C",
+      "explanation": "Any real number can be squared, so the domain is \\(\\mathbb{R}=(-\\infty,\\infty)\\). Squares are never negative and \\(f(0)=0\\), so the range is \\([0,\\infty)\\).",
+      "source": {
+        "page": 160
+      }
+    },
+    {
+      "id": "c2s1-mcq-002",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=3x^2+x-5\\). Find \\(f(-2)\\).",
+      "options": [
+        "\\(9\\)",
+        "\\(5\\)",
+        "\\(-19\\)",
+        "\\(29\\)"
+      ],
+      "answer": "B",
+      "explanation": "Substitute \\(-2\\) for the placeholder: \\(f(-2)=3(-2)^2+(-2)-5=12-2-5=5\\).",
+      "source": {
+        "page": 161
+      }
+    },
+    {
+      "id": "c2s1-mcq-003",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=3x^2+x-5\\). Find \\(f\\left(\\frac{1}{2}\\right)\\).",
+      "options": [
+        "\\(-\\frac{15}{4}\\)",
+        "\\(-3\\)",
+        "\\(-\\frac{19}{4}\\)",
+        "\\(\\frac{25}{4}\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\(f\\left(\\frac{1}{2}\\right)=3\\cdot\\frac{1}{4}+\\frac{1}{2}-5=\\frac{3}{4}+\\frac{2}{4}-\\frac{20}{4}=-\\frac{15}{4}\\).",
+      "source": {
+        "page": 161
+      }
+    },
+    {
+      "id": "c2s1-mcq-004",
+      "type": "mcq",
+      "prompt": "If \\(f(x)=2x^2+3x-1\\), then \\(f(-a)=\\)",
+      "options": [
+        "\\(-2a^2-3a-1\\)",
+        "\\(2a^2+3a-1\\)",
+        "\\(2a^2-3a-1\\)",
+        "\\(-2a^2+3a-1\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(f(-a)=2(-a)^2+3(-a)-1=2a^2-3a-1\\); the square removes the sign, the linear term keeps it.",
+      "source": {
+        "page": 162
+      }
+    },
+    {
+      "id": "c2s1-mcq-005",
+      "type": "mcq",
+      "prompt": "If \\(f(x)=2x^2+3x-1\\) and \\(h\\ne 0\\), the difference quotient \\(\\dfrac{f(a+h)-f(a)}{h}\\) equals",
+      "options": [
+        "\\(4a+3\\)",
+        "\\(4a+2h+3\\)",
+        "\\(4a+2h\\)",
+        "\\(2a+2h+3\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(f(a+h)-f(a)=4ah+2h^2+3h\\); dividing by \\(h\\) gives \\(4a+2h+3\\).",
+      "source": {
+        "page": 162
+      }
+    },
+    {
+      "id": "c2s1-mcq-006",
+      "type": "mcq",
+      "prompt": "Find the domain of \\(f(x)=\\dfrac{1}{x^2-x}\\).",
+      "options": [
+        "\\((-\\infty,0)\\cup(0,\\infty)\\)",
+        "\\((-\\infty,1)\\cup(1,\\infty)\\)",
+        "\\((-\\infty,0)\\cup(0,1)\\cup(1,\\infty)\\)",
+        "\\((-\\infty,-1)\\cup(-1,0)\\cup(0,\\infty)\\)"
+      ],
+      "answer": "C",
+      "explanation": "The denominator must not be zero: \\(x(x-1)\\ne 0\\), so \\(x\\ne 0\\) and \\(x\\ne 1\\). Domain \\(=\\mathbb{R}\\setminus\\{0,1\\}\\).",
+      "source": {
+        "page": 164
+      }
+    },
+    {
+      "id": "c2s1-mcq-007",
+      "type": "mcq",
+      "prompt": "Find the domain of \\(g(x)=\\sqrt{9-x^2}\\).",
+      "options": [
+        "\\([-3,3]\\)",
+        "\\((-3,3)\\)",
+        "\\((-\\infty,-3]\\cup[3,\\infty)\\)",
+        "\\([3,\\infty)\\)"
+      ],
+      "answer": "A",
+      "explanation": "The radicand must be nonnegative: \\(9-x^2\\ge 0 \\Rightarrow -3\\le x\\le 3\\). The endpoints are included because \\(\\sqrt{0}=0\\) is defined.",
+      "source": {
+        "page": 164
+      }
+    },
+    {
+      "id": "c2s1-mcq-008",
+      "type": "mcq",
+      "prompt": "Find the domain of \\(h(t)=\\dfrac{1}{\\sqrt{t+1}}\\).",
+      "options": [
+        "\\([-1,\\infty)\\)",
+        "\\((1,\\infty)\\)",
+        "\\((-\\infty,-1)\\)",
+        "\\((-1,\\infty)\\)"
+      ],
+      "answer": "D",
+      "explanation": "The radicand must be nonnegative and the denominator nonzero, so \\(t+1>0\\), i.e. \\(t>-1\\). The endpoint \\(-1\\) is excluded.",
+      "source": {
+        "page": 164
+      }
+    },
+    {
+      "id": "c2s1-mcq-009",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=2x+1\\). Then \\(f(a+b)=\\)",
+      "options": [
+        "\\(2a+2b+1\\)",
+        "\\(2a+b+1\\)",
+        "\\(2a+2b+2\\)",
+        "\\(2ab+1\\)"
+      ],
+      "answer": "A",
+      "explanation": "Replace \\(x\\) by \\(a+b\\): \\(f(a+b)=2(a+b)+1=2a+2b+1\\).",
+      "source": {
+        "page": 165
+      }
+    },
+    {
+      "id": "c2s1-mcq-010",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=x^3+2x\\). Then \\(f\\left(\\frac{1}{a}\\right)=\\)",
+      "options": [
+        "\\(\\frac{1}{a^3}+\\frac{2}{a}\\)",
+        "\\(\\frac{1}{a^3+2a}\\)",
+        "\\(\\frac{1}{a^3}+2a\\)",
+        "\\(\\frac{1}{a^3}+\\frac{1}{2a}\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\(f\\left(\\frac{1}{a}\\right)=\\left(\\frac{1}{a}\\right)^3+2\\left(\\frac{1}{a}\\right)=\\frac{1}{a^3}+\\frac{2}{a}\\). Note that \\(f(1/a)\\) is not \\(1/f(a)\\).",
+      "source": {
+        "page": 165
+      }
+    },
+    {
+      "id": "c2s1-mcq-011",
+      "type": "mcq",
+      "prompt": "Let \\(g(x)=\\dfrac{1-x}{1+x}\\). Then \\(g(a-1)=\\)",
+      "options": [
+        "\\(\\frac{2-a}{a}\\)",
+        "\\(\\frac{a-2}{a}\\)",
+        "\\(-1\\)",
+        "\\(\\frac{-2a}{1+a}\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\(g(a-1)=\\dfrac{1-(a-1)}{1+(a-1)}=\\dfrac{2-a}{a}\\).",
+      "source": {
+        "page": 166
+      }
+    },
+    {
+      "id": "c2s1-tf-002",
+      "type": "tf",
+      "prompt": "Let \\(g(x)=\\dfrac{1-x}{1+x}\\). Then \\(g(-1)=0\\).",
+      "answer": false,
+      "explanation": "\\(g(-1)=\\dfrac{1-(-1)}{1+(-1)}=\\dfrac{2}{0}\\), which is undefined; \\(-1\\) is not in the domain of \\(g\\).",
+      "source": {
+        "page": 166
+      }
+    },
+    {
+      "id": "c2s1-tf-003",
+      "type": "tf",
+      "prompt": "Let \\(h(t)=t+\\dfrac{1}{t}\\). Then \\(h\\left(\\frac{1}{x}\\right)=h(x)\\) for every \\(x\\ne 0\\).",
+      "answer": true,
+      "explanation": "\\(h\\left(\\frac{1}{x}\\right)=\\frac{1}{x}+\\frac{1}{1/x}=\\frac{1}{x}+x\\), which is the same as \\(h(x)=x+\\frac{1}{x}\\).",
+      "source": {
+        "page": 166
+      }
+    },
+    {
+      "id": "c2s1-mcq-012",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=2|x-1|\\). Then \\(f(x+1)=\\)",
+      "options": [
+        "\\(2|x+1|\\)",
+        "\\(2|x-1|+1\\)",
+        "\\(2|x-2|\\)",
+        "\\(2|x|\\)"
+      ],
+      "answer": "D",
+      "explanation": "Replace \\(x\\) by \\(x+1\\): \\(f(x+1)=2|(x+1)-1|=2|x|\\).",
+      "source": {
+        "page": 167
+      }
+    },
+    {
+      "id": "c2s1-tf-004",
+      "type": "tf",
+      "prompt": "Let \\(f(x)=\\dfrac{|x|}{x}\\). Then \\(f(x^2)=1\\) for every \\(x\\ne 0\\).",
+      "answer": true,
+      "explanation": "\\(f(x^2)=\\dfrac{|x^2|}{x^2}=\\dfrac{x^2}{x^2}=1\\) because \\(x^2\\ge 0\\) (and \\(x^2\\ne 0\\) when \\(x\\ne 0\\)).",
+      "source": {
+        "page": 167
+      }
+    },
+    {
+      "id": "c2s1-mcq-013",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\begin{cases} x^2, & x<0 \\\\ x+1, & x\\ge 0 \\end{cases}\\). Find \\(f(0)\\).",
+      "options": [
+        "\\(0\\)",
+        "\\(1\\)",
+        "\\(2\\)",
+        "\\(f(0)\\) is undefined"
+      ],
+      "answer": "B",
+      "explanation": "Since \\(0\\ge 0\\), the second piece applies: \\(f(0)=0+1=1\\).",
+      "source": {
+        "page": 168
+      }
+    },
+    {
+      "id": "c2s1-match-002",
+      "type": "matching",
+      "title": "Let \\(f(x)=\\begin{cases} x^2+2x, & x\\le -1 \\\\ x, & -1<x\\le 1 \\\\ -1, & x>1 \\end{cases}\\). Match each value with its result.",
+      "pairs": [
+        {
+          "left": "\\(f(-4)\\)",
+          "right": "8"
+        },
+        {
+          "left": "\\(f\\left(-\\frac{3}{2}\\right)\\)",
+          "right": "-3/4"
+        },
+        {
+          "left": "\\(f(0)\\)",
+          "right": "0"
+        },
+        {
+          "left": "\\(f(25)\\)",
+          "right": "-1"
+        }
+      ],
+      "source": {
+        "page": 168
+      }
+    },
+    {
+      "id": "c2s1-mcq-014",
+      "type": "mcq",
+      "prompt": "Find the domain of \\(f(x)=\\dfrac{x+2}{x^2-1}\\).",
+      "options": [
+        "\\(\\mathbb{R}\\setminus\\{1\\}\\)",
+        "\\(\\mathbb{R}\\setminus\\{-2,-1,1\\}\\)",
+        "\\(\\mathbb{R}\\setminus\\{-2\\}\\)",
+        "\\(\\mathbb{R}\\setminus\\{-1,1\\}\\)"
+      ],
+      "answer": "D",
+      "explanation": "Only the denominator restricts the domain: \\(x^2-1\\ne 0\\Rightarrow x\\ne\\pm 1\\). A zero of the numerator (\\(x=-2\\)) is allowed.",
+      "source": {
+        "page": 169
+      }
+    },
+    {
+      "id": "c2s1-mcq-015",
+      "type": "mcq",
+      "prompt": "Find the domain of \\(f(x)=\\dfrac{x^4}{x^2+x-6}\\).",
+      "options": [
+        "\\((-\\infty,-3)\\cup(-3,2)\\cup(2,\\infty)\\)",
+        "\\((-\\infty,-2)\\cup(-2,3)\\cup(3,\\infty)\\)",
+        "\\([-3,2]\\)",
+        "\\((-\\infty,-3]\\cup[2,\\infty)\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\(x^2+x-6=(x-2)(x+3)\\ne 0\\), so \\(x\\ne -3\\) and \\(x\\ne 2\\). Domain \\(=\\mathbb{R}\\setminus\\{-3,2\\}\\).",
+      "source": {
+        "page": 169
+      }
+    },
+    {
+      "id": "c2s1-mcq-016",
+      "type": "mcq",
+      "prompt": "Find the domain of \\(g(x)=\\sqrt{7-3x}\\).",
+      "options": [
+        "\\(\\left[\\frac{7}{3},\\infty\\right)\\)",
+        "\\(\\left(-\\infty,\\frac{7}{3}\\right)\\)",
+        "\\(\\left(-\\infty,\\frac{7}{3}\\right]\\)",
+        "\\(\\left(-\\infty,-\\frac{7}{3}\\right]\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(7-3x\\ge 0\\Rightarrow 3x\\le 7\\Rightarrow x\\le \\frac{7}{3}\\); the endpoint is included.",
+      "source": {
+        "page": 170
+      }
+    },
+    {
+      "id": "c2s1-tf-005",
+      "type": "tf",
+      "prompt": "The domain of \\(f(t)=\\sqrt[3]{t-1}\\) is \\([1,\\infty)\\).",
+      "answer": false,
+      "explanation": "A cube root is defined for every real number (negative radicands are allowed), so the domain is \\(\\mathbb{R}\\).",
+      "source": {
+        "page": 170
+      }
+    },
+    {
+      "id": "c2s1-mcq-017",
+      "type": "mcq",
+      "prompt": "Find the domain of \\(g(x)=\\dfrac{\\sqrt{2+x}}{3-x}\\).",
+      "options": [
+        "\\([-2,\\infty)\\)",
+        "\\([-2,3)\\cup(3,\\infty)\\)",
+        "\\((-2,3)\\cup(3,\\infty)\\)",
+        "\\([-2,3]\\)"
+      ],
+      "answer": "B",
+      "explanation": "Square root: \\(2+x\\ge 0\\Rightarrow x\\ge -2\\). Denominator: \\(3-x\\ne 0\\Rightarrow x\\ne 3\\). Combine: \\([-2,3)\\cup(3,\\infty)\\).",
+      "source": {
+        "page": 170
+      }
+    },
+    {
+      "id": "c2s1-mcq-018",
+      "type": "mcq",
+      "prompt": "Find the domain of \\(G(x)=\\sqrt{x^2-9}\\).",
+      "options": [
+        "\\([-3,3]\\)",
+        "\\((-\\infty,-3)\\cup(3,\\infty)\\)",
+        "\\([3,\\infty)\\)",
+        "\\((-\\infty,-3]\\cup[3,\\infty)\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(x^2-9=(x-3)(x+3)\\ge 0\\). A sign chart shows the product is nonnegative on \\((-\\infty,-3]\\) and \\([3,\\infty)\\).",
+      "source": {
+        "page": 171
+      }
+    },
+    {
+      "id": "c2s1-mcq-019",
+      "type": "mcq",
+      "prompt": "Find the domain of \\(g(x)=\\sqrt{x^2-2x-8}\\).",
+      "options": [
+        "\\([-2,4]\\)",
+        "\\((-\\infty,-4]\\cup[2,\\infty)\\)",
+        "\\((-\\infty,-2)\\cup(4,\\infty)\\)",
+        "\\((-\\infty,-2]\\cup[4,\\infty)\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(x^2-2x-8=(x-4)(x+2)\\ge 0\\); critical points \\(-2,4\\). The sign chart gives \\((-\\infty,-2]\\cup[4,\\infty)\\), endpoints included.",
+      "source": {
+        "page": 171
+      }
+    },
+    {
+      "id": "c2s1-mcq-020",
+      "type": "mcq",
+      "prompt": "Find the domain of \\(f(x)=\\dfrac{(x+1)^2}{\\sqrt{2x-1}}\\).",
+      "options": [
+        "\\(\\left[\\frac{1}{2},\\infty\\right)\\)",
+        "\\(\\left(-\\infty,\\frac{1}{2}\\right)\\)",
+        "\\(\\left(\\frac{1}{2},\\infty\\right)\\)",
+        "\\(\\left(-\\frac{1}{2},\\infty\\right)\\)"
+      ],
+      "answer": "C",
+      "explanation": "The square root is in the denominator, so \\(2x-1>0\\), i.e. \\(x>\\frac{1}{2}\\). The numerator adds no restriction.",
+      "source": {
+        "page": 172
+      }
+    },
+    {
+      "id": "c2s1-mcq-021",
+      "type": "mcq",
+      "prompt": "Find the domain of \\(f(x)=\\dfrac{x}{\\sqrt[4]{6-x}}\\).",
+      "options": [
+        "\\((-\\infty,6)\\)",
+        "\\((-\\infty,6]\\)",
+        "\\((6,\\infty)\\)",
+        "\\([0,6)\\)"
+      ],
+      "answer": "A",
+      "explanation": "An even root in the denominator must be strictly positive: \\(6-x>0\\Rightarrow x<6\\).",
+      "source": {
+        "page": 172
+      }
+    },
+    {
+      "id": "c2s1-mcq-022",
+      "type": "mcq",
+      "prompt": "Express the rule \"Add 3, then multiply by 2\" in function notation.",
+      "options": [
+        "\\(f(x)=2x+3\\)",
+        "\\(f(x)=3(x+2)\\)",
+        "\\(f(x)=2(x+3)\\)",
+        "\\(f(x)=\\dfrac{x+3}{2}\\)"
+      ],
+      "answer": "C",
+      "explanation": "First add 3 to get \\(x+3\\), then multiply the result by 2: \\(f(x)=2(x+3)\\).",
+      "source": {
+        "page": 172
+      }
+    },
+    {
+      "id": "c2s1-match-003",
+      "type": "matching",
+      "title": "Match each function with the rule it expresses in words.",
+      "pairs": [
+        {
+          "left": "\\(f(x)=\\dfrac{x-4}{3}\\)",
+          "right": "subtract 4, then divide by 3"
+        },
+        {
+          "left": "\\(h(x)=x^2+2\\)",
+          "right": "square, then add 2"
+        },
+        {
+          "left": "\\(k(x)=\\sqrt{x+2}\\)",
+          "right": "add 2, then take the square root"
+        },
+        {
+          "left": "\\(g(x)=\\dfrac{x}{3}-4\\)",
+          "right": "divide by 3, then subtract 4"
+        },
+        {
+          "left": "\\(f(x)=x^2-5\\)",
+          "right": "square, then subtract 5"
+        }
+      ],
+      "source": {
+        "page": 172
+      }
+    },
+    {
+      "id": "c2s1-tf-006",
+      "type": "tf",
+      "prompt": "Let \\(f(x)=2(x-1)^2\\). Then \\(f(-1)=f(3)\\).",
+      "answer": true,
+      "explanation": "\\(f(-1)=2(-2)^2=8\\) and \\(f(3)=2(2)^2=8\\).",
+      "source": {
+        "page": 173
+      }
+    },
+    {
+      "id": "c2s1-mcq-023",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=2x^2+3x-4\\). Find \\(f(\\sqrt{2})\\).",
+      "options": [
+        "\\(3\\sqrt{2}\\)",
+        "\\(5\\sqrt{2}-4\\)",
+        "\\(6\\)",
+        "\\(4+3\\sqrt{2}\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\((\\sqrt{2})^2=2\\), so \\(f(\\sqrt{2})=2(2)+3\\sqrt{2}-4=3\\sqrt{2}\\).",
+      "source": {
+        "page": 173
+      }
+    },
+    {
+      "id": "c2s1-mcq-024",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=x^3-4x^2\\). Then \\(f\\left(\\frac{x}{2}\\right)=\\)",
+      "options": [
+        "\\(\\frac{x^3}{2}-2x^2\\)",
+        "\\(\\frac{x^3}{8}-2x^2\\)",
+        "\\(\\frac{x^3-4x^2}{2}\\)",
+        "\\(\\frac{x^3}{8}-x^2\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(\\left(\\frac{x}{2}\\right)^3=\\frac{x^3}{8}\\) and \\(4\\left(\\frac{x}{2}\\right)^2=4\\cdot\\frac{x^2}{4}=x^2\\), so \\(f\\left(\\frac{x}{2}\\right)=\\frac{x^3}{8}-x^2\\).",
+      "source": {
+        "page": 173
+      }
+    },
+    {
+      "id": "c2s1-mcq-025",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\begin{cases} 3x, & x<0 \\\\ x+1, & 0\\le x\\le 2 \\\\ (x-2)^2, & x>2 \\end{cases}\\). Find \\(f(2)\\).",
+      "options": [
+        "\\(0\\)",
+        "\\(6\\)",
+        "\\(3\\)",
+        "\\(f(2)\\) is undefined"
+      ],
+      "answer": "C",
+      "explanation": "\\(x=2\\) satisfies \\(0\\le x\\le 2\\), so the middle piece applies: \\(f(2)=2+1=3\\).",
+      "source": {
+        "page": 174
+      }
+    },
+    {
+      "id": "c2s1-tf-007",
+      "type": "tf",
+      "prompt": "Let \\(f(x)=3x-1\\). Then \\(f(2x)=2f(x)\\).",
+      "answer": false,
+      "explanation": "\\(f(2x)=3(2x)-1=6x-1\\) but \\(2f(x)=2(3x-1)=6x-2\\); they are different.",
+      "source": {
+        "page": 174
+      }
+    },
+    {
+      "id": "c2s1-mcq-026",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\dfrac{1}{x+1}\\) and \\(h\\ne 0\\). The difference quotient \\(\\dfrac{f(a+h)-f(a)}{h}\\) simplifies to",
+      "options": [
+        "\\(\\dfrac{1}{(a+h+1)(a+1)}\\)",
+        "\\(\\dfrac{-1}{(a+h+1)(a+1)}\\)",
+        "\\(\\dfrac{1}{h}\\)",
+        "\\(\\dfrac{-h}{(a+h+1)(a+1)}\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(f(a+h)-f(a)=\\dfrac{(a+1)-(a+h+1)}{(a+h+1)(a+1)}=\\dfrac{-h}{(a+h+1)(a+1)}\\); dividing by \\(h\\) leaves \\(\\dfrac{-1}{(a+h+1)(a+1)}\\).",
+      "source": {
+        "page": 174
+      }
+    },
+    {
+      "id": "c2s1-mcq-027",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=3-5x+4x^2\\) and \\(h\\ne 0\\). Then \\(\\dfrac{f(a+h)-f(a)}{h}=\\)",
+      "options": [
+        "\\(8a+4h+5\\)",
+        "\\(8a-5\\)",
+        "\\(4a+4h-5\\)",
+        "\\(8a+4h-5\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(f(a+h)-f(a)=-5h+4(2ah+h^2)=8ah+4h^2-5h\\); dividing by \\(h\\) gives \\(8a+4h-5\\).",
+      "source": {
+        "page": 174
+      }
+    },
+    {
+      "id": "c2s1-mcq-028",
+      "type": "mcq",
+      "prompt": "Find the domain of \\(g(x)=\\dfrac{\\sqrt{x}}{2x^2+x-1}\\).",
+      "options": [
+        "\\([0,\\infty)\\)",
+        "\\(\\left[0,\\frac{1}{2}\\right)\\cup\\left(\\frac{1}{2},\\infty\\right)\\)",
+        "\\(\\left(0,\\frac{1}{2}\\right)\\cup\\left(\\frac{1}{2},\\infty\\right)\\)",
+        "\\(\\mathbb{R}\\setminus\\left\\{-1,\\frac{1}{2}\\right\\}\\)"
+      ],
+      "answer": "B",
+      "explanation": "Square root: \\(x\\ge 0\\). Denominator: \\(2x^2+x-1=(2x-1)(x+1)\\ne 0\\Rightarrow x\\ne\\frac{1}{2}, -1\\). With \\(x\\ge 0\\) only \\(\\frac{1}{2}\\) is removed.",
+      "source": {
+        "page": 175
+      }
+    },
+    {
+      "id": "c2s1-mcq-029",
+      "type": "mcq",
+      "prompt": "Find the domain of \\(g(x)=\\sqrt[4]{x^2-6x}\\).",
+      "options": [
+        "\\([0,6]\\)",
+        "\\((-\\infty,0)\\cup(6,\\infty)\\)",
+        "\\([6,\\infty)\\)",
+        "\\((-\\infty,0]\\cup[6,\\infty)\\)"
+      ],
+      "answer": "D",
+      "explanation": "Even root: \\(x^2-6x=x(x-6)\\ge 0\\). The sign chart with critical points \\(0,6\\) gives \\((-\\infty,0]\\cup[6,\\infty)\\).",
+      "source": {
+        "page": 175
+      }
+    },
+    {
+      "id": "c2s1-mcq-030",
+      "type": "mcq",
+      "prompt": "Find the domain of \\(f(x)=\\dfrac{1}{\\sqrt{x^2-1}}\\).",
+      "options": [
+        "\\((-\\infty,-1]\\cup[1,\\infty)\\)",
+        "\\((-1,1)\\)",
+        "\\((-\\infty,-1)\\cup(1,\\infty)\\)",
+        "\\([-1,1]\\)"
+      ],
+      "answer": "C",
+      "explanation": "The square root is in the denominator, so \\(x^2-1=(x-1)(x+1)>0\\) strictly; the sign chart gives \\((-\\infty,-1)\\cup(1,\\infty)\\) with endpoints excluded.",
+      "source": {
+        "page": 171
+      }
+    },
+    {
+      "id": "c2s1-mcq-031",
+      "type": "mcq",
+      "prompt": "Find the domain of \\(f(x)=\\sqrt[4]{x+9}\\).",
+      "options": [
+        "\\((-9,\\infty)\\)",
+        "\\([-9,\\infty)\\)",
+        "\\([9,\\infty)\\)",
+        "\\(\\mathbb{R}\\)"
+      ],
+      "answer": "B",
+      "explanation": "An even root requires a nonnegative radicand: \\(x+9\\ge 0\\Rightarrow x\\ge -9\\).",
+      "source": {
+        "page": 169
+      }
+    },
+    {
+      "id": "c2s1-tf-008",
+      "type": "tf",
+      "prompt": "If \\(f(x)=x^2,\\ 0\\le x\\le 5\\), then the domain of \\(f\\) is \\((-\\infty,\\infty)\\) because \\(x^2\\) is defined for every real number.",
+      "answer": false,
+      "explanation": "When the domain is stated explicitly, it is that set: here the domain is \\([0,5]\\), not all of \\(\\mathbb{R}\\).",
+      "source": {
+        "page": 163
+      }
+    },
+    {
+      "id": "c2s1-match-004",
+      "type": "matching",
+      "title": "Match each function with its domain.",
+      "pairs": [
+        {
+          "left": "\\(f(x)=\\dfrac{1}{x-4}\\)",
+          "right": "all real numbers except 4"
+        },
+        {
+          "left": "\\(g(x)=\\sqrt{x}\\)",
+          "right": "all real numbers x with x ≥ 0"
+        },
+        {
+          "left": "\\(f(x)=3x+2\\)",
+          "right": "all real numbers"
+        },
+        {
+          "left": "\\(f(x)=\\dfrac{3}{\\sqrt{x-4}}\\)",
+          "right": "all real numbers x with x > 4"
+        },
+        {
+          "left": "\\(f(x)=\\sqrt{x-1}\\)",
+          "right": "all real numbers x with x ≥ 1"
+        }
+      ],
+      "source": {
+        "page": 163
+      }
+    },
+    {
+      "id": "c2s2-mcq-001",
+      "type": "mcq",
+      "prompt": "If \\(f\\) is a function with domain \\(A\\), then the graph of \\(f\\) is the set",
+      "options": [
+        "\\(\\{(x, f(x)) \\mid x \\in A\\}\\)",
+        "\\(\\{(f(x), x) \\mid x \\in A\\}\\)",
+        "\\(\\{f(x) \\mid x \\in A\\}\\)",
+        "\\(\\{x \\in A \\mid f(x) = 0\\}\\)"
+      ],
+      "answer": "A",
+      "explanation": "The graph of \\(f\\) is the set of all points \\((x, y)\\) with \\(y = f(x)\\) and \\(x\\) in the domain \\(A\\); it is the graph of the equation \\(y = f(x)\\).",
+      "source": {
+        "page": 175
+      }
+    },
+    {
+      "id": "c2s2-mcq-002",
+      "type": "mcq",
+      "prompt": "The graph of \\(f(x) = 6 - 3x\\) is a straight line with",
+      "options": [
+        "slope \\(6\\) and \\(y\\)-intercept \\(-3\\)",
+        "slope \\(-3\\) and \\(y\\)-intercept \\(6\\)",
+        "slope \\(3\\) and \\(y\\)-intercept \\(6\\)",
+        "slope \\(-3\\) and \\(y\\)-intercept \\(-6\\)"
+      ],
+      "answer": "B",
+      "explanation": "Write \\(f(x) = -3x + 6\\) in the form \\(mx + b\\): the slope is \\(m = -3\\) and the \\(y\\)-intercept is \\(b = 6\\).",
+      "source": {
+        "page": 182
+      }
+    },
+    {
+      "id": "c2s2-mcq-003",
+      "type": "mcq",
+      "prompt": "Which point lies on the graph of \\(g(x) = x^3\\)?",
+      "options": [
+        "\\((-2, 8)\\)",
+        "\\((2, 6)\\)",
+        "\\((-2, -8)\\)",
+        "\\(\\left(-\\frac{1}{2}, \\frac{1}{8}\\right)\\)"
+      ],
+      "answer": "C",
+      "explanation": "From the table of values, \\(g(-2) = (-2)^3 = -8\\). Note \\(g(2) = 8\\) and \\(g(-\\tfrac{1}{2}) = -\\tfrac{1}{8}\\).",
+      "source": {
+        "page": 177
+      }
+    },
+    {
+      "id": "c2s2-mcq-004",
+      "type": "mcq",
+      "prompt": "From the graph of \\(f(x) = \\sqrt{4 - x^2}\\) (the upper half of a circle), the domain and range of \\(f\\) are",
+      "options": [
+        "domain \\([-2, 2]\\), range \\([-2, 2]\\)",
+        "domain \\(\\mathbb{R}\\), range \\([0, 2]\\)",
+        "domain \\([0, 2]\\), range \\([-2, 2]\\)",
+        "domain \\([-2, 2]\\), range \\([0, 2]\\)"
+      ],
+      "answer": "D",
+      "explanation": "We need \\(4 - x^2 \\ge 0\\), so \\(-2 \\le x \\le 2\\); the square root is never negative and its largest value is \\(f(0) = 2\\), so the range is \\([0, 2]\\).",
+      "source": {
+        "page": 178
+      }
+    },
+    {
+      "id": "c2s2-mcq-005",
+      "type": "mcq",
+      "prompt": "The graph of \\(f(x) = -\\sqrt{25 - x^2}\\) is the lower half of a circle. The domain and range of \\(f\\) are",
+      "options": [
+        "domain \\([-5, 5]\\), range \\([-5, 0]\\)",
+        "domain \\([-5, 5]\\), range \\([0, 5]\\)",
+        "domain \\([-5, 0]\\), range \\([-5, 5]\\)",
+        "domain \\(\\mathbb{R}\\), range \\([-5, 0]\\)"
+      ],
+      "answer": "A",
+      "explanation": "We need \\(25 - x^2 \\ge 0\\), so \\(-5 \\le x \\le 5\\). The minus sign makes every value \\(\\le 0\\), with the lowest value \\(f(0) = -5\\), so the range is \\([-5, 0]\\).",
+      "source": {
+        "page": 193
+      }
+    },
+    {
+      "id": "c2s2-mcq-006",
+      "type": "mcq",
+      "prompt": "At which point does the graph of \\(f(x) = 2x - 4\\) cross the \\(x\\)-axis?",
+      "options": [
+        "\\((0, -4)\\)",
+        "\\((-2, 0)\\)",
+        "\\((2, 0)\\)",
+        "\\((4, 0)\\)"
+      ],
+      "answer": "C",
+      "explanation": "On the \\(x\\)-axis \\(y = 0\\): \\(2x - 4 = 0\\) gives \\(x = 2\\). The point \\((0, -4)\\) is where the line crosses the \\(y\\)-axis.",
+      "source": {
+        "page": 182
+      }
+    },
+    {
+      "id": "c2s2-mcq-007",
+      "type": "mcq",
+      "prompt": "Which statement describes the graph of \\(f(x) = x^2 - 4\\)?",
+      "options": [
+        "an upward parabola with vertex \\((0, -4)\\) and zeros \\(x = \\pm 2\\)",
+        "an upward parabola with vertex \\((0, 4)\\) and no zeros",
+        "a downward parabola with vertex \\((0, -4)\\) and zeros \\(x = \\pm 2\\)",
+        "an upward parabola with vertex \\((-4, 0)\\) and one zero \\(x = -4\\)"
+      ],
+      "answer": "A",
+      "explanation": "The table gives \\(f(0) = -4\\) (the lowest point) and \\(f(\\pm 2) = 0\\); it is the parabola \\(y = x^2\\) shifted down 4 units.",
+      "source": {
+        "page": 183
+      }
+    },
+    {
+      "id": "c2s2-mcq-008",
+      "type": "mcq",
+      "prompt": "The domain of \\(g(x) = \\sqrt{-x}\\) is",
+      "options": [
+        "\\([0, \\infty)\\)",
+        "\\((-\\infty, 0]\\)",
+        "\\((-\\infty, 0)\\)",
+        "\\(\\mathbb{R}\\)"
+      ],
+      "answer": "B",
+      "explanation": "We need \\(-x \\ge 0\\), that is \\(x \\le 0\\). The graph starts at \\((0, 0)\\) and extends to the left.",
+      "source": {
+        "page": 184
+      }
+    },
+    {
+      "id": "c2s2-mcq-009",
+      "type": "mcq",
+      "prompt": "For \\(F(x) = \\dfrac{1}{x + 4}\\), the domain of \\(F\\) and the vertical asymptote of its graph are",
+      "options": [
+        "domain \\(\\mathbb{R} \\setminus \\{4\\}\\), asymptote \\(x = 4\\)",
+        "domain \\(\\mathbb{R} \\setminus \\{0\\}\\), asymptote \\(x = 0\\)",
+        "domain \\(\\mathbb{R} \\setminus \\{-4\\}\\), asymptote \\(x = -4\\)",
+        "domain \\(\\mathbb{R} \\setminus \\{-4\\}\\), asymptote \\(y = -4\\)"
+      ],
+      "answer": "C",
+      "explanation": "The denominator is zero when \\(x + 4 = 0\\), i.e. \\(x = -4\\); the graph is the hyperbola \\(y = 1/x\\) shifted left 4 with vertical asymptote \\(x = -4\\).",
+      "source": {
+        "page": 185
+      }
+    },
+    {
+      "id": "c2s2-mcq-010",
+      "type": "mcq",
+      "prompt": "The graph of \\(H(x) = |x + 1|\\) is a V-shape with vertex at",
+      "options": [
+        "\\((1, 0)\\)",
+        "\\((0, 1)\\)",
+        "\\((0, -1)\\)",
+        "\\((-1, 0)\\)"
+      ],
+      "answer": "D",
+      "explanation": "The vertex is where \\(|x + 1| = 0\\), that is \\(x = -1\\), giving the point \\((-1, 0)\\). The point \\((0, 1)\\) is only the \\(y\\)-intercept.",
+      "source": {
+        "page": 186
+      }
+    },
+    {
+      "id": "c2s2-mcq-011",
+      "type": "mcq",
+      "prompt": "Written without absolute value, \\(G(x) = |x| + x\\) equals",
+      "options": [
+        "\\(G(x)=\\begin{cases}2x & \\text{if } x \\ge 0\\\\ -2x & \\text{if } x < 0\\end{cases}\\)",
+        "\\(G(x)=\\begin{cases}0 & \\text{if } x \\ge 0\\\\ -2x & \\text{if } x < 0\\end{cases}\\)",
+        "\\(G(x) = 2x\\) for all \\(x\\)",
+        "\\(G(x)=\\begin{cases}2x & \\text{if } x \\ge 0\\\\ 0 & \\text{if } x < 0\\end{cases}\\)"
+      ],
+      "answer": "D",
+      "explanation": "For \\(x \\ge 0\\), \\(|x| = x\\) so \\(G(x) = 2x\\); for \\(x < 0\\), \\(|x| = -x\\) so \\(G(x) = -x + x = 0\\).",
+      "source": {
+        "page": 187
+      }
+    },
+    {
+      "id": "c2s2-mcq-012",
+      "type": "mcq",
+      "prompt": "Which statement describes the graph of \\(f(x) = \\dfrac{x}{|x|}\\)?",
+      "options": [
+        "the horizontal line \\(y = 1\\) for all \\(x\\)",
+        "a V-shape with vertex at the origin",
+        "\\(y = -1\\) for \\(x < 0\\) and \\(y = 1\\) for \\(x > 0\\), with open circles at \\(x = 0\\)",
+        "\\(y = 1\\) for \\(x < 0\\) and \\(y = -1\\) for \\(x > 0\\)"
+      ],
+      "answer": "C",
+      "explanation": "For \\(x > 0\\), \\(|x| = x\\) so \\(f(x) = 1\\); for \\(x < 0\\), \\(|x| = -x\\) so \\(f(x) = -1\\); \\(f(0)\\) is undefined, so the domain is \\(\\mathbb{R} \\setminus \\{0\\}\\).",
+      "source": {
+        "page": 188
+      }
+    },
+    {
+      "id": "c2s2-mcq-013",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\begin{cases}x^2 & \\text{if } x \\le 1\\\\ 2x + 1 & \\text{if } x > 1\\end{cases}\\). Which statement about the graph of \\(f\\) is correct?",
+      "options": [
+        "\\(f(1) = 3\\), and the solid dot is at \\((1, 3)\\)",
+        "\\(f(1) = 1\\); \\((1, 1)\\) is on the graph (solid dot) and \\((1, 3)\\) is not (open dot)",
+        "\\(f(1)\\) is undefined because the two formulas give different values",
+        "both \\((1, 1)\\) and \\((1, 3)\\) are on the graph"
+      ],
+      "answer": "B",
+      "explanation": "Since \\(x = 1\\) satisfies \\(x \\le 1\\), \\(f(1) = 1^2 = 1\\). The line \\(y = 2x + 1\\) is used only for \\(x > 1\\), so \\((1, 3)\\) is excluded (open dot).",
+      "source": {
+        "page": 178
+      }
+    },
+    {
+      "id": "c2s2-mcq-014",
+      "type": "mcq",
+      "prompt": "The greatest integer function gives \\(\\llbracket -3.5 \\rrbracket =\\)",
+      "options": [
+        "\\(-3\\)",
+        "\\(-4\\)",
+        "\\(3\\)",
+        "\\(-3.5\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(\\llbracket x \\rrbracket\\) is the greatest integer less than or equal to \\(x\\); the integers \\(\\le -3.5\\) are \\(-4, -5, \\ldots\\), so the greatest is \\(-4\\).",
+      "source": {
+        "page": 179
+      }
+    },
+    {
+      "id": "c2s2-mcq-015",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\begin{cases}1 - x^2 & x \\le 2\\\\ x & x > 2\\end{cases}\\). Then \\(f(2) =\\)",
+      "options": [
+        "\\(2\\)",
+        "\\(-3\\)",
+        "\\(3\\)",
+        "\\(5\\)"
+      ],
+      "answer": "B",
+      "explanation": "Since \\(x = 2\\) satisfies \\(x \\le 2\\), use the first formula: \\(f(2) = 1 - 2^2 = -3\\). The formula \\(x\\) applies only for \\(x > 2\\).",
+      "source": {
+        "page": 193
+      }
+    },
+    {
+      "id": "c2s2-mcq-016",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\begin{cases}-1 & x < -1\\\\ 1 & -1 \\le x \\le 1\\\\ -1 & x > 1\\end{cases}\\). The range of \\(f\\) is",
+      "options": [
+        "\\([-1, 1]\\)",
+        "\\(\\mathbb{R}\\)",
+        "\\(\\{-1, 1\\}\\)",
+        "\\(\\{1\\}\\)"
+      ],
+      "answer": "C",
+      "explanation": "The graph consists of horizontal pieces at heights \\(-1\\) and \\(1\\) only, so \\(f\\) takes exactly the two values \\(-1\\) and \\(1\\).",
+      "source": {
+        "page": 193
+      }
+    },
+    {
+      "id": "c2s2-mcq-017",
+      "type": "mcq",
+      "prompt": "The graph of a piecewise defined function \\(f\\) is the horizontal line \\(y = -2\\) for \\(x < -2\\), the line segment joining \\((-2, -2)\\) to \\((2, 2)\\) for \\(-2 \\le x \\le 2\\), and the horizontal line \\(y = 2\\) for \\(x > 2\\). A formula for \\(f\\) is",
+      "options": [
+        "\\(f(x)=\\begin{cases}-2 & x < -2\\\\ x & -2 \\le x \\le 2\\\\ 2 & x > 2\\end{cases}\\)",
+        "\\(f(x)=\\begin{cases}-2 & x < -2\\\\ 2x & -2 \\le x \\le 2\\\\ 2 & x > 2\\end{cases}\\)",
+        "\\(f(x)=\\begin{cases}2 & x < -2\\\\ x & -2 \\le x \\le 2\\\\ -2 & x > 2\\end{cases}\\)",
+        "\\(f(x)=\\begin{cases}-2 & x < -2\\\\ -x & -2 \\le x \\le 2\\\\ 2 & x > 2\\end{cases}\\)"
+      ],
+      "answer": "A",
+      "explanation": "The segment through \\((-2, -2)\\) and \\((2, 2)\\) has slope \\(1\\) and passes through the origin, so it is \\(y = x\\); the outer pieces are the constants \\(-2\\) (left) and \\(2\\) (right).",
+      "source": {
+        "page": 194
+      }
+    },
+    {
+      "id": "c2s2-mcq-018",
+      "type": "mcq",
+      "prompt": "On the interval \\(-1 < x \\le 2\\) the graph of a piecewise defined function is the line segment from the point \\((-1, 2)\\) (open circle) to the point \\((2, -1)\\) (solid dot). The formula for this piece is",
+      "options": [
+        "\\(f(x) = x + 1\\)",
+        "\\(f(x) = x - 1\\)",
+        "\\(f(x) = -x - 1\\)",
+        "\\(f(x) = 1 - x\\)"
+      ],
+      "answer": "D",
+      "explanation": "Slope \\(= \\dfrac{-1 - 2}{2 - (-1)} = -1\\), and the line through \\((-1, 2)\\) with slope \\(-1\\) is \\(y = 1 - x\\); check: \\(1 - 2 = -1\\) at \\(x = 2\\).",
+      "source": {
+        "page": 194
+      }
+    },
+    {
+      "id": "c2s2-mcq-019",
+      "type": "mcq",
+      "prompt": "According to the Vertical Line Test, a curve in the coordinate plane is the graph of a function if and only if",
+      "options": [
+        "every vertical line intersects the curve at least once",
+        "no horizontal line intersects the curve more than once",
+        "no vertical line intersects the curve more than once",
+        "the curve intersects the \\(x\\)-axis exactly once"
+      ],
+      "answer": "C",
+      "explanation": "If a vertical line \\(x = a\\) met the curve twice, at \\((a, b)\\) and \\((a, c)\\), the curve would assign two different values to \\(a\\), which a function cannot do.",
+      "source": {
+        "page": 180
+      }
+    },
+    {
+      "id": "c2s2-mcq-020",
+      "type": "mcq",
+      "prompt": "Which equation does NOT define \\(y\\) as a function of \\(x\\)?",
+      "options": [
+        "\\(3x + 7y = 21\\)",
+        "\\(x^2 + y = 9\\)",
+        "\\(x^2 y + y = 1\\)",
+        "\\(x = y^2\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(x = y^2\\) gives \\(y = \\pm\\sqrt{x}\\): for \\(x = 4\\) both \\(y = 2\\) and \\(y = -2\\) work. The others solve uniquely: \\(y = \\frac{21 - 3x}{7}\\), \\(y = 9 - x^2\\), \\(y = \\frac{1}{x^2 + 1}\\).",
+      "source": {
+        "page": 194
+      }
+    },
+    {
+      "id": "c2s2-mcq-021",
+      "type": "mcq",
+      "prompt": "Which equation defines \\(y\\) as a function of \\(x\\)?",
+      "options": [
+        "\\(2|x| + y = 0\\)",
+        "\\(2x + |y| = 0\\)",
+        "\\(x^2 + (y - 1)^2 = 4\\)",
+        "\\(x = y^4\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\(2|x| + y = 0\\) gives the single value \\(y = -2|x|\\) for each \\(x\\). In \\(2x + |y| = 0\\), \\(x = -1\\) gives \\(y = \\pm 2\\); the circle and \\(x = y^4\\) (\\(x = 16\\) gives \\(y = \\pm 2\\)) also fail the Vertical Line Test.",
+      "source": {
+        "page": 194
+      }
+    },
+    {
+      "id": "c2s2-mcq-022",
+      "type": "mcq",
+      "prompt": "Consider the equations (a) \\(x + y^2 = 9\\) and (b) \\(x^2 + y = 9\\). Which of them defines \\(y\\) as a function of \\(x\\)?",
+      "options": [
+        "only (a)",
+        "only (b)",
+        "both (a) and (b)",
+        "neither (a) nor (b)"
+      ],
+      "answer": "B",
+      "explanation": "(b) gives \\(y = 9 - x^2\\), one value of \\(y\\) for each \\(x\\). (a) gives \\(y = \\pm\\sqrt{9 - x}\\); for \\(x = 5\\) both \\(y = 2\\) and \\(y = -2\\) satisfy it.",
+      "source": {
+        "page": 194
+      }
+    },
+    {
+      "id": "c2s2-mcq-023",
+      "type": "mcq",
+      "prompt": "Consider the equations (a) \\(x = y^3\\) and (b) \\(x = y^4\\). Which of them defines \\(y\\) as a function of \\(x\\)?",
+      "options": [
+        "only (a)",
+        "only (b)",
+        "both (a) and (b)",
+        "neither (a) nor (b)"
+      ],
+      "answer": "A",
+      "explanation": "(a) gives \\(y = \\sqrt[3]{x}\\), and every real number has exactly one real cube root. (b) fails: \\(x = 1\\) gives both \\(y = 1\\) and \\(y = -1\\).",
+      "source": {
+        "page": 194
+      }
+    },
+    {
+      "id": "c2s2-tf-001",
+      "type": "tf",
+      "prompt": "The point \\((3, 5)\\) lies on the graph of a function \\(f\\) if and only if \\(f(3) = 5\\).",
+      "answer": true,
+      "explanation": "The graph of \\(f\\) is the set of points \\((x, f(x))\\); the height of the graph above \\(x = 3\\) is \\(f(3)\\).",
+      "source": {
+        "page": 175
+      }
+    },
+    {
+      "id": "c2s2-tf-002",
+      "type": "tf",
+      "prompt": "Let \\(f(x)=\\begin{cases}0 & \\text{if } x < 2\\\\ 1 & \\text{if } x \\ge 2\\end{cases}\\). The point \\((2, 0)\\) lies on the graph of \\(f\\).",
+      "answer": false,
+      "explanation": "Since \\(2 \\ge 2\\), \\(f(2) = 1\\): the graph has a solid dot at \\((2, 1)\\) and an open circle at \\((2, 0)\\).",
+      "source": {
+        "page": 190
+      }
+    },
+    {
+      "id": "c2s2-tf-003",
+      "type": "tf",
+      "prompt": "The equation \\(x^2 + (y - 1)^2 = 4\\) defines \\(y\\) as a function of \\(x\\).",
+      "answer": false,
+      "explanation": "Its graph is a circle, which fails the Vertical Line Test: for \\(x = 0\\) both \\(y = 3\\) and \\(y = -1\\) satisfy the equation.",
+      "source": {
+        "page": 194
+      }
+    },
+    {
+      "id": "c2s2-tf-004",
+      "type": "tf",
+      "prompt": "The domain of \\(g(x) = \\sqrt{x + 4}\\) is \\([-4, \\infty)\\), and its graph starts at the point \\((-4, 0)\\) and increases to the right.",
+      "answer": true,
+      "explanation": "We need \\(x + 4 \\ge 0\\), i.e. \\(x \\ge -4\\), and \\(g(-4) = \\sqrt{0} = 0\\); it is the square-root curve shifted 4 units left.",
+      "source": {
+        "page": 183
+      }
+    },
+    {
+      "id": "c2s2-match-001",
+      "type": "matching",
+      "title": "Match each function with the shape of its graph.",
+      "pairs": [
+        {
+          "left": "\\(f(x) = 2\\)",
+          "right": "horizontal line"
+        },
+        {
+          "left": "\\(f(x) = 2x - 4\\)",
+          "right": "straight line with slope 2"
+        },
+        {
+          "left": "\\(f(x) = -x^2\\)",
+          "right": "downward-opening parabola with vertex at the origin"
+        },
+        {
+          "left": "\\(F(x) = \\dfrac{1}{x}\\)",
+          "right": "hyperbola with asymptotes x = 0 and y = 0"
+        },
+        {
+          "left": "\\(f(x) = |2x - 2|\\)",
+          "right": "V-shape with vertex at (1, 0)"
+        },
+        {
+          "left": "\\(g(x) = \\sqrt{x + 4}\\)",
+          "right": "square-root curve starting at (−4, 0)"
+        }
+      ],
+      "source": {
+        "page": 182
+      }
+    },
+    {
+      "id": "c2s2-match-002",
+      "type": "matching",
+      "title": "Let \\(f(x)=\\begin{cases}-x & x \\le 0\\\\ 9 - x^2 & 0 < x \\le 3\\\\ x - 3 & x > 3\\end{cases}\\). Match each value with the result.",
+      "pairs": [
+        {
+          "left": "\\(f(-2)\\)",
+          "right": "2"
+        },
+        {
+          "left": "\\(f(1)\\)",
+          "right": "8"
+        },
+        {
+          "left": "\\(f(2)\\)",
+          "right": "5"
+        },
+        {
+          "left": "\\(f(3)\\)",
+          "right": "0"
+        },
+        {
+          "left": "\\(f(4)\\)",
+          "right": "1"
+        }
+      ],
+      "source": {
+        "page": 190
+      }
+    },
+    {
+      "id": "c2s2-match-003",
+      "type": "matching",
+      "title": "Match each function with its domain and range (as read from its graph).",
+      "pairs": [
+        {
+          "left": "\\(f(x) = 4\\)",
+          "right": "domain ℝ, range {4}"
+        },
+        {
+          "left": "\\(f(x) = -x^2\\)",
+          "right": "domain ℝ, range (−∞, 0]"
+        },
+        {
+          "left": "\\(f(x) = x^2 + 4\\)",
+          "right": "domain ℝ, range [4, ∞)"
+        },
+        {
+          "left": "\\(f(x) = \\sqrt{16 - x^2}\\)",
+          "right": "domain [−4, 4], range [0, 4]"
+        },
+        {
+          "left": "\\(f(x) = \\sqrt{x + 2}\\)",
+          "right": "domain [−2, ∞), range [0, ∞)"
+        }
+      ],
+      "source": {
+        "page": 193
+      }
+    },
+    {
+      "id": "c2s3-mcq-001",
+      "type": "mcq",
+      "prompt": "According to Definition 2.3.1, a function \\(f\\) is increasing on an interval \\(I\\) if",
+      "options": [
+        "\\(f(x_1) > f(x_2)\\) whenever \\(x_1 < x_2\\) in \\(I\\)",
+        "\\(f(x_1) < f(x_2)\\) whenever \\(x_1 < x_2\\) in \\(I\\)",
+        "\\(f(x_1) = f(x_2)\\) whenever \\(x_1 < x_2\\) in \\(I\\)",
+        "\\(f(x) > 0\\) for every \\(x\\) in \\(I\\)"
+      ],
+      "answer": "B",
+      "explanation": "Increasing means the graph rises from left to right: a larger input gives a larger output, \\(f(x_1) < f(x_2)\\) whenever \\(x_1 < x_2\\).",
+      "source": {
+        "page": 195
+      }
+    },
+    {
+      "id": "c2s3-mcq-002",
+      "type": "mcq",
+      "prompt": "Moving from left to right, the graph of \\(f\\) rises from the point \\(A\\) at \\(x=a\\) to \\(B\\) at \\(x=b\\), falls from \\(B\\) to \\(C\\) at \\(x=c\\), and rises again from \\(C\\) to \\(D\\) at \\(x=d\\). On which interval is \\(f\\) decreasing?",
+      "options": [
+        "\\([a, b]\\)",
+        "\\([c, d]\\)",
+        "\\([b, c]\\)",
+        "\\([a, d]\\)"
+      ],
+      "answer": "C",
+      "explanation": "The graph falls between \\(B\\) and \\(C\\), so \\(f\\) is decreasing on \\([b, c]\\); it is increasing on \\([a,b]\\) and on \\([c,d]\\).",
+      "source": {
+        "page": 195
+      }
+    },
+    {
+      "id": "c2s3-mcq-003",
+      "type": "mcq",
+      "prompt": "Let \\(f(x) = x^{2/3}\\). On which intervals is \\(f\\) decreasing and increasing?",
+      "options": [
+        "decreasing on \\((-\\infty, 0]\\), increasing on \\([0, \\infty)\\)",
+        "increasing on \\((-\\infty, 0]\\), decreasing on \\([0, \\infty)\\)",
+        "increasing on \\((-\\infty, \\infty)\\)",
+        "decreasing on \\((-\\infty, \\infty)\\)"
+      ],
+      "answer": "A",
+      "explanation": "The graph of \\(y = x^{2/3}\\) falls to the point \\((0,0)\\) and then rises, so \\(f\\) is decreasing on \\((-\\infty, 0]\\) and increasing on \\([0, \\infty)\\) (Example 2.10).",
+      "source": {
+        "page": 196
+      }
+    },
+    {
+      "id": "c2s3-mcq-004",
+      "type": "mcq",
+      "prompt": "The domain and range of \\(f(x) = x^{2/3}\\) are",
+      "options": [
+        "domain \\([0, \\infty)\\), range \\([0, \\infty)\\)",
+        "domain \\(\\mathbb{R}\\), range \\(\\mathbb{R}\\)",
+        "domain \\([0, \\infty)\\), range \\(\\mathbb{R}\\)",
+        "domain \\(\\mathbb{R}\\), range \\([0, \\infty)\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(x^{2/3} = (\\sqrt[3]{x})^2\\) is defined for every real \\(x\\) and is never negative, so the domain is \\(\\mathbb{R}\\) and the range is \\([0, \\infty)\\).",
+      "source": {
+        "page": 196
+      }
+    },
+    {
+      "id": "c2s3-mcq-005",
+      "type": "mcq",
+      "prompt": "Read from left to right, the graph of a function falls from \\(x=-2\\) to \\(x=0\\), rises from \\(x=0\\) to \\(x=1\\), and falls from \\(x=1\\) to \\(x=3\\). The function is increasing on",
+      "options": [
+        "\\((-2, 0) \\cup (1, 3)\\)",
+        "\\((0, 1)\\)",
+        "\\((-2, 1)\\)",
+        "\\((1, 3)\\)"
+      ],
+      "answer": "B",
+      "explanation": "The graph rises only between \\(x=0\\) and \\(x=1\\), so the function is increasing on \\((0,1)\\) and decreasing on \\((-2,0) \\cup (1,3)\\).",
+      "source": {
+        "page": 197
+      }
+    },
+    {
+      "id": "c2s3-mcq-006",
+      "type": "mcq",
+      "prompt": "Read from left to right, the graph of a function rises from \\(x=-1\\) to \\(x=1\\), falls from \\(x=1\\) to \\(x=2\\), and rises from \\(x=2\\) to \\(x=4\\). The function is increasing on",
+      "options": [
+        "\\((-1, 1) \\cup (2, 4)\\)",
+        "\\((1, 2)\\)",
+        "\\((-1, 4)\\)",
+        "\\((-1, 1) \\cap (2, 4)\\)"
+      ],
+      "answer": "A",
+      "explanation": "The graph rises on two separate pieces, so the increasing set is the union \\((-1,1) \\cup (2,4)\\); the function is decreasing on \\((1,2)\\).",
+      "source": {
+        "page": 197
+      }
+    },
+    {
+      "id": "c2s3-mcq-007",
+      "type": "mcq",
+      "prompt": "The graph of \\(g(x) = x^2 + 3\\) is the graph of \\(f(x) = x^2\\)",
+      "options": [
+        "shifted left 3 units; the vertex moves to \\((-3, 0)\\)",
+        "shifted right 3 units; the vertex moves to \\((3, 0)\\)",
+        "shifted upward 3 units; the vertex moves to \\((0, 3)\\)",
+        "shifted downward 3 units; the vertex moves to \\((0, -3)\\)"
+      ],
+      "answer": "C",
+      "explanation": "Adding a positive constant to \\(f(x)\\) shifts the graph upward: \\(y = f(x) + 3\\) moves the vertex from \\((0,0)\\) to \\((0,3)\\).",
+      "source": {
+        "page": 198
+      }
+    },
+    {
+      "id": "c2s3-mcq-008",
+      "type": "mcq",
+      "prompt": "Which function has a graph equal to the graph of \\(f(x) = x^3 - 9x\\) shifted downward 20 units?",
+      "options": [
+        "\\(h(x) = x^3 - 9x + 20\\)",
+        "\\(h(x) = (x-20)^3 - 9(x-20)\\)",
+        "\\(h(x) = (x+20)^3 - 9(x+20)\\)",
+        "\\(h(x) = x^3 - 9x - 20\\)"
+      ],
+      "answer": "D",
+      "explanation": "A downward shift of \\(c\\) units is \\(y = f(x) - c\\), so \\(h(x) = f(x) - 20 = x^3 - 9x - 20\\) (Example 2.12).",
+      "source": {
+        "page": 200
+      }
+    },
+    {
+      "id": "c2s3-mcq-009",
+      "type": "mcq",
+      "prompt": "The graph of \\(g(x) = (x+4)^2\\) is obtained from the parabola \\(y = x^2\\) by shifting it",
+      "options": [
+        "4 units to the right",
+        "4 units to the left",
+        "4 units upward",
+        "4 units downward"
+      ],
+      "answer": "B",
+      "explanation": "\\(g(x) = f(x + 4)\\) with \\(c = 4 > 0\\), and \\(y = f(x+c)\\) is the graph of \\(f\\) shifted to the left \\(c\\) units; the vertex moves to \\((-4, 0)\\).",
+      "source": {
+        "page": 201
+      }
+    },
+    {
+      "id": "c2s3-mcq-010",
+      "type": "mcq",
+      "prompt": "To sketch \\(f(x) = \\sqrt{x-3} + 4\\) starting from the graph of \\(y = \\sqrt{x}\\), we",
+      "options": [
+        "shift left 3 units, then up 4 units",
+        "shift right 3 units, then down 4 units",
+        "shift right 3 units, then up 4 units",
+        "shift right 4 units, then up 3 units"
+      ],
+      "answer": "C",
+      "explanation": "\\(x - 3\\) inside the root shifts the graph right 3 units, and \\(+4\\) outside shifts it up 4 units; the endpoint moves from \\((0,0)\\) to \\((3,4)\\).",
+      "source": {
+        "page": 202
+      }
+    },
+    {
+      "id": "c2s3-mcq-011",
+      "type": "mcq",
+      "prompt": "The domain and range of \\(f(x) = \\sqrt{x-3} + 4\\) are",
+      "options": [
+        "domain \\([3, \\infty)\\), range \\([4, \\infty)\\)",
+        "domain \\([-3, \\infty)\\), range \\([4, \\infty)\\)",
+        "domain \\([3, \\infty)\\), range \\([0, \\infty)\\)",
+        "domain \\([4, \\infty)\\), range \\([3, \\infty)\\)"
+      ],
+      "answer": "A",
+      "explanation": "We need \\(x - 3 \\ge 0\\), so \\(x \\ge 3\\); since \\(\\sqrt{x-3} \\ge 0\\), the values satisfy \\(y \\ge 4\\) (Example 2.14).",
+      "source": {
+        "page": 202
+      }
+    },
+    {
+      "id": "c2s3-mcq-012",
+      "type": "mcq",
+      "prompt": "The graph of \\(f(x) = \\sqrt{x}\\) shifted 2 units to the right and 3 units upward is the graph of",
+      "options": [
+        "\\(y = \\sqrt{x+2} + 3\\)",
+        "\\(y = \\sqrt{x-2} - 3\\)",
+        "\\(y = \\sqrt{x+3} + 2\\)",
+        "\\(y = \\sqrt{x-2} + 3\\)"
+      ],
+      "answer": "D",
+      "explanation": "Right 2 units is \\(f(x-2)\\) and up 3 units adds 3: \\(y = f(x-2) + 3 = \\sqrt{x-2} + 3\\).",
+      "source": {
+        "page": 202
+      }
+    },
+    {
+      "id": "c2s3-mcq-013",
+      "type": "mcq",
+      "prompt": "The graph of \\(g(x) = \\sqrt{-x}\\) is",
+      "options": [
+        "the reflection of \\(y = \\sqrt{x}\\) in the \\(x\\)-axis, defined for \\(x \\ge 0\\)",
+        "the reflection of \\(y = \\sqrt{x}\\) in the \\(y\\)-axis, defined for \\(x \\le 0\\)",
+        "the reflection of \\(y = \\sqrt{x}\\) in the \\(y\\)-axis, defined for \\(x \\ge 0\\)",
+        "the reflection of \\(y = \\sqrt{x}\\) in the \\(x\\)-axis, defined for \\(x \\le 0\\)"
+      ],
+      "answer": "B",
+      "explanation": "Replacing \\(x\\) by \\(-x\\) gives \\(y = f(-x)\\), the reflection in the \\(y\\)-axis; it is defined when \\(-x \\ge 0\\), i.e. \\(x \\le 0\\) (Example 2.15).",
+      "source": {
+        "page": 204
+      }
+    },
+    {
+      "id": "c2s3-mcq-014",
+      "type": "mcq",
+      "prompt": "The graph of \\(g(x) = 3x^2\\) is obtained from the graph of \\(f(x) = x^2\\) by",
+      "options": [
+        "shifting it upward 3 units",
+        "shrinking it vertically by a factor of \\(\\frac{1}{3}\\)",
+        "stretching it vertically by a factor of 3",
+        "shifting it 3 units to the right"
+      ],
+      "answer": "C",
+      "explanation": "\\(g(x) = 3f(x)\\) multiplies every \\(y\\)-coordinate by \\(3 > 1\\), which stretches the graph vertically by a factor of 3 (Example 2.16).",
+      "source": {
+        "page": 205
+      }
+    },
+    {
+      "id": "c2s3-mcq-015",
+      "type": "mcq",
+      "prompt": "To sketch \\(f(x) = 1 - 2(x-3)^2\\) starting from \\(y = x^2\\), the correct sequence of transformations is",
+      "options": [
+        "shift right 3; reflect in the \\(x\\)-axis and stretch vertically by 2; shift up 1",
+        "shift left 3; stretch vertically by 2; shift up 1",
+        "shift right 3; shrink vertically by \\(\\frac{1}{2}\\); shift down 1",
+        "shift up 1; shift right 3; reflect in the \\(y\\)-axis"
+      ],
+      "answer": "A",
+      "explanation": "\\(y=(x-3)^2\\) is right 3; multiplying by \\(-2\\) gives \\(y=-2(x-3)^2\\) (reflect in the \\(x\\)-axis, stretch by 2); adding 1 shifts up 1. The vertex is \\((3,1)\\) (Example 2.17).",
+      "source": {
+        "page": 206
+      }
+    },
+    {
+      "id": "c2s3-mcq-016",
+      "type": "mcq",
+      "prompt": "A function \\(f\\) is odd if, for all \\(x\\) in its domain,",
+      "options": [
+        "\\(f(-x) = f(x)\\)",
+        "\\(f(-x) = -f(x)\\)",
+        "\\(f(x) = -f(x)\\)",
+        "\\(-f(-x) = -f(x)\\)"
+      ],
+      "answer": "B",
+      "explanation": "By definition \\(f\\) is odd if \\(f(-x) = -f(x)\\); \\(f(-x) = f(x)\\) is the definition of an even function, and \\(-f(-x) = -f(x)\\) says the same thing as even.",
+      "source": {
+        "page": 207
+      }
+    },
+    {
+      "id": "c2s3-mcq-017",
+      "type": "mcq",
+      "prompt": "The function \\(f(x) = x^5 + x\\) is",
+      "options": [
+        "neither even nor odd",
+        "even",
+        "odd",
+        "both even and odd"
+      ],
+      "answer": "C",
+      "explanation": "\\(f(-x) = (-x)^5 + (-x) = -x^5 - x = -(x^5 + x) = -f(x)\\), so \\(f\\) is odd (Example 2.18).",
+      "source": {
+        "page": 208
+      }
+    },
+    {
+      "id": "c2s3-mcq-018",
+      "type": "mcq",
+      "prompt": "The function \\(g(x) = 1 - x^4\\) is",
+      "options": [
+        "even",
+        "odd",
+        "neither even nor odd",
+        "both even and odd"
+      ],
+      "answer": "A",
+      "explanation": "\\(g(-x) = 1 - (-x)^4 = 1 - x^4 = g(x)\\), so \\(g\\) is even and its graph is symmetric about the \\(y\\)-axis.",
+      "source": {
+        "page": 209
+      }
+    },
+    {
+      "id": "c2s3-mcq-019",
+      "type": "mcq",
+      "prompt": "The function \\(h(x) = 2x - x^2\\) is",
+      "options": [
+        "odd",
+        "even",
+        "both even and odd",
+        "neither even nor odd"
+      ],
+      "answer": "D",
+      "explanation": "\\(h(-x) = 2(-x) - (-x)^2 = -2x - x^2\\), which is neither \\(h(x) = 2x - x^2\\) nor \\(-h(x) = -2x + x^2\\).",
+      "source": {
+        "page": 209
+      }
+    },
+    {
+      "id": "c2s3-mcq-020",
+      "type": "mcq",
+      "prompt": "Which transformations turn the graph of \\(f(x) = x^2\\) into the graph of \\(g(x) = -(x+1)^2\\)?",
+      "options": [
+        "shift right 1 unit, then reflect in the \\(x\\)-axis",
+        "shift left 1 unit, then reflect in the \\(y\\)-axis",
+        "shift left 1 unit, then reflect in the \\(x\\)-axis",
+        "shift down 1 unit, then reflect in the \\(x\\)-axis"
+      ],
+      "answer": "C",
+      "explanation": "\\((x+1)^2 = f(x+1)\\) is the parabola shifted left 1; the minus sign in front reflects it in the \\(x\\)-axis. The vertex is \\((-1, 0)\\) and it opens downward (Problem 2).",
+      "source": {
+        "page": 210
+      }
+    },
+    {
+      "id": "c2s3-mcq-021",
+      "type": "mcq",
+      "prompt": "Starting from \\(y = \\sqrt{x}\\), the graph of \\(y = \\frac{1}{2}\\sqrt{x+4} - 3\\) has its endpoint (starting point) at",
+      "options": [
+        "\\((4, -3)\\)",
+        "\\((-4, -3)\\)",
+        "\\((-4, 3)\\)",
+        "\\((4, 3)\\)"
+      ],
+      "answer": "B",
+      "explanation": "Shift left 4, shrink vertically by \\(\\frac{1}{2}\\), then shift down 3: the endpoint \\((0,0)\\) of \\(y=\\sqrt{x}\\) moves to \\((-4, -3)\\) (Problem 5).",
+      "source": {
+        "page": 211
+      }
+    },
+    {
+      "id": "c2s3-mcq-022",
+      "type": "mcq",
+      "prompt": "The graph of \\(y = x^2\\) is reflected in the \\(x\\)-axis and then shifted upward 1 unit. The resulting graph has equation",
+      "options": [
+        "\\(y = (1 - x)^2\\)",
+        "\\(y = x^2 - 1\\)",
+        "\\(y = -x^2 - 1\\)",
+        "\\(y = 1 - x^2\\)"
+      ],
+      "answer": "D",
+      "explanation": "Reflecting gives \\(y = -x^2\\); shifting up 1 adds 1: \\(y = 1 - x^2\\), a parabola with vertex \\((0,1)\\) opening downward (Problem 9).",
+      "source": {
+        "page": 212
+      }
+    },
+    {
+      "id": "c2s3-mcq-023",
+      "type": "mcq",
+      "prompt": "The vertex of the parabola \\(f(x) = (x+7)^2\\) is",
+      "options": [
+        "\\((-7, 0)\\)",
+        "\\((7, 0)\\)",
+        "\\((0, 7)\\)",
+        "\\((0, -7)\\)"
+      ],
+      "answer": "A",
+      "explanation": "Replacing \\(x\\) by \\(x + 7\\) shifts \\(y = x^2\\) left 7 units, so the vertex moves from \\((0,0)\\) to \\((-7, 0)\\) (Problem 10).",
+      "source": {
+        "page": 213
+      }
+    },
+    {
+      "id": "c2s3-mcq-024",
+      "type": "mcq",
+      "prompt": "For \\(y = 2 - \\sqrt{x+1}\\), the domain and the starting point of the graph are",
+      "options": [
+        "domain \\([1, \\infty)\\), starting point \\((1, 2)\\)",
+        "domain \\([-1, \\infty)\\), starting point \\((-1, -2)\\)",
+        "domain \\([-1, \\infty)\\), starting point \\((-1, 2)\\)",
+        "domain \\((-\\infty, 2]\\), starting point \\((2, -1)\\)"
+      ],
+      "answer": "C",
+      "explanation": "Shift \\(y=\\sqrt{x}\\) left 1, reflect in the \\(x\\)-axis, shift up 2. We need \\(x + 1 \\ge 0\\), so the domain is \\(x \\ge -1\\), and at \\(x=-1\\) we get \\(y = 2\\) (Problem 12).",
+      "source": {
+        "page": 213
+      }
+    },
+    {
+      "id": "c2s3-mcq-025",
+      "type": "mcq",
+      "prompt": "The parabola \\(y = 3 - 2(x-1)^2\\) has vertex",
+      "options": [
+        "\\((1, 3)\\) and opens upward",
+        "\\((-1, 3)\\) and opens downward",
+        "\\((1, -3)\\) and opens downward",
+        "\\((1, 3)\\) and opens downward"
+      ],
+      "answer": "D",
+      "explanation": "Shift \\(y=x^2\\) right 1, multiply by \\(-2\\) (reflect and stretch by 2), then shift up 3: the vertex is \\((1, 3)\\) and the parabola opens downward (Problem 13).",
+      "source": {
+        "page": 214
+      }
+    },
+    {
+      "id": "c2s3-mcq-026",
+      "type": "mcq",
+      "prompt": "The graph of \\(y = \\frac{1}{3}x^3 - 1\\) is obtained from the graph of \\(y = x^3\\) by",
+      "options": [
+        "stretching vertically by a factor of 3, then shifting down 1",
+        "shrinking vertically by a factor of \\(\\frac{1}{3}\\), then shifting down 1",
+        "shrinking vertically by a factor of \\(\\frac{1}{3}\\), then shifting left 1",
+        "shifting down 1, then reflecting in the \\(x\\)-axis"
+      ],
+      "answer": "B",
+      "explanation": "Multiplying by \\(\\frac{1}{3}\\) (a number between 0 and 1) shrinks the graph vertically; then \\(-1\\) shifts it down 1. The inflection point moves to \\((0, -1)\\) (Problem 14).",
+      "source": {
+        "page": 214
+      }
+    },
+    {
+      "id": "c2s3-mcq-027",
+      "type": "mcq",
+      "prompt": "Which equation gives the graph of \\(y = |x|\\) shifted 1 unit to the right?",
+      "options": [
+        "\\(y = |x| - 1\\)",
+        "\\(y = |x + 1|\\)",
+        "\\(y = |x - 1|\\)",
+        "\\(y = |x| + 1\\)"
+      ],
+      "answer": "C",
+      "explanation": "A shift to the right by 1 replaces \\(x\\) by \\(x - 1\\): \\(y = |x - 1|\\), with vertex \\((1, 0)\\). \\(y = |x| - 1\\) is a shift down (Problems 7 and 15).",
+      "source": {
+        "page": 214
+      }
+    },
+    {
+      "id": "c2s3-mcq-028",
+      "type": "mcq",
+      "prompt": "The graph of \\(y = |x|\\) is reflected in the \\(x\\)-axis and then shifted upward 2 units. The resulting equation is",
+      "options": [
+        "\\(y = 2 - |x|\\)",
+        "\\(y = |x| - 2\\)",
+        "\\(y = |x + 2|\\)",
+        "\\(y = -|x| - 2\\)"
+      ],
+      "answer": "A",
+      "explanation": "Reflecting gives \\(y = -|x|\\); adding 2 shifts it up: \\(y = 2 - |x|\\), an inverted V with vertex \\((0, 2)\\) (Problem 16).",
+      "source": {
+        "page": 215
+      }
+    },
+    {
+      "id": "c2s3-mcq-029",
+      "type": "mcq",
+      "prompt": "The function \\(f(x) = x^{-2}\\) is",
+      "options": [
+        "odd",
+        "neither even nor odd",
+        "both even and odd",
+        "even"
+      ],
+      "answer": "D",
+      "explanation": "\\(f(-x) = (-x)^{-2} = \\frac{1}{(-x)^2} = \\frac{1}{x^2} = f(x)\\), so \\(f\\) is even (Problem 17).",
+      "source": {
+        "page": 215
+      }
+    },
+    {
+      "id": "c2s3-mcq-030",
+      "type": "mcq",
+      "prompt": "The function \\(f(x) = x + \\frac{1}{x}\\), \\(x \\ne 0\\), is",
+      "options": [
+        "odd",
+        "even",
+        "neither even nor odd",
+        "both even and odd"
+      ],
+      "answer": "A",
+      "explanation": "\\(f(-x) = -x + \\frac{1}{-x} = -x - \\frac{1}{x} = -\\left(x + \\frac{1}{x}\\right) = -f(x)\\), so \\(f\\) is odd (Problem 19).",
+      "source": {
+        "page": 216
+      }
+    },
+    {
+      "id": "c2s3-mcq-031",
+      "type": "mcq",
+      "prompt": "The function \\(f(x) = 1 - \\sqrt[3]{x}\\) is",
+      "options": [
+        "even",
+        "odd",
+        "neither even nor odd",
+        "both even and odd"
+      ],
+      "answer": "C",
+      "explanation": "\\(f(-x) = 1 - \\sqrt[3]{-x} = 1 + \\sqrt[3]{x}\\), which is neither \\(f(x)\\) nor \\(-f(x) = -1 + \\sqrt[3]{x}\\) (Problem 20).",
+      "source": {
+        "page": 216
+      }
+    },
+    {
+      "id": "c2s3-mcq-032",
+      "type": "mcq",
+      "prompt": "If \\(f(x) = x^3 - x\\), then \\(f(-x) =\\)",
+      "options": [
+        "\\(-x^3 - x\\)",
+        "\\(x^3 - x\\)",
+        "\\(x^3 + x\\)",
+        "\\(-x^3 + x\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(f(-x) = (-x)^3 - (-x) = -x^3 + x = -(x^3 - x) = -f(x)\\); hence \\(f\\) is odd (Problem 21).",
+      "source": {
+        "page": 217
+      }
+    },
+    {
+      "id": "c2s3-mcq-033",
+      "type": "mcq",
+      "prompt": "The function \\(f(x) = x^4 - 4x^2\\) is",
+      "options": [
+        "even",
+        "odd",
+        "neither even nor odd",
+        "both even and odd"
+      ],
+      "answer": "A",
+      "explanation": "\\(f(-x) = (-x)^4 - 4(-x)^2 = x^4 - 4x^2 = f(x)\\), so \\(f\\) is even (Problem 23).",
+      "source": {
+        "page": 218
+      }
+    },
+    {
+      "id": "c2s3-mcq-034",
+      "type": "mcq",
+      "prompt": "The function \\(f(x) = 3x^3 + 2x^2 + 1\\) is",
+      "options": [
+        "odd",
+        "neither even nor odd",
+        "even",
+        "both even and odd"
+      ],
+      "answer": "B",
+      "explanation": "\\(f(-x) = -3x^3 + 2x^2 + 1\\), which is not \\(f(x)\\) and not \\(-f(x) = -3x^3 - 2x^2 - 1\\) (Problem 24).",
+      "source": {
+        "page": 218
+      }
+    },
+    {
+      "id": "c2s3-tf-001",
+      "type": "tf",
+      "prompt": "If \\(f\\) is decreasing on an interval \\(I\\), then \\(f(x_1) > f(x_2)\\) whenever \\(x_1 < x_2\\) in \\(I\\).",
+      "answer": true,
+      "explanation": "This is Definition 2.3.1: on a decreasing interval the graph falls, so a larger input gives a smaller output.",
+      "source": {
+        "page": 195
+      }
+    },
+    {
+      "id": "c2s3-tf-002",
+      "type": "tf",
+      "prompt": "For \\(c > 0\\), the graph of \\(y = f(x - c)\\) is the graph of \\(y = f(x)\\) shifted \\(c\\) units to the left.",
+      "answer": false,
+      "explanation": "\\(y = f(x - c)\\) is shifted to the right \\(c\\) units; \\(y = f(x + c)\\) is the one shifted to the left.",
+      "source": {
+        "page": 201
+      }
+    },
+    {
+      "id": "c2s3-tf-003",
+      "type": "tf",
+      "prompt": "The graph of \\(y = -f(x)\\) is the reflection of the graph of \\(y = f(x)\\) in the \\(y\\)-axis.",
+      "answer": false,
+      "explanation": "\\(y = -f(x)\\) changes the sign of every \\(y\\)-coordinate, so it is the reflection in the \\(x\\)-axis; \\(y = f(-x)\\) is the reflection in the \\(y\\)-axis.",
+      "source": {
+        "page": 203
+      }
+    },
+    {
+      "id": "c2s3-tf-004",
+      "type": "tf",
+      "prompt": "The function \\(f(x) = x^2 + x\\) is an even function.",
+      "answer": false,
+      "explanation": "\\(f(-x) = (-x)^2 + (-x) = x^2 - x\\), which is neither \\(f(x)\\) nor \\(-f(x)\\); \\(f\\) is neither even nor odd (Problem 18).",
+      "source": {
+        "page": 215
+      }
+    },
+    {
+      "id": "c2s3-tf-005",
+      "type": "tf",
+      "prompt": "The graph of an odd function is symmetric about the origin.",
+      "answer": true,
+      "explanation": "For an odd function \\(f(-x) = -f(x)\\): rotating the graph \\(180^\\circ\\) about the origin gives the same graph, as for \\(f(x) = x^3\\).",
+      "source": {
+        "page": 207
+      }
+    },
+    {
+      "id": "c2s3-tf-006",
+      "type": "tf",
+      "prompt": "The graph of \\(f(x) = -x^3\\) is obtained from the graph of \\(y = x^3\\) by reflecting it in the \\(x\\)-axis.",
+      "answer": true,
+      "explanation": "Multiplying \\(y = x^3\\) by \\(-1\\) gives \\(y = -f(x)\\), the reflection in the \\(x\\)-axis (Problem 11).",
+      "source": {
+        "page": 213
+      }
+    },
+    {
+      "id": "c2s3-tf-007",
+      "type": "tf",
+      "prompt": "The function \\(f(x) = x^{-3} = \\frac{1}{x^3}\\) is an odd function.",
+      "answer": true,
+      "explanation": "\\(f(-x) = \\frac{1}{(-x)^3} = \\frac{1}{-x^3} = -\\frac{1}{x^3} = -f(x)\\), so \\(f\\) is odd and its graph is symmetric about the origin (Problem 22).",
+      "source": {
+        "page": 217
+      }
+    },
+    {
+      "id": "c2s3-match-001",
+      "type": "matching",
+      "title": "Suppose \\(c > 0\\). Match each equation with the way its graph is obtained from the graph of \\(y = f(x)\\).",
+      "pairs": [
+        {
+          "left": "\\(y = f(x) + c\\)",
+          "right": "shift upward c units"
+        },
+        {
+          "left": "\\(y = f(x) - c\\)",
+          "right": "shift downward c units"
+        },
+        {
+          "left": "\\(y = f(x - c)\\)",
+          "right": "shift to the right c units"
+        },
+        {
+          "left": "\\(y = f(x + c)\\)",
+          "right": "shift to the left c units"
+        }
+      ],
+      "source": {
+        "page": 201
+      }
+    },
+    {
+      "id": "c2s3-match-002",
+      "type": "matching",
+      "title": "Match each equation with the way its graph is obtained from the graph of \\(y = f(x)\\).",
+      "pairs": [
+        {
+          "left": "\\(y = -f(x)\\)",
+          "right": "reflect in the x-axis"
+        },
+        {
+          "left": "\\(y = f(-x)\\)",
+          "right": "reflect in the y-axis"
+        },
+        {
+          "left": "\\(y = c f(x),\\ c > 1\\)",
+          "right": "stretch vertically by a factor of c"
+        },
+        {
+          "left": "\\(y = c f(x),\\ 0 < c < 1\\)",
+          "right": "shrink vertically by a factor of c"
+        }
+      ],
+      "source": {
+        "page": 204
+      }
+    },
+    {
+      "id": "c2s3-match-003",
+      "type": "matching",
+      "title": "Match each function with the transformation that produces its graph from the parabola \\(y = x^2\\).",
+      "pairs": [
+        {
+          "left": "\\(y = x^2 - 2\\)",
+          "right": "shift downward 2 units"
+        },
+        {
+          "left": "\\(y = (x - 5)^2\\)",
+          "right": "shift to the right 5 units"
+        },
+        {
+          "left": "\\(y = -x^2\\)",
+          "right": "reflect in the x-axis"
+        },
+        {
+          "left": "\\(y = 2x^2\\)",
+          "right": "stretch vertically by a factor of 2"
+        },
+        {
+          "left": "\\(y = \\frac{1}{3}x^2\\)",
+          "right": "shrink vertically by a factor of 1/3"
+        }
+      ],
+      "source": {
+        "page": 205
+      }
+    },
+    {
+      "id": "c2s3-match-004",
+      "type": "matching",
+      "title": "Match each transformed function with the key point of its graph (vertex, endpoint or inflection point).",
+      "pairs": [
+        {
+          "left": "\\(y = (x - 2)^2\\)",
+          "right": "vertex (2, 0)"
+        },
+        {
+          "left": "\\(y = 5 + (x + 3)^2\\)",
+          "right": "vertex (-3, 5)"
+        },
+        {
+          "left": "\\(y = |x + 2| + 2\\)",
+          "right": "vertex (-2, 2)"
+        },
+        {
+          "left": "\\(y = |x| - 1\\)",
+          "right": "vertex (0, -1)"
+        },
+        {
+          "left": "\\(y = x^3 + 2\\)",
+          "right": "inflection point (0, 2)"
+        },
+        {
+          "left": "\\(y = 1 + \\sqrt{x}\\)",
+          "right": "endpoint (0, 1)"
+        }
+      ],
+      "source": {
+        "page": 211
+      }
+    },
+    {
+      "id": "c2s4-mcq-001",
+      "type": "mcq",
+      "prompt": "Express \\(f(x)=2x^2-12x+23\\) in the standard form \\(f(x)=a(x-h)^2+k\\).",
+      "options": [
+        "\\(f(x)=2(x-3)^2+5\\)",
+        "\\(f(x)=2(x-3)^2+23\\)",
+        "\\(f(x)=2(x-3)^2-13\\)",
+        "\\(f(x)=2(x+3)^2+5\\)"
+      ],
+      "answer": "A",
+      "explanation": "Factor 2 from the \\(x\\)-terms: \\(2(x^2-6x)+23\\). Complete the square: \\(2\\big((x-3)^2-9\\big)+23=2(x-3)^2-18+23=2(x-3)^2+5\\).",
+      "source": {
+        "page": 219
+      }
+    },
+    {
+      "id": "c2s4-mcq-002",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=5x^2-30x+49\\). The minimum value of \\(f\\) is",
+      "options": [
+        "\\(49\\)",
+        "\\(3\\)",
+        "\\(4\\)",
+        "\\(40\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(f(x)=5(x^2-6x)+49=5(x-3)^2-45+49=5(x-3)^2+4\\). Since \\(a=5>0\\), the parabola opens upward and the minimum value is \\(f(3)=4\\).",
+      "source": {
+        "page": 221
+      }
+    },
+    {
+      "id": "c2s4-mcq-003",
+      "type": "mcq",
+      "prompt": "The vertex of the parabola \\(f(x)=-x^2+x+2\\) is",
+      "options": [
+        "\\(\\left(-\\frac{1}{2}, \\frac{9}{4}\\right)\\)",
+        "\\(\\left(\\frac{1}{2}, \\frac{9}{4}\\right)\\)",
+        "\\(\\left(\\frac{1}{2}, \\frac{7}{4}\\right)\\)",
+        "\\((1, 2)\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(f(x)=-(x^2-x)+2=-\\big((x-\\frac{1}{2})^2-\\frac{1}{4}\\big)+2=-(x-\\frac{1}{2})^2+\\frac{9}{4}\\), so \\((h,k)=(\\frac{1}{2},\\frac{9}{4})\\).",
+      "source": {
+        "page": 223
+      }
+    },
+    {
+      "id": "c2s4-mcq-004",
+      "type": "mcq",
+      "prompt": "The minimum value of \\(f(x)=x^2+4x\\) is",
+      "options": [
+        "\\(0\\)",
+        "\\(4\\)",
+        "\\(-2\\)",
+        "\\(-4\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(f(x)=(x^2+4x+4)-4=(x+2)^2-4\\). The vertex is \\((-2,-4)\\) and \\(a=1>0\\), so the minimum value is \\(f(-2)=-4\\).",
+      "source": {
+        "page": 224
+      }
+    },
+    {
+      "id": "c2s4-mcq-005",
+      "type": "mcq",
+      "prompt": "The maximum value of \\(g(x)=-2x^2+4x-5\\) is",
+      "options": [
+        "\\(1\\)",
+        "\\(-3\\)",
+        "\\(-5\\)",
+        "\\(-7\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(g(x)=-2(x^2-2x)-5=-2\\big((x-1)^2-1\\big)-5=-2(x-1)^2-3\\). Since \\(a=-2<0\\), the maximum value is \\(g(1)=-3\\).",
+      "source": {
+        "page": 225
+      }
+    },
+    {
+      "id": "c2s4-mcq-006",
+      "type": "mcq",
+      "prompt": "Express \\(f(x)=2x-x^2\\) in standard form.",
+      "options": [
+        "\\(f(x)=-(x-1)^2+1\\)",
+        "\\(f(x)=-(x+1)^2+1\\)",
+        "\\(f(x)=-(x-1)^2-1\\)",
+        "\\(f(x)=(x-1)^2+1\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\(f(x)=-(x^2-2x)=-\\big((x-1)^2-1\\big)=-(x-1)^2+1\\); vertex \\((1,1)\\), opens downward.",
+      "source": {
+        "page": 226
+      }
+    },
+    {
+      "id": "c2s4-mcq-007",
+      "type": "mcq",
+      "prompt": "The maximum value of \\(h(x)=1-x-x^2\\) is",
+      "options": [
+        "\\(1\\)",
+        "\\(-\\frac{1}{2}\\)",
+        "\\(\\frac{3}{4}\\)",
+        "\\(\\frac{5}{4}\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(h(x)=-(x^2+x)+1=-\\big((x+\\frac{1}{2})^2-\\frac{1}{4}\\big)+1=-(x+\\frac{1}{2})^2+\\frac{5}{4}\\). The maximum value is \\(\\frac{5}{4}\\) at \\(x=-\\frac{1}{2}\\).",
+      "source": {
+        "page": 227
+      }
+    },
+    {
+      "id": "c2s4-mcq-008",
+      "type": "mcq",
+      "prompt": "Let \\(h(x)=\\frac{1}{2}x^2+2x-6\\). Which statement is correct?",
+      "options": [
+        "\\(h\\) has a minimum value \\(-6\\) at \\(x=0\\)",
+        "\\(h\\) has a minimum value \\(-2\\) at \\(x=-8\\)",
+        "\\(h\\) has a minimum value \\(-8\\) at \\(x=-2\\)",
+        "\\(h\\) has a maximum value \\(-8\\) at \\(x=-2\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(a=\\frac{1}{2},\\ b=2\\): \\(x=-\\frac{b}{2a}=-\\frac{2}{2\\cdot(1/2)}=-2\\) and \\(h(-2)=2-4-6=-8\\). Since \\(a>0\\) the parabola opens upward, so this is a minimum.",
+      "source": {
+        "page": 229
+      }
+    },
+    {
+      "id": "c2s4-mcq-009",
+      "type": "mcq",
+      "prompt": "The maximum value of \\(f(x)=3-x-\\frac{1}{2}x^2\\) is",
+      "options": [
+        "\\(3\\)",
+        "\\(\\frac{7}{2}\\)",
+        "\\(\\frac{5}{2}\\)",
+        "\\(-1\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(a=-\\frac{1}{2},\\ b=-1\\): \\(x=-\\frac{b}{2a}=-1\\) and \\(f(-1)=3+1-\\frac{1}{2}=\\frac{7}{2}\\). Since \\(a<0\\) this is the maximum.",
+      "source": {
+        "page": 230
+      }
+    },
+    {
+      "id": "c2s4-mcq-010",
+      "type": "mcq",
+      "prompt": "Express \\(f(x)=x+x^2\\) in standard form.",
+      "options": [
+        "\\(f(x)=\\left(x+\\frac{1}{2}\\right)^2-\\frac{1}{4}\\)",
+        "\\(f(x)=\\left(x+\\frac{1}{2}\\right)^2+\\frac{1}{4}\\)",
+        "\\(f(x)=\\left(x-\\frac{1}{2}\\right)^2-\\frac{1}{4}\\)",
+        "\\(f(x)=(x+1)^2-1\\)"
+      ],
+      "answer": "A",
+      "explanation": "Add and subtract \\(\\left(\\frac{1}{2}\\right)^2=\\frac{1}{4}\\): \\(x^2+x+\\frac{1}{4}-\\frac{1}{4}=\\left(x+\\frac{1}{2}\\right)^2-\\frac{1}{4}\\). Minimum \\(-\\frac{1}{4}\\) at \\(x=-\\frac{1}{2}\\).",
+      "source": {
+        "page": 228
+      }
+    },
+    {
+      "id": "c2s4-mcq-011",
+      "type": "mcq",
+      "prompt": "The maximum value of \\(h(x)=3-4x-4x^2\\) is",
+      "options": [
+        "\\(3\\)",
+        "\\(-\\frac{1}{2}\\)",
+        "\\(4\\)",
+        "\\(7\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(h(x)=-4(x^2+x)+3=-4\\big((x+\\frac{1}{2})^2-\\frac{1}{4}\\big)+3=-4(x+\\frac{1}{2})^2+4\\). Check: \\(h(-\\frac{1}{2})=3+2-1=4\\).",
+      "source": {
+        "page": 229
+      }
+    },
+    {
+      "id": "c2s4-mcq-012",
+      "type": "mcq",
+      "prompt": "Find the maximum value of \\(f(x)=-\\frac{x^2}{3}+2x+7\\).",
+      "options": [
+        "\\(7\\)",
+        "\\(3\\)",
+        "\\(-2\\)",
+        "\\(10\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(a=-\\frac{1}{3},\\ b=2\\): \\(x=-\\frac{b}{2a}=-\\frac{2}{-2/3}=3\\) and \\(f(3)=-3+6+7=10\\). Since \\(a<0\\), this is the maximum.",
+      "source": {
+        "page": 230
+      }
+    },
+    {
+      "id": "c2s4-mcq-013",
+      "type": "mcq",
+      "prompt": "Find the minimum value of \\(g(x)=2x(x-4)+7\\).",
+      "options": [
+        "\\(-1\\)",
+        "\\(7\\)",
+        "\\(31\\)",
+        "\\(2\\)"
+      ],
+      "answer": "A",
+      "explanation": "Expand first: \\(g(x)=2x^2-8x+7\\), so \\(x=-\\frac{-8}{2\\cdot2}=2\\) and \\(g(2)=8-16+7=-1\\). Since \\(a=2>0\\) this is the minimum.",
+      "source": {
+        "page": 230
+      }
+    },
+    {
+      "id": "c2s4-mcq-014",
+      "type": "mcq",
+      "prompt": "Express \\(g(x)=3x^2-12x+13\\) in standard form.",
+      "options": [
+        "\\(g(x)=3(x-2)^2+13\\)",
+        "\\(g(x)=3(x-2)^2+1\\)",
+        "\\(g(x)=3(x-2)^2-11\\)",
+        "\\(g(x)=3(x+2)^2+1\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(g(x)=3(x^2-4x)+13=3\\big((x-2)^2-4\\big)+13=3(x-2)^2-12+13=3(x-2)^2+1\\).",
+      "source": {
+        "page": 231
+      }
+    },
+    {
+      "id": "c2s4-mcq-015",
+      "type": "mcq",
+      "prompt": "Which statement is correct for \\(f(x)=1-6x-x^2\\)?",
+      "options": [
+        "\\(f\\) has a minimum value \\(10\\) at \\(x=-3\\)",
+        "\\(f\\) has a maximum value \\(-8\\) at \\(x=-3\\)",
+        "\\(f\\) has a maximum value \\(10\\) at \\(x=-3\\)",
+        "\\(f\\) has a maximum value \\(10\\) at \\(x=3\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(f(x)=-(x^2+6x)+1=-\\big((x+3)^2-9\\big)+1=-(x+3)^2+10\\). Since \\(a=-1<0\\), the vertex \\((-3,10)\\) gives the maximum.",
+      "source": {
+        "page": 231
+      }
+    },
+    {
+      "id": "c2s4-mcq-016",
+      "type": "mcq",
+      "prompt": "The minimum value of \\(f(t)=10t^2+40t+113\\) is",
+      "options": [
+        "\\(113\\)",
+        "\\(-2\\)",
+        "\\(233\\)",
+        "\\(73\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(t=-\\frac{b}{2a}=-\\frac{40}{20}=-2\\) and \\(f(-2)=40-80+113=73\\). Since \\(a=10>0\\) this is the minimum.",
+      "source": {
+        "page": 231
+      }
+    },
+    {
+      "id": "c2s4-mcq-017",
+      "type": "mcq",
+      "prompt": "The maximum value of \\(f(t)=100-49t-7t^2\\) occurs at",
+      "options": [
+        "\\(t=-\\frac{7}{2}\\)",
+        "\\(t=\\frac{7}{2}\\)",
+        "\\(t=-7\\)",
+        "\\(t=7\\)"
+      ],
+      "answer": "A",
+      "explanation": "Here \\(a=-7,\\ b=-49\\), so \\(t=-\\frac{b}{2a}=-\\frac{-49}{2(-7)}=\\frac{49}{-14}=-\\frac{7}{2}\\). Since \\(a<0\\) it is a maximum.",
+      "source": {
+        "page": 231
+      }
+    },
+    {
+      "id": "c2s4-mcq-018",
+      "type": "mcq",
+      "prompt": "The minimum value of \\(f(x)=x^2+x+1\\) is",
+      "options": [
+        "\\(\\frac{1}{4}\\)",
+        "\\(\\frac{3}{4}\\)",
+        "\\(\\frac{5}{4}\\)",
+        "\\(1\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(x=-\\frac{b}{2a}=-\\frac{1}{2}\\) and \\(f(-\\frac{1}{2})=\\frac{1}{4}-\\frac{1}{2}+1=\\frac{3}{4}\\). Equivalently \\(f(x)=(x+\\frac{1}{2})^2+\\frac{3}{4}\\).",
+      "source": {
+        "page": 231
+      }
+    },
+    {
+      "id": "c2s4-tf-001",
+      "type": "tf",
+      "prompt": "The graph of \\(f(x)=-3(x+1)^2+2\\) is a parabola that opens upward.",
+      "answer": false,
+      "explanation": "Here \\(a=-3<0\\), so the parabola opens downward; its vertex \\((-1,2)\\) is the highest point.",
+      "source": {
+        "page": 219
+      }
+    },
+    {
+      "id": "c2s4-tf-002",
+      "type": "tf",
+      "prompt": "If \\(f(x)=a(x-h)^2+k\\) with \\(a>0\\), then the minimum value of \\(f\\) is \\(k\\) and it occurs at \\(x=h\\).",
+      "answer": true,
+      "explanation": "For \\(a>0\\) the parabola opens upward, so the vertex \\((h,k)\\) is the lowest point: minimum value \\(f(h)=k\\).",
+      "source": {
+        "page": 221
+      }
+    },
+    {
+      "id": "c2s4-tf-003",
+      "type": "tf",
+      "prompt": "The range of \\(f(x)=-x^2+x+2\\) is \\(\\left(-\\infty, \\frac{9}{4}\\right]\\).",
+      "answer": true,
+      "explanation": "\\(f(x)=-(x-\\frac{1}{2})^2+\\frac{9}{4}\\) opens downward with maximum value \\(\\frac{9}{4}\\), so the range is \\((-\\infty,\\frac{9}{4}]\\).",
+      "source": {
+        "page": 223
+      }
+    },
+    {
+      "id": "c2s4-tf-004",
+      "type": "tf",
+      "prompt": "The maximum or minimum value of \\(f(x)=ax^2+bx+c\\) occurs at \\(x=\\frac{b}{2a}\\).",
+      "answer": false,
+      "explanation": "It occurs at \\(x=-\\frac{b}{2a}\\) (note the minus sign). For example \\(f(x)=x^2+4x\\) has its minimum at \\(x=-2\\), not \\(x=2\\).",
+      "source": {
+        "page": 224
+      }
+    },
+    {
+      "id": "c2s4-match-001",
+      "type": "matching",
+      "title": "Match each quadratic function in standard form with its vertex and its maximum or minimum value.",
+      "pairs": [
+        {
+          "left": "\\(f(x)=2(x-3)^2+5\\)",
+          "right": "vertex (3, 5); minimum value 5"
+        },
+        {
+          "left": "\\(f(x)=-\\left(x-\\frac{1}{2}\\right)^2+\\frac{9}{4}\\)",
+          "right": "vertex (1/2, 9/4); maximum value 9/4"
+        },
+        {
+          "left": "\\(f(x)=(x+2)^2-4\\)",
+          "right": "vertex (-2, -4); minimum value -4"
+        },
+        {
+          "left": "\\(g(x)=-2(x-1)^2-3\\)",
+          "right": "vertex (1, -3); maximum value -3"
+        }
+      ],
+      "source": {
+        "page": 221
+      }
+    },
+    {
+      "id": "c2s4-mcq-019",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\frac{1}{x-2}\\) and \\(g(x)=\\sqrt{x}\\). The domain of \\(f+g\\) is",
+      "options": [
+        "\\([0,\\infty)\\)",
+        "\\((2,\\infty)\\)",
+        "\\([0,\\infty)\\setminus\\{2\\}\\)",
+        "\\((0,\\infty)\\setminus\\{2\\}\\)"
+      ],
+      "answer": "C",
+      "explanation": "Dom\\((f)\\) is \\(x\\ne2\\) and Dom\\((g)=[0,\\infty)\\); \\(f+g\\) is defined on the intersection, \\([0,\\infty)-\\{2\\}\\). (Only for \\(f/g\\) is \\(0\\) also removed, since \\(g(0)=0\\).)",
+      "source": {
+        "page": 232
+      }
+    },
+    {
+      "id": "c2s4-mcq-020",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\frac{1}{x-2}\\) and \\(g(x)=\\sqrt{x}\\). Then \\(\\left(\\frac{f}{g}\\right)(4)=\\)",
+      "options": [
+        "\\(1\\)",
+        "\\(\\frac{5}{2}\\)",
+        "\\(4\\)",
+        "\\(\\frac{1}{4}\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(f(4)=\\frac{1}{2}\\) and \\(g(4)=2\\), so \\(\\frac{f(4)}{g(4)}=\\frac{1/2}{2}=\\frac{1}{4}\\). (\\((fg)(4)=1\\) and \\((f+g)(4)=\\frac{5}{2}\\).)",
+      "source": {
+        "page": 233
+      }
+    },
+    {
+      "id": "c2s4-mcq-021",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=x^2\\) and \\(g(x)=x-3\\). Then \\((g\\circ f)(x)=\\)",
+      "options": [
+        "\\(x^2-3\\)",
+        "\\((x-3)^2\\)",
+        "\\(x^3-3x^2\\)",
+        "\\(x^2+3\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\((g\\circ f)(x)=g(f(x))=g(x^2)=x^2-3\\). Note \\((f\\circ g)(x)=(x-3)^2\\) is different.",
+      "source": {
+        "page": 235
+      }
+    },
+    {
+      "id": "c2s4-mcq-022",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=x^2\\) and \\(g(x)=x-3\\). Then \\((f\\circ g)(5)=\\)",
+      "options": [
+        "\\(22\\)",
+        "\\(4\\)",
+        "\\(2\\)",
+        "\\(25\\)"
+      ],
+      "answer": "B",
+      "explanation": "Apply \\(g\\) first: \\(g(5)=2\\); then \\(f(2)=4\\). (\\(22=(g\\circ f)(5)=25-3\\).)",
+      "source": {
+        "page": 235
+      }
+    },
+    {
+      "id": "c2s4-mcq-023",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\sqrt{x}\\) and \\(g(x)=\\sqrt{2-x}\\). The domain of \\(g\\circ f\\) is",
+      "options": [
+        "\\([0,\\infty)\\)",
+        "\\((-\\infty,2]\\)",
+        "\\([0,4]\\)",
+        "\\([0,2]\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\((g\\circ f)(x)=\\sqrt{2-\\sqrt{x}}\\): we need \\(x\\ge0\\) and \\(2-\\sqrt{x}\\ge0\\), i.e. \\(\\sqrt{x}\\le2\\), so \\(x\\le4\\). Hence \\([0,4]\\).",
+      "source": {
+        "page": 236
+      }
+    },
+    {
+      "id": "c2s4-mcq-024",
+      "type": "mcq",
+      "prompt": "Given \\(F(x)=\\sqrt[4]{x+9}\\), find functions \\(f\\) and \\(g\\) such that \\(F=f\\circ g\\).",
+      "options": [
+        "\\(f(x)=x+9,\\ g(x)=\\sqrt[4]{x}\\)",
+        "\\(f(x)=\\sqrt[4]{x},\\ g(x)=x-9\\)",
+        "\\(f(x)=x^4,\\ g(x)=x+9\\)",
+        "\\(f(x)=\\sqrt[4]{x},\\ g(x)=x+9\\)"
+      ],
+      "answer": "D",
+      "explanation": "The inner function is \\(g(x)=x+9\\) and the outer is the fourth root: \\(f(g(x))=f(x+9)=\\sqrt[4]{x+9}=F(x)\\).",
+      "source": {
+        "page": 237
+      }
+    },
+    {
+      "id": "c2s4-mcq-025",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=x^2+2x\\) and \\(g(x)=3x^2-1\\). Then \\((f-g)(x)=\\)",
+      "options": [
+        "\\(-2x^2+2x+1\\)",
+        "\\(4x^2+2x-1\\)",
+        "\\(-2x^2+2x-1\\)",
+        "\\(2x^2+2x-1\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\((f-g)(x)=(x^2+2x)-(3x^2-1)=x^2+2x-3x^2+1=-2x^2+2x+1\\). Watch the sign of \\(-(-1)=+1\\).",
+      "source": {
+        "page": 238
+      }
+    },
+    {
+      "id": "c2s4-mcq-026",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\sqrt{4-x^2}\\) and \\(g(x)=\\sqrt{1+x}\\). The domain of \\(fg\\) is",
+      "options": [
+        "\\((-1,2]\\)",
+        "\\([-1,2]\\)",
+        "\\([-2,2]\\)",
+        "\\([-1,\\infty)\\)"
+      ],
+      "answer": "B",
+      "explanation": "Dom\\((f)=[-2,2]\\) and Dom\\((g)=[-1,\\infty)\\). The product is defined on the intersection \\([-1,2]\\). (For \\(f/g\\) we would also drop \\(x=-1\\).)",
+      "source": {
+        "page": 239
+      }
+    },
+    {
+      "id": "c2s4-mcq-028",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=2x+3\\) and \\(g(x)=4x-1\\). Then \\((f\\circ g)(x)=\\)",
+      "options": [
+        "\\(8x+11\\)",
+        "\\(4x+9\\)",
+        "\\(8x+2\\)",
+        "\\(8x+1\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\((f\\circ g)(x)=f(4x-1)=2(4x-1)+3=8x-2+3=8x+1\\). (\\(8x+11\\) is \\(g\\circ f\\), \\(4x+9\\) is \\(f\\circ f\\).)",
+      "source": {
+        "page": 242
+      }
+    },
+    {
+      "id": "c2s4-mcq-029",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\frac{x}{x+1}\\) and \\(g(x)=2x-1\\). Then \\((g\\circ f)(x)=\\)",
+      "options": [
+        "\\(\\frac{x-1}{x+1}\\)",
+        "\\(\\frac{2x-1}{2x}\\)",
+        "\\(\\frac{2x-1}{x+1}\\)",
+        "\\(\\frac{x}{2x+1}\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\(g(f(x))=2\\cdot\\frac{x}{x+1}-1=\\frac{2x-(x+1)}{x+1}=\\frac{x-1}{x+1}\\), with domain \\(x\\ne-1\\).",
+      "source": {
+        "page": 243
+      }
+    },
+    {
+      "id": "c2s4-mcq-030",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\frac{1}{\\sqrt{x}}\\) and \\(g(x)=x^2-4x\\). The domain of \\(f\\circ g\\) is",
+      "options": [
+        "\\((-\\infty,0]\\cup[4,\\infty)\\)",
+        "\\((-\\infty,0)\\cup(4,\\infty)\\)",
+        "\\((0,4)\\)",
+        "\\((0,\\infty)\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\((f\\circ g)(x)=\\frac{1}{\\sqrt{x^2-4x}}\\) needs \\(g(x)>0\\) (strictly, since it is under a root in a denominator): \\(x(x-4)>0\\), so \\(x<0\\) or \\(x>4\\).",
+      "source": {
+        "page": 244
+      }
+    },
+    {
+      "id": "c2s4-mcq-031",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\sqrt{x+1}\\) and \\(g(x)=\\sqrt{3-x}\\). The domain of \\(\\frac{f}{g}\\) is",
+      "options": [
+        "\\([-1,3]\\)",
+        "\\((-1,3]\\)",
+        "\\([-1,3)\\)",
+        "\\((-1,3)\\)"
+      ],
+      "answer": "C",
+      "explanation": "Dom\\((f)\\cap\\)Dom\\((g)=[-1,\\infty)\\cap(-\\infty,3]=[-1,3]\\); for the quotient exclude \\(x=3\\) where \\(g(3)=0\\). \\(x=-1\\) stays (\\(f(-1)=0\\) is allowed in a numerator).",
+      "source": {
+        "page": 246
+      }
+    },
+    {
+      "id": "c2s4-mcq-032",
+      "type": "mcq",
+      "prompt": "The domain of \\(t(x)=\\frac{1}{x\\sqrt{x+2}}\\) is",
+      "options": [
+        "\\((-2,\\infty)\\)",
+        "\\([-2,0)\\cup(0,\\infty)\\)",
+        "\\((0,\\infty)\\)",
+        "\\((-2,0)\\cup(0,\\infty)\\)"
+      ],
+      "answer": "D",
+      "explanation": "The root is in the denominator, so \\(x+2>0\\), i.e. \\(x>-2\\); also the factor \\(x\\ne0\\). Hence \\((-2,0)\\cup(0,\\infty)\\).",
+      "source": {
+        "page": 247
+      }
+    },
+    {
+      "id": "c2s4-mcq-033",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=x^2-9\\) and \\(g(x)=\\sqrt{x+1}\\). Then \\(f\\circ g\\) is",
+      "options": [
+        "\\((f\\circ g)(x)=x-8\\) with domain \\([-1,\\infty)\\)",
+        "\\((f\\circ g)(x)=x-8\\) with domain \\(\\mathbb{R}\\)",
+        "\\((f\\circ g)(x)=\\sqrt{x^2-8}\\) with domain \\([-1,\\infty)\\)",
+        "\\((f\\circ g)(x)=x-10\\) with domain \\([-1,\\infty)\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\(f(g(x))=(\\sqrt{x+1})^2-9=x+1-9=x-8\\), but \\(x\\) must lie in the domain of \\(g\\): \\(x\\ge-1\\). The simplified formula does not enlarge the domain.",
+      "source": {
+        "page": 248
+      }
+    },
+    {
+      "id": "c2s4-mcq-034",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=2x+1\\), \\(g(x)=x^2\\) and \\(h(x)=x-3\\). Then \\((f\\circ g\\circ h)(x)=\\)",
+      "options": [
+        "\\((2x+1)^2-3\\)",
+        "\\(2(x-3)^2+1\\)",
+        "\\(2x^2-2\\)",
+        "\\((2x-5)^2\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\((f\\circ g\\circ h)(x)=f(g(h(x)))\\): apply \\(h\\) first, then \\(g\\), then \\(f\\): \\(f(g(x-3))=f((x-3)^2)=2(x-3)^2+1\\).",
+      "source": {
+        "page": 248
+      }
+    },
+    {
+      "id": "c2s4-mcq-035",
+      "type": "mcq",
+      "prompt": "Express \\(G(x)=\\sqrt{5x-4}\\) in the form \\(f\\circ g\\).",
+      "options": [
+        "\\(f(x)=5x-4,\\ g(x)=\\sqrt{x}\\)",
+        "\\(f(x)=\\sqrt{x},\\ g(x)=5x\\)",
+        "\\(f(x)=\\sqrt{x},\\ g(x)=5x-4\\)",
+        "\\(f(x)=\\sqrt{5x},\\ g(x)=x-4\\)"
+      ],
+      "answer": "C",
+      "explanation": "Inner function \\(g(x)=5x-4\\), outer function \\(f(x)=\\sqrt{x}\\): \\(f(g(x))=\\sqrt{5x-4}\\). Option A gives \\(5\\sqrt{x}-4\\) and option D gives \\(\\sqrt{5x-20}\\).",
+      "source": {
+        "page": 249
+      }
+    },
+    {
+      "id": "c2s4-tf-005",
+      "type": "tf",
+      "prompt": "For any two functions \\(f\\) and \\(g\\), \\((f\\circ g)(x)=(g\\circ f)(x)\\) for all \\(x\\).",
+      "answer": false,
+      "explanation": "In general \\(f\\circ g\\ne g\\circ f\\). For \\(f(x)=x^2\\), \\(g(x)=x-3\\): \\((f\\circ g)(x)=(x-3)^2\\) but \\((g\\circ f)(x)=x^2-3\\).",
+      "source": {
+        "page": 235
+      }
+    },
+    {
+      "id": "c2s4-tf-006",
+      "type": "tf",
+      "prompt": "If \\(f(x)=\\frac{1}{x}\\), then \\((f\\circ f)(x)=x\\), so the domain of \\(f\\circ f\\) is all real numbers.",
+      "answer": false,
+      "explanation": "\\(f(f(x))=\\frac{1}{1/x}=x\\) only for \\(x\\ne0\\); \\(x\\) must be in the domain of the inner \\(f\\). Dom\\((f\\circ f)=\\mathbb{R}\\setminus\\{0\\}\\).",
+      "source": {
+        "page": 242
+      }
+    },
+    {
+      "id": "c2s4-tf-007",
+      "type": "tf",
+      "prompt": "If \\(f(x)=x-1\\), \\(g(x)=\\sqrt{x}\\) and \\(h(x)=x-1\\), then \\((f\\circ g\\circ h)(x)=\\sqrt{x-1}-1\\) with domain \\([1,\\infty)\\).",
+      "answer": true,
+      "explanation": "\\(f(g(h(x)))=f(\\sqrt{x-1})=\\sqrt{x-1}-1\\), and \\(\\sqrt{x-1}\\) requires \\(x\\ge1\\).",
+      "source": {
+        "page": 245
+      }
+    },
+    {
+      "id": "c2s4-tf-008",
+      "type": "tf",
+      "prompt": "The graph of \\(f+g\\) can be obtained by graphical addition: at each \\(x\\), the value \\(f(x)\\) is added on top of \\(g(x)\\).",
+      "answer": true,
+      "explanation": "Since \\((f+g)(x)=f(x)+g(x)\\), the point on the graph of \\(f+g\\) above \\(x\\) is found by copying the segment of length \\(f(x)\\) on top of the point of the graph of \\(g\\).",
+      "source": {
+        "page": 233
+      }
+    },
+    {
+      "id": "c2s4-match-002",
+      "type": "matching",
+      "title": "Let \\(f\\) have domain \\(A\\) and \\(g\\) have domain \\(B\\). Match each combination with its definition.",
+      "pairs": [
+        {
+          "left": "\\((f+g)(x)\\)",
+          "right": "f(x) + g(x), domain A ∩ B"
+        },
+        {
+          "left": "\\((fg)(x)\\)",
+          "right": "f(x) g(x), domain A ∩ B"
+        },
+        {
+          "left": "\\(\\left(\\frac{f}{g}\\right)(x)\\)",
+          "right": "f(x) / g(x), domain: x in A ∩ B with g(x) ≠ 0"
+        },
+        {
+          "left": "\\((f\\circ g)(x)\\)",
+          "right": "f(g(x)): apply g first, then f"
+        },
+        {
+          "left": "\\((g\\circ f)(x)\\)",
+          "right": "g(f(x)): apply f first, then g"
+        }
+      ],
+      "source": {
+        "page": 232
+      }
+    },
+    {
+      "id": "c2s4-match-003",
+      "type": "matching",
+      "title": "Match each function with its domain.",
+      "pairs": [
+        {
+          "left": "\\(f(x)=\\sqrt{x}+\\sqrt{1-x}\\)",
+          "right": "[0, 1]"
+        },
+        {
+          "left": "\\(k(x)=\\frac{\\sqrt{x+3}}{x-1}\\)",
+          "right": "[-3, ∞) without x = 1"
+        },
+        {
+          "left": "\\(h(x)=\\sqrt{9-x^2}\\)",
+          "right": "[-3, 3]"
+        },
+        {
+          "left": "\\(p(x)=\\frac{1}{\\sqrt{x^2-4}}\\)",
+          "right": "(-∞, -2) ∪ (2, ∞)"
+        },
+        {
+          "left": "\\(f(x)=\\sqrt{x-2}+\\sqrt{5-x}\\)",
+          "right": "[2, 5]"
+        }
+      ],
+      "source": {
+        "page": 247
+      }
+    },
+    {
+      "id": "c2s4-match-004",
+      "type": "matching",
+      "title": "Let \\(f(x)=\\frac{1}{x}\\) and \\(g(x)=2x+4\\). Match each composition with its formula.",
+      "pairs": [
+        {
+          "left": "\\((f\\circ g)(x)\\)",
+          "right": "1 / (2x + 4)"
+        },
+        {
+          "left": "\\((g\\circ f)(x)\\)",
+          "right": "2/x + 4"
+        },
+        {
+          "left": "\\((f\\circ f)(x)\\)",
+          "right": "x (for x ≠ 0)"
+        },
+        {
+          "left": "\\((g\\circ g)(x)\\)",
+          "right": "4x + 12"
+        }
+      ],
+      "source": {
+        "page": 242
+      }
+    },
+    {
+      "id": "c2s5-mcq-001",
+      "type": "mcq",
+      "prompt": "According to the definition, a function \\(f\\) is one-to-one (injective) if",
+      "options": [
+        "\\(f(x_1)=f(x_2)\\) implies \\(x_1=x_2\\)",
+        "\\(x_1=x_2\\) implies \\(f(x_1)=f(x_2)\\)",
+        "every horizontal line meets its graph at least once",
+        "no vertical line meets its graph more than once"
+      ],
+      "answer": "A",
+      "explanation": "One-to-one means \\(f\\) never takes the same value twice: \\(f(x_1)=f(x_2) \\Rightarrow x_1=x_2\\) (equivalently \\(x_1\\ne x_2 \\Rightarrow f(x_1)\\ne f(x_2)\\)). Option B holds for every function, and D is the vertical line test for being a function.",
+      "source": {
+        "page": 250
+      }
+    },
+    {
+      "id": "c2s5-mcq-002",
+      "type": "mcq",
+      "prompt": "The horizontal line \\(y=4\\) meets the graph of a function \\(f\\) at the two points \\((-2,4)\\) and \\((2,4)\\). What can be concluded?",
+      "options": [
+        "\\(f\\) is not a function",
+        "\\(f\\) is one-to-one",
+        "\\(f\\) is not one-to-one",
+        "\\(f\\) has an inverse function"
+      ],
+      "answer": "C",
+      "explanation": "Horizontal line test: a function is one-to-one if and only if no horizontal line meets its graph more than once. Here \\(f(-2)=f(2)=4\\) with \\(-2\\ne 2\\), so \\(f\\) is not one-to-one (and has no inverse function).",
+      "source": {
+        "page": 250
+      }
+    },
+    {
+      "id": "c2s5-mcq-003",
+      "type": "mcq",
+      "prompt": "Let \\(A=\\{1,2,3\\}\\) and let \\(g\\) be the function on \\(A\\) given by \\(g(1)=5,\\ g(2)=4,\\ g(3)=4\\). Which statement is true?",
+      "options": [
+        "\\(g\\) is one-to-one because every element of \\(A\\) has an image",
+        "\\(g\\) is not a function",
+        "\\(g\\) is not one-to-one because \\(g(2)=g(3)\\)",
+        "\\(g\\) is one-to-one because \\(5\\ne 4\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(g\\) takes the value 4 twice (\\(g(2)=g(3)=4\\) with \\(2\\ne 3\\)), so it is not one-to-one, exactly like the arrow diagram in Figure 2.13. Every element having an image only makes \\(g\\) a function.",
+      "source": {
+        "page": 250
+      }
+    },
+    {
+      "id": "c2s5-mcq-004",
+      "type": "mcq",
+      "prompt": "To show that \\(f(x)=3x+4\\) is onto (surjective), we take any real number \\(y\\) and solve \\(y=3x+4\\) for \\(x\\). The result is",
+      "options": [
+        "\\(x=\\frac{y-4}{3}\\)",
+        "\\(x=\\frac{y+4}{3}\\)",
+        "\\(x=3y-4\\)",
+        "\\(x=\\frac{y}{3}-4\\)"
+      ],
+      "answer": "A",
+      "explanation": "Subtract 4 then divide by 3: \\(3x=y-4\\), so \\(x=\\frac{y-4}{3}\\in\\mathbb{R}\\). Every \\(y\\) in the codomain is an image, so \\(f\\) is onto; being also one-to-one, \\(f\\) is bijective.",
+      "source": {
+        "page": 252
+      }
+    },
+    {
+      "id": "c2s5-mcq-005",
+      "type": "mcq",
+      "prompt": "A one-to-one function \\(f\\) has domain \\([2,\\infty)\\) and range \\([0,\\infty)\\). Then its inverse \\(f^{-1}\\) has",
+      "options": [
+        "domain \\([2,\\infty)\\) and range \\([0,\\infty)\\)",
+        "domain \\([0,\\infty)\\) and range \\([2,\\infty)\\)",
+        "domain \\(\\mathbb{R}\\) and range \\(\\mathbb{R}\\)",
+        "domain \\((0,\\infty)\\) and range \\((2,\\infty)\\)"
+      ],
+      "answer": "B",
+      "explanation": "By the definition of the inverse, domain of \\(f^{-1}\\) = range of \\(f\\) = \\([0,\\infty)\\) and range of \\(f^{-1}\\) = domain of \\(f\\) = \\([2,\\infty)\\). The endpoints stay closed.",
+      "source": {
+        "page": 253
+      }
+    },
+    {
+      "id": "c2s5-mcq-006",
+      "type": "mcq",
+      "prompt": "If \\(f(1)=5\\), \\(f(3)=7\\) and \\(f(8)=-10\\) for a one-to-one function \\(f\\), then \\(f^{-1}(7)=\\)",
+      "options": [
+        "\\(7\\)",
+        "\\(\\frac{1}{7}\\)",
+        "\\(1\\)",
+        "\\(3\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(f^{-1}(y)=x \\iff f(x)=y\\). Since \\(f(3)=7\\), we get \\(f^{-1}(7)=3\\). Note that \\(f^{-1}(7)\\) is not \\(\\frac{1}{7}\\).",
+      "source": {
+        "page": 253
+      }
+    },
+    {
+      "id": "c2s5-mcq-007",
+      "type": "mcq",
+      "prompt": "To find the inverse of a one-to-one function \\(f\\), we write \\(y=f(x)\\), solve this equation for \\(x\\) in terms of \\(y\\), and then",
+      "options": [
+        "take the reciprocal of both sides",
+        "interchange \\(x\\) and \\(y\\); the resulting equation is \\(y=f^{-1}(x)\\)",
+        "replace \\(x\\) by \\(-x\\)",
+        "set \\(y=0\\) and solve for \\(x\\)"
+      ],
+      "answer": "B",
+      "explanation": "Steps: (1) write \\(y=f(x)\\); (2) solve for \\(x\\) in terms of \\(y\\); (3) interchange \\(x\\) and \\(y\\) to get \\(y=f^{-1}(x)\\). Steps 2 and 3 may also be done in the other order.",
+      "source": {
+        "page": 254
+      }
+    },
+    {
+      "id": "c2s5-mcq-008",
+      "type": "mcq",
+      "prompt": "Find the inverse of the function \\(f(x)=3x-2\\).",
+      "options": [
+        "\\(f^{-1}(x)=\\frac{x+2}{3}\\)",
+        "\\(f^{-1}(x)=\\frac{x-2}{3}\\)",
+        "\\(f^{-1}(x)=\\frac{1}{3x-2}\\)",
+        "\\(f^{-1}(x)=2-3x\\)"
+      ],
+      "answer": "A",
+      "explanation": "From \\(y=3x-2\\): \\(3x=y+2\\), so \\(x=\\frac{y+2}{3}\\). Interchanging \\(x\\) and \\(y\\) gives \\(f^{-1}(x)=\\frac{x+2}{3}\\).",
+      "source": {
+        "page": 254
+      }
+    },
+    {
+      "id": "c2s5-mcq-009",
+      "type": "mcq",
+      "prompt": "Find the inverse of the function \\(f(x)=\\frac{x^5-3}{2}\\).",
+      "options": [
+        "\\(f^{-1}(x)=(2x-3)^{1/5}\\)",
+        "\\(f^{-1}(x)=\\frac{2}{x^5-3}\\)",
+        "\\(f^{-1}(x)=\\left(\\frac{x+3}{2}\\right)^{1/5}\\)",
+        "\\(f^{-1}(x)=(2x+3)^{1/5}\\)"
+      ],
+      "answer": "D",
+      "explanation": "From \\(y=\\frac{x^5-3}{2}\\): \\(2y=x^5-3\\), \\(x^5=2y+3\\), \\(x=(2y+3)^{1/5}\\). Interchange \\(x\\) and \\(y\\): \\(f^{-1}(x)=(2x+3)^{1/5}\\).",
+      "source": {
+        "page": 255
+      }
+    },
+    {
+      "id": "c2s5-mcq-010",
+      "type": "mcq",
+      "prompt": "The point \\((3,-5)\\) lies on the graph of a one-to-one function \\(f\\). Which point must lie on the graph of \\(f^{-1}\\)?",
+      "options": [
+        "\\((-3,5)\\)",
+        "\\((5,-3)\\)",
+        "\\((-5,3)\\)",
+        "\\(\\left(\\frac{1}{3},-\\frac{1}{5}\\right)\\)"
+      ],
+      "answer": "C",
+      "explanation": "If \\(f(a)=b\\) then \\(f^{-1}(b)=a\\), so \\((a,b)\\) on the graph of \\(f\\) gives \\((b,a)\\) on the graph of \\(f^{-1}\\): here \\((3,-5)\\) becomes \\((-5,3)\\). This is the reflection in the line \\(y=x\\).",
+      "source": {
+        "page": 255
+      }
+    },
+    {
+      "id": "c2s5-mcq-011",
+      "type": "mcq",
+      "prompt": "Find an equation for the inverse of \\(f(x)=\\sqrt{x-2}\\).",
+      "options": [
+        "\\(f^{-1}(x)=x^2-2\\)",
+        "\\(f^{-1}(x)=x^2+2\\)",
+        "\\(f^{-1}(x)=\\sqrt{x+2}\\)",
+        "\\(f^{-1}(x)=\\frac{1}{\\sqrt{x-2}}\\)"
+      ],
+      "answer": "B",
+      "explanation": "Swap \\(x\\) and \\(y\\) in \\(y=\\sqrt{x-2}\\): \\(x=\\sqrt{y-2}\\). Square: \\(x^2=y-2\\), so \\(y=x^2+2\\). Thus \\(f^{-1}(x)=x^2+2\\) with domain \\([0,\\infty)\\).",
+      "source": {
+        "page": 256
+      }
+    },
+    {
+      "id": "c2s5-mcq-012",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\sqrt{x-2}\\). The domain of \\(f^{-1}\\) is",
+      "options": [
+        "\\([0,\\infty)\\)",
+        "\\([2,\\infty)\\)",
+        "\\(\\mathbb{R}\\)",
+        "\\((-\\infty,2]\\)"
+      ],
+      "answer": "A",
+      "explanation": "The domain of \\(f^{-1}\\) equals the range of \\(f\\). Since \\(\\sqrt{x-2}\\ge 0\\), the range of \\(f\\) is \\([0,\\infty)\\), so \\(f^{-1}(x)=x^2+2\\) is defined only for \\(x\\ge 0\\). \\([2,\\infty)\\) is the domain of \\(f\\), i.e. the range of \\(f^{-1}\\).",
+      "source": {
+        "page": 256
+      }
+    },
+    {
+      "id": "c2s5-mcq-013",
+      "type": "mcq",
+      "prompt": "Which of the following functions is NOT one-to-one?",
+      "options": [
+        "\\(f(x)=-2x+4\\)",
+        "\\(g(x)=\\sqrt{x}\\)",
+        "\\(g(x)=|x|\\)",
+        "\\(h(x)=x^3+8\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(|{-2}|=|2|=2\\), so \\(g(-2)=g(2)\\) with \\(-2\\ne 2\\): \\(g(x)=|x|\\) fails the horizontal line test. For the other three, \\(f(x_1)=f(x_2)\\) forces \\(x_1=x_2\\).",
+      "source": {
+        "page": 258
+      }
+    },
+    {
+      "id": "c2s5-mcq-014",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\frac{3-x}{4}\\). Which function \\(g\\) satisfies \\(f(g(x))=x\\) and \\(g(f(x))=x\\) for every real \\(x\\)?",
+      "options": [
+        "\\(g(x)=4x-3\\)",
+        "\\(g(x)=4x+3\\)",
+        "\\(g(x)=\\frac{4-x}{3}\\)",
+        "\\(g(x)=3-4x\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(f(g(x))=\\frac{3-(3-4x)}{4}=\\frac{4x}{4}=x\\) and \\(g(f(x))=3-(3-x)=x\\). By the Inverse Function Property, \\(f\\) and \\(g\\) are inverses. With \\(4x-3\\) one gets \\(f(4x-3)=\\frac{6-4x}{4}\\ne x\\).",
+      "source": {
+        "page": 261
+      }
+    },
+    {
+      "id": "c2s5-mcq-015",
+      "type": "mcq",
+      "prompt": "Find the inverse of \\(f(x)=\\frac{1+3x}{5-2x}\\).",
+      "options": [
+        "\\(f^{-1}(x)=\\frac{5x+1}{2x-3}\\)",
+        "\\(f^{-1}(x)=\\frac{5x-1}{2x+3}\\)",
+        "\\(f^{-1}(x)=\\frac{5-2x}{1+3x}\\)",
+        "\\(f^{-1}(x)=\\frac{1-5x}{2x+3}\\)"
+      ],
+      "answer": "B",
+      "explanation": "Cross-multiply \\(y(5-2x)=1+3x\\): \\(5y-1=3x+2xy=x(2y+3)\\), so \\(x=\\frac{5y-1}{2y+3}\\). Interchange: \\(f^{-1}(x)=\\frac{5x-1}{2x+3}\\). The reciprocal \\(\\frac{5-2x}{1+3x}\\) is not the inverse.",
+      "source": {
+        "page": 263
+      }
+    },
+    {
+      "id": "c2s5-mcq-016",
+      "type": "mcq",
+      "prompt": "Find the inverse of \\(f(x)=\\frac{x-2}{x+2}\\).",
+      "options": [
+        "\\(f^{-1}(x)=\\frac{2(1+x)}{1-x}\\)",
+        "\\(f^{-1}(x)=\\frac{x+2}{x-2}\\)",
+        "\\(f^{-1}(x)=\\frac{2(1-x)}{1+x}\\)",
+        "\\(f^{-1}(x)=\\frac{2(1+x)}{x-1}\\)"
+      ],
+      "answer": "A",
+      "explanation": "From \\(y(x+2)=x-2\\): \\(yx-x=-2-2y\\), so \\(x(y-1)=-2(1+y)\\) and \\(x=\\frac{2(1+y)}{1-y}\\). Interchange: \\(f^{-1}(x)=\\frac{2(1+x)}{1-x}\\), undefined at \\(x=1\\).",
+      "source": {
+        "page": 263
+      }
+    },
+    {
+      "id": "c2s5-mcq-017",
+      "type": "mcq",
+      "prompt": "Find the inverse of \\(f(x)=x^2+x\\), \\(x\\ge -\\frac{1}{2}\\).",
+      "options": [
+        "\\(f^{-1}(x)=\\frac{-1-\\sqrt{1+4x}}{2}\\)",
+        "\\(f^{-1}(x)=\\frac{1+\\sqrt{1+4x}}{2}\\)",
+        "\\(f^{-1}(x)=\\frac{-1+\\sqrt{1-4x}}{2}\\)",
+        "\\(f^{-1}(x)=\\frac{-1+\\sqrt{1+4x}}{2}\\)"
+      ],
+      "answer": "D",
+      "explanation": "Solve \\(x^2+x-y=0\\) by the quadratic formula: \\(x=\\frac{-1\\pm\\sqrt{1+4y}}{2}\\). The domain \\(x\\ge-\\frac{1}{2}\\) (right half of the parabola) selects the \\(+\\) sign. Interchanging gives \\(f^{-1}(x)=\\frac{-1+\\sqrt{1+4x}}{2}\\), \\(x\\ge-\\frac{1}{4}\\).",
+      "source": {
+        "page": 264
+      }
+    },
+    {
+      "id": "c2s5-mcq-018",
+      "type": "mcq",
+      "prompt": "Find the inverse of \\(f(x)=\\frac{4x-7}{3x+1}\\).",
+      "options": [
+        "\\(f^{-1}(x)=\\frac{3x+1}{4x-7}\\)",
+        "\\(f^{-1}(x)=\\frac{x-7}{3x+4}\\)",
+        "\\(f^{-1}(x)=\\frac{7+x}{4-3x}\\)",
+        "\\(f^{-1}(x)=\\frac{7+x}{3x-4}\\)"
+      ],
+      "answer": "C",
+      "explanation": "From \\(y(3x+1)=4x-7\\): \\(3xy-4x=-7-y\\), so \\(x(3y-4)=-7-y\\) and \\(x=\\frac{7+y}{4-3y}\\). Interchange: \\(f^{-1}(x)=\\frac{7+x}{4-3x}\\). Watch the sign of the denominator.",
+      "source": {
+        "page": 265
+      }
+    },
+    {
+      "id": "c2s5-mcq-019",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\frac{4x-7}{3x+1}\\). Which value is NOT in the domain of \\(f^{-1}\\)?",
+      "options": [
+        "\\(-\\frac{1}{3}\\)",
+        "\\(\\frac{4}{3}\\)",
+        "\\(\\frac{3}{4}\\)",
+        "\\(\\frac{7}{4}\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(f^{-1}(x)=\\frac{7+x}{4-3x}\\) is undefined where \\(4-3x=0\\), i.e. at \\(x=\\frac{4}{3}\\) (the value \\(\\frac{4}{3}\\) is not in the range of \\(f\\)). The value \\(-\\frac{1}{3}\\) is excluded from the domain of \\(f\\), not of \\(f^{-1}\\).",
+      "source": {
+        "page": 265
+      }
+    },
+    {
+      "id": "c2s5-mcq-020",
+      "type": "mcq",
+      "prompt": "Find the inverse of \\(f(x)=\\sqrt[3]{x-5}\\).",
+      "options": [
+        "\\(f^{-1}(x)=x^3+5\\)",
+        "\\(f^{-1}(x)=x^3-5\\)",
+        "\\(f^{-1}(x)=\\sqrt[3]{x+5}\\)",
+        "\\(f^{-1}(x)=(x+5)^3\\)"
+      ],
+      "answer": "A",
+      "explanation": "Cube both sides of \\(y=\\sqrt[3]{x-5}\\): \\(y^3=x-5\\), so \\(x=y^3+5\\). Interchange: \\(f^{-1}(x)=x^3+5\\); domain and range are both \\(\\mathbb{R}\\).",
+      "source": {
+        "page": 265
+      }
+    },
+    {
+      "id": "c2s5-mcq-021",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=16-x^2\\), \\(x\\ge 0\\). Then \\(f^{-1}(x)=\\)",
+      "options": [
+        "\\(-\\sqrt{16-x}\\)",
+        "\\(\\sqrt{x-16}\\)",
+        "\\(16-\\sqrt{x}\\)",
+        "\\(\\sqrt{16-x}\\)"
+      ],
+      "answer": "D",
+      "explanation": "From \\(y=16-x^2\\): \\(x^2=16-y\\); since \\(x\\ge 0\\) take the nonnegative root \\(x=\\sqrt{16-y}\\). Interchange: \\(f^{-1}(x)=\\sqrt{16-x}\\), with domain \\((-\\infty,16]\\) (the range of \\(f\\)).",
+      "source": {
+        "page": 267
+      }
+    },
+    {
+      "id": "c2s5-mcq-022",
+      "type": "mcq",
+      "prompt": "Which pair of values shows that \\(f(x)=x^3-3x+1\\) is NOT one-to-one?",
+      "options": [
+        "\\(x=0\\) and \\(x=1\\)",
+        "\\(x=1\\) and \\(x=-2\\)",
+        "\\(x=2\\) and \\(x=-2\\)",
+        "\\(x=1\\) and \\(x=-1\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(f(1)=1-3+1=-1\\) and \\(f(-2)=-8+6+1=-1\\), so \\(f(1)=f(-2)\\) with \\(1\\ne-2\\): the horizontal line \\(y=-1\\) meets the graph more than once. In each other pair the two values differ: \\(f(0)=1\\ne f(1)\\), \\(f(2)=3\\ne f(-2)=-1\\), \\(f(1)=-1\\ne f(-1)=3\\).",
+      "source": {
+        "page": 268
+      }
+    },
+    {
+      "id": "c2s5-mcq-023",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=\\frac{1}{x+2}\\). Which function \\(g\\) is the inverse of \\(f\\)?",
+      "options": [
+        "\\(g(x)=\\frac{1}{x}+2\\)",
+        "\\(g(x)=\\frac{1}{x-2}\\)",
+        "\\(g(x)=\\frac{1}{x}-2\\)",
+        "\\(g(x)=x-2\\)"
+      ],
+      "answer": "C",
+      "explanation": "Since \\(\\frac{1}{x}-2+2=\\frac{1}{x}\\), we get \\(f(g(x))=\\frac{1}{1/x}=x\\); also \\(g(f(x))=(x+2)-2=x\\), so the Inverse Function Property holds. Directly: \\(y=\\frac{1}{x+2}\\) gives \\(x=\\frac{1}{y}-2\\).",
+      "source": {
+        "page": 268
+      }
+    },
+    {
+      "id": "c2s5-mcq-024",
+      "type": "mcq",
+      "prompt": "Find the inverse of \\(f(x)=x^2-4x+5\\), \\(x\\ge 2\\).",
+      "options": [
+        "\\(f^{-1}(x)=2-\\sqrt{x-1}\\)",
+        "\\(f^{-1}(x)=\\sqrt{x-1}-2\\)",
+        "\\(f^{-1}(x)=2+\\sqrt{x+1}\\)",
+        "\\(f^{-1}(x)=2+\\sqrt{x-1}\\)"
+      ],
+      "answer": "D",
+      "explanation": "Solve \\(x^2-4x+(5-y)=0\\): \\(x=\\frac{4\\pm\\sqrt{4y-4}}{2}\\), i.e. \\(x=2\\pm\\sqrt{y-1}\\). The domain \\(x\\ge 2\\) selects the \\(+\\) sign, so \\(f^{-1}(x)=2+\\sqrt{x-1}\\), \\(x\\ge 1\\).",
+      "source": {
+        "page": 268
+      }
+    },
+    {
+      "id": "c2s5-mcq-025",
+      "type": "mcq",
+      "prompt": "Find the inverse of \\(f(x)=\\frac{4x-1}{x+2}\\).",
+      "options": [
+        "\\(f^{-1}(x)=\\frac{2x+1}{4-x}\\)",
+        "\\(f^{-1}(x)=\\frac{2x+1}{x-4}\\)",
+        "\\(f^{-1}(x)=\\frac{x+2}{4x-1}\\)",
+        "\\(f^{-1}(x)=\\frac{2x-1}{x+4}\\)"
+      ],
+      "answer": "A",
+      "explanation": "From \\(y(x+2)=4x-1\\): \\(xy-4x=-1-2y\\), so \\(x(y-4)=-(2y+1)\\) and \\(x=\\frac{2y+1}{4-y}\\). Interchange: \\(f^{-1}(x)=\\frac{2x+1}{4-x}\\).",
+      "source": {
+        "page": 268
+      }
+    },
+    {
+      "id": "c2s5-mcq-026",
+      "type": "mcq",
+      "prompt": "Let \\(f(x)=9-x^2\\), \\(x\\ge 0\\). The domain of \\(f^{-1}\\) is",
+      "options": [
+        "\\([0,\\infty)\\)",
+        "\\([0,9]\\)",
+        "\\((-\\infty,9]\\)",
+        "\\([9,\\infty)\\)"
+      ],
+      "answer": "C",
+      "explanation": "Domain of \\(f^{-1}\\) = range of \\(f\\). For \\(x\\ge 0\\), \\(9-x^2\\) starts at 9 and decreases without bound, so the range is \\((-\\infty,9]\\); indeed \\(f^{-1}(x)=\\sqrt{9-x}\\) needs \\(x\\le 9\\).",
+      "source": {
+        "page": 269
+      }
+    },
+    {
+      "id": "c2s5-tf-001",
+      "type": "tf",
+      "prompt": "If some horizontal line intersects the graph of a function \\(f\\) at two different points, then \\(f\\) is not one-to-one.",
+      "answer": true,
+      "explanation": "Two points \\((x_1,c)\\) and \\((x_2,c)\\) on the graph mean \\(f(x_1)=f(x_2)\\) with \\(x_1\\ne x_2\\), so \\(f\\) is not one-to-one (horizontal line test).",
+      "source": {
+        "page": 250
+      }
+    },
+    {
+      "id": "c2s5-tf-002",
+      "type": "tf",
+      "prompt": "The functions \\(f(x)=x^3\\) and \\(g(x)=\\frac{1}{x^3}\\) are inverses of each other.",
+      "answer": false,
+      "explanation": "\\(g(f(x))=\\frac{1}{x^9}\\ne x\\). The inverse of \\(x^3\\) is the cube root \\(x^{1/3}\\); the symbol \\(f^{-1}\\) does not mean \\(\\frac{1}{f}\\).",
+      "source": {
+        "page": 253
+      }
+    },
+    {
+      "id": "c2s5-tf-003",
+      "type": "tf",
+      "prompt": "The function \\(f(x)=6-x\\) is its own inverse, that is \\(f^{-1}(x)=6-x\\).",
+      "answer": true,
+      "explanation": "From \\(y=6-x\\) we get \\(x=6-y\\); interchanging gives \\(f^{-1}(x)=6-x=f(x)\\). Check: \\(f(f(x))=6-(6-x)=x\\).",
+      "source": {
+        "page": 262
+      }
+    },
+    {
+      "id": "c2s5-tf-004",
+      "type": "tf",
+      "prompt": "The function \\(f(x)=x^2+2\\) is one-to-one on \\(\\mathbb{R}\\).",
+      "answer": false,
+      "explanation": "\\(f(1)=f(-1)=3\\) with \\(1\\ne-1\\), so \\(f\\) takes the same value twice; the horizontal line \\(y=3\\) meets the parabola at two points.",
+      "source": {
+        "page": 268
+      }
+    },
+    {
+      "id": "c2s5-tf-005",
+      "type": "tf",
+      "prompt": "If \\(f(x)=\\sqrt{x+3}\\), \\(x\\ge-3\\), then \\(f^{-1}(x)=x^2-3\\) with domain \\([0,\\infty)\\).",
+      "answer": true,
+      "explanation": "Swap and square: \\(x=\\sqrt{y+3}\\Rightarrow y=x^2-3\\). The domain of \\(f^{-1}\\) is the range of \\(f\\), which is \\([0,\\infty)\\).",
+      "source": {
+        "page": 268
+      }
+    },
+    {
+      "id": "c2s5-match-001",
+      "type": "matching",
+      "title": "Match each statement about a function \\(f:A\\to B\\) with the term it describes.",
+      "pairs": [
+        {
+          "left": "\\(f(x_1)=f(x_2) \\Rightarrow x_1=x_2\\)",
+          "right": "one-to-one (injective)"
+        },
+        {
+          "left": "\\(\\mathrm{Range}(f)=B\\)",
+          "right": "onto (surjective)"
+        },
+        {
+          "left": "\\(f\\) is both injective and surjective",
+          "right": "bijective"
+        },
+        {
+          "left": "\\(f(2)=f(-2)=4\\) for \\(f(x)=x^2\\)",
+          "right": "not one-to-one"
+        }
+      ],
+      "source": {
+        "page": 251
+      }
+    },
+    {
+      "id": "c2s5-match-002",
+      "type": "matching",
+      "title": "Let \\(f\\) be a one-to-one function. Match each item with the correct fact about \\(f^{-1}\\).",
+      "pairs": [
+        {
+          "left": "Domain of \\(f^{-1}\\)",
+          "right": "the range of f"
+        },
+        {
+          "left": "Range of \\(f^{-1}\\)",
+          "right": "the domain of f"
+        },
+        {
+          "left": "\\(f^{-1}(f(x))\\) for \\(x\\) in the domain of \\(f\\)",
+          "right": "x"
+        },
+        {
+          "left": "\\(f^{-1}(b)\\) when \\(f(a)=b\\)",
+          "right": "a"
+        },
+        {
+          "left": "The graph of \\(f^{-1}\\)",
+          "right": "the reflection of the graph of f in the line y = x"
+        }
+      ],
+      "source": {
+        "page": 253
+      }
+    },
+    {
+      "id": "c2s5-match-003",
+      "type": "matching",
+      "title": "Match each function with the correct conclusion.",
+      "pairs": [
+        {
+          "left": "\\(f(x)=|x|\\)",
+          "right": "not one-to-one, since f(-2) = f(2)"
+        },
+        {
+          "left": "\\(f(x)=\\frac{1}{x}\\)",
+          "right": "one-to-one on its domain x is not 0"
+        },
+        {
+          "left": "\\(f(x)=x^2-2x\\)",
+          "right": "not one-to-one, since f(-1) = f(3)"
+        },
+        {
+          "left": "\\(f(x)=x^3+8\\)",
+          "right": "one-to-one on all real numbers"
+        }
+      ],
+      "source": {
+        "page": 259
+      }
+    },
+    {
+      "id": "c2s5-match-004",
+      "type": "matching",
+      "title": "Match each function with its inverse function \\(f^{-1}(x)\\).",
+      "pairs": [
+        {
+          "left": "\\(f(x)=5x-3\\)",
+          "right": "(x + 3)/5"
+        },
+        {
+          "left": "\\(f(x)=7-x\\)",
+          "right": "7 - x"
+        },
+        {
+          "left": "\\(f(x)=\\frac{2x+5}{3}\\)",
+          "right": "(3x - 5)/2"
+        },
+        {
+          "left": "\\(f(x)=x^3-2\\)",
+          "right": "cube root of (x + 2)"
+        },
+        {
+          "left": "\\(f(x)=2x+1\\)",
+          "right": "(x - 1)/2"
+        }
+      ],
+      "source": {
+        "page": 268
+      }
+    }
+  ]
+}
