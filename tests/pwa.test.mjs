@@ -74,7 +74,8 @@ test('the WhatsApp number is in no published file; «راسلنا» goes through
   const walk = (d) => readdirSync(d).flatMap((n) => (statSync(new URL(n, d)).isDirectory() ? walk(new URL(`${n}/`, d)) : [new URL(n, d)]));
   for (const f of walk(pub)) {
     if (/\.(png|ico|woff2)$/.test(f.pathname)) continue;
-    assert.doesNotMatch(readFileSync(f, 'utf8'), /9665\d{8}|wa\.me\/\d/, `${f.pathname} contains the WhatsApp number`);
+    // Any Saudi (966…) or Yemeni (967…) number written out, or a direct wa.me link with digits.
+    assert.doesNotMatch(readFileSync(f, 'utf8'), /96[67]\d{9}|wa\.me\/\d/, `${f.pathname} contains the WhatsApp number`);
   }
   const { runInNewContext } = await import('node:vm');
   const listeners = {};
