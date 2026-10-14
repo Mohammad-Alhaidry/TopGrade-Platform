@@ -1,0 +1,4143 @@
+{
+  "schemaVersion": 1,
+  "course": {
+    "id": "pre-calculus",
+    "titleAr": "مقدمة تفاضل",
+    "titleEn": "Pre-Calculus"
+  },
+  "topic": {
+    "id": "chapter-1",
+    "number": 1,
+    "title": "Fundamentals"
+  },
+  "questions": [
+    {
+      "id": "c1s1-mcq-001",
+      "type": "mcq",
+      "prompt": "Which property of real numbers is being used in \\(2x(3+y) = (3+y)2x\\)?",
+      "options": [
+        "Commutative Property of Addition",
+        "Commutative Property of Multiplication",
+        "Associative Property of Multiplication",
+        "Distributive Property"
+      ],
+      "answer": "B",
+      "explanation": "The two factors \\(2x\\) and \\(3+y\\) are simply multiplied in the opposite order (\\(ab = ba\\)), so this is the Commutative Property of Multiplication.",
+      "source": {
+        "page": 17
+      }
+    },
+    {
+      "id": "c1s1-mcq-002",
+      "type": "mcq",
+      "prompt": "Which property of real numbers is being used in \\(7(a+b+c) = 7(a+b)+7c\\)?",
+      "options": [
+        "Associative Property of Addition",
+        "Commutative Property of Multiplication",
+        "Distributive Property",
+        "Associative Property of Multiplication"
+      ],
+      "answer": "C",
+      "explanation": "Think of \\(a+b+c\\) as the sum \\((a+b)+c\\); multiplying 7 by each term of the sum is the Distributive Property \\(a(b+c) = ab+ac\\).",
+      "source": {
+        "page": 17
+      }
+    },
+    {
+      "id": "c1s1-mcq-003",
+      "type": "mcq",
+      "prompt": "Rewrite \\(7(3x)\\) using the Associative Property of Multiplication.",
+      "options": [
+        "\\((7 \\cdot 3)x\\)",
+        "\\(3(7x)\\)",
+        "\\((3x)7\\)",
+        "\\(7 \\cdot 3 + 7 \\cdot x\\)"
+      ],
+      "answer": "A",
+      "explanation": "The Associative Property \\(a(bc) = (ab)c\\) only regroups the factors: \\(7(3x) = (7 \\cdot 3)x = 21x\\). Changing the order of the factors would be the Commutative Property.",
+      "source": {
+        "page": 17
+      }
+    },
+    {
+      "id": "c1s1-mcq-004",
+      "type": "mcq",
+      "prompt": "Rewrite \\(5x+5y\\) using the Distributive Property.",
+      "options": [
+        "\\(5(xy)\\)",
+        "\\(10xy\\)",
+        "\\(25(x+y)\\)",
+        "\\(5(x+y)\\)"
+      ],
+      "answer": "D",
+      "explanation": "Read \\(a(b+c) = ab+ac\\) from right to left: the common factor 5 is taken out, \\(5x+5y = 5(x+y)\\).",
+      "source": {
+        "page": 17
+      }
+    },
+    {
+      "id": "c1s1-mcq-005",
+      "type": "mcq",
+      "prompt": "Let \\(x, y, z\\) be real numbers. Use the properties of negatives to simplify \\(-(x+y-z)\\).",
+      "options": [
+        "\\(-x-y-z\\)",
+        "\\(-x+y+z\\)",
+        "\\(-x-y+z\\)",
+        "\\(-x+y-z\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(-(a+b) = -a-b\\) changes the sign of every term: \\(-(x+y-z) = -x-y-(-z) = -x-y+z\\).",
+      "source": {
+        "page": 5
+      }
+    },
+    {
+      "id": "c1s1-mcq-006",
+      "type": "mcq",
+      "prompt": "Use the properties of real numbers to write \\(\\frac{4}{3}(-6y)\\) without parentheses.",
+      "options": [
+        "\\(-8y\\)",
+        "\\(8y\\)",
+        "\\(-2y\\)",
+        "\\(-\\frac{9}{2}y\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\(\\frac{4}{3} \\cdot (-6) = -\\frac{24}{3} = -8\\), so \\(\\frac{4}{3}(-6y) = -8y\\).",
+      "source": {
+        "page": 17
+      }
+    },
+    {
+      "id": "c1s1-mcq-007",
+      "type": "mcq",
+      "prompt": "Perform the indicated operation: \\(\\frac{3}{10}+\\frac{4}{15}\\).",
+      "options": [
+        "\\(\\frac{7}{25}\\)",
+        "\\(\\frac{17}{30}\\)",
+        "\\(\\frac{7}{30}\\)",
+        "\\(\\frac{12}{150}\\)"
+      ],
+      "answer": "B",
+      "explanation": "LCM(10, 15) = 30, so \\(\\frac{3}{10}+\\frac{4}{15} = \\frac{9}{30}+\\frac{8}{30} = \\frac{17}{30}\\). Numerators and denominators are never added across.",
+      "source": {
+        "page": 11
+      }
+    },
+    {
+      "id": "c1s1-mcq-008",
+      "type": "mcq",
+      "prompt": "Perform the indicated operations: \\(1+\\frac{5}{8}-\\frac{1}{6}\\).",
+      "options": [
+        "\\(\\frac{11}{24}\\)",
+        "\\(3\\)",
+        "\\(\\frac{43}{24}\\)",
+        "\\(\\frac{35}{24}\\)"
+      ],
+      "answer": "D",
+      "explanation": "LCM(8, 6) = 24: \\(\\frac{24}{24}+\\frac{15}{24}-\\frac{4}{24} = \\frac{24+15-4}{24} = \\frac{35}{24}\\).",
+      "source": {
+        "page": 12
+      }
+    },
+    {
+      "id": "c1s1-mcq-009",
+      "type": "mcq",
+      "prompt": "Perform the indicated operations: \\(\\frac{1}{12} \\div \\left(\\frac{1}{8}-\\frac{1}{9}\\right)\\).",
+      "options": [
+        "\\(\\frac{1}{864}\\)",
+        "\\(\\frac{1}{6}\\)",
+        "\\(6\\)",
+        "\\(-6\\)"
+      ],
+      "answer": "C",
+      "explanation": "First \\(\\frac{1}{8}-\\frac{1}{9} = \\frac{9-8}{72} = \\frac{1}{72}\\). Then divide by inverting: \\(\\frac{1}{12} \\div \\frac{1}{72} = \\frac{1}{12} \\cdot \\frac{72}{1} = 6\\).",
+      "source": {
+        "page": 12
+      }
+    },
+    {
+      "id": "c1s1-mcq-010",
+      "type": "mcq",
+      "prompt": "Simplify: \\(\\dfrac{2-\\frac{3}{4}}{\\frac{1}{2}-\\frac{3}{3}}\\).",
+      "options": [
+        "\\(-\\frac{5}{2}\\)",
+        "\\(\\frac{5}{2}\\)",
+        "\\(-\\frac{5}{8}\\)",
+        "\\(\\frac{5}{8}\\)"
+      ],
+      "answer": "A",
+      "explanation": "Numerator: \\(2-\\frac{3}{4} = \\frac{5}{4}\\). Denominator: \\(\\frac{1}{2}-1 = -\\frac{1}{2}\\). Then \\(\\frac{5}{4} \\div \\left(-\\frac{1}{2}\\right) = \\frac{5}{4} \\cdot (-2) = -\\frac{5}{2}\\).",
+      "source": {
+        "page": 14
+      }
+    },
+    {
+      "id": "c1s1-mcq-011",
+      "type": "mcq",
+      "prompt": "The numbers \\(0\\), \\(-10\\), \\(50\\), \\(\\frac{22}{7}\\), \\(0.538\\), \\(\\sqrt{7}\\), \\(1.23\\), \\(\\frac{-1}{3}\\), \\(\\sqrt[3]{2}\\) are given. Which of them are irrational numbers?",
+      "options": [
+        "\\(\\{\\sqrt{7}\\}\\)",
+        "\\(\\{\\frac{22}{7}, \\sqrt{7}, \\sqrt[3]{2}\\}\\)",
+        "\\(\\{0.538, 1.23, \\sqrt{7}, \\sqrt[3]{2}\\}\\)",
+        "\\(\\{\\sqrt{7}, \\sqrt[3]{2}\\}\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(\\sqrt{7}\\) and \\(\\sqrt[3]{2}\\) cannot be written as a ratio of integers. \\(\\frac{22}{7}\\) is a fraction and \\(0.538\\), \\(1.23\\) are terminating decimals, so they are rational.",
+      "source": {
+        "page": 8
+      }
+    },
+    {
+      "id": "c1s1-mcq-012",
+      "type": "mcq",
+      "prompt": "The numbers \\(1.001\\), \\(0.333\\ldots\\), \\(-\\pi\\), \\(-11\\), \\(11\\), \\(\\frac{13}{15}\\), \\(\\sqrt{16}\\), \\(3.14\\), \\(\\frac{15}{3}\\) are given. Which of them are natural numbers?",
+      "options": [
+        "\\(\\{11\\}\\)",
+        "\\(\\{-11, 11\\}\\)",
+        "\\(\\{4, 5, 11\\}\\)",
+        "\\(\\{-11, 4, 5, 11\\}\\)"
+      ],
+      "answer": "C",
+      "explanation": "Simplify the obvious terms first: \\(\\sqrt{16} = 4\\) and \\(\\frac{15}{3} = 5\\). The natural numbers are \\(4, 5, 11\\); \\(-11\\) is an integer but not a natural number.",
+      "source": {
+        "page": 9
+      }
+    },
+    {
+      "id": "c1s1-mcq-013",
+      "type": "mcq",
+      "prompt": "Which of the following statements is TRUE?",
+      "options": [
+        "\\(\\frac{2}{3} > 0.67\\)",
+        "\\(3 > \\frac{7}{2}\\)",
+        "\\(3.5 = \\frac{7}{2}\\)",
+        "\\(\\frac{10}{12} > \\frac{12}{13}\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(3.5 = \\frac{35}{10} = \\frac{7}{2}\\). The others are false: \\(\\frac{2}{3} = \\frac{200}{300} < \\frac{201}{300} = 0.67\\), \\(3 = \\frac{6}{2} < \\frac{7}{2}\\), and \\(\\frac{10}{12} = \\frac{130}{156} < \\frac{144}{156} = \\frac{12}{13}\\).",
+      "source": {
+        "page": 15
+      }
+    },
+    {
+      "id": "c1s1-mcq-014",
+      "type": "mcq",
+      "prompt": "Which of the following inequalities is TRUE?",
+      "options": [
+        "\\(-3 < -\\frac{7}{2}\\)",
+        "\\(-3 > -\\frac{7}{2}\\)",
+        "\\(-6 < -10\\)",
+        "\\(-\\pi > -3\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(-3 = -\\frac{6}{2}\\) lies to the right of \\(-\\frac{7}{2}\\) on the real line, so \\(-3 > -\\frac{7}{2}\\). For negative numbers the one with the larger absolute value is smaller: \\(-10 < -6\\) and \\(-\\pi < -3\\).",
+      "source": {
+        "page": 17
+      }
+    },
+    {
+      "id": "c1s1-mcq-015",
+      "type": "mcq",
+      "prompt": "Write the statement \"the distance from \\(p\\) to 3 is at most 5\" in terms of an inequality.",
+      "options": [
+        "\\(|p-3| \\le 5\\)",
+        "\\(|p-3| < 5\\)",
+        "\\(|p-3| \\ge 5\\)",
+        "\\(p-3 \\le 5\\)"
+      ],
+      "answer": "A",
+      "explanation": "The distance from \\(p\\) to 3 is \\(|p-3|\\), and \"at most 5\" means less than or equal to 5.",
+      "source": {
+        "page": 16
+      }
+    },
+    {
+      "id": "c1s1-mcq-016",
+      "type": "mcq",
+      "prompt": "Write the statement \"\\(y\\) is at least 2 units from \\(\\pi\\)\" in terms of an inequality.",
+      "options": [
+        "\\(|y-\\pi| \\le 2\\)",
+        "\\(|y-\\pi| \\ge 2\\)",
+        "\\(|y-2| \\ge \\pi\\)",
+        "\\(y-\\pi \\ge 2\\)"
+      ],
+      "answer": "B",
+      "explanation": "The distance from \\(y\\) to \\(\\pi\\) is \\(|y-\\pi|\\); \"at least 2\" means greater than or equal to 2.",
+      "source": {
+        "page": 18
+      }
+    },
+    {
+      "id": "c1s1-mcq-017",
+      "type": "mcq",
+      "prompt": "Write the statement \"\\(w\\) is positive and is less than or equal to 17\" in terms of inequalities.",
+      "options": [
+        "\\(0 < w \\le 17\\)",
+        "\\(0 \\le w \\le 17\\)",
+        "\\(0 < w < 17\\)",
+        "\\(w \\le 17\\)"
+      ],
+      "answer": "A",
+      "explanation": "\"Positive\" means \\(w > 0\\) (0 itself is not positive) and \"less than or equal to 17\" means \\(w \\le 17\\); together \\(0 < w \\le 17\\).",
+      "source": {
+        "page": 18
+      }
+    },
+    {
+      "id": "c1s1-mcq-018",
+      "type": "mcq",
+      "prompt": "Let \\(A = \\{1,2,3,4,5,6,7\\}\\), \\(B = \\{2,4,6,8\\}\\) and \\(C = \\{7,8,9,10\\}\\). Find \\(A \\cap B\\).",
+      "options": [
+        "\\(\\{2,4,6,8\\}\\)",
+        "\\(\\{1,2,3,4,5,6,7,8\\}\\)",
+        "\\(\\emptyset\\)",
+        "\\(\\{2,4,6\\}\\)"
+      ],
+      "answer": "D",
+      "explanation": "The intersection contains only the elements that are in both sets; 8 is in \\(B\\) but not in \\(A\\), so \\(A \\cap B = \\{2,4,6\\}\\). The set \\(\\{1,\\ldots,8\\}\\) is \\(A \\cup B\\).",
+      "source": {
+        "page": 18
+      }
+    },
+    {
+      "id": "c1s1-mcq-019",
+      "type": "mcq",
+      "prompt": "Let \\(A = \\{x \\mid x \\ge -2\\}\\) and \\(B = \\{x \\mid x < 4\\}\\). Write \\(A \\cap B\\) in interval notation.",
+      "options": [
+        "\\([-2, 4)\\)",
+        "\\((-2, 4]\\)",
+        "\\([-2, 4]\\)",
+        "\\((-\\infty, \\infty)\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\(A \\cap B = \\{x \\mid -2 \\le x < 4\\}\\): the endpoint \\(-2\\) is included (\\(\\ge\\)) and 4 is not (\\(<\\)), so the interval is \\([-2, 4)\\). The union \\(A \\cup B\\) would be all of \\(\\mathbb{R}\\).",
+      "source": {
+        "page": 18
+      }
+    },
+    {
+      "id": "c1s1-mcq-020",
+      "type": "mcq",
+      "prompt": "Find \\((-2, 0) \\cup (-1, 1)\\).",
+      "options": [
+        "\\((-1, 0)\\)",
+        "\\((-2, 1]\\)",
+        "\\((-2, 1)\\)",
+        "\\([-2, 1]\\)"
+      ],
+      "answer": "C",
+      "explanation": "The union is everything in either interval; the two overlap on \\((-1, 0)\\) and together cover \\((-2, 1)\\). Both endpoints stay open. \\((-1, 0)\\) is the intersection, not the union.",
+      "source": {
+        "page": 19
+      }
+    },
+    {
+      "id": "c1s1-mcq-021",
+      "type": "mcq",
+      "prompt": "Find \\([-4, 6] \\cap [0, 8)\\).",
+      "options": [
+        "\\([-4, 8)\\)",
+        "\\([0, 6]\\)",
+        "\\([0, 6)\\)",
+        "\\((0, 6]\\)"
+      ],
+      "answer": "B",
+      "explanation": "The intersection is the set of numbers in both intervals: from 0 (included in \\([0, 8)\\)) up to 6 (included in \\([-4, 6]\\)), so \\([0, 6]\\). \\([-4, 8)\\) is the union.",
+      "source": {
+        "page": 19
+      }
+    },
+    {
+      "id": "c1s1-mcq-022",
+      "type": "mcq",
+      "prompt": "Find \\((-\\infty, 6] \\cap (2, 10)\\).",
+      "options": [
+        "\\((-\\infty, 10)\\)",
+        "\\([2, 6]\\)",
+        "\\((2, 6)\\)",
+        "\\((2, 6]\\)"
+      ],
+      "answer": "D",
+      "explanation": "Numbers in both sets are greater than 2 (open end, from \\((2, 10)\\)) and at most 6 (closed end, from \\((-\\infty, 6]\\)): \\((2, 6]\\).",
+      "source": {
+        "page": 20
+      }
+    },
+    {
+      "id": "c1s1-mcq-023",
+      "type": "mcq",
+      "prompt": "Evaluate \\(|\\sqrt{5} - 5|\\).",
+      "options": [
+        "\\(\\sqrt{5} - 5\\)",
+        "\\(5 - \\sqrt{5}\\)",
+        "\\(\\sqrt{5} + 5\\)",
+        "\\(0\\)"
+      ],
+      "answer": "B",
+      "explanation": "Since \\(\\sqrt{5} \\approx 2.24 < 5\\), the number \\(\\sqrt{5}-5\\) is negative, so by the definition \\(|a| = -a\\) for \\(a < 0\\): \\(|\\sqrt{5}-5| = -(\\sqrt{5}-5) = 5-\\sqrt{5}\\).",
+      "source": {
+        "page": 20
+      }
+    },
+    {
+      "id": "c1s1-mcq-024",
+      "type": "mcq",
+      "prompt": "Evaluate \\(\\big| |-6| - |-4| \\big|\\).",
+      "options": [
+        "\\(-10\\)",
+        "\\(10\\)",
+        "\\(2\\)",
+        "\\(-2\\)"
+      ],
+      "answer": "C",
+      "explanation": "Work from the inside: \\(|-6| = 6\\) and \\(|-4| = 4\\), so the expression is \\(|6-4| = |2| = 2\\).",
+      "source": {
+        "page": 20
+      }
+    },
+    {
+      "id": "c1s1-mcq-025",
+      "type": "mcq",
+      "prompt": "Evaluate \\(-1 - \\big| 1 - |-1| \\big|\\).",
+      "options": [
+        "\\(-1\\)",
+        "\\(-3\\)",
+        "\\(1\\)",
+        "\\(0\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\(|-1| = 1\\), so \\(1 - |-1| = 0\\) and \\(|0| = 0\\). The result is \\(-1 - 0 = -1\\).",
+      "source": {
+        "page": 20
+      }
+    },
+    {
+      "id": "c1s1-mcq-026",
+      "type": "mcq",
+      "prompt": "Find the distance between \\(\\frac{11}{8}\\) and \\(-\\frac{1}{10}\\).",
+      "options": [
+        "\\(\\frac{51}{40}\\)",
+        "\\(-\\frac{59}{40}\\)",
+        "\\(\\frac{2}{3}\\)",
+        "\\(\\frac{59}{40}\\)"
+      ],
+      "answer": "D",
+      "explanation": "Distance \\(= |a-b|\\). Subtracting a negative adds: \\(\\frac{11}{8}+\\frac{1}{10} = \\frac{55}{40}+\\frac{4}{40} = \\frac{59}{40}\\).",
+      "source": {
+        "page": 20
+      }
+    },
+    {
+      "id": "c1s1-mcq-027",
+      "type": "mcq",
+      "prompt": "Find the distance between \\(-38\\) and \\(-57\\).",
+      "options": [
+        "\\(-19\\)",
+        "\\(19\\)",
+        "\\(95\\)",
+        "\\(-95\\)"
+      ],
+      "answer": "B",
+      "explanation": "Distance \\(= |-38-(-57)| = |-38+57| = |19| = 19\\). A distance is never negative.",
+      "source": {
+        "page": 20
+      }
+    },
+    {
+      "id": "c1s1-tf-001",
+      "type": "tf",
+      "prompt": "The inequality \\(\\sqrt{2} > 1.41\\) is true.",
+      "answer": true,
+      "explanation": "Square both sides: \\((\\sqrt{2})^2 = 2\\) and \\(1.41^2 = 1.9881\\). Since \\(2 > 1.9881\\), the inequality \\(\\sqrt{2} > 1.41\\) is true.",
+      "source": {
+        "page": 15
+      }
+    },
+    {
+      "id": "c1s1-tf-002",
+      "type": "tf",
+      "prompt": "The inequality \\(-\\frac{1}{2} < -1\\) is true.",
+      "answer": false,
+      "explanation": "\\(-\\frac{1}{2} = -0.5\\) lies to the right of \\(-1\\) on the real line, so \\(-\\frac{1}{2} > -1\\); the statement is false.",
+      "source": {
+        "page": 18
+      }
+    },
+    {
+      "id": "c1s1-tf-003",
+      "type": "tf",
+      "prompt": "The inequality \\(8 \\le 8\\) is true.",
+      "answer": true,
+      "explanation": "\\(8 \\le 8\\) means \"8 is less than OR equal to 8\"; since \\(8 = 8\\), the statement is true.",
+      "source": {
+        "page": 16
+      }
+    },
+    {
+      "id": "c1s1-tf-004",
+      "type": "tf",
+      "prompt": "\\(|0.67| > |-0.67|\\)",
+      "answer": false,
+      "explanation": "\\(|0.67| = 0.67\\) and \\(|-0.67| = -(-0.67) = 0.67\\). The two absolute values are equal, so the correct symbol is \\(=\\), not \\(>\\).",
+      "source": {
+        "page": 17
+      }
+    },
+    {
+      "id": "c1s1-tf-005",
+      "type": "tf",
+      "prompt": "\\(|3 - \\pi| = \\pi - 3\\)",
+      "answer": true,
+      "explanation": "Since \\(\\pi \\approx 3.14\\), the number \\(3-\\pi\\) is negative, and by the definition \\(|a| = -a\\) for \\(a < 0\\): \\(|3-\\pi| = -(3-\\pi) = \\pi-3\\).",
+      "source": {
+        "page": 8
+      }
+    },
+    {
+      "id": "c1s1-tf-006",
+      "type": "tf",
+      "prompt": "The interval \\((3, \\infty)\\) is the set \\(\\{x \\mid x \\ge 3\\}\\).",
+      "answer": false,
+      "explanation": "\\((3, \\infty) = \\{x \\mid 3 < x\\}\\). The round bracket at 3 means 3 itself is not included; \\(\\{x \\mid x \\ge 3\\}\\) is \\([3, \\infty)\\).",
+      "source": {
+        "page": 7
+      }
+    },
+    {
+      "id": "c1s1-match-001",
+      "type": "matching",
+      "title": "Match each equation with the property of real numbers it illustrates.",
+      "pairs": [
+        {
+          "left": "\\(a + b = b + a\\)",
+          "right": "Commutative Property of Addition"
+        },
+        {
+          "left": "\\(ab = ba\\)",
+          "right": "Commutative Property of Multiplication"
+        },
+        {
+          "left": "\\((a + b) + c = a + (b + c)\\)",
+          "right": "Associative Property of Addition"
+        },
+        {
+          "left": "\\((ab)c = a(bc)\\)",
+          "right": "Associative Property of Multiplication"
+        },
+        {
+          "left": "\\(a(b + c) = ab + ac\\)",
+          "right": "Distributive Property"
+        }
+      ],
+      "source": {
+        "page": 4
+      }
+    },
+    {
+      "id": "c1s1-match-002",
+      "type": "matching",
+      "title": "Match each number with its classification.",
+      "pairs": [
+        {
+          "left": "\\(\\sqrt{16}\\)",
+          "right": "natural number"
+        },
+        {
+          "left": "\\(-11\\)",
+          "right": "integer, but not a natural number"
+        },
+        {
+          "left": "\\(\\frac{13}{15}\\)",
+          "right": "rational number, but not an integer"
+        },
+        {
+          "left": "\\(-\\pi\\)",
+          "right": "irrational number"
+        }
+      ],
+      "source": {
+        "page": 9
+      }
+    },
+    {
+      "id": "c1s1-match-003",
+      "type": "matching",
+      "title": "Match each interval with the inequality that describes it.",
+      "pairs": [
+        {
+          "left": "\\((-3, 0)\\)",
+          "right": "−3 < x < 0"
+        },
+        {
+          "left": "\\((2, 8]\\)",
+          "right": "2 < x ≤ 8"
+        },
+        {
+          "left": "\\([2, 8)\\)",
+          "right": "2 ≤ x < 8"
+        },
+        {
+          "left": "\\([2, \\infty)\\)",
+          "right": "x ≥ 2"
+        },
+        {
+          "left": "\\((-\\infty, 1)\\)",
+          "right": "x < 1"
+        }
+      ],
+      "source": {
+        "page": 18
+      }
+    },
+    {
+      "id": "c1s1-match-004",
+      "type": "matching",
+      "title": "Each line describes a graph on the real line. Match it with the interval it represents.",
+      "pairs": [
+        {
+          "left": "Solid dots at \\(-3\\) and \\(5\\), shaded between them",
+          "right": "[−3, 5]"
+        },
+        {
+          "left": "Open circle at \\(-3\\), solid dot at \\(5\\), shaded between them",
+          "right": "(−3, 5]"
+        },
+        {
+          "left": "Solid dot at \\(0\\), open circle at \\(2\\), shaded between them",
+          "right": "[0, 2)"
+        },
+        {
+          "left": "Solid dot at \\(-2\\), open circle at \\(0\\), shaded between them",
+          "right": "[−2, 0)"
+        }
+      ],
+      "source": {
+        "page": 19
+      }
+    },
+    {
+      "id": "c1s2-mcq-001",
+      "type": "mcq",
+      "prompt": "Evaluate \\(-3^4\\).",
+      "options": [
+        "\\(81\\)",
+        "\\(-81\\)",
+        "\\(-12\\)",
+        "\\(12\\)"
+      ],
+      "answer": "B",
+      "explanation": "The exponent applies only to 3, not to the minus sign: \\(-3^4 = -(3\\cdot3\\cdot3\\cdot3) = -81\\). Compare \\((-3)^4 = 81\\).",
+      "source": {
+        "page": 21
+      }
+    },
+    {
+      "id": "c1s2-mcq-002",
+      "type": "mcq",
+      "prompt": "Evaluate \\((-2)^{-3}\\).",
+      "options": [
+        "\\(-\\frac{1}{8}\\)",
+        "\\(\\frac{1}{8}\\)",
+        "\\(-8\\)",
+        "\\(8\\)"
+      ],
+      "answer": "A",
+      "explanation": "By the definition of negative exponents, \\((-2)^{-3} = \\frac{1}{(-2)^3} = \\frac{1}{-8} = -\\frac{1}{8}\\).",
+      "source": {
+        "page": 22
+      }
+    },
+    {
+      "id": "c1s2-mcq-003",
+      "type": "mcq",
+      "prompt": "Simplify \\(\\left(2a^3b^2\\right)\\left(3ab^4\\right)^3\\).",
+      "options": [
+        "\\(6a^6b^{14}\\)",
+        "\\(54a^6b^9\\)",
+        "\\(54a^6b^{14}\\)",
+        "\\(6a^4b^6\\)"
+      ],
+      "answer": "C",
+      "explanation": "First \\((3ab^4)^3 = 27a^3b^{12}\\) (Laws 4 and 3), then \\((2a^3b^2)(27a^3b^{12}) = 54a^6b^{14}\\) (Law 1).",
+      "source": {
+        "page": 23
+      }
+    },
+    {
+      "id": "c1s2-mcq-004",
+      "type": "mcq",
+      "prompt": "Simplify and eliminate negative exponents: \\(\\dfrac{6st^{-4}}{2s^{-2}t^2}\\).",
+      "options": [
+        "\\(\\frac{3s^3}{t^6}\\)",
+        "\\(\\frac{3}{st^6}\\)",
+        "\\(\\frac{3s^3}{t^2}\\)",
+        "\\(3s^3t^6\\)"
+      ],
+      "answer": "A",
+      "explanation": "Move \\(t^{-4}\\) down and \\(s^{-2}\\) up, changing the signs of the exponents: \\(\\frac{6s\\,s^2}{2t^2t^4} = \\frac{3s^3}{t^6}\\).",
+      "source": {
+        "page": 24
+      }
+    },
+    {
+      "id": "c1s2-mcq-005",
+      "type": "mcq",
+      "prompt": "Simplify \\(\\left(\\dfrac{y}{3z^2}\\right)^{-2}\\).",
+      "options": [
+        "\\(\\frac{y^2}{9z^4}\\)",
+        "\\(\\frac{3z^4}{y^2}\\)",
+        "\\(-\\frac{9z^4}{y^2}\\)",
+        "\\(\\frac{9z^4}{y^2}\\)"
+      ],
+      "answer": "D",
+      "explanation": "A negative power of a fraction: invert the fraction and change the sign of the exponent, \\(\\left(\\frac{3z^2}{y}\\right)^2 = \\frac{9z^4}{y^2}\\).",
+      "source": {
+        "page": 25
+      }
+    },
+    {
+      "id": "c1s2-mcq-006",
+      "type": "mcq",
+      "prompt": "Evaluate \\(\\left(\\dfrac{2}{3}\\right)^{-3}\\).",
+      "options": [
+        "\\(\\frac{8}{27}\\)",
+        "\\(\\frac{27}{8}\\)",
+        "\\(-\\frac{8}{27}\\)",
+        "\\(-\\frac{27}{8}\\)"
+      ],
+      "answer": "B",
+      "explanation": "Invert the fraction and make the exponent positive: \\(\\left(\\frac{3}{2}\\right)^3 = \\frac{27}{8}\\). A negative exponent never makes the answer negative.",
+      "source": {
+        "page": 41
+      }
+    },
+    {
+      "id": "c1s2-mcq-007",
+      "type": "mcq",
+      "prompt": "Simplify and eliminate negative exponents: \\(\\dfrac{(2x^3)^2(3x^4)}{(x^3)^4}\\).",
+      "options": [
+        "\\(12x^2\\)",
+        "\\(\\frac{6}{x^2}\\)",
+        "\\(12x^3\\)",
+        "\\(\\frac{12}{x^2}\\)"
+      ],
+      "answer": "D",
+      "explanation": "Numerator: \\(4x^6\\cdot3x^4 = 12x^{10}\\); denominator: \\(x^{12}\\). So the result is \\(12x^{10-12} = 12x^{-2} = \\frac{12}{x^2}\\).",
+      "source": {
+        "page": 39
+      }
+    },
+    {
+      "id": "c1s2-mcq-008",
+      "type": "mcq",
+      "prompt": "Write \\(0.000627\\) in scientific notation.",
+      "options": [
+        "\\(6.27\\times10^{4}\\)",
+        "\\(6.27\\times10^{-3}\\)",
+        "\\(6.27\\times10^{-4}\\)",
+        "\\(6.27\\times10^{-5}\\)"
+      ],
+      "answer": "C",
+      "explanation": "Move the decimal point 4 places to the right to get \\(6.27\\); a small number needs a negative exponent: \\(6.27\\times10^{-4}\\).",
+      "source": {
+        "page": 25
+      }
+    },
+    {
+      "id": "c1s2-mcq-009",
+      "type": "mcq",
+      "prompt": "Use the Laws of Exponents to calculate \\(\\left(7.2\\times10^{-9}\\right)\\left(1.806\\times10^{-12}\\right)\\), correct to two significant figures.",
+      "options": [
+        "\\(1.3\\times10^{-20}\\)",
+        "\\(1.3\\times10^{-21}\\)",
+        "\\(1.3\\times10^{108}\\)",
+        "\\(1.3\\times10^{3}\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\((7.2)(1.806)\\times10^{-9+(-12)} \\approx 13.0\\times10^{-21} = 1.3\\times10^{-20}\\). Add the exponents, do not multiply them.",
+      "source": {
+        "page": 43
+      }
+    },
+    {
+      "id": "c1s2-mcq-010",
+      "type": "mcq",
+      "prompt": "Which of the following is NOT defined as a real number?",
+      "options": [
+        "\\(\\sqrt[3]{-8}\\)",
+        "\\(\\sqrt{-8}\\)",
+        "\\(\\sqrt[5]{-32}\\)",
+        "\\(\\sqrt[4]{81}\\)"
+      ],
+      "answer": "B",
+      "explanation": "An even root of a negative number is not defined (the square of every real number is nonnegative). Odd roots of negatives are fine: \\(\\sqrt[3]{-8}=-2\\), \\(\\sqrt[5]{-32}=-2\\).",
+      "source": {
+        "page": 26
+      }
+    },
+    {
+      "id": "c1s2-mcq-011",
+      "type": "mcq",
+      "prompt": "Evaluate \\(\\sqrt{(-4)^2}\\).",
+      "options": [
+        "\\(4\\)",
+        "\\(-4\\)",
+        "\\(\\pm 4\\)",
+        "not defined"
+      ],
+      "answer": "A",
+      "explanation": "\\(\\sqrt{(-4)^2} = \\sqrt{16} = 4 = |-4|\\). In general \\(\\sqrt{a^2} = |a|\\), never negative.",
+      "source": {
+        "page": 27
+      }
+    },
+    {
+      "id": "c1s2-mcq-012",
+      "type": "mcq",
+      "prompt": "Simplify \\(\\sqrt[4]{81x^8y^4}\\) (do not assume that \\(y \\ge 0\\)).",
+      "options": [
+        "\\(3x^2y\\)",
+        "\\(9x^2|y|\\)",
+        "\\(3x^2|y|\\)",
+        "\\(3x^4|y|\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(\\sqrt[4]{81}\\,\\sqrt[4]{x^8}\\,\\sqrt[4]{y^4} = 3\\sqrt[4]{(x^2)^4}\\,|y| = 3x^2|y|\\) (Properties 1 and 5; an even root of \\(y^4\\) is \\(|y|\\)).",
+      "source": {
+        "page": 27
+      }
+    },
+    {
+      "id": "c1s2-mcq-013",
+      "type": "mcq",
+      "prompt": "Simplify \\(\\sqrt{32}+\\sqrt{200}\\).",
+      "options": [
+        "\\(\\sqrt{232}\\)",
+        "\\(6\\sqrt{2}\\)",
+        "\\(14\\sqrt{4}\\)",
+        "\\(14\\sqrt{2}\\)"
+      ],
+      "answer": "D",
+      "explanation": "Factor out the largest squares: \\(\\sqrt{16\\cdot2}+\\sqrt{100\\cdot2} = 4\\sqrt{2}+10\\sqrt{2} = 14\\sqrt{2}\\). Radicals cannot be added by adding the radicands.",
+      "source": {
+        "page": 28
+      }
+    },
+    {
+      "id": "c1s2-mcq-014",
+      "type": "mcq",
+      "prompt": "If \\(b>0\\), simplify \\(\\sqrt{25b}-\\sqrt{b^3}\\).",
+      "options": [
+        "\\((25-b)\\sqrt{b}\\)",
+        "\\((5-b)\\sqrt{b}\\)",
+        "\\((5-b^2)\\sqrt{b}\\)",
+        "\\(\\sqrt{25b-b^3}\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(\\sqrt{25}\\sqrt{b}-\\sqrt{b^2}\\sqrt{b} = 5\\sqrt{b}-b\\sqrt{b} = (5-b)\\sqrt{b}\\) by Property 1 and the Distributive Property.",
+      "source": {
+        "page": 28
+      }
+    },
+    {
+      "id": "c1s2-mcq-015",
+      "type": "mcq",
+      "prompt": "Simplify \\(\\sqrt[5]{96}+\\sqrt[5]{3}\\).",
+      "options": [
+        "\\(\\sqrt[5]{99}\\)",
+        "\\(2\\sqrt[5]{3}\\)",
+        "\\(3\\sqrt[5]{3}\\)",
+        "\\(3\\sqrt[5]{6}\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(96 = 32\\cdot3 = 2^5\\cdot3\\), so \\(\\sqrt[5]{96} = 2\\sqrt[5]{3}\\) and the sum is \\(2\\sqrt[5]{3}+\\sqrt[5]{3} = 3\\sqrt[5]{3}\\).",
+      "source": {
+        "page": 41
+      }
+    },
+    {
+      "id": "c1s2-mcq-016",
+      "type": "mcq",
+      "prompt": "Evaluate \\(125^{-1/3}\\).",
+      "options": [
+        "\\(-5\\)",
+        "\\(5\\)",
+        "\\(-\\frac{1}{5}\\)",
+        "\\(\\frac{1}{5}\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(125^{-1/3} = \\frac{1}{125^{1/3}} = \\frac{1}{\\sqrt[3]{125}} = \\frac{1}{5}\\). The negative exponent means a reciprocal, not a negative sign.",
+      "source": {
+        "page": 29
+      }
+    },
+    {
+      "id": "c1s2-mcq-017",
+      "type": "mcq",
+      "prompt": "Evaluate \\(\\left(\\dfrac{25}{64}\\right)^{-3/2}\\).",
+      "options": [
+        "\\(\\frac{512}{125}\\)",
+        "\\(\\frac{125}{512}\\)",
+        "\\(\\frac{8}{5}\\)",
+        "\\(-\\frac{512}{125}\\)"
+      ],
+      "answer": "A",
+      "explanation": "Invert the fraction: \\(\\left(\\frac{64}{25}\\right)^{3/2}\\). Take the square root first, \\(\\frac{8}{5}\\), then cube it: \\(\\frac{512}{125}\\).",
+      "source": {
+        "page": 35
+      }
+    },
+    {
+      "id": "c1s2-mcq-018",
+      "type": "mcq",
+      "prompt": "Evaluate \\(\\left(\\dfrac{-27}{8}\\right)^{2/3}\\).",
+      "options": [
+        "\\(-\\frac{9}{4}\\)",
+        "\\(\\frac{9}{4}\\)",
+        "\\(\\frac{4}{9}\\)",
+        "not a real number"
+      ],
+      "answer": "B",
+      "explanation": "The cube root of a negative number is defined: \\(\\left(\\frac{-27}{8}\\right)^{1/3} = \\frac{-3}{2}\\). Squaring gives \\(\\frac{9}{4}\\).",
+      "source": {
+        "page": 36
+      }
+    },
+    {
+      "id": "c1s2-mcq-019",
+      "type": "mcq",
+      "prompt": "Evaluate \\((-32)^{2/5}\\).",
+      "options": [
+        "\\(-4\\)",
+        "\\(\\frac{1}{4}\\)",
+        "\\(4\\)",
+        "not a real number"
+      ],
+      "answer": "C",
+      "explanation": "\\((-32)^{2/5} = \\left(\\sqrt[5]{-32}\\right)^2 = (-2)^2 = 4\\). The odd root of a negative number exists, and squaring removes the sign.",
+      "source": {
+        "page": 41
+      }
+    },
+    {
+      "id": "c1s2-mcq-020",
+      "type": "mcq",
+      "prompt": "Evaluate \\((9x)^{2/3}+(2y)^{2/3}+z^{2/3}\\) for \\(x=3\\), \\(y=4\\), \\(z=-1\\).",
+      "options": [
+        "\\(12\\)",
+        "\\(13\\)",
+        "not a real number",
+        "\\(14\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(27^{2/3} = 3^2 = 9\\), \\(8^{2/3} = 2^2 = 4\\), and \\((-1)^{2/3} = \\left(\\sqrt[3]{-1}\\right)^2 = 1\\). Sum: \\(9+4+1 = 14\\).",
+      "source": {
+        "page": 37
+      }
+    },
+    {
+      "id": "c1s2-mcq-021",
+      "type": "mcq",
+      "prompt": "Simplify \\(\\dfrac{a^{2/5}a^{7/5}}{a^{3/5}}\\).",
+      "options": [
+        "\\(a^{6/5}\\)",
+        "\\(a^{12/5}\\)",
+        "\\(a^{14/15}\\)",
+        "\\(a^{6}\\)"
+      ],
+      "answer": "A",
+      "explanation": "Laws 1 and 2: \\(a^{2/5+7/5-3/5} = a^{6/5}\\).",
+      "source": {
+        "page": 29
+      }
+    },
+    {
+      "id": "c1s2-mcq-022",
+      "type": "mcq",
+      "prompt": "Simplify \\(\\left(2a^3b^4\\right)^{3/2}\\).",
+      "options": [
+        "\\(2a^{9/2}b^6\\)",
+        "\\(2\\sqrt{2}\\,a^{9/2}b^6\\)",
+        "\\(2\\sqrt{2}\\,a^{9/2}b^{11/2}\\)",
+        "\\(3a^{9/2}b^6\\)"
+      ],
+      "answer": "B",
+      "explanation": "Law 4 then Law 3: \\(2^{3/2}a^{3(3/2)}b^{4(3/2)} = (\\sqrt{2})^3a^{9/2}b^6 = 2\\sqrt{2}\\,a^{9/2}b^6\\).",
+      "source": {
+        "page": 29
+      }
+    },
+    {
+      "id": "c1s2-mcq-023",
+      "type": "mcq",
+      "prompt": "Write with a single rational exponent: \\((2\\sqrt{x})(3\\sqrt[3]{x})\\).",
+      "options": [
+        "\\(6x^{1/6}\\)",
+        "\\(5x^{5/6}\\)",
+        "\\(6x^{5/6}\\)",
+        "\\(6x^{1/5}\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\((2x^{1/2})(3x^{1/3}) = 6x^{1/2+1/3} = 6x^{5/6}\\): multiply the coefficients and add the exponents.",
+      "source": {
+        "page": 29
+      }
+    },
+    {
+      "id": "c1s2-mcq-024",
+      "type": "mcq",
+      "prompt": "Simplify \\(\\sqrt{x\\sqrt{x}}\\) by writing the radicals as rational exponents (\\(x>0\\)).",
+      "options": [
+        "\\(x^{1/4}\\)",
+        "\\(x^{3/2}\\)",
+        "\\(x^{1/2}\\)",
+        "\\(x^{3/4}\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(\\sqrt{x\\sqrt{x}} = \\left(x\\cdot x^{1/2}\\right)^{1/2} = \\left(x^{3/2}\\right)^{1/2} = x^{3/4}\\) (Laws 1 and 3).",
+      "source": {
+        "page": 30
+      }
+    },
+    {
+      "id": "c1s2-mcq-025",
+      "type": "mcq",
+      "prompt": "Simplify and eliminate negative exponents (\\(x>0\\)): \\(x^{3/2}\\cdot(4x)^{-1/2}\\).",
+      "options": [
+        "\\(\\frac{x}{2}\\)",
+        "\\(\\frac{x}{4}\\)",
+        "\\(2x\\)",
+        "\\(\\frac{x^2}{2}\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\((4x)^{-1/2} = 4^{-1/2}x^{-1/2} = \\frac{1}{2}x^{-1/2}\\), so the product is \\(\\frac{1}{2}x^{3/2-1/2} = \\frac{x}{2}\\).",
+      "source": {
+        "page": 40
+      }
+    },
+    {
+      "id": "c1s2-mcq-026",
+      "type": "mcq",
+      "prompt": "Simplify and eliminate negative exponents (\\(x>0\\)): \\(\\left(8x^6\\right)^{-2/3}\\).",
+      "options": [
+        "\\(4x^4\\)",
+        "\\(\\frac{1}{4x^4}\\)",
+        "\\(-\\frac{1}{4x^4}\\)",
+        "\\(\\frac{1}{2x^4}\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(8^{-2/3} = \\frac{1}{(\\sqrt[3]{8})^2} = \\frac{1}{4}\\) and \\((x^6)^{-2/3} = x^{-4}\\), giving \\(\\frac{1}{4x^4}\\).",
+      "source": {
+        "page": 42
+      }
+    },
+    {
+      "id": "c1s2-mcq-027",
+      "type": "mcq",
+      "prompt": "Simplify \\(\\left(y^{3/4}\\right)^{2/3}\\) (\\(y>0\\)).",
+      "options": [
+        "\\(y^{17/12}\\)",
+        "\\(y^{9/8}\\)",
+        "\\(y^{1/2}\\)",
+        "\\(y^{1/12}\\)"
+      ],
+      "answer": "C",
+      "explanation": "Law 3: multiply the exponents, \\(\\frac{3}{4}\\cdot\\frac{2}{3} = \\frac{1}{2}\\). Adding them (\\(\\frac{17}{12}\\)) is the common error.",
+      "source": {
+        "page": 42
+      }
+    },
+    {
+      "id": "c1s2-mcq-028",
+      "type": "mcq",
+      "prompt": "Simplify and eliminate negative exponents (all letters positive): \\(\\left(x^{-5}y^3z^{10}\\right)^{-3/5}\\).",
+      "options": [
+        "\\(\\frac{x^3y^{9/5}}{z^6}\\)",
+        "\\(\\frac{z^6}{x^3y^{9/5}}\\)",
+        "\\(\\frac{1}{x^3y^{9/5}z^6}\\)",
+        "\\(\\frac{x^3}{y^{9/5}z^6}\\)"
+      ],
+      "answer": "D",
+      "explanation": "Multiply each exponent by \\(-\\frac{3}{5}\\): \\(x^{3}y^{-9/5}z^{-6} = \\frac{x^3}{y^{9/5}z^6}\\).",
+      "source": {
+        "page": 42
+      }
+    },
+    {
+      "id": "c1s2-mcq-029",
+      "type": "mcq",
+      "prompt": "Rationalize the denominator: \\(\\dfrac{1}{\\sqrt[3]{x^2}}\\).",
+      "options": [
+        "\\(\\frac{\\sqrt[3]{x}}{x}\\)",
+        "\\(\\frac{\\sqrt[3]{x^2}}{x}\\)",
+        "\\(\\frac{\\sqrt[3]{x^2}}{x^2}\\)",
+        "\\(\\frac{\\sqrt[3]{x}}{x^2}\\)"
+      ],
+      "answer": "A",
+      "explanation": "Multiply numerator and denominator by \\(\\sqrt[3]{x}\\): \\(\\frac{\\sqrt[3]{x}}{\\sqrt[3]{x^3}} = \\frac{\\sqrt[3]{x}}{x}\\).",
+      "source": {
+        "page": 30
+      }
+    },
+    {
+      "id": "c1s2-mcq-030",
+      "type": "mcq",
+      "prompt": "Rationalize the denominator: \\(\\sqrt{\\dfrac{5}{12}}\\).",
+      "options": [
+        "\\(\\frac{\\sqrt{15}}{12}\\)",
+        "\\(\\frac{\\sqrt{15}}{6}\\)",
+        "\\(\\frac{\\sqrt{5}}{6}\\)",
+        "\\(\\frac{5\\sqrt{3}}{6}\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(\\sqrt{\\frac{5}{12}} = \\frac{\\sqrt{5}}{2\\sqrt{3}}\\); multiply top and bottom by \\(\\sqrt{3}\\): \\(\\frac{\\sqrt{15}}{2\\cdot3} = \\frac{\\sqrt{15}}{6}\\).",
+      "source": {
+        "page": 44
+      }
+    },
+    {
+      "id": "c1s2-mcq-031",
+      "type": "mcq",
+      "prompt": "Rationalize the denominator (\\(y>0\\)): \\(\\dfrac{x}{y^{2/5}}\\).",
+      "options": [
+        "\\(\\frac{x\\sqrt[5]{y^2}}{y}\\)",
+        "\\(\\frac{x\\sqrt[5]{y^3}}{y^5}\\)",
+        "\\(\\frac{x\\sqrt[5]{y^3}}{y}\\)",
+        "\\(x\\sqrt[5]{y^3}\\)"
+      ],
+      "answer": "C",
+      "explanation": "The denominator is \\(\\sqrt[5]{y^2}\\); multiply numerator and denominator by \\(\\sqrt[5]{y^3}\\) so that the denominator becomes \\(\\sqrt[5]{y^5} = y\\).",
+      "source": {
+        "page": 44
+      }
+    },
+    {
+      "id": "c1s2-mcq-032",
+      "type": "mcq",
+      "prompt": "Let \\(a>0\\), \\(b<0\\) and \\(c<0\\). Which expression is positive?",
+      "options": [
+        "\\(b^5\\)",
+        "\\(ab^2c^3\\)",
+        "\\((b-a)^3\\)",
+        "\\((b-a)^4\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(b-a\\) is negative, but an even power of a negative number is positive. \\(b^5<0\\), \\(ab^2c^3<0\\) (only \\(c^3\\) is negative), \\((b-a)^3<0\\).",
+      "source": {
+        "page": 44
+      }
+    },
+    {
+      "id": "c1s2-tf-001",
+      "type": "tf",
+      "prompt": "The number \\(12.5\\times10^3\\) is written in scientific notation.",
+      "answer": false,
+      "explanation": "Scientific notation requires \\(a\\times10^n\\) with \\(1\\le a<10\\). The correct form is \\(1.25\\times10^4\\).",
+      "source": {
+        "page": 25
+      }
+    },
+    {
+      "id": "c1s2-tf-002",
+      "type": "tf",
+      "prompt": "For every real number \\(a\\), \\(\\sqrt{a^2} = |a|\\).",
+      "answer": true,
+      "explanation": "The square root is never negative, so \\(\\sqrt{a^2}=|a|\\); e.g. \\(\\sqrt{(-4)^2}=4\\). The equation \\(\\sqrt{a^2}=a\\) holds only when \\(a\\ge0\\).",
+      "source": {
+        "page": 27
+      }
+    },
+    {
+      "id": "c1s2-tf-003",
+      "type": "tf",
+      "prompt": "\\(\\sqrt[3]{-46}\\) is defined and is a negative real number.",
+      "answer": true,
+      "explanation": "Odd roots of negative numbers are defined; \\(\\sqrt[3]{-46}\\approx-3.58\\). Only even roots of negatives are undefined.",
+      "source": {
+        "page": 33
+      }
+    },
+    {
+      "id": "c1s2-tf-004",
+      "type": "tf",
+      "prompt": "\\(8^{2/3} = \\sqrt{8^3}\\).",
+      "answer": false,
+      "explanation": "By definition \\(a^{m/n} = \\sqrt[n]{a^m}\\), so \\(8^{2/3} = \\sqrt[3]{8^2} = 4\\), while \\(\\sqrt{8^3} = 8^{3/2}\\).",
+      "source": {
+        "page": 28
+      }
+    },
+    {
+      "id": "c1s2-tf-005",
+      "type": "tf",
+      "prompt": "\\(-32^{2/5} = (-32)^{2/5}\\).",
+      "answer": false,
+      "explanation": "\\(-32^{2/5} = -\\left(\\sqrt[5]{32}\\right)^2 = -4\\), but \\((-32)^{2/5} = \\left(\\sqrt[5]{-32}\\right)^2 = 4\\).",
+      "source": {
+        "page": 41
+      }
+    },
+    {
+      "id": "c1s2-tf-006",
+      "type": "tf",
+      "prompt": "If \\(a>0\\), \\(b<0\\) and \\(c<0\\), then \\(\\dfrac{a^3c^3}{b^6c^6}\\) is positive.",
+      "answer": false,
+      "explanation": "\\(a^3>0\\) and \\(c^3<0\\), so the numerator is negative; the denominator \\(b^6c^6\\) has even powers and is positive. The quotient is negative.",
+      "source": {
+        "page": 44
+      }
+    },
+    {
+      "id": "c1s2-tf-007",
+      "type": "tf",
+      "prompt": "\\(\\left(\\dfrac{4}{9}\\right)^{-1/2} = \\dfrac{3}{2}\\).",
+      "answer": true,
+      "explanation": "Invert the fraction and take the square root: \\(\\left(\\frac{9}{4}\\right)^{1/2} = \\frac{3}{2}\\).",
+      "source": {
+        "page": 41
+      }
+    },
+    {
+      "id": "c1s2-tf-008",
+      "type": "tf",
+      "prompt": "To rationalize the denominator of \\(\\dfrac{1}{\\sqrt[5]{a^2}}\\) (\\(a>0\\)), we multiply numerator and denominator by \\(\\sqrt[5]{a^3}\\).",
+      "answer": true,
+      "explanation": "For a denominator \\(\\sqrt[n]{a^m}\\) with \\(m<n\\), multiply by \\(\\sqrt[n]{a^{n-m}}\\); here \\(\\sqrt[5]{a^2}\\sqrt[5]{a^3} = \\sqrt[5]{a^5} = a\\).",
+      "source": {
+        "page": 30
+      }
+    },
+    {
+      "id": "c1s2-match-001",
+      "type": "matching",
+      "title": "Match each Law of Exponents with its description.",
+      "pairs": [
+        {
+          "left": "\\(a^ma^n = a^{m+n}\\)",
+          "right": "multiply powers of the same base: add the exponents"
+        },
+        {
+          "left": "\\(\\dfrac{a^m}{a^n} = a^{m-n}\\)",
+          "right": "divide powers of the same base: subtract the exponents"
+        },
+        {
+          "left": "\\((a^m)^n = a^{mn}\\)",
+          "right": "raise a power to a power: multiply the exponents"
+        },
+        {
+          "left": "\\((ab)^n = a^nb^n\\)",
+          "right": "raise a product to a power: raise each factor to the power"
+        },
+        {
+          "left": "\\(\\left(\\dfrac{a}{b}\\right)^{-n} = \\left(\\dfrac{b}{a}\\right)^{n}\\)",
+          "right": "negative power of a fraction: invert the fraction and change the sign of the exponent"
+        }
+      ],
+      "source": {
+        "page": 22
+      }
+    },
+    {
+      "id": "c1s2-match-002",
+      "type": "matching",
+      "title": "Match each expression with its value, using the Properties of nth Roots (assume all roots exist).",
+      "pairs": [
+        {
+          "left": "\\(\\sqrt[n]{ab}\\)",
+          "right": "nth root of a times nth root of b"
+        },
+        {
+          "left": "\\(\\sqrt[n]{\\dfrac{a}{b}}\\)",
+          "right": "nth root of a divided by nth root of b"
+        },
+        {
+          "left": "\\(\\sqrt[m]{\\sqrt[n]{a}}\\)",
+          "right": "mn-th root of a"
+        },
+        {
+          "left": "\\(\\sqrt[n]{a^n}\\) with \\(n\\) odd",
+          "right": "a"
+        },
+        {
+          "left": "\\(\\sqrt[n]{a^n}\\) with \\(n\\) even",
+          "right": "|a| (the absolute value of a)"
+        }
+      ],
+      "source": {
+        "page": 27
+      }
+    },
+    {
+      "id": "c1s2-match-003",
+      "type": "matching",
+      "title": "Match each number in scientific notation with its decimal notation.",
+      "pairs": [
+        {
+          "left": "\\(3.19\\times10^{5}\\)",
+          "right": "319,000"
+        },
+        {
+          "left": "\\(6\\times10^{12}\\)",
+          "right": "6,000,000,000,000"
+        },
+        {
+          "left": "\\(8.55\\times10^{-3}\\)",
+          "right": "0.00855"
+        },
+        {
+          "left": "\\(6.257\\times10^{-10}\\)",
+          "right": "0.0000000006257"
+        }
+      ],
+      "source": {
+        "page": 43
+      }
+    },
+    {
+      "id": "c1s2-match-004",
+      "type": "matching",
+      "title": "Match each radical expression with the equivalent exponential expression.",
+      "pairs": [
+        {
+          "left": "\\(\\sqrt{\\dfrac{1}{5}}\\)",
+          "right": "5^(-1/2)"
+        },
+        {
+          "left": "\\(\\sqrt[3]{4^2}\\)",
+          "right": "4^(2/3)"
+        },
+        {
+          "left": "\\(\\sqrt{\\dfrac{1}{11^3}}\\)",
+          "right": "11^(-3/2)"
+        },
+        {
+          "left": "\\(\\sqrt[5]{5^3}\\)",
+          "right": "5^(3/5)"
+        },
+        {
+          "left": "\\(\\dfrac{1}{\\sqrt{x}}\\)",
+          "right": "x^(-1/2)"
+        }
+      ],
+      "source": {
+        "page": 31
+      }
+    },
+    {
+      "id": "c1s3-mcq-001",
+      "type": "mcq",
+      "prompt": "Which of the following expressions is NOT a polynomial?",
+      "options": [
+        "\\(2x^2-3x+4\\)",
+        "\\(x^8+5x\\)",
+        "\\(\\sqrt{x}+10\\)",
+        "\\(6\\)"
+      ],
+      "answer": "C",
+      "explanation": "A polynomial is a sum of monomials \\(ax^k\\) with \\(k\\) a non-negative integer; \\(\\sqrt{x}=x^{1/2}\\) has a fractional exponent, so it is not a polynomial.",
+      "source": {
+        "page": 45
+      }
+    },
+    {
+      "id": "c1s3-match-001",
+      "type": "matching",
+      "title": "Match each polynomial with its type.",
+      "pairs": [
+        {
+          "left": "\\(2x^2-3x+4\\)",
+          "right": "Trinomial"
+        },
+        {
+          "left": "\\(x^8+5x\\)",
+          "right": "Binomial"
+        },
+        {
+          "left": "\\(9x^2\\)",
+          "right": "Monomial"
+        },
+        {
+          "left": "\\(3-x+x^2-\\frac{1}{2}x^3\\)",
+          "right": "Polynomial with four terms"
+        }
+      ],
+      "source": {
+        "page": 46
+      }
+    },
+    {
+      "id": "c1s3-match-002",
+      "type": "matching",
+      "title": "Match each polynomial with its degree.",
+      "pairs": [
+        {
+          "left": "\\(x^8+5x\\)",
+          "right": "8"
+        },
+        {
+          "left": "\\(3-x+x^2-\\frac{1}{2}x^3\\)",
+          "right": "3"
+        },
+        {
+          "left": "\\(9x^2\\)",
+          "right": "2"
+        },
+        {
+          "left": "\\(5x+1\\)",
+          "right": "1"
+        },
+        {
+          "left": "\\(6\\)",
+          "right": "0"
+        }
+      ],
+      "explanation": "The degree is the highest power of the variable that appears; a non-zero constant has degree 0.",
+      "source": {
+        "page": 46
+      }
+    },
+    {
+      "id": "c1s3-tf-001",
+      "type": "tf",
+      "prompt": "The constant \\(6\\) is a monomial of degree \\(0\\).",
+      "answer": true,
+      "explanation": "\\(6=6x^0\\) is a monomial \\(ax^k\\) with \\(k=0\\); the Polynomials table lists its degree as \\(0\\).",
+      "source": {
+        "page": 46
+      }
+    },
+    {
+      "id": "c1s3-mcq-002",
+      "type": "mcq",
+      "prompt": "Find the difference \\((x^3-6x^2+2x+4)-(x^3+5x^2-7x)\\).",
+      "options": [
+        "\\(-11x^2+9x+4\\)",
+        "\\(-x^2-5x+4\\)",
+        "\\(2x^3-11x^2+9x+4\\)",
+        "\\(-11x^2-5x+4\\)"
+      ],
+      "answer": "A",
+      "explanation": "Change the sign of every term in the second parentheses, then combine like terms: the \\(x^3\\) terms cancel, \\(-6x^2-5x^2=-11x^2\\) and \\(2x+7x=9x\\).",
+      "source": {
+        "page": 47
+      }
+    },
+    {
+      "id": "c1s3-mcq-003",
+      "type": "mcq",
+      "prompt": "Perform the indicated operations and simplify: \\(4(x^2-3x+5)-3(x^2-2x+1)\\).",
+      "options": [
+        "\\(x^2-18x+17\\)",
+        "\\(x^2-6x+17\\)",
+        "\\(x^2-6x+23\\)",
+        "\\(7x^2-18x+23\\)"
+      ],
+      "answer": "B",
+      "explanation": "Distribute: \\(4x^2-12x+20-3x^2+6x-3\\); note \\(-3\\cdot(-2x)=+6x\\) and \\(-3\\cdot 1=-3\\). Then combine like terms.",
+      "source": {
+        "page": 57
+      }
+    },
+    {
+      "id": "c1s3-mcq-004",
+      "type": "mcq",
+      "prompt": "Perform the indicated operations and simplify: \\(2(2-5t)+t^2(t-1)-(t^4-1)\\).",
+      "options": [
+        "\\(-t^4+t^3-t^2-10t+3\\)",
+        "\\(t^4+t^3-t^2-10t+5\\)",
+        "\\(-t^4+t^3-t^2-10t+5\\)",
+        "\\(-t^4+t^3+t^2-10t+5\\)"
+      ],
+      "answer": "C",
+      "explanation": "Expand: \\(4-10t+t^3-t^2-t^4+1\\). The minus sign in front of \\((t^4-1)\\) turns \\(-1\\) into \\(+1\\), so the constant is \\(4+1=5\\).",
+      "source": {
+        "page": 58
+      }
+    },
+    {
+      "id": "c1s3-mcq-005",
+      "type": "mcq",
+      "prompt": "Multiply: \\((3x+2)(3x-5)\\).",
+      "options": [
+        "\\(9x^2-9x-10\\)",
+        "\\(9x^2-10\\)",
+        "\\(6x^2-7x-5\\)",
+        "\\(9x^2+9x-10\\)"
+      ],
+      "answer": "A",
+      "explanation": "Multiply each term by each term: \\(9x^2-15x+6x-10\\), and \\(-15x+6x=-9x\\).",
+      "source": {
+        "page": 47
+      }
+    },
+    {
+      "id": "c1s3-mcq-006",
+      "type": "mcq",
+      "prompt": "Multiply: \\((x^2-3)(x^3+2x+1)\\).",
+      "options": [
+        "\\(x^5+5x^3+x^2-6x-3\\)",
+        "\\(x^6-x^3+x^2-6x-3\\)",
+        "\\(x^5-x^3+x^2-3\\)",
+        "\\(x^5-x^3+x^2-6x-3\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(x^2(x^3+2x+1)-3(x^3+2x+1)\\) gives \\(x^5+2x^3+x^2-3x^3-6x-3\\); combine \\(2x^3-3x^3=-x^3\\).",
+      "source": {
+        "page": 47
+      }
+    },
+    {
+      "id": "c1s3-mcq-007",
+      "type": "mcq",
+      "prompt": "Multiply and simplify: \\((1+\\sqrt{x})(2-3\\sqrt{x})\\).",
+      "options": [
+        "\\(2-\\sqrt{x}-3x\\)",
+        "\\(2+5\\sqrt{x}-3x\\)",
+        "\\(2-\\sqrt{x}-3x^2\\)",
+        "\\(2-3x\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\(2-3\\sqrt{x}+2\\sqrt{x}-3(\\sqrt{x})^2\\); since \\((\\sqrt{x})^2=x\\), this is \\(2-\\sqrt{x}-3x\\).",
+      "source": {
+        "page": 47
+      }
+    },
+    {
+      "id": "c1s3-mcq-008",
+      "type": "mcq",
+      "prompt": "Multiply: \\((4x-3y)(2x+5y)\\).",
+      "options": [
+        "\\(8x^2-14xy-15y^2\\)",
+        "\\(8x^2+14xy-15y^2\\)",
+        "\\(8x^2+26xy-15y^2\\)",
+        "\\(8x^2+14xy+15y^2\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(8x^2+20xy-6xy-15y^2\\); the middle terms combine to \\(14xy\\).",
+      "source": {
+        "page": 62
+      }
+    },
+    {
+      "id": "c1s3-mcq-009",
+      "type": "mcq",
+      "prompt": "Use a Special Product Formula to find \\((3x+5)^2\\).",
+      "options": [
+        "\\(9x^2+25\\)",
+        "\\(9x^2+15x+25\\)",
+        "\\(9x^2+30x+25\\)",
+        "\\(3x^2+30x+25\\)"
+      ],
+      "answer": "C",
+      "explanation": "Square of a sum: \\((3x)^2+2(3x)(5)+5^2\\). The middle term \\(2AB=30x\\) must not be forgotten.",
+      "source": {
+        "page": 48
+      }
+    },
+    {
+      "id": "c1s3-mcq-010",
+      "type": "mcq",
+      "prompt": "Use a Special Product Formula to find \\((x^2-2)^3\\).",
+      "options": [
+        "\\(x^6-8\\)",
+        "\\(x^6-6x^4+12x^2-8\\)",
+        "\\(x^6+6x^4+12x^2+8\\)",
+        "\\(x^5-6x^4+12x^2-8\\)"
+      ],
+      "answer": "B",
+      "explanation": "Cube of a difference with \\(A=x^2\\), \\(B=2\\): \\(A^3-3A^2B+3AB^2-B^3=x^6-6x^4+12x^2-8\\).",
+      "source": {
+        "page": 48
+      }
+    },
+    {
+      "id": "c1s3-mcq-011",
+      "type": "mcq",
+      "prompt": "Use a Special Product Formula to find \\((2x-\\sqrt{y})(2x+\\sqrt{y})\\).",
+      "options": [
+        "\\(4x^2-y^2\\)",
+        "\\(4x^2+y\\)",
+        "\\(2x^2-y\\)",
+        "\\(4x^2-y\\)"
+      ],
+      "answer": "D",
+      "explanation": "Product Formula 1 with \\(A=2x\\), \\(B=\\sqrt{y}\\): \\((2x)^2-(\\sqrt{y})^2=4x^2-y\\).",
+      "source": {
+        "page": 48
+      }
+    },
+    {
+      "id": "c1s3-mcq-012",
+      "type": "mcq",
+      "prompt": "Expand and simplify: \\(\\left(c+\\frac{1}{c}\\right)^2\\).",
+      "options": [
+        "\\(c^2+\\frac{1}{c^2}\\)",
+        "\\(c^2+2c+\\frac{1}{c^2}\\)",
+        "\\(c^2+2+\\frac{1}{c^2}\\)",
+        "\\(c^2+1+\\frac{1}{c^2}\\)"
+      ],
+      "answer": "C",
+      "explanation": "Square of a sum: \\(c^2+2\\cdot c\\cdot\\frac{1}{c}+\\frac{1}{c^2}\\), and \\(2\\cdot c\\cdot\\frac{1}{c}=2\\).",
+      "source": {
+        "page": 63
+      }
+    },
+    {
+      "id": "c1s3-tf-002",
+      "type": "tf",
+      "prompt": "For every real number \\(x\\), \\((x+3)^2=x^2+9\\).",
+      "answer": false,
+      "explanation": "Square of a sum: \\((x+3)^2=x^2+2(x)(3)+9=x^2+6x+9\\); the middle term \\(2AB\\) cannot be dropped.",
+      "source": {
+        "page": 48
+      }
+    },
+    {
+      "id": "c1s3-match-003",
+      "type": "matching",
+      "title": "Match each expression with the name of the Special Product or Special Factoring Formula it comes from.",
+      "pairs": [
+        {
+          "left": "\\(A^2-B^2\\)",
+          "right": "Difference of squares"
+        },
+        {
+          "left": "\\(A^2+2AB+B^2\\)",
+          "right": "Square of a sum (perfect square)"
+        },
+        {
+          "left": "\\(A^3-B^3\\)",
+          "right": "Difference of cubes"
+        },
+        {
+          "left": "\\(A^3+B^3\\)",
+          "right": "Sum of cubes"
+        },
+        {
+          "left": "\\(A^3+3A^2B+3AB^2+B^3\\)",
+          "right": "Cube of a sum"
+        }
+      ],
+      "source": {
+        "page": 51
+      }
+    },
+    {
+      "id": "c1s3-mcq-013",
+      "type": "mcq",
+      "prompt": "The greatest common factor of the terms of \\(8x^4y^2+6x^3y^3-2xy^4\\) is",
+      "options": [
+        "\\(2xy^2\\)",
+        "\\(2xy\\)",
+        "\\(2x^4y^4\\)",
+        "\\(xy^2\\)"
+      ],
+      "answer": "A",
+      "explanation": "The GCF of \\(8,6,-2\\) is \\(2\\); of \\(x^4,x^3,x\\) is \\(x\\); of \\(y^2,y^3,y^4\\) is \\(y^2\\). So the GCF is \\(2xy^2\\).",
+      "source": {
+        "page": 49
+      }
+    },
+    {
+      "id": "c1s3-mcq-014",
+      "type": "mcq",
+      "prompt": "Factor out the common factor: \\((2x+4)(x-3)-5(x-3)\\).",
+      "options": [
+        "\\((2x+9)(x-3)\\)",
+        "\\((2x-1)(x-3)\\)",
+        "\\((2x-1)(x-3)^2\\)",
+        "\\((2x-1)(x+3)\\)"
+      ],
+      "answer": "B",
+      "explanation": "Both terms have the common factor \\(x-3\\): \\([(2x+4)-5](x-3)=(2x-1)(x-3)\\).",
+      "source": {
+        "page": 49
+      }
+    },
+    {
+      "id": "c1s3-match-004",
+      "type": "matching",
+      "title": "Match each expression with the factoring method the notes use for it.",
+      "pairs": [
+        {
+          "left": "\\(3x^2-6x\\)",
+          "right": "Factoring out a common factor"
+        },
+        {
+          "left": "\\(4x^2-25\\)",
+          "right": "Difference of squares"
+        },
+        {
+          "left": "\\(x^2+6x+9\\)",
+          "right": "Perfect square"
+        },
+        {
+          "left": "\\(27x^3-1\\)",
+          "right": "Difference of cubes"
+        },
+        {
+          "left": "\\(x^3+x^2+4x+4\\)",
+          "right": "Grouping"
+        }
+      ],
+      "explanation": "\\(3x(x-2)\\); \\((2x-5)(2x+5)\\); \\((x+3)^2\\); \\((3x-1)(9x^2+3x+1)\\); \\((x+1)(x^2+4)\\).",
+      "source": {
+        "page": 49
+      }
+    },
+    {
+      "id": "c1s3-tf-003",
+      "type": "tf",
+      "prompt": "The two terms of \\((z-2)^2-5(z+2)\\) have the common factor \\(z-2\\).",
+      "answer": false,
+      "explanation": "\\(z-2\\) and \\(z+2\\) are different factors, so there is no common factor; expanding gives \\(z^2-9z-6\\).",
+      "source": {
+        "page": 59
+      }
+    },
+    {
+      "id": "c1s3-mcq-015",
+      "type": "mcq",
+      "prompt": "Factor the trinomial \\(x^2-2x-3\\).",
+      "options": [
+        "\\((x-1)(x+3)\\)",
+        "\\((x+1)(x-3)\\)",
+        "\\((x-1)(x-3)\\)",
+        "\\((x+1)(x+3)\\)"
+      ],
+      "answer": "B",
+      "explanation": "Find two numbers whose product is \\(-3\\) and whose sum is \\(-2\\): \\(1\\) and \\(-3\\).",
+      "source": {
+        "page": 50
+      }
+    },
+    {
+      "id": "c1s3-mcq-016",
+      "type": "mcq",
+      "prompt": "Factor the trinomial \\(6x^2+7x-5\\).",
+      "options": [
+        "\\((3x-5)(2x+1)\\)",
+        "\\((6x+5)(x-1)\\)",
+        "\\((3x+5)(2x-1)\\)",
+        "\\((3x-1)(2x+5)\\)"
+      ],
+      "answer": "C",
+      "explanation": "Try \\(pq=6\\), \\(rs=-5\\), \\(ps+qr=7\\): \\((3x+5)(2x-1)=6x^2-3x+10x-5=6x^2+7x-5\\).",
+      "source": {
+        "page": 50
+      }
+    },
+    {
+      "id": "c1s3-mcq-017",
+      "type": "mcq",
+      "prompt": "Factor: \\((5a+1)^2-2(5a+1)-3\\).",
+      "options": [
+        "\\((5a+1)(5a-3)\\)",
+        "\\(5a(5a+4)\\)",
+        "\\((5a+2)^2\\)",
+        "\\((5a+2)(5a-2)\\)"
+      ],
+      "answer": "D",
+      "explanation": "Let \\(u=5a+1\\): \\(u^2-2u-3=(u+1)(u-3)\\). Substitute back: \\((5a+1+1)(5a+1-3)=(5a+2)(5a-2)\\).",
+      "source": {
+        "page": 50
+      }
+    },
+    {
+      "id": "c1s3-mcq-018",
+      "type": "mcq",
+      "prompt": "Factor: \\(2(a+b)^2+5(a+b)-3\\).",
+      "options": [
+        "\\((2a+2b-1)(a+b+3)\\)",
+        "\\((2a+2b+1)(a+b-3)\\)",
+        "\\((a+b-1)(2a+2b+3)\\)",
+        "\\((2a+2b-3)(a+b+1)\\)"
+      ],
+      "answer": "A",
+      "explanation": "Let \\(u=a+b\\): \\(2u^2+5u-3=(2u-1)(u+3)\\). Substitute back \\(u=a+b\\).",
+      "source": {
+        "page": 63
+      }
+    },
+    {
+      "id": "c1s3-mcq-019",
+      "type": "mcq",
+      "prompt": "Factor: \\((x+y)^2-z^2\\).",
+      "options": [
+        "\\((x+y-z)^2\\)",
+        "\\((x-y-z)(x+y+z)\\)",
+        "\\((x+y-z)(x+y+z)\\)",
+        "\\((x+y-z)(x-y+z)\\)"
+      ],
+      "answer": "C",
+      "explanation": "Difference of squares with \\(A=x+y\\), \\(B=z\\): \\((A-B)(A+B)=(x+y-z)(x+y+z)\\).",
+      "source": {
+        "page": 51
+      }
+    },
+    {
+      "id": "c1s3-mcq-020",
+      "type": "mcq",
+      "prompt": "Factor: \\(27x^3-1\\).",
+      "options": [
+        "\\((3x-1)(9x^2+3x+1)\\)",
+        "\\((3x-1)(9x^2-3x+1)\\)",
+        "\\((3x-1)(9x^2+6x+1)\\)",
+        "\\((3x-1)^3\\)"
+      ],
+      "answer": "A",
+      "explanation": "Difference of cubes with \\(A=3x\\), \\(B=1\\): \\((A-B)(A^2+AB+B^2)\\); the middle term is \\(+AB=3x\\), not \\(2AB\\).",
+      "source": {
+        "page": 52
+      }
+    },
+    {
+      "id": "c1s3-mcq-021",
+      "type": "mcq",
+      "prompt": "Use a Special Factoring Formula to factor \\(8x^3+125\\).",
+      "options": [
+        "\\((2x+5)(4x^2+10x+25)\\)",
+        "\\((2x+5)^3\\)",
+        "\\((2x+5)(4x^2-10x+25)\\)",
+        "\\((2x-5)(4x^2+10x+25)\\)"
+      ],
+      "answer": "C",
+      "explanation": "Sum of cubes with \\(A=2x\\), \\(B=5\\): \\((A+B)(A^2-AB+B^2)\\), so the middle term is \\(-10x\\).",
+      "source": {
+        "page": 64
+      }
+    },
+    {
+      "id": "c1s3-mcq-022",
+      "type": "mcq",
+      "prompt": "Use a Special Factoring Formula to factor \\(16z^2-24z+9\\).",
+      "options": [
+        "\\((4z+3)^2\\)",
+        "\\((4z-3)(4z+3)\\)",
+        "\\((8z-3)^2\\)",
+        "\\((4z-3)^2\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(16z^2=(4z)^2\\), \\(9=3^2\\) and \\(-24z=-2(4z)(3)\\), so it is the perfect square \\((A-B)^2\\) with \\(A=4z\\), \\(B=3\\).",
+      "source": {
+        "page": 64
+      }
+    },
+    {
+      "id": "c1s3-tf-004",
+      "type": "tf",
+      "prompt": "\\(x^2+6x+9\\) is a perfect square trinomial because \\(9=3^2\\) and \\(6x=2\\cdot x\\cdot 3\\).",
+      "answer": true,
+      "explanation": "The middle term is twice the product of the square roots of the outer terms, so \\(x^2+6x+9=(x+3)^2\\).",
+      "source": {
+        "page": 52
+      }
+    },
+    {
+      "id": "c1s3-mcq-023",
+      "type": "mcq",
+      "prompt": "Use a Special Factoring Formula to factor \\((x+3)^2-4\\).",
+      "options": [
+        "\\((x-1)(x+7)\\)",
+        "\\((x+1)(x-5)\\)",
+        "\\((x+5)^2\\)",
+        "\\((x+1)(x+5)\\)"
+      ],
+      "answer": "D",
+      "explanation": "Difference of squares with \\(A=x+3\\), \\(B=2\\): \\([(x+3)-2][(x+3)+2]=(x+1)(x+5)\\).",
+      "source": {
+        "page": 60
+      }
+    },
+    {
+      "id": "c1s3-tf-005",
+      "type": "tf",
+      "prompt": "\\(x^2+36\\) can be factored as \\((x+6)(x-6)\\).",
+      "answer": false,
+      "explanation": "\\((x+6)(x-6)=x^2-36\\) (difference of squares). The formula \\(A^2-B^2=(A-B)(A+B)\\) needs a minus sign between the squares.",
+      "source": {
+        "page": 51
+      }
+    },
+    {
+      "id": "c1s3-mcq-024",
+      "type": "mcq",
+      "prompt": "Factor completely: \\(x^5y^2-xy^6\\).",
+      "options": [
+        "\\(xy^2(x-y)(x+y)(x^2+y^2)\\)",
+        "\\(xy^2(x-y)^2(x+y)^2\\)",
+        "\\(xy(x-y)(x+y)(x^2+y^2)\\)",
+        "\\(xy^2(x^2+y^2)^2\\)"
+      ],
+      "answer": "A",
+      "explanation": "Factor out the GCF \\(xy^2\\): \\(xy^2(x^4-y^4)\\). Then use difference of squares twice: \\(x^4-y^4=(x^2-y^2)(x^2+y^2)\\) and \\(x^2-y^2=(x-y)(x+y)\\).",
+      "source": {
+        "page": 53
+      }
+    },
+    {
+      "id": "c1s3-mcq-025",
+      "type": "mcq",
+      "prompt": "Factor completely: \\(3x^3-27x\\).",
+      "options": [
+        "\\(3x(x-3)^2\\)",
+        "\\(3x(x-9)(x+9)\\)",
+        "\\(3x(x-3)(x+3)\\)",
+        "\\(3x^2(x-9)\\)"
+      ],
+      "answer": "C",
+      "explanation": "First factor out the common factor \\(3x\\): \\(3x(x^2-9)\\). Then \\(x^2-9=(x-3)(x+3)\\).",
+      "source": {
+        "page": 64
+      }
+    },
+    {
+      "id": "c1s3-mcq-026",
+      "type": "mcq",
+      "prompt": "Factor: \\(3x^{3/2}-9x^{1/2}+6x^{-1/2}\\).",
+      "options": [
+        "\\(3x^{1/2}(x-1)(x-2)\\)",
+        "\\(3x^{-1/2}(x-1)(x-2)\\)",
+        "\\(3x^{-1/2}(x+1)(x+2)\\)",
+        "\\(3x^{-1/2}(x-3)(x+2)\\)"
+      ],
+      "answer": "B",
+      "explanation": "Factor out the smallest power \\(3x^{-1/2}\\): \\(3x^{-1/2}(x^2-3x+2)\\), and \\(x^2-3x+2=(x-1)(x-2)\\).",
+      "source": {
+        "page": 54
+      }
+    },
+    {
+      "id": "c1s3-mcq-027",
+      "type": "mcq",
+      "prompt": "Factor by grouping: \\(x^3+x^2+4x+4\\).",
+      "options": [
+        "\\((x+1)(x-2)(x+2)\\)",
+        "\\((x+1)(x+2)^2\\)",
+        "\\((x^2+1)(x+4)\\)",
+        "\\((x+1)(x^2+4)\\)"
+      ],
+      "answer": "D",
+      "explanation": "Group: \\((x^3+x^2)+(4x+4)=x^2(x+1)+4(x+1)\\), then factor out \\(x+1\\): \\((x+1)(x^2+4)\\). \\(x^2+4\\) is a sum, not a difference of squares.",
+      "source": {
+        "page": 55
+      }
+    },
+    {
+      "id": "c1s3-mcq-028",
+      "type": "mcq",
+      "prompt": "Factor completely: \\(y^3-3y^2-4y+12\\).",
+      "options": [
+        "\\((y-3)(y-2)^2\\)",
+        "\\((y+3)(y-2)(y+2)\\)",
+        "\\((y-3)(y^2+4)\\)",
+        "\\((y-3)(y-2)(y+2)\\)"
+      ],
+      "answer": "D",
+      "explanation": "Group: \\(y^2(y-3)-4(y-3)=(y-3)(y^2-4)\\), and \\(y^2-4=(y-2)(y+2)\\).",
+      "source": {
+        "page": 64
+      }
+    },
+    {
+      "id": "c1s3-mcq-029",
+      "type": "mcq",
+      "prompt": "Factor completely: \\((x-1)(x+2)^2-(x-1)^2(x+2)\\).",
+      "options": [
+        "\\((x-1)(x+2)\\)",
+        "\\(3(x-1)(x+2)\\)",
+        "\\(-3(x-1)(x+2)\\)",
+        "\\((x-1)(x+2)(2x+1)\\)"
+      ],
+      "answer": "B",
+      "explanation": "Both terms have the common factor \\((x-1)(x+2)\\): \\((x-1)(x+2)[(x+2)-(x-1)]\\), and \\((x+2)-(x-1)=3\\).",
+      "source": {
+        "page": 65
+      }
+    },
+    {
+      "id": "c1s4-mcq-001",
+      "type": "mcq",
+      "prompt": "Find the domain of the expression \\(\\frac{x}{x^2-5x+6}\\).",
+      "options": [
+        "\\(\\{x \\mid x \\ne 2,\\ x \\ne 3\\}\\)",
+        "\\(\\{x \\mid x \\ne -2,\\ x \\ne -3\\}\\)",
+        "\\(\\{x \\mid x \\ne 0,\\ x \\ne 2,\\ x \\ne 3\\}\\)",
+        "\\(\\mathbb{R}\\)"
+      ],
+      "answer": "A",
+      "explanation": "Factor the denominator: \\(x^2-5x+6=(x-2)(x-3)\\). It cannot be zero, so \\(x \\ne 2\\) and \\(x \\ne 3\\); the numerator puts no restriction.",
+      "source": {
+        "page": 65
+      }
+    },
+    {
+      "id": "c1s4-mcq-002",
+      "type": "mcq",
+      "prompt": "Find the domain of the expression \\(\\frac{\\sqrt{x}}{x-5}\\).",
+      "options": [
+        "\\([0,\\infty)\\)",
+        "\\((0,\\infty)-\\{5\\}\\)",
+        "\\([0,\\infty)-\\{5\\}\\)",
+        "\\((5,\\infty)\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(\\sqrt{x}\\) requires \\(x \\ge 0\\) and the denominator requires \\(x \\ne 5\\), so the domain is \\(\\{x \\mid x \\ge 0 \\text{ and } x \\ne 5\\}=[0,\\infty)-\\{5\\}\\).",
+      "source": {
+        "page": 65
+      }
+    },
+    {
+      "id": "c1s4-mcq-003",
+      "type": "mcq",
+      "prompt": "Find the domain of the expression \\(\\frac{2t^2-5}{3t+6}\\).",
+      "options": [
+        "\\(\\mathbb{R}-\\{2\\}\\)",
+        "\\(\\mathbb{R}-\\{-2\\}\\)",
+        "\\(\\mathbb{R}-\\{-6\\}\\)",
+        "\\(\\mathbb{R}\\)"
+      ],
+      "answer": "B",
+      "explanation": "Only the denominator restricts \\(t\\): \\(3t+6 \\ne 0 \\Rightarrow t \\ne -2\\).",
+      "source": {
+        "page": 72
+      }
+    },
+    {
+      "id": "c1s4-mcq-004",
+      "type": "mcq",
+      "prompt": "Simplify \\(\\frac{x^2-1}{x^2+x-2}\\).",
+      "options": [
+        "\\(\\frac{x-1}{x+2}\\)",
+        "\\(\\frac{x+1}{x-2}\\)",
+        "\\(\\frac{-1}{x-2}\\)",
+        "\\(\\frac{x+1}{x+2}\\)"
+      ],
+      "answer": "D",
+      "explanation": "Factor: \\(\\frac{(x-1)(x+1)}{(x+2)(x-1)}\\) and cancel the common factor \\((x-1)\\). Only common factors cancel, never single terms like \\(x^2\\).",
+      "source": {
+        "page": 66
+      }
+    },
+    {
+      "id": "c1s4-mcq-005",
+      "type": "mcq",
+      "prompt": "Simplify \\(\\frac{3(x+2)(x-1)}{6(x-1)^2}\\).",
+      "options": [
+        "\\(\\frac{x+2}{2(x-1)}\\)",
+        "\\(\\frac{x+2}{2}\\)",
+        "\\(\\frac{2(x+2)}{x-1}\\)",
+        "\\(\\frac{x+2}{2(x-1)^2}\\)"
+      ],
+      "answer": "A",
+      "explanation": "Cancel one factor \\((x-1)\\) (one \\((x-1)\\) remains downstairs) and reduce \\(3/6\\) to \\(1/2\\); \\(x \\ne 1\\).",
+      "source": {
+        "page": 73
+      }
+    },
+    {
+      "id": "c1s4-mcq-006",
+      "type": "mcq",
+      "prompt": "Simplify \\(\\frac{x^2-x-12}{x^2+5x+6}\\).",
+      "options": [
+        "\\(\\frac{x+4}{x+2}\\)",
+        "\\(\\frac{x-4}{x+3}\\)",
+        "\\(\\frac{x-4}{x+2}\\)",
+        "\\(\\frac{x-3}{x+2}\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(x^2-x-12=(x-4)(x+3)\\) and \\(x^2+5x+6=(x+2)(x+3)\\); cancel \\((x+3)\\), with \\(x \\ne -2,-3\\).",
+      "source": {
+        "page": 74
+      }
+    },
+    {
+      "id": "c1s4-mcq-007",
+      "type": "mcq",
+      "prompt": "Simplify \\(\\frac{1-x^2}{x^2-1}\\).",
+      "options": [
+        "\\(1\\)",
+        "\\(-1\\)",
+        "\\(0\\)",
+        "\\(\\frac{1-x}{x+1}\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(1-x^2=-(x^2-1)\\), so the quotient is \\(-1\\) for every \\(x \\ne \\pm 1\\).",
+      "source": {
+        "page": 83
+      }
+    },
+    {
+      "id": "c1s4-mcq-008",
+      "type": "mcq",
+      "prompt": "Perform the multiplication and simplify: \\(\\frac{x^2+2x-3}{x^2+8x+16}\\cdot\\frac{3x+12}{x-1}\\).",
+      "options": [
+        "\\(\\frac{3(x-3)}{x+4}\\)",
+        "\\(\\frac{x+3}{3(x+4)}\\)",
+        "\\(\\frac{3(x+3)}{(x+4)^2}\\)",
+        "\\(\\frac{3(x+3)}{x+4}\\)"
+      ],
+      "answer": "D",
+      "explanation": "Factor: \\(\\frac{(x+3)(x-1)}{(x+4)^2}\\cdot\\frac{3(x+4)}{x-1}\\); cancel \\((x-1)\\) and one \\((x+4)\\).",
+      "source": {
+        "page": 66
+      }
+    },
+    {
+      "id": "c1s4-mcq-009",
+      "type": "mcq",
+      "prompt": "Perform the division and simplify: \\(\\frac{x-4}{x^2-4}\\div\\frac{x^2-3x-4}{x^2+5x+6}\\).",
+      "options": [
+        "\\(\\frac{x+3}{(x-2)(x+1)}\\)",
+        "\\(\\frac{x+1}{(x-2)(x+3)}\\)",
+        "\\(\\frac{x+3}{(x+2)(x+1)}\\)",
+        "\\(\\frac{x-3}{(x-2)(x+1)}\\)"
+      ],
+      "answer": "A",
+      "explanation": "Invert the divisor and multiply: \\(\\frac{x-4}{(x-2)(x+2)}\\cdot\\frac{(x+2)(x+3)}{(x-4)(x+1)}\\); cancel \\((x-4)\\) and \\((x+2)\\).",
+      "source": {
+        "page": 67
+      }
+    },
+    {
+      "id": "c1s4-mcq-010",
+      "type": "mcq",
+      "prompt": "Perform the multiplication and simplify: \\(\\frac{x^2+2x-3}{x^2-2x-3}\\cdot\\frac{3-x}{3+x}\\).",
+      "options": [
+        "\\(\\frac{x-1}{x+1}\\)",
+        "\\(\\frac{1-x}{x+1}\\)",
+        "\\(\\frac{x+1}{1-x}\\)",
+        "\\(-1\\)"
+      ],
+      "answer": "B",
+      "explanation": "Factor and note \\(3-x=-(x-3)\\): \\(\\frac{(x+3)(x-1)}{(x-3)(x+1)}\\cdot\\frac{-(x-3)}{x+3}=-\\frac{x-1}{x+1}=\\frac{1-x}{x+1}\\).",
+      "source": {
+        "page": 75
+      }
+    },
+    {
+      "id": "c1s4-mcq-011",
+      "type": "mcq",
+      "prompt": "Simplify \\(\\frac{x}{(y/z)}\\).",
+      "options": [
+        "\\(\\frac{x}{yz}\\)",
+        "\\(\\frac{xy}{z}\\)",
+        "\\(\\frac{z}{xy}\\)",
+        "\\(\\frac{xz}{y}\\)"
+      ],
+      "answer": "D",
+      "explanation": "Dividing by \\(\\frac{y}{z}\\) means multiplying by \\(\\frac{z}{y}\\): \\(x\\cdot\\frac{z}{y}=\\frac{xz}{y}\\). (By contrast, \\(\\frac{x/y}{z}=\\frac{x}{yz}\\).)",
+      "source": {
+        "page": 84
+      }
+    },
+    {
+      "id": "c1s4-mcq-012",
+      "type": "mcq",
+      "prompt": "Perform the addition and simplify: \\(\\frac{3}{x-1}+\\frac{x}{x+2}\\).",
+      "options": [
+        "\\(\\frac{x+3}{(x-1)(x+2)}\\)",
+        "\\(\\frac{x^2+2x+6}{(x-1)(x+2)}\\)",
+        "\\(\\frac{x^2+5x-3}{(x-1)(x+2)}\\)",
+        "\\(\\frac{x+3}{2x+1}\\)"
+      ],
+      "answer": "B",
+      "explanation": "The LCD is \\((x-1)(x+2)\\): numerator \\(3(x+2)+x(x-1)=3x+6+x^2-x=x^2+2x+6\\).",
+      "source": {
+        "page": 67
+      }
+    },
+    {
+      "id": "c1s4-mcq-013",
+      "type": "mcq",
+      "prompt": "What is the least common denominator (LCD) of \\(\\frac{1}{x^2-1}\\) and \\(\\frac{x}{(x+1)^2}\\)?",
+      "options": [
+        "\\((x-1)(x+1)\\)",
+        "\\((x+1)^2\\)",
+        "\\((x-1)(x+1)^2\\)",
+        "\\((x^2-1)(x+1)^2\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(x^2-1=(x-1)(x+1)\\). Take each distinct factor with the highest power that appears: \\((x-1)(x+1)^2\\).",
+      "source": {
+        "page": 68
+      }
+    },
+    {
+      "id": "c1s4-mcq-014",
+      "type": "mcq",
+      "prompt": "Perform the addition and simplify: \\(\\frac{1}{x+5}+\\frac{2}{x-3}\\).",
+      "options": [
+        "\\(\\frac{3x+7}{(x+5)(x-3)}\\)",
+        "\\(\\frac{3x-7}{(x+5)(x-3)}\\)",
+        "\\(\\frac{3}{(x+5)(x-3)}\\)",
+        "\\(\\frac{3}{2x+2}\\)"
+      ],
+      "answer": "A",
+      "explanation": "LCD \\((x+5)(x-3)\\): numerator \\((x-3)+2(x+5)=3x+7\\); \\(x \\ne -5, 3\\).",
+      "source": {
+        "page": 75
+      }
+    },
+    {
+      "id": "c1s4-mcq-015",
+      "type": "mcq",
+      "prompt": "Perform the addition and simplify: \\(\\frac{x}{(x+1)^2}+\\frac{2}{x+1}\\).",
+      "options": [
+        "\\(\\frac{x+2}{(x+1)^2}\\)",
+        "\\(\\frac{3x+2}{(x+1)^3}\\)",
+        "\\(\\frac{x+2}{(x+1)^3}\\)",
+        "\\(\\frac{3x+2}{(x+1)^2}\\)"
+      ],
+      "answer": "D",
+      "explanation": "The LCD is \\((x+1)^2\\). Rewrite \\(\\frac{2}{x+1}=\\frac{2(x+1)}{(x+1)^2}\\): numerator \\(x+2x+2=3x+2\\).",
+      "source": {
+        "page": 76
+      }
+    },
+    {
+      "id": "c1s4-mcq-016",
+      "type": "mcq",
+      "prompt": "Perform the addition and simplify: \\(u+1+\\frac{u}{u+1}\\).",
+      "options": [
+        "\\(\\frac{2u+1}{u+1}\\)",
+        "\\(\\frac{u^2+3u+1}{u+1}\\)",
+        "\\(\\frac{u^2+u+1}{u+1}\\)",
+        "\\(\\frac{u^2+2u+1}{u+1}\\)"
+      ],
+      "answer": "B",
+      "explanation": "Write \\(u+1=\\frac{(u+1)^2}{u+1}\\): numerator \\((u+1)^2+u=u^2+2u+1+u=u^2+3u+1\\).",
+      "source": {
+        "page": 76
+      }
+    },
+    {
+      "id": "c1s4-mcq-017",
+      "type": "mcq",
+      "prompt": "Simplify the compound fraction \\(\\dfrac{\\frac{x}{y}+1}{1-\\frac{y}{x}}\\).",
+      "options": [
+        "\\(\\frac{x+y}{x-y}\\)",
+        "\\(\\frac{y(x+y)}{x(x-y)}\\)",
+        "\\(\\frac{x(x+y)}{y(x-y)}\\)",
+        "\\(\\frac{x(x-y)}{y(x+y)}\\)"
+      ],
+      "answer": "C",
+      "explanation": "Numerator \\(\\frac{x+y}{y}\\), denominator \\(\\frac{x-y}{x}\\); divide: \\(\\frac{x+y}{y}\\cdot\\frac{x}{x-y}=\\frac{x(x+y)}{y(x-y)}\\).",
+      "source": {
+        "page": 68
+      }
+    },
+    {
+      "id": "c1s4-mcq-018",
+      "type": "mcq",
+      "prompt": "Simplify the compound fraction \\(\\dfrac{\\frac{1}{a+h}-\\frac{1}{a}}{h}\\).",
+      "options": [
+        "\\(\\frac{1}{a(a+h)}\\)",
+        "\\(-\\frac{h}{a(a+h)}\\)",
+        "\\(-\\frac{1}{a^2}\\)",
+        "\\(-\\frac{1}{a(a+h)}\\)"
+      ],
+      "answer": "D",
+      "explanation": "Numerator: \\(\\frac{1}{a+h}-\\frac{1}{a}=\\frac{a-(a+h)}{a(a+h)}=\\frac{-h}{a(a+h)}\\). Dividing by \\(h\\) cancels \\(h\\) and leaves \\(\\frac{-1}{a(a+h)}\\).",
+      "source": {
+        "page": 69
+      }
+    },
+    {
+      "id": "c1s4-mcq-019",
+      "type": "mcq",
+      "prompt": "Simplify the compound fraction \\(\\dfrac{\\frac{x}{y}-\\frac{y}{x}}{\\frac{1}{x^2}-\\frac{1}{y^2}}\\).",
+      "options": [
+        "\\(-xy\\)",
+        "\\(xy\\)",
+        "\\(\\frac{x^2-y^2}{xy}\\)",
+        "\\(x^2y^2\\)"
+      ],
+      "answer": "A",
+      "explanation": "Numerator \\(\\frac{x^2-y^2}{xy}\\); denominator \\(\\frac{y^2-x^2}{x^2y^2}=-\\frac{x^2-y^2}{x^2y^2}\\). Dividing gives \\(-xy\\) (\\(x,y \\ne 0\\), \\(x \\ne \\pm y\\)).",
+      "source": {
+        "page": 77
+      }
+    },
+    {
+      "id": "c1s4-mcq-020",
+      "type": "mcq",
+      "prompt": "Simplify \\(\\frac{x^{-1}+y^{-1}}{(x+y)^{-1}}\\).",
+      "options": [
+        "\\(1\\)",
+        "\\(\\frac{(x+y)^2}{xy}\\)",
+        "\\(\\frac{xy}{(x+y)^2}\\)",
+        "\\(\\frac{x+y}{xy}\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(x^{-1}+y^{-1}=\\frac{1}{x}+\\frac{1}{y}=\\frac{x+y}{xy}\\) (it is NOT \\((x+y)^{-1}\\)), and dividing by \\((x+y)^{-1}\\) multiplies by \\(x+y\\).",
+      "source": {
+        "page": 84
+      }
+    },
+    {
+      "id": "c1s4-mcq-021",
+      "type": "mcq",
+      "prompt": "Rationalize the denominator: \\(\\frac{1}{1+\\sqrt{2}}\\).",
+      "options": [
+        "\\(1-\\sqrt{2}\\)",
+        "\\(\\frac{1-\\sqrt{2}}{3}\\)",
+        "\\(1+\\sqrt{2}\\)",
+        "\\(\\sqrt{2}-1\\)"
+      ],
+      "answer": "D",
+      "explanation": "Multiply by the conjugate \\(\\frac{1-\\sqrt{2}}{1-\\sqrt{2}}\\): the denominator becomes \\(1-2=-1\\), so \\(\\frac{1-\\sqrt{2}}{-1}=\\sqrt{2}-1\\).",
+      "source": {
+        "page": 69
+      }
+    },
+    {
+      "id": "c1s4-mcq-022",
+      "type": "mcq",
+      "prompt": "Rationalize the denominator: \\(\\frac{2}{\\sqrt{2}+\\sqrt{7}}\\).",
+      "options": [
+        "\\(\\frac{2\\sqrt{2}-2\\sqrt{7}}{5}\\)",
+        "\\(\\frac{2\\sqrt{7}-2\\sqrt{2}}{5}\\)",
+        "\\(\\frac{2\\sqrt{2}-2\\sqrt{7}}{9}\\)",
+        "\\(\\frac{2\\sqrt{2}+2\\sqrt{7}}{5}\\)"
+      ],
+      "answer": "B",
+      "explanation": "Multiply by the conjugate \\(\\sqrt{2}-\\sqrt{7}\\): denominator \\((\\sqrt{2})^2-(\\sqrt{7})^2=2-7=-5\\), so \\(\\frac{2(\\sqrt{2}-\\sqrt{7})}{-5}=\\frac{2\\sqrt{7}-2\\sqrt{2}}{5}\\).",
+      "source": {
+        "page": 81
+      }
+    },
+    {
+      "id": "c1s4-mcq-023",
+      "type": "mcq",
+      "prompt": "Rationalize the denominator and simplify: \\(\\frac{2(x-y)}{\\sqrt{x}-\\sqrt{y}}\\).",
+      "options": [
+        "\\(2(\\sqrt{x}+\\sqrt{y})\\)",
+        "\\(2(\\sqrt{x}-\\sqrt{y})\\)",
+        "\\(\\frac{2}{\\sqrt{x}+\\sqrt{y}}\\)",
+        "\\(\\frac{\\sqrt{x}+\\sqrt{y}}{2}\\)"
+      ],
+      "answer": "A",
+      "explanation": "Multiply by the conjugate \\(\\sqrt{x}+\\sqrt{y}\\): the denominator becomes \\((\\sqrt{x})^2-(\\sqrt{y})^2=x-y\\), which cancels with the numerator.",
+      "source": {
+        "page": 82
+      }
+    },
+    {
+      "id": "c1s4-mcq-024",
+      "type": "mcq",
+      "prompt": "Rationalize the denominator: \\(\\frac{1}{\\sqrt{x}+1}\\).",
+      "options": [
+        "\\(\\frac{\\sqrt{x}+1}{x-1}\\)",
+        "\\(\\frac{\\sqrt{x}-1}{x+1}\\)",
+        "\\(\\frac{\\sqrt{x}-1}{x-1}\\)",
+        "\\(\\sqrt{x}-1\\)"
+      ],
+      "answer": "C",
+      "explanation": "Multiply numerator and denominator by the conjugate \\(\\sqrt{x}-1\\): the denominator becomes \\((\\sqrt{x})^2-1^2=x-1\\).",
+      "source": {
+        "page": 85
+      }
+    },
+    {
+      "id": "c1s4-mcq-025",
+      "type": "mcq",
+      "prompt": "Rationalize the numerator: \\(\\frac{\\sqrt{4+h}-2}{h}\\).",
+      "options": [
+        "\\(\\frac{1}{\\sqrt{4+h}-2}\\)",
+        "\\(\\frac{h}{\\sqrt{4+h}+2}\\)",
+        "\\(\\frac{\\sqrt{4+h}+2}{h}\\)",
+        "\\(\\frac{1}{\\sqrt{4+h}+2}\\)"
+      ],
+      "answer": "D",
+      "explanation": "Multiply by \\(\\frac{\\sqrt{4+h}+2}{\\sqrt{4+h}+2}\\): the numerator becomes \\((4+h)-4=h\\), which cancels with the \\(h\\) in the denominator.",
+      "source": {
+        "page": 70
+      }
+    },
+    {
+      "id": "c1s4-mcq-026",
+      "type": "mcq",
+      "prompt": "Rationalize the numerator: \\(\\sqrt{x+1}-\\sqrt{x}\\).",
+      "options": [
+        "\\(\\frac{1}{\\sqrt{x+1}+\\sqrt{x}}\\)",
+        "\\(\\frac{1}{\\sqrt{x+1}-\\sqrt{x}}\\)",
+        "\\(\\frac{2x+1}{\\sqrt{x+1}+\\sqrt{x}}\\)",
+        "\\(1\\)"
+      ],
+      "answer": "A",
+      "explanation": "Multiply by the conjugate \\(\\sqrt{x+1}+\\sqrt{x}\\) over itself: the numerator becomes \\((x+1)-x=1\\).",
+      "source": {
+        "page": 83
+      }
+    },
+    {
+      "id": "c1s4-mcq-027",
+      "type": "mcq",
+      "prompt": "Which of the following equations is true for all values of the variables (where both sides are defined)?",
+      "options": [
+        "\\(\\frac{b}{b-c}=1-\\frac{b}{c}\\)",
+        "\\(\\frac{2}{4+x}=\\frac{1}{2}+\\frac{2}{x}\\)",
+        "\\(\\frac{16+a}{16}=1+\\frac{a}{16}\\)",
+        "\\(\\frac{x+1}{y+1}=\\frac{x}{y}\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(\\frac{16+a}{16}=\\frac{16}{16}+\\frac{a}{16}\\) (a sum in the numerator splits). The others split a sum in the denominator or cancel terms, e.g. \\(x=4\\) gives \\(\\frac{2}{8}=\\frac{1}{4}\\) but \\(\\frac{1}{2}+\\frac{2}{4}=1\\).",
+      "source": {
+        "page": 86
+      }
+    },
+    {
+      "id": "c1s4-mcq-028",
+      "type": "mcq",
+      "prompt": "Which of the following is a correct property, valid for all \\(a, b\\) for which it is defined?",
+      "options": [
+        "\\((a+b)^2=a^2+b^2\\)",
+        "\\(\\sqrt{a+b}=\\sqrt{a}+\\sqrt{b}\\)",
+        "\\(a^{-1}\\cdot b^{-1}=(a\\cdot b)^{-1}\\)",
+        "\\(\\frac{a+b}{a}=b\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(a^{-1}\\cdot b^{-1}=\\frac{1}{a}\\cdot\\frac{1}{b}=\\frac{1}{ab}=(ab)^{-1}\\) is a multiplication property. The other three apply multiplication rules to addition; check with \\(a=b=2\\).",
+      "source": {
+        "page": 71
+      }
+    },
+    {
+      "id": "c1s4-tf-001",
+      "type": "tf",
+      "prompt": "The domain of \\(\\frac{1}{\\sqrt{x}}\\) is \\(\\{x \\mid x \\ge 0\\}\\).",
+      "answer": false,
+      "explanation": "\\(\\sqrt{x}\\) is in the denominator, so it must be nonzero as well as defined: the domain is \\(\\{x \\mid x > 0\\}\\).",
+      "source": {
+        "page": 65
+      }
+    },
+    {
+      "id": "c1s4-tf-002",
+      "type": "tf",
+      "prompt": "\\(\\frac{x-2}{x^2-4}=\\frac{1}{x+2}\\) for every \\(x \\ne 2, -2\\).",
+      "answer": true,
+      "explanation": "\\(x^2-4=(x-2)(x+2)\\); cancelling \\((x-2)\\) is valid only where \\(x \\ne 2\\), and \\(x \\ne -2\\) keeps the denominator nonzero.",
+      "source": {
+        "page": 73
+      }
+    },
+    {
+      "id": "c1s4-tf-003",
+      "type": "tf",
+      "prompt": "\\(\\frac{x^2-25}{x^2-16}\\cdot\\frac{x+4}{x+5}=\\frac{x-5}{x-4}\\) wherever both sides are defined.",
+      "answer": true,
+      "explanation": "\\(\\frac{(x-5)(x+5)}{(x-4)(x+4)}\\cdot\\frac{x+4}{x+5}\\); cancel \\((x+5)\\) and \\((x+4)\\).",
+      "source": {
+        "page": 83
+      }
+    },
+    {
+      "id": "c1s4-tf-004",
+      "type": "tf",
+      "prompt": "For all nonzero numbers \\(a\\) and \\(b\\), \\(\\frac{1}{a}+\\frac{1}{b}=\\frac{1}{a+b}\\).",
+      "answer": false,
+      "explanation": "This is a common error. With \\(a=b=2\\): \\(\\frac{1}{2}+\\frac{1}{2}=1\\) but \\(\\frac{1}{2+2}=\\frac{1}{4}\\). Correctly, \\(\\frac{1}{a}+\\frac{1}{b}=\\frac{a+b}{ab}\\).",
+      "source": {
+        "page": 71
+      }
+    },
+    {
+      "id": "c1s4-tf-005",
+      "type": "tf",
+      "prompt": "\\(\\frac{1}{2-\\sqrt{3}}=2+\\sqrt{3}\\).",
+      "answer": true,
+      "explanation": "Multiply by the conjugate: \\(\\frac{2+\\sqrt{3}}{(2-\\sqrt{3})(2+\\sqrt{3})}=\\frac{2+\\sqrt{3}}{4-3}=2+\\sqrt{3}\\).",
+      "source": {
+        "page": 85
+      }
+    },
+    {
+      "id": "c1s4-tf-006",
+      "type": "tf",
+      "prompt": "\\(\\frac{x}{x+y}=\\frac{1}{1+y}\\) is true for all values of \\(x\\) and \\(y\\) for which both sides are defined.",
+      "answer": false,
+      "explanation": "\\(x\\) is a term of the sum \\(x+y\\), not a factor, so it cannot be cancelled. With \\(x=2, y=1\\): \\(\\frac{2}{3} \\ne \\frac{1}{2}\\).",
+      "source": {
+        "page": 86
+      }
+    },
+    {
+      "id": "c1s4-match-001",
+      "type": "matching",
+      "title": "Match each expression with its domain.",
+      "pairs": [
+        {
+          "left": "\\(4x^2-10x+3\\)",
+          "right": "all real numbers"
+        },
+        {
+          "left": "\\(\\frac{2x+1}{x-4}\\)",
+          "right": "all real numbers except 4"
+        },
+        {
+          "left": "\\(\\sqrt{x+3}\\)",
+          "right": "all real numbers x with x ≥ −3"
+        },
+        {
+          "left": "\\(\\frac{1}{\\sqrt{x-1}}\\)",
+          "right": "all real numbers x with x > 1"
+        }
+      ],
+      "source": {
+        "page": 72
+      }
+    },
+    {
+      "id": "c1s4-match-002",
+      "type": "matching",
+      "title": "Match each property of fractions with the operation it is used for.",
+      "pairs": [
+        {
+          "left": "\\(\\frac{AC}{BC}=\\frac{A}{B}\\)",
+          "right": "simplifying: cancel common factors"
+        },
+        {
+          "left": "\\(\\frac{A}{B}\\div\\frac{C}{D}=\\frac{A}{B}\\cdot\\frac{D}{C}\\)",
+          "right": "dividing: invert the divisor and multiply"
+        },
+        {
+          "left": "\\(\\frac{A}{B}+\\frac{C}{D}=\\frac{AD+BC}{BD}\\)",
+          "right": "adding with a common denominator"
+        },
+        {
+          "left": "\\((A+b\\sqrt{C})(A-b\\sqrt{C})=A^2-b^2C\\)",
+          "right": "rationalizing with the conjugate radical"
+        }
+      ],
+      "source": {
+        "page": 66
+      }
+    },
+    {
+      "id": "c1s4-match-003",
+      "type": "matching",
+      "title": "Match each sum or difference with its least common denominator (LCD).",
+      "pairs": [
+        {
+          "left": "\\(\\frac{3}{x-1}+\\frac{x}{x+2}\\)",
+          "right": "(x − 1)(x + 2)"
+        },
+        {
+          "left": "\\(\\frac{5}{2x-3}-\\frac{3}{2(x-3)^2}\\)",
+          "right": "2(2x − 3)(x − 3)²"
+        },
+        {
+          "left": "\\(\\frac{2}{a^2}-\\frac{3}{ab}+\\frac{4}{b^2}\\)",
+          "right": "a²b²"
+        },
+        {
+          "left": "\\(\\frac{2}{x}+\\frac{3}{x-1}-\\frac{4}{x^2-x}\\)",
+          "right": "x(x − 1)"
+        }
+      ],
+      "source": {
+        "page": 67
+      }
+    },
+    {
+      "id": "c1s4-match-004",
+      "type": "matching",
+      "title": "Match each expression with the term the notes use for it.",
+      "pairs": [
+        {
+          "left": "\\(\\frac{x^2-x}{x^2-5x+6}\\)",
+          "right": "rational expression"
+        },
+        {
+          "left": "\\(\\frac{\\sqrt{x}+3}{x+1}\\)",
+          "right": "fractional expression that is not rational"
+        },
+        {
+          "left": "\\(\\dfrac{\\frac{x}{y}+1}{1-\\frac{y}{x}}\\)",
+          "right": "compound fraction"
+        },
+        {
+          "left": "\\(1-\\sqrt{2}\\)",
+          "right": "conjugate radical of 1 + √2"
+        }
+      ],
+      "source": {
+        "page": 65
+      }
+    },
+    {
+      "id": "c1s5-match-001",
+      "type": "matching",
+      "title": "Match each description with the term used in the notes.",
+      "pairs": [
+        {
+          "left": "Two equations with exactly the same solutions",
+          "right": "equivalent equations"
+        },
+        {
+          "left": "A value of the unknown that makes the equation true",
+          "right": "a solution (root)"
+        },
+        {
+          "left": "An equation equivalent to \\(ax+b=0\\)",
+          "right": "linear equation"
+        },
+        {
+          "left": "An equation of the form \\(ax^2+bx+c=0\\), \\(a\\ne 0\\)",
+          "right": "quadratic equation"
+        },
+        {
+          "left": "A potential solution that does not satisfy the original equation",
+          "right": "extraneous solution"
+        },
+        {
+          "left": "The quantity \\(b^2-4ac\\)",
+          "right": "discriminant"
+        }
+      ],
+      "source": {
+        "page": 86
+      }
+    },
+    {
+      "id": "c1s5-tf-001",
+      "type": "tf",
+      "prompt": "For every real number \\(C\\), the equations \\(A=B\\) and \\(CA=CB\\) are equivalent.",
+      "answer": false,
+      "explanation": "The property requires \\(C\\ne 0\\). Multiplying both sides by \\(0\\) turns any equation into \\(0=0\\), which is no longer equivalent to the original.",
+      "source": {
+        "page": 87
+      }
+    },
+    {
+      "id": "c1s5-mcq-001",
+      "type": "mcq",
+      "prompt": "Which of the following is a linear equation?",
+      "options": [
+        "\\(x^2+2x=8\\)",
+        "\\(\\sqrt{x}-6x=0\\)",
+        "\\(2x=\\frac{1}{2}x-7\\)",
+        "\\(\\frac{3}{x}-2x=1\\)"
+      ],
+      "answer": "C",
+      "explanation": "A linear equation is equivalent to \\(ax+b=0\\). The others contain the square, the square root or the reciprocal of the variable, so they are not linear.",
+      "source": {
+        "page": 87
+      }
+    },
+    {
+      "id": "c1s5-mcq-002",
+      "type": "mcq",
+      "prompt": "Solve the equation \\(7x-4=3x+8\\).",
+      "options": [
+        "\\(x=1\\)",
+        "\\(x=3\\)",
+        "\\(x=-3\\)",
+        "\\(x=12\\)"
+      ],
+      "answer": "B",
+      "explanation": "Subtract \\(3x\\) from both sides: \\(4x-4=8\\). Add 4: \\(4x=12\\), so \\(x=3\\).",
+      "source": {
+        "page": 87
+      }
+    },
+    {
+      "id": "c1s5-mcq-003",
+      "type": "mcq",
+      "prompt": "Solve for the variable \\(M\\) in the equation \\(F=\\frac{GmM}{r^2}\\).",
+      "options": [
+        "\\(M=\\frac{Gm}{Fr^2}\\)",
+        "\\(M=\\frac{FGm}{r^2}\\)",
+        "\\(M=\\frac{F}{Gmr^2}\\)",
+        "\\(M=\\frac{Fr^2}{Gm}\\)"
+      ],
+      "answer": "D",
+      "explanation": "Multiply both sides by \\(r^2\\): \\(Fr^2=GmM\\). Then divide by \\(Gm\\).",
+      "source": {
+        "page": 88
+      }
+    },
+    {
+      "id": "c1s5-mcq-004",
+      "type": "mcq",
+      "prompt": "Solve the equation \\(2(1-x)=3(1+2x)+5\\).",
+      "options": [
+        "\\(x=-\\frac{3}{4}\\)",
+        "\\(x=\\frac{3}{4}\\)",
+        "\\(x=-\\frac{3}{2}\\)",
+        "\\(x=-\\frac{1}{8}\\)"
+      ],
+      "answer": "A",
+      "explanation": "Expand: \\(2-2x=3+6x+5=8+6x\\). Then \\(-6=8x\\), so \\(x=-\\frac{3}{4}\\).",
+      "source": {
+        "page": 103
+      }
+    },
+    {
+      "id": "c1s5-mcq-005",
+      "type": "mcq",
+      "prompt": "Solve the equation \\(\\frac{2x-1}{x+2}=\\frac{4}{5}\\).",
+      "options": [
+        "\\(x=\\frac{7}{6}\\)",
+        "\\(x=\\frac{3}{2}\\)",
+        "\\(x=\\frac{13}{6}\\)",
+        "\\(x=-\\frac{9}{2}\\)"
+      ],
+      "answer": "C",
+      "explanation": "Cross-multiply: \\(5(2x-1)=4(x+2)\\), so \\(10x-5=4x+8\\), \\(6x=13\\), \\(x=\\frac{13}{6}\\).",
+      "source": {
+        "page": 106
+      }
+    },
+    {
+      "id": "c1s5-mcq-006",
+      "type": "mcq",
+      "prompt": "Solve the equation \\(\\frac{4}{x-1}+\\frac{2}{x+1}=\\frac{35}{x^2-1}\\).",
+      "options": [
+        "\\(x=\\frac{37}{6}\\)",
+        "\\(x=\\frac{11}{2}\\)",
+        "\\(x=\\frac{29}{6}\\)",
+        "\\(x=-\\frac{11}{2}\\)"
+      ],
+      "answer": "B",
+      "explanation": "Since \\(x^2-1=(x-1)(x+1)\\), multiply through by \\((x-1)(x+1)\\): \\(4(x+1)+2(x-1)=35\\), so \\(6x+2=35\\) and \\(x=\\frac{33}{6}=\\frac{11}{2}\\).",
+      "source": {
+        "page": 108
+      }
+    },
+    {
+      "id": "c1s5-mcq-007",
+      "type": "mcq",
+      "prompt": "Solve the equation \\(\\frac{ax+b}{cx+d}=2\\) for \\(x\\) (assume \\(a\\ne 2c\\)).",
+      "options": [
+        "\\(x=\\frac{b-2d}{a-2c}\\)",
+        "\\(x=\\frac{2d-b}{a+2c}\\)",
+        "\\(x=\\frac{2d+b}{a-2c}\\)",
+        "\\(x=\\frac{2d-b}{a-2c}\\)"
+      ],
+      "answer": "D",
+      "explanation": "Cross-multiply: \\(ax+b=2cx+2d\\). Collect the \\(x\\) terms: \\(x(a-2c)=2d-b\\).",
+      "source": {
+        "page": 109
+      }
+    },
+    {
+      "id": "c1s5-mcq-008",
+      "type": "mcq",
+      "prompt": "Solve \\(V=\\frac{1}{3}\\pi r^2 h\\) for \\(r\\) (where \\(r>0\\)).",
+      "options": [
+        "\\(r=\\sqrt{\\frac{3V}{\\pi h}}\\)",
+        "\\(r=\\sqrt{\\frac{V}{3\\pi h}}\\)",
+        "\\(r=\\frac{3V}{\\pi h}\\)",
+        "\\(r=\\sqrt{\\frac{3Vh}{\\pi}}\\)"
+      ],
+      "answer": "A",
+      "explanation": "Multiply by 3 and divide by \\(\\pi h\\): \\(r^2=\\frac{3V}{\\pi h}\\). Since \\(r>0\\), take the positive square root.",
+      "source": {
+        "page": 124
+      }
+    },
+    {
+      "id": "c1s5-match-002",
+      "type": "matching",
+      "title": "Match each linear equation with its solution.",
+      "pairs": [
+        {
+          "left": "\\(2x+7=31\\)",
+          "right": "x = 12"
+        },
+        {
+          "left": "\\(5x-3=4\\)",
+          "right": "x = 7/5"
+        },
+        {
+          "left": "\\(\\frac{1}{2}x-8=1\\)",
+          "right": "x = 18"
+        },
+        {
+          "left": "\\(3+\\frac{1}{3}x=5\\)",
+          "right": "x = 6"
+        },
+        {
+          "left": "\\(5t-13=12-5t\\)",
+          "right": "t = 5/2"
+        },
+        {
+          "left": "\\(x-\\frac{1}{3}x-\\frac{1}{2}x-5=0\\)",
+          "right": "x = 30"
+        }
+      ],
+      "source": {
+        "page": 101
+      }
+    },
+    {
+      "id": "c1s5-match-003",
+      "type": "matching",
+      "title": "Match each formula with the result of solving it for the indicated variable.",
+      "pairs": [
+        {
+          "left": "\\(PV=nRT\\), for \\(R\\)",
+          "right": "R = PV/(nT)"
+        },
+        {
+          "left": "\\(P=2l+2w\\), for \\(w\\)",
+          "right": "w = (P − 2l)/2"
+        },
+        {
+          "left": "\\(F=\\frac{GmM}{r}\\), for \\(m\\)",
+          "right": "m = Fr/(GM)"
+        },
+        {
+          "left": "\\(a^2+b^2=c^2\\), for \\(b>0\\)",
+          "right": "b = √(c² − a²)"
+        }
+      ],
+      "source": {
+        "page": 108
+      }
+    },
+    {
+      "id": "c1s5-tf-002",
+      "type": "tf",
+      "prompt": "The value \\(x=8\\) is a solution of the equation \\(\\frac{x^{3/2}}{x-6}=x-8\\).",
+      "answer": false,
+      "explanation": "At \\(x=8\\) the left side is \\(\\frac{8^{3/2}}{2}=8\\sqrt{2}\\) but the right side is \\(0\\). (The value \\(x=4\\) does work: \\(\\frac{8}{-2}=-4=4-8\\).)",
+      "source": {
+        "page": 100
+      }
+    },
+    {
+      "id": "c1s5-mcq-009",
+      "type": "mcq",
+      "prompt": "Which of the given values is a solution of \\(\\frac{1}{x}-\\frac{1}{x-4}=1\\)?",
+      "options": [
+        "\\(x=4\\) only",
+        "both \\(x=2\\) and \\(x=4\\)",
+        "\\(x=2\\) only",
+        "neither \\(x=2\\) nor \\(x=4\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(x=2\\) gives \\(\\frac{1}{2}-\\frac{1}{-2}=\\frac{1}{2}+\\frac{1}{2}=1\\). At \\(x=4\\) the term \\(\\frac{1}{x-4}\\) is undefined (division by zero), so \\(x=4\\) is not a solution.",
+      "source": {
+        "page": 101
+      }
+    },
+    {
+      "id": "c1s5-tf-003",
+      "type": "tf",
+      "prompt": "The equation \\(x(x+5)=24\\) can be solved by setting \\(x=24\\) or \\(x+5=24\\).",
+      "answer": false,
+      "explanation": "The Zero-Product Property applies only when one side of the equation is \\(0\\). Write \\(x^2+5x-24=0\\), factor \\((x+8)(x-3)=0\\), and get \\(x=-8\\) or \\(x=3\\).",
+      "source": {
+        "page": 89
+      }
+    },
+    {
+      "id": "c1s5-mcq-010",
+      "type": "mcq",
+      "prompt": "Solve the equation \\(x^2+5x=24\\).",
+      "options": [
+        "\\(x=8\\) or \\(x=-3\\)",
+        "\\(x=-8\\) or \\(x=3\\)",
+        "\\(x=-8\\) or \\(x=-3\\)",
+        "\\(x=8\\) or \\(x=3\\)"
+      ],
+      "answer": "B",
+      "explanation": "Move all terms to one side: \\(x^2+5x-24=0\\). Factor: \\((x+8)(x-3)=0\\).",
+      "source": {
+        "page": 89
+      }
+    },
+    {
+      "id": "c1s5-mcq-011",
+      "type": "mcq",
+      "prompt": "Solve the equation \\((x-4)^2=5\\).",
+      "options": [
+        "\\(x=-4\\pm\\sqrt{5}\\)",
+        "\\(x=9\\) or \\(x=-1\\)",
+        "\\(x=4+\\sqrt{5}\\)",
+        "\\(x=4\\pm\\sqrt{5}\\)"
+      ],
+      "answer": "D",
+      "explanation": "Take the square root of both sides: \\(x-4=\\pm\\sqrt{5}\\). Add 4 to both sides. Do not forget the negative root.",
+      "source": {
+        "page": 90
+      }
+    },
+    {
+      "id": "c1s5-mcq-012",
+      "type": "mcq",
+      "prompt": "What constant must be added to \\(x^2+10x\\) to make it a perfect square?",
+      "options": [
+        "\\(25\\)",
+        "\\(100\\)",
+        "\\(5\\)",
+        "\\(10\\)"
+      ],
+      "answer": "A",
+      "explanation": "Add the square of half the coefficient of \\(x\\): \\(\\left(\\frac{10}{2}\\right)^2=25\\), so \\(x^2+10x+25=(x+5)^2\\).",
+      "source": {
+        "page": 90
+      }
+    },
+    {
+      "id": "c1s5-mcq-013",
+      "type": "mcq",
+      "prompt": "Solve \\(x^2-8x+13=0\\) by completing the square.",
+      "options": [
+        "\\(x=-4\\pm\\sqrt{3}\\)",
+        "\\(x=4\\pm\\sqrt{3}\\)",
+        "\\(x=4\\pm\\sqrt{29}\\)",
+        "\\(x=8\\pm\\sqrt{3}\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(x^2-8x=-13\\). Add \\(\\left(\\frac{-8}{2}\\right)^2=16\\) to both sides: \\((x-4)^2=3\\), so \\(x=4\\pm\\sqrt{3}\\).",
+      "source": {
+        "page": 91
+      }
+    },
+    {
+      "id": "c1s5-mcq-014",
+      "type": "mcq",
+      "prompt": "Solve \\(3x^2-12x+6=0\\) by completing the square.",
+      "options": [
+        "\\(x=6\\pm\\sqrt{30}\\)",
+        "\\(x=2\\pm\\sqrt{6}\\)",
+        "\\(x=2\\pm\\sqrt{2}\\)",
+        "\\(x=-2\\pm\\sqrt{2}\\)"
+      ],
+      "answer": "C",
+      "explanation": "First divide by 3: \\(x^2-4x+2=0\\), so \\(x^2-4x=-2\\). Add 4: \\((x-2)^2=2\\), hence \\(x=2\\pm\\sqrt{2}\\).",
+      "source": {
+        "page": 91
+      }
+    },
+    {
+      "id": "c1s5-mcq-015",
+      "type": "mcq",
+      "prompt": "Find all real solutions of \\(3x^2-5x-1=0\\).",
+      "options": [
+        "\\(x=\\frac{-5\\pm\\sqrt{37}}{6}\\)",
+        "\\(x=\\frac{5\\pm\\sqrt{13}}{6}\\)",
+        "\\(x=\\frac{5\\pm\\sqrt{37}}{3}\\)",
+        "\\(x=\\frac{5\\pm\\sqrt{37}}{6}\\)"
+      ],
+      "answer": "D",
+      "explanation": "Quadratic formula with \\(a=3\\), \\(b=-5\\), \\(c=-1\\): \\(x=\\frac{5\\pm\\sqrt{25+12}}{6}\\).",
+      "source": {
+        "page": 93
+      }
+    },
+    {
+      "id": "c1s5-mcq-016",
+      "type": "mcq",
+      "prompt": "Find all real solutions of \\(4x^2+12x+9=0\\).",
+      "options": [
+        "\\(x=-\\frac{3}{2}\\)",
+        "\\(x=\\frac{3}{2}\\)",
+        "\\(x=\\pm\\frac{3}{2}\\)",
+        "no real solution"
+      ],
+      "answer": "A",
+      "explanation": "\\(b^2-4ac=144-144=0\\), so there is one (double) root \\(x=\\frac{-12}{8}=-\\frac{3}{2}\\). Indeed \\(4x^2+12x+9=(2x+3)^2\\).",
+      "source": {
+        "page": 93
+      }
+    },
+    {
+      "id": "c1s5-mcq-017",
+      "type": "mcq",
+      "prompt": "Find all real solutions of \\(x^2+2x+2=0\\).",
+      "options": [
+        "\\(x=-1\\pm\\sqrt{2}\\)",
+        "no real solution",
+        "\\(x=0\\) or \\(x=-2\\)",
+        "\\(x=-1\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(b^2-4ac=4-8=-4<0\\), so the square root is not a real number and the equation has no real solution.",
+      "source": {
+        "page": 93
+      }
+    },
+    {
+      "id": "c1s5-match-004",
+      "type": "matching",
+      "title": "Match each quadratic equation with its discriminant \\(D=b^2-4ac\\) and the number of its real solutions.",
+      "pairs": [
+        {
+          "left": "\\(x^2+4x-1=0\\)",
+          "right": "D = 20, two distinct real solutions"
+        },
+        {
+          "left": "\\(4x^2-12x+9=0\\)",
+          "right": "D = 0, exactly one real solution"
+        },
+        {
+          "left": "\\(\\frac{1}{3}x^2-2x+4=0\\)",
+          "right": "D = −4/3, no real solution"
+        },
+        {
+          "left": "\\(x^2+2x+2=0\\)",
+          "right": "D = −4, no real solution"
+        },
+        {
+          "left": "\\(3x^2-5x-1=0\\)",
+          "right": "D = 37, two distinct real solutions"
+        }
+      ],
+      "source": {
+        "page": 94
+      }
+    },
+    {
+      "id": "c1s5-mcq-018",
+      "type": "mcq",
+      "prompt": "Use the discriminant to determine how many real solutions the equation \\(x^2+2.20x+1.21=0\\) has.",
+      "options": [
+        "two distinct real solutions",
+        "no real solution",
+        "exactly one real solution",
+        "infinitely many solutions"
+      ],
+      "answer": "C",
+      "explanation": "\\(D=(2.20)^2-4(1)(1.21)=4.84-4.84=0\\), so exactly one real solution. (With \\(2.21x\\) instead, \\(D=0.0441>0\\) and there are two.)",
+      "source": {
+        "page": 125
+      }
+    },
+    {
+      "id": "c1s5-mcq-019",
+      "type": "mcq",
+      "prompt": "Use the discriminant to determine how many real solutions the equation \\(3x^2=6x-9\\) has.",
+      "options": [
+        "exactly one real solution",
+        "two distinct real solutions",
+        "it cannot be decided without solving",
+        "no real solution"
+      ],
+      "answer": "D",
+      "explanation": "First write it in standard form \\(3x^2-6x+9=0\\): \\(D=36-4(3)(9)=36-108=-72<0\\). Using \\(c=-9\\) without rearranging is a common mistake.",
+      "source": {
+        "page": 125
+      }
+    },
+    {
+      "id": "c1s5-mcq-020",
+      "type": "mcq",
+      "prompt": "Let \\(s>0\\). How many real solutions does \\(x^2+rx-s=0\\) have?",
+      "options": [
+        "two distinct real solutions",
+        "exactly one real solution",
+        "no real solution",
+        "it depends on the value of \\(r\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\(D=r^2-4(1)(-s)=r^2+4s>0\\) for every real \\(r\\), because \\(r^2\\ge 0\\) and \\(4s>0\\).",
+      "source": {
+        "page": 125
+      }
+    },
+    {
+      "id": "c1s5-tf-004",
+      "type": "tf",
+      "prompt": "The equation \\(4x^2+5x+\\frac{13}{8}=0\\) has no real solution.",
+      "answer": true,
+      "explanation": "\\(D=25-4(4)\\left(\\frac{13}{8}\\right)=25-26=-1<0\\).",
+      "source": {
+        "page": 125
+      }
+    },
+    {
+      "id": "c1s5-mcq-021",
+      "type": "mcq",
+      "prompt": "Solve by factoring: \\(x^2+x-12=0\\).",
+      "options": [
+        "\\(x=4\\) or \\(x=-3\\)",
+        "\\(x=-4\\) or \\(x=-3\\)",
+        "\\(x=-4\\) or \\(x=3\\)",
+        "\\(x=-6\\) or \\(x=2\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(x^2+x-12=(x+4)(x-3)=0\\), so \\(x=-4\\) or \\(x=3\\).",
+      "source": {
+        "page": 110
+      }
+    },
+    {
+      "id": "c1s5-mcq-022",
+      "type": "mcq",
+      "prompt": "Solve by factoring: \\(4x^2-4x-15=0\\).",
+      "options": [
+        "\\(x=-\\frac{5}{2}\\) or \\(x=\\frac{3}{2}\\)",
+        "\\(x=\\frac{5}{2}\\) or \\(x=\\frac{3}{2}\\)",
+        "\\(x=5\\) or \\(x=-3\\)",
+        "\\(x=\\frac{5}{2}\\) or \\(x=-\\frac{3}{2}\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\(4x^2-4x-15=(2x-5)(2x+3)=0\\), so \\(x=\\frac{5}{2}\\) or \\(x=-\\frac{3}{2}\\).",
+      "source": {
+        "page": 111
+      }
+    },
+    {
+      "id": "c1s5-mcq-023",
+      "type": "mcq",
+      "prompt": "Solve by factoring: \\(3x^2+5x=2\\).",
+      "options": [
+        "\\(x=-\\frac{1}{3}\\) or \\(x=2\\)",
+        "\\(x=\\frac{1}{3}\\) or \\(x=-2\\)",
+        "\\(x=\\frac{1}{3}\\) or \\(x=-1\\)",
+        "\\(x=\\frac{2}{3}\\) or \\(x=-1\\)"
+      ],
+      "answer": "B",
+      "explanation": "Move everything to one side first: \\(3x^2+5x-2=0\\). Factor: \\((3x-1)(x+2)=0\\).",
+      "source": {
+        "page": 112
+      }
+    },
+    {
+      "id": "c1s5-mcq-024",
+      "type": "mcq",
+      "prompt": "Find all real solutions of \\(x^2-6x+1=0\\).",
+      "options": [
+        "\\(x=3\\pm2\\sqrt{2}\\)",
+        "\\(x=-3\\pm2\\sqrt{2}\\)",
+        "\\(x=3\\pm\\sqrt{10}\\)",
+        "\\(x=6\\pm4\\sqrt{2}\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\(x=\\frac{6\\pm\\sqrt{36-4}}{2}=\\frac{6\\pm\\sqrt{32}}{2}=\\frac{6\\pm4\\sqrt{2}}{2}=3\\pm2\\sqrt{2}\\).",
+      "source": {
+        "page": 124
+      }
+    },
+    {
+      "id": "c1s5-mcq-025",
+      "type": "mcq",
+      "prompt": "Find all real solutions of \\(w^2=3(w-1)\\).",
+      "options": [
+        "\\(w=\\frac{3\\pm\\sqrt{21}}{2}\\)",
+        "no real solution",
+        "\\(w=\\frac{3\\pm\\sqrt{3}}{2}\\)",
+        "\\(w=\\frac{3}{2}\\)"
+      ],
+      "answer": "B",
+      "explanation": "Standard form: \\(w^2-3w+3=0\\). \\(D=9-12=-3<0\\), so there is no real solution.",
+      "source": {
+        "page": 124
+      }
+    },
+    {
+      "id": "c1s5-tf-005",
+      "type": "tf",
+      "prompt": "The equation \\(25x^2+70x+49=0\\) has two distinct real solutions.",
+      "answer": false,
+      "explanation": "\\(D=70^2-4(25)(49)=4900-4900=0\\), so there is exactly one real solution, \\(x=-\\frac{70}{50}=-\\frac{7}{5}\\).",
+      "source": {
+        "page": 117
+      }
+    },
+    {
+      "id": "c1s5-mcq-026",
+      "type": "mcq",
+      "prompt": "Solve the equation \\(\\frac{3}{x}+\\frac{5}{x+2}=2\\).",
+      "options": [
+        "\\(x=-3\\) or \\(x=1\\)",
+        "\\(x=3\\) only",
+        "\\(x=3\\) or \\(x=-1\\)",
+        "\\(x=0\\) or \\(x=-2\\)"
+      ],
+      "answer": "C",
+      "explanation": "Multiply by the LCD \\(x(x+2)\\): \\(3(x+2)+5x=2x(x+2)\\), which simplifies to \\(x^2-2x-3=(x-3)(x+1)=0\\). Neither root is \\(0\\) or \\(-2\\), so both are solutions.",
+      "source": {
+        "page": 95
+      }
+    },
+    {
+      "id": "c1s5-mcq-027",
+      "type": "mcq",
+      "prompt": "Solve the equation \\(2x=1-\\sqrt{2-x}\\).",
+      "options": [
+        "\\(x=1\\)",
+        "\\(x=-\\frac{1}{4}\\) or \\(x=1\\)",
+        "\\(x=\\frac{1}{4}\\)",
+        "\\(x=-\\frac{1}{4}\\)"
+      ],
+      "answer": "D",
+      "explanation": "Isolate: \\(\\sqrt{2-x}=1-2x\\); squaring gives \\(4x^2-3x-1=(4x+1)(x-1)=0\\). Checking in the original equation, \\(x=1\\) gives \\(2\\ne 0\\), so it is extraneous; only \\(x=-\\frac{1}{4}\\) works.",
+      "source": {
+        "page": 96
+      }
+    },
+    {
+      "id": "c1s5-tf-006",
+      "type": "tf",
+      "prompt": "Squaring both sides of an equation can produce an equation that has more solutions than the original equation.",
+      "answer": true,
+      "explanation": "For example \\(-1\\ne 1\\) but \\((-1)^2=1^2\\). That is why every answer obtained after squaring must be checked in the original equation.",
+      "source": {
+        "page": 96
+      }
+    },
+    {
+      "id": "c1s5-mcq-028",
+      "type": "mcq",
+      "prompt": "Find all real solutions of \\(\\sqrt{2x+1}+1=x\\).",
+      "options": [
+        "\\(x=4\\)",
+        "\\(x=0\\)",
+        "\\(x=0\\) or \\(x=4\\)",
+        "no solution"
+      ],
+      "answer": "A",
+      "explanation": "Isolate: \\(\\sqrt{2x+1}=x-1\\); squaring gives \\(x^2-4x=x(x-4)=0\\). The candidate \\(x=0\\) fails the check (\\(1+1=2\\ne 0\\)); \\(x=4\\) gives \\(3+1=4\\).",
+      "source": {
+        "page": 120
+      }
+    },
+    {
+      "id": "c1s5-mcq-029",
+      "type": "mcq",
+      "prompt": "Solving \\(\\sqrt{5-x}+1=x-2\\) by isolating the radical and squaring gives two candidate values. Which one is extraneous?",
+      "options": [
+        "\\(x=4\\)",
+        "\\(x=1\\)",
+        "\\(x=5\\)",
+        "\\(x=-1\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(\\sqrt{5-x}=x-3\\) gives \\(5-x=x^2-6x+9\\), i.e. \\(x^2-5x+4=(x-1)(x-4)=0\\). At \\(x=1\\) the left side is \\(3\\) but the right side is \\(-1\\), so \\(x=1\\) is extraneous; \\(x=4\\) checks.",
+      "source": {
+        "page": 125
+      }
+    },
+    {
+      "id": "c1s5-mcq-030",
+      "type": "mcq",
+      "prompt": "Find all real solutions of \\(\\frac{x+5}{x-2}=\\frac{5}{x+2}+\\frac{28}{x^2-4}\\).",
+      "options": [
+        "\\(x=2\\)",
+        "\\(x=-4\\) or \\(x=2\\)",
+        "\\(x=-4\\)",
+        "no solution"
+      ],
+      "answer": "C",
+      "explanation": "Multiply by \\((x-2)(x+2)\\): \\((x+5)(x+2)=5(x-2)+28\\), so \\(x^2+2x-8=(x+4)(x-2)=0\\). But \\(x=2\\) makes the denominators zero, so the only solution is \\(x=-4\\).",
+      "source": {
+        "page": 125
+      }
+    },
+    {
+      "id": "c1s5-mcq-031",
+      "type": "mcq",
+      "prompt": "Find all real solutions of \\(\\frac{1}{x-1}+\\frac{1}{x+2}=\\frac{5}{4}\\).",
+      "options": [
+        "\\(x=-2\\) or \\(x=\\frac{7}{5}\\)",
+        "\\(x=2\\) only",
+        "\\(x=1\\) or \\(x=-2\\)",
+        "\\(x=2\\) or \\(x=-\\frac{7}{5}\\)"
+      ],
+      "answer": "D",
+      "explanation": "Combining gives \\(4(2x+1)=5(x-1)(x+2)\\), so \\(5x^2-3x-14=(x-2)(5x+7)=0\\). Both values are allowed (\\(x\\ne 1,-2\\)).",
+      "source": {
+        "page": 118
+      }
+    },
+    {
+      "id": "c1s5-mcq-032",
+      "type": "mcq",
+      "prompt": "Find all real solutions of \\(x^4-5x^2+4=0\\).",
+      "options": [
+        "\\(x=\\pm1\\) or \\(x=\\pm2\\)",
+        "\\(x=1\\) or \\(x=4\\)",
+        "\\(x=1\\) or \\(x=2\\)",
+        "\\(x=\\pm1\\) or \\(x=\\pm4\\)"
+      ],
+      "answer": "A",
+      "explanation": "Substitute \\(y=x^2\\): \\(y^2-5y+4=(y-1)(y-4)=0\\). Back-substitute: \\(x^2=1\\) or \\(x^2=4\\), giving four solutions.",
+      "source": {
+        "page": 125
+      }
+    },
+    {
+      "id": "c1s5-mcq-033",
+      "type": "mcq",
+      "prompt": "How many real solutions does the equation \\(x^4-8x^2+8=0\\) have?",
+      "options": [
+        "\\(2\\)",
+        "\\(0\\)",
+        "\\(4\\)",
+        "\\(1\\)"
+      ],
+      "answer": "C",
+      "explanation": "With \\(y=x^2\\), \\(y^2-8y+8=0\\) gives \\(y=4\\pm2\\sqrt{2}\\). Both values are positive, so each gives two real values \\(x=\\pm\\sqrt{y}\\): four solutions in all.",
+      "source": {
+        "page": 97
+      }
+    },
+    {
+      "id": "c1s5-mcq-034",
+      "type": "mcq",
+      "prompt": "Find all real solutions of \\(x^{1/3}+x^{1/6}-2=0\\).",
+      "options": [
+        "\\(x=1\\) or \\(x=64\\)",
+        "\\(x=64\\)",
+        "\\(x=-64\\)",
+        "\\(x=1\\)"
+      ],
+      "answer": "D",
+      "explanation": "With \\(y=x^{1/6}\\): \\(y^2+y-2=(y-1)(y+2)=0\\). \\(y=-2\\) leads to \\(x=64\\), but \\(64^{1/3}+64^{1/6}-2=4+2-2=4\\ne 0\\), so it is extraneous. Only \\(x=1\\).",
+      "source": {
+        "page": 98
+      }
+    },
+    {
+      "id": "c1s5-mcq-035",
+      "type": "mcq",
+      "prompt": "Find all real solutions of \\(x-5\\sqrt{x}+6=0\\).",
+      "options": [
+        "\\(x=2\\) or \\(x=3\\)",
+        "\\(x=4\\) or \\(x=9\\)",
+        "\\(x=4\\)",
+        "\\(x=-2\\) or \\(x=-3\\)"
+      ],
+      "answer": "B",
+      "explanation": "With \\(y=\\sqrt{x}\\): \\(y^2-5y+6=(y-2)(y-3)=0\\), so \\(\\sqrt{x}=2\\) or \\(3\\), i.e. \\(x=4\\) or \\(x=9\\). Both check in the original equation.",
+      "source": {
+        "page": 125
+      }
+    },
+    {
+      "id": "c1s5-mcq-036",
+      "type": "mcq",
+      "prompt": "Find all real solutions of \\(x^{1/2}+3x^{-1/2}=10x^{-3/2}\\).",
+      "options": [
+        "\\(x=2\\)",
+        "\\(x=2\\) or \\(x=-5\\)",
+        "\\(x=-5\\)",
+        "\\(x=5\\)"
+      ],
+      "answer": "A",
+      "explanation": "Multiply both sides by \\(x^{3/2}\\) (which requires \\(x>0\\)): \\(x^2+3x-10=(x+5)(x-2)=0\\). Discard \\(x=-5\\) because it is outside the domain.",
+      "source": {
+        "page": 120
+      }
+    },
+    {
+      "id": "c1s5-mcq-037",
+      "type": "mcq",
+      "prompt": "Find all real solutions of \\(x^{4/3}-5x^{2/3}+6=0\\).",
+      "options": [
+        "\\(x=2\\) or \\(x=3\\)",
+        "\\(x=\\pm2\\sqrt{2}\\) or \\(x=\\pm3\\sqrt{3}\\)",
+        "\\(x=2\\sqrt{2}\\) or \\(x=3\\sqrt{3}\\)",
+        "\\(x=\\pm\\sqrt{2}\\) or \\(x=\\pm\\sqrt{3}\\)"
+      ],
+      "answer": "B",
+      "explanation": "With \\(u=x^{2/3}\\): \\(u^2-5u+6=(u-2)(u-3)=0\\). Then \\(x^{2/3}=2\\) gives \\(x=\\pm2^{3/2}=\\pm2\\sqrt{2}\\) and \\(x^{2/3}=3\\) gives \\(x=\\pm3^{3/2}=\\pm3\\sqrt{3}\\).",
+      "source": {
+        "page": 121
+      }
+    },
+    {
+      "id": "c1s5-mcq-038",
+      "type": "mcq",
+      "prompt": "Find all real solutions of \\(\\sqrt{x}-3\\sqrt[4]{x}-4=0\\).",
+      "options": [
+        "\\(x=256\\) or \\(x=1\\)",
+        "\\(x=16\\)",
+        "\\(x=256\\)",
+        "\\(x=4\\)"
+      ],
+      "answer": "C",
+      "explanation": "With \\(y=\\sqrt[4]{x}\\): \\(y^2-3y-4=(y-4)(y+1)=0\\). A fourth root cannot be \\(-1\\), so \\(y=4\\) and \\(x=4^4=256\\).",
+      "source": {
+        "page": 125
+      }
+    },
+    {
+      "id": "c1s5-mcq-039",
+      "type": "mcq",
+      "prompt": "Solve the equation \\(|2x-5|=3\\).",
+      "options": [
+        "\\(x=4\\)",
+        "\\(x=4\\) or \\(x=-4\\)",
+        "\\(x=-4\\) or \\(x=-1\\)",
+        "\\(x=4\\) or \\(x=1\\)"
+      ],
+      "answer": "D",
+      "explanation": "Two cases: \\(2x-5=3\\) gives \\(x=4\\); \\(2x-5=-3\\) gives \\(x=1\\). Both check.",
+      "source": {
+        "page": 98
+      }
+    },
+    {
+      "id": "c1s5-mcq-040",
+      "type": "mcq",
+      "prompt": "Solve the equation \\(|x-6|=-1\\).",
+      "options": [
+        "no solution",
+        "\\(x=5\\) or \\(x=7\\)",
+        "\\(x=5\\)",
+        "\\(x=7\\)"
+      ],
+      "answer": "A",
+      "explanation": "An absolute value is never negative, so no real number satisfies the equation.",
+      "source": {
+        "page": 122
+      }
+    },
+    {
+      "id": "c1s5-tf-007",
+      "type": "tf",
+      "prompt": "The equation \\(|2x|=3\\) has exactly one solution.",
+      "answer": false,
+      "explanation": "\\(|2x|=3\\) means \\(2x=3\\) or \\(2x=-3\\), so \\(x=\\frac{3}{2}\\) or \\(x=-\\frac{3}{2}\\): two solutions.",
+      "source": {
+        "page": 122
+      }
+    },
+    {
+      "id": "c1s5-match-005",
+      "type": "matching",
+      "title": "Match each equation with the first step the notes use to solve it.",
+      "pairs": [
+        {
+          "left": "\\(\\frac{3}{x}+\\frac{5}{x+2}=2\\)",
+          "right": "multiply both sides by the LCD x(x + 2)"
+        },
+        {
+          "left": "\\(2x=1-\\sqrt{2-x}\\)",
+          "right": "isolate the radical, then square both sides"
+        },
+        {
+          "left": "\\(x^4-8x^2+8=0\\)",
+          "right": "substitute y = x²"
+        },
+        {
+          "left": "\\(x^{1/3}+x^{1/6}-2=0\\)",
+          "right": "substitute y = x^(1/6)"
+        },
+        {
+          "left": "\\(|2x-5|=3\\)",
+          "right": "split into the cases 2x − 5 = 3 and 2x − 5 = −3"
+        }
+      ],
+      "source": {
+        "page": 95
+      }
+    },
+    {
+      "id": "c1s6-mcq-001",
+      "type": "mcq",
+      "prompt": "According to the rules for inequalities, if \\(A \\le B\\) and \\(C < 0\\), then \\(A \\le B\\) is equivalent to:",
+      "options": [
+        "\\(CA \\le CB\\)",
+        "\\(CA = CB\\)",
+        "\\(CA \\ge CB\\)",
+        "\\(A + C \\ge B + C\\)"
+      ],
+      "answer": "C",
+      "explanation": "Rule 4: multiplying each side of an inequality by the same negative quantity reverses the inequality.",
+      "source": {
+        "page": 126
+      }
+    },
+    {
+      "id": "c1s6-mcq-002",
+      "type": "mcq",
+      "prompt": "Start with the true inequality \\(3 < 5\\) and multiply both sides by \\(-2\\). The resulting true inequality is:",
+      "options": [
+        "\\(-6 < -10\\)",
+        "\\(-6 > -10\\)",
+        "\\(-6 \\le -10\\)",
+        "\\(6 > 10\\)"
+      ],
+      "answer": "B",
+      "explanation": "Multiplying by a negative number reverses the direction of the inequality: \\(-6 > -10\\).",
+      "source": {
+        "page": 127
+      }
+    },
+    {
+      "id": "c1s6-mcq-003",
+      "type": "mcq",
+      "prompt": "Solve the inequality \\(3x < 9x + 4\\).",
+      "options": [
+        "\\(x > -\\frac{2}{3}\\)",
+        "\\(x < -\\frac{2}{3}\\)",
+        "\\(x > \\frac{2}{3}\\)",
+        "\\(x < \\frac{2}{3}\\)"
+      ],
+      "answer": "A",
+      "explanation": "Subtract \\(9x\\): \\(-6x < 4\\). Dividing by \\(-6\\) reverses the sign: \\(x > -\\frac{2}{3}\\).",
+      "source": {
+        "page": 127
+      }
+    },
+    {
+      "id": "c1s6-mcq-004",
+      "type": "mcq",
+      "prompt": "Solve the compound inequality \\(4 \\le 3x - 2 < 13\\). Write the solution set in interval notation.",
+      "options": [
+        "\\((2, 5]\\)",
+        "\\([2, 5]\\)",
+        "\\((2, 5)\\)",
+        "\\([2, 5)\\)"
+      ],
+      "answer": "D",
+      "explanation": "Add 2 to all parts: \\(6 \\le 3x < 15\\); divide by 3: \\(2 \\le x < 5\\). The left endpoint is included, the right one is not.",
+      "source": {
+        "page": 127
+      }
+    },
+    {
+      "id": "c1s6-mcq-005",
+      "type": "mcq",
+      "prompt": "Solve \\(7 - x \\ge 5\\). Express the solution using interval notation.",
+      "options": [
+        "\\([2, \\infty)\\)",
+        "\\((-\\infty, 2]\\)",
+        "\\((-\\infty, 2)\\)",
+        "\\((-\\infty, 12]\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(-x \\ge -2\\); multiplying by \\(-1\\) reverses the inequality: \\(x \\le 2\\).",
+      "source": {
+        "page": 134
+      }
+    },
+    {
+      "id": "c1s6-mcq-006",
+      "type": "mcq",
+      "prompt": "Solve \\(5 - 3x \\le -16\\). Express the solution using interval notation.",
+      "options": [
+        "\\((-\\infty, 7]\\)",
+        "\\((7, \\infty)\\)",
+        "\\([7, \\infty)\\)",
+        "\\([-7, \\infty)\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(-3x \\le -21\\); dividing by \\(-3\\) flips the sign: \\(x \\ge 7\\), and 7 is included.",
+      "source": {
+        "page": 134
+      }
+    },
+    {
+      "id": "c1s6-mcq-007",
+      "type": "mcq",
+      "prompt": "Solve \\(\\frac{2}{3}x + 1 < \\frac{1}{5} - 2x\\). Express the solution using interval notation.",
+      "options": [
+        "\\(\\left(-\\infty, -\\frac{3}{10}\\right)\\)",
+        "\\(\\left(-\\frac{3}{10}, \\infty\\right)\\)",
+        "\\(\\left(-\\infty, -\\frac{32}{15}\\right)\\)",
+        "\\(\\left(-\\infty, \\frac{3}{10}\\right)\\)"
+      ],
+      "answer": "A",
+      "explanation": "Collect terms: \\(\\frac{8}{3}x < -\\frac{4}{5}\\). Multiply by \\(\\frac{3}{8}\\): \\(x < -\\frac{3}{10}\\).",
+      "source": {
+        "page": 136
+      }
+    },
+    {
+      "id": "c1s6-mcq-008",
+      "type": "mcq",
+      "prompt": "Solve \\(4 - 3x \\le -(1 + 8x)\\). Express the solution using interval notation.",
+      "options": [
+        "\\([-1, \\infty)\\)",
+        "\\(\\left[\\frac{5}{11}, \\infty\\right)\\)",
+        "\\((-\\infty, -1)\\)",
+        "\\((-\\infty, -1]\\)"
+      ],
+      "answer": "D",
+      "explanation": "Distribute the minus sign: \\(4 - 3x \\le -1 - 8x\\). Add \\(8x\\) and subtract 4: \\(5x \\le -5\\), so \\(x \\le -1\\).",
+      "source": {
+        "page": 137
+      }
+    },
+    {
+      "id": "c1s6-mcq-009",
+      "type": "mcq",
+      "prompt": "Solve the compound inequality \\(2 \\le x + 5 < 4\\). Express the solution using interval notation.",
+      "options": [
+        "\\((-3, -1]\\)",
+        "\\([-3, -1)\\)",
+        "\\([-3, -1]\\)",
+        "\\([7, 9)\\)"
+      ],
+      "answer": "B",
+      "explanation": "Subtract 5 from all parts: \\(-3 \\le x < -1\\). Closed at \\(-3\\), open at \\(-1\\).",
+      "source": {
+        "page": 137
+      }
+    },
+    {
+      "id": "c1s6-mcq-010",
+      "type": "mcq",
+      "prompt": "Solve \\(-3 \\le 3x + 7 \\le \\frac{1}{2}\\). Express the solution using interval notation.",
+      "options": [
+        "\\(\\left[-\\frac{10}{3}, -\\frac{13}{6}\\right]\\)",
+        "\\(\\left[-10, -\\frac{13}{2}\\right]\\)",
+        "\\(\\left[\\frac{4}{3}, \\frac{5}{2}\\right]\\)",
+        "\\(\\left(-\\frac{10}{3}, -\\frac{13}{6}\\right)\\)"
+      ],
+      "answer": "A",
+      "explanation": "Subtract 7 from all parts: \\(-10 \\le 3x \\le -\\frac{13}{2}\\); then divide by 3.",
+      "source": {
+        "page": 138
+      }
+    },
+    {
+      "id": "c1s6-mcq-011",
+      "type": "mcq",
+      "prompt": "Solve \\(-2 < 8 - 2x \\le -1\\). Express the solution using interval notation.",
+      "options": [
+        "\\(\\left(\\frac{9}{2}, 5\\right]\\)",
+        "\\(\\left(-5, -\\frac{9}{2}\\right]\\)",
+        "\\(\\left[\\frac{9}{2}, 5\\right)\\)",
+        "\\(\\left[-\\frac{9}{2}, 5\\right)\\)"
+      ],
+      "answer": "C",
+      "explanation": "Subtract 8: \\(-10 < -2x \\le -9\\). Dividing by \\(-2\\) reverses both signs: \\(5 > x \\ge \\frac{9}{2}\\).",
+      "source": {
+        "page": 151
+      }
+    },
+    {
+      "id": "c1s6-mcq-012",
+      "type": "mcq",
+      "prompt": "Solve the inequality \\(x^2 - 5x + 6 \\le 0\\).",
+      "options": [
+        "\\((2, 3)\\)",
+        "\\((-\\infty, 2] \\cup [3, \\infty)\\)",
+        "\\([-3, -2]\\)",
+        "\\([2, 3]\\)"
+      ],
+      "answer": "D",
+      "explanation": "Factor: \\((x-2)(x-3) \\le 0\\). The sign table shows the product is negative on \\((2,3)\\); the endpoints are included because of \\(\\le\\).",
+      "source": {
+        "page": 128
+      }
+    },
+    {
+      "id": "c1s6-mcq-013",
+      "type": "mcq",
+      "prompt": "In the sign table for \\(\\frac{(x-2)(x+1)}{x-1}\\), the test value \\(x = 0\\) is used for the interval \\((-1, 1)\\). The sign of the quotient on this interval is:",
+      "options": [
+        "positive",
+        "negative",
+        "zero",
+        "undefined"
+      ],
+      "answer": "A",
+      "explanation": "At \\(x = 0\\): \\(\\frac{(-2)(1)}{-1} = 2 > 0\\). Two negative factors give a positive value.",
+      "source": {
+        "page": 131
+      }
+    },
+    {
+      "id": "c1s6-mcq-014",
+      "type": "mcq",
+      "prompt": "Solve the inequality \\(\\frac{1+x}{1-x} \\ge 1\\).",
+      "options": [
+        "\\([0, 1]\\)",
+        "\\([0, 1)\\)",
+        "\\([0, \\infty)\\)",
+        "\\((-\\infty, 0] \\cup (1, \\infty)\\)"
+      ],
+      "answer": "B",
+      "explanation": "Move 1 to the left: \\(\\frac{2x}{1-x} \\ge 0\\). The quotient is nonnegative on \\([0, 1)\\); \\(x = 1\\) is excluded because the expression is undefined there.",
+      "source": {
+        "page": 130
+      }
+    },
+    {
+      "id": "c1s6-mcq-015",
+      "type": "mcq",
+      "prompt": "Solve the inequality \\(x < \\frac{2}{x-1}\\).",
+      "options": [
+        "\\((-1, 2)\\)",
+        "\\((-1, 1) \\cup (2, \\infty)\\)",
+        "\\((-\\infty, -1) \\cup (1, 2)\\)",
+        "\\((-\\infty, -1] \\cup [1, 2]\\)"
+      ],
+      "answer": "C",
+      "explanation": "Bring all terms to one side: \\(\\frac{(x-2)(x+1)}{x-1} < 0\\). The sign table gives negative values on \\((-\\infty,-1)\\) and \\((1,2)\\).",
+      "source": {
+        "page": 131
+      }
+    },
+    {
+      "id": "c1s6-mcq-016",
+      "type": "mcq",
+      "prompt": "Solve \\((x - 5)(x + 4) \\ge 0\\). Express the solution using interval notation.",
+      "options": [
+        "\\([-4, 5]\\)",
+        "\\((-\\infty, -4) \\cup (5, \\infty)\\)",
+        "\\((-\\infty, -5] \\cup [4, \\infty)\\)",
+        "\\((-\\infty, -4] \\cup [5, \\infty)\\)"
+      ],
+      "answer": "D",
+      "explanation": "Critical points \\(-4\\) and \\(5\\). The product is positive outside them and zero at them, so both endpoints are included.",
+      "source": {
+        "page": 140
+      }
+    },
+    {
+      "id": "c1s6-mcq-017",
+      "type": "mcq",
+      "prompt": "Solve \\(x(2 - 3x) \\ge 0\\). Express the solution using interval notation.",
+      "options": [
+        "\\((-\\infty, 0] \\cup \\left[\\frac{2}{3}, \\infty\\right)\\)",
+        "\\(\\left[0, \\frac{2}{3}\\right]\\)",
+        "\\(\\left(0, \\frac{2}{3}\\right)\\)",
+        "\\(\\left[0, \\frac{3}{2}\\right]\\)"
+      ],
+      "answer": "B",
+      "explanation": "Critical points \\(0\\) and \\(\\frac{2}{3}\\). The sign table: \\(x\\) and \\(2 - 3x\\) are both positive only between them, so the solution is \\([0, \\frac{2}{3}]\\).",
+      "source": {
+        "page": 140
+      }
+    },
+    {
+      "id": "c1s6-mcq-018",
+      "type": "mcq",
+      "prompt": "Solve \\(x^2 + 5x + 6 > 0\\). Express the solution using interval notation.",
+      "options": [
+        "\\((-\\infty, -3) \\cup (-2, \\infty)\\)",
+        "\\((-3, -2)\\)",
+        "\\((-\\infty, 2) \\cup (3, \\infty)\\)",
+        "\\((-\\infty, -3] \\cup [-2, \\infty)\\)"
+      ],
+      "answer": "A",
+      "explanation": "Factor: \\((x+2)(x+3) > 0\\). The product is positive outside the critical points \\(-3, -2\\); strict inequality, so they are excluded.",
+      "source": {
+        "page": 142
+      }
+    },
+    {
+      "id": "c1s6-mcq-019",
+      "type": "mcq",
+      "prompt": "Solve \\(5x^2 + 3x \\ge 3x^2 + 2\\). Express the solution using interval notation.",
+      "options": [
+        "\\(\\left[-2, \\frac{1}{2}\\right]\\)",
+        "\\((-\\infty, -2) \\cup \\left(\\frac{1}{2}, \\infty\\right)\\)",
+        "\\((-\\infty, -2] \\cup \\left[\\frac{1}{2}, \\infty\\right)\\)",
+        "\\(\\left(-\\infty, -\\frac{1}{2}\\right] \\cup [2, \\infty)\\)"
+      ],
+      "answer": "C",
+      "explanation": "Bring to one side: \\(2x^2 + 3x - 2 \\ge 0\\), i.e. \\((2x-1)(x+2) \\ge 0\\). Positive or zero outside \\(-2\\) and \\(\\frac{1}{2}\\).",
+      "source": {
+        "page": 143
+      }
+    },
+    {
+      "id": "c1s6-mcq-020",
+      "type": "mcq",
+      "prompt": "Solve \\((-2x)^2 \\le 4\\). Express the solution using interval notation.",
+      "options": [
+        "\\((-\\infty, 1]\\)",
+        "\\([-1, \\infty)\\)",
+        "\\([-2, 2]\\)",
+        "\\([-1, 1]\\)"
+      ],
+      "answer": "D",
+      "explanation": "\\((-2x)^2 = 4x^2 \\le 4\\) gives \\(x^2 \\le 1\\), which means \\(-1 \\le x \\le 1\\).",
+      "source": {
+        "page": 143
+      }
+    },
+    {
+      "id": "c1s6-mcq-021",
+      "type": "mcq",
+      "prompt": "Solve \\((x+2)(x-1)(x-3) \\ge 0\\). Express the solution using interval notation.",
+      "options": [
+        "\\([-2, 1] \\cup [3, \\infty)\\)",
+        "\\((-\\infty, -2] \\cup [1, 3]\\)",
+        "\\((-2, 1) \\cup (3, \\infty)\\)",
+        "\\([-2, \\infty)\\)"
+      ],
+      "answer": "A",
+      "explanation": "Critical points \\(-2, 1, 3\\). The sign row is \\(-, +, -, +\\), so the product is nonnegative on \\([-2,1]\\) and \\([3,\\infty)\\).",
+      "source": {
+        "page": 144
+      }
+    },
+    {
+      "id": "c1s6-mcq-022",
+      "type": "mcq",
+      "prompt": "Solve \\(\\frac{x-3}{x+1} \\ge 0\\). Express the solution using interval notation.",
+      "options": [
+        "\\((-\\infty, -1] \\cup [3, \\infty)\\)",
+        "\\((-\\infty, -1) \\cup [3, \\infty)\\)",
+        "\\((-1, 3]\\)",
+        "\\([-1, 3]\\)"
+      ],
+      "answer": "B",
+      "explanation": "The quotient is nonnegative on \\((-\\infty,-1)\\) and \\([3,\\infty)\\). \\(x = 3\\) is included (value 0) but \\(x = -1\\) is excluded (undefined).",
+      "source": {
+        "page": 145
+      }
+    },
+    {
+      "id": "c1s6-mcq-023",
+      "type": "mcq",
+      "prompt": "Solve \\(\\frac{4x}{2x+3} > 2\\). Express the solution using interval notation.",
+      "options": [
+        "\\(\\left(-\\frac{3}{2}, \\infty\\right)\\)",
+        "\\(\\emptyset\\)",
+        "\\(\\left(-\\infty, -\\frac{3}{2}\\right)\\)",
+        "\\(\\left(-\\infty, -\\frac{3}{2}\\right]\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(\\frac{4x}{2x+3} - 2 = \\frac{-6}{2x+3} > 0\\) holds exactly when the denominator is negative: \\(2x + 3 < 0\\), so \\(x < -\\frac{3}{2}\\).",
+      "source": {
+        "page": 146
+      }
+    },
+    {
+      "id": "c1s6-mcq-024",
+      "type": "mcq",
+      "prompt": "Solve \\(x^3 - 4x > 0\\). Express the solution using interval notation.",
+      "options": [
+        "\\((2, \\infty)\\)",
+        "\\((-\\infty, -2) \\cup (0, 2)\\)",
+        "\\((-2, 2)\\)",
+        "\\((-2, 0) \\cup (2, \\infty)\\)"
+      ],
+      "answer": "D",
+      "explanation": "Factor: \\(x(x-2)(x+2) > 0\\). Critical points \\(-2, 0, 2\\); the sign row is \\(-, +, -, +\\), so the product is positive on \\((-2,0)\\) and \\((2,\\infty)\\).",
+      "source": {
+        "page": 151
+      }
+    },
+    {
+      "id": "c1s6-mcq-025",
+      "type": "mcq",
+      "prompt": "Solve \\(\\frac{3+x}{3-x} \\ge 1\\). Express the solution using interval notation.",
+      "options": [
+        "\\([0, 3)\\)",
+        "\\([0, 3]\\)",
+        "\\([0, \\infty)\\)",
+        "\\((-\\infty, 0] \\cup (3, \\infty)\\)"
+      ],
+      "answer": "A",
+      "explanation": "\\(\\frac{3+x}{3-x} - 1 = \\frac{2x}{3-x} \\ge 0\\), which holds for \\(0 \\le x < 3\\); \\(x = 3\\) is excluded (undefined).",
+      "source": {
+        "page": 151
+      }
+    },
+    {
+      "id": "c1s6-mcq-026",
+      "type": "mcq",
+      "prompt": "Solve the inequality \\(|x - 5| < 2\\).",
+      "options": [
+        "\\([3, 7]\\)",
+        "\\((3, 7)\\)",
+        "\\((-\\infty, 3) \\cup (7, \\infty)\\)",
+        "\\((-7, 7)\\)"
+      ],
+      "answer": "B",
+      "explanation": "\\(|x - 5| < 2\\) is equivalent to \\(5 - 2 < x < 5 + 2\\), i.e. \\(3 < x < 7\\).",
+      "source": {
+        "page": 132
+      }
+    },
+    {
+      "id": "c1s6-mcq-027",
+      "type": "mcq",
+      "prompt": "Solve the inequality \\(|3x + 2| \\ge 4\\).",
+      "options": [
+        "\\(\\left[-2, \\frac{2}{3}\\right]\\)",
+        "\\(\\left[\\frac{2}{3}, \\infty\\right)\\)",
+        "\\((-\\infty, -2] \\cup \\left[\\frac{2}{3}, \\infty\\right)\\)",
+        "\\(\\left(-\\infty, -\\frac{2}{3}\\right] \\cup [2, \\infty)\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(3x + 2 \\le -4\\) or \\(3x + 2 \\ge 4\\), giving \\(x \\le -2\\) or \\(x \\ge \\frac{2}{3}\\).",
+      "source": {
+        "page": 133
+      }
+    },
+    {
+      "id": "c1s6-mcq-028",
+      "type": "mcq",
+      "prompt": "Solve \\(\\left|\\frac{x-2}{3}\\right| < 2\\). Express the solution using interval notation.",
+      "options": [
+        "\\([-4, 8]\\)",
+        "\\((0, 4)\\)",
+        "\\((-\\infty, -4) \\cup (8, \\infty)\\)",
+        "\\((-4, 8)\\)"
+      ],
+      "answer": "D",
+      "explanation": "Multiply by 3: \\(|x - 2| < 6\\), so \\(-6 < x - 2 < 6\\) and \\(-4 < x < 8\\).",
+      "source": {
+        "page": 148
+      }
+    },
+    {
+      "id": "c1s6-mcq-029",
+      "type": "mcq",
+      "prompt": "Solve \\(8 - |2x - 1| \\ge 6\\). Express the solution using interval notation.",
+      "options": [
+        "\\(\\left[-\\frac{1}{2}, \\frac{3}{2}\\right]\\)",
+        "\\(\\left(-\\infty, -\\frac{1}{2}\\right] \\cup \\left[\\frac{3}{2}, \\infty\\right)\\)",
+        "\\(\\left(-\\frac{1}{2}, \\frac{3}{2}\\right)\\)",
+        "\\(\\left[-\\frac{13}{2}, \\frac{15}{2}\\right]\\)"
+      ],
+      "answer": "A",
+      "explanation": "Isolate: \\(-|2x - 1| \\ge -2\\), so \\(|2x - 1| \\le 2\\) (sign reversed). Then \\(-2 \\le 2x - 1 \\le 2\\) gives \\(-\\frac{1}{2} \\le x \\le \\frac{3}{2}\\).",
+      "source": {
+        "page": 149
+      }
+    },
+    {
+      "id": "c1s6-mcq-030",
+      "type": "mcq",
+      "prompt": "Solve \\(7|x + 2| + 5 > 4\\). Express the solution using interval notation.",
+      "options": [
+        "\\(\\emptyset\\)",
+        "\\((-\\infty, \\infty)\\)",
+        "\\((-\\infty, -2) \\cup (-2, \\infty)\\)",
+        "\\(\\left(-\\frac{15}{7}, -\\frac{13}{7}\\right)\\)"
+      ],
+      "answer": "B",
+      "explanation": "Isolating gives \\(7|x + 2| > -1\\). Since \\(7|x + 2| \\ge 0\\) for every real \\(x\\), the inequality is always true.",
+      "source": {
+        "page": 150
+      }
+    },
+    {
+      "id": "c1s6-mcq-031",
+      "type": "mcq",
+      "prompt": "Solve \\(3 - |2x + 4| \\le 1\\). Express the solution using interval notation.",
+      "options": [
+        "\\([-3, -1]\\)",
+        "\\((-\\infty, -3) \\cup (-1, \\infty)\\)",
+        "\\((-\\infty, -3] \\cup [-1, \\infty)\\)",
+        "\\((-\\infty, -1] \\cup [3, \\infty)\\)"
+      ],
+      "answer": "C",
+      "explanation": "\\(-|2x + 4| \\le -2\\) gives \\(|2x + 4| \\ge 2\\): \\(2x + 4 \\le -2\\) or \\(2x + 4 \\ge 2\\), so \\(x \\le -3\\) or \\(x \\ge -1\\).",
+      "source": {
+        "page": 152
+      }
+    },
+    {
+      "id": "c1s6-mcq-032",
+      "type": "mcq",
+      "prompt": "A set of numbers is graphed on the number line: closed circles at \\(-2\\) and \\(4\\), with the segment between them shaded. Which absolute value inequality describes this set?",
+      "options": [
+        "\\(|x + 1| \\le 3\\)",
+        "\\(|x - 1| < 3\\)",
+        "\\(|x - 3| \\le 1\\)",
+        "\\(|x - 1| \\le 3\\)"
+      ],
+      "answer": "D",
+      "explanation": "The set is \\(-2 \\le x \\le 4\\). Its midpoint is \\(1\\) and each endpoint is \\(3\\) units away, so \\(|x - 1| \\le 3\\) (closed circles mean \\(\\le\\)).",
+      "source": {
+        "page": 153
+      }
+    },
+    {
+      "id": "c1s6-mcq-033",
+      "type": "mcq",
+      "prompt": "Determine the values of \\(x\\) for which \\(\\sqrt{16 - 9x^2}\\) is defined as a real number.",
+      "options": [
+        "\\(\\left(-\\infty, \\frac{4}{3}\\right]\\)",
+        "\\(\\left[-\\frac{4}{3}, \\frac{4}{3}\\right]\\)",
+        "\\(\\left(-\\frac{4}{3}, \\frac{4}{3}\\right)\\)",
+        "\\(\\left(-\\infty, -\\frac{4}{3}\\right] \\cup \\left[\\frac{4}{3}, \\infty\\right)\\)"
+      ],
+      "answer": "B",
+      "explanation": "We need \\(16 - 9x^2 \\ge 0\\), i.e. \\((4 - 3x)(4 + 3x) \\ge 0\\); the sign table gives \\(-\\frac{4}{3} \\le x \\le \\frac{4}{3}\\).",
+      "source": {
+        "page": 153
+      }
+    },
+    {
+      "id": "c1s6-mcq-034",
+      "type": "mcq",
+      "prompt": "Determine the values of \\(x\\) for which \\(\\sqrt[4]{\\frac{1-x}{2+x}}\\) is defined as a real number.",
+      "options": [
+        "\\((-2, 1]\\)",
+        "\\([-2, 1]\\)",
+        "\\([-2, 1)\\)",
+        "\\((-\\infty, -2) \\cup [1, \\infty)\\)"
+      ],
+      "answer": "A",
+      "explanation": "We need \\(\\frac{1-x}{2+x} \\ge 0\\). The sign table gives \\(-2 < x \\le 1\\): \\(x = -2\\) is excluded (undefined) and \\(x = 1\\) gives 0, which is allowed.",
+      "source": {
+        "page": 153
+      }
+    },
+    {
+      "id": "c1s6-mcq-035",
+      "type": "mcq",
+      "prompt": "Let \\(S = \\{-2, -1, \\frac{1}{2}, 1, \\sqrt{2}, 2, 4\\}\\). Which elements of \\(S\\) satisfy \\(\\frac{1}{x} \\le \\frac{1}{2}\\)?",
+      "options": [
+        "\\(\\{2, 4\\}\\)",
+        "\\(\\{-2, -1, \\frac{1}{2}, 1, \\sqrt{2}, 2\\}\\)",
+        "\\(\\{-2, -1, 2, 4\\}\\)",
+        "\\(\\{\\sqrt{2}, 2, 4\\}\\)"
+      ],
+      "answer": "C",
+      "explanation": "Every negative \\(x\\) works since \\(\\frac{1}{x} < 0\\). For positive \\(x\\), taking reciprocals reverses the inequality: \\(x \\ge 2\\). So \\(-2, -1, 2, 4\\).",
+      "source": {
+        "page": 150
+      }
+    },
+    {
+      "id": "c1s6-tf-001",
+      "type": "tf",
+      "prompt": "If \\(0 < A \\le B\\), then \\(\\frac{1}{A} \\le \\frac{1}{B}\\).",
+      "answer": false,
+      "explanation": "Rule 5: taking reciprocals of positive quantities reverses the inequality, so \\(\\frac{1}{A} \\ge \\frac{1}{B}\\). For example \\(2 \\le 4\\) but \\(\\frac{1}{2} \\ge \\frac{1}{4}\\).",
+      "source": {
+        "page": 126
+      }
+    },
+    {
+      "id": "c1s6-tf-002",
+      "type": "tf",
+      "prompt": "\\(x = -\\frac{2}{3}\\) is a solution of the inequality \\(3x < 9x + 4\\).",
+      "answer": false,
+      "explanation": "The solution set is \\(x > -\\frac{2}{3}\\), which does not include \\(-\\frac{2}{3}\\) itself: at that value both sides equal \\(-2\\), and \\(-2 < -2\\) is false.",
+      "source": {
+        "page": 127
+      }
+    },
+    {
+      "id": "c1s6-tf-003",
+      "type": "tf",
+      "prompt": "To solve \\(x < \\frac{2}{x-1}\\), we may multiply both sides by \\(x - 1\\) and solve \\(x(x-1) < 2\\) instead.",
+      "answer": false,
+      "explanation": "The sign of \\(x - 1\\) is unknown, so multiplying by it may reverse the inequality. The notes move all terms to one side and use a sign table: the solution is \\((-\\infty,-1) \\cup (1,2)\\), not \\((-1, 2)\\).",
+      "source": {
+        "page": 130
+      }
+    },
+    {
+      "id": "c1s6-tf-004",
+      "type": "tf",
+      "prompt": "If a product or quotient has an odd number of negative factors, then its value is negative.",
+      "answer": true,
+      "explanation": "This is the Sign of a Product or Quotient principle used to fill the last row of a sign table.",
+      "source": {
+        "page": 128
+      }
+    },
+    {
+      "id": "c1s6-match-001",
+      "type": "matching",
+      "title": "Match each rule for inequalities with its description.",
+      "pairs": [
+        {
+          "left": "\\(A \\le B \\iff A + C \\le B + C\\)",
+          "right": "Adding the same quantity to each side"
+        },
+        {
+          "left": "\\(A \\le B \\iff CA \\le CB\\) when \\(C > 0\\)",
+          "right": "Multiplying each side by the same positive quantity"
+        },
+        {
+          "left": "\\(A \\le B \\iff CA \\ge CB\\) when \\(C < 0\\)",
+          "right": "Multiplying by a negative quantity reverses the inequality"
+        },
+        {
+          "left": "\\(A \\le B \\iff \\frac{1}{A} \\ge \\frac{1}{B}\\) when \\(A, B > 0\\)",
+          "right": "Taking reciprocals reverses the inequality"
+        },
+        {
+          "left": "\\(A \\le B,\\ C \\le D \\implies A + C \\le B + D\\)",
+          "right": "Inequalities can be added"
+        }
+      ],
+      "source": {
+        "page": 126
+      }
+    },
+    {
+      "id": "c1s6-match-002",
+      "type": "matching",
+      "title": "Match each absolute value inequality (with \\(c > 0\\)) with its equivalent form.",
+      "pairs": [
+        {
+          "left": "\\(|x| < c\\)",
+          "right": "−c < x < c"
+        },
+        {
+          "left": "\\(|x| \\le c\\)",
+          "right": "−c ≤ x ≤ c"
+        },
+        {
+          "left": "\\(|x| > c\\)",
+          "right": "x < −c or x > c"
+        },
+        {
+          "left": "\\(|x| \\ge c\\)",
+          "right": "x ≤ −c or x ≥ c"
+        }
+      ],
+      "source": {
+        "page": 131
+      }
+    },
+    {
+      "id": "c1s6-match-003",
+      "type": "matching",
+      "title": "Match each absolute value inequality with the phrase it describes.",
+      "pairs": [
+        {
+          "left": "\\(|x| < 3\\)",
+          "right": "all real numbers x less than 3 units from 0"
+        },
+        {
+          "left": "\\(|x| > 2\\)",
+          "right": "all real numbers x more than 2 units from 0"
+        },
+        {
+          "left": "\\(|x - 7| \\ge 5\\)",
+          "right": "all real numbers x at least 5 units from 7"
+        },
+        {
+          "left": "\\(|x - 2| \\le 4\\)",
+          "right": "all real numbers x at most 4 units from 2"
+        }
+      ],
+      "source": {
+        "page": 152
+      }
+    },
+    {
+      "id": "c1s6-match-004",
+      "type": "matching",
+      "title": "Match each absolute value inequality with the description of its graph on the number line.",
+      "pairs": [
+        {
+          "left": "\\(|x| \\le 2\\)",
+          "right": "closed circles at −2 and 2, shaded between them"
+        },
+        {
+          "left": "\\(|x| > 3\\)",
+          "right": "open circles at −3 and 3, shaded outside them (arrows both ways)"
+        },
+        {
+          "left": "\\(|x| < 4\\)",
+          "right": "open circles at −4 and 4, shaded between them"
+        },
+        {
+          "left": "\\(|x + 2| > 1\\)",
+          "right": "open circles at −3 and −1, shaded outside them (arrows both ways)"
+        }
+      ],
+      "source": {
+        "page": 152
+      }
+    }
+  ]
+}

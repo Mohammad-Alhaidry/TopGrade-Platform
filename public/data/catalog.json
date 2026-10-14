@@ -206,6 +206,52 @@
       ]
     },
     {
+      "id": "pre-calculus",
+      "titleEn": "Pre-Calculus",
+      "titleAr": "مقدمة تفاضل",
+      "math": true,
+      "topics": [
+        {
+          "id": "chapter-1",
+          "number": 1,
+          "title": "Fundamentals",
+          "label": {
+            "en": "Chapter 1",
+            "ar": "الفصل الأول"
+          },
+          "bank": "pre-calculus/chapter-1.json"
+        },
+        {
+          "id": "chapter-2",
+          "number": 2,
+          "title": "Real Functions",
+          "label": {
+            "en": "Chapter 2",
+            "ar": "الفصل الثاني"
+          },
+          "bank": "pre-calculus/chapter-2.json"
+        },
+        {
+          "id": "midterm",
+          "number": 3,
+          "title": "Chapters 1 and 2",
+          "label": {
+            "en": "Practice midterm",
+            "ar": "اختبار نصفي تجريبي"
+          },
+          "bank": "pre-calculus/midterm.json",
+          "mix": [
+            "chapter-1",
+            "chapter-2"
+          ],
+          "defaults": {
+            "mode": "exam",
+            "count": 40
+          }
+        }
+      ]
+    },
+    {
       "id": "business-math",
       "titleEn": "Business Mathematics",
       "titleAr": "رياضيات الأعمال",
