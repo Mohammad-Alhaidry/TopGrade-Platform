@@ -17,6 +17,9 @@ import { navigate } from './router.js';
 import { t, lang, localName } from './i18n.js';
 import { rich } from './math.js';
 import { track } from './analytics.js';
+import { inviteCard } from './push-ui.js';
+import { installPromptCard } from './install-card.js';
+import { resultImage } from './share-card.js';
 
 const STORAGE_KEY = 'topgrade.run.v1';
 // Question content in the open course's language and direction (Arabic courses read right to left).
@@ -34,7 +37,8 @@ const typeLabel = (type) => t(`type.${type}`);
 const state = {
   ctx: null, // { course, topic, bank }
   screen: 'setup', // setup | quiz | results | review
-  setup: { mode: 'practice', types: [...TYPES], count: 20 },
+  // 10 by default: short sets get finished (usage, October 2026: a quarter of longer runs reached the end).
+  setup: { mode: 'practice', types: [...TYPES], count: 10 },
   run: null, // { kind, session, index, checked[], startedAt, finishedAt, prevBest }
   reviewFilter: 'missed',
   reviewFocus: null,
@@ -148,7 +152,7 @@ export function openTopic(ctx) {
 function showTopic(ctx) {
   if (state.ctx?.bank !== ctx.bank) {
     const d = ctx.topic.defaults ?? {};
-    state.setup = { mode: d.mode ?? 'practice', types: [...TYPES], count: d.count === undefined ? 20 : d.count };
+    state.setup = { mode: d.mode ?? 'practice', types: [...TYPES], count: d.count === undefined ? 10 : d.count };
   }
   state.ctx = ctx;
   state.run = null;
@@ -794,6 +798,30 @@ function scoreRing(percent) {
 
 const stateKey = (r) => (r.correct ? 'state.correct' : r.answered ? 'state.wrong' : 'state.skipped');
 
+/**
+ * Shares the result as an image in Smart Pro's identity with a link to this topic, through the phone's own share
+ * sheet (WhatsApp, Telegram, Instagram…); text and link where images cannot be shared; WhatsApp where the browser
+ * has no share sheet. Students arrive by shared links, so a good result is our best invitation.
+ * `image` is drawn when the result opens, so the tap shares at once (phones allow sharing only right after a tap).
+ */
+async function shareScore(s, image) {
+  const { course, topic } = state.ctx;
+  const where = [localName(course).main, topicLabel(topic, lang())].join(lang() === 'ar' ? '، ' : ', ');
+  const text = t('res.shareText', { c: s.correct, n: s.total, topic: where });
+  const url = new URL(`${paths.topic(course.id, topic.id)}?ref=share`, document.baseURI).href;
+  track('share', { topic: key(), score: s.percent });
+  if (navigator.share) {
+    const blob = await image.catch(() => null);
+    const file = blob && new File([blob], 'smart-pro.png', { type: 'image/png' });
+    const withImage = file && navigator.canShare?.({ files: [file] });
+    try {
+      await navigator.share(withImage ? { files: [file], text: `${text} ${url}` } : { text, url });
+    } catch { /* closed the share sheet */ }
+    return;
+  }
+  window.open(`https://wa.me/?text=${encodeURIComponent(`${text} ${url}`)}`, '_blank', 'noopener');
+}
+
 function resultsView(run) {
   const { session } = run;
   const s = summarize(session);
@@ -803,6 +831,8 @@ function resultsView(run) {
   const newBest = run.kind === 'topic' && run.prevBest !== null && s.percent > run.prevBest;
   const retry = () => beginRun(newRun(createSession(state.ctx.bank, { ids: missedIds, mode: session.mode }), 'mistakes'));
   const title = t(run.kind === 'mistakes' ? 'res.mistakes' : session.mode === 'exam' ? 'res.exam' : 'res.practice');
+  const image = resultImage({ course: state.ctx.course, topic: state.ctx.topic, correct: s.correct, total: s.total, percent: s.percent });
+  image.catch(() => {});
 
   return screen({
     className: 'screen--results',
@@ -812,13 +842,15 @@ function resultsView(run) {
       end: h('button', { type: 'button', class: 'pillbtn', onclick: leaveRun }, t('done')),
     }),
     body: [
-      h('section', { class: 'card score', 'aria-labelledby': 'score-title' },
+      h('section', { class: 'card score score--hero', 'aria-labelledby': 'score-title' },
         scoreRing(s.percent),
         h('div', { class: 'score__copy' },
           h('h2', { class: 'score__title', id: 'score-title' }, title),
           h('p', { class: 'score__line' }, t('res.line', { c: s.correct, n: s.total })),
           h('p', { class: 'score__time' }, duration(run.finishedAt - run.startedAt)),
-          newBest ? h('p', { class: 'score__best' }, icon(...ICONS.flame), t('res.best', { p: run.prevBest })) : null)),
+          newBest ? h('p', { class: 'score__best' }, icon(...ICONS.flame), t('res.best', { p: run.prevBest })) : null),
+        h('button', { type: 'button', class: 'btn btn--light score__share', onclick: () => shareScore(s, image) }, icon(...ICONS.share), h('span', {}, t('res.share')))),
+      inviteCard(state.ctx.course, { otherwise: installPromptCard }),
       h('dl', { class: 'card stats' },
         h('div', { class: 'stats__item is-right' }, h('dt', {}, t('st.correct')), h('dd', {}, s.correct)),
         h('div', { class: 'stats__item is-wrong' }, h('dt', {}, t('st.wrong')), h('dd', {}, wrong)),

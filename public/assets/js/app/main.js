@@ -10,6 +10,7 @@ import { showCourse } from './views/course.js';
 import { showReview } from './views/review.js';
 import { showPrivacy, showNotFound, showLoadError } from './views/pages.js';
 import { registerServiceWorker, applyUpdateIfReady, onUpdateReady } from './update.js';
+import { reportOpen, syncSubscription } from './notify.js';
 import { initHeader, repaintHeader } from './shell.js';
 import { applyLang, onLangChange } from './i18n.js';
 import { initTheme, theme } from './theme.js';
@@ -99,6 +100,8 @@ document.addEventListener('visibilitychange', () => {
   if (document.visibilityState === 'visible' && safeToUpdate()) applyUpdateIfReady();
 });
 registerServiceWorker();
+reportOpen();
+syncSubscription();
 
 describeSession({ language: lang(), theme: theme(), app: currentPlatform().installed ? 'installed' : 'browser' });
 addEventListener('appinstalled', () => track('app_installed'));

@@ -1,0 +1,22 @@
+[Unit]
+Description=Smart Pro push notifications (subscriptions and sending)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/smartpro-push
+ExecStart=/usr/bin/node --no-warnings /opt/smartpro-push/server.mjs
+Environment=PORT=3120
+Environment=PUSH_DB=/var/lib/smartpro-push/push.json
+Environment=PUSH_VAPID=/etc/smartpro-push/vapid.json
+Restart=always
+RestartSec=3
+NoNewPrivileges=true
+ProtectSystem=strict
+ReadWritePaths=/var/lib/smartpro-push
+ProtectHome=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

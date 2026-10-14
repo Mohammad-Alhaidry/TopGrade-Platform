@@ -94,3 +94,10 @@ test('the worker lets ?fresh requests reach the server (a link to a newly added 
   assert.equal(answered('https://app.example/data/catalog.json'), true, 'normally from the offline copy');
   assert.equal(answered('https://app.example/data/catalog.json?fresh=1'), false, 'fresh goes to the server');
 });
+
+test('notifications: the worker shows pushes, opens their page on tap, and a preview worker never clears the live caches', () => {
+  for (const ev of ['push', 'notificationclick', 'pushsubscriptionchange']) assert.match(sw, new RegExp(`addEventListener\\('${ev}'`));
+  assert.match(sw, /showNotification\(/);
+  assert.match(sw, /if \(!IS_PREVIEW\) \{\s*const names = await caches\.keys\(\)/);
+  assert.ok(existsSync(new URL('assets/icons/badge-96.png', pub)), 'notification badge icon');
+});

@@ -1,0 +1,165 @@
+/* إدارة سمارت برو. The design is the students' app's own (base.css + app.css: header, page bar, tab bar, cards,
+   course card, setup tiles, segments, answer buttons, sheets, action bar, colours and type). Only what the app has
+   no component for is here, made from the same tokens: text fields, status labels, the notification preview,
+   list rows, and the busy and entrance motion. */
+
+[hidden]{display:none!important}
+button.tab{border:0;background:none;font-family:inherit;cursor:pointer}
+.tabbar{grid-template-columns:repeat(4,1fr)}
+
+/* ---------- motion ---------- */
+/* Sign-in and the send result fade in; tabs switch instantly, as in the students' app. Reduced motion turns all of
+   it off (app.css). */
+.enter--fade{animation:screen-fade 180ms ease-out}
+@keyframes screen-fade{from{opacity:0}to{opacity:1}}
+.done__icon{animation:done-pop 360ms cubic-bezier(.3,1.5,.5,1) 80ms both}
+@keyframes done-pop{from{transform:scale(.4);opacity:0}to{transform:none;opacity:1}}
+/* a button at work: a small ring beside its label */
+.spin{flex:none;width:16px;height:16px;border-radius:50%;border:2px solid currentColor;border-inline-end-color:transparent;animation:spin 700ms linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.btn.is-busy{cursor:progress}
+.btn--primary.is-busy:disabled{background:var(--primary);color:#fff;opacity:.85;box-shadow:var(--shadow-btn)}
+.btn--secondary.is-busy:disabled{color:var(--ink)}
+
+/* ---------- text fields ---------- */
+.field{display:grid;gap:6px;min-width:0}
+.field__top{display:flex;align-items:baseline;justify-content:space-between;gap:8px}
+.field__label{font:700 13px/1.3 var(--ui);color:var(--ink)}
+.field__hint{margin:0;font:500 12.5px/1.5 var(--ui);color:var(--muted)}
+.input{width:100%;min-width:0;min-height:48px;padding:11px 14px;border:1px solid var(--line-strong);border-radius:var(--r-ctl);background:var(--soft);color:var(--text);font:500 16px/1.5 var(--ui);transition:border-color 120ms ease,background-color 120ms ease,box-shadow 120ms ease}
+textarea.input{min-height:88px;resize:vertical}
+.input::placeholder{color:var(--faint)}
+.input:focus,.input:focus-visible{outline:none;border-color:var(--primary);background:var(--card);box-shadow:0 0 0 3px var(--tint)}
+/* password: the show/hide button on the left, the (left-to-right) password clear of it */
+.pw{position:relative}
+.pw .input{padding-left:50px;padding-right:14px}
+.pw__btn{position:absolute;left:4px;top:50%;transform:translateY(-50%);display:grid;place-items:center;width:42px;height:42px;padding:0;border:0;border-radius:var(--r-sm);background:none;color:var(--muted);cursor:pointer}
+.pw__btn.is-on{color:var(--brand-ink)}
+.pw__btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* length meter beside a field label */
+.len{display:inline-flex;align-items:center;gap:6px;font:700 12px/1 var(--ui);color:var(--muted);font-variant-numeric:tabular-nums}
+.len .meter{flex:none;width:48px}
+.len.is-long{color:var(--warn-ink)}
+.len.is-long .meter span{background:var(--warn)}
+.len.is-over{color:var(--wrong-ink)}
+.len.is-over .meter span{background:var(--wrong)}
+
+/* small status label */
+.chip{display:inline-flex;align-items:center;gap:4px;padding:2px 9px;border-radius:999px;font:700 11.5px/1.6 var(--ui);background:var(--tint);color:var(--brand-ink);white-space:nowrap}
+.chip svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.chip--warn{background:var(--warn-bg);color:var(--warn-ink)}
+.chip--muted{background:var(--soft);color:var(--muted);box-shadow:inset 0 0 0 1px var(--line)}
+
+/* a message with an icon */
+.msg-note{display:flex;gap:10px;align-items:flex-start;margin:0;padding:10px 12px;border-radius:var(--r-ctl);font:600 13px/1.55 var(--ui)}
+.msg-note svg{flex:none;width:18px;height:18px;margin-top:1px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.msg-note--warn{background:var(--warn-bg);color:var(--warn-ink)}
+.msg-note--err{background:var(--wrong-bg);color:var(--wrong-ink)}
+.msg-note--info{background:var(--tint);color:var(--brand-ink)}
+
+/* ---------- new notification (the topic setup's card, groups and tiles) ---------- */
+.screen--compose{--content:640px}
+.compose .setup__group{padding:12px 0}
+.group__body{display:grid;gap:10px}
+.compose .tiles{justify-content:flex-start}
+.compose .tile{justify-content:flex-start}
+.tile.is-off{opacity:.45;cursor:not-allowed}
+.tile.is-off input{cursor:not-allowed}
+.templates{display:flex;flex-wrap:wrap;gap:6px}
+.templates .pillbtn{height:36px;padding:0 12px;font-size:12.5px}
+.when{display:grid;gap:8px}
+.when__more{justify-self:start;height:36px;font-size:12.5px;color:var(--brand-ink)}
+.options--hours{grid-template-columns:repeat(3,minmax(0,1fr))}
+.options--hours .option{justify-content:center;min-height:48px;padding:8px}
+.options--hours .option__text{flex:none;font-weight:700;font-variant-numeric:tabular-nums}
+.option:disabled:not(.is-selected){opacity:.4}
+
+/* notification preview: the phone's own look, not the app's */
+.phone{display:grid;gap:10px;padding:14px;border-radius:var(--r-ctl)}
+.phone--ios{background:linear-gradient(160deg,#5b6f8a,#2c3a4f)}
+.phone--android{background:#1f2328}
+.phone__time{margin:0;color:rgba(255,255,255,.85);font:600 12px/1 var(--ui);text-align:center}
+.pv{display:flex;gap:10px;align-items:flex-start}
+.pv--ios{padding:11px 12px;border-radius:18px;background:rgba(245,245,247,.92);color:#111}
+.pv--android{padding:12px 14px;border-radius:22px;background:#2b2f35;color:#e8eaed}
+.pv__icon{flex:none;width:36px;height:36px;border-radius:9px}
+.pv--android .pv__icon{width:30px;height:30px;border-radius:50%}
+.pv__copy{flex:1;min-width:0}
+.pv__head{display:flex;justify-content:space-between;gap:8px;font:500 12px/1.4 var(--ui);opacity:.7}
+.pv__title{margin:0;font:800 14.5px/1.35 var(--ui);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pv__body{margin:0;font:500 14px/1.4 var(--ui);display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden}
+.pv--ios .pv__body{-webkit-line-clamp:4}
+.pv--android .pv__body{-webkit-line-clamp:2}
+
+/* sent: what went out */
+.done{gap:6px;padding-top:30px}
+.done .empty__icon{width:60px;height:60px;border-radius:50%;background:var(--primary);color:#fff}
+.done .empty__icon svg{width:30px;height:30px;stroke-width:2.4}
+.done .empty__icon.is-warn{background:var(--warn-bg);color:var(--warn-ink)}
+.done p{max-width:34ch}
+.done__card{display:grid;gap:4px;width:100%;margin-top:6px;padding:12px 14px;border-radius:var(--r-ctl);background:var(--soft);box-shadow:inset 0 0 0 1px var(--line);text-align:start}
+.done__actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%;margin-top:6px}
+.done__actions .btn{padding:0 12px}
+.screen--done .body{justify-content:center}
+/* the new notification's buttons sit just above the tabs: tighter than the app's full action bar */
+.screen--compose > .bar{padding-block:8px}
+.screen--compose > .bar .btn{min-height:46px}
+
+/* ---------- a sent / scheduled notification ---------- */
+.sent{display:grid;gap:8px;padding:14px}
+.sent__top{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;font:500 12.5px/1.4 var(--ui);color:var(--muted)}
+.sent__when{margin-inline-start:auto;font-variant-numeric:tabular-nums}
+.sent__title{margin:0;font:800 15px/1.4 var(--ui);color:var(--ink);overflow-wrap:anywhere}
+.sent__body{margin:0;font:500 14px/1.5 var(--ui);color:var(--text);overflow-wrap:anywhere}
+.sent__stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin:0}
+.sent__stats div{padding:8px 10px;border-radius:var(--r-sm);background:var(--soft)}
+.sent__stats dt{font:500 11.5px/1.3 var(--ui);color:var(--muted)}
+.sent__stats dd{margin:2px 0 0;font:800 16px/1.2 var(--ui);color:var(--ink);font-variant-numeric:tabular-nums}
+.sent__actions{display:flex;flex-wrap:wrap;gap:8px}
+
+/* per-course subscribers */
+.counts{display:grid;gap:12px;margin:0;padding:14px;list-style:none}
+.counts li{display:grid;gap:6px}
+.counts__top{display:flex;justify-content:space-between;gap:10px;font:600 14px/1.4 var(--ui);color:var(--text)}
+.counts__top strong{color:var(--ink);font-variant-numeric:tabular-nums}
+.counts .meter{flex:none;height:6px}
+
+/* ---------- settings ---------- */
+.rows{display:grid;padding:2px 14px}
+.row{display:flex;align-items:center;gap:12px;min-height:60px;padding:8px 0;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}
+.row__icon{display:grid;place-items:center;flex:none;width:34px;height:34px;border-radius:var(--r-sm);background:var(--tint);color:var(--brand-ink)}
+.row__icon--quiet{background:var(--soft);color:var(--muted)}
+.row__icon svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.row__copy{flex:1;min-width:0}
+.row__copy strong{display:block;font:700 14.5px/1.4 var(--ui);color:var(--ink)}
+.row__copy span{display:block;font:500 12.5px/1.45 var(--ui);color:var(--muted)}
+.card__pad{display:grid;gap:12px;padding:14px}
+.admin-steps{font-size:13.5px;color:var(--text)}
+
+/* ---------- sign-in ---------- */
+.screen--login .body{justify-content:center}
+.login__box{width:min(400px,100%);display:grid;gap:16px;margin:0 auto}
+.login__head{display:grid;justify-items:center;gap:6px;text-align:center}
+.login__head .empty__icon{margin-bottom:6px}
+.login__head h1{margin:0;font:800 21px/1.3 var(--ui);color:var(--ink)}
+.login__head p{max-width:30ch;margin:0;font:500 14px/1.5 var(--ui);color:var(--muted)}
+.login__card{display:grid;gap:14px;padding:16px}
+
+/* review before sending */
+.review-list{display:grid;margin:0}
+.review-list div{display:grid;grid-template-columns:64px minmax(0,1fr);gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}
+.review-list div:last-child{border-bottom:0}
+.review-list dt{font:500 13px/1.5 var(--ui);color:var(--muted)}
+.review-list dd{margin:0;font:700 14px/1.5 var(--ui);color:var(--ink);overflow-wrap:anywhere}
+
+@media(min-width:700px){
+  .compose .tiles>*{flex-basis:calc((100% - 16px) / 3)}
+  .options--hours{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+/* wide screens: tabs become the side rail (app.css); the action bar keeps its place under the form */
+@media(min-width:1024px){
+  .screen--compose{grid-template-rows:auto minmax(0,1fr) auto;grid-template-areas:"nav bar" "nav body" "nav foot"}
+  .screen--compose > .bar{grid-area:foot}
+}

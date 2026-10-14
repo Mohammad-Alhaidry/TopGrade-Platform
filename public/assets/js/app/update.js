@@ -25,17 +25,8 @@ function track(worker) {
 
 export function registerServiceWorker() {
   // Service workers need HTTPS (or localhost). Scope = the app's base path, so /preview/ stays separate.
+  // (A preview's worker caches nothing, so a reviewer always sees the latest build; it carries notifications.)
   if (!('serviceWorker' in navigator) || !(location.protocol === 'https:' || location.hostname === 'localhost')) return;
-  // The preview (a build waiting for approval) always loads straight from the server: a cached copy would show the
-  // reviewer the previous build until a second visit. A worker left from earlier previews is removed once.
-  const base = new URL('.', document.baseURI).href;
-  if (new URL(base).pathname.startsWith('/preview/')) {
-    navigator.serviceWorker.getRegistration(base).then((reg) => {
-      if (reg?.scope !== base) return;
-      reg.unregister().then(() => { if (navigator.serviceWorker.controller) location.reload(); });
-    }).catch(() => {});
-    return;
-  }
   navigator.serviceWorker.register(new URL('sw.js', document.baseURI).href).then((reg) => {
     track(reg.waiting);
     track(reg.installing);

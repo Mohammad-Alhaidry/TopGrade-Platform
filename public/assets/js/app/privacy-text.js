@@ -1,33 +1,46 @@
-// Privacy policy text in both languages. Pure data: shown by the app (views/pages.js) and written into the
+// Privacy policy text in both languages, laid out like the big apps' policies (intro, then the standard sections;
+// a section is a paragraph or a list of [label, text] items). Pure data: shown by the app (views/pages.js) and written into the
 // search-engine copy of /privacy by tools/build-pages.mjs.
 
 export const PRIVACY = {
   en: {
     title: 'Privacy policy',
-    updated: 'Last updated 8 October 2026',
+    updated: 'Last updated 11 October 2026',
+    intro: 'This policy explains what information Smart Pro uses, why it uses it, and the choices you have.',
     sections: [
-      ['Summary', 'Smart Pro does not ask you to create an account and does not collect your name, email address or phone number. We keep anonymous usage statistics to improve the courses (see below).'],
-      ['What stays on your device', 'Your quiz answers, scores, mistakes list, study streak, settings and any unfinished quiz are saved in your browser’s local storage on your own device. They are not sent to us. You can remove them at any time by clearing this site’s data in your browser or uninstalling the app.'],
-      ['What our server sees', 'Like any website, our server receives standard technical information when you load a page, such as your IP address, browser type and the page requested. We use it only to keep the service running and secure, and we do not sell or share it.'],
-      ['Anonymous usage statistics', 'To improve the courses, the app counts how it is used: pages opened, quizzes started and finished, scores, and which questions were answered right or wrong, plus your device type, country, interface language and theme. This runs on our own statistics server (Umami). It uses no cookies, does not record your name or contact details, does not store your IP address, and is never shared or sold.'],
-      ['WhatsApp', 'If you contact us through WhatsApp, that conversation is handled by WhatsApp under its own privacy policy, and we see the details you choose to send us.'],
-      ['Children', 'Smart Pro is intended for university students and is not directed at children under 13.'],
-      ['Changes', 'If this policy changes, the updated version will be posted on this page with a new date.'],
+      ['Information we collect', [
+        ['Learning data', 'your answers, scores and settings, saved on your device.'],
+        ['Usage data', 'anonymous statistics on how the app is used, with device type and country.'],
+        ['Notification data', 'your device’s notification code and the courses you follow, when you turn on notifications.'],
+        ['Technical data', 'the standard details a browser sends to any website, such as browser type and IP address.'],
+      ]],
+      ['How we use information', 'To run the app and save your progress, improve the courses and questions, send notifications for the courses you follow, and keep the service secure.'],
+      ['Sharing information', 'Your information is used within Smart Pro only, and notifications reach your device through its own notification service. Conversations with us on WhatsApp are covered by WhatsApp’s privacy policy.'],
+      ['Keeping and deleting information', 'Learning data stays on your device until you clear the site’s data or remove the app. The notification code is deleted when you turn notifications off.'],
+      ['Information security', 'All Smart Pro pages and services run over an encrypted connection.'],
+      ['Audience', 'Smart Pro is made for university students.'],
+      ['Changes to this policy', 'We may update this policy from time to time and will post the new version on this page with its date.'],
     ],
-    contact: ['Contact', 'Questions about this policy: use the Message us button on the ', 'home page', '.'],
+    contact: ['Contact us', 'For any question about this policy, use the Message us button on the ', 'home page', '.'],
   },
   ar: {
     title: 'سياسة الخصوصية',
-    updated: 'آخر تحديث: 8 أكتوبر 2026',
+    updated: 'آخر تحديث: 11 أكتوبر 2026',
+    intro: 'توضح هذه السياسة المعلومات التي يستخدمها سمارت برو، وأسباب استخدامها، والخيارات المتاحة لك.',
     sections: [
-      ['باختصار', 'لا يطلب منك سمارت برو إنشاء حساب، ولا يجمع اسمك أو بريدك الإلكتروني أو رقم جوالك. نحتفظ بإحصائيات استخدام مجهولة الهوية لتحسين المقررات (التفاصيل أدناه).'],
-      ['ما يبقى على جهازك', 'إجاباتك ودرجاتك وقائمة أخطائك وأيام مذاكرتك المتتالية وإعداداتك وأي اختبار لم تكمله، كلها تُحفظ في التخزين المحلي للمتصفح على جهازك أنت، ولا تُرسل إلينا. يمكنك حذفها في أي وقت بمسح بيانات هذا الموقع من المتصفح أو بحذف التطبيق.'],
-      ['ما يصل إلى خادمنا', 'مثل أي موقع، يستقبل خادمنا معلومات تقنية عادية عند فتح أي صفحة، مثل عنوان IP ونوع المتصفح والصفحة المطلوبة. نستخدمها فقط لتشغيل الخدمة وحمايتها، ولا نبيعها ولا نشاركها.'],
-      ['إحصائيات استخدام مجهولة الهوية', 'لتحسين المقررات، يحسب التطبيق طريقة استخدامه: الصفحات التي تُفتح، والاختبارات التي تبدأ وتنتهي، والدرجات، والأسئلة التي أُجيب عنها إجابة صحيحة أو خاطئة، إضافة إلى نوع الجهاز والدولة ولغة الواجهة والوضع. يعمل ذلك على خادم إحصائيات خاص بنا (Umami)، ولا يستخدم ملفات تعريف الارتباط، ولا يسجّل اسمك أو بيانات تواصلك، ولا يحفظ عنوان IP، ولا نشاركه أو نبيعه أبدًا.'],
-      ['واتساب', 'إذا تواصلت معنا عبر واتساب، فالمحادثة تخضع لسياسة الخصوصية الخاصة بواتساب، ونطّلع فقط على ما تختار إرساله لنا.'],
-      ['الأطفال', 'سمارت برو موجّه لطلاب الجامعات، وليس موجّهًا للأطفال دون 13 سنة.'],
-      ['التغييرات', 'إذا تغيّرت هذه السياسة، ننشر النسخة المحدّثة في هذه الصفحة مع تاريخ جديد.'],
+      ['المعلومات التي نجمعها', [
+        ['بيانات التعلّم', 'إجاباتك ودرجاتك وإعداداتك، وتُحفظ على جهازك.'],
+        ['بيانات الاستخدام', 'إحصائيات مجهولة الهوية عن استخدام التطبيق، مع نوع الجهاز والدولة.'],
+        ['بيانات الإشعارات', 'رمز الإشعارات لجهازك والمقررات التي تتابعها، عند تشغيل الإشعارات.'],
+        ['البيانات التقنية', 'المعلومات المعتادة التي يرسلها المتصفح لأي موقع، مثل نوع المتصفح وعنوان IP.'],
+      ]],
+      ['كيف نستخدم المعلومات', 'لتشغيل التطبيق وحفظ تقدّمك، وتحسين المقررات والأسئلة، وإرسال إشعارات المقررات التي تتابعها، والحفاظ على أمان الخدمة.'],
+      ['مشاركة المعلومات', 'تُستخدم معلوماتك داخل سمارت برو فقط، وتصل الإشعارات إلى جهازك عبر خدمة الإشعارات الخاصة به. وتخضع محادثاتك معنا عبر واتساب لسياسة خصوصية واتساب.'],
+      ['الاحتفاظ بالمعلومات وحذفها', 'تبقى بيانات التعلّم على جهازك حتى تمسح بيانات الموقع أو تحذف التطبيق، ويُحذف رمز الإشعارات عند إيقافها.'],
+      ['أمن المعلومات', 'تعمل جميع صفحات سمارت برو وخدماته عبر اتصال مشفّر.'],
+      ['الفئة المستهدفة', 'سمارت برو مخصص لطلاب الجامعات.'],
+      ['التعديلات على هذه السياسة', 'قد نحدّث هذه السياسة من وقت لآخر، وننشر النسخة المحدّثة في هذه الصفحة مع تاريخها.'],
     ],
-    contact: ['التواصل', 'لأي سؤال عن هذه السياسة: استخدم زر «راسلنا» في ', 'الصفحة الرئيسية', '.'],
+    contact: ['اتصل بنا', 'لأي استفسار عن هذه السياسة، تواصل معنا عبر زر «راسلنا» في ', 'الصفحة الرئيسية', '.'],
   },
 };

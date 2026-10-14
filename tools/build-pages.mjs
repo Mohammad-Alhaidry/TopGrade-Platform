@@ -25,7 +25,10 @@ const TYPES = ['mcq', 'tf', 'fib', 'matching'];
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const ar = (key, vars) => t(key, vars, LANG);
 const url = (path) => `${SITE}/${path}`;
-const brand = { '@type': 'EducationalOrganization', name: 'Smart Pro', alternateName: 'سمارت برو', url: url('') };
+// The site name as Google shows it: the Arabic name students know (it matches the titles and the h1), with the
+// Latin spellings as alternates so searches for «smartpro» / «smart pro» match the brand too.
+const NAMES = { name: 'سمارت برو', alternateName: ['Smart Pro', 'SmartPro'] };
+const brand = { '@type': 'EducationalOrganization', ...NAMES, url: url('') };
 
 function load() {
   const catalog = JSON.parse(readFileSync(join(PUBLIC, 'data/catalog.json'), 'utf8'));
@@ -66,7 +69,7 @@ function pages({ catalog, banks }) {
     body: [h('h1', {}, 'سمارت برو'), h('p', {}, esc(ar('meta.homeDesc'))),
       h('h2', {}, esc(ar('tab.courses'))), h('ul', {}, catalog.courses.map(courseLine)),
       h('p', {}, `<a href="privacy">${esc(PRIVACY.ar.title)}</a>`)],
-    data: [{ '@type': 'WebSite', name: 'Smart Pro', alternateName: 'سمارت برو', url: url(''), inLanguage: ['ar', 'en'] },
+    data: [{ '@type': 'WebSite', ...NAMES, url: url(''), inLanguage: ['ar', 'en'] },
       { ...brand, logo: url('assets/icons/icon-512.png') }],
   });
 
@@ -114,8 +117,10 @@ function pages({ catalog, banks }) {
   const p = PRIVACY.ar;
   out.push({
     path: 'privacy', route: { name: 'privacy', params: {} },
-    body: [crumbs([home, [p.title, 'privacy']]), h('h1', {}, esc(p.title)), h('p', {}, esc(p.updated)),
-      p.sections.map(([title, text]) => h('h2', {}, esc(title)) + h('p', {}, esc(text))),
+    body: [crumbs([home, [p.title, 'privacy']]), h('h1', {}, esc(p.title)), h('p', {}, esc(p.updated)), h('p', {}, esc(p.intro)),
+      p.sections.map(([title, text]) => h('h2', {}, esc(title)) + (Array.isArray(text)
+        ? h('ul', {}, text.map(([label, item]) => h('li', {}, `<strong>${esc(label)}</strong>: ${esc(item)}`)).join(''))
+        : h('p', {}, esc(text)))),
       h('h2', {}, esc(p.contact[0])), h('p', {}, esc(p.contact[1]), `<a href="./">${esc(p.contact[2])}</a>`, esc(p.contact[3]))],
     data: [breadcrumb([home, [p.title, 'privacy']])],
   });

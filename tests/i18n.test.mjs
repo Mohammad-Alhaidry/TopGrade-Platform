@@ -25,8 +25,8 @@ test('Arabic plurals follow Arabic number grammar', () => {
   assert.equal(t('n.questions', { n: 1 }, 'ar'), 'سؤال واحد');
   assert.equal(t('n.questions', { n: 2 }, 'ar'), 'سؤالان');
   assert.equal(t('n.questions', { n: 5 }, 'ar'), '5 أسئلة');
-  assert.equal(t('n.questions', { n: 20 }, 'ar'), '20 سؤالًا');
-  assert.equal(t('n.questions', { n: 118 }, 'ar'), '118 سؤالًا');
+  assert.equal(t('n.questions', { n: 20 }, 'ar'), '20 سؤالاً');
+  assert.equal(t('n.questions', { n: 118 }, 'ar'), '118 سؤالاً');
   assert.equal(t('n.questions', { n: 100 }, 'ar'), '100 سؤال');
   assert.equal(t('n.questions', { n: 1 }, 'en'), '1 question');
   assert.equal(t('n.questions', { n: 3 }, 'en'), '3 questions');
@@ -45,4 +45,14 @@ test('first visit opens in Arabic, and the page head agrees before the app loads
   const boot = readFileSync(new URL('../public/assets/js/boot.js', import.meta.url), 'utf8');
   assert.match(html, /<script src="assets\/js\/boot\.js"><\/script>/);
   assert.match(boot, /getItem\('topgrade\.lang'\) === 'en'\) \{ d\.lang = 'en'; d\.dir = 'ltr'; \}/);
+});
+
+test('no tanween between lam and alef (Cairo on iPhone draws it inside the لا ligature: write لاً, not لًا)', async () => {
+  const { readFileSync, readdirSync, statSync } = await import('node:fs');
+  const { join } = await import('node:path');
+  const files = [];
+  const walk = (dir) => readdirSync(dir).forEach((f) => { const p = join(dir, f); statSync(p).isDirectory() ? walk(p) : /\.(json|js|html)$/.test(p) && files.push(p); });
+  ['public/data', 'public/assets/js', 'public/pages', 'server/push/admin'].forEach(walk);
+  const bad = files.filter((f) => readFileSync(f, 'utf8').includes('لًا'));
+  assert.deepEqual(bad, []);
 });

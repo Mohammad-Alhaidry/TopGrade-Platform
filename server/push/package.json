@@ -1,0 +1,8 @@
+{
+  "name": "smartpro-push",
+  "private": true,
+  "type": "module",
+  "description": "Smart Pro push notifications: subscriptions and sending (behind nginx at /api/push/ and /admin/).",
+  "scripts": { "start": "node --no-warnings server.mjs" },
+  "dependencies": { "web-push": "3.6.7" }
+}

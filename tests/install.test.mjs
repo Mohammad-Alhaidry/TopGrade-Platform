@@ -24,3 +24,15 @@ test('running from the home screen counts as installed', () => {
   assert.equal(detectPlatform({ userAgent: ANDROID, displayStandalone: true }).installed, true);
   assert.equal(detectPlatform({ userAgent: IPHONE }).installed, false);
 });
+
+test('the Add to Home Screen steps follow the iPhone browser', async () => {
+  const { iosBrowser } = await import('../public/assets/js/app/install.js');
+  const SAFARI_26 = 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Mobile/15E148 Safari/604.1';
+  const CHROME_IOS = 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/129.0.6668.69 Mobile/15E148 Safari/604.1';
+  const INSTAGRAM = 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Instagram 350.0.0';
+  assert.equal(iosBrowser(SAFARI_26), 'safari26');
+  assert.equal(iosBrowser(IPHONE), 'safari');
+  assert.equal(iosBrowser(CHROME_IOS), 'chrome');
+  assert.equal(iosBrowser(INSTAGRAM), 'other');
+  assert.equal(iosBrowser(IPAD_DESKTOP, { ipad: true }), 'ipad');
+});
