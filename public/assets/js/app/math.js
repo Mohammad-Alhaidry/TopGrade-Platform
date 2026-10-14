@@ -33,9 +33,10 @@ const WRAP_FROM = 24;
 
 export function texPieces(tex) {
   if (tex.replace(/\s/g, '').length < WRAP_FROM) return [tex];
-  // A formula wrapped whole in brackets, "(a=1, b=2, c=3)", may break inside them.
+  // A formula wrapped whole in brackets, "(a=1, b=2, c=3)", may break inside them. Only when the first bracket
+  // really closes at the end: in "\left(-\infty, 1\right] \cup \left[2, \infty\right)" it closes at the "]".
   const wrapped = /^\s*(\\left\s*)?\(([\s\S]*?)(\\right\s*)?\)\s*$/.exec(tex);
-  if (wrapped && balancedParens(wrapped[2])) {
+  if (wrapped && balancedBrackets(wrapped[2])) {
     const inner = texPieces(wrapped[2]);
     if (inner.length > 1) return inner.map((x, i) => `${i ? '' : '('}${x}${i === inner.length - 1 ? ')' : ''}`);
   }
@@ -63,11 +64,12 @@ export function texPieces(tex) {
   return pieces.map((x) => x.trim()).filter(Boolean);
 }
 
-function balancedParens(tex) {
+// Parentheses and \left..\right pairs (whatever their bracket) open and close within the text.
+function balancedBrackets(tex) {
   let depth = 0;
-  for (const c of tex) {
-    if (c === '(') depth++;
-    else if (c === ')' && --depth < 0) return false;
+  for (const [token] of tex.matchAll(/\\left\s*\S|\\right\s*\S|[()]/g)) {
+    depth += token === ')' || token.startsWith('\\right') ? -1 : 1;
+    if (depth < 0) return false;
   }
   return depth === 0;
 }
