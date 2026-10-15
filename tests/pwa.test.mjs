@@ -69,21 +69,15 @@ test('the live worker answers app addresses itself but leaves /preview/ to the s
   assert.equal(answered('https://app.example/preview/courses'), false);
 });
 
-test('the WhatsApp number is in no published file; «راسلنا» goes through the server', async () => {
+test('no phone number in any published file; contact is the WhatsApp channel link', async () => {
   const { readdirSync, statSync } = await import('node:fs');
   const walk = (d) => readdirSync(d).flatMap((n) => (statSync(new URL(n, d)).isDirectory() ? walk(new URL(`${n}/`, d)) : [new URL(n, d)]));
   for (const f of walk(pub)) {
     if (/\.(png|ico|woff2)$/.test(f.pathname)) continue;
     // Any Saudi (966…) or Yemeni (967…) number written out, or a direct wa.me link with digits.
-    assert.doesNotMatch(readFileSync(f, 'utf8'), /96[67]\d{9}|wa\.me\/\d/, `${f.pathname} contains the WhatsApp number`);
+    assert.doesNotMatch(readFileSync(f, 'utf8'), /96[67]\d{9}|wa\.me\/\d/, `${f.pathname} contains a phone number`);
   }
-  const { runInNewContext } = await import('node:vm');
-  const listeners = {};
-  const self = { registration: { scope: 'https://app.example/' }, addEventListener: (type, fn) => { listeners[type] = fn; } };
-  runInNewContext(sw, { self, caches: { open: async () => ({ match: async () => 'cached' }) }, fetch: async () => 'network', URL, Set, Promise });
-  let used = false;
-  listeners.fetch({ request: { method: 'GET', mode: 'navigate', url: 'https://app.example/whatsapp' }, respondWith: () => { used = true; } });
-  assert.equal(used, false, 'the installed app must let /whatsapp reach the server');
+  assert.match(readFileSync(new URL('assets/js/app/views/home.js', pub), 'utf8'), /https:\/\/whatsapp\.com\/channel\//);
 });
 
 test('the worker lets ?fresh requests reach the server (a link to a newly added course)', async () => {

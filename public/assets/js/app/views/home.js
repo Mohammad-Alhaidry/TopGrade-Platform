@@ -17,14 +17,8 @@ import { t, lang, localName } from '../i18n.js';
 import { courseSummaries, courseCard } from './courses.js';
 
 const QUICK_COUNT = 10;
-// «راسلنا»: the number appears nowhere in plain form (owner's requirement: no scanner may read it). The link
-// points to the server route /whatsapp (nginx keeps the number there; it also serves people without JavaScript).
-// The moment a person touches the button, the real wa.me link is put on it, so the phone opens the WhatsApp app
-// directly: iPhone and Android only do that for a link to wa.me itself, not after a redirect from our server.
-const WHATSAPP_URL = 'whatsapp';
-const WHATSAPP_CODE = 'ODAwNDEyNjc3NzY5'; // the number, reversed, base64
-const whatsappLink = () => `https://wa.me/${[...atob(WHATSAPP_CODE)].reverse().join('')}`;
-const armWhatsapp = (e) => { e.currentTarget.href = whatsappLink(); };
+// Smart Pro's WhatsApp channel (a channel link opens the WhatsApp app directly on phones).
+const CHANNEL_URL = 'https://whatsapp.com/channel/0029VbEMifW9Gv7LX8iBAJ1A';
 
 const today = () => new Intl.DateTimeFormat(lang() === 'ar' ? 'ar-SA-u-ca-gregory-nu-latn' : 'en-GB', { weekday: 'long', day: 'numeric', month: 'long' }).format(new Date());
 
@@ -145,14 +139,13 @@ function continueCard(summaries) {
 
 let stopInstallUpdates = () => {};
 
-function helpCard() {
+function channelCard() {
   // Filled WhatsApp green so it is the first thing a student notices under the welcome card.
-  return h('a', { class: 'help', href: WHATSAPP_URL, target: '_blank', rel: 'nofollow noopener noreferrer', onpointerdown: armWhatsapp, onfocus: armWhatsapp },
+  return h('a', { class: 'help', href: CHANNEL_URL, target: '_blank', rel: 'noopener noreferrer' },
     h('span', { class: 'help__icon' }, staticSvg(WHATSAPP_SVG)),
     h('span', { class: 'help__copy' },
-      h('span', { class: 'help__title' }, t('home.help')),
-      h('span', { class: 'help__sub' }, t('home.helpSub'))),
-    h('span', { class: 'help__btn' }, h('span', {}, t('home.helpBtn')), forwardIcon()),
+      h('span', { class: 'help__title' }, t('home.channel'))),
+    h('span', { class: 'help__btn' }, h('span', {}, t('home.channelBtn')), forwardIcon()),
     h('span', { class: 'help__mark' }, staticSvg(WHATSAPP_SVG)));
 }
 
@@ -178,7 +171,7 @@ export async function showHome(ctx) {
     body: [
       h('div', { class: 'col col--main' },
         hero(progress, totals, summaries),
-        helpCard(),
+        channelCard(),
         continueCard(summaries),
         installSlot,
         h('h2', { class: 'section-label' }, t('home.progress')),
