@@ -144,7 +144,8 @@ function channelCard() {
   return h('a', { class: 'help', href: CHANNEL_URL, target: '_blank', rel: 'noopener noreferrer' },
     h('span', { class: 'help__icon' }, staticSvg(WHATSAPP_SVG)),
     h('span', { class: 'help__copy' },
-      h('span', { class: 'help__title' }, t('home.channel'))),
+      h('span', { class: 'help__title' }, t('home.channel')),
+      h('span', { class: 'help__sub' }, t('home.channelSub'))),
     h('span', { class: 'help__btn' }, h('span', {}, t('home.channelBtn')), forwardIcon()),
     h('span', { class: 'help__mark' }, staticSvg(WHATSAPP_SVG)));
 }
