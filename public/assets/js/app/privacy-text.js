@@ -21,7 +21,7 @@ export const PRIVACY = {
       ['Audience', 'Smart Pro is made for university students.'],
       ['Changes to this policy', 'We may update this policy from time to time and will post the new version on this page with its date.'],
     ],
-    contact: ['Contact us', 'For any question about this policy, use the Message us button on the ', 'home page', '.'],
+    contact: ['Contact us', 'For any question about this policy, reach us through the Smart Pro WhatsApp channel linked on the ', 'home page', '.'],
   },
   ar: {
     title: 'سياسة الخصوصية',
@@ -41,6 +41,6 @@ export const PRIVACY = {
       ['الفئة المستهدفة', 'سمارت برو مخصص لطلاب الجامعات.'],
       ['التعديلات على هذه السياسة', 'قد نحدّث هذه السياسة من وقت لآخر، وننشر النسخة المحدّثة في هذه الصفحة مع تاريخها.'],
     ],
-    contact: ['اتصل بنا', 'لأي استفسار عن هذه السياسة، تواصل معنا عبر زر «راسلنا» في ', 'الصفحة الرئيسية', '.'],
+    contact: ['اتصل بنا', 'لأي استفسار عن هذه السياسة، تواصل معنا عبر قناة سمارت برو على واتساب، ورابطها في ', 'الصفحة الرئيسية', '.'],
   },
 };

@@ -86,9 +86,10 @@ const S = {
   'practise': { en: 'Practise', ar: 'تدرّب' },
   'home.yourCourses': { en: 'Your courses', ar: 'مقرراتك' },
   'home.seeAll': { en: 'See all', ar: 'عرض الكل' },
-  'home.help': { en: 'Want questions for your course?', ar: 'تبي أسئلة لمقررك؟' },
-  'home.helpSub': { en: 'Send us the course name', ar: 'أرسل لنا اسم المقرر وبنسويها لك' },
-  'home.helpBtn': { en: 'Message us', ar: 'راسلنا' },
+  // The brand name never breaks across lines (no-break space inside «سمارت برو» / "Smart Pro").
+  'home.channel': { en: 'Follow the Smart Pro channel on WhatsApp', ar: 'تابع قناة سمارت برو على واتساب' },
+  'home.channelSub': { en: 'and get every update', ar: 'ليصلك كل جديد' },
+  'home.channelBtn': { en: 'Follow', ar: 'متابعة' },
   'home.privacy': { en: 'Privacy policy', ar: 'سياسة الخصوصية' },
   'home.saved': { en: 'Progress is saved on this device', ar: 'تقدّمك محفوظ على هذا الجهاز' },
   'cont.exam': { en: 'Resume your exam', ar: 'أكمل اختبارك' },

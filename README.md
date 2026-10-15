@@ -1,6 +1,6 @@
 # TopGrade Platform
 
-Student practice app served at **https://app.topgradeedu.com**. No account needed. It is a Progressive
+Student practice app served at **https://smartpro-edu.com**. No account needed. It is a Progressive
 Web App: installable, works offline, and ready to be wrapped for Google Play as a Trusted Web Activity.
 
 ## Screens and URLs
@@ -126,15 +126,15 @@ npm test           # unit tests
 Preview locally with any static server that falls back to `index.html` for unknown paths (like the nginx config).
 
 On the server:
-- `tg-app-deploy --preview` publishes the working tree to `https://app.topgradeedu.com/preview/`.
+- `tg-app-deploy --preview` publishes the working tree to `https://smartpro-edu.com/preview/`.
 - `tg-app-deploy` pulls `main`, tests, and publishes to the live site (and removes the preview).
 - `tg-app-deploy --no-pull` publishes the local working tree to the live site.
 
-nginx (`/etc/nginx/sites-available/app.topgradeedu.com`) serves `index.html` for app URLs, real files under
+nginx (`/etc/nginx/sites-available/smartpro-edu.com`) serves `index.html` for app URLs, real files under
 `/assets` and `/data` (404 if missing), and keeps `/.well-known/` open for Android's `assetlinks.json`.
 
 ## Google Play (later)
 
 The Play Store app will be a Trusted Web Activity of this site (e.g. built with Bubblewrap or PWABuilder).
-Needed then: a Play developer account, a fixed package name (e.g. `com.topgradeedu.app`), Play App Signing,
+Needed then: a Play developer account, a fixed package name (e.g. `com.smartproedu.app`), Play App Signing,
 and `public/.well-known/assetlinks.json` with the app's signing certificate fingerprint.
