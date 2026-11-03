@@ -61,3 +61,19 @@ test('the page title names the channel in both languages', async () => {
   assert.match(pageTitle(route, catalog, 'en'), /^KKU leaks and collections \| Smart Pro$/);
   assert.match(pageDescription(route, catalog, 'ar'), /تسريبات وتجميعات جامعة الملك خالد/);
 });
+
+test('search engines read a /kku page with every course as a link to its post, and the sitemap lists it', async () => {
+  const { generated } = await import('../tools/build-pages.mjs');
+  const files = generated();
+  const page = files['pages/kku.html'];
+  assert.ok(page, 'pages/kku.html');
+  assert.match(page, /<title>تسريبات وتجميعات جامعة الملك خالد \| سمارت برو<\/title>/);
+  assert.match(page, /<link rel="canonical" href="https:\/\/smartpro-edu\.com\/kku">/);
+  assert.match(page, /<h1>تسريبات وتجميعات جامعة الملك خالد<\/h1>/);
+  assert.ok(page.includes('href="https://t.me/ExamLeaks_KKU"') && page.includes('href="https://t.me/KingKhalidLeaks_bot"'));
+  for (const col of data.colleges) {
+    assert.ok(page.includes(`<h2>${col.name}</h2>`), col.name);
+    for (const c of col.courses) assert.ok(page.includes(`href="https://t.me/ExamLeaks_KKU/${c.post}"`), c.title);
+  }
+  assert.match(files['sitemap.xml'], /<loc>https:\/\/smartpro-edu\.com\/kku<\/loc>/);
+});
