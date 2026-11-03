@@ -32,11 +32,12 @@ const brand = { '@type': 'EducationalOrganization', ...NAMES, url: url('') };
 
 function load() {
   const catalog = JSON.parse(readFileSync(join(PUBLIC, 'data/catalog.json'), 'utf8'));
+  const kku = JSON.parse(readFileSync(join(PUBLIC, 'data/kku.json'), 'utf8'));
   const banks = new Map();
   for (const course of catalog.courses) {
     for (const topic of course.topics) banks.set(topic.bank, JSON.parse(readFileSync(join(PUBLIC, 'data', topic.bank), 'utf8')));
   }
-  return { catalog, banks };
+  return { catalog, banks, kku };
 }
 
 const breadcrumb = (items) => ({
@@ -53,7 +54,7 @@ function h(tag, attrs, ...children) {
 }
 
 /** Every indexable address with its content and structured data. */
-function pages({ catalog, banks }) {
+function pages({ catalog, banks, kku }) {
   const home = ['سمارت برو', ''];
   const coursesCrumb = [ar('tab.courses'), 'courses'];
   const count = (topic) => banks.get(topic.bank).questions.length;
@@ -113,6 +114,19 @@ function pages({ catalog, banks }) {
       });
     }
   }
+
+  // The KKU leaks list: every course of the Telegram channel, by college, each a link to its post there.
+  const kkuCrumb = [ar('kku.title'), 'kku'];
+  const tme = (path) => `https://t.me/${path}`;
+  out.push({
+    path: 'kku', route: { name: 'kku', params: {} },
+    body: [crumbs([home, kkuCrumb]), h('h1', {}, esc(ar('kku.title'))), h('p', {}, esc(ar('meta.kkuDesc'))),
+      h('ul', {}, h('li', {}, `<a href="${tme(kku.channel)}">${esc(ar('kku.channel'))}</a>`), h('li', {}, `<a href="${tme(kku.bot)}">${esc(ar('kku.bot'))}</a>: ${esc(ar('kku.botSub'))}`)),
+      kku.colleges.map((col) => h('h2', {}, esc(col.name)) + h('ul', {}, col.courses.map((c) =>
+        h('li', {}, `<a href="${tme(`${kku.channel}/${c.post}`)}">${esc(c.title)}</a>${c.en ? ` (<span lang="en" dir="ltr">${esc(c.en)}</span>)` : ''}: ${esc(ar('n.files', { n: c.files }))}`))))],
+    data: [breadcrumb([home, kkuCrumb]),
+      { '@type': 'CollectionPage', name: ar('kku.title'), description: ar('meta.kkuDesc'), url: url('kku'), inLanguage: 'ar', isPartOf: { '@type': 'WebSite', ...NAMES, url: url('') } }],
+  });
 
   const p = PRIVACY.ar;
   out.push({
