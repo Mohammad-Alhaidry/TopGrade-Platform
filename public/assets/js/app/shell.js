@@ -116,6 +116,7 @@ const TABS = [
   { id: 'home', key: 'tab.home', path: paths.home(), icon: ICONS.home },
   { id: 'courses', key: 'tab.courses', path: paths.courses(), icon: ICONS.book },
   { id: 'review', key: 'tab.review', path: paths.review(), icon: ICONS.retry },
+  { id: 'kku', key: 'tab.kku', path: paths.kku(), icon: ICONS.files },
 ];
 
 /** Bottom navigation like a native app. badge: number shown on the Review tab. */

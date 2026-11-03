@@ -19,6 +19,7 @@ export function pageTitle(route, catalog, language) {
   if (name === 'courses') return withBrand(language, t('tab.courses', {}, language));
   if (name === 'review') return withBrand(language, t('tab.review', {}, language));
   if (name === 'privacy') return withBrand(language, PRIVACY[language].title);
+  if (name === 'kku') return withBrand(language, t('kku.title', {}, language));
   if (name === 'course') {
     const course = catalog && findCourse(catalog, params.course);
     if (course) return withBrand(language, language === 'ar' && course.titleAr ? `${course.titleAr} (${course.titleEn})` : course.titleEn);
@@ -39,6 +40,7 @@ export function pageDescription(route, catalog, language, banks = new Map()) {
   const count = (topic) => banks.get(topic.bank)?.questions.length ?? 0;
   if (name === 'courses') return t('meta.coursesDesc', {}, language);
   if (name === 'privacy') return t('meta.privacyDesc', {}, language);
+  if (name === 'kku') return t('meta.kkuDesc', {}, language);
   if (name === 'course') {
     const course = findCourse(catalog, params.course);
     if (course) {

@@ -18,6 +18,7 @@ const S = {
   'tab.home': { en: 'Home', ar: 'الرئيسية' },
   'tab.courses': { en: 'Courses', ar: 'المقررات' },
   'tab.review': { en: 'Review', ar: 'المراجعة' },
+  'tab.kku': { en: 'Leaks', ar: 'التسريبات' },
   'tab.badge': { en: '{n} to review', ar: '{n} للمراجعة' },
   'back': { en: 'Back', ar: 'رجوع' },
 
@@ -34,10 +35,25 @@ const S = {
     ar: 'أسئلة تدريبية لمقرر {course}: {questions} في {topics}، مع تصحيح فوري ووضع اختبار.',
   },
   'meta.topicDesc': { en: 'Practise {topic} from {course}: {questions} ({types}).', ar: 'تدرّب على {topic} من مقرر {course}: {questions} ({types}).' },
+  'meta.kkuDesc': {
+    en: 'The King Khalid University courses of the Telegram channel «KKU leaks and collections», by college: each course opens its post in the channel, with links to its files (finals, midterms, quizzes, summaries and question banks).',
+    ar: 'مقررات جامعة الملك خالد في قناة تسريبات وتجميعات جامعة الملك خالد على تيليجرام، مرتبة حسب الكلية: كل مقرر يفتح منشوره في القناة، وفيه روابط ملفاته من اختبارات نهائية وميد وكويزات وملخصات وبنوك أسئلة.',
+  },
   'meta.privacyDesc': {
     en: 'How Smart Pro handles your data: your progress is saved on your device and usage statistics are anonymous.',
     ar: 'كيف يتعامل سمارت برو مع بياناتك: تقدّمك محفوظ على جهازك، وإحصائيات الاستخدام مجهولة الهوية.',
   },
+
+  // KKU leaks list (/kku)
+  'kku.title': { en: 'KKU leaks and collections', ar: 'تسريبات وتجميعات جامعة الملك خالد' },
+  'kku.sub': { en: 'Tap a course to open its post in the channel', ar: 'اضغط المقرر يفتح منشوره في القناة' },
+  'kku.channel': { en: 'The channel on Telegram', ar: 'القناة على تيليجرام' },
+  'kku.bot': { en: 'The bot on Telegram', ar: 'البوت على تيليجرام' },
+  'kku.botSub': { en: 'Choose your college, major and level', ar: 'اختر كليتك وتخصصك ومستواك' },
+  'kku.search': { en: 'Type a course name', ar: 'اكتب اسم المقرر' },
+  'kku.searchLabel': { en: 'Search for a course', ar: 'ابحث عن مقرر' },
+  'kku.none': { en: 'No course by that name.', ar: 'لا يوجد مقرر بهذا الاسم.' },
+  'kku.fromCourse': { en: 'This course’s files in the channel', ar: 'ملفات المقرر في القناة' },
 
   // Counts
   'n.questions': {
@@ -51,6 +67,10 @@ const S = {
   'n.courses': {
     en: { one: '{n} course', other: '{n} courses' },
     ar: { zero: 'لا مقررات', one: 'مقرر واحد', two: 'مقرران', few: '{n} مقررات', many: '{n} مقررًا', other: '{n} مقرر' },
+  },
+  'n.files': {
+    en: { one: '{n} file', other: '{n} files' },
+    ar: { zero: 'لا ملفات', one: 'ملف واحد', two: 'ملفان', few: '{n} ملفات', many: '{n} ملفًا', other: '{n} ملف' },
   },
   'n.days': {
     en: { one: '{n} day', other: '{n} days' },

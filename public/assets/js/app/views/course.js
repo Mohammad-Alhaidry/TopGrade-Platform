@@ -8,6 +8,10 @@ import { paths } from '../routes.js';
 import { t, lang, localName } from '../i18n.js';
 import { courseSummaries } from './courses.js';
 import { courseBell } from '../push-ui.js';
+import { ICONS } from '../../quiz/dom.js';
+import { track } from '../analytics.js';
+import { loadKku, postUrl } from '../kku.js';
+import { telegramCard } from './kku.js';
 
 function topicCard(course, { topic, stats }) {
   return h('a', { class: 'card topic-card', href: href(paths.topic(course.id, topic.id)) },
@@ -25,9 +29,11 @@ function topicCard(course, { topic, stats }) {
 
 export async function showCourse(ctx, courseId) {
   const token = ctx.token;
-  const summaries = await courseSummaries(ctx);
+  // The KKU leaks list is extra: offline or failing, the course page shows without its channel row.
+  const [summaries, kku] = await Promise.all([courseSummaries(ctx), loadKku(ctx.dataUrl).catch(() => null)]);
   if (token !== ctx.token) return;
   const summary = summaries.find((s) => s.course.id === courseId);
+  const post = kku?.smartpro?.[courseId];
   const mistakes = summaries.reduce((n, c) => n + c.mistakes, 0);
   const { course, topics, totalQuestions, percent } = summary;
   const name = localName(course);
@@ -42,6 +48,8 @@ export async function showCourse(ctx, courseId) {
           h('div', {}, h('dt', {}, t('course.topics')), h('dd', {}, topics.length)),
           h('div', {}, h('dt', {}, t('course.questions')), h('dd', {}, totalQuestions)),
           h('div', {}, h('dt', {}, t('course.mastered')), h('dd', { dir: 'ltr' }, `${percent}%`)))),
+      post ? telegramCard({ href: postUrl(kku, post), iconPaths: ICONS.telegram, title: t('kku.fromCourse'), sub: t('kku.title'),
+        onclick: () => track('kku_from_course', { course: courseId }) }) : null,
       h('div', { class: 'section-head' }, h('h2', {}, t('course.topics'))),
       h('div', { class: 'card-grid' }, topics.map((x) => topicCard(course, x))),
     ],

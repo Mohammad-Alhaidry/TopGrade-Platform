@@ -45,3 +45,19 @@ test('links go to the channel post, the channel and the bot', () => {
   assert.equal(channelUrl(data), 'https://t.me/ExamLeaks_KKU');
   assert.equal(botUrl(data), 'https://t.me/KingKhalidLeaks_bot');
 });
+
+test('the /kku address opens the list; anything under it is not found', async () => {
+  const { matchRoute, paths } = await import('../public/assets/js/app/routes.js');
+  assert.deepEqual(matchRoute('kku'), { name: 'kku', params: {} });
+  assert.deepEqual(matchRoute('/kku/'), { name: 'kku', params: {} });
+  assert.equal(matchRoute('kku/x').name, 'notfound');
+  assert.equal(matchRoute(paths.kku()).name, 'kku');
+});
+
+test('the page title names the channel in both languages', async () => {
+  const { pageTitle, pageDescription } = await import('../public/assets/js/app/meta.js');
+  const route = { name: 'kku', params: {} };
+  assert.equal(pageTitle(route, catalog, 'ar'), 'تسريبات وتجميعات جامعة الملك خالد | سمارت برو');
+  assert.match(pageTitle(route, catalog, 'en'), /^KKU leaks and collections \| Smart Pro$/);
+  assert.match(pageDescription(route, catalog, 'ar'), /تسريبات وتجميعات جامعة الملك خالد/);
+});

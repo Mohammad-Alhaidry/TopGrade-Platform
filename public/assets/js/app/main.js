@@ -8,6 +8,7 @@ import { showHome } from './views/home.js';
 import { showCourses } from './views/courses.js';
 import { showCourse } from './views/course.js';
 import { showReview } from './views/review.js';
+import { showKku } from './views/kku.js';
 import { showPrivacy, showNotFound, showLoadError } from './views/pages.js';
 import { registerServiceWorker, applyUpdateIfReady, onUpdateReady } from './update.js';
 import { reportOpen, syncSubscription } from './notify.js';
@@ -21,7 +22,7 @@ import { pageTitle } from './meta.js';
 import { loadMath } from './math.js';
 
 // Screens where switching to a newly downloaded version (a reload) loses nothing.
-const SAFE_TO_UPDATE = new Set(['home', 'courses', 'course', 'review', 'privacy', 'notfound']);
+const SAFE_TO_UPDATE = new Set(['home', 'courses', 'course', 'review', 'privacy', 'kku', 'notfound']);
 
 const DATA_URL = new URL('data/', document.baseURI).href;
 const ctx = { catalog: null, dataUrl: DATA_URL, token: 0 };
@@ -54,6 +55,7 @@ async function render(route) {
     if (name === 'courses') return await showCourses(ctx);
     if (name === 'review') return await showReview(ctx);
     if (name === 'privacy') return showPrivacy();
+    if (name === 'kku') return await showKku(ctx);
     if (name === 'course' && findCourse(ctx.catalog, params.course)) return await showCourse(ctx, params.course);
     if (name === 'topic') {
       const found = findTopic(ctx.catalog, params.course, params.topic);

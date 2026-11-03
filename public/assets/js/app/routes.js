@@ -5,6 +5,7 @@
 //   courses/:course/:topic   a topic: quiz setup, questions, results
 //   review                   mistakes to review
 //   privacy                  privacy policy
+//   kku                      the KKU leaks list (the Telegram channel's courses by college)
 
 const SEGMENT = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
@@ -25,6 +26,7 @@ export function matchRoute(path) {
   if (first === 'courses') return { name: 'topic', params: { course, topic } };
   if (first === 'review' && !course) return { name: 'review', params: {} };
   if (first === 'privacy' && !course) return { name: 'privacy', params: {} };
+  if (first === 'kku' && !course) return { name: 'kku', params: {} };
   return { name: 'notfound', params: {} };
 }
 
@@ -35,4 +37,5 @@ export const paths = {
   topic: (courseId, topicId) => `courses/${courseId}/${topicId}`,
   review: () => 'review',
   privacy: () => 'privacy',
+  kku: () => 'kku',
 };
