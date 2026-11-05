@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { fold, matches, postUrl, channelUrl, botUrl } from '../public/assets/js/app/kku.js';
+import { fold, matches, postUrl, channelUrl, botUrl, uniUrl } from '../public/assets/js/app/kku.js';
 
 const read = (p) => JSON.parse(readFileSync(new URL(`../public/${p}`, import.meta.url), 'utf8'));
 const data = read('data/kku.json');
@@ -10,6 +10,7 @@ const catalog = read('data/catalog.json');
 test('the KKU list: eight colleges, every course with its title, channel post and file count', () => {
   assert.equal(data.channel, 'ExamLeaks_KKU');
   assert.equal(data.bot, 'KingKhalidLeaks_bot');
+  assert.equal(data.uni, 'Kku_One');
   const ids = data.colleges.map((c) => c.id);
   assert.deepEqual(ids, ['applied', 'business', 'computing', 'health', 'science', 'engineering', 'english', 'other']);
   for (const col of data.colleges) {
@@ -40,10 +41,11 @@ test('search folds the spellings students mix up, and finds book courses by thei
   assert.ok(matches({ title: 'الجبر الخطي' }, ''));
 });
 
-test('links go to the channel post, the channel and the bot', () => {
+test('links go to the channel post, the channel, the bot and the university channel', () => {
   assert.equal(postUrl(data, 42), 'https://t.me/ExamLeaks_KKU/42');
   assert.equal(channelUrl(data), 'https://t.me/ExamLeaks_KKU');
   assert.equal(botUrl(data), 'https://t.me/KingKhalidLeaks_bot');
+  assert.equal(uniUrl(data), 'https://t.me/Kku_One');
 });
 
 test('the /kku address opens the list; anything under it is not found', async () => {
@@ -71,9 +73,18 @@ test('search engines read a /kku page with every course as a link to its post, a
   assert.match(page, /<link rel="canonical" href="https:\/\/smartpro-edu\.com\/kku">/);
   assert.match(page, /<h1>تسريبات وتجميعات جامعة الملك خالد<\/h1>/);
   assert.ok(page.includes('href="https://t.me/ExamLeaks_KKU"') && page.includes('href="https://t.me/KingKhalidLeaks_bot"'));
+  assert.ok(page.includes('<a href="https://t.me/Kku_One">قناة جامعة الملك خالد</a>'), 'the university channel');
   for (const col of data.colleges) {
     assert.ok(page.includes(`<h2>${col.name}</h2>`), col.name);
     for (const c of col.courses) assert.ok(page.includes(`href="https://t.me/ExamLeaks_KKU/${c.post}"`), c.title);
   }
   assert.match(files['sitemap.xml'], /<loc>https:\/\/smartpro-edu\.com\/kku<\/loc>/);
+});
+
+test('the home page search engines read links to the /kku page and to the university channel', async () => {
+  const { generated } = await import('../tools/build-pages.mjs');
+  const home = generated()['pages/index.html'];
+  assert.ok(home, 'pages/index.html');
+  assert.ok(home.includes('<a href="kku">تسريبات وتجميعات جامعة الملك خالد</a>'), 'the /kku page');
+  assert.ok(home.includes('<a href="https://t.me/Kku_One">قناة جامعة الملك خالد</a>'), 'the university channel');
 });
