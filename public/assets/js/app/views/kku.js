@@ -5,7 +5,7 @@ import { h, icon, ICONS } from '../../quiz/dom.js';
 import { pagebar, screen, tabbar, mount, forwardIcon } from '../shell.js';
 import { t, lang } from '../i18n.js';
 import { track } from '../analytics.js';
-import { loadKku, fold, matches, postUrl, channelUrl, botUrl } from '../kku.js';
+import { loadKku, fold, matches, postUrl, channelUrl, botUrl, uniUrl } from '../kku.js';
 import { courseSummaries } from './courses.js';
 
 /** A Telegram card (the channel, the bot, or a course's post): blue round icon, title, line under it. */
@@ -82,7 +82,8 @@ export async function showKku(ctx) {
     body: [
       h('div', { class: 'kku-links' },
         telegramCard({ href: channelUrl(data), iconPaths: ICONS.telegram, title: t('kku.channel'), sub: t('kku.title'), onclick: () => track('kku_channel') }),
-        telegramCard({ href: botUrl(data), iconPaths: ICONS.robot, title: t('kku.bot'), sub: t('kku.botSub'), onclick: () => track('kku_bot') })),
+        telegramCard({ href: botUrl(data), iconPaths: ICONS.robot, title: t('kku.bot'), sub: t('kku.botSub'), onclick: () => track('kku_bot') }),
+        telegramCard({ href: uniUrl(data), iconPaths: ICONS.telegram, title: t('kku.uni'), sub: t('kku.channel'), onclick: () => track('kku_uni') })),
       h('label', { class: 'card kku-search' }, icon(...ICONS.search), input),
       none,
       h('div', { class: 'kku-colleges' }, colleges.map((c) => c.card)),

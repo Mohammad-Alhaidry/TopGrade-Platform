@@ -50,6 +50,7 @@ const S = {
   'kku.channel': { en: 'The channel on Telegram', ar: 'القناة على تيليجرام' },
   'kku.bot': { en: 'The bot on Telegram', ar: 'البوت على تيليجرام' },
   'kku.botSub': { en: 'Choose your college, major and level', ar: 'اختر كليتك وتخصصك ومستواك' },
+  'kku.uni': { en: 'King Khalid University channel', ar: 'قناة جامعة الملك خالد' },
   'kku.search': { en: 'Type a course name', ar: 'اكتب اسم المقرر' },
   'kku.searchLabel': { en: 'Search for a course', ar: 'ابحث عن مقرر' },
   'kku.none': { en: 'No course by that name.', ar: 'لا يوجد مقرر بهذا الاسم.' },

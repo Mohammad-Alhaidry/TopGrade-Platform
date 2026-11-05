@@ -69,6 +69,7 @@ function pages({ catalog, banks, kku }) {
     path: '', route: { name: 'home', params: {} },
     body: [h('h1', {}, 'سمارت برو'), h('p', {}, esc(ar('meta.homeDesc'))),
       h('h2', {}, esc(ar('tab.courses'))), h('ul', {}, catalog.courses.map(courseLine)),
+      h('ul', {}, h('li', {}, `<a href="kku">${esc(ar('kku.title'))}</a>`), h('li', {}, `<a href="https://t.me/${kku.uni}">${esc(ar('kku.uni'))}</a>`)),
       h('p', {}, `<a href="privacy">${esc(PRIVACY.ar.title)}</a>`)],
     data: [{ '@type': 'WebSite', ...NAMES, url: url(''), inLanguage: ['ar', 'en'] },
       { ...brand, logo: url('assets/icons/icon-512.png') }],
@@ -121,7 +122,8 @@ function pages({ catalog, banks, kku }) {
   out.push({
     path: 'kku', route: { name: 'kku', params: {} },
     body: [crumbs([home, kkuCrumb]), h('h1', {}, esc(ar('kku.title'))), h('p', {}, esc(ar('meta.kkuDesc'))),
-      h('ul', {}, h('li', {}, `<a href="${tme(kku.channel)}">${esc(ar('kku.channel'))}</a>`), h('li', {}, `<a href="${tme(kku.bot)}">${esc(ar('kku.bot'))}</a>: ${esc(ar('kku.botSub'))}`)),
+      h('ul', {}, h('li', {}, `<a href="${tme(kku.channel)}">${esc(ar('kku.channel'))}</a>`), h('li', {}, `<a href="${tme(kku.bot)}">${esc(ar('kku.bot'))}</a>: ${esc(ar('kku.botSub'))}`),
+        h('li', {}, `<a href="${tme(kku.uni)}">${esc(ar('kku.uni'))}</a>`)),
       kku.colleges.map((col) => h('h2', {}, esc(col.name)) + h('ul', {}, col.courses.map((c) =>
         h('li', {}, `<a href="${tme(`${kku.channel}/${c.post}`)}">${esc(c.title)}</a>${c.en ? ` (<span lang="en" dir="ltr">${esc(c.en)}</span>)` : ''}: ${esc(ar('n.files', { n: c.files }))}`))))],
     data: [breadcrumb([home, kkuCrumb]),

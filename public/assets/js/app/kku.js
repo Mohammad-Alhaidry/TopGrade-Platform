@@ -26,4 +26,5 @@ export const matches = (course, q) => !q || fold(course.title).includes(q) || (c
 
 export const channelUrl = (data) => `https://t.me/${data.channel}`;
 export const botUrl = (data) => `https://t.me/${data.bot}`;
+export const uniUrl = (data) => `https://t.me/${data.uni}`;
 export const postUrl = (data, post) => `https://t.me/${data.channel}/${post}`;

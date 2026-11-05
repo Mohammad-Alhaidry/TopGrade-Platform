@@ -2,6 +2,7 @@
 // Copies the course list of the Telegram channel «تسريبات وتجميعات جامعة الملك خالد» (@ExamLeaks_KKU) into
 // public/data/kku.json for the /kku page: each college with its courses, each course with its post in the channel
 // and how many files that post leads to; and, for Smart Pro's courses the channel also has, their post.
+// The page also links the owner's channel «قناة جامعة الملك خالد» (@Kku_One).
 // The source is the leaks bot's catalog (/root/kku-system/tools/leaks_catalog.py makes it). Rerun after it changes,
 // then `npm run build`:
 //   node tools/import-kku.mjs [/root/kku-system/catalog/leaks.json]
@@ -60,6 +61,6 @@ for (const [id, title] of Object.entries(SMART_PRO)) {
   smartpro[id] = byTitle.get(title);
 }
 
-const out = { channel: cat.channel, bot: 'KingKhalidLeaks_bot', total: Object.keys(cat.courses).length, colleges, smartpro };
+const out = { channel: cat.channel, bot: 'KingKhalidLeaks_bot', uni: 'Kku_One', total: Object.keys(cat.courses).length, colleges, smartpro };
 writeFileSync(OUT, `${JSON.stringify(out)}\n`);
 console.log(`${out.total} courses in ${colleges.length} colleges, ${Object.keys(smartpro).length} shared with Smart Pro -> public/data/kku.json`);
