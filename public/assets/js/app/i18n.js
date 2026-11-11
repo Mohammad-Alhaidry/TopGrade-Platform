@@ -36,8 +36,8 @@ const S = {
   },
   'meta.topicDesc': { en: 'Practise {topic} from {course}: {questions} ({types}).', ar: 'تدرّب على {topic} من مقرر {course}: {questions} ({types}).' },
   'meta.kkuDesc': {
-    en: 'The King Khalid University courses of the Telegram channel «KKU leaks and collections», by college: each course opens its post in the channel, with links to its files (finals, midterms, quizzes, summaries and question banks).',
-    ar: 'مقررات جامعة الملك خالد في قناة تسريبات وتجميعات جامعة الملك خالد على تيليجرام، مرتبة حسب الكلية: كل مقرر يفتح منشوره في القناة، وفيه روابط ملفاته من اختبارات نهائية وميد وكويزات وملخصات وبنوك أسئلة.',
+    en: 'The King Khalid University courses of the Telegram channel «KKU leaks and collections», by college: each course opens its post in the channel, with links to its files (finals, midterms, quizzes, summaries and question banks). Plus the university’s Telegram channels, groups and bots.',
+    ar: 'مقررات جامعة الملك خالد في قناة تسريبات وتجميعات جامعة الملك خالد على تيليجرام، مرتبة حسب الكلية: كل مقرر يفتح منشوره في القناة، وفيه روابط ملفاته من اختبارات نهائية وميد وكويزات وملخصات وبنوك أسئلة. ومعها قنوات جامعة الملك خالد وقروباتها وبوتاتها على تيليجرام.',
   },
   'meta.privacyDesc': {
     en: 'How Smart Pro handles your data: your progress is saved on your device and usage statistics are anonymous.',
@@ -55,6 +55,10 @@ const S = {
   'kku.searchLabel': { en: 'Search for a course', ar: 'ابحث عن مقرر' },
   'kku.none': { en: 'No course by that name.', ar: 'لا يوجد مقرر بهذا الاسم.' },
   'kku.fromCourse': { en: 'This course’s files in the channel', ar: 'ملفات المقرر في القناة' },
+  'kku.tg': { en: 'King Khalid University on Telegram', ar: 'جامعة الملك خالد على تيليجرام' },
+  'kku.tg.channels': { en: 'Channels', ar: 'القنوات' },
+  'kku.tg.bots': { en: 'Bots', ar: 'البوتات' },
+  'kku.tg.groups': { en: 'Groups', ar: 'القروبات' },
 
   // Counts
   'n.questions': {
@@ -72,6 +76,10 @@ const S = {
   'n.files': {
     en: { one: '{n} file', other: '{n} files' },
     ar: { zero: 'لا ملفات', one: 'ملف واحد', two: 'ملفان', few: '{n} ملفات', many: '{n} ملفًا', other: '{n} ملف' },
+  },
+  'n.links': {
+    en: { one: '{n} link', other: '{n} links' },
+    ar: { zero: 'لا روابط', one: 'رابط واحد', two: 'رابطان', few: '{n} روابط', many: '{n} رابطًا', other: '{n} رابط' },
   },
   'n.days': {
     en: { one: '{n} day', other: '{n} days' },
