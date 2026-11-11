@@ -36,8 +36,8 @@ Channels:
 - @ExamLeaks_KKU «تسريبات وتجميعات جامعة الملك خالد»: ملفات المقررات من اختبارات سابقة وملخصات وبنوك أسئلة.
 - @Kku_One «قناة جامعة الملك خالد»: أخبار الجامعة ومواعيد القبول والتسجيل والتقويم الجامعي.
 - @KkU_LiNkS1 «روابط قروبات الشعب»: روابط قروبات الشعب لكل التخصصات.
-- @UnLoCk3RdBest «Unlock 1|2|3»: كتب Unlock الإصدار الثالث وحلولها وكتب المعلم وصوتياتها.
-- @EnglishEvolove1234 «English Evolve 1|2|3|4»: كتب Evolve وحلولها وملفات الوحدات.
+- @UnLoCk3RdBest «أنلوك 1|2|3»: كتب أنلوك الإصدار الثالث: كتاب الطالب والحلول وكتاب المعلم والصوتيات.
+- @EnglishEvolove1234 «إيفولف 1|2|3|4»: كتب إيفولف: كتاب الطالب وكتاب النشاط والحلول وملفات الوحدات.
 
 Bots:
 - @KingKhalidLeaks_bot «بوت التسريبات والتجميعات»: اختر كليتك وتخصصك ومستواك وتوصلك ملفات مقرراتك.
@@ -47,8 +47,8 @@ Bots:
 - @KKU_CS_Bot «بوت الحاسب»: مقررات كلية علوم الحاسب وملفاتها مرتبة حسب التخصص والترم.
 - @KKU_Business_Bot «بوت الأعمال»: مقررات كلية الأعمال وملفاتها مرتبة حسب التخصص والترم.
 - @KKU_Science_Bot «بوت العلوم»: مقررات كلية العلوم وملفاتها مرتبة حسب التخصص والترم.
-- @EnglishEvolve1234Bot «بوت English Evolve»: ملفات Evolve مرتبة حسب المستوى.
-- @UnLoCk123BeStBot «بوت Unlock»: كتب Unlock 1|2|3 وحلولها وصوتياتها.
+- @EnglishEvolve1234Bot «بوت إيفولف»: ملفات إيفولف مرتبة حسب المستوى.
+- @UnLoCk123BeStBot «بوت أنلوك»: كتب أنلوك 1|2|3 وحلولها وصوتياتها.
 
 Groups:
 - @TalkKKU «مناقشة جامعة الملك خالد»: القروب العام: نقاش واستفسارات وملخصات وأخبار الكليات والجداول.
@@ -59,9 +59,10 @@ Groups:
 - @KKU_CS «كلية علوم الحاسب»: قروب كلية علوم الحاسب: المقررات والموارد والاستفسارات.
 - @KKU_BIZ «كلية الأعمال»: قروب كلية الأعمال: المقررات والاستفسارات وأخبار الكلية.
 - @ENG_KKU «انجليزي مكثف»: قروب الإنجليزي المكثف: موضوعات المقرر والاستفسارات.
-- @UnLoCk3Rd_Discussion «نقاش Unlock»: قروب نقاش قناة Unlock 1|2|3.
+- @UnLoCk3Rd_Discussion «نقاش أنلوك»: قروب نقاش قناة أنلوك 1|2|3.
 
-The English interface shows an English name and line for each (the `en` and `enSub` fields).
+Arabic only on the Arabic screen, as for the course list (the Latin product names stay in `en`). The English
+interface shows an English name and line for each (the `en` and `enSub` fields).
 
 ## Data and code
 
@@ -73,8 +74,8 @@ The English interface shows an English name and line for each (the `en` and `enS
   college-card markup (`details.card.kku-college`) and the `telegramCard` row style; the section is mounted after
   the colleges.
 - `tools/build-pages.mjs`: the `/kku` page body gets the section after the colleges.
-- `public/assets/js/app/i18n.js`: `kku.tg` (section title), `kku.tgChannels`, `kku.tgBots`, `kku.tgGroups`,
-  `n.chats` («{n} روابط» style count for the card header), and the new `meta.kkuDesc`.
+- `public/assets/js/app/i18n.js`: `kku.tg` (section title), `kku.tg.channels`, `kku.tg.bots`, `kku.tg.groups`,
+  `n.links` («{n} روابط», the count in the card header), and the new `meta.kkuDesc`.
 - `public/assets/js/quiz/dom.js`: a `users` icon path for the groups.
 - Tests (`tests/kku.test.mjs`): every item has a handle, title, sub, en and enSub; handles are unique across the
   three kinds; the prerendered page links every handle with its title; the meta description mentions the groups

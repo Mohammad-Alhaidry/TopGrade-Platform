@@ -28,3 +28,7 @@ export const channelUrl = (data) => `https://t.me/${data.channel}`;
 export const botUrl = (data) => `https://t.me/${data.bot}`;
 export const uniUrl = (data) => `https://t.me/${data.uni}`;
 export const postUrl = (data, post) => `https://t.me/${data.channel}/${post}`;
+
+/** The owner's Telegram directory on the page (data.telegram), in this order. */
+export const TG_KINDS = ['channels', 'bots', 'groups'];
+export const tgUrl = (handle) => `https://t.me/${handle}`;

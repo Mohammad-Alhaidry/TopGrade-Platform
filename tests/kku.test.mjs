@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { fold, matches, postUrl, channelUrl, botUrl, uniUrl } from '../public/assets/js/app/kku.js';
+import { fold, matches, postUrl, channelUrl, botUrl, uniUrl, TG_KINDS, tgUrl } from '../public/assets/js/app/kku.js';
 
 const read = (p) => JSON.parse(readFileSync(new URL(`../public/${p}`, import.meta.url), 'utf8'));
 const data = read('data/kku.json');
@@ -29,6 +29,22 @@ test('the four Smart Pro courses the channel also has point at their channel pos
     assert.ok(catalog.courses.some((c) => c.id === id), id);
     assert.ok(data.colleges.some((col) => col.courses.some((c) => c.post === post)), id);
   }
+});
+
+test('the Telegram directory: five channels, nine bots, nine groups, each with its name and line in both languages', () => {
+  assert.deepEqual(TG_KINDS, ['channels', 'bots', 'groups']);
+  assert.deepEqual(TG_KINDS.map((k) => data.telegram[k].length), [5, 9, 9]);
+  const handles = TG_KINDS.flatMap((k) => data.telegram[k].map((i) => i.handle));
+  assert.equal(new Set(handles).size, handles.length, 'a handle listed twice');
+  for (const kind of TG_KINDS) {
+    for (const item of data.telegram[kind]) {
+      assert.match(item.handle, /^[A-Za-z][A-Za-z0-9_]{4,31}$/, item.handle);
+      assert.ok(item.title && item.sub && item.en && item.enSub, item.handle);
+      assert.doesNotMatch(item.title + item.sub, /[A-Za-z]/, `English on the Arabic screen: ${item.handle}`);
+    }
+  }
+  for (const h of [data.channel, data.bot, data.uni]) assert.ok(handles.includes(h), h);
+  assert.equal(tgUrl('TalkKKU'), 'https://t.me/TalkKKU');
 });
 
 test('search folds the spellings students mix up, and finds book courses by their English name', () => {
