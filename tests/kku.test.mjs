@@ -94,6 +94,12 @@ test('search engines read a /kku page with every course as a link to its post, a
     assert.ok(page.includes(`<h2>${col.name}</h2>`), col.name);
     for (const c of col.courses) assert.ok(page.includes(`href="https://t.me/ExamLeaks_KKU/${c.post}"`), c.title);
   }
+  assert.ok(page.includes('<h2>جامعة الملك خالد على تيليجرام</h2>'), 'the Telegram section');
+  for (const [kind, heading] of [['channels', 'القنوات'], ['bots', 'البوتات'], ['groups', 'القروبات']]) {
+    assert.ok(page.includes(`<h3>${heading}</h3>`), heading);
+    for (const item of data.telegram[kind]) assert.ok(page.includes(`<a href="https://t.me/${item.handle}">${item.title}</a>: ${item.sub}`), item.handle);
+  }
+  assert.match(page, /<meta name="description" content="[^"]*قنوات جامعة الملك خالد وقروباتها وبوتاتها على تيليجرام[^"]*">/);
   assert.match(files['sitemap.xml'], /<loc>https:\/\/smartpro-edu\.com\/kku<\/loc>/);
 });
 

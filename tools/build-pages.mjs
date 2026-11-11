@@ -17,6 +17,7 @@ import { pageTitle, pageDescription, courseName } from '../public/assets/js/app/
 import { contentLang, topicLabel } from '../public/assets/js/app/catalog.js';
 import { t } from '../public/assets/js/app/i18n.js';
 import { PRIVACY } from '../public/assets/js/app/privacy-text.js';
+import { TG_KINDS } from '../public/assets/js/app/kku.js';
 
 const PUBLIC = fileURLToPath(new URL('../public/', import.meta.url));
 const LANG = 'ar'; // the app's default language, and what a first-time visitor (or a crawler) sees
@@ -116,7 +117,8 @@ function pages({ catalog, banks, kku }) {
     }
   }
 
-  // The KKU leaks list: every course of the Telegram channel, by college, each a link to its post there.
+  // The KKU leaks list: every course of the Telegram channel, by college, each a link to its post there; then the
+  // owner's Telegram channels, bots and groups, each a link with its line.
   const kkuCrumb = [ar('kku.title'), 'kku'];
   const tme = (path) => `https://t.me/${path}`;
   out.push({
@@ -125,7 +127,10 @@ function pages({ catalog, banks, kku }) {
       h('ul', {}, h('li', {}, `<a href="${tme(kku.channel)}">${esc(ar('kku.channel'))}</a>`), h('li', {}, `<a href="${tme(kku.bot)}">${esc(ar('kku.bot'))}</a>: ${esc(ar('kku.botSub'))}`),
         h('li', {}, `<a href="${tme(kku.uni)}">${esc(ar('kku.uni'))}</a>`)),
       kku.colleges.map((col) => h('h2', {}, esc(col.name)) + h('ul', {}, col.courses.map((c) =>
-        h('li', {}, `<a href="${tme(`${kku.channel}/${c.post}`)}">${esc(c.title)}</a>${c.en ? ` (<span lang="en" dir="ltr">${esc(c.en)}</span>)` : ''}: ${esc(ar('n.files', { n: c.files }))}`))))],
+        h('li', {}, `<a href="${tme(`${kku.channel}/${c.post}`)}">${esc(c.title)}</a>${c.en ? ` (<span lang="en" dir="ltr">${esc(c.en)}</span>)` : ''}: ${esc(ar('n.files', { n: c.files }))}`)))),
+      h('h2', {}, esc(ar('kku.tg'))),
+      TG_KINDS.map((kind) => h('h3', {}, esc(ar(`kku.tg.${kind}`))) + h('ul', {}, kku.telegram[kind].map((item) =>
+        h('li', {}, `<a href="${tme(item.handle)}">${esc(item.title)}</a>: ${esc(item.sub)}`))))],
     data: [breadcrumb([home, kkuCrumb]),
       { '@type': 'CollectionPage', name: ar('kku.title'), description: ar('meta.kkuDesc'), url: url('kku'), inLanguage: 'ar', isPartOf: { '@type': 'WebSite', ...NAMES, url: url('') } }],
   });
