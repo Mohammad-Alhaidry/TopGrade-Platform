@@ -631,6 +631,11 @@ body{background:var(--canvas);color:var(--text)}
 .kku-course__copy{display:grid;gap:1px;flex:1;min-width:0}
 .kku-course__title{font:700 14.5px/1.35 var(--ui);color:var(--ink)}
 .kku-course__meta{font:500 12.5px/1.3 var(--ui);color:var(--muted)}
+.kku-telegram{display:grid;gap:10px}
+.kku-telegram[hidden]{display:none}
+.kku-heading{margin:6px 2px 0;font:800 16px/1.3 var(--ui);color:var(--ink)}
+.kku-tg .kku-link__icon{width:36px;height:36px}
+.kku-tg .kku-link__icon svg{width:18px;height:18px}
 @media(prefers-reduced-motion:reduce){.kku-college__toggle,.kku-course,.kku-link{transition:none}}
 
 /* ---------- Tablets and iPad portrait (700px+) ---------- */
